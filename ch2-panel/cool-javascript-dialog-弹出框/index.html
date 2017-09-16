@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>超炫酷的 JavaScript 消息提示框插件DEMO演示</title>
+
+<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="css/zzsc-demo.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/x0popup.min.css">
+<link rel="stylesheet" href="css/rainbow.monokai.css">
+
+</head>
+<body>
+<div class="zzsc-container">
+	<div class="content-wrapper">
+	<div class="content">
+		<div class="block">
+			<div class="title">Alert</div>
+			<div class="block-code">
+				<pre><code data-language="javascript" id="code-1">x0p('Message', 'Hello world!');</code></pre>
+			</div><div class="block-detail">
+				<p>The most simple one.</p>
+				<a class="button bg-color-3" href="javascript:exec(1);">弹出对话框</a>
+			</div>
+		</div>
+		<div class="block">
+			<div class="title">Confirm</div>
+			<div class="block-code">
+				<pre><code data-language="javascript" id="code-2">x0p('Confirmation', 'Are you sure?', 'warning');</code></pre>
+			</div><div class="block-detail">
+				<p>A confirmation popup with a default icon.</p>
+				<a class="button bg-color-2" href="javascript:exec(2);">弹出对话框</a>
+			</div>
+		</div>
+		<div class="block">
+			<div class="title">Prompt</div>
+			<div class="block-detail-full">
+				<p>An input popup with a callback function.&nbsp;&nbsp;&nbsp;&nbsp;<a class="button bg-color-5" href="javascript:exec(3);">弹出对话框</a></p>
+			</div>
+			<div class="block-code-full">
+				<pre><code data-language="javascript" id="code-3">x0p('Enter Your Name', null, 'input',
+function(button, text) {
+	if(button == 'info') {
+		x0p('Congratulations', 
+			'Your name is ' + text + '!', 
+			'ok', false);
+	}
+	if(button == 'cancel') {
+		x0p('Canceled', 
+			'You canceled input.',
+			'error', false);
+	}
+});</code></pre>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="content-wrapper">
+	<div class="content">
+		<div class="block"><div class="intro color-3">Want more? Here we go!</div></div>
+		<div class="block">
+			<div class="title">Custom Popup</div>
+			<div class="block-detail-full">
+				<p>Another way to call x0popup.&nbsp;&nbsp;&nbsp;&nbsp;<a class="button bg-color-1" href="javascript:exec(5);">弹出对话框</a></p>
+			</div>
+			<div class="block-code-full">
+				<pre><code data-language="javascript" id="code-5">x0p({
+title: 'Custom Popup',
+text: 'What is your choice?',
+animationType: 'slideUp',
+icon: 'custom',
+iconURL: 'image/thinking.svg',
+buttons: [
+	{
+		type: 'error',
+		text: 'First'
+	},
+	{
+		type: 'info',
+		text: 'Second'
+	}
+]
+}, function(button) {
+x0p({
+	title: 'Your choice', 
+	text: 'You clicked ' + button + ' button!',
+	overlayAnimation: false
+});
+});</code></pre>
+			</div>
+		</div>
+		<div class="block">
+			<div class="title">Auto Close</div>
+			<div class="block-detail-full">
+				<p>Auto close the popup after some time.&nbsp;&nbsp;&nbsp;&nbsp;<a class="button bg-color-3" href="javascript:exec(6);">弹出对话框</a></p>
+			</div>
+			<div class="block-code-full">
+				<pre><code data-language="javascript" id="code-6">x0p({
+title: 'Auto Close',
+text: 'This popup will auto close in 3 seconds.',
+animationType: 'slideDown',
+icon: 'info',
+buttons: [],
+autoClose: 3000
+});</code></pre>
+			</div>
+		</div>
+		<div class="block">
+			<div class="title">Async Operation</div>
+			<div class="block-detail-full">
+				<p>Show a loading animation while executing.&nbsp;&nbsp;&nbsp;&nbsp;<a class="button bg-color-5" href="javascript:exec(7);">弹出对话框</a></p>
+			</div>
+			<div class="block-code-full">
+				<pre><code data-language="javascript" id="code-7">x0p({
+title: 'Async Operation',
+text: 'Try to do some operation.',
+icon: 'info',
+animationType: 'fadeIn',
+buttons: [
+	{
+		type: 'cancel'
+	},
+	{
+		type: 'info',
+		text: 'Do It!',
+		showLoading: true
+	}
+]
+}, function(button) {
+if(button == 'info') {
+	// Simulate Delay
+	setTimeout(function() {
+		x0p('Done', null, 'ok', false);
+	}, 1500);
+}
+});</code></pre>
+			</div>
+		</div>
+		<div class="block">
+			<div class="title">Advanced Input</div>
+			<div class="block-detail-full">
+				<p>Placeholder, validator, etc.&nbsp;&nbsp;&nbsp;&nbsp;<a class="button bg-color-2" href="javascript:exec(8);">弹出对话框</a></p>
+			</div>
+			<div class="block-code-full">
+				<pre><code data-language="javascript" id="code-8">x0p({
+title: 'Number Check',
+type: 'warning',
+inputType: 'text',
+inputPlaceholder: 'Number Only',
+inputColor: '#F29F3F',
+inputValidator: function(button, value) {
+	if(value == '' || isNaN(value))
+		return 'Not a number!';
+	return null;
+}
+}, function(button, text) {
+if(button == 'warning') {
+	x0p('Congratulations', 
+		'Your number is ' + text + '!', 
+		'ok', false);
+}
+});</code></pre>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<script src="js/x0popup.min.js"></script>
+<script src="js/rainbow.min.js"></script>
+<script src="js/rainbow.linenumbers.min.js"></script>
+<script type="text/javascript">
+	function exec(number) {
+		var code = document.getElementById('code-' + number).innerText;
+		eval(code);
+	}
+</script>
+
+<div style="text-align:center;clear:both">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+</body>
+</html>
