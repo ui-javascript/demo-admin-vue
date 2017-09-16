@@ -6,27 +6,27 @@ Build: 1.0
 http://www.andreagalanti.it
 */
 
-@font-face {
-  font-family: 'Lato';
-  src: url('../../static/fonts/lato/lato-black.eot');
-  src: url('../../static/fonts/lato/lato-black.eot?#iefix') format('embedded-opentype'), url('../../static/fonts/lato/lato-black.woff') format('woff'), url('../../static/fonts/lato/lato-black.ttf') format('truetype'), url('../../static/fonts/lato/lato-black.svg#latoblack') format('svg');
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Lato';
-  src: url('../../static/fonts/lato/lato-bold.eot');
-  src: url('../../static/fonts/lato/lato-bold.eot?#iefix') format('embedded-opentype'), url('../../static/fonts/lato/lato-bold.woff') format('woff'), url('../../static/fonts/lato/lato-bold.ttf') format('truetype'), url('../../static/fonts/lato/lato-bold.svg#latobold') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Lato';
-  src: url('../../static/fonts/lato/lato-bolditalic.eot');
-  src: url('../../static/fonts/lato/lato-bolditalic.eot?#iefix') format('embedded-opentype'), url('../../static/fonts/lato/lato-bolditalic.woff') format('woff'), url('../../static/fonts/lato/lato-bolditalic.ttf') format('truetype'), url('../../static/fonts/lato/lato-bolditalic.svg#latobold-italic') format('svg');
-  font-weight: bold;
-  font-style: italic;
-}
+/*@font-face {*/
+  /*font-family: 'Lato';*/
+  /*src: url('../../static/fonts/lato/lato-black.eot');*/
+  /*src: url('../../static/fonts/lato/lato-black.eot?#iefix') format('embedded-opentype'), url('../../static/fonts/lato/lato-black.woff') format('woff'), url('../../static/fonts/lato/lato-black.ttf') format('truetype'), url('../../static/fonts/lato/lato-black.svg#latoblack') format('svg');*/
+  /*font-weight: 900;*/
+  /*font-style: normal;*/
+/*}*/
+/*@font-face {*/
+  /*font-family: 'Lato';*/
+  /*src: url('../../static/fonts/lato/lato-bold.eot');*/
+  /*src: url('../../static/fonts/lato/lato-bold.eot?#iefix') format('embedded-opentype'), url('../../static/fonts/lato/lato-bold.woff') format('woff'), url('../../static/fonts/lato/lato-bold.ttf') format('truetype'), url('../../static/fonts/lato/lato-bold.svg#latobold') format('svg');*/
+  /*font-weight: bold;*/
+  /*font-style: normal;*/
+/*}*/
+/*@font-face {*/
+  /*font-family: 'Lato';*/
+  /*src: url('../../static/fonts/lato/lato-bolditalic.eot');*/
+  /*src: url('../../static/fonts/lato/lato-bolditalic.eot?#iefix') format('embedded-opentype'), url('../../static/fonts/lato/lato-bolditalic.woff') format('woff'), url('../../static/fonts/lato/lato-bolditalic.ttf') format('truetype'), url('../../static/fonts/lato/lato-bolditalic.svg#latobold-italic') format('svg');*/
+  /*font-weight: bold;*/
+  /*font-style: italic;*/
+/*}*/
 @font-face {
   font-family: 'Lato';
   src: url('../../static/fonts/lato/lato-italic.eot');
