@@ -1,0 +1,38 @@
+
+#main-navigation { text-align: center; }
+  #main-navigation .wrapper { display: inline; zoom: 1; text-align: left; }    
+  
+#slider .navigation { text-align: center; }
+  #slider .navigation ul { display: inline; zoom: 1; }
+  
+.pagination { text-align: center; }
+  .pagination ul { display: inline; zoom: 1; }
+
+#slide-nav { text-align: center; }
+  #slide-nav{ display: inline; zoom: 1; }
+
+.portfolio.pFdetail p.actions { display: inline-block; text-align: center; }
+	.portfolio.pFdetail p.actions a {display: inline; zoom: 1;}
+  
+.widget-most-popular h2 {
+	padding-top:3px;
+	display:block;
+	line-height:16px;
+} 
+.last-child {border-bottom:none !important;}
+.widget.widget-featured-projects{
+	margin-top:30px;
+}
+#pF-page-nav a{
+	text-indent:0px;
+}
+#pF-page-nav a.previous,
+#pF-page-nav a.next{
+	text-indent:-9999px;
+}
+.fadeSlider .anythingSlider .panel{
+	width:950px;
+}
+.fade-image{
+	width:54%;
+}
