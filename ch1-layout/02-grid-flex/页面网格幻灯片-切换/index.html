@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面网格布局和幻灯片布局切换UI界面设计|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link href='http://fonts.useso.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!--[if IE]>
+    <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<article class="htmleaf-container">
+    <header class="htmleaf-header">
+        <h1>页面网格布局和幻灯片布局切换UI界面设计 <span>A Grid layout and slide layout switching</span></h1>
+        <div class="htmleaf-links">
+            <a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家"
+               target="_blank"><span> jQuery之家</span></a>
+            <a class="htmleaf-icon icon-htmleaf-arrow-forward-outline"
+               href="http://www.htmleaf.com/css3/ui-design/201509072539.html" title="返回下载页"
+               target="_blank"><span> 返回下载页</span></a>
+        </div>
+    </header>
+    <div id="window">
+        <div id="header">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+        <div id="grid-selector">
+            <div id="viewCarousel"></div>
+            <div id="viewGrid" class="active">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+        </div>
+
+        <div id="headline">
+            <p></p>
+            <p class="short"></p>
+        </div>
+
+        <div class="thumbs">
+            <p>
+                <span></span>
+                <span class="short"></span>
+            </p>
+            <p>
+                <span></span>
+                <span class="short"></span>
+            </p>
+            <p>
+                <span></span>
+                <span class="short"></span>
+            </p>
+            <p>
+                <span></span>
+                <span class="short"></span>
+            </p>
+            <p>
+                <span></span>
+                <span class="short"></span>
+            </p>
+            <p>
+                <span></span>
+                <span class="short"></span>
+            </p>
+        </div>
+
+        <div id="carousel">
+            <div class="innerCarousel">
+                <div>
+
+                </div>
+                <div>
+                    <p class="current">
+                        <span></span>
+                        <span class="short"></span>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span></span>
+                        <span class="short"></span>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span></span>
+                        <span class="short"></span>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span></span>
+                        <span class="short"></span>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span></span>
+                        <span class="short"></span>
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <span></span>
+                        <span class="short"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="related">
+        <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
+        <a href="http://www.htmleaf.com/css3/daohangcaidan/20141106398.html">
+            <img src="related/1.jpg" width="300" alt="css3和js商城网站商品视图模式切换效果"/>
+            <h3>css3和js商城网站商品视图模式切换效果</h3>
+        </a>
+        <a href="http://www.htmleaf.com/jQuery/Layout-Interface/20141122562.html">
+            <img src="related/2.jpg" width="300" alt="jQuery切换缩略图模式和列表模式插件"/>
+            <h3>jQuery切换缩略图模式和列表模式插件</h3>
+        </a>
+    </footer>
+</article>
+
+<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+<script>
+    $(document).ready(function () {
+        $('#viewCarousel').click(function () {
+            if ($(this).hasClass('active'))
+                return;
+            $(this).addClass('active');
+            $('#viewGrid').removeClass('active');
+            setCarousel();
+            $('.thumbs p').eq(0).clone().addClass('floating-thumb').appendTo('#window');
+            $('.thumbs').fadeOut(300);
+            setTimeout(function () {
+                $('.floating-thumb').addClass('animate');
+                $('#carousel').delay(200).fadeIn(200, function () {
+                    $('.floating-thumb').remove();
+                });
+            }, 150);
+        });
+        $('#viewGrid').click(function () {
+            if ($(this).hasClass('active'))
+                return;
+            $(this).addClass('active');
+            $('#viewCarousel').removeClass('active');
+            $('#carousel').fadeOut(200, function () {
+                resetCarousel();
+            });
+            $('<p class=\'floating-thumb animate\'><span></span><span class=\'short\'></span></p>').appendTo('#window');
+            $('.thumbs').show();
+            var parentpos = $('#window').offset();
+            var childpos = $('.thumbs p').eq(currentSlide - 1).offset();
+            $('.thumbs').hide();
+            $('.floating-thumb').removeClass('animate').css({
+                'top': childpos.top - parentpos.top - 16 + 'px',
+                'left': childpos.left - parentpos.left + 'px',
+                'transition': '300ms cubic-bezier(0,.93,.33,.99)',
+                'width': '155px',
+                'height': '60px',
+                'padding-top': '121px'
+            });
+            $('.thumbs').delay(300).fadeIn(200, function () {
+                $('.floating-thumb').remove();
+            });
+        });
+        var carousel = $('#carousel .innerCarousel');
+        var carouselSlideWidth = 337;
+        var currentSlide = 1;
+        var isAnimating = false;
+        var carouselSlides = $('.innerCarousel div');
+        setCarousel();
+
+        function resetCarousel() {
+            $(carouselSlides).find('p').removeClass('current').eq(0).addClass('current');
+            $('#carousel .innerCarousel').css('left', '-168px');
+            currentSlide = 1;
+        }
+
+        function setCarousel() {
+            var carouselWidth = 0;
+            $('#carousel div').each(function () {
+                carouselWidth += carouselSlideWidth;
+            });
+            $(carousel)[0].style = '';
+            $(carousel).css('width', carouselWidth);
+            $(carouselSlides).eq(currentSlide).prev().find('p').unbind('click').click(function () {
+                if ($(this).hasClass('current')) {
+                    return;
+                }
+                var currentLeft = Math.abs(parseInt($(carousel).css('left')));
+                var newLeft = currentLeft - carouselSlideWidth;
+                if (isAnimating === true) {
+                    return;
+                }
+                $(carousel).css({
+                    'left': '-' + newLeft + 'px',
+                    'transition': '500ms cubic-bezier(0,.93,.33,.99)'
+                });
+                isAnimating = true;
+                $(this).addClass('current');
+                $(carouselSlides).eq(currentSlide).find('p')[0].className = '';
+                setTimeout(function () {
+                    isAnimating = false;
+                    currentSlide--;
+                    setCarousel();
+                }, 500);
+            });
+            $(carouselSlides).eq(currentSlide).next().find('p').unbind('click').click(function () {
+                if ($(this).hasClass('current')) {
+                    return;
+                }
+                var currentLeft = Math.abs(parseInt($(carousel).css('left')));
+                var newLeft = currentLeft + carouselSlideWidth;
+                if (isAnimating === true) {
+                    return;
+                }
+                $(this).addClass('current');
+                $(carouselSlides).eq(currentSlide).find('p')[0].className = '';
+                $(carousel).css({
+                    'left': '-' + newLeft + 'px',
+                    'transition': '500ms cubic-bezier(0,.93,.33,.99)'
+                });
+                isAnimating = true;
+                setTimeout(function () {
+                    isAnimating = false;
+                    currentSlide++;
+                    setCarousel();
+                }, 500);
+            });
+        }
+    });
+</script>
+</body>
+</html>
