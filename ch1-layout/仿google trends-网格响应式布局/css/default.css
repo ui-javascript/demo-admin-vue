@@ -1,6 +1,6 @@
 /* General Demo Style */
 @charset "UTF-8";
-@import url(http://fonts.useso.com/css?family=Merriweather+Sans:300,700);
+/* @import url(http://fonts.useso.com/css?family=Merriweather+Sans:300,700); */
 @font-face {
 	font-family: 'codropsicons';
 	src:url('../fonts/codropsicons/codropsicons.eot');
@@ -74,7 +74,7 @@ a:active {
 }
 .codrops-icon:hover:before {
 	border-color: #fff;
-} 
+}
 
 .codrops-icon-drop:before {
 	content: "\e001";
