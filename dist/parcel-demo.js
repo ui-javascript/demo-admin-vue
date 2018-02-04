@@ -6,12 +6,11 @@
 // anything defined in a previous bundle is accessed via the
 // orig method which is the require for previous bundles
 
-// eslint-disable-next-line no-global-assign
 require = (function (modules, cache, entry) {
   // Save the require from previous bundle to this closure if any
   var previousRequire = typeof require === "function" && require;
 
-  function newRequire(name, jumped) {
+  function newRequire(name, jumped, ModuleConfig) {
     if (!cache[name]) {
       if (!modules[name]) {
         // if we cannot find the module within our internal map or
@@ -37,7 +36,7 @@ require = (function (modules, cache, entry) {
       
       localRequire.resolve = resolve;
 
-      var module = cache[name] = new newRequire.Module;
+      var module = cache[name] = new newRequire.Module(ModuleConfig);
 
       modules[name][0].call(module.exports, localRequire, module, module.exports);
     }
@@ -69,7 +68,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({8:[function(require,module,exports) {
+})({7:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -100,7 +99,7 @@ function getBaseURL(url) {
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 
-},{}],6:[function(require,module,exports) {
+},{}],5:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,158 +131,4 @@ function reloadCSS() {
 
 module.exports = reloadCSS;
 
-},{"./bundle-url":8}],5:[function(require,module,exports) {
-
-        var reloadCSS = require('_css_loader');
-        module.hot.dispose(reloadCSS);
-        module.hot.accept(reloadCSS);
-      
-},{"./button-search.png":[["ee9e327875dc9d21d488762d59275ee9.png",7],7],"_css_loader":6}],3:[function(require,module,exports) {
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _main = require('./main.css');
-
-var _main2 = _interopRequireDefault(_main);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function () {
-    console.log(_main2.default);
-};
-},{"./main.css":5}],2:[function(require,module,exports) {
-'use strict';
-
-var _main = require('./main');
-
-var _main2 = _interopRequireDefault(_main);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-(0, _main2.default)(); // 导入另一个组件
-},{"./main":3}],9:[function(require,module,exports) {
-
-var global = (1, eval)('this');
-var OldModule = module.bundle.Module;
-function Module() {
-  OldModule.call(this);
-  this.hot = {
-    accept: function (fn) {
-      this._acceptCallback = fn || function () {};
-    },
-    dispose: function (fn) {
-      this._disposeCallback = fn;
-    }
-  };
-}
-
-module.bundle.Module = Module;
-
-if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
-  var hostname = '' || location.hostname;
-  var ws = new WebSocket('ws://' + hostname + ':' + '11545' + '/');
-  ws.onmessage = function (event) {
-    var data = JSON.parse(event.data);
-
-    if (data.type === 'update') {
-      data.assets.forEach(function (asset) {
-        hmrApply(global.require, asset);
-      });
-
-      data.assets.forEach(function (asset) {
-        if (!asset.isNew) {
-          hmrAccept(global.require, asset.id);
-        }
-      });
-    }
-
-    if (data.type === 'reload') {
-      ws.close();
-      ws.onclose = function () {
-        location.reload();
-      };
-    }
-
-    if (data.type === 'error-resolved') {
-      console.log('[parcel] ✨ Error resolved');
-    }
-
-    if (data.type === 'error') {
-      console.error('[parcel] 🚨  ' + data.error.message + '\n' + 'data.error.stack');
-    }
-  };
-}
-
-function getParents(bundle, id) {
-  var modules = bundle.modules;
-  if (!modules) {
-    return [];
-  }
-
-  var parents = [];
-  var k, d, dep;
-
-  for (k in modules) {
-    for (d in modules[k][1]) {
-      dep = modules[k][1][d];
-      if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) {
-        parents.push(+k);
-      }
-    }
-  }
-
-  if (bundle.parent) {
-    parents = parents.concat(getParents(bundle.parent, id));
-  }
-
-  return parents;
-}
-
-function hmrApply(bundle, asset) {
-  var modules = bundle.modules;
-  if (!modules) {
-    return;
-  }
-
-  if (modules[asset.id] || !bundle.parent) {
-    var fn = new Function('require', 'module', 'exports', asset.generated.js);
-    asset.isNew = !modules[asset.id];
-    modules[asset.id] = [fn, asset.deps];
-  } else if (bundle.parent) {
-    hmrApply(bundle.parent, asset);
-  }
-}
-
-function hmrAccept(bundle, id) {
-  var modules = bundle.modules;
-  if (!modules) {
-    return;
-  }
-
-  if (!modules[id] && bundle.parent) {
-    return hmrAccept(bundle.parent, id);
-  }
-
-  var cached = bundle.cache[id];
-  if (cached && cached.hot._disposeCallback) {
-    cached.hot._disposeCallback();
-  }
-
-  delete bundle.cache[id];
-  bundle(id);
-
-  cached = bundle.cache[id];
-  if (cached && cached.hot && cached.hot._acceptCallback) {
-    cached.hot._acceptCallback();
-    return true;
-  }
-
-  return getParents(global.require, id).some(function (id) {
-    return hmrAccept(global.require, id);
-  });
-}
-},{}]},{},[9,2])
-//# sourceMappingURL=/dist/parcel-demo.map
+},{"./bundle-url":7}]
