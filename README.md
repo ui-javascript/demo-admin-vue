@@ -29,9 +29,6 @@ camera.js
     - https://www.rails365.net/articles/cong-webpack-dao-quan-mian-yong-bao-parcel-1-tan-suo-parcel
     
 - Parcel + Vue 
-    - https://github.com/zlxbuzz/parcel-demo
-    - http://www.jb51.net/article/131381.htm
-    - https://github.com/80669256/parcel-vue
     - https://github.com/p2yang/parcel-vue
     
 - Parcel  + React
@@ -45,3 +42,7 @@ camera.js
 file>settings>Lauguages & Frameworks>javascript
 将javascript languages version 修改为 ECMAScript 6。
 ```
+
+# webpack
+
+- 静态站点 https://github.com/vhtml/webpack-MultiPage-static
