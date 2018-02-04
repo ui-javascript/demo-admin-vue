@@ -6,13 +6,13 @@
     - 分页与轮播的结合
     - 静态轮播(轮播烂大街但是客户实际很少点击)
 
-```js
+```shell
 // 暂停实现
 camera.js
 ```
     
 - 其他    
-```angular2html
+```shell
 // 什么东西?
 <div style="text-align:center;clear:both">
     <script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
@@ -24,10 +24,24 @@ camera.js
 
 # Parcel 配置
 
-- 前端构建工具吐槽与parcel极简入门 https://github.com/Mcbai/Blog/issues/2
+- 前端构建工具吐槽与parcel极简入门 
+    - https://github.com/Mcbai/Blog/issues/2
+    - https://www.rails365.net/articles/cong-webpack-dao-quan-mian-yong-bao-parcel-1-tan-suo-parcel
+    
+- Parcel + Vue 
+    - https://github.com/zlxbuzz/parcel-demo
+    - http://www.jb51.net/article/131381.htm
+    - https://github.com/80669256/parcel-vue
+    - https://github.com/p2yang/parcel-vue
+    
+- Parcel  + React
 
+    - https://www.cnblogs.com/huanent/p/8331295.html    
 
-```js
+- Parcel VS Webpack 
+    - https://github.com/gwuhaolin/parcel-vs-webpack
+
+```shell
 file>settings>Lauguages & Frameworks>javascript
 将javascript languages version 修改为 ECMAScript 6。
 ```
