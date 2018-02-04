@@ -1,4 +1,4 @@
-## README.md
+# 布局类组件
 
 - 创新点
 
@@ -10,17 +10,6 @@
 // 暂停实现
 camera.js
 ```
-
-- cdn
-
-```html
-<script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-
-
-<link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css" rel="stylesheet">
-```
     
 - 其他    
 ```angular2html
@@ -31,4 +20,14 @@ camera.js
 </div>
 
 广告和服务器的相对路径文件,下载下来以后不需要
+```
+
+# Parcel 配置
+
+- 前端构建工具吐槽与parcel极简入门 https://github.com/Mcbai/Blog/issues/2
+
+
+```js
+file>settings>Lauguages & Frameworks>javascript
+将javascript languages version 修改为 ECMAScript 6。
 ```

@@ -1,0 +1,28 @@
+{
+  "name": "parcel-demo",
+  "version": "1.0.0",
+  "description": "parcel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"parcel index.html",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --public-url /"
+  },
+  "keywords": [
+    "parcel"
+  ],
+  "author": "aaron",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "parcel-bundler": "^1.2.0",
+    "less": "^2.7.3",
+    "parcel-bundler": "^1.2.0",
+    "parcel-plugin-vue": "^1.0.1"
+  },
+  "dependencies": {
+    "vue-router": "^3.0.1"
+  }
+}
