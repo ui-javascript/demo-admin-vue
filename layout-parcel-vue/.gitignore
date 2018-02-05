@@ -1,0 +1,12 @@
+_act*
+*.swp
+*.tmp
+tmp
+runtime/*
+run/*
+node_modules/
+bower_components/
+run.log
+.upload/
+.cache/
+npm-debug.log
