@@ -46,3 +46,5 @@ file>settings>Lauguages & Frameworks>javascript
 # webpack
 
 - 静态站点 https://github.com/vhtml/webpack-MultiPage-static
+- https://github.com/ruanyf/css-modules-demos
+- https://github.com/css-modules/webpack-demo
