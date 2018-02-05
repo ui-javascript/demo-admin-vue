@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Piecemaker>
+    <Contents>
+        <Image Source="js/piecemaker2/contents/backgroung-resized.jpg" Title="The Piecemaker 2"></Image>
+        <Image Source="js/piecemaker2/contents/backgroung-resized.jpg" Title="backgroung-resized"></Image>
+        <Image Source="js/piecemaker2/contents/backgroung-resized.jpg" Title="Lots of new Features">
+          <Text>&lt;h1&gt;New hot Features&lt;/h1&gt;&lt;p&gt;The all new Piecemaker comes with lots of new features, making it even more slick.&lt;/p&gt;&lt;p&gt;Just to mention a few - you can now specify unlimited transition styles, include your own SWF and Video files, add hyperlinks to images and info texts with all special characters.&lt;/p&gt;&lt;p&gt;We also impoved the navigation and the animation with animated shadows and pixel-perfect transitions.&lt;/p&gt;</Text>
+          <Hyperlink URL="../../../www.modularweb.net/" Target="_blank" />
+        </Image>
+        <Flash Source="js/piecemaker2/contents/flash.swf" Title="Loaded SWF File">
+           <Image Source="js/piecemaker2/contents/flash-preview.png" />
+        </Flash>
+        <Image Source="js/piecemaker2/contents/backgroung-resized.jpg" Title="Editing made Easy"></Image>
+        <Video Source="js/piecemaker2/contents/video.mp4" Title="Video Example" Width="955" Height="464" Autoplay="true">
+            <Image Source="js/piecemaker2/contents/video-preview.jpg" />
+        </Video>
+    </Contents>
+    <Settings ImageWidth="955" ImageHeight="400" LoaderColor="0x333333" InnerSideColor="0x222222" SideShadowAlpha="0.2" DropShadowAlpha="0.6" DropShadowDistance="30" DropShadowScale="0.88" DropShadowBlurX="80" DropShadowBlurY="15" MenuDistanceX="30" MenuDistanceY="45" MenuColor1="0x999999" MenuColor2="0x333333" MenuColor3="0xFFFFFF" ControlSize="100" ControlDistance="20" ControlColor1="0x222222" ControlColor2="0xFFFFFF" ControlAlpha="0.8" ControlAlphaOver="0.95" ControlsX="450" ControlsY="280&#xD;&#xA;" ControlsAlign="center" TooltipHeight="30" TooltipColor="0x222222" TooltipTextY="5" TooltipTextStyle="P-Italic" TooltipTextColor="0xFFFFFF" TooltipMarginLeft="5" TooltipMarginRight="7" TooltipTextSharpness="50" TooltipTextThickness="-100" InfoWidth="500" InfoBackground="0xFFFFFF" InfoBackgroundAlpha="0.95" InfoMargin="0" InfoSharpness="0" InfoThickness="0" Autoplay="10" FieldOfView="45"></Settings>
+    <Transitions>
+      <Transition Pieces="9" Time="1.2" Transition="easeInOutBack" Delay="0.1" DepthOffset="300" CubeDistance="30"></Transition>
+      <Transition Pieces="18" Time="4" Transition="easeInOutElastic" Delay="0.03" DepthOffset="900" CubeDistance="50"></Transition>
+      <Transition Pieces="5" Time="1.3" Transition="easeInOutCubic" Delay="0.1" DepthOffset="500" CubeDistance="50"></Transition>
+      <Transition Pieces="9" Time="1.25" Transition="easeInOutBack" Delay="0.1" DepthOffset="900" CubeDistance="5"></Transition>
+    </Transitions>
+</Piecemaker>

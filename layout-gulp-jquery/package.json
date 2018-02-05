@@ -1,0 +1,21 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "less -> css",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "luo0412",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-less": "^3.3.0",
+    "gulp-notify": "",
+    "gulp-plumber": "",
+    "gulp-clean-css": "",
+    "gulp-postcss": "",
+    "gulp-autoprefixer": "",
+    "autoprefixer": "",
+    "cssnano": ""
+  }
+}
