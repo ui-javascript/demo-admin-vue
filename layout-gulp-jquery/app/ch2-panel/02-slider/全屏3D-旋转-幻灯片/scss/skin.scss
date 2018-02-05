@@ -1,0 +1,364 @@
+@import "_func.scss";
+@import "_mixins/_mixins.scss";
+
+$persp: 1000;
+$tr: -50vh;
+$tr_a: 400px;
+
+$cl1: #EE250C;
+$cl3: #fff;
+
+* {
+	@include box-sizing(border-box);
+	margin: 0;
+	padding: 0;
+}
+
+@include keyframes(anim){
+	0% {line-height: 54px;}
+	5% {line-height: 100px;}
+	10% {line-height: 54px;}
+	15% {line-height: 100px;}
+	20% {line-height: 54px;}
+	100% {line-height: 54px;}
+}
+
+@mixin btn(){
+	display: block;
+	width: 60px; height: 60px;
+	border-radius: 50%;
+	color: #fff;
+	background: transparent;
+	border: 1px solid #fff;
+	text-align: center;
+	line-height: 54px;
+	font-size: 24px;
+	bottom: 10%; left: 50%;
+	cursor: pointer;
+	@include transform-origin(center center);
+	@include transform(translate(-50%,0) scale(.8) );
+	@include transition(.3s);
+	@include animation(anim 3s infinite);
+	&:hover {
+		@include transform(translate(-50%,0) scale(1));
+		font-size: 44px; line-height: 100px;
+		@include animation(none);
+	}
+}
+@mixin btn2(){
+	display: block;
+	width: 60px; height: 60px;
+	border-radius: 50%;
+	color: #fff;
+	background: transparent;
+	border: 1px solid #fff;
+	text-align: center;
+	line-height: 54px;
+	font-size: 24px;
+	top: 10%; left: 50%;
+	cursor: pointer;
+	@include transform-origin(center center);
+	@include transform(translate(-50%,0) scale(.8) );
+	@include transition(.3s);
+	@include animation(none);
+	&:hover {
+		@include transform(translate(-50%,0) scale(1));
+		font-size: 44px; line-height: 1px;
+		&:after {
+			display: block;
+			margin-top: -10px;
+		}
+	}
+}
+
+h3 {
+	color: #fff;
+	font-size: 34px;
+	margin: 0 0 10px;
+}
+p {
+	margin: 0;
+	padding-top: 10px;
+	color: rgba(255,255,255,.7);
+	font-weight: 300;
+	font-size: 18px;
+}
+a {
+	display: inline-block;
+	text-decoration: none;
+}
+
+@include keyframes(anim2) {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+body {
+	background: #181B27;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	font-family: tahoma, sans-serif;
+	.buttons-wrapper {
+		position: absolute;
+		top: 0; left: 0; width: 100%; height: 100%;
+		opacity: 0;
+		@include perspective(1000px);
+		@include animation(anim2 5s forwards);
+		input {
+			display: none;
+			&:nth-child(1){top: 10px; left: 100px;}
+			&:nth-child(2){top: 10px; left: 200px;}
+			&:nth-child(3){top: 10px; left: 300px;}
+			&:nth-child(4){top: 10px; left: 400px;}
+			&:nth-child(1):checked ~ .slider {
+				> li {
+					&:nth-child(1) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(0deg)); z-index: 2;}
+					&:nth-child(2) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(-90deg));}
+					&:nth-child(3) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(-180deg));}
+					&:nth-child(4) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(-260deg));}
+				}
+			}
+			&:nth-child(2):checked ~ .slider {
+				> li {
+					&:nth-child(1) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(90deg));}
+					&:nth-child(2) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(0deg)); z-index: 2;}
+					&:nth-child(3) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(-90deg));}
+					&:nth-child(4) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(-180deg));}
+				}
+			}
+			&:nth-child(3):checked ~ .slider {
+				> li {
+					&:nth-child(1) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(180deg));}
+					&:nth-child(2) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(90deg));}
+					&:nth-child(3) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(0deg)); z-index: 2;}
+					&:nth-child(4) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(-90deg));}
+				}
+			}
+			&:nth-child(4):checked ~ .slider {
+				> li {
+					&:nth-child(1) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(260deg));}
+					&:nth-child(2) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(180deg));}
+					&:nth-child(3) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(90deg));}
+					&:nth-child(4) {@include transform(perspective(100em) translate3d(0,0,$tr) rotateX(0deg)); z-index: 2;}
+				}
+			}
+			/* captions */
+			&:nth-child(1):checked ~ .slider li {
+				&:nth-child(2) {.caption {@include transform(rotate(1deg) rotateY(20deg) translate(0,100%));}}
+			}
+			&:nth-child(2):checked ~ .slider li {
+				&:nth-child(1) {.caption {@include transform(rotate(-7deg) translate(0,-100%));}}
+				&:nth-child(3) {.caption {@include transform(rotate(-1deg) rotateY(40deg) translate(0,100%));}}
+			}
+			&:nth-child(3):checked ~ .slider li {
+				&:nth-child(2) {
+					.caption {@include transform(rotate(1deg) rotateY(20deg) translate(0,-100%));}
+				}
+				&:nth-child(4) .caption {@include transform(translate(0,100%) rotateX(20deg));}
+			}
+			&:nth-child(4):checked ~ .slider li {
+				&:nth-child(3) {.caption {@include transform(rotate(-1deg) rotateY(40deg) translate(0,-100%));}}
+			}
+			/*buttons*/
+			&:nth-child(1):checked ~ label {
+				display: none;
+				&:nth-of-type(2) {
+					display: block; &:after {content: '↓';} @include btn();
+				}
+			}
+			&:nth-child(2):checked ~ label {
+				display: none;
+				&:nth-of-type(3) {
+					display: block; &:after {content: '↓';} @include btn();
+					@include animation(none);
+				}
+				&:nth-of-type(1) {
+					display: block; &:after {content: '↑';} @include btn2();
+					@include animation(none);
+				}
+			}
+			&:nth-child(3):checked ~ label {
+				display: none;
+				&:nth-of-type(4) {
+					display: block; &:after {content: '↓';} @include btn();
+					@include animation(none);
+				}
+				&:nth-of-type(2) {
+					display: block; &:after {content: '↑';} @include btn2();
+					@include animation(none);
+				}
+			}
+			&:nth-child(4):checked ~ label {
+				display: none;
+				&:nth-of-type(3) {
+					display: block; &:after {content: '↑';} @include btn2();
+					@include animation(none);
+					&:hover {
+						color: #2D3D59;
+					}
+				}
+			}
+		}
+		/*buttons*/
+		label {
+			display: block;
+			width: 40px; height: 40px;
+			background: #900;
+			position: fixed;
+			backface-visibility: hidden;
+			z-index: 10;
+			bottom: 100px;
+			left: 100px;
+			/*↑↓*/
+		}
+
+		.slider {
+			position: fixed;
+			display: block;
+			top: 0; left: 0; width: 100%; height: 100%;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			z-index: 2;
+			opacity: .99;
+			> li {
+				display: block;
+				position: absolute;
+				top: 0; left: 0; width: 100%; height: 100%;
+				@include transition(3s cubic-bezier(.5,0,0,.99));
+				@include backface-visibility(hidden);
+				@include perspective(1000px);
+				/*opacity: .5;*/
+				&:nth-child(1) {
+					background: url(../images/slide1.jpg) no-repeat center center;
+					@include background-size(cover);
+					@include transform-origin(center center $tr);
+					.caption {
+						position: absolute;
+						width: 40%;
+						text-align: right;
+						border-right: 2px solid $cl1;
+						padding-right: 20px;
+						right: 45%; top: 10%;
+						text-shadow: 0 2px 10px rgba(0,0,0,1), 0 1px 1px rgba(0,0,0,.5);
+						@include transform(rotate(-7deg));
+						@include transition(3s cubic-bezier(.5,0,0,.99));
+						h3, a {
+							color: $cl1;
+						}
+					}
+				}
+				&:nth-child(2) {
+					background: url(../images/slide2.jpg) no-repeat center center;
+					@include background-size(cover);
+					@include transform-origin(center center $tr);
+					.caption {
+						position: absolute;
+						width: 40%;
+						text-align: right;
+						border-right: 2px solid $cl1;
+						padding-right: 20px;
+						right: 55%; bottom: 20%;
+						text-shadow: 0 2px 10px rgba(0,0,0,1), 0 1px 1px rgba(0,0,0,.5);
+						@include transform(rotate(1deg) rotateY(20deg));
+						@include transition(3s cubic-bezier(.5,0,0,.99));
+						h3, a {
+							color: $cl1;
+						}
+					}
+				}
+				&:nth-child(3) {
+					background: url(../images/slide3.jpg) no-repeat bottom center;
+					@include background-size(cover);
+					@include transform-origin(center center $tr);
+					.caption {
+						position: absolute;
+						width: 35%;
+						text-align: right;
+						border-right: 2px solid #ddd;
+						padding-right: 20px;
+						right: 55%; bottom: 25%;
+						text-shadow: 0 2px 10px rgba(0,0,0,1), 0 1px 1px rgba(0,0,0,.5);
+						@include transform(rotate(-1deg) rotateY(40deg));
+						@include transition(3s cubic-bezier(.5,0,0,.99));
+						h3, a {
+							color: $cl3;
+						}
+						h3 {font-size: 28px;}
+						p {font-size: 16px;}
+					}
+				}
+				&:nth-child(4) {
+					background: url(../images/slide4.jpg) no-repeat bottom left;
+					@include background-size(cover);
+					@include transform-origin(center center $tr);
+					.caption {
+						position: absolute;
+						width: 40%;
+						text-align: justify;
+						/*border-top: 2px solid #ddd;*/
+						/*padding-top: 20px;*/
+						right: 30%; top: 32%;
+						text-shadow: 0 2px 10px rgba(0,0,0,1), 0 1px 1px rgba(0,0,0,.5);
+						@include transform( rotateX(20deg));
+						@include transition(3s cubic-bezier(.5,0,0,.99));
+						h3, a {
+							color: $cl3;
+						}
+						h3 {font-size: 28px;text-align: center;}
+						p {font-size: 16px; padding: 30px;}
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+	position: fixed;
+	bottom: 10px; left: 0;
+	text-align: center;
+	width: 100%;
+	z-index: 10;
+	color: rgba(255,255,255,.5);
+	font-family: tahoma, sans-serif;
+	font-size: 10px;
+}
+
+@media (max-width: 768px){
+	body .buttons-wrapper .slider>li {
+		@include perspective(600px);
+	}
+	body .buttons-wrapper .slider>li {
+		&:nth-child(1) {
+			.caption {
+				top: 5%; width: 80%; right: 10%;
+				h3 {font-size: 20px;}
+				p {font-size: 12px; margin-top: 0; padding-top: 0;}
+			}
+		}
+		&:nth-child(2), &:nth-child(3) {
+			background-position: 20% center;
+			.caption {
+				right: 15%; bottom: 25%; width: 80%;
+				h3 {font-size: 20px;}
+				p {font-size: 12px; margin-top: 0; padding-top: 0;}
+			}
+		}
+		&:nth-child(3) {
+			.caption {
+				width: 85%;
+			}
+		}
+		&:nth-child(4) {
+			background-position: center bottom;
+			.caption {
+				width: 90%; right: 5%; top: 48%;
+				h3 {font-size: 20px;}
+				p {font-size: 12px; margin-top: 0; padding-top: 0;}
+			}
+		}
+	}
+}
