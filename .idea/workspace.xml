@@ -2,18 +2,757 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b3cc417-2ff4-4e5c-83d5-e478afc6f981" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/comp-layout.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css-module-webpack/.editorconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-parcel-vue/.editorconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack-jquery/.editorconfig" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/app.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/bar.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/page.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/readme.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/webpack.config.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/Grd-基于Flexbox的CSS网格系统框架/css/htmleaf-demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/Grd-基于Flexbox的CSS网格系统框架/css/normalize.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/Grd-基于Flexbox的CSS网格系统框架/dist/grd.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/Grd-基于Flexbox的CSS网格系统框架/fonts/icomoon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/Grd-基于Flexbox的CSS网格系统框架/fonts/icomoon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/Grd-基于Flexbox的CSS网格系统框架/fonts/icomoon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/Grd-基于Flexbox的CSS网格系统框架/fonts/icomoon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/Grd-基于Flexbox的CSS网格系统框架/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/Grd-基于Flexbox的CSS网格系统框架/related/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/Grd-基于Flexbox的CSS网格系统框架/related/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/Grd-基于Flexbox的CSS网格系统框架/src/grd.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/bin/._MailHandler.ashx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/bin/._MailHandler.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/bin/MailHandler.ashx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/bin/MailHandler.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/css/._ie.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/css/._reset.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/css/._style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/css/ie.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/css/reset.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._ajax-loader.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._bg1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._bg2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._bg3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._bg_content.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._bg_footer.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._bg_top.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._big_img1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._big_img2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._big_img3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._big_img4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._big_img5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._buttons.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._buttons_active.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._close.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._close_active.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._gallery_thumb1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._gallery_thumb2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._gallery_thumb3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._gallery_thumb4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._gallery_thumb5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._googleMapLoader.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._icon1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._icon1_active.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._icon2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._icon2_active.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._icon3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._icon3_active.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._logo.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._marker_1.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._marker_left.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._marker_right.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._page1_img1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._page2_img1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._page2_img2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._page2_img3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._page2_img4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._page4_img1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._page4_img2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._scroll_drag.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._scroll_track.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/._spacer.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/ajax-loader.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/bg1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/bg2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/bg3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/bg_content.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/bg_footer.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/bg_top.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/big_img1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/big_img2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/big_img3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/big_img4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/big_img5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/buttons.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/buttons_active.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/close.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/close_active.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/gallery_thumb1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/gallery_thumb2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/gallery_thumb3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/gallery_thumb4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/gallery_thumb5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/googleMapLoader.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/icon1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/icon1_active.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/icon2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/icon2_active.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/icon3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/icon3_active.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/logo.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/marker_1.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/marker_left.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/marker_right.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/page1_img1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/page2_img1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/page2_img2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/page2_img3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/page2_img4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/page4_img1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/page4_img2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/scroll_drag.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/scroll_track.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/images/spacer.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._PIE.htc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._PIE.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._bgStretch.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._cScroll.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._content_switch.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._forms.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._googleMap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._html5.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._jcarousellite.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._jquery-1.6.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._jquery-ui.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._jquery.color.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._jquery.easing.1.3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._jquery.mousewheel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._script.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/._superfish.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/PIE.htc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/PIE.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/bgStretch.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/cScroll.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/content_switch.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/forms.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/googleMap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/html5.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/jcarousellite.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/jquery-1.6.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/jquery-ui.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/jquery.color.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/jquery.easing.1.3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/jquery.mousewheel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/script.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/js/superfish.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/screenshots/._interior_design_b.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/screenshots/._interior_design_th.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/screenshots/interior_design_b.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/nav-flex-good/screenshots/interior_design_th.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/pills-简单12列网格/related/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/pills-简单12列网格/related/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/css/hexagons.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/css/htmleaf-demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/fonts/icomoon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/fonts/icomoon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/fonts/icomoon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/fonts/icomoon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/img/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/img/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/img/3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/img/4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/img/5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/img/6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/img/7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/img/8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/related/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-六边形展示-网格布局/related/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/css/component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/css/default.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/fonts/anyoldicon/anyoldicon.dev.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/fonts/anyoldicon/anyoldicon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/fonts/anyoldicon/anyoldicon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/fonts/anyoldicon/anyoldicon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/fonts/anyoldicon/anyoldicon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/fonts/bpicons/bpicons.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/fonts/bpicons/bpicons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/fonts/bpicons/bpicons.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/fonts/bpicons/bpicons.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/fonts/bpicons/license.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-图片网格布局/js/modernizr.custom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-文章系统-网格切换/related/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/响应式-文章系统-网格切换/related/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/页面网格幻灯片-切换/css/default.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/页面网格幻灯片-切换/css/normalize.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/页面网格幻灯片-切换/css/styles.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/页面网格幻灯片-切换/fonts/icomoon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/页面网格幻灯片-切换/fonts/icomoon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/页面网格幻灯片-切换/fonts/icomoon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/页面网格幻灯片-切换/fonts/icomoon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/页面网格幻灯片-切换/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/页面网格幻灯片-切换/js/jquery-2.1.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/页面网格幻灯片-切换/related/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/02-grid-flex/页面网格幻灯片-切换/related/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/03-scroll/new-blue-index-good/网站数据检测网站模板下载.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/03-scroll/new-blue-index-good/说明.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/10.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/11.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/12.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/13.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/14.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/7.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/8.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/9.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/images/bodyBg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch1-layout/04-shape/css3-hover-icon-rotate-六角形/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/blog.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/css/responsive.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/blank.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/button-search.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/camera-loader.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/camera_skins.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/digg-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/facebook-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/favicon.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/google-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/img1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/img2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/img3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/linkedin-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/pattern22.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/port1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/port2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/port3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/rss-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/sharethis-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/slide1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/slide2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/slide3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/slide4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/slide5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/slide6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/slide7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/slide8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/slide9.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/thumbs/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/thumbs/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/thumbs/3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/thumbs/4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/thumbs/5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/thumbs/6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/thumbs/7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/thumbs/8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/slides/thumbs/9.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/thumb1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/thumb2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/thumb3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/thumb4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/thumb5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/thumb6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/thumb7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/thumb8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/thumb9.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/twitter-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/images/zerotheme.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/banner-can-stop/single.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/jquery-circle-image-player-环状轮播/12.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/jquery-image-mobile-silder/12.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/Thumbs.db" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/about.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/avattar-replay.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/avattar.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/fade-iphone1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-about.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-latest-posts-1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-latest-posts-2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-latest-posts-3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-about.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-3col-1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-3col-2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-3col-3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-3col-4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-3col-5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-3col-6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-3col-7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-3col-8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-3col-9.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-list-1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-list-2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-list-3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-onepage.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-thumbs-1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-thumbs-2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-thumbs-3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-thumbs-4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-thumbs-5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-portfolio-thumbs-6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-post-classic-1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-post-classic-2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-post-classic-3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-post-classic-4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-post-modern-1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-post-modern-2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-post-modern-3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-post-modern-4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-post-modern-5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/image-thumb-post-modern-6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/ipad.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/laptop.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/portfolio-thumb-2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/portfolio-thumb-3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/portfolio-thumb-4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/portfolio-thumb-5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/slider-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/wallpaper-1-955x400.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/wallpaper-2-955x400.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/wallpaper-3-955x400.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/wallpaper-4-955x400.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/assets/working-project.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/blog-classic.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/blog-modern.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/columns.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/contact.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/css/ie7.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/css/ie8.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/css/mvboli-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/css/mvboli-webfont.eot@" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/css/mvboli-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/css/mvboli-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/css/select_color.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/error-page-404.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/favicon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/full-width.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/home-blog-classic.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/home-blog-modern.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/home-corporate.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/home-slider-fade.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/home-slider-nivo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/Work-With-Us-button.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/Work-With-Us.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/attention-to-details.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/breadcrumbs-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/breadcrumbs-link-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/content-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/copyright-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/divider-sidebar.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/fade-bullets.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/fade-slider-arrows-hover.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/fade-slider-arrows.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/footer-content-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/footer-subcontent-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/hd-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/home-slider-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/icon-Ai.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/icon-CMS.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/icon-CSS3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/icon-JS.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/icon-PHP.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/icon-Ps.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/icon-WP.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/icon-html5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/input-newsletter-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/intro-text-highlight-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/join-our-newsletter-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/join-us-on-the-web-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/line-pattern-light-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/message-box-icons.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/message-close-icons.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/message-info-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/message-note-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/message-success-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/message-warning-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/meta-data-icons-small.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/modern-and-beautiful.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/nav-red-button.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-bottom-featured-left-shadow.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-bottom-featured-right-shadow.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-bottom-left-shadow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-bottom-pattern-shadow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-bottom-right-shadow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-bottom-row-shadow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-checkbox.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-featured-left-shadow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-featured-right-shadow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-left-shadow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-none.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-red-medium-pattern-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-red-small-pattern-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-red-top-shadow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-right-shadow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-top-left-shadow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pTable-top-right-shadow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/page-small-transparent-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pagination-arrows.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/pixel-perfect.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/post-icon-digg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/post-icon-fb.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/post-icon-in.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/post-icon-rss.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/post-icon-tw.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/post-icon-youtube.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/quote-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/red-buttons-1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/red-buttons-2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/ribbon-home.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/ribbon-metadata-bg3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/ribbon-metadata-left.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/ribbon-metadata-right.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/smart-and-flexible.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/submit-button.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/testimonial-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/images/testimonial-triangle.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/accordion.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/anything-slider/css/animate.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/anything-slider/css/anythingslider-ie.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/anything-slider/css/anythingslider.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/anything-slider/jquery.anythingslider.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/jquery-1.7.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/jquery.cookie.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/jquery.easing.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/jquery.hoverIntent.minified.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/jquery.quicksand.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/main.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/misc/PIE.htc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/nivo-slider/jquery.nivo.slider.pack.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/nivo-slider/nivo-slider.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/nivo-slider/themes/default/bullets.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/nivo-slider/themes/default/default.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/nivo-slider/themes/default/home-fade-slider-arrows.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/nivo-slider/themes/default/loading.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/piecemaker2/contents/backgroung-resized.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/piecemaker2/contents/flash-preview.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/piecemaker2/contents/flash.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/piecemaker2/contents/video-preview.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/piecemaker2/contents/video.mp4" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/piecemaker2/piecemaker.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/piecemaker2/piecemaker.swf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/piecemaker2/piecemaker.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/piecemaker2/scripts/swfobject/swfobject.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/portfolio-one.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/portfolio.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/tabs.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/themecolorpicker.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/js/toggler.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/portfolio-3col.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/portfolio-details.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/portfolio-list.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/portfolio-one-page.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/portfolio-thumbs.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/services-layout.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/single-post.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/accordion-bullets.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/arrow-nav.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/blue-buttons-1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/blue-buttons-2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/blue.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/checklist-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/circle-bullets-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/dropcap-icons.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/footer-widget-divider.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/html-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/icon-reply.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/icon-tags-large.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/icons-list-grid.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/intro-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/link-list-arrow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/nav-sec-arrow.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/pTable-blue-large-pattern-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/pTable-blue-medium-left-shadow-pattern-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/pTable-blue-medium-right-shadow-pattern-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/pTable-blue-small-left-shadow-pattern-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/pTable-blue-small-pattern-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/pTable-blue-small-right-shadow-pattern-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/portfolio-details-metadata-icons.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/portfolio-slider-nav-bullets.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/quad-bullets-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/slider-bg-blue.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/social-icons.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/blue/tags-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/green/html-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/light/html-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/red/html-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/styles/turquoise/html-bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/tables-sliders.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/tabs-toggles-others.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/typography.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/灰色金属质感HTML模板.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/02-slider/old-index-banner-animate/说明.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/03-gallery/照片-画廊/css/htmleaf-demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/03-gallery/照片-画廊/css/normalize.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/03-gallery/照片-画廊/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/03-gallery/照片-画廊/fonts/icomoon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/03-gallery/照片-画廊/fonts/icomoon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/03-gallery/照片-画廊/fonts/icomoon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/03-gallery/照片-画廊/fonts/icomoon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/03-gallery/照片-画廊/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch2-panel/03-gallery/照片-画廊/js/stopExecutionOnTimeout.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/Bootstrap-滑动侧边导航/css/bootstrap-vertical-menu.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/Bootstrap-滑动侧边导航/css/default.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/Bootstrap-滑动侧边导航/css/normalize.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/Bootstrap-滑动侧边导航/fonts/icomoon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/Bootstrap-滑动侧边导航/fonts/icomoon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/Bootstrap-滑动侧边导航/fonts/icomoon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/Bootstrap-滑动侧边导航/fonts/icomoon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/Bootstrap-滑动侧边导航/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/Bootstrap-滑动侧边导航/related/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/Bootstrap-滑动侧边导航/related/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/jquery-ver-tab-image-slider-大侧边导航/images/a1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/jquery-ver-tab-image-slider-大侧边导航/images/a2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/jquery-ver-tab-image-slider-大侧边导航/images/a3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/jquery-ver-tab-image-slider-大侧边导航/images/a4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/jquery-ver-tab-image-slider-大侧边导航/images/a5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/jquery-ver-tab-image-slider-大侧边导航/images/hd_on.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/jquery-ver-tab-image-slider-大侧边导航/images/load.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/jquery-ver-tab-image-slider-大侧边导航/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/jquery-ver-tab-image-slider-大侧边导航/js/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/css/ie.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/css/layout.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/css/reset.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/bg_img1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/bg_img2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/bg_img3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/buttons.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/close.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/close_active.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/content_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/icon1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/icon2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/icon3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/icon4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/loader.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/loader2.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/logo.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/markers.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/menu_bg_active.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/page2_img1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/page2_img2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/page2_img3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/quot1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/quot2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/table_bg1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/table_bg2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/table_bg3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/images/table_bg4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/PIE.htc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/Questrial_400.font.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/atooltip.jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/bg.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/bgSlider.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/cufon-replace.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/cufon-yui.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/forms.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/html5.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/jcarousellite.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/jquery-1.6.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/jquery.easing.1.3.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/jquery.mousewheel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/pages.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/yoga-content-design-弹性卡片/js/script.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/apple-touch-icon-114x114-precomposed.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/apple-touch-icon-144x144-precomposed.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/apple-touch-icon-57x57-precomposed.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/apple-touch-icon-72x72-precomposed.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/apple-touch-icon-precomposed.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/apple-touch-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/css/main.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/css/normalize.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/css/normalize.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/favicon.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/images/floor.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/js/main.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/js/vendor/html5shiv.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/js/vendor/jquery-1.10.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/js/vendor/jquery.easytabs.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/个人web简历/js/vendor/jquery.hashchange.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/创意导航菜单-装饰/css/htmleaf-demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/创意导航菜单-装饰/css/normalize.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/创意导航菜单-装饰/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/创意导航菜单-装饰/fonts/icomoon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/创意导航菜单-装饰/fonts/icomoon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/创意导航菜单-装饰/fonts/icomoon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/创意导航菜单-装饰/fonts/icomoon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/创意导航菜单-装饰/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/创意导航菜单-装饰/related/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/创意导航菜单-装饰/related/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/css/grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/css/ie.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/css/reset.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/Descr.WD3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/ajax-loader.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/arrowL.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/arrowR.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/arrow_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/arrow_down.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/arrow_up.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/close_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/close_icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/content_bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/footer_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/form_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/hline.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/icon_zoom.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/menu_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/menu_divider.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/more_bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic1_big.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic2_big.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic3_big.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic4_big.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic5_big.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic6.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic6_big.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page1_pic7_big.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page2_pic1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page2_pic2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page2_pic3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page2_pic4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page3_pic1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page3_pic2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page3_pic3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page3_pic4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page3_pic5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page4_pic1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page4_pic2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page4_pic3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/page4_pic4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/panel_bg - Copy.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/panel_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/panel_divider1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/panel_divider2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/pic_bg_over.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/soc_icon1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/soc_icon2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/soc_icon3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/soc_icon4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/soc_icon5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/splash_bg_over.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/images/splash_info_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/Descr.WD3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/MathUtils.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/cScroll.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/forms.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/googleMap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/html5.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/jcarousellite_1.0.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/jquery-1.6.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/jquery-ui-1.8.11.custom.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/jquery.backgroundpos.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/jquery.color.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/jquery.cycle.all.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/jquery.easing.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/jquery.mousewheel.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/scripts.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/superfish.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/01-nav-typical/室内装修-推荐-变换切换布局/js/switcher.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/css/component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/css/demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/css/icons.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/css/normalize.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/codropsicons/codropsicons.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/codropsicons/codropsicons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/codropsicons/codropsicons.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/codropsicons/codropsicons.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/codropsicons/license.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/linecons/Read Me.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/linecons/license.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/linecons/linecons.dev.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/linecons/linecons.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/linecons/linecons.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/linecons/linecons.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/linecons/linecons.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/fonts/linecons/lte-ie7.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/index2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/index3.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/js/classie.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/js/mlpushmenu.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/03-nav-navbar/移动-左侧多级导航/js/modernizr.custom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/css/default.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/css/normalize.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/fonts/icomoon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/fonts/icomoon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/fonts/icomoon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/fonts/icomoon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/fonts/新建文件夹/icomoon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/fonts/新建文件夹/icomoon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/fonts/新建文件夹/icomoon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/fonts/新建文件夹/icomoon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/img/mb1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/img/mb2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/img/mb3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/img/mb4.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/img/mb5.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/img/mb6.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/index2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/index3.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/index4.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/related/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-侧边-动画/related/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/css/htmleaf-demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/css/normalize.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/fonts/icomoon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/fonts/icomoon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/fonts/icomoon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/fonts/icomoon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/js/jquery-2.1.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/js/modernizr.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/less/style.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/related/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/04-mobile-nav/手机-导航菜单-翻转/related/2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/css/colorfulTab.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/css/colorfulTab.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/css/demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/css/reset.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/img/tab1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/img/tab2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/img/tab3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/img/tab4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/img/tab5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/js/colorfulTab.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/js/colorfulTab.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/05-tab/jquery-tab-colorful-绚丽tab/js/jquery-1.11.0.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/css/font-awesome.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/css/zzsc.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/fonts/FontAwesome.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/app/ch3-nav/06-accordion/jquery-bootstrap-accordion-折叠面板/js/jquery-2.1.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js/Material Design-右下角助手/related/1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js/Material Design-右下角助手/related/2.jpg" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,10 +807,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,7 +942,8 @@
       <option name="presentableId" value="Default" />
       <updated>1517840551638</updated>
       <workItem from="1517840556026" duration="234000" />
-      <workItem from="1517840991602" duration="539000" />
+      <workItem from="1517840991602" duration="908000" />
+      <workItem from="1517844029326" duration="14000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1517841377235</created>
@@ -216,7 +956,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="773000" />
+    <option name="totallyTimeSpent" value="1156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -228,12 +968,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5758267" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6157355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56442416" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25375536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36158797" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -289,27 +1029,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/bar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/page.html" />
+    <entry file="file://$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/bar.js" />
+    <entry file="file://$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/app.js" />
     <entry file="file://$PROJECT_DIR$/css-module-webpack/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -317,22 +1039,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/readme.md" />
     <entry file="file://$PROJECT_DIR$/webpack-study/1、最简单的webpack实例/webpack.config.js" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -340,7 +1052,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
