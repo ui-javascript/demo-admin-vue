@@ -1,14 +1,5 @@
-tmp
-upload
-uploads
-
 node_modules
 npm-debug.log
-
-.DS_Store
-*.iml
-
-.editorconfig
 
 
 *.class
@@ -67,7 +58,6 @@ _act*
 *.tmp
 runtime/*
 run/*
-node_modules/
 bower_components/
 run.log
 .upload/
