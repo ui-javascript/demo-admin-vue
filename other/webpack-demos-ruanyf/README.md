@@ -300,7 +300,7 @@ Actually, Webpack inserts an internal style sheet into `index.html`.
 ```html
 <head>
   <script type="text/javascript" src="bundle.js"></script>
-  <style type="text/css">
+  <style>
     body {
       background-color: blue;
     }

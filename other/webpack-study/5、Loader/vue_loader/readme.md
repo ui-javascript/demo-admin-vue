@@ -276,13 +276,13 @@ npm i --save less-loader
 那么编译后，代码会变成以下情况：
 
 ```
-<style type="text/css">
+<style>
     ._1MwiT3GNpEBkInFbvenNqf_1 {
         border: 2px solid gold;
     }
 </style>
 
-<style type="text/css">
+<style>
     ._2zuIotdSd4Qw4JyIOKek2x_2 {
         position: relative;
         animation: _1Uijvgp95FT2K79a3BqAeg_2 2s linear infinite;

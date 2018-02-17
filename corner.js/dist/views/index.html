@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset=utf-8><title>萤火虫</title><link rel=stylesheet href=../static/css/utilities/_reset.css><link rel=stylesheet href=../static/css/utilities/_global.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css><link rel=stylesheet href=../static/css/components/_button.css><link rel=stylesheet href=../static/css/animate/expand.css><link rel=stylesheet href=../static/css/theme/firefly.css><style>
+        .ice-expand {
+            margin-top: 250px;
+        }
+    </style><script src=http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js></script><script src=../static/scripts/corner/_firefly.js></script></head><body><div class=ice-expand><div class=float-btn-group><button class="btn-float btn-triger pink"><i class=icon-bars></i></button><div class=btn-list><a href=# class="btn-float yellow"><i class="fa fa-search"></i></a> <a href=# class="btn-float blue"><i class="fa fa-cloud-download"></i></a> <a href=# class="btn-float green"><i class="fa fa-paperclip"></i></a> <a href=# class="btn-float purple"><i class="fa fa-line-chart"></i></a></div></div></div><div id=dd></div><script>
+    firefly('#dd');
+
+    $('.btn-triger').click(function () {
+        $(this).closest('.float-btn-group').toggleClass('open');
+    });
+  </script></body></html>

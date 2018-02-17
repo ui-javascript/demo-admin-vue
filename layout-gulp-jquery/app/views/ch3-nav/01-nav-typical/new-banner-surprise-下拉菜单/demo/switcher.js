@@ -122,7 +122,7 @@ jQuery(document).ready(function($) {
         
         $('#swcolors-css').remove();
         
-        $('head').append('<link id="swcolors-css" rel="stylesheet" href="css/colors.php?code=' + switcheropColor + '" type="text/css" />');
+        $('head').append('<link id="swcolors-css" rel="stylesheet" href="css/colors.php?code=' + switcheropColor + '" />');
     
     });
     

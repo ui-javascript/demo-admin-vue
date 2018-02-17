@@ -106,7 +106,7 @@ npm run test
 }
 ```
 
-插入到html后，style标签变为如下形式：``<style id="foo" type="text/css">css代码略</style>``。
+插入到html后，style标签变为如下形式：``<style id="foo">css代码略</style>``。
 
 但是缺点是不能变为哈希值，所以如果想要实现css的局部作用域，还需要其他东西配合（这里略略略）。
 
