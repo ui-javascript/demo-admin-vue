@@ -31,6 +31,23 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
 
+// 静态资源路径
+var staticResourceSrcArr = ['app/static/fonts/**', 'app/static/plus/**'];
+
+// 静态资源搬运
+gulp.task('copyFonts', function () {
+
+    return gulp.src('app/static/fonts/**')
+        .pipe(plumber())
+        .pipe(gulp.dest('dist/static/fonts'));
+});
+gulp.task('copyPlus', function () {
+
+    return gulp.src('app/static/plus/**')
+        .pipe(plumber())
+        .pipe(gulp.dest('dist/static/plus'));
+});
+gulp.task('copy', ['copyFonts', 'copyPlus']);
 
 // JS压缩
 gulp.task('js', function () {
@@ -43,11 +60,11 @@ gulp.task('js', function () {
 });
 
 // scss编译
-gulp.task('sass', function(cb) { // cb是传入的回调函数
+gulp.task('scss', function (cb) { // cb是传入的回调函数
     return gulp.src('app/static/css/**/*.scss')
         .pipe(plumber())
         .pipe(sass())
-        .pipe(concat({ext: '.css'}))
+        // .pipe(concat({ext: '.css'}))
         // .pipe(rename('all.min.css'))
         .pipe(minifyCss())
         .pipe(autoprefixer({
@@ -67,7 +84,7 @@ gulp.task('less', function () {
         .pipe(plumber())
         .pipe(less())
         .pipe(autoprefixer())
-        .pipe(concat({ext: '.css'})) //合并
+        // .pipe(concat({ext: '.css'})) //合并
         .pipe(minifyCss())
         .pipe(gulp.dest('dist/static/css'))
 });
@@ -97,7 +114,7 @@ gulp.task('images', function () {
 
 // 雪碧图
 // 此功能是单一的并不与其他功能串联
-gulp.task('sprite', function() {
+gulp.task('sprite', function () {
     return gulp.src('app/static/images/sprite/!(sprite.png|*.css)')
         .pipe(spritesmith({
             imgName: 'ico.png',
@@ -135,14 +152,15 @@ gulp.task('public', function () {
 // watch监听
 gulp.task('watch', function () {
     gulp.watch('app/static/scripts/**/*.js', ['js']);
-    gulp.watch('app/static/css/**/*.less', ['sass', 'less']);
+    gulp.watch('app/static/css/**/*.less', ['less']);
+    gulp.watch('app/static/css/**/*.scss', ['scss']);
     gulp.watch('app/views/**/*.html', ['html']);
 });
 
 
 // gulp是并行的，需要指定一下顺序
 gulp.task('redist', function () {
-    runSequence('clean', ['html', 'sass', 'less', 'js', 'images', 'watch'])
+    runSequence('clean', ['copy', 'html', 'scss', 'less', 'js', 'images', 'watch'])
 });
 
 // gulp命令 默认执行
