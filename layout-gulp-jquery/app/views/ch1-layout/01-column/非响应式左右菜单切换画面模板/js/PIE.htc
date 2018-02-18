@@ -15,7 +15,7 @@ Dual-licensed for use under the Apache License Version 2.0 or the General Public
     <PUBLIC:ATTACH EVENT="ondocumentready" FOR="element" ONEVENT="update()" />
     <PUBLIC:ATTACH EVENT="ondetach" FOR="element" ONEVENT="cleanup()" />
 
-    <script type="text/javascript">
+    <script>
 function i(){return function(){}}var D=window.PIE;
 if(!D){D=window.PIE={T:"-pie-",Ma:"Pie",Ka:"pie_"};if(!window.XMLHttpRequest){D.Yb=true;D.T=D.T.replace(/^-/,"")}D.oa=element.document.documentMode;D.Da=!!D.oa;if(D.oa===8){D.Ca={ya:{},add:function(a){this.ya[a.id||(a.id=""+(new Date).getTime()+Math.random())]=a},remove:function(a){delete this.ya[a.id]},Tb:function(){var a=this.ya,b;for(b in a)a.hasOwnProperty(b)&&a[b]()}};setInterval(function(){D.Ca.Tb()},250)}D.q={ja:function(a){var b=D.Gb;if(!b){b=D.Gb=element.document.createDocumentFragment();
 b.namespaces.add("css3vml","urn:schemas-microsoft-com:vml")}return b.createElement("css3vml:"+a)},Fa:function(a){var b,c,d,e,f=arguments;b=1;for(c=f.length;b<c;b++){e=f[b];for(d in e)if(e.hasOwnProperty(d))a[d]=e[d]}return a},ib:function(a,b,c){var d=D.Ab||(D.Ab={}),e=d[a],f;if(e)b.call(c,e);else{f=new Image;f.onload=function(){e=d[a]={v:f.width,i:f.height};b.call(c,e);f.onload=null};f.src=a}}};D.g=function(){function a(b){this.F=b}a.prototype={Ga:/(px|em|ex|mm|cm|in|pt|pc|%)$/,Va:function(){var b=

@@ -118,7 +118,7 @@ index.html
 ```html
 <html>
   <body>
-    <script type="text/javascript" src="bundle.js"></script>
+    <script src="bundle.js"></script>
   </body>
 </html>
 ```
@@ -259,7 +259,7 @@ index.html
 ```html
 <html>
   <head>
-    <script type="text/javascript" src="bundle.js"></script>
+    <script src="bundle.js"></script>
   </head>
   <body>
     <h1>Hello World</h1>
@@ -299,7 +299,7 @@ Actually, Webpack inserts an internal style sheet into `index.html`.
 
 ```html
 <head>
-  <script type="text/javascript" src="bundle.js"></script>
+  <script src="bundle.js"></script>
   <style>
     body {
       background-color: blue;
@@ -329,7 +329,7 @@ index.html
 ```html
 <html>
   <body>
-    <script type="text/javascript" src="bundle.js"></script>
+    <script src="bundle.js"></script>
   </body>
 </html>
 ```
