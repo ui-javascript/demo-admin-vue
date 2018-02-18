@@ -9,7 +9,8 @@
     <link rel='stylesheet prefetch'
           href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
     <link rel='stylesheet prefetch' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-    <link rel="stylesheet" href="../static/css/components/_button.css">
+    <link rel="stylesheet" href="../static/css/components/button/_button.css">
+    <link rel="stylesheet" href="../static/css/components/button/button-draggable.css">
     <link rel="stylesheet" href="../static/css/components/nav/menu-holder.css">
 
     <link rel="stylesheet" href="../static/css/animate/expand.css">
@@ -18,9 +19,11 @@
     <link rel="stylesheet" href="../static/css/theme/bird.css">
 
 
+
+
     <style>
         .ice-expand {
-            margin-top: 250px;
+            margin-top: 400px;
         }
 
         .send-button {
@@ -29,8 +32,7 @@
     </style>
 
 
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="../static/scripts/corner/firefly.js"></script>
+
 
 </head>
 
@@ -125,6 +127,7 @@
     <div class="small"></div>
 </div>
 
+<!-- 分享按钮 -->
 <div class="send-button">
     <span class="text">send</span>
     <span class="icon-wrapper">
@@ -133,9 +136,23 @@
   </span>
 </div>
 
+<!-- 可拖拽 -->
+<div class="ice-draggable-btn">
+    <div class="center menu">
+        <div id="corner"></div>
+    </div>
+</div>
 
 
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="../static/scripts/corner/firefly.js"></script>
 <script src="../static/scripts/corner/plane.js"></script>
+<script src="../static/scripts/animate/anime.js"></script>
+
+<script src="../static/scripts/components/button/button-draggable.js"></script>
+
 <script>
     firefly('#dd');
 

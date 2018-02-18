@@ -161,6 +161,7 @@ menu.add(item2);
 menu.add(item3);
 menu.add(item4);
 menu.add(item5);
+
 $(document).delay(50).queue(function(next) {
     menu.open();
     next();
