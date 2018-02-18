@@ -1,182 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b3cc417-2ff4-4e5c-83d5-e478afc6f981" name="Default" comment="[corner.js]展开效果">
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/theme/bird.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/dist/static/css/theme/bird.css" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/css/bootstrap.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/css/normalize.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/css/zzsc-demo.css" afterPath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/css/zzsc-demo.css" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/index.html" afterPath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/index.html" />
+    <list default="true" id="5b3cc417-2ff4-4e5c-83d5-e478afc6f981" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js-demo/css3-hamburger-button-汉堡按钮变形/index.html~origin_master" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css~HEAD_0" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css~origin_master" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css~origin_master_0" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/index.html~origin_master" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/123D-Design-icon.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/js/class2context.js" afterPath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/js/class2context.js" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-bird-avatar-鸟的旋转/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-bird-avatar-鸟的旋转/index2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index.html" afterPath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-hamburger-button-汉堡按钮变形/index.html" afterPath="$PROJECT_DIR$/corner.js-demo/css3-hamburger-button-汉堡按钮变形/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/index.html" afterPath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-sector-menu-扇形菜单/index.html" afterPath="$PROJECT_DIR$/corner.js-demo/css3-sector-menu-扇形菜单/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-shake-head-animation-人头像/index.html" afterPath="$PROJECT_DIR$/corner.js-demo/css3-shake-head-animation-人头像/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/html5-svg-iphone-shutter-快照/index.html" afterPath="$PROJECT_DIR$/corner.js-demo/html5-svg-iphone-shutter-快照/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/index.html" afterPath="$PROJECT_DIR$/corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/jquery-elasticity-share-button-可拖拽/index2.html" afterPath="$PROJECT_DIR$/corner.js-demo/jquery-elasticity-share-button-可拖拽/index2.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/jquery-music-player-bottom-音乐播放器/index.html" afterPath="$PROJECT_DIR$/corner.js-demo/jquery-music-player-bottom-音乐播放器/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/pure-css-svg-hover-interaction-点灯/index.html" afterPath="$PROJECT_DIR$/corner.js-demo/pure-css-svg-hover-interaction-点灯/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/pure-css3-circle-menu-环形菜单展开/index.html" afterPath="$PROJECT_DIR$/corner.js-demo/pure-css3-circle-menu-环形菜单展开/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js/app/views/index.html" afterPath="$PROJECT_DIR$/corner.js/app/views/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js/dist/static/css/theme/_firefly.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js/dist/views/index.html" afterPath="$PROJECT_DIR$/corner.js/dist/views/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-column/天空蓝三栏/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-column/天空蓝三栏/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-column/非响应式左右菜单切换画面模板/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-column/非响应式左右菜单切换画面模板/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-column/非响应式左右菜单切换画面模板/js/PIE.htc" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-column/非响应式左右菜单切换画面模板/js/PIE.htc" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/响应式-文章系统-网格切换/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/响应式-文章系统-网格切换/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/网格卡片-切换布局/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/网格卡片-切换布局/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/黑色商务-摄影/index-2.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/黑色商务-摄影/index-2.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/黑色商务-摄影/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/黑色商务-摄影/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/黑色商务-摄影/single-post.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/黑色商务-摄影/single-post.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/黑色商务-摄影/single-work.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/黑色商务-摄影/single-work.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/jquery-page-scroll-animation-页面滚动/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/jquery-page-scroll-animation-页面滚动/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/about.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/about.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/blog.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/blog.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/contact.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/contact.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/index-2.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/index-2.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/portfolio.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/portfolio.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/singlepost.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/singlepost.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/04-shape/css3-image-grid-layout-六边形/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/04-shape/css3-image-grid-layout-六边形/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/cool-javascript-dialog-弹出框/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/cool-javascript-dialog-弹出框/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/css3-3d-button-dialog-翻转/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/css3-3d-button-dialog-翻转/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/javascript-notyf-右下角弹出框/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/javascript-notyf-右下角弹出框/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/jquery-win7-window-仿win7/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/jquery-win7-window-仿win7/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/jquery-win7-window-仿win7/index2.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/jquery-win7-window-仿win7/index2.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/windows8 Metro-打开面板/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/windows8 Metro-打开面板/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/cartoon.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/cartoon.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/clones.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/clones.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/diamond.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/diamond.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/fire-extinguisher.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/fire-extinguisher.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/glitch.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/glitch.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/gooey.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/gooey.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/gummy.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/gummy.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/kaleidoscope.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/kaleidoscope.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/mirror.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/mirror.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/scribble.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/炫酷打开模态框-动画/scribble.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/css3-3d-简单-flip-slider/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/css3-3d-简单-flip-slider/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/html5-css3-elasticity-切换/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/html5-css3-elasticity-切换/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-blurry-image-焦点模糊/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-blurry-image-焦点模糊/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-circle-image-player-环状轮播/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-circle-image-player-环状轮播/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-full-time-slider-时间轴/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-full-time-slider-时间轴/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-image-mobile-silder/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-image-mobile-silder/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-layered-image-player-多图焦点图/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-layered-image-player-多图焦点图/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-layered-text-player-时间轴/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-layered-text-player-时间轴/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-silder-lazy-load/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/jquery-silder-lazy-load/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/timeline/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/timeline/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/全屏-幻灯片/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/全屏-幻灯片/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/全屏3D-旋转-幻灯片/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/全屏3D-旋转-幻灯片/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/视觉差-幻灯片/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/02-slider/视觉差-幻灯片/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/03-gallery/3D空间旋转-画廊/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/03-gallery/3D空间旋转-画廊/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/03-gallery/CleanFLat-非常好看-可拖拽的图片墙/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/03-gallery/CleanFLat-非常好看-可拖拽的图片墙/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/03-gallery/人物-相册/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/03-gallery/人物-相册/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/03-gallery/人物-相册/index2.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/03-gallery/人物-相册/index2.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/03-gallery/人物-相册/index3.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/03-gallery/人物-相册/index3.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/03-gallery/黑色大气-瀑布流图片/templates/js/jquery.prettyPhoto.js" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/03-gallery/黑色大气-瀑布流图片/templates/js/jquery.prettyPhoto.js" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/04-mask/图片遮罩/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/04-mask/图片遮罩/index.html" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/js/jquery-2.2.4.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css" afterPath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/html5-svg-iphone-shutter-快照/js/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/css/font-awesome.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/FontAwesome.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/jquery-elasticity-share-button-可拖拽/js/jquery-ui.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/pure-css3-circle-menu-环形菜单展开/css/font-awesome.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/右下角助手-展开/css/normalize.css" afterPath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css~HEAD" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/右下角助手-展开/fonts/codropsicons/codropsicons.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.less" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/static/scripts/corner/drag.js" afterPath="" />
       <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/04-mask/遮罩-产品展示-突出重点/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/04-mask/遮罩-产品展示-突出重点/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/jquery-rad-dropdown-menu-传统二级菜单/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/jquery-rad-dropdown-menu-传统二级菜单/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/404.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/404.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/about.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/about.html" />
       <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/base-css.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/base-css.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/blog.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/blog.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/column-2.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/column-2.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/components.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/components.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/contact.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/contact.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/element.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/element.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/faq.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/faq.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index2.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index2.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index3.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index3.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index4.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index4.html" />
       <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index5.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index5.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index6.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index6.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index7.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index7.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/javascript.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/javascript.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/js/PIE.htc" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/js/PIE.htc" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/js/jquery.prettyphoto.js" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/js/jquery.prettyphoto.js" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio1.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio1.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio2.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio2.html" />
       <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio3.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio3.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio4.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio4.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio6.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio6.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/price.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/price.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/scaffolding.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/scaffolding.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/service.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/service.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/sidebar-left.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/sidebar-left.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/sidebar-right.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/sidebar-right.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/single-blog.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/single-blog.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/sitemap.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/sitemap.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/about.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/about.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/blog-classic.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/blog-classic.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/blog-modern.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/blog-modern.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/columns.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/columns.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/contact.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/contact.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/error-page-404.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/error-page-404.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/full-width.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/full-width.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/home-blog-classic.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/home-blog-classic.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/home-blog-modern.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/home-blog-modern.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/home-corporate.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/home-corporate.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/home-slider-fade.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/home-slider-fade.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/home-slider-nivo.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/home-slider-nivo.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/js/misc/PIE.htc" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/js/misc/PIE.htc" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/portfolio-3col.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/portfolio-3col.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/portfolio-details.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/portfolio-details.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/portfolio-list.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/portfolio-list.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/portfolio-one-page.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/portfolio-one-page.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/portfolio-thumbs.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/portfolio-thumbs.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/services-layout.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/services-layout.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/single-post.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/single-post.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/tables-sliders.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/tables-sliders.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/tabs-toggles-others.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/tabs-toggles-others.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/typography.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/old-index-banner-animate/typography.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/全屏列表滑动面板/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/全屏列表滑动面板/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/固定顶部导航/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/固定顶部导航/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/02-nav-xy/拉伸导航/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/02-nav-xy/拉伸导航/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/倾斜页面-打开侧边/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/倾斜页面-打开侧边/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/创意-旋转侧边栏/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/创意-旋转侧边栏/index.html" />
       <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/右手侧边栏-导航/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/右手侧边栏-导航/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/缩略图-导航/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/缩略图-导航/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/隐藏侧边-垂直-多面板/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/隐藏侧边-垂直-多面板/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index2.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index2.html" />
       <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index3.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index3.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/Tabs-流线型/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/Tabs-流线型/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/css3-sexy-tab-小巧tab/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/css3-sexy-tab-小巧tab/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/jquery-css3-tab-animate-menu-简约tab/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/jquery-css3-tab-animate-menu-简约tab/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/经典tab/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/经典tab/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/经典tab/index2.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/经典tab/index2.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/经典tab/index3.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/经典tab/index3.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/经典tab/index4.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/05-tab/经典tab/index4.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/06-accordion/Bootstrap-垂直手风琴/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/06-accordion/Bootstrap-垂直手风琴/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/06-accordion/jquery-ribbon-accordion-menu-折叠面板/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/06-accordion/jquery-ribbon-accordion-menu-折叠面板/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/index.html" />
       <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/08-pagination/pagination-demo/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/08-pagination/pagination-demo/index.html" />
-      <change beforePath="$PROJECT_DIR$/other/css-modules-ruanyf/demo05/index.html" afterPath="$PROJECT_DIR$/other/css-modules-ruanyf/demo05/index.html" />
-      <change beforePath="$PROJECT_DIR$/other/css-modules-ruanyf/demo06/index.html" afterPath="$PROJECT_DIR$/other/css-modules-ruanyf/demo06/index.html" />
-      <change beforePath="$PROJECT_DIR$/other/webpack-demos-ruanyf/README.md" afterPath="$PROJECT_DIR$/other/webpack-demos-ruanyf/README.md" />
-      <change beforePath="$PROJECT_DIR$/other/webpack-demos-ruanyf/demo01/index.html" afterPath="$PROJECT_DIR$/other/webpack-demos-ruanyf/demo01/index.html" />
-      <change beforePath="$PROJECT_DIR$/other/webpack-demos-ruanyf/demo04/index.html" afterPath="$PROJECT_DIR$/other/webpack-demos-ruanyf/demo04/index.html" />
-      <change beforePath="$PROJECT_DIR$/other/webpack-demos-ruanyf/demo05/index.html" afterPath="$PROJECT_DIR$/other/webpack-demos-ruanyf/demo05/index.html" />
-      <change beforePath="$PROJECT_DIR$/other/webpack-demos-ruanyf/demo08/index.html" afterPath="$PROJECT_DIR$/other/webpack-demos-ruanyf/demo08/index.html" />
-      <change beforePath="$PROJECT_DIR$/other/webpack-study/exercise4-async/dist/index.html" afterPath="$PROJECT_DIR$/other/webpack-study/exercise4-async/dist/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -625,7 +481,7 @@
       <workItem from="1518262306028" duration="605000" />
       <workItem from="1518873207920" duration="6027000" />
       <workItem from="1518919243812" duration="705000" />
-      <workItem from="1518943822087" duration="75000" />
+      <workItem from="1518943822087" duration="382000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1517841377235</created>
@@ -662,23 +518,31 @@
       <option name="project" value="LOCAL" />
       <updated>1518879371864</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[corner.js]small">
+      <created>1518943926300</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1518943926300</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11535000" />
+    <option name="totallyTimeSpent" value="11842000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39794755" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39794755" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39794755" sideWeight="0.49785408" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.102622576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37231758" sideWeight="0.28152493" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04903079" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -741,7 +605,8 @@
     <MESSAGE value="add" />
     <MESSAGE value="adjust" />
     <MESSAGE value="[corner.js]展开效果" />
-    <option name="LAST_COMMIT_MESSAGE" value="[corner.js]展开效果" />
+    <MESSAGE value="[corner.js]small" />
+    <option name="LAST_COMMIT_MESSAGE" value="[corner.js]small" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
