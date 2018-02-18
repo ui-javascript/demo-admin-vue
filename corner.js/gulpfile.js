@@ -43,22 +43,22 @@ gulp.task('js', function () {
 });
 
 // scss编译
-// gulp.task('sass', function(cb) { // cb是传入的回调函数
-//     return gulp.src('app/static/css/**/*.scss')
-//         .pipe(plumber())
-//         .pipe(sass())
-//         // .pipe(concat({ext: '.css'}))
-//         // .pipe(rename('all.min.css'))
-//         .pipe(minifyCss())
-//         .pipe(autoprefixer({
-//             browsers: ['> 1%', 'not ie <= 8']
-//         }))
-//         // .pipe(sourcemaps.write())
-//         .pipe(gulp.dest('dist/static/css'));
-//
-//     // console.log('sass 文件处理完毕！');
-//     // cb(err);        // 如果 err 不是 null 和 undefined，流程会被结束掉，'two' 不会被执行
-// });
+gulp.task('sass', function(cb) { // cb是传入的回调函数
+    return gulp.src('app/static/css/**/*.scss')
+        .pipe(plumber())
+        .pipe(sass())
+        // .pipe(concat({ext: '.css'}))
+        // .pipe(rename('all.min.css'))
+        .pipe(minifyCss())
+        .pipe(autoprefixer({
+            browsers: ['> 1%', 'not ie <= 8']
+        }))
+        // .pipe(sourcemaps.write())
+        .pipe(gulp.dest('dist/static/css'));
+
+    // console.log('sass 文件处理完毕！');
+    // cb(err);        // 如果 err 不是 null 和 undefined，流程会被结束掉，'two' 不会被执行
+});
 
 
 // less编译
@@ -136,13 +136,14 @@ gulp.task('public', function () {
 gulp.task('watch', function () {
     gulp.watch('app/static/scripts/**/*.js', ['js']);
     gulp.watch('app/static/css/**/*.less', ['less']);
+    gulp.watch('app/static/css/**/*.scss', ['sass']);
     gulp.watch('app/views/**/*.html', ['html']);
 });
 
 
 // gulp是并行的，需要指定一下顺序
 gulp.task('redist', function () {
-    runSequence('clean', ['html', 'less', 'js', 'images', 'watch'])
+    runSequence('clean', ['html', 'less', 'sass', 'js', 'images', 'watch'])
 });
 
 // gulp命令 默认执行

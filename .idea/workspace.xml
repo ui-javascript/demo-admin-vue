@@ -2,37 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b3cc417-2ff4-4e5c-83d5-e478afc6f981" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js-demo/css3-hamburger-button-汉堡按钮变形/index.html~origin_master" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css~HEAD_0" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css~origin_master" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css~origin_master_0" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/index.html~origin_master" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/123D-Design-icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/js/class2context.js" afterPath="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/js/class2context.js" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/js/jquery-2.2.4.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/demo.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css" afterPath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/html5-svg-iphone-shutter-快照/js/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/css/font-awesome.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/FontAwesome.otf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/jquery-elasticity-share-button-可拖拽/js/jquery-ui.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/pure-css3-circle-menu-环形菜单展开/css/font-awesome.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/右下角助手-展开/css/normalize.css" afterPath="$PROJECT_DIR$/corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css~HEAD" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/右下角助手-展开/fonts/codropsicons/codropsicons.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js/app/static/scripts/corner/drag.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/04-mask/遮罩-产品展示-突出重点/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/04-mask/遮罩-产品展示-突出重点/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/base-css.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/base-css.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index5.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index5.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio3.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio3.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/右手侧边栏-导航/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/右手侧边栏-导航/index.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index3.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index3.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/08-pagination/pagination-demo/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/08-pagination/pagination-demo/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/scripts/corner/plane.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/dist/static/css/theme/plane.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/dist/static/scripts/corner/firefly.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/dist/static/scripts/corner/plane.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/css/ionicons.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/css/normalize.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/css/style.css" afterPath="$PROJECT_DIR$/corner.js/app/static/css/theme/plane.scss" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/js/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/js/prefixfree.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/sass/style.sass" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/static/css/theme/bird.less" afterPath="$PROJECT_DIR$/corner.js/app/static/css/theme/bird.less" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/static/scripts/corner/_firefly.js" afterPath="$PROJECT_DIR$/corner.js/app/static/scripts/corner/firefly.js" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/views/index.html" afterPath="$PROJECT_DIR$/corner.js/app/views/index.html" />
+      <change beforePath="$PROJECT_DIR$/corner.js/dist/static/css/theme/bird.css" afterPath="$PROJECT_DIR$/corner.js/dist/static/css/theme/bird.css" />
+      <change beforePath="$PROJECT_DIR$/corner.js/dist/static/css/utilities/_reset.css" afterPath="$PROJECT_DIR$/corner.js/dist/static/css/utilities/_reset.css" />
+      <change beforePath="$PROJECT_DIR$/corner.js/dist/static/scripts/corner/drag.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js/dist/views/index.html" afterPath="$PROJECT_DIR$/corner.js/dist/views/index.html" />
+      <change beforePath="$PROJECT_DIR$/corner.js/gulpfile.js" afterPath="$PROJECT_DIR$/corner.js/gulpfile.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,78 +37,7 @@
     <favorites_list name="comp-layout" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zzsc-demo.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/css/zzsc-demo.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6578">
-              <caret line="299" column="0" lean-forward="false" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/corner.js/dist/views/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="78" lean-forward="false" selection-start-line="6" selection-start-column="78" selection-end-line="6" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1551">
-              <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/corner.js/app/views/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bird.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/theme/bird.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2222">
-              <caret line="101" column="1" lean-forward="false" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -134,6 +54,7 @@
       <find>type='text/css'</find>
       <find>type=&quot;text/javascript&quot;</find>
       <find>data-toggle</find>
+      <find>&gt;&gt;&gt;&gt;&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -164,20 +85,27 @@
         <option value="$PROJECT_DIR$/corner.js/Material Design-右下角助手/css/styles.css" />
         <option value="$PROJECT_DIR$/corner.js/app/static/css/_firefly.scss" />
         <option value="$PROJECT_DIR$/corner.js/app/static/css/_firefly.less" />
-        <option value="$PROJECT_DIR$/corner.js/gulpfile.js" />
         <option value="$PROJECT_DIR$/corner.js/app/static/scripts/corner/drag.js" />
         <option value="$PROJECT_DIR$/corner.js/app/static/scripts/corner/_firefly.js" />
         <option value="$PROJECT_DIR$/corner.js/app/static/css/animate/_expand.less" />
         <option value="$PROJECT_DIR$/corner.js/app/static/css/utilities/_global.less" />
         <option value="$PROJECT_DIR$/corner.js/app/static/css/components/_button.less" />
-        <option value="$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.less" />
         <option value="$PROJECT_DIR$/corner.js/app/static/css/animate/expand.less" />
         <option value="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/index.html" />
         <option value="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/js/class2context.js" />
         <option value="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/css/zzsc-demo.css" />
         <option value="$PROJECT_DIR$/corner.js-demo/css3-bird-avatar-鸟的旋转/index2.html" />
         <option value="$PROJECT_DIR$/corner.js/app/static/css/theme/bird.less" />
+        <option value="$PROJECT_DIR$/corner.js/gulpfile.js" />
+        <option value="$PROJECT_DIR$/corner.js/app/static/css/theme/fly.sass" />
+        <option value="$PROJECT_DIR$/corner.js/app/static/css/theme/fly.scss" />
+        <option value="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index2.html" />
+        <option value="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/js/index.js" />
+        <option value="$PROJECT_DIR$/corner.js/app/static/scripts/corner/plane.js" />
         <option value="$PROJECT_DIR$/corner.js/app/views/index.html" />
+        <option value="$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.less" />
+        <option value="$PROJECT_DIR$/corner.js/dist/static/css/theme/plane.css" />
+        <option value="$PROJECT_DIR$/corner.js/app/static/css/theme/plane.scss" />
       </list>
     </option>
   </component>
@@ -277,39 +205,7 @@
             <path>
               <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
               <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="corner.js" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="corner.js" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="corner.js" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="corner.js" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
               <item name="corner.js-demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="corner.js-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="css3-button-animation-分享" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -481,7 +377,7 @@
       <workItem from="1518262306028" duration="605000" />
       <workItem from="1518873207920" duration="6027000" />
       <workItem from="1518919243812" duration="705000" />
-      <workItem from="1518943822087" duration="382000" />
+      <workItem from="1518943822087" duration="2269000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1517841377235</created>
@@ -525,15 +421,21 @@
       <option name="project" value="LOCAL" />
       <updated>1518943926300</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/js/bootstrap.min.js&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/123D-Design-icon.png&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/js/class2context.js&#10;#&#9;corner.js-demo/css3-button-animation-分享/js/jquery-2.2.4.min.js&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/demo.css&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/index.html&#10;#&#9;corner.js-demo/html5-svg-iphone-shutter-快照/js/jquery.js&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/css/font-awesome.min.css&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/FontAwesome.otf&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/fontawesome-webfont.eot&#10;#&#9;corner.js-demo/jquery-elasticity-share-button-可拖拽/js/jquery-ui.min.js&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/css/font-awesome.min.css&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/fontawesome-webfont.eot&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/glyphicons-halflings-regular.eot&#10;#&#9;corner.js-demo/右下角助手-展开/css/normalize.css&#10;#&#9;corner.js-demo/右下角助手-展开/fonts/codropsicons/codropsicons.eot&#10;#&#9;corner.js/app/static/css/utilities/_reset.less&#10;#&#9;corner.js/app/static/scripts/corner/drag.js&#10;#&#9;layout-gulp-jquery/app/views/ch2-panel/04-mask/遮罩-产品展示-突出重点/index.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/base-css.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index5.html&#10;&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio3.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/右手侧边栏-导航/index.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index3.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/08-pagination/pagination-demo/index.html">
+      <created>1518944247312</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1518944247312</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11842000" />
+    <option name="totallyTimeSpent" value="13729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -542,15 +444,16 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39794755" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39794755" sideWeight="0.49785408" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.102622576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37231758" sideWeight="0.28152493" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6921323" sideWeight="0.49785408" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11516534" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29291844" sideWeight="0.4013683" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04903079" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29291844" sideWeight="0.40530303" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29291844" sideWeight="0.4013683" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29291844" sideWeight="0.594697" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27414164" sideWeight="0.5986317" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -562,7 +465,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -606,28 +508,14 @@
     <MESSAGE value="adjust" />
     <MESSAGE value="[corner.js]展开效果" />
     <MESSAGE value="[corner.js]small" />
-    <option name="LAST_COMMIT_MESSAGE" value="[corner.js]small" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/js/bootstrap.min.js&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/123D-Design-icon.png&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/js/class2context.js&#10;#&#9;corner.js-demo/css3-button-animation-分享/js/jquery-2.2.4.min.js&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/demo.css&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/index.html&#10;#&#9;corner.js-demo/html5-svg-iphone-shutter-快照/js/jquery.js&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/css/font-awesome.min.css&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/FontAwesome.otf&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/fontawesome-webfont.eot&#10;#&#9;corner.js-demo/jquery-elasticity-share-button-可拖拽/js/jquery-ui.min.js&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/css/font-awesome.min.css&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/fontawesome-webfont.eot&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/glyphicons-halflings-regular.eot&#10;#&#9;corner.js-demo/右下角助手-展开/css/normalize.css&#10;#&#9;corner.js-demo/右下角助手-展开/fonts/codropsicons/codropsicons.eot&#10;#&#9;corner.js/app/static/css/utilities/_reset.less&#10;#&#9;corner.js/app/static/scripts/corner/drag.js&#10;#&#9;layout-gulp-jquery/app/views/ch2-panel/04-mask/遮罩-产品展示-突出重点/index.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/base-css.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index5.html&#10;&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio3.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/右手侧边栏-导航/index.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index3.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/08-pagination/pagination-demo/index.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/js/bootstrap.min.js&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/123D-Design-icon.png&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/js/class2context.js&#10;#&#9;corner.js-demo/css3-button-animation-分享/js/jquery-2.2.4.min.js&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/demo.css&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/index.html&#10;#&#9;corner.js-demo/html5-svg-iphone-shutter-快照/js/jquery.js&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/css/font-awesome.min.css&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/FontAwesome.otf&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/fontawesome-webfont.eot&#10;#&#9;corner.js-demo/jquery-elasticity-share-button-可拖拽/js/jquery-ui.min.js&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/css/font-awesome.min.css&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/fontawesome-webfont.eot&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/glyphicons-halflings-regular.eot&#10;#&#9;corner.js-demo/右下角助手-展开/css/normalize.css&#10;#&#9;corner.js-demo/右下角助手-展开/fonts/codropsicons/codropsicons.eot&#10;#&#9;corner.js/app/static/css/utilities/_reset.less&#10;#&#9;corner.js/app/static/scripts/corner/drag.js&#10;#&#9;layout-gulp-jquery/app/views/ch2-panel/04-mask/遮罩-产品展示-突出重点/index.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/base-css.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index5.html&#10;&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio3.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/右手侧边栏-导航/index.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index3.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/08-pagination/pagination-demo/index.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/layout-webpack-jquery/src/css/common/global.css" />
-    <entry file="file://$PROJECT_DIR$/layout-webpack-jquery/src/css/page/index.less" />
-    <entry file="file://$PROJECT_DIR$/layout-webpack-jquery/src/css/page/list.less" />
-    <entry file="file://$PROJECT_DIR$/layout-webpack-jquery/src/js/components/dialog/index.js" />
-    <entry file="file://$PROJECT_DIR$/layout-webpack-jquery/.editorconfig" />
-    <entry file="file://$PROJECT_DIR$/layout-webpack-jquery/src/css/page/about.less" />
-    <entry file="file://$PROJECT_DIR$/layout-webpack-jquery/package.json" />
-    <entry file="file://$PROJECT_DIR$/layout-webpack-jquery/webpack.config.js" />
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/scripts/layout/grid/grid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
@@ -682,10 +570,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js/app/static/scripts/corner/_firefly.js">
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/scripts/corner/firefly.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding>
+            <marker date="1518877302123" expanded="true" signature="523:992" ph="..." />
+            <marker date="1518877302123" expanded="true" signature="568:770" ph="..." />
+            <marker date="1518877302123" expanded="true" signature="613:748" ph="..." />
+            <marker date="1518877302123" expanded="true" signature="814:972" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -710,13 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/components/_button.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -761,13 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="137" column="53" lean-forward="true" selection-start-line="137" selection-start-column="53" selection-end-line="137" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -817,51 +697,139 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-bird-avatar-鸟的旋转/index.html" />
-    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/theme/bird.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2222">
-          <caret line="101" column="1" lean-forward="false" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-bird-avatar-鸟的旋转/index2.html" />
-    <entry file="file://$PROJECT_DIR$/corner.js/app/views/index.html">
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="154">
+          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/corner.js/dist/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        <state relative-caret-position="132">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/theme/bird.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2156">
+          <caret line="98" column="3" lean-forward="false" selection-start-line="98" selection-start-column="3" selection-end-line="98" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/dist/static/css/utilities/_reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
+        <state relative-caret-position="-2656">
           <caret line="6" column="78" lean-forward="false" selection-start-line="6" selection-start-column="78" selection-end-line="6" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1602">
+          <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/components/_button.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/dist/static/css/theme/bird.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/sass/style.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1056">
+          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1551">
-          <caret line="142" column="0" lean-forward="false" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/index.html">
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/scripts/corner/plane.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        <state relative-caret-position="1100">
+          <caret line="50" column="3" lean-forward="false" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="74" column="31" lean-forward="true" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/dist/static/css/theme/plane.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/theme/plane.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
           <folding />
         </state>
       </provider>
