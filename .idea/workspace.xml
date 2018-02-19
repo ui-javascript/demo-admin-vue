@@ -2,28 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b3cc417-2ff4-4e5c-83d5-e478afc6f981" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/scripts/corner/plane.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/dist/static/css/theme/plane.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/dist/static/scripts/corner/firefly.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/dist/static/scripts/corner/plane.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/breadcrumb.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/breadcrumb.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/views/ch3-nav/07-breadcrumb/breadcrumb-simple.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/css/ionicons.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/css/normalize.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/css/style.css" afterPath="$PROJECT_DIR$/corner.js/app/static/css/theme/plane.scss" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index2.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/js/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/js/prefixfree.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/sass/style.sass" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js/app/static/css/theme/bird.less" afterPath="$PROJECT_DIR$/corner.js/app/static/css/theme/bird.less" />
-      <change beforePath="$PROJECT_DIR$/corner.js/app/static/scripts/corner/_firefly.js" afterPath="$PROJECT_DIR$/corner.js/app/static/scripts/corner/firefly.js" />
-      <change beforePath="$PROJECT_DIR$/corner.js/app/views/index.html" afterPath="$PROJECT_DIR$/corner.js/app/views/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js/dist/static/css/theme/bird.css" afterPath="$PROJECT_DIR$/corner.js/dist/static/css/theme/bird.css" />
-      <change beforePath="$PROJECT_DIR$/corner.js/dist/static/css/utilities/_reset.css" afterPath="$PROJECT_DIR$/corner.js/dist/static/css/utilities/_reset.css" />
-      <change beforePath="$PROJECT_DIR$/corner.js/dist/static/scripts/corner/drag.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/corner.js/dist/views/index.html" afterPath="$PROJECT_DIR$/corner.js/dist/views/index.html" />
-      <change beforePath="$PROJECT_DIR$/corner.js/gulpfile.js" afterPath="$PROJECT_DIR$/corner.js/gulpfile.js" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/jiaoben1615-面包屑/css/font-awesome.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/jiaoben1615-面包屑/css/font/fontawesome-webfont.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/jiaoben1615-面包屑/css/font/fontawesome-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/jiaoben1615-面包屑/css/font/fontawesome-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/jiaoben1615-面包屑/css/font/fontawesome-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/jiaoben1615-面包屑/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/jiaoben1615-面包屑/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/breadcrumb-simple.html" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/jiaoben1615-面包屑/scss/style.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/views/ch3-nav/07-breadcrumb/jiaoben1615-面包屑/index.html" afterPath="" />
+    </list>
+    <list id="a8a086cc-b7f5-4699-935d-a1c6769d7457" name="config" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/comp-layout.iml" afterPath="$PROJECT_DIR$/.idea/comp-layout.iml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,7 +32,48 @@
     <favorites_list name="comp-layout" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf>
+      <file leaf-file-name="breadcrumb-simple.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/breadcrumb-simple.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="encodings.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="breadcrumb-simple.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/dist/views/ch3-nav/07-breadcrumb/breadcrumb-simple.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="79" lean-forward="false" selection-start-line="0" selection-start-column="79" selection-end-line="0" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pagination-y.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/08-pagination/pagination-y.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -189,7 +225,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,20 +239,122 @@
             <path>
               <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
               <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="corner.js" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
               <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="corner.js-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="nav" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ch3-nav" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ch3-nav" type="462c0819:PsiDirectoryNode" />
+              <item name="07-breadcrumb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ch3-nav" type="462c0819:PsiDirectoryNode" />
+              <item name="08-pagination" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ch3-nav" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ch3-nav" type="462c0819:PsiDirectoryNode" />
+              <item name="07-breadcrumb" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,15 +367,15 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/workspace-comp/comp-layout/corner.js/dist/views/index.html" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\workspace-comp\comp-layout\corner.js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\workspace-comp\comp-layout" />
       <recent name="E:\workspace-comp\comp-layout\corner.js\app\static\scripts\corner" />
       <recent name="E:\workspace-comp\comp-layout\corner.js\app\static\scripts" />
       <recent name="E:\workspace-comp\comp-layout\corner.js\app\static\css\anim" />
       <recent name="E:\workspace-comp\comp-layout\corner.js\app\static\css\theme" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace-comp\comp-layout\corner.js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -432,28 +573,28 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13729000" />
+    <option name="totallyTimeSpent" value="13792000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16419612" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39794755" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4127708" sideWeight="0.50429183" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6921323" sideWeight="0.49785408" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11516534" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5883694" sideWeight="0.49570817" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29291844" sideWeight="0.4013683" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04903079" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5359179" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4458381" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29291844" sideWeight="0.4013683" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19420601" sideWeight="0.27423823" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27414164" sideWeight="0.5986317" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19420601" sideWeight="0.7257618" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -461,10 +602,33 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37768242" sideWeight="0.14832535" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39794755" sideWeight="0.50214595" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6921323" sideWeight="0.49785408" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11516534" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29291844" sideWeight="0.4013683" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04903079" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29291844" sideWeight="0.4013683" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27414164" sideWeight="0.5986317" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37768242" sideWeight="0.14832535" order="2" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -509,27 +673,14 @@
     <MESSAGE value="[corner.js]展开效果" />
     <MESSAGE value="[corner.js]small" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/js/bootstrap.min.js&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/123D-Design-icon.png&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/js/class2context.js&#10;#&#9;corner.js-demo/css3-button-animation-分享/js/jquery-2.2.4.min.js&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/demo.css&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/index.html&#10;#&#9;corner.js-demo/html5-svg-iphone-shutter-快照/js/jquery.js&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/css/font-awesome.min.css&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/FontAwesome.otf&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/fontawesome-webfont.eot&#10;#&#9;corner.js-demo/jquery-elasticity-share-button-可拖拽/js/jquery-ui.min.js&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/css/font-awesome.min.css&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/fontawesome-webfont.eot&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/glyphicons-halflings-regular.eot&#10;#&#9;corner.js-demo/右下角助手-展开/css/normalize.css&#10;#&#9;corner.js-demo/右下角助手-展开/fonts/codropsicons/codropsicons.eot&#10;#&#9;corner.js/app/static/css/utilities/_reset.less&#10;#&#9;corner.js/app/static/scripts/corner/drag.js&#10;#&#9;layout-gulp-jquery/app/views/ch2-panel/04-mask/遮罩-产品展示-突出重点/index.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/base-css.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index5.html&#10;&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio3.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/右手侧边栏-导航/index.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index3.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/08-pagination/pagination-demo/index.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/bootstrap/js/bootstrap.min.js&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/123D-Design-icon.png&#10;#&#9;corner.js-demo/bootstrap-js-context-menu-鼠标右键/js/class2context.js&#10;#&#9;corner.js-demo/css3-button-animation-分享/js/jquery-2.2.4.min.js&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/demo.css&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/css/normalize.css&#10;#&#9;corner.js-demo/css3-image-stack-elasticity-卡片弹性响应/index.html&#10;#&#9;corner.js-demo/html5-svg-iphone-shutter-快照/js/jquery.js&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/css/font-awesome.min.css&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/FontAwesome.otf&#10;#&#9;corner.js-demo/jquery-css3-elasticity-menu-弹性折叠/fonts/fontawesome-webfont.eot&#10;#&#9;corner.js-demo/jquery-elasticity-share-button-可拖拽/js/jquery-ui.min.js&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/css/font-awesome.min.css&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/fontawesome-webfont.eot&#10;#&#9;corner.js-demo/pure-css3-circle-menu-环形菜单展开/fonts/glyphicons-halflings-regular.eot&#10;#&#9;corner.js-demo/右下角助手-展开/css/normalize.css&#10;#&#9;corner.js-demo/右下角助手-展开/fonts/codropsicons/codropsicons.eot&#10;#&#9;corner.js/app/static/css/utilities/_reset.less&#10;#&#9;corner.js/app/static/scripts/corner/drag.js&#10;#&#9;layout-gulp-jquery/app/views/ch2-panel/04-mask/遮罩-产品展示-突出重点/index.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/base-css.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/index5.html&#10;&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/new-banner-surprise-下拉菜单/portfolio3.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/03-nav-navbar/右手侧边栏-导航/index.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/04-mobile-nav/手机-侧边隐藏菜单/index3.html&#10;#&#9;layout-gulp-jquery/app/views/ch3-nav/08-pagination/pagination-demo/index.html" />
+    <MESSAGE value="small" />
+    <option name="LAST_COMMIT_MESSAGE" value="small" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="42" column="1" lean-forward="false" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/dist/views/ch1-layout/01-column/天空蓝三栏/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -563,23 +714,11 @@
     <entry file="file://$PROJECT_DIR$/corner.js/dist/static/css/_reset.css" />
     <entry file="file://$PROJECT_DIR$/corner.js/dist/static/css/_firefly.css" />
     <entry file="file://$PROJECT_DIR$/corner.js/app/static/scripts/_drag.js" />
-    <entry file="file://$PROJECT_DIR$/corner.js/app/static/scripts/corner/drag.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/scripts/corner/drag.js" />
     <entry file="file://$PROJECT_DIR$/corner.js/app/static/scripts/corner/firefly.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <marker date="1518877302123" expanded="true" signature="523:992" ph="..." />
-            <marker date="1518877302123" expanded="true" signature="568:770" ph="..." />
-            <marker date="1518877302123" expanded="true" signature="613:748" ph="..." />
-            <marker date="1518877302123" expanded="true" signature="814:972" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -607,21 +746,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/Material Design-右下角助手/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="207" column="1" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="207" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/Material Design-右下角助手/css/styles.css" />
     <entry file="file://$PROJECT_DIR$/corner.js/dist/static/css/animate/_expand.css" />
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/Material Design-右下角助手/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="105" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/Material Design-右下角助手/index.html" />
     <entry file="file://$PROJECT_DIR$/corner.js/dist/static/css/animate/expand.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -659,58 +786,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/css/normalize.css" />
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/css/class2context.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-320">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/123D-Design-icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/Autodesk-Alias-Design-icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/3d-material-drop-tool-icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/js/class2context.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/css/zzsc-demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6578">
-          <caret line="299" column="0" lean-forward="false" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/css/class2context.css" />
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/123D-Design-icon.png" />
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/Autodesk-Alias-Design-icon.png" />
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/img/3d-material-drop-tool-icon.png" />
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/js/class2context.js" />
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/css/zzsc-demo.css" />
     <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-bird-avatar-鸟的旋转/index.html" />
     <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-bird-avatar-鸟的旋转/index2.html" />
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/index.html" />
     <entry file="file://$PROJECT_DIR$/corner.js/dist/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,7 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2156">
           <caret line="98" column="3" lean-forward="false" selection-start-line="98" selection-start-column="3" selection-end-line="98" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -726,79 +813,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2656">
-          <caret line="6" column="78" lean-forward="false" selection-start-line="6" selection-start-column="78" selection-end-line="6" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index.html" />
     <entry file="file://$PROJECT_DIR$/corner.js/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1602">
           <caret line="51" column="26" lean-forward="false" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/components/_button.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/components/_button.less" />
     <entry file="file://$PROJECT_DIR$/corner.js/dist/static/css/theme/bird.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/sass/style.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="116" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1056">
-          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/sass/style.sass" />
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/js/index.js" />
+    <entry file="file://$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index2.html" />
     <entry file="file://$PROJECT_DIR$/corner.js/app/static/scripts/corner/plane.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
           <caret line="50" column="3" lean-forward="false" selection-start-line="50" selection-start-column="3" selection-end-line="50" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -806,7 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -814,7 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="74" column="31" lean-forward="true" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -822,7 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,6 +868,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/breadcrumb-simple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
