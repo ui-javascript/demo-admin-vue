@@ -369,6 +369,7 @@ li {
         }
     }
 }
+
 function getByClass(oParent, sClass) {
     var aResult = [];
     var aEle = oParent.getElementsByTagName('*');
@@ -380,6 +381,7 @@ function getByClass(oParent, sClass) {
     }
     return aResult;
 }
+
 function getStyle(obj, name) {
     if (obj.currentStyle) {
         return obj.currentStyle[name];
@@ -389,6 +391,7 @@ function getStyle(obj, name) {
         return getComputedStyle(obj, false)[name];
     }
 }
+
 function startMove(obj, json, fnEnd) {
     clearInterval(obj.timer);
     obj.timer = setInterval(function () {
@@ -426,6 +429,7 @@ function startMove(obj, json, fnEnd) {
 
 
 }
+
 arcSlip();
 </script>
 
