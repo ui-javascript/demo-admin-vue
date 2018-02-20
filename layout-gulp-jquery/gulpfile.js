@@ -16,6 +16,8 @@ var gulp = require('gulp'),
 
     less = require('gulp-less'),
     sass = require('gulp-sass'),
+    bourbon = require("node-bourbon").includePaths,
+    // neat = require("bourbon-neat").includePaths,
     minifyCss = require('gulp-minify-css'),
     cleanCss = require('gulp-clean-css'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -63,10 +65,13 @@ gulp.task('js', function () {
 gulp.task('scss', function (cb) { // cb是传入的回调函数
     return gulp.src('app/static/css/**/*.scss')
         .pipe(plumber())
-        .pipe(sass())
+        .pipe(sass({
+            sourcemaps: true,
+            includePaths: [bourbon]
+        }))
         // .pipe(concat({ext: '.css'}))
         // .pipe(rename('all.min.css'))
-        .pipe(minifyCss())
+        .pipe(cleanCss())
         .pipe(autoprefixer({
             browsers: ['> 1%', 'not ie <= 8']
         }))
@@ -86,7 +91,7 @@ gulp.task('less', function () {
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
-        .pipe(minifyCss())
+        .pipe(cleanCss())
         .pipe(gulp.dest('dist/static/css'))
         .pipe(gulp.dest('app/static/css'))
 });

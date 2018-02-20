@@ -2,222 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3a14fd6-fcb4-4b8f-804b-11489e42edee" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-jquery/dist/0.2cc5a7e1ce887f47174c.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-jquery/dist/foo.41474887894f304be780.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-jquery/dist/img/2ca8b742de77064a09f636450d3de042.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-jquery/dist/img/30b5779293b7f45d4a91cfc96fa46587.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-jquery/dist/img/9af0f2fa32b06f6be2b72c393c2a41fc.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-jquery/dist/img/9d2439ab1701e56d45f77a210d50c113.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-jquery/dist/img/d8a483d096238b8659b64cb8b13928fc.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-jquery/dist/img/debab730d7fd14c59bebb9ee40716e8e.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-jquery/dist/login.28f26fecc29634f5bfd7.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-jquery/dist/login.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-jquery/dist/userInfo.2762ae0e0155c79c8015.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-jquery/dist/userInfo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/.babelrc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/.editorconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/.eslintignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/.eslintrc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/.npmrc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/.travis.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/libs/common.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/libs/test.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/libs/utils.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/static/img/1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/static/js/test/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/templates/test/css/index.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/templates/test/html/index.pug" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/templates/test/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/templates/test0/css/index.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/templates/test0/html/index.pug" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/templates/test0/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/config/config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/config/webpack.config.base.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/config/webpack.config.dev.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/config/webpack.config.lint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/config/webpack.config.product.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/karma.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/postcss.config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/test/mocks/demo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/test/unit/demo.spec.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/webpack.config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-multi-skeleton/yarn.lock" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/.editorconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/.eslintrc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/css/common/global.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/css/common/grid.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/css/lib/reset.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/css/page/about.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/css/page/index.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/css/page/list.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/img/4.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/img/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/img/mask.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/js/components/dialog/css/dialog.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/js/components/dialog/img/1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/js/components/dialog/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/js/components/dialog/tmpl/dialog.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/js/page/about.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/js/page/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/js/page/list.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/view/about.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/view/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/src/view/list.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack1-jquery/webpack.config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/.babelrc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/.eslintrc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/config/config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/config/webpack.config.base.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/config/webpack.config.dev.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/config/webpack.config.lint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/config/webpack.config.prod.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/deploy.sh" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/postcss.config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/src/css/a.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/src/css/b.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/src/image/a.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/src/javascript/a.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/src/javascript/b.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/src/javascript/portConfig.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/src/page/a.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/src/page/b.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage-cli/webpack.config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/mulitPageDemo.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/readme.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/src/cat/cat.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/src/cat/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/src/cat/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/src/cat/index.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/src/dog/dog.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/src/dog/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/src/dog/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/src/dog/index.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/src/index/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/src/index/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/src/index/index.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/src/index/rabbit.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/webpack.dev.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/other/layout-webpack3-multipage/webpack.prod.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/.babelrc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/.editorconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/.eslintignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/.eslintrc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/.postcssrc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/LICENSE" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/build/build.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/build/check-versions.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/build/dev-client.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/build/dev-server.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/build/utils.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/build/vue-loader.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/build/webpack.base.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/build/webpack.dev.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/build/webpack.prod.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/config/dev.env.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/config/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/config/prod.env.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/mock_server/data.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/mock_server/server.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/api/config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/base/.gitkeep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/base/vfooter/vfooter.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/base/vheader/vheader.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/fonts/.gitkeep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/image/.gitkeep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/js/config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/js/dom.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/js/jsonp.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/js/responsive.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/js/util.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/stylus/base.styl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/stylus/icon.styl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/stylus/index.styl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/stylus/mixin.styl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/stylus/reset.styl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/common/stylus/variable.styl" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/components/hello/hello.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/components/index/index.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/components/page1/page1.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/components/page2/page2.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/index/App.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/index/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/index/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/page1/App.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/page1/page1.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/page1/page1.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/page2/App.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/page2/page2.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/page2/page2.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/router/index/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/router/page1/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/router/page2/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/store/actions.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/store/getters.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/store/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/store/modules/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/store/modules/page1.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/store/modules/page2.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/src/store/mutation-types.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/webpack-vue-multipages/static/.gitkeep" />
-      <change beforePath="$PROJECT_DIR$/.idea/comp-layout.iml" afterPath="$PROJECT_DIR$/.idea/comp-layout.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/panel/layer-article.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/panel/layer-article.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/panel/layer-article.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/images/layer-article/cd-arrow-back.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/images/layer-article/cd-arrow.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/images/layer-article/cd-close-dark.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/images/layer-article/img.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/scripts/layer/layer-article.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/views/ch2-panel/01-layer/layer-artcile.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/.editorconfig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/.eslintrc.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/css/common/global.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/css/common/grid.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/css/lib/reset.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/css/page/about.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/css/page/index.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/css/page/list.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/img/4.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/img/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/img/mask.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/js/components/dialog/css/dialog.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/js/components/dialog/img/1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/js/components/dialog/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/js/components/dialog/tmpl/dialog.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/js/page/about.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/js/page/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/js/page/list.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/view/about.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/view/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/src/view/list.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack1-jquery/webpack.config.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/mulitPageDemo.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/package.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/readme.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/src/cat/cat.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/src/cat/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/src/cat/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/src/cat/index.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/src/dog/dog.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/src/dog/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/src/dog/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/src/dog/index.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/src/index/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/src/index/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/src/index/index.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/src/index/rabbit.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/webpack.dev.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-webpack3-multipage/webpack.prod.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/animate/nav-animate.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/animate/nav-animate.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/accordion.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/accordion.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/breadcrumb.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/breadcrumb.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-drawer.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-drawer.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-fixed-top.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-fixed-top.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-gn-menu.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-gn-menu.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/tab-default.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/tab-default.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/pagination/pagination-y.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/pagination/pagination-y.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/css/default.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/css/reset.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/fonts/icomoon.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/fonts/icomoon.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/fonts/icomoon.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/fonts/icomoon.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/img/cd-arrow-back.svg" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/images/layer-article/cd-arrow-back.svg" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/img/cd-arrow.svg" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/images/layer-article/cd-arrow.svg" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/img/cd-close-dark.svg" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/images/layer-article/cd-close-dark.svg" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/img/img.png" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/images/layer-article/img.png" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/layer-artcile.html" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/js/jquery-2.1.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/js/jquery.mobile.custom.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/js/main.js" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/scripts/layer/layer-article.js" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/js/modernizr.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/partials/_layout.scss" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/partials/_layout.scss" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/partials/_mixins.scss" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/partials/_mixins.scss" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/partials/_variables.scss" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/partials/_variables.scss" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/scss/style.scss" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/animate/nav-animate.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/animate/nav-animate.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/accordion.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/accordion.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/breadcrumb.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/breadcrumb.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/nav-drawer.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/nav-drawer.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/nav-fixed-top.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/nav-fixed-top.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/nav-gn-menu.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/nav-gn-menu.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/tab-default.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/tab-default.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/pagination/pagination-y.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/pagination/pagination-y.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/views/ch2-panel/01-layer/文章-展示/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/gulpfile.js" afterPath="$PROJECT_DIR$/layout-gulp-jquery/gulpfile.js" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/package.json" afterPath="$PROJECT_DIR$/layout-gulp-jquery/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/layout-webpack1-jquery/node_modules/" />
     <ignored path="$PROJECT_DIR$/other/css-module-webpack/node_modules/" />
@@ -237,7 +70,18 @@
     <favorites_list name="comp-layout" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="layer-artcile.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/dist/views/ch2-panel/01-layer/layer-artcile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="57" lean-forward="true" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -258,11 +102,18 @@
       <find>http://libs.useso.com/js</find>
       <find>build</find>
       <find>livere</find>
+      <find>minifyCss</find>
+      <find>transition</find>
+      <find>transform</find>
+      <find>&quot;img/</find>
+      <find>img/cd-arrow-back.svg</find>
+      <find>translate =</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>ice-expand</replace>
       <replace>https://cdn.staticfile.org</replace>
+      <replace>&quot;images/layer-article/</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -276,14 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/corner.js-demo/bootstrap-js-context-menu-鼠标右键/css/zzsc-demo.css" />
-        <option value="$PROJECT_DIR$/corner.js-demo/css3-bird-avatar-鸟的旋转/index2.html" />
-        <option value="$PROJECT_DIR$/corner.js/app/static/css/theme/bird.less" />
-        <option value="$PROJECT_DIR$/corner.js/app/static/css/theme/fly.sass" />
-        <option value="$PROJECT_DIR$/corner.js/app/static/css/theme/fly.scss" />
-        <option value="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/index2.html" />
-        <option value="$PROJECT_DIR$/corner.js-demo/css3-button-animation-分享/js/index.js" />
-        <option value="$PROJECT_DIR$/corner.js/app/static/scripts/corner/plane.js" />
         <option value="$PROJECT_DIR$/corner.js/app/views/index.html" />
         <option value="$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.less" />
         <option value="$PROJECT_DIR$/corner.js/dist/static/css/theme/plane.css" />
@@ -308,7 +151,6 @@
         <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/固定顶部导航/index.html" />
         <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/固定顶部导航/css/styles.css" />
         <option value="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-fixed-top.less" />
-        <option value="$PROJECT_DIR$/layout-gulp-jquery/gulpfile.js" />
         <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/01-nav-typical/nav-fixed-top.html" />
         <option value="$PROJECT_DIR$/corner.js/gulpfile.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -327,6 +169,15 @@
         <option value="$PROJECT_DIR$/webpack-demo-loader/webpack.config.js" />
         <option value="$PROJECT_DIR$/webpack-demo-loader/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/css/reset.css" />
+        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/scss/style.scss" />
+        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/index.html" />
+        <option value="$PROJECT_DIR$/layout-gulp-jquery/package.json" />
+        <option value="$PROJECT_DIR$/layout-gulp-jquery/gulpfile.js" />
+        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/css/style.css" />
+        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/layer-artcile.html" />
+        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/static/scripts/layer/layer-article.js" />
+        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/panel/layer-article.scss" />
       </list>
     </option>
   </component>
@@ -336,6 +187,62 @@
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/layout-gulp-jquery/gulpfile.js</gulpfile-path>
+        <tasks>
+          <GulpTaskState>
+            <task-name>copyFonts</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>copyPlus</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <dependencies>
+              <dependency value="copyFonts" />
+              <dependency value="copyPlus" />
+            </dependencies>
+            <task-name>copy</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>js</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>scss</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>less</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>html</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>images</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>sprite</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>clean</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>public</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>watch</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <task-name>redist</task-name>
+          </GulpTaskState>
+          <GulpTaskState>
+            <dependencies>
+              <dependency value="redist" />
+            </dependencies>
+            <task-name>default</task-name>
+          </GulpTaskState>
+        </tasks>
+      </GulpfileState>
+    </gulpfiles>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
@@ -372,8 +279,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -381,16 +286,151 @@
               <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
               <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="panel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ch2-panel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ch2-panel" type="462c0819:PsiDirectoryNode" />
+              <item name="01-layer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ch3-nav" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ch3-nav" type="462c0819:PsiDirectoryNode" />
+              <item name="02-nav-xy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ch3-nav" type="462c0819:PsiDirectoryNode" />
+              <item name="08-pagination" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ch2-panel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
+              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
+              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="ch2-panel" type="462c0819:PsiDirectoryNode" />
+              <item name="01-layer" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/layout-gulp-jquery/gulpfile.js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -400,13 +440,15 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\views\ch2-panel\01-layer" />
+      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\static\scripts\layer" />
       <recent name="E:\workspace-components\comp-layout\other" />
       <recent name="E:\workspace-components\comp-layout\layout-webpack3-jquery\build" />
       <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\static\plus" />
-      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\views\ch3-nav\01-nav-typical" />
-      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\static\images\nav-animate" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\static\images\layer-article" />
+      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\static\css" />
       <recent name="E:\workspace-comp\comp-layout\corner.js" />
     </key>
   </component>
@@ -512,6 +554,16 @@
       <arguments />
       <envs />
     </configuration>
+    <configuration name="default (1)" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/layout-gulp-jquery/gulpfile.js</gulpfile>
+      <tasks>
+        <task>default</task>
+      </tasks>
+      <arguments />
+      <envs />
+    </configuration>
     <configuration name="default" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -532,14 +584,28 @@
       <arguments />
       <envs />
     </configuration>
-    <list size="2">
+    <configuration name="scss" type="js.build_tools.gulp" factoryName="Gulp.js" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/layout-gulp-jquery/gulpfile.js</gulpfile>
+      <tasks>
+        <task>scss</task>
+      </tasks>
+      <arguments />
+      <envs />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Gulp.js.default" />
       <item index="1" class="java.lang.String" itemvalue="Gulp.js.less" />
+      <item index="2" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Gulp.js.scss" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Gulp.js.less" />
-        <item index="1" class="java.lang.String" itemvalue="Gulp.js.default" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Gulp.js.scss" />
+        <item index="2" class="java.lang.String" itemvalue="Gulp.js.less" />
+        <item index="3" class="java.lang.String" itemvalue="Gulp.js.default" />
       </list>
     </recent_temporary>
   </component>
@@ -580,7 +646,8 @@
       <workItem from="1519099847734" duration="2214000" />
       <workItem from="1519103233158" duration="238000" />
       <workItem from="1519103504407" duration="2018000" />
-      <workItem from="1519123348155" duration="533000" />
+      <workItem from="1519123348155" duration="1171000" />
+      <workItem from="1519124553007" duration="4646000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1517841377235</created>
@@ -680,11 +747,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519097635251</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="small">
+      <created>1519123906874</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1519123906874</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29300000" />
+    <option name="totallyTimeSpent" value="34584000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -707,12 +781,14 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.59521097" sideWeight="0.49785408" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29291844" sideWeight="0.4013683" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49714938" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5290764" sideWeight="0.49248928" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31242874" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21436717" sideWeight="0.49248928" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25804722" sideWeight="0.3971831" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35890558" sideWeight="0.8053435" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25804722" sideWeight="0.6028169" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -725,8 +801,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28540772" sideWeight="0.19465649" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -781,148 +855,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/karma.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/test/unit/demo.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/test/mocks/demo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/postcss.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/dist/test0/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="58" lean-forward="true" selection-start-line="0" selection-start-column="58" selection-end-line="0" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/dist/static/js/test.bundle.7c30b73d81e879c4bdf0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/dist/static/js/test0.bundle.7c30b73d81e879c4bdf0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/dist/static/css/vendors.08d7b51b4ab4894412d8e4d36eb9632c.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/dist/static/css/test.04e50154927e0a6be02a227c0d77b994.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/dist/static/css/test0.c38343268b141a3cde95bccc552e4376.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="62" column="30" lean-forward="false" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/other/layout-webpack3-multipage-cli/config/webpack.config.base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1102">
-          <caret line="51" column="7" lean-forward="false" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/other/layout-webpack3-multipage-cli/config/webpack.config.dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/other/layout-webpack3-multipage-cli/config/webpack.config.lint.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-266">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/other/layout-webpack3-multipage-cli/config/webpack.config.prod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/templates/test/html/hello.html" />
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/templates/test/css/hello.less" />
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/config/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/config/webpack.config.base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3017">
-          <caret line="166" column="47" lean-forward="false" selection-start-line="166" selection-start-column="47" selection-end-line="166" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/templates/test/html/index.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/templates/test/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/templates/test0/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/layout-webpack3-multi-skeleton/config/webpack.config.dev.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-327">
@@ -1031,7 +963,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,7 +970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1047,7 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1055,7 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,9 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1074,7 +999,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="176">
             <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1085,7 +1009,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="683">
             <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1095,7 +1018,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-785">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,7 +1033,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,7 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1127,6 +1047,177 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack-vue-multipages/src/pages/index/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/partials/_layout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/partials/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/partials/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/css/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/js/jquery.mobile.custom.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/utilities/_global.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/utilities/_reset.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/partials/_layout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/partials/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="32" lean-forward="false" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/partials/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="69" column="34" lean-forward="false" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/images/layer-article/cd-arrow.svg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/02-nav-xy/nav-gn-menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/08-pagination/pagination-y.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/scripts/layer/layer-article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1017">
+          <caret line="123" column="60" lean-forward="true" selection-start-line="123" selection-start-column="60" selection-end-line="123" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/panel/layer-article.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14014">
+          <caret line="637" column="47" lean-forward="false" selection-start-line="637" selection-start-column="47" selection-end-line="637" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/layer-artcile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="68" lean-forward="true" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/dist/views/ch2-panel/01-layer/layer-artcile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="57" lean-forward="true" selection-start-line="0" selection-start-column="57" selection-end-line="0" selection-end-column="57" />
           <folding />
         </state>
       </provider>

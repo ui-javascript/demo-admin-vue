@@ -28,6 +28,7 @@
     "autoprefixer": "",
     "cssnano": "",
     "browser-sync": "^2.12.12",
+    "node-bourbon": "",
     "imagemin-pngquant": "^5.0.0",
     "gulp-concat-dir": "^1.0.0",
     "gulp-minify-css": "^1.2.4",
