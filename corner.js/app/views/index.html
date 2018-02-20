@@ -14,12 +14,9 @@
     <link rel="stylesheet" href="../static/css/components/nav/menu-holder.css">
 
     <link rel="stylesheet" href="../static/css/animate/expand.css">
-    <link rel="stylesheet" href="../static/css/theme/firefly.css">
+    <link rel="stylesheet" href="../static/css/theme/animal/firefly.css">
+    <link rel="stylesheet" href="../static/css/theme/animal/bird.css">
     <link rel="stylesheet" href="../static/css/theme/plane.css">
-    <link rel="stylesheet" href="../static/css/theme/bird.css">
-
-
-
 
     <style>
         .ice-expand {
@@ -118,10 +115,10 @@
 </div>
 
 <!-- 萤火虫 -->
-<div id="dd"></div>
+<div id="ice_firefly"></div>
 
 <!-- 鸟 -->
-<div class="bird">
+<div class="ice-bird">
     <div class="big"></div>
     <div class="middle"></div>
     <div class="small"></div>
@@ -151,10 +148,10 @@
 <script src="../static/scripts/corner/plane.js"></script>
 <script src="../static/scripts/animate/anime.js"></script>
 
-<script src="../static/scripts/components/button/button-draggable.js"></script>
+<script src="../static/scripts/components/button/btn-draggable.js"></script>
 
 <script>
-    firefly('#dd');
+    firefly('#ice_firefly');
 
     $('.btn-triger').click(function () {
         $(this).closest('.float-btn-group').toggleClass('open');

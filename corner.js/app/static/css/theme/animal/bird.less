@@ -1,11 +1,10 @@
-.bird {
+.ice-bird {
   position: absolute;
   width: 200px;
   height: 200px;
   top: 50%;
   left: 80%;
   cursor: pointer;
-
   transform: translate(-50%, -50%);
 
   .big {
@@ -16,14 +15,8 @@
     border-color: transparent transparent #d72928 #db3e3d;
     border-width: 100px;
     border-style: solid;
-
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-
     transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
   }
 
   .middle {
@@ -36,12 +29,7 @@
     border-width: 80px;
 
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-
     transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
   }
 
   .small {
@@ -54,12 +42,8 @@
     border-width: 40px;
 
     transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-
     transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
+
 
     &:before {
       content: "";
@@ -73,28 +57,28 @@
     }
   }
 
+  // 悬浮状态下 红鸟 -> 绿鸟
+  &:hover {
+
+    .big {
+      transform: rotate(225deg);
+      border-color: transparent transparent #1fe8b6 #16d7a7;
+    }
+
+    .middle {
+      transform: rotate(-135deg);
+      border-color: transparent #f8d245 #fff #f2f2f2;
+    }
+
+    .small {
+      transform: rotate(135deg);
+      border-color: transparent #f7a703 transparent transparent;
+    }
+  }
+
 
 }
 
 
 
-.bird:hover {
 
-  .big {
-    transform: rotate(225deg);
-
-    border-color: transparent transparent #1fe8b6 #16d7a7;
-  }
-
-  .middle {
-    transform: rotate(-135deg);
-
-    border-color: transparent #f8d245 #fff #f2f2f2;
-  }
-
-  .small {
-    transform: rotate(135deg);
-
-    border-color: transparent #f7a703 transparent transparent;
-  }
-}

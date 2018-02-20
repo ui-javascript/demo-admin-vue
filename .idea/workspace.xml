@@ -2,26 +2,242 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3a14fd6-fcb4-4b8f-804b-11489e42edee" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/pills.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/style.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/animate/drag.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/animate/expand.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/components/button/_button.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/components/button/button-draggable.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/components/nav/menu-holder.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/theme/animal/bird.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/theme/animal/firefly.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/theme/plane.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/utilities/_global.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/Material-Design-右下角助手/css/styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/Material-Design-右下角助手/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/Material-Design-右下角助手/js/jquery-2.1.1.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/右键菜单/bootstrap/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/右键菜单/css/class2context.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/右键菜单/css/zzsc-demo.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/右键菜单/img/3d-material-drop-tool-icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/右键菜单/img/Actions-draw-brush-icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/右键菜单/img/Autodesk-Alias-Design-icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/右键菜单/img/Design-Briefs-icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/右键菜单/img/iMac-icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/右键菜单/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/右键菜单/js/class2context.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/底部菜单/css/component1.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/底部菜单/css/component2.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/底部菜单/css/demo.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/底部菜单/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/底部菜单/index2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/底部菜单/js/demo1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/底部菜单/js/demo2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/底部菜单/js/modernizr-2.6.2.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/底部菜单/js/polyfills.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/弹性折叠搜索框/css/htmleaf-demo.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/弹性折叠搜索框/css/style.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/弹性折叠搜索框/fonts/fontawesome-webfont.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/弹性折叠搜索框/fonts/fontawesome-webfont.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/弹性折叠搜索框/fonts/fontawesome-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/弹性折叠搜索框/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/弹性折叠搜索框/js/jquery-1.11.0.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/css/mplayer.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/css/mplayer.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/img/mplayer_bg.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/img/mplayer_error.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/index2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/js/jquery-2.1.1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/js/jquery.nstSlider.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/js/jquery.nstSlider.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/js/mplayer-functions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/js/mplayer-list.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/js/mplayer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/corner.js/corner.js-demo/音乐播放器侧边/js/mplayer.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/.babelrc" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/.editorconfig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/.eslintignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/.eslintrc.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/.postcssrc.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/LICENSE" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/build/build.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/build/check-versions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/build/dev-client.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/build/dev-server.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/build/utils.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/build/vue-loader.conf.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/build/webpack.base.conf.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/build/webpack.dev.conf.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/build/webpack.prod.conf.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/config/dev.env.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/config/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/config/prod.env.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/mock_server/data.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/mock_server/server.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/package-lock.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/package.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/api/config.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/base/.gitkeep" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/base/vfooter/vfooter.vue" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/base/vheader/vheader.vue" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/fonts/.gitkeep" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/image/.gitkeep" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/js/config.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/js/dom.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/js/jsonp.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/js/responsive.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/js/util.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/stylus/base.styl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/stylus/icon.styl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/stylus/index.styl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/stylus/mixin.styl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/stylus/reset.styl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/common/stylus/variable.styl" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/components/hello/hello.vue" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/components/index/index.vue" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/components/page1/page1.vue" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/components/page2/page2.vue" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/pages/index/App.vue" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/pages/index/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/pages/index/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/pages/page1/App.vue" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/pages/page1/page1.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/pages/page1/page1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/pages/page2/App.vue" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/pages/page2/page2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/pages/page2/page2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/router/index/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/router/page1/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/router/page2/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/store/actions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/store/getters.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/store/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/store/modules/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/store/modules/page1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/store/modules/page2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/src/store/mutation-types.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/layout-webpack3-vue-multipages/static/.gitkeep" />
+      <change beforePath="$PROJECT_DIR$/.idea/comp-layout.iml" afterPath="$PROJECT_DIR$/.idea/comp-layout.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/css/htmleaf-demo.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/css/normalize.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/css/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/dist/pills.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/dist/pills.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/fonts/icomoon.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/fonts/icomoon.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/fonts/icomoon.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/fonts/icomoon.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/layout-pills.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/js/jquery-1.11.0.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/js/jquery-2.1.1.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/src/_mixins.scss" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/_mixins.scss" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/src/_reset.scss" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/_reset.scss" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/src/pills.scss" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/pills.scss" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/05-mobile/device-diff.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/04-mobile/device-diff.html" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/Material-Design-右下角助手/css/styles.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/Material-Design-右下角助手/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/Material-Design-右下角助手/js/jquery-2.1.1.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/右键菜单/bootstrap/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/右键菜单/css/class2context.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/右键菜单/css/zzsc-demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/右键菜单/img/3d-material-drop-tool-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/右键菜单/img/Actions-draw-brush-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/右键菜单/img/Autodesk-Alias-Design-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/右键菜单/img/Design-Briefs-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/右键菜单/img/iMac-icon.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/右键菜单/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/右键菜单/js/class2context.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/底部菜单/css/component1.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/底部菜单/css/component2.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/底部菜单/css/demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/底部菜单/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/底部菜单/index2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/底部菜单/js/demo1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/底部菜单/js/demo2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/底部菜单/js/modernizr-2.6.2.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/底部菜单/js/polyfills.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/弹性折叠搜索框/css/htmleaf-demo.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/弹性折叠搜索框/css/style.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/弹性折叠搜索框/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/弹性折叠搜索框/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/弹性折叠搜索框/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/弹性折叠搜索框/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/弹性折叠搜索框/js/jquery-1.11.0.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/css/mplayer.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/css/mplayer.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/img/mplayer_bg.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/img/mplayer_error.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/index2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/js/jquery-2.1.1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/js/jquery.nstSlider.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/js/jquery.nstSlider.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/js/mplayer-functions.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/js/mplayer-list.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/js/mplayer.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js-demo/音乐播放器侧边/js/mplayer.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/static/css/theme/bird.less" afterPath="$PROJECT_DIR$/corner.js/app/static/css/theme/animal/bird.less" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/static/css/theme/firefly.less" afterPath="$PROJECT_DIR$/corner.js/app/static/css/theme/animal/firefly.less" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/static/css/utilities/_global.less" afterPath="$PROJECT_DIR$/corner.js/app/static/css/utilities/_global.less" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.less" afterPath="$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.less" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/static/scripts/animate/anime.js" afterPath="$PROJECT_DIR$/corner.js/app/static/scripts/animate/anime.js" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/static/scripts/components/button/button-draggable.js" afterPath="$PROJECT_DIR$/corner.js/app/static/scripts/components/button/btn-draggable.js" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/static/scripts/corner/firefly.js" afterPath="$PROJECT_DIR$/corner.js/app/static/scripts/corner/firefly.js" />
+      <change beforePath="$PROJECT_DIR$/corner.js/app/views/index.html" afterPath="$PROJECT_DIR$/corner.js/app/views/index.html" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/style.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/style.css" />
+      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/style.scss" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/style.scss" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/.babelrc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/.editorconfig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/.eslintignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/.eslintrc.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/.postcssrc.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/build/build.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/build/check-versions.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/build/dev-client.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/build/dev-server.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/build/utils.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/build/vue-loader.conf.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/build/webpack.base.conf.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/build/webpack.dev.conf.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/build/webpack.prod.conf.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/config/dev.env.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/config/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/config/prod.env.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/mock_server/data.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/mock_server/server.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/package-lock.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/api/config.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/base/.gitkeep" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/base/vfooter/vfooter.vue" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/base/vheader/vheader.vue" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/fonts/.gitkeep" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/image/.gitkeep" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/js/config.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/js/dom.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/js/jsonp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/js/responsive.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/js/util.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/stylus/base.styl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/stylus/icon.styl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/stylus/index.styl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/stylus/mixin.styl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/stylus/reset.styl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/common/stylus/variable.styl" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/components/hello/hello.vue" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/components/index/index.vue" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/components/page1/page1.vue" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/components/page2/page2.vue" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/index/App.vue" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/index/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/index/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/page1/App.vue" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/page1/page1.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/page1/page1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/page2/App.vue" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/page2/page2.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/pages/page2/page2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/router/index/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/router/page1/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/router/page2/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/store/actions.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/store/getters.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/store/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/store/modules/index.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/store/modules/page1.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/store/modules/page2.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/src/store/mutation-types.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/webpack-vue-multipages/static/.gitkeep" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/layout-webpack1-jquery/node_modules/" />
     <ignored path="$PROJECT_DIR$/other/css-module-webpack/node_modules/" />
@@ -41,38 +257,7 @@
     <favorites_list name="comp-layout" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/style.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout-pills.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/layout-pills.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1853">
-              <caret line="144" column="35" lean-forward="true" selection-start-line="144" selection-start-column="35" selection-end-line="144" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="shape-hex.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-shape/shape-hex.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -109,6 +294,8 @@
       <find>href=&quot;#0&quot;</find>
       <find>images/breadcrumb-step</find>
       <find>dist</find>
+      <find>webkit</find>
+      <find>firefly__flicker</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -125,6 +312,7 @@
       <replace>/device-diff</replace>
       <replace>src=&quot;images/scroll-news/</replace>
       <replace>href=&quot;javascript:void(0)&quot;</replace>
+      <replace>ice-firefly-flicker</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -138,14 +326,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/css/style.css" />
-        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/layer-artcile.html" />
-        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/static/scripts/layer/layer-article.js" />
-        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/panel/layer-article.scss" />
-        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/windows8 Metro-打开面板/css/styles.css" />
-        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/windows8 Metro-打开面板/css/reset.css" />
-        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/windows8 Metro-打开面板/css/default.css" />
-        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/windows8 Metro-打开面板/css/layer-metro.css" />
         <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/windows8 Metro-打开面板/index.html" />
         <option value="$PROJECT_DIR$/layout-webpack3-multi-skeleton/app/templates/layer-win8-metro/index.js" />
         <option value="$PROJECT_DIR$/layout-webpack3-multi-skeleton/config/config.js" />
@@ -187,8 +367,16 @@
         <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/index.html" />
         <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/css/htmleaf-demo.css" />
         <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/css/style.css" />
-        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/style.scss" />
         <option value="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/layout-pills.html" />
+        <option value="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/style.scss" />
+        <option value="$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.less" />
+        <option value="$PROJECT_DIR$/corner.js/app/static/css/utilities/_global.less" />
+        <option value="$PROJECT_DIR$/corner.js/app/static/css/theme/bird.less" />
+        <option value="$PROJECT_DIR$/corner.js/app/static/css/theme/animal/bird.less" />
+        <option value="$PROJECT_DIR$/corner.js/app/views/index.html" />
+        <option value="$PROJECT_DIR$/corner.js/app/static/css/theme/animal/firefly.less" />
+        <option value="$PROJECT_DIR$/corner.js/app/static/scripts/corner/firefly.js" />
+        <option value="$PROJECT_DIR$/corner.js/app/static/scripts/animate/anime.js" />
       </list>
     </option>
   </component>
@@ -200,26 +388,13 @@
     <detection-done>true</detection-done>
     <gulpfiles>
       <GulpfileState>
-        <gulpfile-path>$PROJECT_DIR$/layout-gulp-jquery/gulpfile.js</gulpfile-path>
+        <gulpfile-path>$PROJECT_DIR$/corner.js/gulpfile.js</gulpfile-path>
         <tasks>
-          <GulpTaskState>
-            <task-name>copyFonts</task-name>
-          </GulpTaskState>
-          <GulpTaskState>
-            <task-name>copyPlus</task-name>
-          </GulpTaskState>
-          <GulpTaskState>
-            <dependencies>
-              <dependency value="copyFonts" />
-              <dependency value="copyPlus" />
-            </dependencies>
-            <task-name>copy</task-name>
-          </GulpTaskState>
           <GulpTaskState>
             <task-name>js</task-name>
           </GulpTaskState>
           <GulpTaskState>
-            <task-name>scss</task-name>
+            <task-name>sass</task-name>
           </GulpTaskState>
           <GulpTaskState>
             <task-name>less</task-name>
@@ -296,6 +471,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,64 +479,13 @@
               <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
               <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="comp-layout" type="b2602c69:ProjectViewProjectNode" />
-              <item name="comp-layout" type="462c0819:PsiDirectoryNode" />
-              <item name="layout-gulp-jquery" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="ch2-panel" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -373,19 +498,19 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/workspace-comp/comp-layout/corner.js/dist/views/index.html" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\views\ch1-layout\02-grid-flex" />
-      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\views\ch1-layout\01-column" />
-      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\views\ch3-nav\07-breadcrumb" />
-      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\views\ch1-layout\03-scroll" />
-      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\static\plus\jquery" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\static\css\components\layout\pills" />
       <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\static\images\breadcrumb-step" />
       <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\static\css\components\nav\breadcrumb-step" />
       <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\static\images\scroll-news" />
       <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\static\scripts\device" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace-components\comp-layout\corner.js\app\static\css\theme\animal" />
+      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\views\ch1-layout\02-grid-flex" />
+      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\views\ch1-layout\01-column" />
+      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\views\ch3-nav\07-breadcrumb" />
+      <recent name="E:\workspace-components\comp-layout\layout-gulp-jquery\app\views\ch1-layout\03-scroll" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -538,10 +663,10 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Gulp.js.scss" />
-        <item index="2" class="java.lang.String" itemvalue="Gulp.js.less" />
-        <item index="3" class="java.lang.String" itemvalue="Gulp.js.default" />
+        <item index="0" class="java.lang.String" itemvalue="Gulp.js.default" />
+        <item index="1" class="java.lang.String" itemvalue="Gulp.js.default (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Gulp.js.scss" />
+        <item index="3" class="java.lang.String" itemvalue="Gulp.js.less" />
       </list>
     </recent_temporary>
   </component>
@@ -583,7 +708,10 @@
       <workItem from="1519103233158" duration="238000" />
       <workItem from="1519103504407" duration="2018000" />
       <workItem from="1519123348155" duration="1171000" />
-      <workItem from="1519124553007" duration="14364000" />
+      <workItem from="1519124553007" duration="14565000" />
+      <workItem from="1519139547573" duration="55000" />
+      <workItem from="1519139976582" duration="201000" />
+      <workItem from="1519140231099" duration="1341000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1517841377235</created>
@@ -732,11 +860,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519138447044</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="small">
+      <created>1519139217850</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1519139217850</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44302000" />
+    <option name="totallyTimeSpent" value="46100000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -752,22 +887,20 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69441277" sideWeight="0.5069742" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.65564424" sideWeight="0.49302575" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7514253" sideWeight="0.49302575" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68187" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29291844" sideWeight="0.4013683" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5826682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24743444" sideWeight="0.49248928" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31242874" sideWeight="0.49248928" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3524678" sideWeight="0.23509933" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2859442" sideWeight="0.26605505" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3524678" sideWeight="0.7649007" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2859442" sideWeight="0.73394495" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -778,7 +911,9 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -838,118 +973,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/fonts/codropsicons/license.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/scripts/device/morphingdevice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/05-mobile/桌面-移动设备-响应式设计/css/component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="433" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/05-mobile/桌面-移动设备-响应式设计/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396">
-          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/05-mobile/桌面-移动设备-响应式设计/js/morphingdevice.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3058">
-          <caret line="139" column="1" lean-forward="false" selection-start-line="139" selection-start-column="1" selection-end-line="139" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/new-blue-index-good/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="44" lean-forward="false" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/jquery-page-scroll-animation-页面滚动/css/zzsc.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/jquery-page-scroll-animation-页面滚动/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10608">
-          <caret line="320" column="1" lean-forward="false" selection-start-line="320" selection-start-column="1" selection-end-line="320" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/jquery-page-scroll-animation-页面滚动/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/yzts_3_booom/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/jquery-news-flow-垂直滚动/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/plus/jquery/jquery.bootstrap.newsbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <marker date="1517847462772" expanded="true" signature="4358:4370" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/03-scroll/jquery-news-flow-垂直滚动/css/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/scroll.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="22" column="1" lean-forward="false" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -957,7 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="55">
           <caret line="165" column="60" lean-forward="true" selection-start-line="165" selection-start-column="60" selection-end-line="165" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -965,7 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -973,71 +998,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-902">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/partials/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/partials/_mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/partials/_layout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/scss/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/css/reset.css" />
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/css/default.css" />
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/partials/_variables.scss" />
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/partials/_mixins.scss" />
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/partials/_layout.scss" />
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch3-nav/07-breadcrumb/面包屑-分步导航/scss/style.scss" />
     <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/breadcrumb-step/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,7 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1058,7 +1031,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1066,7 +1038,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="127" column="39" lean-forward="false" selection-start-line="127" selection-start-column="39" selection-end-line="127" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1074,55 +1045,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-478">
           <caret line="39" column="62" lean-forward="true" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-column/天空蓝三栏/templatemo_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4356">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-column/天空蓝三栏/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-column/非响应式左右菜单切换画面模板/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-column/天空蓝三栏/templatemo_style.css" />
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-column/天空蓝三栏/index.html" />
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-column/非响应式左右菜单切换画面模板/index.html" />
     <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/黑色商务-摄影/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/响应式-文章系统-网格切换/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/响应式-文章系统-网格切换/index.html" />
     <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/仿google trends-网格响应式布局/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,7 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="69" lean-forward="false" selection-start-line="9" selection-start-column="69" selection-end-line="9" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,7 +1077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1304">
           <caret line="62" column="7" lean-forward="false" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1146,9 +1084,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-330">
           <caret line="42" column="0" lean-forward="false" selection-start-line="41" selection-start-column="47" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1156,9 +1091,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1166,7 +1098,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1174,7 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="27" lean-forward="true" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1182,23 +1112,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/layout-pills.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/layout-pills.less" />
     <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/_mixins.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1206,39 +1127,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5424">
           <caret line="172" column="3" lean-forward="false" selection-start-line="172" selection-start-column="3" selection-end-line="172" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/css/htmleaf-demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/css/htmleaf-demo.css" />
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/02-grid-flex/pills-简单12列网格/css/style.css" />
     <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/views/ch1-layout/01-shape/shape-hex.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="35" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/pills.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1655" lean-forward="false" selection-start-line="0" selection-start-column="1655" selection-end-line="0" selection-end-column="1655" />
         </state>
       </provider>
     </entry>
@@ -1246,6 +1150,116 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1853">
           <caret line="144" column="35" lean-forward="true" selection-start-line="144" selection-start-column="35" selection-end-line="144" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/layout/pills/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/utilities/_reset.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/utilities/_global.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/theme/plane.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2017">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/theme/animal/bird.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/css/theme/animal/firefly.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/scripts/corner/firefly.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <marker date="1519141442841" expanded="true" signature="583:1118" ph="..." />
+            <marker date="1519141442841" expanded="true" signature="634:866" ph="..." />
+            <marker date="1519141442841" expanded="true" signature="685:838" ph="..." />
+            <marker date="1519141442841" expanded="true" signature="916:1092" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/scripts/corner/plane.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="39" column="43" lean-forward="false" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/scripts/animate/anime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/static/scripts/components/button/btn-draggable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/dist/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corner.js/app/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
           <folding />
         </state>
       </provider>
