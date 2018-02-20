@@ -4,7 +4,7 @@
  * weChat: qq20004604
  */
 import './login.less'
-import '../../less/reset.css'
+// import '../../less/reset.css'
 import {insertTemplate} from '../../common/public'
 import mvvm from '../../common/mvvm'
 

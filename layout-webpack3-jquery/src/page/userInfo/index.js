@@ -5,7 +5,7 @@
  */
 import './userInfo.less'
 import {insertTemplate} from '../../common/public'
-import '../../less/reset.css'
+// import '../../less/reset.css'
 
 const $ = require('../../common/jquery.min')
 

@@ -17,7 +17,6 @@ hs_err_pid*
 
 # netbeans
 nbproject/private/
-build/
 nbbuild/
 
 # the dist file could make some problems
