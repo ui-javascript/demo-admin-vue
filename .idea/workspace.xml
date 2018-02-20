@@ -2,55 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3a14fd6-fcb4-4b8f-804b-11489e42edee" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/panel/layer-article.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/panel/layer-article.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/panel/layer-article.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/images/layer-article/cd-arrow-back.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/images/layer-article/cd-arrow.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/images/layer-article/cd-close-dark.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/images/layer-article/img.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/scripts/layer/layer-article.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/views/ch2-panel/01-layer/layer-artcile.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/animate/nav-animate.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/animate/nav-animate.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/accordion.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/accordion.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/breadcrumb.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/breadcrumb.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-drawer.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-drawer.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-fixed-top.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-fixed-top.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-gn-menu.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/nav-gn-menu.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/tab-default.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/nav/tab-default.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/pagination/pagination-y.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/components/pagination/pagination-y.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/css/default.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/css/reset.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/css/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/fonts/icomoon.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/fonts/icomoon.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/fonts/icomoon.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/fonts/icomoon.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/img/cd-arrow-back.svg" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/images/layer-article/cd-arrow-back.svg" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/img/cd-arrow.svg" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/images/layer-article/cd-arrow.svg" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/img/cd-close-dark.svg" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/images/layer-article/cd-close-dark.svg" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/img/img.png" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/images/layer-article/img.png" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/index.html" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/layer-artcile.html" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/js/jquery-2.1.1.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/js/jquery.mobile.custom.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/js/main.js" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/scripts/layer/layer-article.js" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/js/modernizr.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/partials/_layout.scss" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/partials/_layout.scss" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/partials/_mixins.scss" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/partials/_mixins.scss" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/partials/_variables.scss" afterPath="$PROJECT_DIR$/layout-gulp-jquery/app/static/css/partials/_variables.scss" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/app/views/ch2-panel/01-layer/文章-展示/scss/style.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/animate/nav-animate.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/animate/nav-animate.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/accordion.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/accordion.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/breadcrumb.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/breadcrumb.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/nav-drawer.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/nav-drawer.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/nav-fixed-top.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/nav-fixed-top.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/nav-gn-menu.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/nav-gn-menu.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/tab-default.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/nav/tab-default.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/pagination/pagination-y.css" afterPath="$PROJECT_DIR$/layout-gulp-jquery/dist/static/css/components/pagination/pagination-y.css" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/dist/views/ch2-panel/01-layer/文章-展示/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/gulpfile.js" afterPath="$PROJECT_DIR$/layout-gulp-jquery/gulpfile.js" />
-      <change beforePath="$PROJECT_DIR$/layout-gulp-jquery/package.json" afterPath="$PROJECT_DIR$/layout-gulp-jquery/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/layout-webpack1-jquery/node_modules/" />
     <ignored path="$PROJECT_DIR$/other/css-module-webpack/node_modules/" />
@@ -647,7 +599,7 @@
       <workItem from="1519103233158" duration="238000" />
       <workItem from="1519103504407" duration="2018000" />
       <workItem from="1519123348155" duration="1171000" />
-      <workItem from="1519124553007" duration="4646000" />
+      <workItem from="1519124553007" duration="4681000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1517841377235</created>
@@ -754,11 +706,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519123906874</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="[layer] small">
+      <created>1519129437364</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1519129437364</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34584000" />
+    <option name="totallyTimeSpent" value="34619000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -848,7 +807,8 @@
     <MESSAGE value="[accordion]small" />
     <MESSAGE value="[tab]small" />
     <MESSAGE value="small" />
-    <option name="LAST_COMMIT_MESSAGE" value="small" />
+    <MESSAGE value="[layer] small" />
+    <option name="LAST_COMMIT_MESSAGE" value="[layer] small" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
