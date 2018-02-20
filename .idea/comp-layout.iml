@@ -8,6 +8,9 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/layout-webpack3-multipage/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/other/layout-webpack1-jquery/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/webpack-demo-loader/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/webpack-vue-multipages/node_modules" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

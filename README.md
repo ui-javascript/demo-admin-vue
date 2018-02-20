@@ -48,3 +48,5 @@ file>settings>Lauguages & Frameworks>javascript
 - 静态站点 https://github.com/vhtml/webpack-MultiPage-static
 - https://github.com/ruanyf/css-modules-demos
 - https://github.com/css-modules/webpack-demo
+- https://www.jianshu.com/p/63eacd66eb50du
+- https://github.com/rt-zhangxuefei/vue-project-multipages-template
