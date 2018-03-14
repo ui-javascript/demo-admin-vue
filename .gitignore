@@ -62,4 +62,4 @@ bower_components/
 run.log
 .upload/
 .cache/
-dist/
+#dist/
