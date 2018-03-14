@@ -17,7 +17,8 @@ var gulp = require('gulp'),
     less = require('gulp-less'),
     sass = require('gulp-sass'),
     bourbon = require("node-bourbon").includePaths,
-    // neat = require("bourbon-neat").includePaths,
+    neat = require("bourbon-neat").includePaths,
+
     minifyCss = require('gulp-minify-css'),
     cleanCss = require('gulp-clean-css'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -33,23 +34,25 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
 
+
 // 静态资源路径
-var staticResourceSrcArr = ['app/static/fonts/**', 'app/static/plus/**'];
+// var staticResourceSrcArr = ['app/static/fonts/**', 'app/static/plus/**'];
 
 // 静态资源搬运
-gulp.task('copyFonts', function () {
+// gulp.task('copyFonts', function () {
+//
+//     return gulp.src('app/static/fonts/**')
+//         .pipe(plumber())
+//         .pipe(gulp.dest('dist/static/fonts'));
+// });
+// gulp.task('copyPlus', function () {
+//
+//     return gulp.src('app/static/plus/**')
+//         .pipe(plumber())
+//         .pipe(gulp.dest('dist/static/plus'));
+// });
+// gulp.task('copy', ['copyFonts', 'copyPlus']);
 
-    return gulp.src('app/static/fonts/**')
-        .pipe(plumber())
-        .pipe(gulp.dest('dist/static/fonts'));
-});
-gulp.task('copyPlus', function () {
-
-    return gulp.src('app/static/plus/**')
-        .pipe(plumber())
-        .pipe(gulp.dest('dist/static/plus'));
-});
-gulp.task('copy', ['copyFonts', 'copyPlus']);
 
 // JS压缩
 gulp.task('js', function () {
@@ -58,16 +61,16 @@ gulp.task('js', function () {
         // .pipe(concat({ext: '.js'})) //合并同一目录下的所有文件
         .pipe(babel())
         .pipe(uglify())
-        .pipe(gulp.dest('dist/static/scripts'))
+        .pipe(gulp.dest('app/static/js'))
 });
 
 // scss编译
 gulp.task('scss', function (cb) { // cb是传入的回调函数
-    return gulp.src('app/static/css/**/*.scss')
+    return gulp.src('app/static/scss/**/*.scss')
         .pipe(plumber())
         .pipe(sass({
             sourcemaps: true,
-            includePaths: [bourbon]
+            includePaths: [bourbon, neat]
         }))
         // .pipe(concat({ext: '.css'}))
         // .pipe(rename('all.min.css'))
@@ -76,8 +79,8 @@ gulp.task('scss', function (cb) { // cb是传入的回调函数
             browsers: ['> 1%', 'not ie <= 8']
         }))
         // .pipe(sourcemaps.write())
-        .pipe(gulp.dest('dist/static/css'))
-        .pipe(gulp.dest('app/static/css'))
+        .pipe(gulp.dest('app/static/scss'))
+
 
     // console.log('sass 文件处理完毕！');
     // cb(err);        // 如果 err 不是 null 和 undefined，流程会被结束掉，'two' 不会被执行
@@ -86,23 +89,22 @@ gulp.task('scss', function (cb) { // cb是传入的回调函数
 
 // less编译
 gulp.task('less', function () {
-    return gulp.src('app/static/css/**/*.less')
+    return gulp.src('app/static/css/**/_output.less')
         .pipe(plumber())
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
         .pipe(cleanCss())
-        .pipe(gulp.dest('dist/static/css'))
         .pipe(gulp.dest('app/static/css'))
 });
 
 // HTML压缩
-gulp.task('html', function () {
-    return gulp.src('app/views/**/*.html')
-        .pipe(plumber())
-        .pipe(minifyHtml())
-        .pipe(gulp.dest('dist/views'))
-});
+// gulp.task('html', function () {
+//     return gulp.src('app/views/**/*.html')
+//         .pipe(plumber())
+//         .pipe(minifyHtml())
+//         .pipe(gulp.dest('dist/views'))
+// });
 
 
 // 图片压缩
@@ -116,8 +118,9 @@ gulp.task('images', function () {
             multipass: true, //类型：Boolean 默认：false 多次优化svg直到完全优化
             use: [pngquant()] // 使用 pngquant 深度压缩 png 图片
         }))
-        .pipe(gulp.dest('dist/static/images'))
+        .pipe(gulp.dest('app/static/images'))
 });
+
 
 // 雪碧图
 // 此功能是单一的并不与其他功能串联
@@ -127,7 +130,7 @@ gulp.task('sprite', function () {
             imgName: 'ico.png',
             cssName: 'sprite.css'
         }))
-        .pipe(gulp.dest('dist/static/images'));
+        .pipe(gulp.dest('app/static/sprite'));
 });
 
 // 浏览器同步刷新
@@ -143,31 +146,31 @@ gulp.task('sprite', function () {
 
 // 删除dist/*下的所有文件
 gulp.task('clean', function () {
-    return gulp.src('dist/*', {read: false})
+    return gulp.src('app/static/js/*', {read: false})
         .pipe(clean())
 });
 
 
 // 打包
-gulp.task('public', function () {
-    return gulp.src('dist/*')
-        .pipe(plumber())
-        .pipe(zip('public.zip'))
-        .pipe(gulp.dest('release'))
-});
+// gulp.task('public', function () {
+//     return gulp.src('dist/*')
+//         .pipe(plumber())
+//         .pipe(zip('public.zip'))
+//         .pipe(gulp.dest('release'))
+// });
 
 // watch监听
 gulp.task('watch', function () {
     gulp.watch('app/static/scripts/**/*.js', ['js']);
     gulp.watch('app/static/css/**/*.less', ['less']);
     gulp.watch('app/static/css/**/*.scss', ['scss']);
-    gulp.watch('app/views/**/*.html', ['html']);
+    // gulp.watch('app/views/**/*.html', ['html']);
 });
 
 
 // gulp是并行的，需要指定一下顺序
 gulp.task('redist', function () {
-    runSequence('clean', ['copy', 'html', 'scss', 'less', 'js', 'images', 'watch'])
+    runSequence('clean', ['scss', 'less', 'js', 'images', 'watch'])
 });
 
 // gulp命令 默认执行
