@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/demo.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <!--[if lt IE 9]>
+    <!--<script type="text/javascript" src="js/modernizr.custom.04022.js"></script>-->
+    <style>.ie-note-1 {
+        display: block;
+    }</style>
+    <![endif]-->
+
+
+    <!--[if lt IE 10]>
+    <style>.ie-note-2 {
+        display: block;
+    }</style>
+    <![endif]-->
+</head>
+<body>
+<div class="container">
+
+    <header>
+        <h1>Annotation Overlay Effect <span>with CSS3</span></h1>
+        <p>Make some simple annotations to images/items and show them on click</p>
+        <h2 class="ie-note ie-note-1">CSS3 Selectors don't work in Internet Explorer &lt; 9</h2>
+        <h2 class="ie-note ie-note-2">CSS3 Transitions don't work in Internet Explorer &lt; 10</h2>
+    </header>
+
+    <section>
+
+        <div class="ao-item">
+            <div class="ao-details">
+                <h2>Blenton Wordpress Theme</h2>
+                <p>Blenton is a simple and clean Wordpress theme which was made with a lot of attention to detail. It is
+                    suitable for commercial and private projects and comes with a variety of features.</p>
+                <p><a href="#">Take a look &rarr;</a></p>
+            </div>
+            <div class="ao-preview">
+                <input type="checkbox" id="ao-toggle" class="ao-toggle" name="ao-toggle"/>
+                <img src="images/Anariel_BlentonTemplate.jpg" alt="image01"/>
+                <div class="ao-annotations">
+                    <span>Full Localisation Support</span>
+                    <span>Custom Image Widget</span>
+                    <span>Blog and Contact Widgets</span>
+                    <span>Easy Theme Options</span>
+                    <span>4 Footer Widget Columns</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ao-item ao-item-left">
+            <div class="ao-details">
+                <h2>Blenton is elegant</h2>
+                <p>The design of Blenton makes a great match with a portfolio. It comes with many features like full
+                    localisation support and easy theme options.</p>
+                <p><a href="#">find more &rarr;</a></p>
+            </div>
+            <div class="ao-preview">
+                <input type="checkbox" id="ao-toggle" class="ao-toggle" name="ao-toggle"/>
+                <img src="images/Anariel_UnixTemplate.jpg" alt="image02"/>
+                <div class="ao-annotations">
+                    <span>Easy Logo Upload</span>
+                    <span>Custom Post Portfolio</span>
+                    <span>Custom Background Color and Pattern</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+</body>
+</html>
