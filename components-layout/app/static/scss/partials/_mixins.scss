@@ -69,6 +69,20 @@
   }
 }
 
+
+// 两个兼容
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin transition($transition) {
+  transform: $transition;
+}
+
 // color tint and shade
 
 @function shade(
@@ -85,3 +99,5 @@
 
   @return mix(#fff, $color, $percent);
 }
+
+

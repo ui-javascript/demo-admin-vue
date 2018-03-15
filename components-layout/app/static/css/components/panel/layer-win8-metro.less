@@ -1,19 +1,21 @@
-ol, ul {
-    list-style: none
-}
+.layer-win7 {
 
-body, html {
+  ol, ul {
+    list-style: none
+  }
+
+  body, html {
     padding: 0;
     margin: 0;
     overflow-y: hidden;
-}
+  }
 
-.metro {
+  .metro {
     width: 630px;
     margin: 0 auto 0;
-}
+  }
 
-.metro li {
+  .metro li {
     -webkit-transform: perspective(600px);
     -webkit-transform-style: preserve-3d;
     -webkit-transform-origin-x: 50%;
@@ -38,86 +40,86 @@ body, html {
     -ms-transition: .2s -ms-transform, 1s opacity;
     transition: .2s transform, 1s opacity;
     cursor: pointer;
-}
+  }
 
-.metro li i {
+  .metro li i {
     font-size: 54px;
     margin: 35px 0 0;
-}
+  }
 
-.metro li span {
+  .metro li span {
     color: rgba(255, 255, 255, 0.8);
     text-transform: uppercase;
     position: absolute;
     left: 15px;
     bottom: 15px;
     font-size: 14px;
-}
+  }
 
-.metro li:first-child {
+  .metro li:first-child {
     background: #00b6de;
-}
+  }
 
-.metro li:nth-child(2) {
+  .metro li:nth-child(2) {
     background: #56dea7;
     width: 310px;
-}
+  }
 
-.metro li:nth-child(3) {
+  .metro li:nth-child(3) {
     background: #ff7659;
     margin: 0;
-}
+  }
 
-.metro li:nth-child(4) {
+  .metro li:nth-child(4) {
     background: #f8cd36;
-}
+  }
 
-.metro li:nth-child(5) {
+  .metro li:nth-child(5) {
     background: #f26175;
-}
+  }
 
-.metro li:nth-child(6) {
+  .metro li:nth-child(6) {
     background: #5ca7df;
-}
+  }
 
-.metro li:last-child {
+  .metro li:last-child {
     background: #9e7ac2;
     margin: 0;
-}
+  }
 
-.metro li:nth-child(5):active, .metro li:first-child:active {
+  .metro li:nth-child(5):active, .metro li:first-child:active {
     -webkit-transform: scale(0.95);
     -ms-transform: scale(0.95);
     transform: scale(0.95);
-}
+  }
 
-.metro li:nth-child(7):active, .metro li:nth-child(2):active {
+  .metro li:nth-child(7):active, .metro li:nth-child(2):active {
     -webkit-transform: perspective(600px) rotate3d(1, 0, 0, -10deg);
     -ms-transform: perspective(600px) rotate3d(1, 0, 0, -10deg);
     transform: perspective(600px) rotate3d(1, 0, 0, -10deg);
-}
+  }
 
-.metro li:nth-child(3):active {
+  .metro li:nth-child(3):active {
     -webkit-transform: perspective(600px) rotate3d(0, 1, 0, 10deg);
     -ms-transform: perspective(600px) rotate3d(0, 1, 0, 10deg);
     transform: perspective(600px) rotate3d(0, 1, 0, 10deg);
-}
+  }
 
-.metro li:nth-child(4):active {
+  .metro li:nth-child(4):active {
     -webkit-transform: perspective(600px) rotate3d(0, 1, 0, -10deg);
     -ms-transform: perspective(600px) rotate3d(0, 1, 0, -10deg);
     transform: perspective(600px) rotate3d(0, 1, 0, -10deg);
-}
+  }
 
-.metro li:nth-child(6):active {
+  .metro li:nth-child(6):active {
     -webkit-transform: perspective(600px) rotate3d(1, 0, 0, 10deg);
     -ms-transform: perspective(600px) rotate3d(1, 0, 0, 10deg);
     transform: perspective(600px) rotate3d(1, 0, 0, 10deg);
-}
+  }
 
-/* POPUP */
+  /* POPUP */
 
-.box {
+  .box {
     display: table;
     top: 0;
     visibility: hidden;
@@ -132,9 +134,9 @@ body, html {
     height: 100%;
     opacity: 0;
     transition: 1s all;
-}
+  }
 
-.box p {
+  .box p {
     display: table-cell;
     vertical-align: middle;
     font-size: 64px;
@@ -146,15 +148,15 @@ body, html {
     -webkit-transition-delay: 0.2s;
     -ms-transition-delay: 0.2s;
     transition-delay: 0.2s;
-}
+  }
 
-.box p i {
+  .box p i {
     font-size: 128px;
     margin: 0 0 20px;
     display: block;
-}
+  }
 
-.box .close {
+  .box .close {
     display: block;
     cursor: pointer;
     border: 3px solid rgba(255, 255, 255, 1);
@@ -170,13 +172,13 @@ body, html {
     -ms-transition-delay: 0.2s;
     transition-delay: 0.2s;
     opacity: 0;
-}
+  }
 
-.box .close:active {
+  .box .close:active {
     top: 51px;
-}
+  }
 
-.box .close::before {
+  .box .close::before {
     content: "";
     display: block;
     position: absolute;
@@ -185,9 +187,9 @@ body, html {
     height: 6%;
     left: 10%;
     top: 47%;
-}
+  }
 
-.box .close::after {
+  .box .close::after {
     content: "";
     display: block;
     position: absolute;
@@ -196,9 +198,9 @@ body, html {
     height: 80%;
     left: 47%;
     top: 10%;
-}
+  }
 
-.box.open {
+  .box.open {
     left: 0;
     top: 0;
     visibility: visible;
@@ -209,8 +211,9 @@ body, html {
     transform: perspective(1200px) rotateY(0deg) scale(1);
     width: 100%;
     height: 100%;
-}
+  }
 
-.box.open .close, .box.open p {
+  .box.open .close, .box.open p {
     opacity: 1;
+  }
 }
