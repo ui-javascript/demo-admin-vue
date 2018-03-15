@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/default.css"/>
     <link rel="stylesheet" href="css/component.css"/>
-    <script src="js/modernizr.custom.js"></script>
+    <script src="https://cdn.bootcss.com/modernizr/2.6.1/modernizr.min.js"></script>
 </head>
 <body>
-<div class="container demo-2">
+<div class="container demo-1">
     <div id="gt-grid-selector" class="gt-grid-control">
         <span class="gt-grid-icon"></span>
         <div class="gt-grid-select">
@@ -48,9 +48,8 @@
         <div><h3>wakame</h3></div>
         <div><h3>lettuce water</h3></div>
         <div><h3>turnip maize</h3></div>
-        <div class="special"><h3><a href="index.html">Demo 1: No transitions(点击我！)</a></h3></div>
-        <div class="special"><h3><a class="current-demo" href="index2.html">Demo 2: Grid transitions(点击我！)</a></h3>
-        </div>
+        <div class="special"><h3><a class="current-demo" href="index.html">Demo 1: No transitions(点击我！)</a></h3></div>
+        <div class="special"><h3><a href="index2.html">Demo 2: Grid transitions(点击我！)</a></h3></div>
         <div class="special"><h3><a href="index3.html">Demo 3: Delayed transitions(点击我！)</a></h3></div>
         <div><h3>bunya nuts</h3></div>
         <div><h3>celery</h3></div>
@@ -73,13 +72,11 @@
 
 </div><!-- /container -->
 <!-- classie.js by @desandro: https://github.com/desandro/classie -->
-<script src="js/classie.js"></script>
+<script src="https://cdn.staticfile.org/classie/1.0.1/classie.min.js"></script>
 <script src="js/gridSelector.js"></script>
 <script src="js/grid.js"></script>
 <script>
-    Grid.init({
-        transition: true
-    });
+    Grid.init();
 </script>
 </body>
 </html>

@@ -2,7 +2,6 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <base href="../../../static/"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery垂直新闻滚动代码DEMO演示</title>
@@ -10,10 +9,35 @@
     <!--<link rel="stylesheet" href="css/default.css">-->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/components/layout/scroll.css" rel="stylesheet"/>
     <!--[if IE]>
     <script src="https://cdn.staticfile.org/html5shiv/3.7/html5shiv.min.js"></script>
     <![endif]-->
+
+    <style>
+        .glyphicon {
+            margin-right: 4px !important; /*override*/
+        }
+
+        .pagination .glyphicon {
+            margin-right: 0px !important; /*override*/
+        }
+
+        .pagination a {
+            color: #555;
+        }
+
+        .panel ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        .news-item {
+            padding: 4px 4px;
+            margin: 0px;
+            border-bottom: 1px dotted #555;
+        }
+    </style>
 </head>
 <body>
 <div class="htmleaf-container">
@@ -31,7 +55,7 @@
                                     <li class="news-item">
                                         <table cellpadding="4">
                                             <tr>
-                                                <td><img src="images/scroll-news/1.png" width="60" class="img-circle"/></td>
+                                                <td><img src="../../../static/images/scroll-news/1.png" width="60" class="img-circle"/></td>
                                                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
                                                     venenatis enim... <a href="#">Read more...</a></td>
                                             </tr>
@@ -40,7 +64,7 @@
                                     <li class="news-item">
                                         <table cellpadding="4">
                                             <tr>
-                                                <td><img src="images/scroll-news/2.png" width="60" class="img-circle"/></td>
+                                                <td><img src="../../../static/images/scroll-news/2.png" width="60" class="img-circle"/></td>
                                                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
                                                     venenatis enim... <a href="#">Read more...</a></td>
                                             </tr>
@@ -49,7 +73,7 @@
                                     <li class="news-item">
                                         <table cellpadding="4">
                                             <tr>
-                                                <td><img src="images/scroll-news/3.png" width="60" class="img-circle"/></td>
+                                                <td><img src="../../../static/images/scroll-news/3.png" width="60" class="img-circle"/></td>
                                                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
                                                     venenatis enim... <a href="#">Read more...</a></td>
                                             </tr>
@@ -58,7 +82,7 @@
                                     <li class="news-item">
                                         <table cellpadding="4">
                                             <tr>
-                                                <td><img src="images/scroll-news/4.png" width="60" class="img-circle"/></td>
+                                                <td><img src="../../../static/images/scroll-news/4.png" width="60" class="img-circle"/></td>
                                                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
                                                     venenatis enim... <a href="#">Read more...</a></td>
                                             </tr>
@@ -67,7 +91,7 @@
                                     <li class="news-item">
                                         <table cellpadding="4">
                                             <tr>
-                                                <td><img src="images/scroll-news/5.png" width="60" class="img-circle"/></td>
+                                                <td><img src="../../../static/images/scroll-news/5.png" width="60" class="img-circle"/></td>
                                                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
                                                     venenatis enim... <a href="#">Read more...</a></td>
                                             </tr>
@@ -76,7 +100,7 @@
                                     <li class="news-item">
                                         <table cellpadding="4">
                                             <tr>
-                                                <td><img src="images/scroll-news/6.png" width="60" class="img-circle"/></td>
+                                                <td><img src="../../../static/images/scroll-news/6.png" width="60" class="img-circle"/></td>
                                                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
                                                     venenatis enim... <a href="#">Read more...</a></td>
                                             </tr>
@@ -85,7 +109,7 @@
                                     <li class="news-item">
                                         <table cellpadding="4">
                                             <tr>
-                                                <td><img src="images/scroll-news/7.png" width="60" class="img-circle"/></td>
+                                                <td><img src="../../../static/images/scroll-news/7.png" width="60" class="img-circle"/></td>
                                                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
                                                     venenatis enim... <a href="#">Read more...</a></td>
                                             </tr>
@@ -180,7 +204,7 @@
 </div>
 
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="plus/jquery/jquery.bootstrap.newsbox.min.js"></script>
+<script src="../../../static/plus/jquery/jquery.bootstrap.newsbox.min.js"></script>
 <script>
     $(function () {
         $(".demo1").bootstrapNews({
