@@ -1,6 +1,4 @@
-body {
-  font-family: 'Architects Daughter', sans-serif;
-}
+
 
 #paper-back {
   width: 100%;
@@ -21,6 +19,7 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 
+
 #paper-window {
   height: 100vh;
   width: 100vw;
@@ -34,7 +33,6 @@ body {
   pointer-events: none;
 }
 #paper-window.tilt #paper-front {
-  -webkit-transform: rotate(10deg) translateZ(0);
           transform: rotate(10deg) translateZ(0);
 }
 
@@ -44,10 +42,7 @@ body {
   z-index: 3;
   background-color: white;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-  -webkit-transform-origin: center 70%;
-      -ms-transform-origin: center 70%;
           transform-origin: center 70%;
-  -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease;
 }
 
@@ -87,9 +82,6 @@ body {
   width: 45px;
   height: 34px;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .hamburger span {
@@ -135,12 +127,8 @@ body {
   border-radius: 2px;
 }
 .close:before {
-  -webkit-transform: translateY(-50%) rotate(45deg);
-      -ms-transform: translateY(-50%) rotate(45deg);
           transform: translateY(-50%) rotate(45deg);
 }
 .close:after {
-  -webkit-transform: translateY(-50%) rotate(-45deg);
-      -ms-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
 }

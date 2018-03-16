@@ -1,31 +1,38 @@
 // 引入插件
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const webpack = require('webpack')
-// 多入口管理文件
-const entryJSON = require('../config/entry.json');
+
 // less的全局变量
 const globalLessVars = require('../src/common/global_less_vars')
+
+// 路径
 const path = require('path')
 
-// 因为多入口，所以要多个HtmlWebpackPlugin，每个只能管一个入口
+// 多入口管理文件
+const entryJSON = require('../config/entry.json');
+
+
+
+// 因为多入口，所以要多个HtmlWebpackPlugin
 let plugins = entryJSON.map(page => {
     return new HtmlWebpackPlugin({
         filename: path.resolve(__dirname, `../dist/${page.url}.html`),
         template: path.resolve(__dirname, `../src/page/${page.url}/index.html`),
+
         chunks: [page.url, 'foo'], // 实现多入口的核心，决定自己加载哪个js文件，这里的 page.url 指的是 entry 对象的 key 所对应的入口打包出来的js文件
-        hash: true, // 为静态资源生成hash值
-        minify: false,   // 压缩，如果启用这个的话，需要使用html-minifier，不然会直接报错
+
+        hash: true, // 生成hash值
+        minify: false,   // 需要使用html-minifier，不然会报错
         xhtml: true,    // 自闭标签
     })
 })
 
 // 入口管理
-let entry = {
-    // 引入jQuery，这个是为了配合 webpack.optimize.CommonsChunkPlugin 这个插件使用。
-}
-
+// 引入jQuery，
+// 这个是为了配合 webpack.optimize.CommonsChunkPlugin 这个插件使用
+let entry = {}
 entryJSON.map(page => {
     entry[page.url] = path.resolve(__dirname, `../src/page/${page.url}/index.js`)
 })
@@ -33,21 +40,23 @@ entryJSON.map(page => {
 module.exports = {
     // 入口文件
     entry: entry,
+
     // 出口文件
     output: {
         path: __dirname + '/../dist',
-        // 文件名，将打包好的导出为bundle.js
         filename: '[name].[chunkhash].js'
     },
     module: {
-        // loader放在rules这个数组里面
+
         rules: [
+            // JS
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                // 写法一
                 loader: 'babel-loader'
             },
+
+            // CSS
             {
                 test: /\.css$/,
                 use: [
@@ -62,11 +71,11 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            root: path.resolve(__dirname, '../src/static'),   // url里，以 / 开头的路径，去找src/static文件夹
-                            minimize: true, // 压缩css代码
-                            // sourceMap: true,    // sourceMap，默认关闭
+                            root: path.resolve(__dirname, '../src/static'),
+                            minimize: true,
+                            // sourceMap: true, // 默认关闭
                             alias: {
-                                '@': path.resolve(__dirname, '../src/img') // '~@/logo.png' 这种写法，会去找src/img/logo.png这个文件
+                                '@': path.resolve(__dirname, '../src/img') // '~@/logo.png' -> src/img/logo.png
                             }
                         }
                     },
@@ -80,13 +89,15 @@ module.exports = {
                         }
                     },
                     {
-                        loader: 'less-loader',   // compiles Less to CSS
+                        loader: 'less-loader',
                         options: {
                             globalVars: globalLessVars
                         }
                     }
                 ]
             },
+
+            // HTML + IMG
             {
                 test: /\.(png|jpg|jpe?g|gif|svg)$/,
                 use: [
@@ -112,7 +123,7 @@ module.exports = {
             }
         ]
     },
-    // 将插件添加到webpack中
+
     // 如果还有其他插件，将两个数组合到一起就行了
     plugins: ([
         new CleanWebpackPlugin(path.resolve(__dirname, '../dist'), {
