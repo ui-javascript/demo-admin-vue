@@ -35,36 +35,36 @@
 
 })(window, document, $);
 
-(function ($) {
-
-    var methods = {
-        init: function (options) {
-
-        },
-
-        destroy: function () {
-            console.log("hello");
-        }
-    }
-
-    $.fn.firefly2 = function (method) {
-        debugger
-        // var settings = $.extend({
-        //   'location': 'top',
-        //   'background-color': 'blue'
-        // }, options);
-        //
-
-        // Method calling logic
-        if (methods[method] && method.charAt(0) !== '_') {
-            debugger
-            console.log('asd')
-            return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-        } else if (typeof method === 'object' || !method) {
-            return methods.init.apply(this, arguments);
-        } else {
-            $.error('Method ' + method + ' does not exist on jQuery.firefly');
-        }
-    }
-
-})(jQuery);
+// (function ($) {
+//
+//     var methods = {
+//         init: function (options) {
+//
+//         },
+//
+//         destroy: function () {
+//             console.log("hello");
+//         }
+//     }
+//
+//     $.fn.firefly2 = function (method) {
+//         debugger
+//         // var settings = $.extend({
+//         //   'location': 'top',
+//         //   'background-color': 'blue'
+//         // }, options);
+//         //
+//
+//         // Method calling logic
+//         if (methods[method] && method.charAt(0) !== '_') {
+//             debugger
+//             console.log('asd')
+//             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+//         } else if (typeof method === 'object' || !method) {
+//             return methods.init.apply(this, arguments);
+//         } else {
+//             $.error('Method ' + method + ' does not exist on jQuery.firefly');
+//         }
+//     }
+//
+// })(jQuery);
