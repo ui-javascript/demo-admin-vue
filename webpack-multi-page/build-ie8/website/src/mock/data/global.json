@@ -1,0 +1,11 @@
+{
+  "head": {
+    "title": "title for website",
+    "keywords": "keyword1,keyword2",
+    "description": "description for website"
+  },
+  "global": {
+    "company": "some company",
+    "domain": "company.cn"
+  }
+}
