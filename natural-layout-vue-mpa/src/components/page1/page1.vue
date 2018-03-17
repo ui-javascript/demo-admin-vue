@@ -1,7 +1,10 @@
 <template>
   <div>
-    我是页面page1</div>
+    我是页面page1
+  </div>
 </template>
+
+
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
@@ -19,5 +22,8 @@ export default {
   }
 }
 </script>
-<style lang="stylus" scoped>
+
+
+<style scoped>
+
 </style>
