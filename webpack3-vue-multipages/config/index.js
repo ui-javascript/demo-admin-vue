@@ -30,6 +30,8 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    // mock模拟 允许跨域
+    // 届时替换真实IP
     proxyTable: {
       '/api': {
         target: 'http://127.0.0.1:9999',

@@ -8,7 +8,7 @@ export default {
   name: 'vfooter',
   data() {
     return {
-      text: '我是底部'
+      text: '我是底部2222ss'
     }
   }
 }
