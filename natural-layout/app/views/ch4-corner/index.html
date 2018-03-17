@@ -4,21 +4,67 @@
 <head>
     <meta charset="utf-8">
     <title>萤火虫</title>
-    <link rel="stylesheet" href="../static/css/utilities/_reset.css">
-    <link rel="stylesheet" href="../static/css/utilities/_global.css">
     <link rel='stylesheet prefetch'
           href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
     <link rel='stylesheet prefetch' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
-    <link rel="stylesheet" href="../static/css/components/button/_button.css">
-    <link rel="stylesheet" href="../static/css/components/button/button-draggable.css">
-    <link rel="stylesheet" href="../static/css/components/nav/menu-holder.css">
 
-    <link rel="stylesheet" href="../static/css/animate/expand.css">
-    <link rel="stylesheet" href="../static/css/theme/animal/firefly.css">
-    <link rel="stylesheet" href="../static/css/theme/animal/bird.css">
-    <link rel="stylesheet" href="../static/css/theme/plane.css">
+    <link rel="stylesheet" href="../../static/css/theme/natural/_output.css">
+    <link rel="stylesheet" href="../../static/scss/components/plane/plane.css">
 
     <style>
+
+        html {
+            font-size: 62.5%;
+            overflow: hidden;
+        }
+
+
+        * {
+            padding: 0;
+            margin: 0;
+
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            box-sizing: inherit;
+        }
+
+        *::after,
+        *::before {
+            box-sizing: inherit;
+        }
+
+
+        .yellow {
+            background: #ffa000;
+        }
+
+        .blue {
+            background: #40c4ff;
+        }
+
+        .green {
+            background: #00e676;
+        }
+
+        .purple {
+            background: #8e24aa;
+        }
+
+        .pink {
+            background: #e91e63;
+        }
+
+        body {
+            height: 100%;
+            background: #09243a;
+
+            margin: 0px;
+            padding: 0px;
+
+            font-size: 14px;
+            color: #000;
+        }
+
         .ice-expand {
             margin-top: 400px;
         }
@@ -27,8 +73,6 @@
             margin-top: 140px;
         }
     </style>
-
-
 
 
 </head>
@@ -141,14 +185,14 @@
 </div>
 
 
-
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="../static/scripts/corner/firefly.js"></script>
-<script src="../static/scripts/corner/plane.js"></script>
-<script src="../static/scripts/animate/anime.js"></script>
 
-<script src="../static/scripts/components/button/btn-draggable.js"></script>
+<script src="../../static/js/corner/firefly.js"></script>
+<script src="../../static/js/corner/plane.js"></script>
+<script src="../../static/js/animate/anime.js"></script>
+
+<script src="../../static/js/button/btn-draggable.js"></script>
 
 <script>
     firefly('#ice_firefly');
