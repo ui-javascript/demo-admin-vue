@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">
+
+    <!--<p><input type="text" ng-model="num" ng-blur='convert()' />的16进制是: <input type="text" ng-model="hex" /> </p>-->
+    <p><input type="text" ng-model="num" ng-blur='convert()' />的16进制是: <input type="text" ng-model="hex" /> </p>
+  </div>
+
+
+  <script>
+    var app = angular.module('myApp', []);
+
+    // 自定义
+    app.service('hexafy', function () {
+      this.myFunc = function (x) {
+        return x.toString(16);
+      }
+    });
+
+    // 调用服务
+    // 怎么做到数据互相转换, 先不考虑格式检查
+    app.controller('myCtrl', function ($scope, hexafy) {
+        $scope.num = 255;
+        $scope.hex = hexafy.myFunc($scope.num);
+    });
+  </script>
+
+</body>
+
+</html>

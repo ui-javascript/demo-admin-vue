@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+
+  <form ng-app="" name="myForm" ng-init="myText = 'test@runoob.com'">
+
+    Email:
+    <input type="email" name="myAddress" ng-model="myText" required>
+    <p>Valid: {{myForm.myAddress.$valid}} </p>
+    <p>Dirty: {{myForm.myAddress.$dirty}}</p>
+    <p>Touched: {{myForm.myAddress.$touched}} (触屏点击)</p>
+
+  </form>
+
+</body>
+
+</html>

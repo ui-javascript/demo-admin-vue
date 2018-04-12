@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+
+  <div ng-app="myApp" ng-controller="myCtrl">
+
+    <button ng-click="toggle()">点我！</button>
+    <br>
+
+    <div ng-hide="myVar">
+      <input type="text" ng-model="firstName" placeholder="姓"><br>
+      <input type="text" ng-model="lastName"  placeholder="名"><br>
+      <p>姓名: {{firstName + " " + lastName}}</p>
+      <p>点击次数: {{ count }}</p>
+    </div>
+
+  </div>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+      $scope.count = 0;
+      $scope.firstName = "John",
+        $scope.lastName = "Doe"
+      $scope.myVar = false;
+      $scope.toggle = function () {
+        $scope.count = $scope.count + 1
+        $scope.myVar = !$scope.myVar;
+      };
+    });
+  </script>
+
+</body>
+
+</html>

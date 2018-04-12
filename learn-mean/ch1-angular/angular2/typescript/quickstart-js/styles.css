@@ -1,0 +1,18 @@
+/**
+* @Author: 骆金参
+* @Date:   2017-03-24T23:18:17+08:00
+* @Email:  1095947440@qq.com
+* @Filename: style.css
+* @Last modified by:   骆金参
+* @Last modified time: 2017-03-24T23:23:15+08:00
+*/
+
+
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}\
+body {
+  margin: 2em;
+}

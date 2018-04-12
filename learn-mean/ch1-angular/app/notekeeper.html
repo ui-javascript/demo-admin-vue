@@ -1,0 +1,55 @@
+<html ng-app="myNoteApp">
+
+<head>
+  <meta charset="utf-8">
+  <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+
+  <div ng-controller="myNoteCtrl">
+    <h2>MyNote</h2>
+
+    <div>
+      <textarea ng-model="message" cols="40" rows="10"></textarea>
+    </div>
+
+    <div>
+      <button ng-click="save()">保存</button>
+      <button ng-click="clear()">清除</button>
+    </div>
+
+    <div class="">
+      <p>剩余字数: <span ng-bind="left()"></span></p>
+    </div>
+
+  </div>
+
+  <script>
+    var app = angular.module("myNoteApp", []);
+    app.controller("myNoteCtrl", function($scope) {
+       // 初始化
+      $scope.message = window.localStorage['message'];
+
+      // 剩余字数
+      $scope.left = function() {
+        return 100 - $scope.message.length;
+      };
+
+      // 清楚
+      $scope.clear = function() {
+        $scope.message = "";
+        window.localStorage['message'] = "";
+      };
+
+      // 保存
+      $scope.save = function() {
+        window.localStorage['message'] = $scope.message;
+      };
+      
+    });
+  </script>
+
+</body>
+
+</html>

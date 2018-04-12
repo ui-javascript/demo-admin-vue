@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<link href="css/style.css" rel="stylesheet">-->
+</head>
+
+<!-- 但是ng-init是不常用的 -->
+<body ng-app="" ng-init="name='w3c';quantity=1;cost=5"><!-- 保持为空 -->
+	<input type="text" name="name" ng-model="name" />
+	<h2>welcome to {{ name }}</h2>
+	<h2 data-ng-bind="name"></h2>
+	<h2>5+5 = {{ 5 + 5 }}</h2>
+	<h2 ng-bind="quantity*cost"></h2>
+
+	<script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</body>
+
+</html>

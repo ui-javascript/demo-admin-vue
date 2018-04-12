@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+
+<body ng-app="myApp">
+
+  <div ng-include="'http://c.runoob.com/runoobtest/angular_include.php'"></div>
+
+  <script>
+    var app = angular.module('myApp', [])
+    app.config(function ($sceDelegateProvider) {
+      $sceDelegateProvider.resourceUrlWhitelist([
+        'http://c.runoob.com/runoobtest/**'
+      ]);
+    });
+  </script>
+
+</body>
+
+</html>

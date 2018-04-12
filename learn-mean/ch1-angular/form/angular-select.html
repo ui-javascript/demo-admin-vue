@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+
+  <div ng-app="myApp" ng-controller="myCtrl">
+
+    <!--ng-init中设置默认选项 -->
+    <!--使用 ng-options 的选项的一个对象(更优) ng-repeat 是一个字符串-->
+    <select ng-init="selectedName = names[1]" ng-model="selectedName" ng-options="x for x in names">
+    </select>
+
+    <!-- ng-repeat实现 -->
+    <select>
+      <option ng-model="selectedName" ng-repeat="x in names">{{x}}</option>
+      <!-- error? -->
+    </select>
+
+    <select ng-model="selectedCar" ng-options="x for (x, y) in cars">
+    </select>
+
+    <h1>你选择的是: {{selectedCar.brand}}</h1>
+    <h2>模型: {{selectedCar.model}}</h2>
+    <h3>颜色: {{selectedCar.color}}</h3>
+
+  </div>
+
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+      $scope.names = ["Google", "Runoob", "Taobao"];
+      $scope.cars = {
+        car01: {
+          brand: "Ford",
+          model: "Mustang",
+          color: "red"
+        },
+        car02: {
+          brand: "Fiat",
+          model: "500",
+          color: "white"
+        },
+        car03: {
+          brand: "Volvo",
+          model: "XC90",
+          color: "black"
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
