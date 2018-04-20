@@ -1,0 +1,28 @@
+@import '~bootstrap/less/variables';
+@ane-prefix: ane;
+
+// 这里覆盖 bootstrap 默认变量
+
+//** Disabled state
+@disabled-color:        lighten(@gray-base, 70%);
+
+//** The background colors for active and hover states for things like
+//** list items or table cells.
+@item-active-bg:        @brand-primary;
+@item-hover-bg:         lighten(@brand-primary, 40%);
+
+//== Calendar
+//
+//##
+
+//** Disabled date
+@calendar-disabled-date-color:   @disabled-color;
+@calendar-disabled-date-bg:      @gray-lighter;
+
+//= Menu
+//
+//##
+
+//** Selected
+@menu-item-selected-border-color:   @brand-primary;
+@menu-item-selected-bg: lighten(@brand-primary, 50%);

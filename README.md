@@ -51,3 +51,8 @@ file>settings>Lauguages & Frameworks>javascript
 - https://github.com/css-modules/webpack-demo
 - https://www.jianshu.com/p/63eacd66eb50du
 - https://github.com/rt-zhangxuefei/vue-project-multipages-template
+
+
+# IE8
+
+- 两个Avalon貌似已经唧唧...
