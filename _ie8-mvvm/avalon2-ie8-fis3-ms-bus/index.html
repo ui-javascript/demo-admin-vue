@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bus Admin</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="./node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="./node_modules/ane/dist/layout.css" rel="stylesheet" />
+    <link href="./node_modules/ane/dist/ane.css" rel="stylesheet" />
+    <style>
+        .ms-controller,xmp {
+            visibility: hidden;
+        }
+    </style>
+    <script src="./static/mod.js"></script>
+</head>
+<body :controller="root">
+    <xmp is="ms-layout">
+        <ms-layout-header :widget="{fixed:true}">
+            <h3>MS-BUS SPA 脚手架</h3>
+        </ms-layout-header>
+        <ms-layout-footer :widget="{fixed:true}">
+            <div class="text-center" style="line-height: 30px;">
+                <a href="https://github.com/xxapp/ms-bus" target="_blank">Github 仓库地址</a>
+            </div>
+        </ms-layout-footer>
+        <ms-layout :widget="{style:{backgroundColor:'#ececec'}}">
+            <ms-layout-sider :widget="{fixed:true}">
+                <wbr is="common-sidebar"/>
+            </ms-layout-sider>
+            <ms-layout-content>
+                <ol class="breadcrumb">
+                    <li :for="($index,item) in @breadcrumb" :class="[($index===breadcrumb.length-1)?'active':'']">{{item.title}}</li>
+                </ol>
+                <div class="ane-layout-content-wrapper">
+                    <div ms-html="@currentPage"></div>
+                </div>
+            </ms-layout-content>
+        </ms-layout>
+    </xmp>
+
+    <script>
+        require(['./index']);
+        document.body.style.height = document.body.style.minHeight = window.document.documentElement.clientHeight + 'px';
+    </script>
+</body>
+</html>

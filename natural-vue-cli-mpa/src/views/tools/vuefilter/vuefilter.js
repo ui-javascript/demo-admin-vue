@@ -1,7 +1,5 @@
-
 import Vue from 'vue'
 import App from './vuefilterApp'
-
 
 
 new Vue({
