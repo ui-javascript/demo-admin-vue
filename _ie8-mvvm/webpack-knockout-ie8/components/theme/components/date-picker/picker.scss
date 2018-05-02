@@ -1,0 +1,176 @@
+.k-date-editor {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+
+  &.k-input,
+  &.k-input__inner {
+    width: 220px;
+  }
+
+  &--daterange,
+  &--timerange {
+    &.k-input,
+    &.k-input__inner {
+      width: 320px;
+    }
+  }
+
+  &--datetimerange {
+    &.k-input,
+    &.k-input__inner {
+      width: 370px;
+    }
+  }
+
+  .k-range__icon {
+    font-size: 14px;
+    margin-left: -5px;
+    color: $input-icon-color;
+    float: left;
+  }
+
+  .k-range-input {
+    appearance: none;
+    border: none;
+    outline: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 38%;
+    text-align: center;
+    font-size: $size-normal;
+    color: $text;
+
+    &::placeholder {
+      color: $input-placeholder-color;
+    }
+  }
+
+  .k-range-separator {
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    color: $text;
+    font-size: 14px;
+    width: 5%;
+  }
+
+  &__close-icon {
+    font-size: 14px;
+    color: $input-placeholder-color;
+    width: 25px;
+    display: none;
+    float: right;
+    transition: none;
+    &:hover {
+      color: $text;
+    }
+  }
+
+  &:hover {
+    .k-date-editor__close-icon {
+      display: inline-block;
+    }
+  }
+}
+
+.k-range-editor {
+
+  &.is-active {
+    border-color: $primary;
+
+    &:hover {
+      border-color: $primary;
+    }
+  }
+
+  .k-date-editor__close-icon {
+    margin-right: -5px;
+  }
+
+  &--large {
+    &.k-input__inner {
+      height: $input-large-height;
+    }
+
+    .k-range-separator {
+      line-height: 28px;
+      font-size: $input-large-font-size;
+    }
+
+    .k-range-input {
+      font-size: $input-large-height;
+    }
+
+    .k-range__icon,
+    .k-range__close-icon {
+      line-height: 28px;
+    }
+  }
+
+  &--small {
+    &.k-input__inner {
+      height: $input-small-height;
+    }
+
+    .k-range-separator {
+      line-height: 24px;
+      font-size: $input-small-font-size;
+    }
+
+    .k-range-input {
+      font-size: $input-small-font-size;
+    }
+
+    .k-range__icon,
+    .k-range__close-icon {
+      line-height: 24px;
+    }
+  }
+
+  &--tiny {
+    &.k-input__inner {
+      height: $input-tiny-height;
+    }
+
+    .k-range-separator {
+      line-height: 20px;
+      font-size: $input-tiny-font-size;
+    }
+
+    .k-range-input {
+      font-size: $input-tiny-font-size;
+    }
+
+    .k-range__icon,
+    .k-range__close-icon {
+      line-height: 20px;
+    }
+  }
+
+  &.is-disabled {
+    //background-color: $input-disabled-fill;
+    //border-color: $input-disabled-border;
+    //color: $input-disabled-color;
+    //cursor: not-allowed;
+    //
+    //&:hover, &:focus {
+    //  border-color: $input-disabled-border;
+    //}
+    //
+    //input {
+    //  background-color: $input-disabled-fill;
+    //  color: $input-disabled-color;
+    //  cursor: not-allowed;
+    //  &::placeholder {
+    //    color: $input-disabled-placeholder-color;
+    //  }
+    //}
+
+    .k-range-separator {
+      color: $input-disabled-color;
+    }
+  }
+}

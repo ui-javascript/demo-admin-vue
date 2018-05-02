@@ -1,0 +1,58 @@
+
+  <div class="k-pagination" data-bind="css: extraClazz">
+    <!-- ko if: showPager --><span data-bind="text:totalDesc" class="k-pagination__total"></span><!-- /ko -->
+
+    <!-- ko if: showSelect -->
+
+    <span class="k-pagination__sizes">
+    <!-- ko component: { name: 'k-select', params: { value: pageSize, adjust2Relative: false } } -->
+    <div data-bind="with: $parent" class="k-select">
+      <div class="k-input k-input--suffix">
+        <input placeholder="请选择" readonly="readonly" type="text" class="k-input__inner"> 
+        <span class="k-input__suffix"> 
+          <span class="k-input__suffix-inner"> 
+            <i class="k-input__icon k-select__caret fa fa-chevron-down"></i> 
+          </span> 
+        </span>
+      </div>
+      <div class="k-select-dropdown k-popper k-pagination-dropdown">
+        <ul data-bind="foreach: { data: pageSizes }" class="k-select-dropdown__list">
+          <li class="k-select-dropdown__item"
+              data-bind="attr: { 'data-value': $data, 'data-label': '每页 ' + $data + ' 条' }">
+              <span data-bind="text: '每页 ' + $data + ' 条'"></span>
+          </li>
+          <div class="k-popper__arrow"></div>
+        </ul>
+      </div>
+    </div>
+    <!-- /ko -->
+    </span>
+
+    <!-- /ko -->
+
+    <!-- ko if: showPre -->
+    <button data-bind="attr: { disabled: currentPage() === 1 }" type="button" class="btn-prev"><i
+      class="fa fa-angle-left"></i></button>
+    <!-- /ko -->
+
+    <!-- ko if: showPager --><!-- ko with: pager -->
+    <ul data-bind="foreach: { data: pages(), as: 'page' }" class="k-pager">
+      <li data-bind="text: page.pageNo, css: { 'is-active': page.active }" class="number"></li>
+    </ul>
+    <!-- /ko --><!-- /ko -->
+
+    <!-- ko if: showNext -->
+    <button data-bind="attr: { disabled: currentPage() === pager.pageCount() }" type="button"
+            class="btn-next"><i class="fa fa-angle-right"></i></button>
+    <!-- /ko -->
+
+    <!-- ko if: showJump -->
+    <span class="k-pagination__jump">
+      <span>前往</span>
+      <div class="k-input k-pagination__editor is-in-pagination">
+      <input data-bind="value: jumpPage" type="text" class="k-input__inner"></div>
+      <span>页</span>
+      <!--<a type="button" style="margin-left: 5px;" class="button-jump k-button is-light is-small">确定</a>-->
+    </span>
+    <!-- /ko -->
+  </div>

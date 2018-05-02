@@ -1,0 +1,14 @@
+
+<span class="k-breadcrumb__item">
+    <span class="k-breadcrumb__item__inner">
+      <!-- ko if:link  -->
+      <a data-bind="attr: { href: link, target: replace?'_self':'_blank' }">
+        <!-- ko template: { nodes: $componentTemplateNodes } --><!-- /ko -->
+      </a>
+      <!-- /ko -->
+      <!-- ko ifnot:link -->
+      <!-- ko template: { nodes: $componentTemplateNodes } --><!-- /ko -->
+      <!-- /ko -->
+    </span>
+  <span class="k-breadcrumb__separator" data-bind="text: $parent && $parent.separator"></span>
+</span>

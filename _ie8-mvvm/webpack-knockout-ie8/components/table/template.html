@@ -1,0 +1,45 @@
+
+  <table class="k-table">
+    <thead class="k-table__header">
+    <tr class="k-table__row">
+      <th data-bind="visible:showCheck" class="k-table__column k-table__check">
+        <div class="k-table__cell k-table__tc">
+          <label class="k-table__check-label">
+            <input data-bind="checked:checkAll" class="k-table__check-input" type="checkbox"/>
+          </label>
+        </div>
+      </th>
+      <!-- ko template:{ nodes: getComponentNodes($componentTemplateNodes, 'k-table-th')} --><!-- /ko -->
+    </tr>
+    </thead>
+
+    <tbody class="k-table__body" data-bind="foreach:{ data: list, as: 'row'}">
+    <tr class="k-table__row">
+      <td data-bind="visible:$parent.showCheck" class="k-table__column k-table__check">
+        <div class="k-table__cell k-table__tc">
+          <label class="k-table__check-label">
+            <input data-bind="checked:$parent.checkList,checkedValue:$index" class="k-table__check-input"
+                   type="checkbox"/>
+          </label>
+        </div>
+      </td>
+      <!-- ko template: { nodes: $parent.getComponentNodes($componentTemplateNodes, 'k-table-td')} --><!-- /ko -->
+    </tr>
+    </tbody>
+    <tfoot class="k-table__footer">
+    <tr class="k-table-row">
+      <td data-bind="visible:showCheck" class="k-table__column k-table__check">
+        <div class="k-table__cell k-table__tc">
+          <label class="k-table__check-label">
+            <input data-bind="checked:checkAll" class="k-table__check-input" type="checkbox"/>
+          </label>
+        </div>
+      </td>
+      <td data-bind="attr:{ colspan: colspan }" class="k-table__column">
+        <div class="k-table__cell">
+          <!-- ko template: { nodes: getSlotNodes($componentTemplateNodes,'slot-foot') } --><!-- /ko -->
+        </div>
+      </td>
+    </tr>
+    </tfoot>
+  </table>

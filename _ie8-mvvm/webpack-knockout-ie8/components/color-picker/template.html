@@ -1,0 +1,11 @@
+
+<div class="k-color-picker" data-bind="foreach: colors">
+  <div class="k-color"
+    data-bind="css: ('k-color--' + $data)
+    + (($index() + 1)%$parent.rowCount === 0 ? ' is-last-col' : '')
+    + ($index() >= ($parent.total - $parent.rowCount) ? ' is-last-row' : ''),
+    click: $parent.onItemClick"
+  >
+    <i class="fa fa-check k-color__check" data-bind="visible: $parent.value() === $data"></i>
+  </div>
+</div>

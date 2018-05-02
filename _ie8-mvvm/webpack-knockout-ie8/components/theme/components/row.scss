@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+$context: '.k-row';
+
+#{$context} {
+  @include clearfix;
+  position: relative;
+  box-sizing: border-box;
+}
+

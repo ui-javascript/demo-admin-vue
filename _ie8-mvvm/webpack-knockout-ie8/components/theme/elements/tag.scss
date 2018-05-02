@@ -1,0 +1,146 @@
+$tag-background-color: $background;
+$tag-color: $text;
+$tag-invert-color: $text-invert;
+$tag-padding: 0 .75em;
+$tag-line-height: 2;
+$tag-height: 2em;
+$tag-radius: 3px;
+$tag-font-size: $size-small;
+
+$tag-close-size: 18px;
+$tag-close-font-size: 16px;
+$tag-close-line-height: 14px;
+$tag-close-margin-left: 4px;
+$tag-close-margin-right: -.3em;
+
+$tags-gap: 5px;
+
+.k-tag {
+  display: inline-block;
+  padding: $tag-padding;
+  border-radius: $tag-radius;
+  white-space: nowrap;
+  font-size: $tag-font-size;
+  height: $tag-height;
+  line-height: $tag-line-height;
+  color: $tag-color;
+  background-color: $tag-background-color;
+
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name} {
+      background-color: $color;
+      color: $color-invert;
+
+      .k-tag__close {
+        color: $color-invert;
+
+        &:hover {
+          color: $color;
+          background-color: $color-invert;
+        }
+        &:active{
+          background-color: darken($color-invert, 10%)
+        }
+      }
+    }
+  }
+
+  &.is-tiny {
+    font-size: $size-tiny;
+    line-height: $tag-line-height - 0.3;
+    height: $tag-height - 0.3em;
+
+    .k-tag__close {
+      width: $tag-close-size - 4;
+      height: $tag-close-size - 4;
+      line-height: $tag-close-line-height - 4;
+    }
+  }
+
+  &.is-small {
+    font-size: $size-tiny;
+
+    .k-tag__close {
+      width: $tag-close-size - 2;
+      height: $tag-close-size - 2;
+      line-height: $tag-close-line-height - 2;
+    }
+  }
+
+  &.is-medium {
+    font-size: $size-normal;
+  }
+
+  &.is-large {
+    font-size: $size-medium;
+  }
+
+  &__close {
+    @include unselectable;
+    cursor: pointer;
+    margin-left: $tag-close-margin-left;
+    border-radius: 50%;
+    text-align: center;
+    color: $tag-color;
+    display: inline-block;
+    line-height: $tag-close-line-height;
+    font-size: $tag-close-font-size;
+    height: $tag-close-size;
+    width: $tag-close-size;
+    margin-right: $tag-close-margin-right;
+
+    &:hover {
+      color: $tag-invert-color;
+      background-color: $tag-color;
+    }
+
+    &:active{
+     background-color: darken($tag-color, 10%)
+    }
+  }
+}
+
+.k-tags {
+  .k-tag:first-child,
+  .k-tag ~ .k-tag {
+    margin-right: $tags-gap;
+    margin-bottom: $tags-gap;
+  }
+
+  &.has-addons{
+    @include clearfix;
+    display: inline-block;
+    // ie8 如果没有 margin-right: 1px 嵌套在 float的元素中（例如 k-col）时会重叠...
+    margin-right: 1px;
+
+    .k-tag {
+      float: left;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    .k-tag:first-child {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .k-tag ~ .k-tag {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .is-close {
+      @include unselectable;
+
+      &:hover,
+      &:focus {
+        background-color: darken($tag-background-color, 5%)
+      }
+      &:active{
+       background-color: darken($tag-background-color, 10%)
+      }
+    }
+  }
+}

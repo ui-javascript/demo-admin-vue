@@ -1,0 +1,43 @@
+@charset "UTF-8";
+$context: '.k-breadcrumb';
+
+#{$context} {
+  @include clearfix;
+  line-height: 1;
+  &__separator {
+    margin: 0 8px;
+    color: $grey-light;
+  }
+  &__item {
+    float: left;
+    &, & a {
+      color: $text;
+      transition: color .15s linear;
+      &:hover {
+        color: $primary;
+        cursor: pointer;
+      }
+    }
+
+    &.is-leaf {
+      &, & a {
+        &, &:hover {
+          color: $text-light;
+          cursor: text;
+
+        }
+      }
+
+      #{$context}__separator {
+        display: none;
+      }
+    }
+  }
+
+  #{$context}__separator {
+    float: left;
+  }
+}
+
+
+

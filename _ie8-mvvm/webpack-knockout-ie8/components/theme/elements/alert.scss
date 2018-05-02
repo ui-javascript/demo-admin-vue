@@ -1,0 +1,73 @@
+$alert-border: 1px solid $border !default;
+$alert-radius: $radius !default;
+$context: '.k-alert';
+
+#{$context} {
+  width: 100%;
+  padding: $vertical-padding*2 $horizontal-padding;
+  // 去掉默认 margin
+  // margin: 0 0 20px 0;
+  box-sizing: border-box;
+  border-radius: $alert-radius;
+  position: relative;
+  background-color: $white;
+  overflow: hidden;
+  color: $white;
+  opacity: 1;
+  display: table;
+  transition: opacity .2s;
+
+  &.is-small {
+    padding: $vertical-padding $horizontal-padding;;
+  }
+
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    $color-lightning: max((100% - lightness($color)) - 2%, 0%);
+    $color-luminance: colorLuminance($color);
+    $darken-percentage: $color-luminance * 70%;
+    $desaturate-percentage: $color-luminance * 30%;
+    &--#{$name} {
+      background-color: darken(lighten($color, $color-lightning), 5%);
+      color: desaturate(darken($color, $darken-percentage), $desaturate-percentage);
+    }
+  }
+
+  &.is-inline-block {
+    width: auto;
+    padding-right: $horizontal-padding * 1.5;
+    display: inline-block
+  }
+  &--light {
+    color: $text;
+    background-color: $white;
+    border: 1px solid $border;
+  }
+
+  &__content {
+    display: table-cell;
+    padding: 0 8px;
+    line-height: $body-line-height;
+    #{$context}__closebtn {
+      font-size: $size-medium;
+      color: $grey;
+      opacity: 1;
+      top: 10px;
+      right: 10px;
+      position: absolute;
+      cursor: pointer;
+    }
+    #{$context}__title {
+      display: block;
+      font-size: $size-medium;
+      line-height: 18px;
+      margin: 0 0 5px 0;
+      &.is-bold {
+        font-weight: $weight-medium
+      }
+    }
+    #{$context}__description {
+    }
+  }
+}

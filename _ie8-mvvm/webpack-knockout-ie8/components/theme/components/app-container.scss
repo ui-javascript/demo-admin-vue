@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  min-height: 400px;
+  padding: 20px 0;
+  flex-grow: 1;
+}
+
+.app-header {
+  flex-shrink: 0;
+}
+
+.app-footer {
+  margig-top: 30px;
+  flex-shrink: 0;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid $primary;
+}
+

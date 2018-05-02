@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+.k-form {
+
+  &--no-validation {
+    .k-form-item {
+      margin-bottom: 10px;
+    }
+  }
+
+  &--label-left {
+    & .k-form-item__label {
+      text-align: left;
+    }
+  }
+  &--label-top {
+    & .k-form-item__label {
+      float: none;
+      display: inline-block;
+      text-align: left;
+      padding: 0 0 10px 0;
+    }
+  }
+  &--inline {
+    & .k-form-item {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+    & .k-form-item__label {
+      float: none;
+      display: inline-block;
+    }
+    & .k-form-item__content {
+      display: inline-block;
+      vertical-align: top;
+    }
+    &.k-form--label-top .k-form-item__content {
+      display: block;
+    }
+  }
+}
+
+.k-form-item {
+  @include clearfix;
+  margin-bottom: 22px;
+
+  & .k-form-item {
+    margin-bottom: 0;
+  }
+
+  &__label {
+    text-align: right;
+    vertical-align: middle;
+    float: left;
+    font-size: 14px;
+    color: $text;
+    line-height: 1;
+    padding: 11px 12px 11px 0;
+    box-sizing: border-box;
+  }
+
+  &__content {
+    @include clearfix;
+    line-height: 36px;
+    position: relative;
+    font-size: 14px;
+  }
+
+  &__error {
+    color: $danger;
+    font-size: 12px;
+    line-height: 1;
+    padding-top: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  &.is-required {
+    .k-form-item__label:before {
+      content: '*';
+      color: $danger;
+      margin-right: 4px;
+    }
+  }
+
+  &.is-error {
+    & .k-input__inner,
+    & .k-textarea__inner {
+      border-color: $danger;
+    }
+
+    & .k-input-group__append,
+    & .k-input-group__prepend {
+      & .k-input__inner {
+        border-color: transparent;
+      }
+    }
+  }
+}

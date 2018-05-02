@@ -1,0 +1,17 @@
+{
+    "data":{
+        "userInfo":{
+            "zlid":1,
+            "userid":1,
+            "username":"测试账号",
+            "userbalancemoney":1000,
+            "orgid":1,
+            "orgname":"测试职位"
+        },
+        "try":false,
+        "loading":true
+    },
+    "helper":{
+
+    }
+}

@@ -1,0 +1,162 @@
+@charset "UTF-8";
+$context: '.k-message-box';
+
+#{$context} {
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+  width: 420px;
+  border-radius: 3px;
+  font-size: 16px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    $color-lightning: max((100% - lightness($color)) - 2%, 0%);
+    $color-luminance: colorLuminance($color);
+    $darken-percentage: $color-luminance * 70%;
+    $desaturate-percentage: $color-luminance * 30%;
+    &.is-#{$name} {
+      #{$context}__title {
+        color: desaturate(darken($color, $darken-percentage), $desaturate-percentage);
+      }
+      .confirm-btn {
+        background-color: $color;
+        border-color: transparent;
+        color: $color-invert;
+        &:hover {
+          background-color: darken($color, 10%);
+          border-color: transparent;
+          color: $color-invert;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: opacity 0.3s, transform .4s;
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 76.4%;
+      width: 0;
+      vertical-align: middle;
+    }
+  }
+
+  &__header {
+    position: relative;
+    padding: 20px 20px 0;
+  }
+  &__header-btn {
+    position: absolute;
+    top: 19px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+
+    #{$context}--close {
+      color: #999;
+    }
+
+    &:focus, &:hover {
+      #{$context}--close {
+        color: $grey-dark;
+      }
+    }
+
+  }
+
+  &__content {
+    padding: 30px 20px;
+    color: $grey-dark;
+    font-size: $size-normal;
+    position: relative;
+  }
+
+  &__input {
+    padding-top: 15px;
+    & input.invalid {
+      border-color: $danger;
+      &:focus {
+        border-color: $danger;
+      }
+    }
+  }
+
+  &--errormsg {
+    color: $grey-lighter;
+    font-size: $size-4;
+    min-height: 18px;
+    margin-top: 2px;
+  }
+
+  &__title {
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: $size-4;
+    font-weight: bold;
+    height: 18px;
+    color: $grey-darker;
+  }
+
+  &__message {
+    margin: 0;
+    &__p {
+      margin: 0;
+      line-height: 1.4;
+    }
+  }
+
+  &__btns {
+    padding: 10px 20px 15px;
+    text-align: right;
+
+    & :nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+
+  &__btns-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__icon--status {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px !important;
+
+    &-success {
+      color: #13ce66;
+    }
+
+    &-info {
+      color: #50bfff;
+    }
+
+    &-warning {
+      color: #f7ba2a;
+    }
+
+    &-danger {
+      color: #ff4949;
+    }
+  }
+}
+

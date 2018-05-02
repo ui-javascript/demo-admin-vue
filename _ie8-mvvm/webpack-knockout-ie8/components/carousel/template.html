@@ -1,0 +1,19 @@
+
+<div class="k-carousel" data-bind="css: cssObject">
+  <ul class="k-carousel__indicators" data-bind="foreach: indicators">
+    <li class="k-carousel__indicator-button">
+      <span class="k-carousel__indicator" data-bind="text: $parent.isNumberIndicator ? $index() + 1 : ''"></span>
+    </li>
+  </ul>
+  <div class="k-carousel__inner" data-bind="style: {height: height}">
+    <!-- div.k-carousel__item -->
+    <!-- ko template: { nodes: $componentTemplateNodes } -->
+    <!-- /ko -->
+  </div>
+  <a class="k-carousel__left">
+    <i class="fa fa-angle-left k-carousel__icon"></i>
+  </a>
+  <a class="k-carousel__right">
+    <i class="fa fa-angle-right k-carousel__icon"></i>
+  </a>
+</div>

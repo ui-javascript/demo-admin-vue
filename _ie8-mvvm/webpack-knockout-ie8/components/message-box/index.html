@@ -1,0 +1,30 @@
+<div class="k-message-box__wrapper k-modal--fade" tabindex="-1" data-bind="click: handleWrapperClick">
+  <div class="k-message-box" data-bind="css: nowClassName">
+    <div class="k-message-box__header" data-bind="if:title() !== undefined">
+      <div class="k-message-box__title" data-bind="text:title"></div>
+      <!--<a type="button" class="k-message-box__header-btn" aria-label="Close"-->
+              <!--data-bind="visible:showClose,click:function(){handleAction('cancel')}">-->
+        <!--<i class="fa fa-times k-message-box&#45;&#45;close"></i>-->
+      <!--</a>-->
+    </div>
+    <div class="k-message-box__content" data-bind="if:message() !== ''">
+      <div class="k-message-box--status" data-bind="css:typeClassName"></div>
+      <div class="k-message-box__message" :style="{ 'margin-left': typeClassName() ? '50px' : '0' }">
+        <p data-bind="html:message"></p>
+      </div>
+      <div class="k-message-box__input" data-bind="visible:showInput">
+        <input class="k-input__inner" data-bind="textInput:inputValue,attr:{placeholder:inputPlaceholder}">
+        <div class="k-message-box--errormsg" data-bind="visibility:!!editorErrorMessage,text:editorErrorMessage">
+        </div>
+      </div>
+    </div>
+    <div class="k-message-box__btns">
+      <a class="k-button"
+        data-bind="text:cancelButtonText,visible:showCancelButton,click:function(){handleAction('cancel')}">
+      </a>
+      <button class="k-button is-primary confirm-btn"
+        data-bind="attr:{disabled:confirmButtonLoading},text:confirmButtonText,visible:showConfirmButton,click:function(){handleAction('confirm')}">
+      </button>
+    </div>
+  </div>
+</div>

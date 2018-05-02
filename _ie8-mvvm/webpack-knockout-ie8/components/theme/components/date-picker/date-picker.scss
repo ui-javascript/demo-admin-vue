@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+.k-date-picker {
+  width: 322px;
+
+  &.has-sidebar.has-time {
+    width: 434px;
+  }
+
+  &.has-sidebar {
+    width: 438px;
+  }
+
+  .k-picker-panel__content {
+    width: 292px;
+  }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  &__editor-wrap {
+    position: relative;
+    display: table-cell;
+    padding: 0 5px;
+  }
+
+  &__time-header {
+    position: relative;
+    border-bottom: 1px solid $datepicker-inner-border-color;
+    font-size: 12px;
+    padding: 8px 5px 5px 5px;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__header {
+    margin: 12px;
+    text-align: center;
+    &--bordered {
+      margin-bottom: 0;
+      padding-bottom: 12px;
+      border-bottom: solid 1px $border-hover;
+      & + .k-picker-panel__content {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__header-label {
+    font-size: 14px;
+    padding: 0 5px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    color: $text;
+    &:hover {
+      color: $datepicker-text-hover-color;
+    }
+    &.active {
+      color: $datepicker-active-color;
+    }
+  }
+
+  &__prev-btn {
+    float: left;
+    text-align: left;
+  }
+
+  &__next-btn {
+    float: right;
+    text-align: right;
+  }
+
+  &__time-wrap {
+    padding: 10px;
+    text-align: center;
+  }
+
+  &__time-label {
+    float: left;
+    cursor: pointer;
+    line-height: 30px;
+    margin-left: 10px;
+  }
+}

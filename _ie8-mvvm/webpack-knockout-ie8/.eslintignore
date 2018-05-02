@@ -1,0 +1,7 @@
+vendors/
+components/
+locals/
+dist/
+gulpfile.js
+webpack*
+app.js
