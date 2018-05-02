@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+}
+
+.FZZCYSK {
+  font-family: 'FZYaSong-DB1-GBK';
+}
+
+.KUHEI {
+  font-family: 'HuXiaoBo_KuHei';
+}
+
+svg.icon {
+  height: 1em;
+  width: 1em;
+}
+
+.bg1 {
+  background: url('__uri(../img/bg-1.png)');
+  height: 132px;
+  width: 312px;
+}
+
+.bg2 {
+  background: url('__uri(/img/bg-2.png)');
+  height: 132px;
+  width: 312px;
+}
+
+.bg3 {
+  background: url('/static/img/bg-3.jpg');
+  height: 132px;
+  width: 312px;
+}
