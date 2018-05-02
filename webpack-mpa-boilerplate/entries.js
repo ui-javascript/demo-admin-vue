@@ -6,7 +6,7 @@ module.exports = [
     //entry: './components/page0',
     //...
     //commons chunks
-    //chunks: ['vendor'],
+    // chunks: ['vendor'],
     //title: 'my website',
     //template:'',
     //inject:'head||body',

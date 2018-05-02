@@ -47,7 +47,11 @@ module.exports = {
         //公共代码包
         new webpack.optimize.CommonsChunkPlugin({
             names: ['vendor0', 'vendor1', /*'vendor2'*/ 'manifest'],
-            minChunks: Infinity
+            // https://segmentfault.com/q/1010000007045505
+            // @FIXME
+            // Cannot read property 'call' of undefined
+            // minChunks: Infinity,
+            minChunks: 1
         }),
         //静态文件包，直接copy到发布目录。
         new CopyWebpackPlugin([{from: './statics', to: './statics'}])]

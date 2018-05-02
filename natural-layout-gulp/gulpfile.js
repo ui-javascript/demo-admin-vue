@@ -1,4 +1,9 @@
 // https://www.cnblogs.com/zhangyuezhen/p/7896047.html
+// 代码检查可参考
+// https://github.com/271626514/gulp-demo
+// https://segmentfault.com/a/1190000010138466
+
+
 // 严格模式
 'use strict';
 
@@ -32,7 +37,9 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'), // 用来删除文件
 
     browserSync = require('browser-sync'),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+
+    stripDebug = require('gulp-strip-debug');
 
 var paths = {
     scss: ["app/static/scss/**/*.scss"]
@@ -43,6 +50,7 @@ gulp.task('js', function () {
     return gulp.src('app/static/scripts/**/*.js')
         .pipe(plumber()) // 错误提示
         // .pipe(concat({ext: '.js'})) //合并同一目录下的所有文件
+        .pipe(stripDebug())
         .pipe(babel())
         .pipe(uglify())
         .pipe(gulp.dest('app/static/js'))
@@ -124,14 +132,14 @@ gulp.task('sprite', function () {
 });
 
 // 浏览器同步刷新
-// gulp.task('serve', function() {
-//     browserSync.init({
-//         proxy: "deva.dev",
-//         port: 3001,
-//         open: "ui",
-//         ui: {port: 3005}
-//     });
-// });
+gulp.task('serve', function() {
+    browserSync.init({
+        proxy: "deva.dev",
+        port: 3001,
+        open: "ui",
+        ui: {port: 3005}
+    });
+});
 
 
 // 删除dist/*下的所有文件
