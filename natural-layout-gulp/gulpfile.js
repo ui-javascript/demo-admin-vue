@@ -159,8 +159,8 @@ gulp.task('public', function () {
 
 // watch监听
 gulp.task('watch', function () {
-    gulp.watch('app/static/scripts/**/*.js', ['js']);
-    gulp.watch('app/static/scss/**/*.scss', ['sass']);
+    // gulp.watch('app/static/scripts/**/*.js', ['js']);
+    // gulp.watch('app/static/scss/**/*.scss', ['sass']);
     // gulp.watch(paths.scss, ["sass"]);
     gulp.watch('app/static/css/**/*.less', ['less']);
 
@@ -170,7 +170,8 @@ gulp.task('watch', function () {
 
 // gulp是并行的，需要指定一下顺序
 gulp.task('redist', function () {
-    runSequence('clean', ['sass', 'less', 'js', 'images', 'watch'])
+    // runSequence('clean', ['sass', 'less', 'js', 'images', 'watch'])
+    runSequence('clean', ['less', 'watch'])
 });
 
 // gulp命令 默认执行

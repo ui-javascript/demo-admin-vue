@@ -49,13 +49,14 @@
 
 // 多行文本溢出
 // 仅支持webkit
+//限制超出指定行数截断的功能只在 WebKit 内核浏览器下有效。
 .txt-elli-mult(@n: 3) {
   display: -webkit-box;
+
   -webkit-box-orient: vertical;
   -webkit-line-clamp: @n;
+
   word-break: break-all;
-  -o-text-overflow: ellipsis;
-  -ms-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -102,11 +103,22 @@
   text-rendering: optimizeLegibility;
 }
 
+// 用于实现链接默认无下划线，hover后有下划线的样式
+.hover-link() {
+
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 // 将链接变成默认的文字样式
-.link-unstyled() {
+.unstyled-link() {
   color: inherit;
   cursor: inherit;
   text-decoration: inherit;
+
   &:active, &:focus {
     outline: none;
   }

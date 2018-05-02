@@ -2,6 +2,12 @@
  * 复用
  */
 
+.layout-page(@w: 980px) {
+  width: @w;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // 尺寸
 .size(@w, @h) {
   width: @w;
@@ -349,3 +355,11 @@
 //    background-image: url("@url + '@3x.png'");
 //  }
 //}
+
+
+// 用于隐藏元素内文字，一般在文字隐藏之后使用背景图片替代显示
+.hide-text() {
+  text-indent: -9999px;
+  overflow: hidden;
+  text-align: left;
+}
