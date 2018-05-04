@@ -47,10 +47,11 @@ var gulp = require('gulp'),
     stripDebug = require('gulp-strip-debug');
 
 // 路径
-var BASE_VIEWS_PATH = "./views";
-var BASE_STATIC_PATH = "./static";
 var BASE_DEV_PATH = "./src";
+var BASE_VIEWS_PATH = "./src/views";
+var BASE_STATIC_PATH = "./assets";
 var BASE_DIST_PATH = "./dist";
+
 var PATHS = {
     html: BASE_VIEWS_PATH + "/**/*.html",
     htmlDist: BASE_VIEWS_PATH,
@@ -187,8 +188,8 @@ gulp.task('sprite', function () {
 
 // 删除dist/*下的所有文件
 gulp.task('clean', function () {
-    return gulp.src(['./static/scripts',
-        './static/css', './static/scss',
+    return gulp.src(['./assets/scripts',
+        './assets/css', './assets/scss',
         './templates',
         './dist'],
         {read: false})
@@ -218,7 +219,7 @@ gulp.task('distJs', function () {
         .pipe(stripDebug())
         .pipe(babel())
         .pipe(uglify())
-        .pipe(gulp.dest('./static/scripts'))
+        .pipe(gulp.dest('./assets/scripts'))
 });
 
 // 缩编HTML
@@ -245,7 +246,7 @@ gulp.task('distSass', function () { // cb是传入的回调函数
             // browsers: ['> 1%', 'not ie <= 8']
         }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./static/scss'))
+        .pipe(gulp.dest('./assets/scss'))
 });
 
 
@@ -257,17 +258,17 @@ gulp.task('distLess', function () {
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
         .pipe(minifyCss())
-        .pipe(gulp.dest('./static/css/theme'))
+        .pipe(gulp.dest('./assets/css/theme'))
 });
 
 
 // 压缩
 gulp.task('unzip', function () {
 
-    return gulp.src('./static/*')
+    return gulp.src(['./assets/*', './templates/*'])
         .pipe(plumber())
         .pipe(zip('luo0412.zip'))
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./'))
 });
 
 // 压缩
