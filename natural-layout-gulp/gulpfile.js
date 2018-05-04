@@ -123,9 +123,6 @@ gulp.task('html', function () {
         // .pipe(plumber())
         // .pipe(minifyHtml())
         // .pipe(gulp.dest('app/html'))
-        // .pipe(gulp.dest(function(data){
-        //     return path.dirname(data.history[0]);
-        // }))
         .pipe(browserSync.reload({stream:true}))
 });
 
@@ -166,6 +163,7 @@ gulp.task('sync', function() {
         ui: {
             port: 3005
         },
+        directory: true,
         // browser: ["chrome", "firefox"],
         browser: "chrome",
         server: {
