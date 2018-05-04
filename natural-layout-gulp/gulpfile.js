@@ -47,7 +47,7 @@ var gulp = require('gulp'),
     stripDebug = require('gulp-strip-debug');
 
 // 路径
-var BASE_VIEWS_PATH = "./templates";
+var BASE_VIEWS_PATH = "./views";
 var BASE_STATIC_PATH = "./static";
 var BASE_DEV_PATH = "./src";
 var BASE_DIST_PATH = "./dist";
@@ -74,12 +74,6 @@ var PATHS = {
 // JS压缩
 gulp.task('js', function () {
     return gulp.src(PATHS.scripts)
-        // .pipe(plumber()) // 错误提示
-        // .pipe(concat({ext: '.js'})) //合并同一目录下的所有文件
-        // .pipe(stripDebug())
-        // .pipe(babel())
-        // .pipe(uglify())
-        // .pipe(gulp.dest('app/static/js'))
         .pipe(browserSync.reload({stream:true}))
 });
 
@@ -87,7 +81,7 @@ gulp.task('js', function () {
 gulp.task('sass', function (cb) { // cb是传入的回调函数
 
     return gulp.src(PATHS.scss)
-    // .pipe(plumber())
+        // .pipe(plumber())
         .pipe(sass({
             sourcemaps: true,
             includePaths: [bourbon, neat]
@@ -103,7 +97,8 @@ gulp.task('sass', function (cb) { // cb是传入的回调函数
         .pipe(browserSync.reload({stream:true}))
 
 
-    cb(err);        // 如果 err 不是 null 和 undefined，流程会被结束掉，'two' 不会被执行
+
+    cb(err);  // 如果 err 不是 null 和 undefined，流程会被结束掉，'two' 不会被执行
 });
 
 
@@ -122,38 +117,9 @@ gulp.task('less', function () {
 // HTML压缩
 gulp.task('html', function () {
     return gulp.src(PATHS.html)
-        // .pipe(plumber())
-        // .pipe(minifyHtml())
-        // .pipe(gulp.dest('app/html'))
         .pipe(browserSync.reload({stream:true}))
 });
 
-
-// 图片压缩
-gulp.task('images', function () {
-    return gulp.src(PATHS.images)
-        .pipe(plumber())
-        .pipe(imagemin({
-            optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
-            progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
-            interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
-            multipass: true, //类型：Boolean 默认：false 多次优化svg直到完全优化
-            use: [pngquant()] // 使用 pngquant 深度压缩 png 图片
-        }))
-        .pipe(gulp.dest(PATHS.imagesDist))
-        // .pipe(browserSync.reload({stream:true}))
-});
-
-// 雪碧图
-// 此功能是单一的并不与其他功能串联
-gulp.task('sprite', function () {
-    return gulp.src(PATHS.sprite)
-        .pipe(spritesmith({
-            imgName: 'ico.png',
-            cssName: 'sprite.css'
-        }))
-        .pipe(gulp.dest(PATHS.imagesDist));
-});
 
 // 浏览器同步刷新
 // http://www.browsersync.cn/docs/gulp/
@@ -184,23 +150,6 @@ gulp.task('sync', function() {
     });
 });
 
-
-// 删除dist/*下的所有文件
-gulp.task('clean', function () {
-    return gulp.src([PATHS.jsDist], {read: false})
-        .pipe(clean())
-});
-
-
-// 打包
-gulp.task('release', function () {
-
-    return gulp.src('dist/*')
-        .pipe(plumber())
-        .pipe(zip('public.zip'))
-        .pipe(gulp.dest('release'))
-});
-
 // watch监听
 gulp.task('watch', function () {
     gulp.watch(PATHS.scripts, ['js']);
@@ -210,8 +159,118 @@ gulp.task('watch', function () {
 });
 
 
+
 // gulp是并行的，
 // 需要指定一下顺序
 gulp.task('default', function () {
-    runSequence('clean', ['sync', 'html', 'less', 'sass','js', 'watch'])
+    runSequence('sync', ['html', 'less', 'sass','js', 'watch'])
+});
+
+
+
+// ====================================
+// ====================================
+
+// 雪碧图
+// 此功能是单一的并不与其他功能串联
+gulp.task('sprite', function () {
+    return gulp.src(PATHS.sprite)
+        .pipe(spritesmith({
+            imgName: 'ico.png',
+            cssName: 'sprite.css'
+        }))
+        .pipe(gulp.dest(PATHS.imagesDist));
+});
+
+// =====================================
+// =====================================
+
+// 删除dist/*下的所有文件
+gulp.task('clean', function () {
+    return gulp.src(['./static/scripts',
+        './static/css', './static/scss',
+        './templates',
+        './dist'],
+        {read: false})
+        .pipe(clean())
+});
+
+// 图片压缩
+gulp.task('images', function () {
+    return gulp.src(PATHS.images)
+        .pipe(plumber())
+        .pipe(imagemin({
+            optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
+            progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
+            interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
+            multipass: true, //类型：Boolean 默认：false 多次优化svg直到完全优化
+            use: [pngquant()] // 使用 pngquant 深度压缩 png 图片
+        }))
+        .pipe(gulp.dest(PATHS.imagesDist))
+    // .pipe(browserSync.reload({stream:true}))
+});
+
+// 缩编JS
+gulp.task('distJs', function () {
+    return gulp.src(PATHS.scripts)
+        .pipe(plumber()) // 错误提示
+        // .pipe(concat({ext: '.js'})) //合并同一目录下的所有文件
+        .pipe(stripDebug())
+        .pipe(babel())
+        .pipe(uglify())
+        .pipe(gulp.dest('./static/scripts'))
+});
+
+// 缩编HTML
+gulp.task('distHtml', function () {
+    return gulp.src(PATHS.html)
+    .pipe(plumber())
+    .pipe(minifyHtml())
+    .pipe(gulp.dest('./templates'))
+});
+
+// scss编译
+gulp.task('distSass', function () { // cb是传入的回调函数
+
+    return gulp.src(PATHS.scss)
+    // .pipe(plumber())
+        .pipe(sass({
+            sourcemaps: true,
+            includePaths: [bourbon, neat]
+        }))
+        // .pipe(concat({ext: '.css'}))
+        // .pipe(rename('all.min.css'))
+        .pipe(minifyCss())
+        .pipe(autoprefixer({
+            // browsers: ['> 1%', 'not ie <= 8']
+        }))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./static/scss'))
+});
+
+
+// less编译
+gulp.task('distLess', function () {
+    return gulp.src(PATHS.lessOutput) // 注意，只解析_output.less这样的单文件
+        .pipe(plumber())
+        .pipe(less())
+        .pipe(autoprefixer())
+        // .pipe(concat({ext: '.css'})) //合并
+        .pipe(minifyCss())
+        .pipe(gulp.dest('./static/css/theme'))
+});
+
+
+// 压缩
+gulp.task('unzip', function () {
+
+    return gulp.src('./static/*')
+        .pipe(plumber())
+        .pipe(zip('luo0412.zip'))
+        .pipe(gulp.dest('./dist'))
+});
+
+// 压缩
+gulp.task('release', function () {
+    runSequence('clean', 'images', ['distHtml', 'distLess', 'distSass','distJs'], 'unzip')
 });
