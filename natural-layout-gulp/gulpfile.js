@@ -93,7 +93,7 @@ gulp.task('sass', function (cb) { // cb是传入的回调函数
         .pipe(autoprefixer({
             // browsers: ['> 1%', 'not ie <= 8']
         }))
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest(PATHS.scssDist))
         .pipe(browserSync.reload({stream:true}))
 
@@ -271,7 +271,8 @@ gulp.task('unzip', function () {
         .pipe(gulp.dest('./'))
 });
 
-// 压缩
+// 发布
 gulp.task('release', function () {
-    runSequence('clean', 'images', ['distHtml', 'distLess', 'distSass','distJs'], 'unzip')
+    // runSequence('clean', 'images', ['distHtml', 'distLess', 'distSass','distJs'], 'unzip')
+    runSequence('clean', ['distHtml', 'distLess', 'distSass','distJs'], 'unzip')
 });
