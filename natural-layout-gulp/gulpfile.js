@@ -67,7 +67,7 @@ var PATHS = {
     images: BASE_STATIC_PATH + '/images/**/*.{png,jpg,jpeg,ico,gif,svg}',
     imagesDist: BASE_STATIC_PATH + "/images",
     sprite: BASE_STATIC_PATH + '/images/sprite/!(sprite.png|*.css)',
-    cdnDist: BASE_STATIC_PATH + "/cdn",
+    plusDist: BASE_STATIC_PATH + "/plus",
     fontsDist: BASE_STATIC_PATH + "/fonts",
     mockDist: BASE_STATIC_PATH + "/mock"
 };
@@ -141,7 +141,7 @@ gulp.task('sync', function() {
             routes: {
                 "/css": PATHS.cssDist,
                 "/images": PATHS.imagesDist,
-                "/cdn": PATHS.cdnDist,
+                "/plus": PATHS.plusDist,
                 "/scripts": PATHS.scriptsDist,
                 "/scss": PATHS.scssDist,
                 "/mock": PATHS.mockDist
@@ -188,10 +188,10 @@ gulp.task('sprite', function () {
 
 // 删除dist/*下的所有文件
 gulp.task('clean', function () {
-    return gulp.src(['./assets/scripts',
-        './assets/css', './assets/scss',
-        './templates',
-        './dist'],
+    return gulp.src(['./assets/scripts/*',
+        './assets/css/*', './assets/scss/*',
+        './templates/*',
+        './dist/*'],
         {read: false})
         .pipe(clean())
 });
@@ -263,16 +263,16 @@ gulp.task('distLess', function () {
 
 
 // 压缩
-gulp.task('unzip', function () {
+gulp.task('zip', function () {
 
-    return gulp.src(['./assets/*', './templates/*'])
+    return gulp.src(["templates/**", "assets/**"])
         .pipe(plumber())
-        .pipe(zip('luo0412.zip'))
+        .pipe(zip('dist.zip'))
         .pipe(gulp.dest('./'))
 });
 
 // 发布
 gulp.task('release', function () {
     // runSequence('clean', 'images', ['distHtml', 'distLess', 'distSass','distJs'], 'unzip')
-    runSequence('clean', ['distHtml', 'distLess', 'distSass','distJs'], 'unzip')
+    runSequence('clean', ['distHtml', 'distLess', 'distSass','distJs'], 'zip')
 });
