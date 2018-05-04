@@ -1,5 +1,5 @@
 
-.nt-tab-default {
+.tab.natural {
 
   /* colors */
   /* tab setting */
@@ -26,7 +26,6 @@
 
   .tabs {
     left: 50%;
-    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     position: relative;
     background: white;
@@ -56,36 +55,25 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
+
     flex-direction: row;
     margin-bottom: 10px;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
+
     justify-content: space-between;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-    -ms-flex-align: end;
+
     align-items: flex-end;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
+
     flex-wrap: wrap;
   }
   .tabs ul li {
     box-sizing: border-box;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
+
     flex: 1;
     width: 25%;
     padding: 0 10px;
     text-align: center;
   }
   .tabs ul li label {
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     color: #929daf;
     padding: 5px auto;
@@ -93,13 +81,9 @@
     text-overflow: ellipsis;
     display: block;
     cursor: pointer;
-    -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     white-space: nowrap;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+
     user-select: none;
   }
   .tabs ul li label br {
@@ -110,7 +94,7 @@
     height: 1.2em;
     vertical-align: bottom;
     margin-right: 0.2em;
-    -webkit-transition: all 0.2s ease-in-out;
+
     transition: all 0.2s ease-in-out;
   }
   .tabs ul li label:hover, .tabs ul li label:focus, .tabs ul li label:active {
@@ -123,7 +107,6 @@
   .tabs .slider {
     position: relative;
     width: 25%;
-    -webkit-transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
     transition: all 0.33s cubic-bezier(0.38, 0.8, 0.32, 1.07);
   }
   .tabs .slider .indicator {
@@ -140,15 +123,10 @@
   }
   .tabs .content section {
     display: none;
-    -webkit-animation-name: content;
     animation-name: content;
-    -webkit-animation-direction: normal;
     animation-direction: normal;
-    -webkit-animation-duration: 0.3s;
     animation-duration: 0.3s;
-    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     line-height: 1.4;
   }
