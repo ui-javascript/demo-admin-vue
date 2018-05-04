@@ -106,13 +106,14 @@ gulp.task('sass', function (cb) { // cb是传入的回调函数
 // less编译
 gulp.task('less', function () {
     return gulp.src(PATHS.lessOutput) // 注意，只解析_output.less这样的单文件
+        .pipe(browserSync.reload({stream:true}))
         .pipe(plumber())
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
         .pipe(minifyCss())
         .pipe(gulp.dest(PATHS.lessDist))
-        .pipe(browserSync.reload({stream:true}))
+
 });
 
 // HTML压缩
