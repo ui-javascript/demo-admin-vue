@@ -8,6 +8,10 @@
 'use strict';
 
 // 导入模块
+
+var path = require('path'),
+    fs = require('fs');
+
 var gulp = require('gulp'),
 
     concat = require('gulp-concat-dir'), // 管合并，可以合并同一目录下的所有文件，好处是可以减少网络请求
@@ -62,7 +66,7 @@ var PATHS = {
     sprite: BASE_STATIC_PATH + '/images/sprite/!(sprite.png|*.css)',
     cdnDist: BASE_STATIC_PATH + "/cdn",
     fontsDist: BASE_STATIC_PATH + "/fonts",
-    mock: BASE_STATIC_PATH + "/mock"
+    mockDist: BASE_STATIC_PATH + "/mock"
 };
 
 // JS压缩
@@ -119,10 +123,9 @@ gulp.task('html', function () {
         // .pipe(plumber())
         // .pipe(minifyHtml())
         // .pipe(gulp.dest('app/html'))
-        .pipe(gulp.dest(function(data){
-            console.log(path.dirname(data.history[0]));
-            return path.dirname(data.history[0]);
-        }))
+        // .pipe(gulp.dest(function(data){
+        //     return path.dirname(data.history[0]);
+        // }))
         .pipe(browserSync.reload({stream:true}))
 });
 
@@ -154,6 +157,7 @@ gulp.task('sprite', function () {
 });
 
 // 浏览器同步刷新
+// http://www.browsersync.cn/docs/gulp/
 gulp.task('sync', function() {
     browserSync.init({
         // proxy: "deva.dev",
