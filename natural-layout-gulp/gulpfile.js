@@ -61,7 +61,8 @@ var PATHS = {
     imagesDist: BASE_STATIC_PATH + "/images",
     sprite: BASE_STATIC_PATH + '/images/sprite/!(sprite.png|*.css)',
     cdnDist: BASE_STATIC_PATH + "/cdn",
-    fontsDist: BASE_STATIC_PATH + "/fonts"
+    fontsDist: BASE_STATIC_PATH + "/fonts",
+    mock: BASE_STATIC_PATH + "/mock"
 };
 
 // JS压缩
@@ -118,6 +119,10 @@ gulp.task('html', function () {
         // .pipe(plumber())
         // .pipe(minifyHtml())
         // .pipe(gulp.dest('app/html'))
+        .pipe(gulp.dest(function(data){
+            console.log(path.dirname(data.history[0]));
+            return path.dirname(data.history[0]);
+        }))
         .pipe(browserSync.reload({stream:true}))
 });
 
@@ -153,10 +158,10 @@ gulp.task('sync', function() {
     browserSync.init({
         // proxy: "deva.dev",
         port: 80, //
-        // open: "ui",
-        // ui: {
-        //     port: 3005
-        // },
+        open: "ui",
+        ui: {
+            port: 3005
+        },
         // browser: ["chrome", "firefox"],
         browser: "chrome",
         server: {
@@ -167,7 +172,8 @@ gulp.task('sync', function() {
                 "/images": PATHS.imagesDist,
                 "/cdn": PATHS.cdnDist,
                 "/scripts": PATHS.scriptsDist,
-                "/scss": PATHS.scssDist
+                "/scss": PATHS.scssDist,
+                "/mock": PATHS.mockDist
             }
         },
         startPath: "index.html"
@@ -201,9 +207,6 @@ gulp.task('watch', function () {
 
 // gulp是并行的，
 // 需要指定一下顺序
-gulp.task('redist', function () {
+gulp.task('default', function () {
     runSequence('clean', ['sync', 'html', 'less', 'sass','js', 'watch'])
 });
-
-// gulp命令 默认执行
-gulp.task('default', ['redist']);
