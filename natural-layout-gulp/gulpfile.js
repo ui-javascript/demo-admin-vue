@@ -9,8 +9,8 @@
 
 // 导入模块
 
-var path = require('path'),
-    fs = require('fs');
+// var path = require('path'),
+//     fs = require('fs');
 
 var gulp = require('gulp'),
 
@@ -47,20 +47,22 @@ var gulp = require('gulp'),
     stripDebug = require('gulp-strip-debug');
 
 // 路径
-var BASE_VIEWS_PATH = "./app/views";
-var BASE_STATIC_PATH = "./app/static";
+var BASE_VIEWS_PATH = "./templates";
+var BASE_STATIC_PATH = "./static";
+var BASE_DEV_PATH = "./src";
+var BASE_DIST_PATH = "./dist";
 var PATHS = {
     html: BASE_VIEWS_PATH + "/**/*.html",
     htmlDist: BASE_VIEWS_PATH,
-    scss: BASE_STATIC_PATH + "/scss/**/*.scss",
-    scssDist: BASE_STATIC_PATH + "/scss",
-    less: BASE_STATIC_PATH + "/css/**/*.less",
-    lessOutput: BASE_STATIC_PATH + "/css/theme/**/_output.less",
-    lessDist: BASE_STATIC_PATH + "/css/theme",
-    cssDist: BASE_STATIC_PATH + "/css",
-    scripts: BASE_STATIC_PATH + "/scripts/**/*.js",
-    scriptsDist: BASE_STATIC_PATH + "/scripts",
-    jsDist: BASE_STATIC_PATH + "/js",
+    scss: BASE_DEV_PATH + "/scss/**/*.scss",
+    scssDist: BASE_DEV_PATH + "/scss",
+    less: BASE_DEV_PATH + "/css/**/*.less",
+    lessOutput: BASE_DEV_PATH + "/css/theme/**/_output.less",
+    lessDist: BASE_DEV_PATH + "/css/theme",
+    cssDist: BASE_DEV_PATH + "/css",
+    scripts: BASE_DEV_PATH + "/scripts/**/*.js",
+    scriptsDist: BASE_DEV_PATH + "/scripts",
+    jsDist: BASE_DIST_PATH + "/js",
     images: BASE_STATIC_PATH + '/images/**/*.{png,jpg,jpeg,ico,gif,svg}',
     imagesDist: BASE_STATIC_PATH + "/images",
     sprite: BASE_STATIC_PATH + '/images/sprite/!(sprite.png|*.css)',
@@ -159,7 +161,7 @@ gulp.task('sync', function() {
     browserSync.init({
         // proxy: "deva.dev",
         port: 80, //
-        open: "ui",
+        // open: "ui",
         ui: {
             port: 3005
         },
@@ -178,7 +180,7 @@ gulp.task('sync', function() {
                 "/mock": PATHS.mockDist
             }
         },
-        startPath: "index.html"
+        // startPath: "index.html"
     });
 });
 
@@ -192,6 +194,7 @@ gulp.task('clean', function () {
 
 // 打包
 gulp.task('release', function () {
+
     return gulp.src('dist/*')
         .pipe(plumber())
         .pipe(zip('public.zip'))
