@@ -551,7 +551,7 @@ a:active, a:hover {
     max-width: 982px;
     margin: 50px auto 0px;
     position: relative;
-    background: url(../../../../static/images/quote-slider-demo/m2yyLine.png) no-repeat center 320px;
+    background: url(..//images/quote-slider-demo/m2yyLine.png) no-repeat center 320px;
 }
 
 .m2yySbox {
@@ -591,7 +591,7 @@ a:active, a:hover {
 }
 
 .m2usBtnL {
-    background: #E83827 url(../../../../static/images/quote-slider-demo/m2yy_btn.png) no-repeat center center;
+    background: #E83827 url(..//images/quote-slider-demo/m2yy_btn.png) no-repeat center center;
     height: 42px;
     width: 42px;
     position: absolute;
@@ -602,7 +602,7 @@ a:active, a:hover {
 }
 
 .m2usBtnR {
-    background: #E83827 url(../../../../static/images/quote-slider-demo/m2yy_btn.png) no-repeat center center;
+    background: #E83827 url(..//images/quote-slider-demo/m2yy_btn.png) no-repeat center center;
     height: 42px;
     width: 42px;
     position: absolute;
@@ -2691,13 +2691,13 @@ a:active, a:hover {
     text-align: center;
     filter: alpha(opacity=0);
     opacity: 1;
-    background: url(../../../../static/images/quote-slider-demo/m2yyLine.png) no-repeat center 13px;
+    background: url(..//images/quote-slider-demo/m2yyLine.png) no-repeat center 13px;
 }
 
 .about-fo .list li {
     width: 11px;
     height: 11px;
-    background: #FFF url(../../../../static/images/quote-slider-demo/bg_sign03.png) no-repeat center top;
+    background: #FFF url(..//images/quote-slider-demo/bg_sign03.png) no-repeat center top;
     cursor: pointer;
     border: 2px solid #acacac;
     overflow: hidden;

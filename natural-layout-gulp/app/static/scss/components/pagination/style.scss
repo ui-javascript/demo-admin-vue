@@ -242,7 +242,7 @@ custom icons - customize the small arrow inside the next and prev buttons
 		top: 50%;
 		/* set margin-top = icon height/2 */
 		margin-top: -8px;
-		background: transparent url('../../../../static/images/arrow/cd-icon-arrow-1.svg') no-repeat center center;
+		background: transparent url('..//images/arrow/cd-icon-arrow-1.svg') no-repeat center center;
 	}
 
 	.button:first-of-type a::before {
@@ -276,7 +276,7 @@ custom buttons - replace prev and next buttons text with a custom icon
 		white-space: nowrap;
 		text-indent: 100%;
 		color: transparent;
-		background: url('../../../../static/images/arrow/cd-icon-arrow-2.svg') no-repeat center center;
+		background: url('..//images/arrow/cd-icon-arrow-2.svg') no-repeat center center;
 	}
 
 	.button:last-of-type a {

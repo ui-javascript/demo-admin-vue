@@ -75,7 +75,7 @@ body {
   width: 768px;
   height: 451px;
   position: absolute;
-  background-image: url("../../../../static/images/slick-demo/macbook.png");
+  background-image: url("..//images/slick-demo/macbook.png");
   background-repeat: no-repeat;
 }
 .project-screen .project {

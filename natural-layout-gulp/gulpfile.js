@@ -7,6 +7,7 @@
 // 严格模式
 'use strict';
 
+// 导入模块
 var gulp = require('gulp'),
 
     concat = require('gulp-concat-dir'), // 管合并，可以合并同一目录下的所有文件，好处是可以减少网络请求
@@ -41,25 +42,44 @@ var gulp = require('gulp'),
 
     stripDebug = require('gulp-strip-debug');
 
-var paths = {
-    scss: ["app/static/scss/**/*.scss"]
+// 路径
+var BASE_VIEWS_PATH = "./app/views";
+var BASE_STATIC_PATH = "./app/static";
+var PATHS = {
+    html: BASE_VIEWS_PATH + "/**/*.html",
+    htmlDist: BASE_VIEWS_PATH,
+    scss: BASE_STATIC_PATH + "/scss/**/*.scss",
+    scssDist: BASE_STATIC_PATH + "/scss",
+    less: BASE_STATIC_PATH + "/css/**/*.less",
+    lessOutput: BASE_STATIC_PATH + "/css/theme/**/_output.less",
+    lessDist: BASE_STATIC_PATH + "/css/theme",
+    cssDist: BASE_STATIC_PATH + "/css",
+    scripts: BASE_STATIC_PATH + "/scripts/**/*.js",
+    scriptsDist: BASE_STATIC_PATH + "/scripts",
+    jsDist: BASE_STATIC_PATH + "/js",
+    images: BASE_STATIC_PATH + '/images/**/*.{png,jpg,jpeg,ico,gif,svg}',
+    imagesDist: BASE_STATIC_PATH + "/images",
+    sprite: BASE_STATIC_PATH + '/images/sprite/!(sprite.png|*.css)',
+    cdnDist: BASE_STATIC_PATH + "/cdn",
+    fontsDist: BASE_STATIC_PATH + "/fonts"
 };
 
 // JS压缩
 gulp.task('js', function () {
-    return gulp.src('app/static/scripts/**/*.js')
-        .pipe(plumber()) // 错误提示
+    return gulp.src(PATHS.scripts)
+        // .pipe(plumber()) // 错误提示
         // .pipe(concat({ext: '.js'})) //合并同一目录下的所有文件
-        .pipe(stripDebug())
-        .pipe(babel())
-        .pipe(uglify())
-        .pipe(gulp.dest('app/static/js'))
+        // .pipe(stripDebug())
+        // .pipe(babel())
+        // .pipe(uglify())
+        // .pipe(gulp.dest('app/static/js'))
+        .pipe(browserSync.reload({stream:true}))
 });
 
 // scss编译
 gulp.task('sass', function (cb) { // cb是传入的回调函数
 
-    return gulp.src("app/static/scss/**/*.scss")
+    return gulp.src(PATHS.scss)
     // .pipe(plumber())
         .pipe(sass({
             sourcemaps: true,
@@ -71,44 +91,40 @@ gulp.task('sass', function (cb) { // cb是传入的回调函数
         .pipe(autoprefixer({
             // browsers: ['> 1%', 'not ie <= 8']
         }))
-        // .pipe(sourcemaps.write())
-        .pipe(gulp.dest('app/static/scss'))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(PATHS.scssDist))
+        .pipe(browserSync.reload({stream:true}))
 
-    // return gulp.src(paths.scss)
-    //     .pipe(sass({
-    //         sourcemaps: true,
-    //         includePaths: [bourbon, neat]
-    //     }))
-    //     .pipe(autoprefixer("last 2 versions"))
-    //     .pipe(gulp.dest("./source/assets/stylesheets"))
 
-    // cb(err);        // 如果 err 不是 null 和 undefined，流程会被结束掉，'two' 不会被执行
+    cb(err);        // 如果 err 不是 null 和 undefined，流程会被结束掉，'two' 不会被执行
 });
 
 
 // less编译
 gulp.task('less', function () {
-    return gulp.src("app/static/css/theme/**/_output.less")
+    return gulp.src(PATHS.lessOutput) // 注意，只解析_output.less这样的单文件
         .pipe(plumber())
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
         .pipe(minifyCss())
-        .pipe(gulp.dest('app/static/css/theme'))
+        .pipe(gulp.dest(PATHS.lessDist))
+        .pipe(browserSync.reload({stream:true}))
 });
 
 // HTML压缩
-// gulp.task('html', function () {
-//     return gulp.src('app/views/**/*.html')
-//         .pipe(plumber())
-//         .pipe(minifyHtml())
-//         .pipe(gulp.dest('app/html'))
-// });
+gulp.task('html', function () {
+    return gulp.src(PATHS.html)
+        // .pipe(plumber())
+        // .pipe(minifyHtml())
+        // .pipe(gulp.dest('app/html'))
+        .pipe(browserSync.reload({stream:true}))
+});
 
 
 // 图片压缩
 gulp.task('images', function () {
-    return gulp.src('app/static/images/**/*.{png,jpg,jpeg,ico,gif,svg}')
+    return gulp.src(PATHS.images)
         .pipe(plumber())
         .pipe(imagemin({
             optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
@@ -117,40 +133,57 @@ gulp.task('images', function () {
             multipass: true, //类型：Boolean 默认：false 多次优化svg直到完全优化
             use: [pngquant()] // 使用 pngquant 深度压缩 png 图片
         }))
-        .pipe(gulp.dest('app/static/images'))
+        .pipe(gulp.dest(PATHS.imagesDist))
+        // .pipe(browserSync.reload({stream:true}))
 });
 
 // 雪碧图
 // 此功能是单一的并不与其他功能串联
 gulp.task('sprite', function () {
-    return gulp.src('app/static/images/sprite/!(sprite.png|*.css)')
+    return gulp.src(PATHS.sprite)
         .pipe(spritesmith({
             imgName: 'ico.png',
             cssName: 'sprite.css'
         }))
-        .pipe(gulp.dest('app/static/images'));
+        .pipe(gulp.dest(PATHS.imagesDist));
 });
 
 // 浏览器同步刷新
-gulp.task('serve', function() {
+gulp.task('sync', function() {
     browserSync.init({
-        proxy: "deva.dev",
-        port: 3001,
-        open: "ui",
-        ui: {port: 3005}
+        // proxy: "deva.dev",
+        port: 80, //
+        // open: "ui",
+        // ui: {
+        //     port: 3005
+        // },
+        // browser: ["chrome", "firefox"],
+        browser: "chrome",
+        server: {
+            baseDir: [BASE_VIEWS_PATH],
+            index: "index.html",
+            routes: {
+                "/css": PATHS.cssDist,
+                "/images": PATHS.imagesDist,
+                "/cdn": PATHS.cdnDist,
+                "/scripts": PATHS.scriptsDist,
+                "/scss": PATHS.scssDist
+            }
+        },
+        startPath: "index.html"
     });
 });
 
 
 // 删除dist/*下的所有文件
 gulp.task('clean', function () {
-    return gulp.src('app/static/js/*', {read: false})
+    return gulp.src([PATHS.jsDist], {read: false})
         .pipe(clean())
 });
 
 
 // 打包
-gulp.task('public', function () {
+gulp.task('release', function () {
     return gulp.src('dist/*')
         .pipe(plumber())
         .pipe(zip('public.zip'))
@@ -159,19 +192,17 @@ gulp.task('public', function () {
 
 // watch监听
 gulp.task('watch', function () {
-    // gulp.watch('app/static/scripts/**/*.js', ['js']);
-    // gulp.watch('app/static/scss/**/*.scss', ['sass']);
-    // gulp.watch(paths.scss, ["sass"]);
-    gulp.watch('app/static/css/**/*.less', ['less']);
-
-    // gulp.watch('app/views/**/*.html', ['html']);
+    gulp.watch(PATHS.scripts, ['js']);
+    gulp.watch(PATHS.scss, ['sass']);
+    gulp.watch(PATHS.less, ['less']);
+    gulp.watch(PATHS.html, ['html']);
 });
 
 
-// gulp是并行的，需要指定一下顺序
+// gulp是并行的，
+// 需要指定一下顺序
 gulp.task('redist', function () {
-    // runSequence('clean', ['sass', 'less', 'js', 'images', 'watch'])
-    runSequence('clean', ['less', 'watch'])
+    runSequence('clean', ['sync', 'html', 'less', 'sass','js', 'watch'])
 });
 
 // gulp命令 默认执行
