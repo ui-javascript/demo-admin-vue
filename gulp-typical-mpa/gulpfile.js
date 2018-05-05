@@ -1,9 +1,13 @@
-// (NICE)https://www.cnblogs.com/zhangyuezhen/p/7896047.html
-// 代码检查可参考
-// https://github.com/271626514/gulp-demo
-// https://segmentfault.com/a/1190000010138466
-// (NICE)https://github.com/mjzhang1993/gulp-template
-
+/**
+ * 主要内容参考 (NICE)https://www.cnblogs.com/zhangyuezhen/p/7896047.html
+ *
+ * eslint
+ *
+ * https://github.com/271626514/gulp-demo
+ * https://segmentfault.com/a/1190000010138466
+ *
+ * 辅助功能参考 (NICE)https://github.com/mjzhang1993/gulp-template
+ */
 
 // 严格模式
 'use strict';
@@ -49,29 +53,27 @@ var gulp = require('gulp'),
     stripDebug = require('gulp-strip-debug');
 
 // 路径
-var BASE_DEV_PATH = "./src";
-var BASE_VIEWS_PATH = "./src/views";
-var BASE_STATIC_PATH = "./assets";
-var BASE_DIST_PATH = "./dist";
+var PATH_DEV = "./src";
+var PATH_VIEWS = "./src/views";
+var PATH_ASSETS = "./assets";
 
 var PATHS = {
-    html: BASE_VIEWS_PATH + "/**/*.html",
-    htmlDist: BASE_VIEWS_PATH,
-    scss: BASE_DEV_PATH + "/scss/**/*.scss",
-    scssDist: BASE_DEV_PATH + "/scss",
-    less: BASE_DEV_PATH + "/css/**/*.less",
-    lessOutput: BASE_DEV_PATH + "/css/theme/**/_output.less",
-    lessDist: BASE_DEV_PATH + "/css/theme",
-    cssDist: BASE_DEV_PATH + "/css",
-    scripts: BASE_DEV_PATH + "/scripts/**/*.js",
-    scriptsDist: BASE_DEV_PATH + "/scripts",
-    jsDist: BASE_DIST_PATH + "/js",
-    images: BASE_STATIC_PATH + '/images/**/*.{png,jpg,jpeg,ico,gif,svg}',
-    imagesDist: BASE_STATIC_PATH + "/images",
-    sprite: BASE_STATIC_PATH + '/images/sprite/!(sprite.png|*.css)',
-    plusDist: BASE_STATIC_PATH + "/plus",
-    fontsDist: BASE_STATIC_PATH + "/fonts",
-    mockDist: BASE_STATIC_PATH + "/mock"
+    html: PATH_VIEWS + "/**/*.html",
+    htmlFolder: PATH_VIEWS,
+    scss: PATH_DEV + "/scss/**/*.scss",
+    scssFolder: PATH_DEV + "/scss",
+    less: PATH_DEV + "/css/**/*.less",
+    lessOutput: PATH_DEV + "/css/theme/**/_output.less",
+    lessFolder: PATH_DEV + "/css/theme",
+    cssFolder: PATH_DEV + "/css",
+    scripts: PATH_DEV + "/scripts/**/*.js",
+    scriptsFolder: PATH_DEV + "/scripts",
+    images: PATH_ASSETS + '/images/**/*.{png,jpg,jpeg,ico,gif,svg}',
+    imagesFolder: PATH_ASSETS + "/images",
+    sprite: PATH_ASSETS + '/images/sprite/!(sprite.png|*.css)',
+    plusFolder: PATH_ASSETS + "/plus",
+    fontsFolder: PATH_ASSETS + "/fonts",
+    mockFolder: PATH_ASSETS + "/mock"
 };
 
 
@@ -90,8 +92,8 @@ gulp.task('reloadSass', function (cb) { // cb是传入的回调函数
             // browsers: ['> 1%', 'not ie <= 8']
         }))
         // .pipe(sourcemaps.write())
-        .pipe(gulp.dest(PATHS.scssDist))
-        // .pipe(reload({stream: true}))
+        .pipe(gulp.dest(PATHS.scssFolder))
+    // .pipe(reload({stream: true}))
 
 
     cb(err);  // 如果 err 不是 null 和 undefined，流程会被结束掉，'two' 不会被执行
@@ -101,17 +103,16 @@ gulp.task('reloadSass', function (cb) { // cb是传入的回调函数
 // less编译
 gulp.task('reloadLess', function (cb) {
     return gulp.src(PATHS.lessOutput) // 注意，只解析_output.less这样的单文件
-        .pipe(plumber({errorHandler:notify.onError('Error:<%=error.message%>')}))
+        .pipe(plumber({errorHandler: notify.onError('Error:<%=error.message%>')}))
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
         .pipe(minifyCss())
         // .pipe(sourcemaps.write())
-        .pipe(gulp.dest(PATHS.lessDist))
+        .pipe(gulp.dest(PATHS.lessFolder))
 
     cb(err);
 });
-
 
 
 // 浏览器同步刷新
@@ -128,15 +129,16 @@ gulp.task('sync', function () {
         // browser: ["chrome", "firefox"],
         browser: "chrome",
         server: {
-            baseDir: [BASE_VIEWS_PATH],
+            baseDir: [PATH_VIEWS],
             index: "index.html",
             routes: {
-                "/css": PATHS.cssDist,
-                "/images": PATHS.imagesDist,
-                "/plus": PATHS.plusDist,
-                "/scripts": PATHS.scriptsDist,
-                "/scss": PATHS.scssDist,
-                "/mock": PATHS.mockDist
+                "/css": PATHS.cssFolder,
+                "/images": PATHS.imagesFolder,
+                "/plus": PATHS.plusFolder,
+                "/scripts": PATHS.scriptsFolder,
+                "/scss": PATHS.scssFolder,
+                "/mock": PATHS.mockFolder,
+                "/fonts/": PATHS.fontsFolder
             }
         },
         // startPath: "index.html"
@@ -156,6 +158,20 @@ gulp.task('default', function () {
 });
 
 
+// =====================================
+// =====================================
+
+
+// CSS监听
+gulp.task('cssWatch', function () {
+    gulp.watch(PATHS.less, ['reloadLess']);
+    gulp.watch(PATHS.scss, ['reloadSass']);
+});
+
+gulp.task('cssJob', function () {
+    runSequence('clean', ['reloadSass', 'reloadLess'], 'cssWatch')
+});
+
 
 // ====================================
 // ====================================
@@ -168,10 +184,8 @@ gulp.task('sprite', function () {
             imgName: 'ico.png',
             cssName: 'sprite.css'
         }))
-        .pipe(gulp.dest(PATHS.imagesDist));
+        .pipe(gulp.dest(PATHS.imagesFolder));
 });
-
-
 
 
 // =====================================
@@ -198,7 +212,7 @@ gulp.task('images', function () {
             multipass: true, //类型：Boolean 默认：false 多次优化svg直到完全优化
             use: [pngquant()] // 使用 pngquant 深度压缩 png 图片
         }))
-        .pipe(gulp.dest(PATHS.imagesDist))
+        .pipe(gulp.dest(PATHS.imagesFolder))
     // .pipe(browserSync.reload({stream:true}))
 });
 
@@ -245,7 +259,7 @@ gulp.task('distSass', function (cb) { // cb是传入的回调函数
 // less编译
 gulp.task('distLess', function () {
     return gulp.src(PATHS.lessOutput) // 注意，只解析_output.less这样的单文件
-        .pipe(plumber({errorHandler:notify.onError('Error:<%=error.message%>')}))
+        .pipe(plumber({errorHandler: notify.onError('Error:<%=error.message%>')}))
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
@@ -274,16 +288,3 @@ gulp.task('release', function () {
 });
 
 
-// =====================================
-// =====================================
-
-
-// CSS监听
-gulp.task('cssWatch', function () {
-    gulp.watch(PATHS.less, ['distLess']);
-    gulp.watch(PATHS.scss, ['distSass']);
-});
-
-gulp.task('cssJob',function () {
-    runSequence('clean', ['distSass', 'distLess'], 'cssWatch')
-});
