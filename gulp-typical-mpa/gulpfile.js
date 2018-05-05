@@ -1,7 +1,8 @@
-// https://www.cnblogs.com/zhangyuezhen/p/7896047.html
+// (NICE)https://www.cnblogs.com/zhangyuezhen/p/7896047.html
 // 代码检查可参考
 // https://github.com/271626514/gulp-demo
 // https://segmentfault.com/a/1190000010138466
+// (NICE)https://github.com/mjzhang1993/gulp-template
 
 
 // 严格模式
@@ -41,7 +42,7 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     clean = require('gulp-clean'), // 用来删除文件
 
-    browserSync = require('browser-sync'),
+    browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
 
     stripDebug = require('gulp-strip-debug');
@@ -72,21 +73,15 @@ var PATHS = {
     mockDist: BASE_STATIC_PATH + "/mock"
 };
 
-// JS压缩
-gulp.task('js', function () {
-    return gulp.src(PATHS.scripts)
-        .pipe(browserSync.reload({stream:true}))
-});
 
 // scss编译
-gulp.task('sass', function (cb) { // cb是传入的回调函数
+gulp.task('reloadSass', function (cb) { // cb是传入的回调函数
 
     return gulp.src(PATHS.scss)
-        // .pipe(plumber())
         .pipe(sass({
             sourcemaps: true,
             includePaths: [bourbon, neat]
-        }))
+        }).on('error', sass.logError))
         // .pipe(concat({ext: '.css'}))
         // .pipe(rename('all.min.css'))
         .pipe(minifyCss())
@@ -95,8 +90,7 @@ gulp.task('sass', function (cb) { // cb是传入的回调函数
         }))
         // .pipe(sourcemaps.write())
         .pipe(gulp.dest(PATHS.scssDist))
-        .pipe(browserSync.reload({stream:true}))
-
+        // .pipe(reload({stream: true}))
 
 
     cb(err);  // 如果 err 不是 null 和 undefined，流程会被结束掉，'two' 不会被执行
@@ -104,28 +98,24 @@ gulp.task('sass', function (cb) { // cb是传入的回调函数
 
 
 // less编译
-gulp.task('less', function () {
+gulp.task('reloadLess', function (cb) {
     return gulp.src(PATHS.lessOutput) // 注意，只解析_output.less这样的单文件
-        .pipe(browserSync.reload({stream:true}))
-        .pipe(plumber())
+        // .pipe(plumber())
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
         .pipe(minifyCss())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest(PATHS.lessDist))
 
+    cb(err);
 });
 
-// HTML压缩
-gulp.task('html', function () {
-    return gulp.src(PATHS.html)
-        .pipe(browserSync.reload({stream:true}))
-});
 
 
 // 浏览器同步刷新
 // http://www.browsersync.cn/docs/gulp/
-gulp.task('sync', function() {
+gulp.task('sync', function () {
     browserSync.init({
         // proxy: "deva.dev",
         port: 80, //
@@ -150,23 +140,17 @@ gulp.task('sync', function() {
         },
         // startPath: "index.html"
     });
+
+    // 文件监听
+    gulp.watch(PATHS.html).on('change', reload);
+    gulp.watch(PATHS.scripts).on('change', reload);
+    gulp.watch(PATHS.scss, ['reloadSass']).on('change', reload);
+    gulp.watch(PATHS.less, ['reloadLess']).on('change', reload);
 });
 
-// watch监听
-gulp.task('watch', function () {
-    gulp.watch(PATHS.scripts, ['js']);
-    gulp.watch(PATHS.scss, ['sass']);
-    gulp.watch(PATHS.less, ['less']);
-    gulp.watch(PATHS.html, ['html']);
-});
 
 
-
-// gulp是并行的，
-// 需要指定一下顺序
-gulp.task('default', function () {
-    runSequence('sync', ['html', 'less', 'sass','js', 'watch'])
-});
+gulp.task('default', ['sync']);
 
 
 
@@ -184,15 +168,18 @@ gulp.task('sprite', function () {
         .pipe(gulp.dest(PATHS.imagesDist));
 });
 
+
+
+
 // =====================================
 // =====================================
 
 // 删除dist/*下的所有文件
 gulp.task('clean', function () {
     return gulp.src(['./assets/scripts/*',
-        './assets/css/*', './assets/scss/*',
-        './templates/*',
-        './dist/*'],
+            './assets/css/*', './assets/scss/*',
+            './templates/*',
+            './dist/*'],
         {read: false})
         .pipe(clean())
 });
@@ -226,16 +213,16 @@ gulp.task('distJs', function () {
 // 缩编HTML
 gulp.task('distHtml', function () {
     return gulp.src(PATHS.html)
-    .pipe(plumber())
-    .pipe(minifyHtml())
-    .pipe(gulp.dest('./templates'))
+        .pipe(plumber())
+        .pipe(minifyHtml())
+        .pipe(gulp.dest('./templates'))
 });
 
 // scss编译
 gulp.task('distSass', function () { // cb是传入的回调函数
 
     return gulp.src(PATHS.scss)
-    // .pipe(plumber())
+        .pipe(plumber())
         .pipe(sass({
             sourcemaps: true,
             includePaths: [bourbon, neat]
@@ -275,5 +262,20 @@ gulp.task('zip', function () {
 // 发布
 gulp.task('release', function () {
     // runSequence('clean', 'images', ['distHtml', 'distLess', 'distSass','distJs'], 'unzip')
-    runSequence('clean', ['distHtml', 'distLess', 'distSass','distJs'], 'zip')
+    runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'zip')
+});
+
+
+// =====================================
+// =====================================
+
+
+// CSS监听
+gulp.task('cssWatch', function () {
+    gulp.watch(PATHS.less, ['distLess']);
+    gulp.watch(PATHS.scss, ['distSass']);
+});
+
+gulp.task('cssOutput',function () {
+    runSequence('clean', ['distSass', 'distLess', 'cssWatch'])
 });
