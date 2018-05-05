@@ -8,7 +8,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const cssnano = require('cssnano');
 const autoprefixer = require('autoprefixer');
-const entries = require('./entries');
+const routers = require('./routers');
+
+
 //环境变量，开发环境或者生产环境，npm将通过这个值来区分打包。
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -40,7 +42,6 @@ module.exports = {
         //提取公共包
         'vendor0': ['vue'],
         'vendor1': ['react', 'react-dom'],
-        //...'vendor2': ['...'],
         //您还可以在此添加其他公共包,但请记得也在CommonsChunkPlugin配置中添加。
     }, entrys()),
     plugins: [
@@ -53,6 +54,8 @@ module.exports = {
             // minChunks: Infinity,
             minChunks: 1
         }),
+
+
         //静态文件包，直接copy到发布目录。
         new CopyWebpackPlugin([{from: './statics', to: './statics'}])]
 
@@ -63,7 +66,8 @@ module.exports = {
                 new BrowserSyncPlugin({
                         server: {
                             baseDir: "dist",
-                            index: "page0.html"
+                            index: "page0.html",
+                            directory: true
                         }
                     },
                     {reload: true}
@@ -137,20 +141,21 @@ module.exports = {
  */
 function entrys() {
     let obj = {};
-    entries.forEach(function (item) {
+    routers.forEach(function (item) {
         obj[item.filename] = item.entry;
     });
     return obj;
 }
+
 /**
  * 返回HtmlWebpackPlugin插件数组
  * @returns {Array}
  */
 function htmlPlugins() {
     let htmls = [];
-    entries.forEach(function (item) {
+    routers.forEach(function (item) {
         item.chunks = ['manifest'].concat(item.chunks).concat([item.filename]);
-        item.template = item.template || './template.ejs';//默认使用这个指定的ejs
+        item.template = item.template || './template.ejs'; //默认使用这个指定的ejs
         item.minify = {minifyJS: true, minifyCSS: true};
         item.chunksSortMode = function (...age) {
             let order = item.chunks.concat([]);
