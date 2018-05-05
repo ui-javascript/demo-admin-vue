@@ -108,9 +108,10 @@ const config = {
 
   resolve: {
     modules: ['src', 'node_modules'],
-    extensions: ['.js', '.html', '.scss'],
+    extensions: ['.js', '.html', 'ejs', '.scss'],
     alias: {
-      '@': path.resolve('src')
+      '@': path.resolve('src'),
+      '~': path.resolve('assets')
     }
   }
 }

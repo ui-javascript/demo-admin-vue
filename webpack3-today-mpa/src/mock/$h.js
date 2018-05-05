@@ -1,4 +1,7 @@
-const CDN = process.env.NODE_ENV === 'development' ? '/' : '//lrcdn.cn/project/'
+// const CDN_URL = '//lrcdn.cn/project/'
+const CDN_URL = './'
+
+const CDN = process.env.NODE_ENV === 'development' ? '/' : CDN_URL
 
 module.exports = {
   getStyles: function (styles) {
