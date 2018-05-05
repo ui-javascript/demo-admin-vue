@@ -53,6 +53,10 @@ file>settings>Lauguages & Frameworks>javascript
 - https://github.com/rt-zhangxuefei/vue-project-multipages-template
 
 
-# IE8
+# IE8解决方案
 
-- 两个Avalon貌似已经唧唧...
+- san
+- avalon
+- knockout
+- react/regular
+

@@ -64,3 +64,10 @@ run.log
 .cache/
 
 #dist/
+
+/gulp-typical-mpa/dist.zip
+/gulp-typical-mpa/dist/*
+/gulp-typical-mpa/assets/css/*
+/gulp-typical-mpa/assets/scss/*
+/gulp-typical-mpa/assets/scripts/*
+/gulp-typical-mpa/templates/*
