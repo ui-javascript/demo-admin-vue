@@ -35,6 +35,7 @@ export default {
   }
 }
 </script>
+
 <style scoped lang="stylus" rel="stylesheet/stylus">
 
 .slide-enter, .slide-leave-to
