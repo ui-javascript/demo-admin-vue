@@ -17,6 +17,7 @@ var gulp = require('gulp'),
 
     concat = require('gulp-concat-dir'), // 管合并，可以合并同一目录下的所有文件，好处是可以减少网络请求
     plumber = require('gulp-plumber'),   //错误处理提示插件
+    notify = require('gulp-notify'),
     zip = require('gulp-zip'),  // 压缩文件
     rename = require('gulp-rename'),
     babel = require('gulp-babel'),
@@ -100,7 +101,7 @@ gulp.task('reloadSass', function (cb) { // cb是传入的回调函数
 // less编译
 gulp.task('reloadLess', function (cb) {
     return gulp.src(PATHS.lessOutput) // 注意，只解析_output.less这样的单文件
-        // .pipe(plumber())
+        .pipe(plumber({errorHandler:notify.onError('Error:<%=error.message%>')}))
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
@@ -149,8 +150,10 @@ gulp.task('sync', function () {
 });
 
 
-
-gulp.task('default', ['sync']);
+// 默认任务
+gulp.task('default', function () {
+    runSequence('clean', ['sync'])
+});
 
 
 
@@ -219,14 +222,13 @@ gulp.task('distHtml', function () {
 });
 
 // scss编译
-gulp.task('distSass', function () { // cb是传入的回调函数
+gulp.task('distSass', function (cb) { // cb是传入的回调函数
 
     return gulp.src(PATHS.scss)
-        .pipe(plumber())
         .pipe(sass({
             sourcemaps: true,
             includePaths: [bourbon, neat]
-        }))
+        }).on('error', sass.logError))
         // .pipe(concat({ext: '.css'}))
         // .pipe(rename('all.min.css'))
         .pipe(minifyCss())
@@ -235,18 +237,21 @@ gulp.task('distSass', function () { // cb是传入的回调函数
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./assets/scss'))
+
+    cb(err)
 });
 
 
 // less编译
 gulp.task('distLess', function () {
     return gulp.src(PATHS.lessOutput) // 注意，只解析_output.less这样的单文件
-        .pipe(plumber())
+        .pipe(plumber({errorHandler:notify.onError('Error:<%=error.message%>')}))
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
         .pipe(minifyCss())
         .pipe(gulp.dest('./assets/css/theme'))
+
 });
 
 
@@ -262,7 +267,8 @@ gulp.task('zip', function () {
 // 发布
 gulp.task('release', function () {
     // runSequence('clean', 'images', ['distHtml', 'distLess', 'distSass','distJs'], 'unzip')
-    runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'zip')
+    runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'zip', 'clean')
+    // runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'clean')
 });
 
 
@@ -277,5 +283,5 @@ gulp.task('cssWatch', function () {
 });
 
 gulp.task('cssOutput',function () {
-    runSequence('clean', ['distSass', 'distLess', 'cssWatch'])
+    runSequence('clean', ['distSass', 'distLess'], 'cssWatch')
 });
