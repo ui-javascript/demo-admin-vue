@@ -258,7 +258,9 @@ gulp.task('distLess', function () {
 // 压缩
 gulp.task('zip', function () {
 
-    return gulp.src(["templates/**", "assets/**"])
+    return gulp.src(['**/*.*',
+        '!{node_modules,cmd,src}/**/*.*',
+        '!{dist.zip,gulpfile.js,package.json,package-lock.json,README.md}'])
         .pipe(plumber())
         .pipe(zip('dist.zip'))
         .pipe(gulp.dest('./'))
@@ -266,7 +268,7 @@ gulp.task('zip', function () {
 
 // 发布
 gulp.task('release', function () {
-    // runSequence('clean', 'images', ['distHtml', 'distLess', 'distSass','distJs'], 'unzip')
+    // runSequence('clean', 'images', ['distHtml', 'distLess', 'distSass','distJs'], 'zip')
     runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'zip', 'clean')
     // runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'clean')
 });
@@ -282,6 +284,6 @@ gulp.task('cssWatch', function () {
     gulp.watch(PATHS.scss, ['distSass']);
 });
 
-gulp.task('cssOutput',function () {
+gulp.task('cssJob',function () {
     runSequence('clean', ['distSass', 'distLess'], 'cssWatch')
 });
