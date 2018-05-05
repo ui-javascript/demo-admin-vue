@@ -1,4 +1,8 @@
+// 主要为了抽离css样式
+// 防止将样式打包在js中引起页面样式加载错乱的现象
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+
 const helpers = require('../utils/helpers')
 const consts = require('../utils/consts')
 const path = require('path')
@@ -97,8 +101,11 @@ const config = {
   },
   plugins: [
     new ExtractTextPlugin(`${consts.STYLES}[name].css`),
+
+    // 多个new HtmlWebpackPlugin()
     ...helpers.getPlugins()
   ],
+
   resolve: {
     modules: ['src', 'node_modules'],
     extensions: ['.js', '.html', '.scss'],

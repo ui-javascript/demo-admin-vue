@@ -1,13 +1,22 @@
+/**
+ * 路径常量
+ */
 const path = require('path')
 
 // 开发、调试端口
 const DEV_PORT = 8083
+
+
+const ROOT = path.resolve(__dirname)
+
 // 源码目录
 const SRC = path.resolve('../src')
 // 构建目录
 const DIST = path.resolve('../dist')
+
 // 页面目录
-const VIEWS = `${SRC}/views`
+const VIEWS = `${SRC}/templates`
+
 // 静态资源目录
 const STATIC = `${SRC}/static`
 // 脚本路径
