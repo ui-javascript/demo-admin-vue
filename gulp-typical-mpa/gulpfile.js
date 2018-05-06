@@ -26,7 +26,9 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     babel = require('gulp-babel'),
     sourcemaps = require('gulp-sourcemaps'),
-    runSequence = require('gulp-run-sequence'), // 控制task中的串行和并行
+
+    // gulp-run-sequence -> run-sequence
+    runSequence = require('run-sequence'), // 控制task中的串行和并行
 
     uglify = require('gulp-uglify'),
 
@@ -35,7 +37,6 @@ var gulp = require('gulp'),
     bourbon = require("bourbon").includePaths,
     neat = require("bourbon-neat").includePaths,
 
-    minifyCss = require('gulp-minify-css'),
     cleanCss = require('gulp-clean-css'),
     autoprefixer = require('gulp-autoprefixer'),
 
@@ -62,10 +63,10 @@ var PATHS = {
     htmlFolder: PATH_VIEWS,
     scss: PATH_DEV + "/scss/**/*.scss",
     scssFolder: PATH_DEV + "/scss",
-    less: PATH_DEV + "/css/**/*.less",
-    lessOutput: PATH_DEV + "/css/theme/**/_output.less",
-    lessFolder: PATH_DEV + "/css/theme",
-    cssFolder: PATH_DEV + "/css",
+    less: PATH_DEV + "/less/**/*.less",
+    lessDevOutput: PATH_DEV + "/less/theme/**/_output.less",
+    lessDevThemeFolder: PATH_DEV + "/less/theme",
+    lessDevFolder: PATH_DEV + "/less",
     scripts: PATH_DEV + "/scripts/**/*.js",
     scriptsFolder: PATH_DEV + "/scripts",
     images: PATH_ASSETS + '/images/**/*.{png,jpg,jpeg,ico,gif,svg}',
@@ -87,7 +88,7 @@ gulp.task('reloadSass', function (cb) { // cb是传入的回调函数
         }).on('error', sass.logError))
         // .pipe(concat({ext: '.css'}))
         // .pipe(rename('all.min.css'))
-        .pipe(minifyCss())
+        .pipe(cleanCss())
         .pipe(autoprefixer({
             // browsers: ['> 1%', 'not ie <= 8']
         }))
@@ -102,14 +103,14 @@ gulp.task('reloadSass', function (cb) { // cb是传入的回调函数
 
 // less编译
 gulp.task('reloadLess', function (cb) {
-    return gulp.src(PATHS.lessOutput) // 注意，只解析_output.less这样的单文件
+    return gulp.src(PATHS.lessDevOutput) // 注意，只解析_output.less这样的单文件
         .pipe(plumber({errorHandler: notify.onError('Error:<%=error.message%>')}))
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
-        .pipe(minifyCss())
+        .pipe(cleanCss())
         // .pipe(sourcemaps.write())
-        .pipe(gulp.dest(PATHS.lessFolder))
+        .pipe(gulp.dest(PATHS.lessDevThemeFolder))
 
     cb(err);
 });
@@ -132,13 +133,20 @@ gulp.task('sync', function () {
             baseDir: [PATH_VIEWS],
             index: "index.html",
             routes: {
-                "/css": PATHS.cssFolder,
-                "/images": PATHS.imagesFolder,
-                "/plus": PATHS.plusFolder,
-                "/scripts": PATHS.scriptsFolder,
+                "/css": PATHS.lessDevFolder,
+                "css": PATHS.lessDevFolder,
                 "/scss": PATHS.scssFolder,
+                "scss": PATHS.scssFolder,
+                "/images": PATHS.imagesFolder,
+                "images": PATHS.imagesFolder,
+                "/plus": PATHS.plusFolder,
+                "plus": PATHS.plusFolder,
+                "/scripts": PATHS.scriptsFolder,
+                "scripts": PATHS.scriptsFolder,
                 "/mock": PATHS.mockFolder,
-                "/fonts/": PATHS.fontsFolder
+                "mock": PATHS.mockFolder,
+                "/fonts": PATHS.fontsFolder,
+                "fonts": PATHS.fontsFolder
             }
         },
         // startPath: "index.html"
@@ -245,7 +253,7 @@ gulp.task('distSass', function (cb) { // cb是传入的回调函数
         }).on('error', sass.logError))
         // .pipe(concat({ext: '.css'}))
         // .pipe(rename('all.min.css'))
-        .pipe(minifyCss())
+        .pipe(cleanCss())
         .pipe(autoprefixer({
             // browsers: ['> 1%', 'not ie <= 8']
         }))
@@ -258,12 +266,12 @@ gulp.task('distSass', function (cb) { // cb是传入的回调函数
 
 // less编译
 gulp.task('distLess', function () {
-    return gulp.src(PATHS.lessOutput) // 注意，只解析_output.less这样的单文件
+    return gulp.src(PATHS.lessDevOutput) // 注意，只解析_output.less这样的单文件
         .pipe(plumber({errorHandler: notify.onError('Error:<%=error.message%>')}))
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
-        .pipe(minifyCss())
+        .pipe(cleanCss())
         .pipe(gulp.dest('./static/css/theme'))
 
 });
@@ -282,7 +290,7 @@ gulp.task('zip', function () {
 
 // 发布
 gulp.task('release', function () {
-    // runSequence('clean', 'images', ['distHtml', 'distLess', 'distSass','distJs'], 'zip')
+    // runSequence('clean', 'images', ['distHtml', 'distLess', 'distSass','distJs'], 'zip', 'clean')
     runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'zip', 'clean')
     // runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'clean')
 });
