@@ -1,26 +1,5 @@
 # 布局类组件
 
-- 创新点
-
-    - 可暂停
-    - 分页与轮播的结合
-    - 建议静态轮播(普通轮播烂大街但客户实际很少点击)
-
-```shell
-// 暂停实现
-camera.js
-```
-    
-- 其他    
-```shell
-// 什么东西?
-<div style="text-align:center;clear:both">
-    <script src="/gg_bd_ad_720x90.js"></script>
-    <script src="/follow.js"></script>
-</div>
-
-广告和服务器的相对路径文件,下载下来以后不需要
-```
 
 # Parcel 配置
 
@@ -45,12 +24,15 @@ file>settings>Lauguages & Frameworks>javascript
 
 # webpack
 
-- webpack-study https://github.com/qq20004604/webpack-study
-- 静态站点 https://github.com/vhtml/webpack-MultiPage-static
-- https://github.com/ruanyf/css-modules-demos
-- https://github.com/css-modules/webpack-demo
-- https://www.jianshu.com/p/63eacd66eb50du
-- https://github.com/rt-zhangxuefei/vue-project-multipages-template
+- webpack 自身只理解 JavaScript, 其他都当做模块处理
+
+- 参考
+    - webpack-study https://github.com/qq20004604/webpack-study
+    - 静态站点 https://github.com/vhtml/webpack-MultiPage-static
+    - https://github.com/ruanyf/css-modules-demos
+    - https://github.com/css-modules/webpack-demo
+    - https://www.jianshu.com/p/63eacd66eb50du
+    - https://github.com/rt-zhangxuefei/vue-project-multipages-template
 
 
 # IE8解决方案
