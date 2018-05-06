@@ -3,9 +3,9 @@
  * QQ: 20004604
  * weChat: qq20004604
  */
-import './userInfo.less'
+import '../../components/userInfo/userInfo.less'
 import {insertTemplate} from '../../common/public'
-import '../../less/reset.css'
+import '../../static/css/reset.css'
 
 const $ = require('../../common/jquery.min')
 
@@ -13,7 +13,7 @@ let userInfo = {
     userName: localStorage.userName,
     password: localStorage.password
 }
-let template = require('./userInfo_container.html')
+let template = require('../../components/userInfo/userInfo_container.html')
 
 template = template.replace(/{{[^}]+}}/g, str => {
     str = str.replace('{{', '')
@@ -26,7 +26,7 @@ insertTemplate(template, $('#container'))
 $("#async-btn").click(function () {
     $("#async-btn").hide()
     $("#loading").show()
-    require(['./async.js'], function () {
+    require(['../../components/async/async.js'], function () {
         $("#loading").hide()
     }, function () {
         $("#async-btn").html('加载失败，重新加载')

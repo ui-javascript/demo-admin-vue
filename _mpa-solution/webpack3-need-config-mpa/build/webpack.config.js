@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack')
 // 多入口管理文件
-const entryJSON = require('../src/router/entry.json');
+const entryJSON = require('./entry.json');
 // less的全局变量
 const globalLessVars = require('../src/common/global_less_vars')
 const path = require('path')
@@ -78,7 +78,7 @@ module.exports = {
                         loader: 'postcss-loader',
                         options: {
                             config: {
-                                path: './config'
+                                path: './build'
                             },
                             sourceMap: true
                         }

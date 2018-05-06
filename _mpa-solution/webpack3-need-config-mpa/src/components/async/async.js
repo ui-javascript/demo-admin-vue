@@ -13,11 +13,11 @@ let imgArray = []
 
 $("#random").click(function () {
     if (imgArray.length === 0) {
-        imgArray.push(require('./1.jpg'));
-        imgArray.push(require('./2.jpg'));
-        imgArray.push(require('./3.jpg'));
-        imgArray.push(require('./4.jpg'));
-        imgArray.push(require('./5.jpg'));
+        imgArray.push(require('../../pages/userInfo/images/1.jpg'));
+        imgArray.push(require('../../pages/userInfo/images/2.jpg'));
+        imgArray.push(require('../../pages/userInfo/images/3.jpg'));
+        imgArray.push(require('../../pages/userInfo/images/4.jpg'));
+        imgArray.push(require('../../pages/userInfo/images/5.jpg'));
     }
     let img = $(`<img src='${imgArray[0]}'>`)
     imgArray.shift();
