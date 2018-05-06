@@ -33,6 +33,7 @@ nb-configuration.xml
 # Intellij
 .idea
 *.iws
+*.iml
 
 # Mac
 .DS_Store

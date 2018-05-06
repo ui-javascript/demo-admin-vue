@@ -4,6 +4,10 @@
 >config目录下都是webpack相关配置
 包含开发环境配置、打包配置、jsLint配置
 
+
+- 原作者github 
+- IDEA 貌似之前有个BUG. PUG的File type设置去掉*.jade这样就不会打开文件一闪一闪了
+
 ## Build Setup
 
 ``` bash

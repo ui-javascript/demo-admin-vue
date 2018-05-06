@@ -1,7 +1,8 @@
-console.log( 'lib' )
+// console.log( 'lib' )
 import {
 	add
 } from './utils'
+
 export function init() {
 	let btn = document.createElement( 'button' )
 	btn.className = 'btn'
