@@ -10,13 +10,13 @@
   },
   "betterScripts": {
     "dev": {
-      "command": "node src/index.js",
+      "command": "node index.js",
       "env": {
         "NODE_ENV": "development"
       }
     },
     "build": {
-      "command": "node src/index.js",
+      "command": "node index.js",
       "env": {
         "NODE_ENV": "production"
       }

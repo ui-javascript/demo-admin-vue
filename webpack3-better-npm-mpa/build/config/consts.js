@@ -12,24 +12,28 @@ const SRC = path.resolve('../src')
 const DIST = path.resolve('../dist')
 
 // 页面目录
-// const VIEWS = `${SRC}/templates`
-const VIEWS = path.resolve('../templates')
+const VIEWS = `${SRC}/views`
+// const VIEWS = path.resolve('../templates')
 
 // 静态资源目录
-const STATIC = `${SRC}/static`
+const STATIC = `${SRC}/module`
 
 // 脚本路径
 const SCRIPTS = 'static/scripts/'
 // 样式路径
 const STYLES = 'static/styles/'
+
 // 图片路径
 const IMAGES = 'static/images/'
+
+const TEMPLATES = process.env.NODE_ENV === 'development' ? 'views' : 'templates'
 
 // CDN
 // 1. 开发时为：/；
 // 2. 构建时为：//lrcdn.cn/${PROJECT}/；
+
 // const CDN_URL = '//lrcdn.cn/project/'
-const CDN_URL = './'
+const CDN_URL = '/'
 const CDN = process.env.NODE_ENV === 'development' ? '/' : CDN_URL
 
 module.exports = {
@@ -41,5 +45,6 @@ module.exports = {
   SCRIPTS,
   STYLES,
   IMAGES,
-  CDN
+  CDN,
+  TEMPLATES
 }

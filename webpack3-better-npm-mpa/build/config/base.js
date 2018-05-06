@@ -3,8 +3,8 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 
-const helpers = require('../utils/helpers')
-const consts = require('../utils/consts')
+const helpers = require('./helpers')
+const consts = require('./consts')
 const path = require('path')
 
 const config = {
@@ -67,7 +67,7 @@ const config = {
               }
             }
           ],
-          publicPath: '../'
+          // publicPath: '../'
         })
       },
       {
@@ -128,10 +128,10 @@ const config = {
 
   resolve: {
     modules: ['src', 'node_modules'],
-    extensions: ['.js', '.html', 'ejs', '.scss'],
+    extensions: ['.js', '.html', '.scss'],
     alias: {
       '@': path.resolve('src'),
-      '~': path.resolve('assets')
+      '~': path.resolve('src/assets')
     }
   }
 }
