@@ -62,13 +62,14 @@ var PATHS = {
     html: PATH_VIEWS + "/**/*.html",
     htmlFolder: PATH_VIEWS,
     scss: PATH_DEV + "/scss/**/*.scss",
-    scssFolder: PATH_DEV + "/scss",
+    scssDevFolder: PATH_DEV + "/scss",
     less: PATH_DEV + "/less/**/*.less",
     lessDevOutput: PATH_DEV + "/less/theme/**/_output.less",
     lessDevThemeFolder: PATH_DEV + "/less/theme",
     lessDevFolder: PATH_DEV + "/less",
     scripts: PATH_DEV + "/scripts/**/*.js",
-    scriptsFolder: PATH_DEV + "/scripts",
+    scriptsDevFolder: PATH_DEV + "/scripts",
+
     images: PATH_ASSETS + '/images/**/*.{png,jpg,jpeg,ico,gif,svg}',
     imagesFolder: PATH_ASSETS + "/images",
     sprite: PATH_ASSETS + '/images/sprite/!(sprite.png|*.css)',
@@ -93,7 +94,7 @@ gulp.task('reloadSass', function (cb) { // cb是传入的回调函数
             // browsers: ['> 1%', 'not ie <= 8']
         }))
         // .pipe(sourcemaps.write())
-        .pipe(gulp.dest(PATHS.scssFolder))
+        .pipe(gulp.dest(PATHS.scssDevFolder))
     // .pipe(reload({stream: true}))
 
 
@@ -135,14 +136,15 @@ gulp.task('sync', function () {
             routes: {
                 "/css": PATHS.lessDevFolder,
                 "css": PATHS.lessDevFolder,
-                "/scss": PATHS.scssFolder,
-                "scss": PATHS.scssFolder,
+                "/scss": PATHS.scssDevFolder,
+                "scss": PATHS.scssDevFolder,
+                "/scripts": PATHS.scriptsDevFolder,
+                "scripts": PATHS.scriptsDevFolder,
+
                 "/images": PATHS.imagesFolder,
                 "images": PATHS.imagesFolder,
                 "/plus": PATHS.plusFolder,
                 "plus": PATHS.plusFolder,
-                "/scripts": PATHS.scriptsFolder,
-                "scripts": PATHS.scriptsFolder,
                 "/mock": PATHS.mockFolder,
                 "mock": PATHS.mockFolder,
                 "/fonts": PATHS.fontsFolder,
@@ -281,6 +283,8 @@ gulp.task('distLess', function () {
 gulp.task('zip', function () {
 
     return gulp.src(['**/*.*',
+
+        // 排除以下文件
         '!{node_modules,cmd,src}/**/*.*',
         '!{dist.zip,gulpfile.js,package.json,package-lock.json,README.md}'])
         .pipe(plumber())
