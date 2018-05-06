@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === 'production') {
 
   server.listen(consts.DEV_PORT, '127.0.0.1', () => {
     console.log('在http://localhost:' + consts.DEV_PORT + '开跑啦~~~~~')
-    opn(`http://127.0.0.1:${consts.DEV_PORT}/webpack-dev-server/my-view.html`)
+    opn(`http://127.0.0.1:${consts.DEV_PORT}/webpack-dev-server/login.html`)
   })
 
 }

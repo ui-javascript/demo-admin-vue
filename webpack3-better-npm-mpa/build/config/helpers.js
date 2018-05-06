@@ -11,10 +11,9 @@ const consts = require('./consts')
 const getEntry = () => {
   const entry = {}
 
-  fs.readdirSync(consts.STATIC).forEach(value => {
-    const path = `${consts.STATIC}/${value}/scripts`
+  fs.readdirSync(consts.ENTRIES).forEach(value => {
+    const path = `${consts.ENTRIES}/${value}/scripts`
 
-    console.log(path)
     // common文件夹入口
     entry[value] = fs.existsSync(`${path}.js`) ? `${path}.js` : `${path}/index.js`
   })

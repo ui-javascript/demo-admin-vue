@@ -1,4 +1,3 @@
-// const CDN_URL = '//lrcdn.cn/project/'
 const CDN_URL = 'http://127.0.0.1:5000/'
 
 const CDN = process.env.NODE_ENV === 'development' ? '/' : CDN_URL

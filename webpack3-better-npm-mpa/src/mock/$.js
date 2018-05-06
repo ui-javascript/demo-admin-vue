@@ -1,5 +1,4 @@
-// const CDN_URL = '//lrcdn.cn/project/'
-const CDN_URL = './'
+const CDN_URL = 'http://127.0.0.1:5000/'
 
 module.exports = page => {
   const globalData = require('./data/global.json')

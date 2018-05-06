@@ -16,7 +16,7 @@ const VIEWS = `${SRC}/views`
 // const VIEWS = path.resolve('../templates')
 
 // 静态资源目录
-const STATIC = `${SRC}/module`
+const ENTRIES = `${SRC}/entries`
 
 // 脚本路径
 const SCRIPTS = 'static/scripts/'
@@ -41,7 +41,7 @@ module.exports = {
   SRC,
   DIST,
   VIEWS,
-  STATIC,
+  ENTRIES,
   SCRIPTS,
   STYLES,
   IMAGES,
