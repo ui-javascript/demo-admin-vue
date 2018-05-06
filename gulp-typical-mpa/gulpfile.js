@@ -55,7 +55,7 @@ var gulp = require('gulp'),
 // 路径
 var PATH_DEV = "./src";
 var PATH_VIEWS = "./src/views";
-var PATH_ASSETS = "./assets";
+var PATH_ASSETS = "./static";
 
 var PATHS = {
     html: PATH_VIEWS + "/**/*.html",
@@ -193,8 +193,8 @@ gulp.task('sprite', function () {
 
 // 删除dist/*下的所有文件
 gulp.task('clean', function () {
-    return gulp.src(['./assets/scripts/*',
-            './assets/css/*', './assets/scss/*',
+    return gulp.src(['./static/scripts/*',
+            './static/css/*', './static/scss/*',
             './templates/*',
             './dist/*'],
         {read: false})
@@ -224,7 +224,7 @@ gulp.task('distJs', function () {
         .pipe(stripDebug())
         .pipe(babel())
         .pipe(uglify())
-        .pipe(gulp.dest('./assets/scripts'))
+        .pipe(gulp.dest('./static/scripts'))
 });
 
 // 缩编HTML
@@ -250,7 +250,7 @@ gulp.task('distSass', function (cb) { // cb是传入的回调函数
             // browsers: ['> 1%', 'not ie <= 8']
         }))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./assets/scss'))
+        .pipe(gulp.dest('./static/scss'))
 
     cb(err)
 });
@@ -264,7 +264,7 @@ gulp.task('distLess', function () {
         .pipe(autoprefixer())
         // .pipe(concat({ext: '.css'})) //合并
         .pipe(minifyCss())
-        .pipe(gulp.dest('./assets/css/theme'))
+        .pipe(gulp.dest('./static/css/theme'))
 
 });
 
