@@ -7,6 +7,7 @@
  * https://segmentfault.com/a/1190000010138466
  *
  * 辅助功能参考 (NICE)https://github.com/mjzhang1993/gulp-template
+ * @TODO PWA支持
  */
 
 // 严格模式
@@ -291,6 +292,7 @@ gulp.task('zip', function () {
         .pipe(zip('dist.zip'))
         .pipe(gulp.dest('./'))
 });
+
 
 // 发布
 gulp.task('release', function () {
