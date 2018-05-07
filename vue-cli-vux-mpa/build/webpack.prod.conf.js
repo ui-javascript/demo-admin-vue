@@ -88,6 +88,7 @@ var webpackConfig = merge(baseWebpackConfig, {
             chunks: chunks,
             minChunks: 4 || chunks.length
         }),
+        new webpack.HashedModuleIdsPlugin(),
         /*
         // copy custom static assets
         new CopyWebpackPlugin([
