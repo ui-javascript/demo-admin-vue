@@ -4,7 +4,7 @@ var path = require('path')
 // 打包配置项
 var distConfig = {
     // 是否生成传统Java后台文件摆放格式
-    is_for_typical_java: true,
+    is_for_typical_java: false,
 
     // 是否静态页访问 false表示服务器
     is_for_static: true,

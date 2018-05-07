@@ -165,14 +165,15 @@ gulp.task('sync', function () {
 gulp.task('distSync', function () {
     browserSync.init({
         // proxy: "deva.dev",
-        port: 8080, //
-        // open: "ui",
-        // ui: {
-        //     port: 3005
-        // },
-        directory: true,
-        // browser: ["chrome", "firefox"],
-        browser: "chrome",
+        port: 8033, //
+        ui: false,
+        // directory: true,
+        notify: false,
+        codeSync: false, // 不要发送任何文件改变事件给浏览器
+        logSnippet: false,
+        logFileChanges: false,
+        logConnections: false,
+        ghostMode: false,
         server: {
             baseDir: './templates',
             index: "index.html",
@@ -191,7 +192,7 @@ gulp.task('distSync', function () {
                 "fonts": PATHS.fontsFolder
             }
         },
-        // startPath: "index.html"
+        startPath: "index.html"
     });
 });
 
@@ -336,10 +337,13 @@ gulp.task('zip', function () {
 
 // 发布
 gulp.task('release', function () {
-    // runSequence('clean', 'images', ['distHtml', 'distLess', 'distSass','distJs'], 'zip', 'clean')
-    // runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'zip', 'clean')
-    // runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'clean')
-    runSequence('clean', ['distCopy', 'distHtml', 'distLess', 'distSass', 'distJs'])
+    // 最全处理
+    // runSequence('clean', 'images', ['distCopy','distHtml', 'distLess', 'distSass','distJs'], 'zip', 'clean')
+    // runSequence('clean', ['distCopy','distHtml', 'distLess', 'distSass', 'distJs'], 'zip', 'clean')
+    // runSequence('clean', ['distCopy','distHtml', 'distLess', 'distSass', 'distJs'], 'clean')
+
+    // 不删除编译结果
+    // runSequence('clean', ['distCopy', 'distHtml', 'distLess', 'distSass', 'distJs'])
 });
 
 
