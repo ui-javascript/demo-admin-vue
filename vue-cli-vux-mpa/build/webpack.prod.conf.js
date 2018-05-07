@@ -4,6 +4,7 @@ var webpack = require('webpack')
 var config = require('../config')
 var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
+var CleanWebpackPlugin = require("clean-webpack-plugin")
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -40,6 +41,13 @@ var webpackConfig = merge(baseWebpackConfig, {
                 warnings: false
             },
             sourceMap: true
+        }),
+        // 清理旧打包
+        // fix -> ...\build is outside of the project root. Skipping...
+        // http://mobilesite.github.io/2017/02/18/all-the-errors-encountered-in-webpack/
+        new CleanWebpackPlugin(config.build.assetsRoot, {
+            root: path.resolve(__dirname, '../'), // 设置root
+            verbose: true
         }),
         // extract css into its own file
         new ExtractTextPlugin({
@@ -127,16 +135,15 @@ if (config.build.bundleAnalyzerReport) {
 }
 
 //构建生成多页面的HtmlWebpackPlugin配置，主要是循环生成
-const TMPL_DIST_PATH = 'templates';
-var outputHTMLPathname = ''
-var pages = utils.getMultiEntry('./src/' + config.moduleName + '/**/**/*.html', TMPL_DIST_PATH);
+var pages = utils.getMultiEntry('./src/' + config.moduleName + '/**/**/*.html');
+var outputHtmlPathname
 for (var pathname in pages) {
 
     // 输出路径
-    outputHTMLPathname = pathname.replace(/views/i, TMPL_DIST_PATH)
+    outputHtmlPathname = pathname.replace(new RegExp(new RegExp(config.moduleName),"i"), config.build.assetsHtmlPath)
 
     var conf = {
-        filename: outputHTMLPathname + '.html',
+        filename: outputHtmlPathname + '.html',
         template: pages[pathname], // 模板路径
         chunks: ['vendor', pathname], // 每个html引用的js模块
         inject: true,              // js插入位置
