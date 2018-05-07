@@ -162,6 +162,40 @@ gulp.task('sync', function () {
     gulp.watch(PATHS.less, ['reloadLess']).on('change', reload);
 });
 
+gulp.task('distSync', function () {
+    browserSync.init({
+        // proxy: "deva.dev",
+        port: 8080, //
+        // open: "ui",
+        // ui: {
+        //     port: 3005
+        // },
+        directory: true,
+        // browser: ["chrome", "firefox"],
+        browser: "chrome",
+        server: {
+            baseDir: './templates',
+            index: "index.html",
+            routes: {
+                "/css": "./static/css",
+                "/scss": "./static/scss",
+                "/scripts": './static/scripts',
+
+                "/images": PATHS.imagesFolder,
+                "images": PATHS.imagesFolder,
+                "/plus": PATHS.plusFolder,
+                "plus": PATHS.plusFolder,
+                "/mock": PATHS.mockFolder,
+                "mock": PATHS.mockFolder,
+                "/fonts": PATHS.fontsFolder,
+                "fonts": PATHS.fontsFolder
+            }
+        },
+        // startPath: "index.html"
+    });
+});
+
+
 
 // 默认任务
 gulp.task('default', function () {
@@ -246,6 +280,12 @@ gulp.task('distHtml', function () {
         .pipe(gulp.dest('./templates'))
 });
 
+// 搬运一些未正确归类的文件
+gulp.task('distCopy', function () {
+    return gulp.src([PATHS.htmlFolder + '/**/*.*', '!' + PATHS.html])
+        .pipe(gulp.dest('./templates'))
+});
+
 // scss编译
 gulp.task('distSass', function (cb) { // cb是传入的回调函数
 
@@ -297,8 +337,9 @@ gulp.task('zip', function () {
 // 发布
 gulp.task('release', function () {
     // runSequence('clean', 'images', ['distHtml', 'distLess', 'distSass','distJs'], 'zip', 'clean')
-    runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'zip', 'clean')
+    // runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'zip', 'clean')
     // runSequence('clean', ['distHtml', 'distLess', 'distSass', 'distJs'], 'clean')
+    runSequence('clean', ['distCopy', 'distHtml', 'distLess', 'distSass', 'distJs'])
 });
 
 
