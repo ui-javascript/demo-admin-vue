@@ -3,26 +3,27 @@ var path = require('path')
 
 // 打包配置项
 var distConfig = {
-    // 是否静态页访问 false表示服务器
-    is_for_static: false,
-
     // 是否生成传统Java后台文件摆放格式
     is_for_typical_java: true,
+
+    // 是否静态页访问 false表示服务器
+    is_for_static: true,
 
     relative_path: '/',
     html_folder: ''
 }
 
-// 如果是静态访问页
-if (distConfig.is_for_static) {
-  distConfig.relative_path = distConfig.is_for_typical_java ? '../../' : '../'
-}
-
 // 如果是JAVA前后端不分离方案
 if (distConfig.is_for_typical_java) {
   distConfig.html_folder = 'templates'
-}
+  // distConfig.relative_path = '/'
+} else {
 
+    // 如果是静态访问页
+    if (distConfig.is_for_static) {
+        distConfig.relative_path = '../'
+    }
+}
 
 
 module.exports = {
