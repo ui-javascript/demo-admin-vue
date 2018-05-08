@@ -27,7 +27,7 @@ fis.hook('node_modules', {
         parser: fis.plugin('babel-6.x', {
             plugins: ['transform-es3-property-literals', 'transform-es3-member-expression-literals', 'add-module-exports']
         }),
-        rExt: '.js'
+        rExt: 'js'
     });
 });
 fis.match('**', {

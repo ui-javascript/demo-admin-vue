@@ -62,7 +62,7 @@ const menuPromise = new Promise((rs, rj) => {
         } else {
             rj(result);
         }
-    });
+    }).catch(error => alert(error.message));;
 });
 
 function travelMenu(menulet, functions, allowedFunctions) {
