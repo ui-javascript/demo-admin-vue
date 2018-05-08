@@ -1,6 +1,0 @@
-build/*.js
-config/*.js
-src/avalon.extend.js
-src/components/base/*
-src/router/base/*
-
