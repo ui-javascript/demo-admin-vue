@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>jQuery实用图片滑块焦点图DEMO演示</title>
+    <!--<link rel="stylesheet" href="css/default.css">-->
+    <link rel="stylesheet" href="/plus/jflex/jflex.min.css" media="all">
+    <!--<link href="http://fonts.useso.com/css?family=Roboto:400,700" rel="stylesheet">-->
+    <style>
+        body {
+            font-family: 'Roboto';
+            padding: 10px;
+        }
+
+        .flex {
+            margin: 0 auto 20px;
+            max-width: 768px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="flex">
+    <ul class="slides">
+        <li data-title="Slide 1">
+            <img alt="" src="/images/jflex-slider-demo/beasts_feature.jpg">
+        </li>
+        <li data-title="Slide 2">
+            <img alt="" src="/images/jflex-slider-demo/element-taiwan-thmb.jpg">
+        </li>
+        <li data-title="Slide 3">
+            <img alt="" src="/images/jflex-slider-demo/streets-newyork.jpg">
+        </li>
+    </ul>
+</div>
+
+
+<script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
+<script src="/plus/jflex/jflex.min.js"></script>
+<script>
+    $('.flex').jFlex({
+        autoplay: true
+    });
+</script>
+
+
+</body>
+</html>
