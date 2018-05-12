@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>超酷3D立方体空间旋转图片画廊特效</title>
     <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+
     <style>
         html {
             overflow: hidden;
@@ -71,11 +72,17 @@
             outline: rgba(255, 255, 255, 1) solid 10px !important;
         }
     </style>
+
+
     <!--[if IE]>
     <script src="https://cdn.staticfile.org/html5shiv/3.7/html5shiv.min.js"></script>
     <![endif]-->
+
+
 </head>
 <body>
+
+
 <div id="screen">
     <div id="cube" class='cube'>
         <!-- cube images -->
@@ -85,9 +92,11 @@
         <img id="4" src="/images/gallery-3d/4.jpg" class='face' data-transform="rotateY(180deg) translateZ(-400px)">
         <img id="5" src="/images/gallery-3d/5.jpg" class='face' data-transform="rotateX(90deg) translateZ(-300px)">
         <img id="6" src="/images/gallery-3d/6.jpg" class='face' data-transform="rotateX(-90deg) translateZ(-300px)">
+
         <!-- bonus image -->
         <img id="7" src="/images/gallery-3d/7.jpg" class='face' data-transform="rotateY(180deg) translateZ(305px)"
              style="visibility:hidden">
+
         <!-- buttons -->
         <img src="/images/gallery-3d/7.jpg" class='face button' alt="7"
              data-transform="translateY(-80px) translateZ(-340px) scale(0.5)">
@@ -103,6 +112,7 @@
              data-transform="translateX(200px) translateY(80px) translateZ(-340px) scale(0.5)">
     </div>
 </div>
-<script src="/scripts/gallery/gallery-magic-3d.js"></script>
+<script src="gallery-magic-3d.js"></script>
+
 </body>
 </html>
