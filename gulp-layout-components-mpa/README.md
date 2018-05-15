@@ -21,6 +21,7 @@ iptables -nvL // 查看规则
 - gulp 生成一下软链接 也可能需要全局安装一下browserSync
 
 ```shell
+unzip dist.zip -d ./dist
 npm install -g browser-sync
 npm install -g gulp
 npm install -D gulp

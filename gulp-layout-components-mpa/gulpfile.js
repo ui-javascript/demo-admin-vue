@@ -206,6 +206,23 @@ gulp.task('distSync', function () {
     });
 });
 
+gulp.task('PWASync', function () {
+    browserSync.init({
+        proxy: "http://192.168.1.250", //后端服务器地址
+        serveStatic: ['./templates'],
+        port: 8033, //
+        ui: false,
+        directory: true,
+        notify: false,
+        codeSync: false, // 不要发送任何文件改变事件给浏览器
+        logSnippet: false,
+        logFileChanges: false,
+        logConnections: false,
+        ghostMode: false
+    });
+});
+
+
 
 // 默认任务
 gulp.task('default', function () {
@@ -355,11 +372,13 @@ gulp.task('distLess', function () {
 // 压缩
 gulp.task('zip', function () {
 
-    return gulp.src(['**/*.*',
-
+    return gulp.src(['./**/*.*',
+        '.babelrc',
         // 排除以下文件
-        '!{node_modules,cmd,src}/**/*.*',
-        '!{dist.zip,gulpfile.js,package.json,package-lock.json,README.md}'])
+        '!{node_modules,cmd,src,config}/**/*.*',
+        '!dist.zip',
+        // '!{gulpfile.js,package.json,package-lock.json,README.md,.babelrc}'
+        ])
         .pipe(plumber())
         .pipe(zip('dist.zip'))
         .pipe(gulp.dest('./'))
@@ -369,8 +388,11 @@ gulp.task('zip', function () {
 // 发布
 gulp.task('03-build-jsp', function () {
     runSequence(['cleanDev', 'cleanDist'],
-        'optimizeImages',
-        ['distCopy', 'distHtml', 'distLess', 'distSass', 'distJS'])
+        // 'optimizeImages',
+        ['distCopy', 'distHtml', 'distLess', 'distSass', 'distJS']
+        // 'distSync',
+        // 'zip'
+    );
 });
 
 
@@ -385,7 +407,7 @@ gulp.task('generateServiceWorker', () => {
             globDirectory: './templates',
             globPatterns: ['**/*.{html,js,css,png.jpg}'],
             globIgnores: ['sw.js'],
-            swDest: `./dist/sw.js`,
+            swDest: `./sw.js`,
             clientsClaim: true,
             skipWaiting: true,
             runtimeCaching: [
@@ -441,7 +463,9 @@ gulp.task('04-build-pwa', function () {
         ['distCopy', 'distHtml', 'distLess', 'distSass', 'distJS'],
         'generateServiceWorker',
         // 'cleanDev',
-        'distSync')
+        'distSync'
+        // 'zip'
+    )
 });
 
 
