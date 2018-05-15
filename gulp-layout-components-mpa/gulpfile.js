@@ -143,7 +143,7 @@ gulp.task('devHtml', function () {
 gulp.task('devSync', function () {
     browserSync.init({
         // proxy: "deva.dev",
-        port: 80, //
+        port: 8888, //
         // open: "ui",
         ui: {
             port: 3005
@@ -193,12 +193,12 @@ gulp.task('distSync', function () {
             index: "index.html",
             routes: {
                 "/css": distBaseRoot + "/static/css",
-                "/scss": distBaseRoot +  "/static/scss",
-                "/scripts": distBaseRoot +  '/static/scripts',
+                "/scss": distBaseRoot + "/static/scss",
+                "/scripts": distBaseRoot + '/static/scripts',
 
-                "/images": distBaseRoot +  '/static/images',
-                "/plus": distBaseRoot +  '/static/plus',
-                "/mock": distBaseRoot +  '/static/mock',
+                "/images": distBaseRoot + '/static/images',
+                "/plus": distBaseRoot + '/static/plus',
+                "/mock": distBaseRoot + '/static/mock',
                 "/fonts": distBaseRoot + '/static/fonts'
             }
         },
@@ -207,12 +207,14 @@ gulp.task('distSync', function () {
 });
 
 
-
 // 默认任务
 gulp.task('default', function () {
-    runSequence('clean', ['devSync'])
+    runSequence(['cleanDev', 'cleanDist'], ['devSync']);
 });
-
+gulp.task('01-build-dev', function () {
+    runSequence(['cleanDev', 'cleanDist'],
+        ['devSync']);
+});
 
 // =====================================
 // =====================================
@@ -225,9 +227,11 @@ gulp.task('watchCSS', function () {
 });
 
 // 仅作CSS缩编等工作
-gulp.task('css-job', function () {
+gulp.task('02-css-job', function () {
 
-    runSequence('clean', ['compileSass', 'compileLess'], 'watchCSS')
+    runSequence(['cleanDev', 'cleanDist'],
+        ['compileSass', 'compileLess'],
+        'watchCSS')
 });
 
 
@@ -246,7 +250,6 @@ gulp.task('makeSprite', function () {
 });
 
 
-
 // =====================================
 // =====================================
 
@@ -254,7 +257,9 @@ gulp.task('makeSprite', function () {
 gulp.task('cleanDev', function () {
     return gulp.src(['./static/scripts/*',
             './static/css/*', './static/scss/*',
-            './templates/*'],
+            // './src/scss/**/*.css',
+            './templates/*',
+            './sw.js'],
         {read: false})
         .pipe(clean())
 });
@@ -263,7 +268,6 @@ gulp.task('cleanDist', function () {
         {read: false})
         .pipe(clean())
 });
-
 
 
 // 图片压缩
@@ -278,7 +282,7 @@ gulp.task('optimizeImages', function () {
             use: [pngquant()] // 使用 pngquant 深度压缩 png 图片
         }))
         .pipe(gulp.dest(PATHS.imagesFolder))
-        // .pipe(md5(10, './**/*.{css,js,html,json}'))
+    // .pipe(md5(10, './**/*.{css,js,html,json}'))
     // .pipe(browserSync.reload({stream:true}))
 });
 
@@ -302,11 +306,11 @@ gulp.task('distHtml', function () {
         .pipe(minifyHtml())
         .pipe(fileInclude())
         .pipe(gulp.dest('./templates'))
-        // .pipe(md5(10));
+    // .pipe(md5(10));
 });
 
 // 搬运一些未正确归类的文件
-gulp.task('distCopyTemplates', function () {
+gulp.task('distCopy', function () {
     return gulp.src([PATHS.htmlFolder + '/**/*.*', '!' + PATHS.html])
         .pipe(gulp.dest('./templates'))
 });
@@ -363,10 +367,10 @@ gulp.task('zip', function () {
 
 
 // 发布
-gulp.task('build-jsp', function () {
+gulp.task('03-build-jsp', function () {
     runSequence(['cleanDev', 'cleanDist'],
         'optimizeImages',
-        [ 'distCopyTemplates', 'distHtml', 'distLess', 'distSass', 'distJS'])
+        ['distCopy', 'distHtml', 'distLess', 'distSass', 'distJS'])
 });
 
 
@@ -380,7 +384,7 @@ gulp.task('generateServiceWorker', () => {
             cacheId: 'gulp-pwa-mpa', // 设置前缀
             globDirectory: './templates',
             globPatterns: ['**/*.{html,js,css,png.jpg}'],
-            globIgnores: [ 'sw.js' ],
+            globIgnores: ['sw.js'],
             swDest: `./dist/sw.js`,
             clientsClaim: true,
             skipWaiting: true,
@@ -432,9 +436,9 @@ gulp.task('generateServiceWorker', () => {
 });
 
 // 离线方案
-gulp.task('build-pwa', function () {
+gulp.task('04-build-pwa', function () {
     runSequence(['cleanDev', 'cleanDist'],
-        [ 'distCopyTemplates', 'distHtml', 'distLess', 'distSass', 'distJS'],
+        ['distCopy', 'distHtml', 'distLess', 'distSass', 'distJS'],
         'generateServiceWorker',
         // 'cleanDev',
         'distSync')
