@@ -8,14 +8,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "luo0412",
-  "dependencies": {
-    "bourbon": "^5.0.0-beta.8",
-    "bourbon-neat": "^2.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "bourbon": "^5.0.0-beta.8",
+    "bourbon-neat": "^2.1.0",
     "browser-sync": "^2.12.12",
     "cssnano": "",
     "fs": "^0.0.1-security",
@@ -27,13 +26,17 @@
     "gulp-clean-css": "",
     "gulp-concat": "^2.6.0",
     "gulp-concat-dir": "^1.0.0",
-    "gulp-imagemin": "^4.0.0",
+    "gulp-file-include": "^2.0.1",
+    "gulp-imagemin": "^4.1.0",
     "gulp-less": "^3.3.2",
+    "gulp-md5-assets": "^1.0.1",
     "gulp-minify-html": "^1.0.6",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "",
     "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "gulp-resolve-path": "^1.0.4",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-strip-debug": "^3.0.0",
@@ -42,6 +45,7 @@
     "gulp.spritesmith": "^6.2.1",
     "imagemin-pngquant": "^5.0.0",
     "path": "^0.12.7",
-    "run-sequence": "^2.2.1"
+    "run-sequence": "^2.2.1",
+    "workbox-build": "^3.0.0"
   }
 }

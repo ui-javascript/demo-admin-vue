@@ -1,2 +1,2 @@
 cd ..
-gulp release
+gulp build-jsp

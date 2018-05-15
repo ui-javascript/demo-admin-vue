@@ -1,2 +1,2 @@
 cd ..
-gulp cssJob
+gulp css-job

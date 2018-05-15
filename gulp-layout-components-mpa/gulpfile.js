@@ -8,6 +8,9 @@
  *
  * 辅助功能参考 (NICE)https://github.com/mjzhang1993/gulp-template
  * @TODO PWA支持
+ *
+ * 2015年结合了webpack的，有一些可以参考一下
+ * https://github.com/fwon/gulp-webpack-demo
  */
 
 // 严格模式
@@ -25,8 +28,12 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     zip = require('gulp-zip'),  // 压缩文件
     rename = require('gulp-rename'),
+    replace = require('gulp-replace'),
+    resolvePath = require("gulp-resolve-path"),
+    babel = require('gulp-babel'),
     babel = require('gulp-babel'),
     sourcemaps = require('gulp-sourcemaps'),
+    md5 = require('gulp-md5-assets'),
 
     // gulp-run-sequence -> run-sequence
     runSequence = require('run-sequence'), // 控制task中的串行和并行
@@ -47,12 +54,16 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     spritesmith = require('gulp.spritesmith'),
     cache = require('gulp-cache'),
+    fileInclude = require('gulp-file-include'),
     clean = require('gulp-clean'), // 用来删除文件
 
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload,
 
-    stripDebug = require('gulp-strip-debug');
+    stripDebug = require('gulp-strip-debug'),
+
+    // pwa
+    workbox = require('workbox-build');
 
 // 路径
 var PATH_DEV = "./src";
@@ -62,6 +73,7 @@ var PATH_ASSETS = "./static";
 var PATHS = {
     html: PATH_VIEWS + "/**/*.html",
     htmlFolder: PATH_VIEWS,
+    htmlDevFolder: PATH_VIEWS,
     scss: PATH_DEV + "/scss/**/*.scss",
     scssDevFolder: PATH_DEV + "/scss",
     less: PATH_DEV + "/less/**/*.less",
@@ -81,7 +93,7 @@ var PATHS = {
 
 
 // scss编译
-gulp.task('reloadSass', function (cb) { // cb是传入的回调函数
+gulp.task('compileSass', function (cb) { // cb是传入的回调函数
 
     return gulp.src(PATHS.scss)
         .pipe(sass({
@@ -104,7 +116,7 @@ gulp.task('reloadSass', function (cb) { // cb是传入的回调函数
 
 
 // less编译
-gulp.task('reloadLess', function (cb) {
+gulp.task('compileLess', function (cb) {
     return gulp.src(PATHS.lessDevOutput) // 注意，只解析_output.less这样的单文件
         .pipe(plumber({errorHandler: notify.onError('Error:<%=error.message%>')}))
         .pipe(less())
@@ -117,10 +129,18 @@ gulp.task('reloadLess', function (cb) {
     cb(err);
 });
 
+// 编译devHtml
+gulp.task('devHtml', function () {
+    return gulp.src(PATHS.html)
+        .pipe(plumber())
+        .pipe(fileInclude())
+        .pipe(gulp.dest(PATHS.htmlDevFolder))
+});
+
 
 // 浏览器同步刷新
 // http://www.browsersync.cn/docs/gulp/
-gulp.task('sync', function () {
+gulp.task('devSync', function () {
     browserSync.init({
         // proxy: "deva.dev",
         port: 80, //
@@ -133,23 +153,16 @@ gulp.task('sync', function () {
         browser: "chrome",
         server: {
             baseDir: [PATH_VIEWS],
-            index: "index.html",
+            // index: "index.html",
             routes: {
                 "/css": PATHS.lessDevFolder,
-                "css": PATHS.lessDevFolder,
                 "/scss": PATHS.scssDevFolder,
-                "scss": PATHS.scssDevFolder,
                 "/scripts": PATHS.scriptsDevFolder,
-                "scripts": PATHS.scriptsDevFolder,
 
                 "/images": PATHS.imagesFolder,
-                "images": PATHS.imagesFolder,
                 "/plus": PATHS.plusFolder,
-                "plus": PATHS.plusFolder,
                 "/mock": PATHS.mockFolder,
-                "mock": PATHS.mockFolder,
-                "/fonts": PATHS.fontsFolder,
-                "fonts": PATHS.fontsFolder
+                "/fonts": PATHS.fontsFolder
             }
         },
         // startPath: "index.html"
@@ -158,16 +171,17 @@ gulp.task('sync', function () {
     // 文件监听
     gulp.watch(PATHS.html).on('change', reload);
     gulp.watch(PATHS.scripts).on('change', reload);
-    gulp.watch(PATHS.scss, ['reloadSass']).on('change', reload);
-    gulp.watch(PATHS.less, ['reloadLess']).on('change', reload);
+    gulp.watch(PATHS.scss, ['compileSass']).on('change', reload);
+    gulp.watch(PATHS.less, ['compileLess']).on('change', reload);
 });
 
 gulp.task('distSync', function () {
+    var distBaseRoot = "."
     browserSync.init({
         // proxy: "deva.dev",
         port: 8033, //
         ui: false,
-        // directory: true,
+        directory: true,
         notify: false,
         codeSync: false, // 不要发送任何文件改变事件给浏览器
         logSnippet: false,
@@ -175,24 +189,20 @@ gulp.task('distSync', function () {
         logConnections: false,
         ghostMode: false,
         server: {
-            baseDir: './templates',
+            baseDir: distBaseRoot + '/templates',
             index: "index.html",
             routes: {
-                "/css": "./static/css",
-                "/scss": "./static/scss",
-                "/scripts": './static/scripts',
+                "/css": distBaseRoot + "/static/css",
+                "/scss": distBaseRoot +  "/static/scss",
+                "/scripts": distBaseRoot +  '/static/scripts',
 
-                "/images": PATHS.imagesFolder,
-                "images": PATHS.imagesFolder,
-                "/plus": PATHS.plusFolder,
-                "plus": PATHS.plusFolder,
-                "/mock": PATHS.mockFolder,
-                "mock": PATHS.mockFolder,
-                "/fonts": PATHS.fontsFolder,
-                "fonts": PATHS.fontsFolder
+                "/images": distBaseRoot +  '/static/images',
+                "/plus": distBaseRoot +  '/static/plus',
+                "/mock": distBaseRoot +  '/static/mock',
+                "/fonts": distBaseRoot + '/static/fonts'
             }
         },
-        startPath: "index.html"
+        // startPath: "index.html"
     });
 });
 
@@ -200,7 +210,7 @@ gulp.task('distSync', function () {
 
 // 默认任务
 gulp.task('default', function () {
-    runSequence('clean', ['sync'])
+    runSequence('clean', ['devSync'])
 });
 
 
@@ -209,13 +219,15 @@ gulp.task('default', function () {
 
 
 // CSS监听
-gulp.task('cssWatch', function () {
-    gulp.watch(PATHS.less, ['reloadLess']);
-    gulp.watch(PATHS.scss, ['reloadSass']);
+gulp.task('watchCSS', function () {
+    gulp.watch(PATHS.less, ['compileLess']);
+    gulp.watch(PATHS.scss, ['compileSass']);
 });
 
-gulp.task('cssJob', function () {
-    runSequence('clean', ['reloadSass', 'reloadLess'], 'cssWatch')
+// 仅作CSS缩编等工作
+gulp.task('css-job', function () {
+
+    runSequence('clean', ['compileSass', 'compileLess'], 'watchCSS')
 });
 
 
@@ -224,7 +236,7 @@ gulp.task('cssJob', function () {
 
 // 雪碧图
 // 此功能是单一的并不与其他功能串联
-gulp.task('sprite', function () {
+gulp.task('makeSprite', function () {
     return gulp.src(PATHS.sprite)
         .pipe(spritesmith({
             imgName: 'ico.png',
@@ -234,21 +246,28 @@ gulp.task('sprite', function () {
 });
 
 
+
 // =====================================
 // =====================================
 
-// 删除dist/*下的所有文件
-gulp.task('clean', function () {
+// 清理文件夹
+gulp.task('cleanDev', function () {
     return gulp.src(['./static/scripts/*',
             './static/css/*', './static/scss/*',
-            './templates/*',
-            './dist/*'],
+            './templates/*'],
+        {read: false})
+        .pipe(clean())
+});
+gulp.task('cleanDist', function () {
+    return gulp.src(['./dist/*'],
         {read: false})
         .pipe(clean())
 });
 
+
+
 // 图片压缩
-gulp.task('images', function () {
+gulp.task('optimizeImages', function () {
     return gulp.src(PATHS.images)
         .pipe(plumber())
         .pipe(imagemin({
@@ -259,11 +278,12 @@ gulp.task('images', function () {
             use: [pngquant()] // 使用 pngquant 深度压缩 png 图片
         }))
         .pipe(gulp.dest(PATHS.imagesFolder))
+        // .pipe(md5(10, './**/*.{css,js,html,json}'))
     // .pipe(browserSync.reload({stream:true}))
 });
 
 // 缩编JS
-gulp.task('distJs', function () {
+gulp.task('distJS', function () {
     return gulp.src(PATHS.scripts)
         .pipe(plumber()) // 错误提示
         // .pipe(concat({ext: '.js'})) //合并同一目录下的所有文件
@@ -271,6 +291,8 @@ gulp.task('distJs', function () {
         .pipe(babel())
         .pipe(uglify())
         .pipe(gulp.dest('./static/scripts'))
+        .pipe(md5(10, './templates/**/*.html'));
+
 });
 
 // 缩编HTML
@@ -278,14 +300,17 @@ gulp.task('distHtml', function () {
     return gulp.src(PATHS.html)
         .pipe(plumber())
         .pipe(minifyHtml())
+        .pipe(fileInclude())
         .pipe(gulp.dest('./templates'))
+        // .pipe(md5(10));
 });
 
 // 搬运一些未正确归类的文件
-gulp.task('distCopy', function () {
+gulp.task('distCopyTemplates', function () {
     return gulp.src([PATHS.htmlFolder + '/**/*.*', '!' + PATHS.html])
         .pipe(gulp.dest('./templates'))
 });
+
 
 // scss编译
 gulp.task('distSass', function (cb) { // cb是传入的回调函数
@@ -303,6 +328,7 @@ gulp.task('distSass', function (cb) { // cb是传入的回调函数
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./static/scss'))
+        .pipe(md5(10, './templates/**/*.html'));
 
     cb(err)
 });
@@ -317,6 +343,7 @@ gulp.task('distLess', function () {
         // .pipe(concat({ext: '.css'})) //合并
         .pipe(cleanCss())
         .pipe(gulp.dest('./static/css/theme'))
+        .pipe(md5(10, './templates/**/*.html'));
 
 });
 
@@ -336,14 +363,81 @@ gulp.task('zip', function () {
 
 
 // 发布
-gulp.task('release', function () {
-    // 最全处理
-    // runSequence('clean', 'images', ['distCopy','distHtml', 'distLess', 'distSass','distJs'], 'zip', 'clean')
-    // runSequence('clean', ['distCopy','distHtml', 'distLess', 'distSass', 'distJs'], 'zip', 'clean')
-    // runSequence('clean', ['distCopy','distHtml', 'distLess', 'distSass', 'distJs'], 'clean')
+gulp.task('build-jsp', function () {
+    runSequence(['cleanDev', 'cleanDist'],
+        'optimizeImages',
+        [ 'distCopyTemplates', 'distHtml', 'distLess', 'distSass', 'distJS'])
+});
 
-    // 不删除编译结果
-    // runSequence('clean', ['distCopy', 'distHtml', 'distLess', 'distSass', 'distJs'])
+
+// =====================================
+// =====================================
+
+// 配置 service worker
+gulp.task('generateServiceWorker', () => {
+    return workbox
+        .generateSW({
+            cacheId: 'gulp-pwa-mpa', // 设置前缀
+            globDirectory: './templates',
+            globPatterns: ['**/*.{html,js,css,png.jpg}'],
+            globIgnores: [ 'sw.js' ],
+            swDest: `./dist/sw.js`,
+            clientsClaim: true,
+            skipWaiting: true,
+            runtimeCaching: [
+                {
+                    urlPattern: /.*\.js/,
+                    handler: 'networkFirst', // 网络优先
+                },
+                {
+                    urlPattern: /.*\.css/,
+                    handler: 'staleWhileRevalidate', // 缓存优先同时后台更新
+                    options: {
+                        plugins: [
+                            {
+                                cacheableResponse: {
+                                    statuses: [0, 200]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    urlPattern: /.*\.(?:png|jpg|jpeg|svg|gif)/,
+                    handler: 'cacheFirst', // 缓存优先
+                    options: {
+                        plugins: [
+                            {
+                                expiration: {
+                                    maxAgeSeconds: 24 * 60 * 60, // 最长缓存时间,
+                                    maxEntries: 50, // 最大缓存图片数量
+                                }
+                            }
+                        ]
+                    },
+
+                },
+                {
+                    urlPattern: /.*\.html/,
+                    handler: 'networkFirst',
+                }
+            ]
+        })
+        .then(() => {
+            console.info('Service worker generation completed.');
+        })
+        .catch(error => {
+            console.warn('Service worker generation failed: ' + error);
+        });
+});
+
+// 离线方案
+gulp.task('build-pwa', function () {
+    runSequence(['cleanDev', 'cleanDist'],
+        [ 'distCopyTemplates', 'distHtml', 'distLess', 'distSass', 'distJS'],
+        'generateServiceWorker',
+        // 'cleanDev',
+        'distSync')
 });
 
 
