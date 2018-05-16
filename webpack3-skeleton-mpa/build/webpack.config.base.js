@@ -46,8 +46,9 @@ getEntryDir()
     let moduleNameStr = moduleName[moduleName.length - 1]
     const htmlPlugin = new HTMLWebpackPlugin({
       filename: `${moduleNameStr}/${fileName}.html`,
+      // filename: `${moduleNameStr}.html`,
       template: path.resolve(__dirname, `../${page.tmpl}`),
-      chunks: [moduleNameStr, 'vendors'],
+      chunks: ['vendors', moduleNameStr],
     });
     HTMLPlugins.push(htmlPlugin);
     Entries[moduleNameStr] = path.resolve(__dirname, `../app/${page.dir}/index.js`);

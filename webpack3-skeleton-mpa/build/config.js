@@ -1,6 +1,5 @@
 /**
  * 配置文件
- * @type {[type]}
  */
 module.exports = {
 	cssPublicPath: "../static",

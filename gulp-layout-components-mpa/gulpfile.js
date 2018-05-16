@@ -9,6 +9,9 @@
  * https://github.com/271626514/gulp-demo
  * https://segmentfault.com/a/1190000010138466
  *
+ * 生产与开发环境的配置
+ * https://github.com/vincentSea/gulp-cli
+ *
  * 辅助功能参考 (NICE)https://github.com/mjzhang1993/gulp-template
  * @TODO PWA支持
  *
@@ -16,6 +19,12 @@
  * (@deprecated)https://github.com/fwon/gulp-webpack-demo
  *
  * @FIXME browserSync刷新不及时
+ *
+ * 前端基于gulp后端基于freemarker的工作流程总结
+ * https://juejin.im/post/5ad3222d6fb9a028cd458a7e
+ *
+ * Gulp&Webpack搭建属于自己的特性化前端脚手架 (仅了解下实现细节)
+ * https://juejin.im/post/5a77bfa96fb9a06351724e90
  */
 
 // 严格模式

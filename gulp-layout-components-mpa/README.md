@@ -5,6 +5,12 @@
 - 考虑到IE8 , 一般jquery + layui(layui已经快不支持IE8了)
 - 视图目前限制是纯html (不支持jsp ftl...)
 
+# gulp
+
+- 前端团队 Gulp & Webpack 工作流 迁移记(NICE) https://zhuanlan.zhihu.com/p/27355765?group_id=857652944793915392
+- WeFlow https://github.com/Tencent/WeFlow
+- QMUI_Web https://github.com/Tencent/QMUI_Web
+- https://github.com/legoflow/legoflow
 
 # 关于部署到linux(centos)
 
