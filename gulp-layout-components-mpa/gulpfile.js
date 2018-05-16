@@ -14,6 +14,8 @@
  *
  * 2015年结合了webpack的，有一些可以参考一下
  * (@deprecated)https://github.com/fwon/gulp-webpack-demo
+ *
+ * @FIXME browserSync刷新不及时
  */
 
 // 严格模式
@@ -174,15 +176,6 @@ gulp.task('devSync', function () {
             baseDir: ['./templates'],
             // index: "index.html",
             routes: {
-                // "/css": PATHS.lessDevFolder,
-                // "/scss": PATHS.scssDevFolder,
-                // "/scripts": PATHS.scriptsDevFolder,
-                //
-                // "/images": PATHS.imagesFolder,
-                // "/plus": PATHS.plusFolder,
-                // "/mock": PATHS.mockFolder,
-                // "/fonts": PATHS.fontsFolder,
-
                 "/css": distBaseRoot + "/static/css",
                 "/scss": distBaseRoot + "/static/scss",
                 "/scripts": distBaseRoot + '/static/scripts',
@@ -199,57 +192,19 @@ gulp.task('devSync', function () {
     // 文件监听
     // fileInclude + browserSync https://www.cnblogs.com/yjzhu/archive/2017/02/27/6474854.html
     gulp.watch(PATHS.html, ['compileHTML']).on('change', reload);
-    gulp.watch(PATHS.scripts, ['compileJS', 'compileHTML']).on('change', reload);
-    gulp.watch(PATHS.scss, ['compileSass', 'compileHTML']).on('change', reload);
-    gulp.watch(PATHS.less, ['compileLess', 'compileHTML']).on('change', reload);
+
+    // ??是否还需要compileHTML 去掉感觉刷新不及时
+    // gulp.watch(PATHS.scripts, ['compileHTML', 'compileJS']).on('change', reload);
+    // gulp.watch(PATHS.scss, ['compileHTML', 'compileSass']).on('change', reload);
+    // gulp.watch(PATHS.less, ['compileHTML', 'compileLess']).on('change', reload);
+
+    gulp.watch(PATHS.scripts, ['compileJS']).on('change', reload);
+    gulp.watch(PATHS.scss, ['compileSass']).on('change', reload);
+    gulp.watch(PATHS.less, ['compileLess']).on('change', reload);
+
 });
 
-gulp.task('distSync', function () {
-    var distBaseRoot = ".";
-    browserSync.init({
-        // proxy: "deva.dev",
-        port: 8033, //
-        ui: false,
-        directory: true,
-        notify: false,
-        codeSync: false, // 不要发送任何文件改变事件给浏览器
-        logSnippet: false,
-        logFileChanges: false,
-        logConnections: false,
-        ghostMode: false,
-        server: {
-            baseDir: distBaseRoot + '/templates',
-            index: "index.html",
-            routes: {
-                "/css": distBaseRoot + "/static/css",
-                "/scss": distBaseRoot + "/static/scss",
-                "/scripts": distBaseRoot + '/static/scripts',
 
-                "/images": distBaseRoot + '/static/images',
-                "/plus": distBaseRoot + '/static/plus',
-                "/mock": distBaseRoot + '/static/mock',
-                "/fonts": distBaseRoot + '/static/fonts'
-            }
-        },
-        // startPath: "index.html"
-    });
-});
-
-gulp.task('PWASync', function () {
-    browserSync.init({
-        proxy: "http://192.168.1.250", //后端服务器地址
-        serveStatic: ['./templates'],
-        port: 8033, //
-        ui: false,
-        directory: true,
-        notify: false,
-        codeSync: false, // 不要发送任何文件改变事件给浏览器
-        logSnippet: false,
-        logFileChanges: false,
-        logConnections: false,
-        ghostMode: false
-    });
-});
 
 
 
@@ -347,7 +302,7 @@ gulp.task('distJS', function () {
 });
 
 // 缩编HTML
-gulp.task('distHtml', function () {
+gulp.task('distHTML', function () {
     return gulp.src(PATHS.html)
         .pipe(plumber())
         .pipe(minifyHtml())
@@ -418,13 +373,44 @@ gulp.task('zip', function () {
         .pipe(gulp.dest('./'))
 });
 
+gulp.task('distSync', function () {
+    var distBaseRoot = ".";
+    browserSync.init({
+        // proxy: "deva.dev",
+        port: 8033, //
+        ui: false,
+        directory: true,
+        notify: false,
+        codeSync: false, // 不要发送任何文件改变事件给浏览器
+        logSnippet: false,
+        logFileChanges: false,
+        logConnections: false,
+        ghostMode: false,
+        server: {
+            baseDir: distBaseRoot + '/templates',
+            index: "index.html",
+            routes: {
+                "/css": distBaseRoot + "/static/css",
+                "/scss": distBaseRoot + "/static/scss",
+                "/scripts": distBaseRoot + '/static/scripts',
+
+                "/images": distBaseRoot + '/static/images',
+                "/plus": distBaseRoot + '/static/plus',
+                "/mock": distBaseRoot + '/static/mock',
+                "/fonts": distBaseRoot + '/static/fonts'
+            }
+        },
+        // startPath: "index.html"
+    });
+});
+
 
 // 发布
 gulp.task('03-build-jsp', function () {
     runSequence(['cleanDev', 'cleanDist'],
         // 'optimizeImages',
-        ['distCopy', 'distHtml', 'distLess', 'distSass', 'distJS']
-        // 'distSync',
+        ['distCopy', 'distHTML', 'distLess', 'distSass', 'distJS'],
+        'distSync',
         // 'zip'
     );
 });
@@ -432,6 +418,28 @@ gulp.task('03-build-jsp', function () {
 
 // =====================================
 // =====================================
+
+gulp.task('PWASync', function () {
+    browserSync.init({
+        // @FIXME 代理不知道怎么配置
+        // proxy: "http://192.168.1.250",
+        // serveStatic: ['./templates'],
+
+        server: {
+            baseDir: './templates',
+        },
+        port: 8033, //
+        ui: false,
+        directory: true,
+        notify: false,
+        codeSync: false, // 不要发送任何文件改变事件给浏览器
+        logSnippet: false,
+        logFileChanges: false,
+        logConnections: false,
+        ghostMode: false
+    });
+});
+
 
 // 配置 service worker
 gulp.task('generateServiceWorker', () => {
@@ -441,7 +449,9 @@ gulp.task('generateServiceWorker', () => {
             globDirectory: './templates',
             globPatterns: ['**/*.{html,js,css,png.jpg}'],
             globIgnores: ['sw.js'],
-            swDest: `./sw.js`,
+
+            // 输出到根目录
+            swDest: `./templates/sw.js`,
             clientsClaim: true,
             skipWaiting: true,
             runtimeCaching: [
@@ -494,10 +504,11 @@ gulp.task('generateServiceWorker', () => {
 // 离线方案
 gulp.task('04-build-pwa', function () {
     runSequence(['cleanDev', 'cleanDist'],
-        ['distCopy', 'distHtml', 'distLess', 'distSass', 'distJS'],
+        ['distCopy', 'distHTML', 'distLess', 'distSass', 'distJS'],
         'generateServiceWorker',
         // 'cleanDev',
-        'distSync'
+        // 'PWASync',
+        'distSync',
         // 'zip'
     )
 });
