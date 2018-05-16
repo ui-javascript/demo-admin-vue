@@ -377,7 +377,7 @@ gulp.task('distSync', function () {
     var distBaseRoot = ".";
     browserSync.init({
         // proxy: "deva.dev",
-        port: 8033, //
+        port: 8080, //
         ui: false,
         directory: true,
         notify: false,
@@ -420,15 +420,28 @@ gulp.task('03-build-jsp', function () {
 // =====================================
 
 gulp.task('PWASync', function () {
+    var distBaseRoot = ".";
+
     browserSync.init({
         // @FIXME 代理不知道怎么配置
         // proxy: "http://192.168.1.250",
         // serveStatic: ['./templates'],
 
         server: {
-            baseDir: './templates',
+            baseDir: distBaseRoot + '/templates',
+            index: "index.html",
+            routes: {
+                "/css": distBaseRoot + "/static/css",
+                "/scss": distBaseRoot + "/static/scss",
+                "/scripts": distBaseRoot + '/static/scripts',
+
+                "/images": distBaseRoot + '/static/images',
+                "/plus": distBaseRoot + '/static/plus',
+                "/mock": distBaseRoot + '/static/mock',
+                "/fonts": distBaseRoot + '/static/fonts'
+            }
         },
-        port: 8033, //
+        port: 8033, // 端口注意
         ui: false,
         directory: true,
         notify: false,
@@ -507,8 +520,7 @@ gulp.task('04-build-pwa', function () {
         ['distCopy', 'distHTML', 'distLess', 'distSass', 'distJS'],
         'generateServiceWorker',
         // 'cleanDev',
-        // 'PWASync',
-        'distSync',
+        'PWASync',
         // 'zip'
     )
 });
