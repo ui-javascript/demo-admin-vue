@@ -63,7 +63,8 @@ file>settings>Lauguages & Frameworks>javascript
 
 # x导航
 
-- 炫酷的CSS3 3D横向菜单 菜单项凸出显示 (模仿朝向) https://www.html5tricks.com/css3-3d-menu-float.html
+- 炫酷的CSS3 3D横向菜单 菜单项凸出显示 (模仿朝向) https://www.html5tricks.com/css3-3d-menu-float.html 
+- 立体导航 https://www.html5tricks.com/css3-3d-cube-navigation.html
 
 # corner.js
 
