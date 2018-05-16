@@ -1,7 +1,10 @@
 /**
  * 主要内容参考 (NICE)https://www.cnblogs.com/zhangyuezhen/p/7896047.html
  *
- * eslint
+ * 务必参考一下及作者其他repo
+ * https://github.com/minguman/browsersync-gulp-demo
+ *
+ * eslint不做
  *
  * https://github.com/271626514/gulp-demo
  * https://segmentfault.com/a/1190000010138466
@@ -10,7 +13,7 @@
  * @TODO PWA支持
  *
  * 2015年结合了webpack的，有一些可以参考一下
- * https://github.com/fwon/gulp-webpack-demo
+ * (@deprecated)https://github.com/fwon/gulp-webpack-demo
  */
 
 // 严格模式
@@ -102,12 +105,13 @@ gulp.task('compileSass', function (cb) { // cb是传入的回调函数
         }).on('error', sass.logError))
         // .pipe(concat({ext: '.css'}))
         // .pipe(rename('all.min.css'))
-        .pipe(cleanCss())
+        .pipe(cleanCss({compatibility: 'ie7'}))
         .pipe(autoprefixer({
             // browsers: ['> 1%', 'not ie <= 8']
         }))
         // .pipe(sourcemaps.write())
-        .pipe(gulp.dest(PATHS.scssDevFolder))
+        // .pipe(gulp.dest(PATHS.scssDevFolder))
+        .pipe(gulp.dest('./static/scss'))
     // .pipe(reload({stream: true}))
 
 
@@ -124,23 +128,38 @@ gulp.task('compileLess', function (cb) {
         // .pipe(concat({ext: '.css'})) //合并
         .pipe(cleanCss())
         // .pipe(sourcemaps.write())
-        .pipe(gulp.dest(PATHS.lessDevThemeFolder))
+        // .pipe(gulp.dest(PATHS.lessDevThemeFolder))
+        .pipe(gulp.dest('./static/css/theme'))
 
     cb(err);
 });
 
-// 编译devHtml
-gulp.task('devHtml', function () {
+// 缩编JS
+gulp.task('compileJS', function () {
+    return gulp.src(PATHS.scripts)
+        .pipe(plumber()) // 错误提示
+        // .pipe(concat({ext: '.js'})) //合并同一目录下的所有文件
+        .pipe(babel())
+        .pipe(gulp.dest('./static/scripts'))
+});
+
+// 编译compileHTML
+gulp.task('compileHTML', function () {
     return gulp.src(PATHS.html)
         .pipe(plumber())
-        .pipe(fileInclude())
-        .pipe(gulp.dest(PATHS.htmlDevFolder))
+        .pipe(fileInclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        // .pipe(gulp.dest(PATHS.htmlDevFolder))
+        .pipe(gulp.dest('./templates'))
 });
 
 
 // 浏览器同步刷新
 // http://www.browsersync.cn/docs/gulp/
 gulp.task('devSync', function () {
+    var distBaseRoot = ".";
     browserSync.init({
         // proxy: "deva.dev",
         port: 8888, //
@@ -152,31 +171,41 @@ gulp.task('devSync', function () {
         // browser: ["chrome", "firefox"],
         browser: "chrome",
         server: {
-            baseDir: [PATH_VIEWS],
+            baseDir: ['./templates'],
             // index: "index.html",
             routes: {
-                "/css": PATHS.lessDevFolder,
-                "/scss": PATHS.scssDevFolder,
-                "/scripts": PATHS.scriptsDevFolder,
+                // "/css": PATHS.lessDevFolder,
+                // "/scss": PATHS.scssDevFolder,
+                // "/scripts": PATHS.scriptsDevFolder,
+                //
+                // "/images": PATHS.imagesFolder,
+                // "/plus": PATHS.plusFolder,
+                // "/mock": PATHS.mockFolder,
+                // "/fonts": PATHS.fontsFolder,
 
-                "/images": PATHS.imagesFolder,
-                "/plus": PATHS.plusFolder,
-                "/mock": PATHS.mockFolder,
-                "/fonts": PATHS.fontsFolder
+                "/css": distBaseRoot + "/static/css",
+                "/scss": distBaseRoot + "/static/scss",
+                "/scripts": distBaseRoot + '/static/scripts',
+
+                "/images": distBaseRoot + '/static/images',
+                "/plus": distBaseRoot + '/static/plus',
+                "/mock": distBaseRoot + '/static/mock',
+                "/fonts": distBaseRoot + '/static/fonts'
             }
         },
         // startPath: "index.html"
     });
 
     // 文件监听
-    gulp.watch(PATHS.html).on('change', reload);
-    gulp.watch(PATHS.scripts).on('change', reload);
-    gulp.watch(PATHS.scss, ['compileSass']).on('change', reload);
-    gulp.watch(PATHS.less, ['compileLess']).on('change', reload);
+    // fileInclude + browserSync https://www.cnblogs.com/yjzhu/archive/2017/02/27/6474854.html
+    gulp.watch(PATHS.html, ['compileHTML']).on('change', reload);
+    gulp.watch(PATHS.scripts, ['compileJS', 'compileHTML']).on('change', reload);
+    gulp.watch(PATHS.scss, ['compileSass', 'compileHTML']).on('change', reload);
+    gulp.watch(PATHS.less, ['compileLess', 'compileHTML']).on('change', reload);
 });
 
 gulp.task('distSync', function () {
-    var distBaseRoot = "."
+    var distBaseRoot = ".";
     browserSync.init({
         // proxy: "deva.dev",
         port: 8033, //
@@ -226,10 +255,11 @@ gulp.task('PWASync', function () {
 
 // 默认任务
 gulp.task('default', function () {
-    runSequence(['cleanDev', 'cleanDist'], ['devSync']);
+    runSequence('01-build-dev');
 });
 gulp.task('01-build-dev', function () {
     runSequence(['cleanDev', 'cleanDist'],
+        ['distCopy', 'compileHTML', 'compileLess', 'compileSass', 'compileJS'],
         ['devSync']);
 });
 
@@ -321,14 +351,18 @@ gulp.task('distHtml', function () {
     return gulp.src(PATHS.html)
         .pipe(plumber())
         .pipe(minifyHtml())
-        .pipe(fileInclude())
+        .pipe(fileInclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
         .pipe(gulp.dest('./templates'))
     // .pipe(md5(10));
 });
 
 // 搬运一些未正确归类的文件
 gulp.task('distCopy', function () {
-    return gulp.src([PATHS.htmlFolder + '/**/*.*', '!' + PATHS.html])
+    return gulp.src([PATHS.htmlFolder + '/**/*.*',
+        '!' + PATHS.html, '!./**/*.inc'])
         .pipe(gulp.dest('./templates'))
 });
 
