@@ -1,7 +1,0 @@
-/*
-	Приватный модуль для генерации брейкпоинтов.
-*/
-
-@function getRemValue($size_in_pixels){
-	@return #{$size_in_pixels/$font_size}rem;
-}
