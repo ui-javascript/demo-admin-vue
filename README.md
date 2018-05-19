@@ -35,23 +35,23 @@ file>settings>Lauguages & Frameworks>javascript
 
 # 多页面解决方案
 
-- 多页面Webpack脚手架 https://github.com/HeavenBin/WebpackTemplate
+- 非默认需要配置entries  https://github.com/Monine/webpack-multi-page
 - webpack增量打包多页应用 若干思考 https://juejin.im/post/5a63f082f265da3e303c95cc 
     - http://www.guofengxian.com/2017/08/08/%E4%BD%BF%E7%94%A8webpack%E9%87%8D%E6%9E%84koa2%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8/#more
-- 一个简单易用的webpack4多页面脚手架配置加学习
-    - https://juejin.im/post/5ad0a7f7518825482e394f41
-    - https://github.com/673800357/webpack4-multpage-learn
-- 搭建一个多页面的无依赖的工程化项目
-    - https://juejin.im/post/59f338695188255f5c513fb1
-    - https://github.com/wuomzfx/pure-webpage
-- @deprecated 需要配置entries https://github.com/Monine/webpack-multi-page
-- 中小型多页面应用整合webpack终极方案 https://juejin.im/post/5a1b9a6ef265da432a7b4d0d
 - webpack不适合多页面应用？你写的插件还不够多 https://www.jianshu.com/p/f6a2a47d084d
 - 从无到有，学习 webpack 的多页面配置 
     - https://juejin.im/entry/58e73a7661ff4b006b40d023
     - https://github.com/Heyff12/webpack-pages  
-- 用webpack搭建多页面项目 https://juejin.im/post/5a0c13b3518825329314154d
-- http://hawkzz.com/blog/blog/1514542087911  
+- 讲思路 搭建一个多页面的无依赖的工程化项目
+    - https://juejin.im/post/59f338695188255f5c513fb1
+    - https://github.com/wuomzfx/pure-webpage
+- @deprecated 用webpack搭建多页面项目 https://juejin.im/post/5a0c13b3518825329314154d    
+- 中小型多页面应用整合webpack终极方案 https://juejin.im/post/5a1b9a6ef265da432a7b4d0d    
+- @deprecated 思路 http://hawkzz.com/blog/blog/1514542087911  
+- @deprecated 一个简单易用的webpack4多页面脚手架配置加学习
+    - https://juejin.im/post/5ad0a7f7518825482e394f41
+    - https://github.com/673800357/webpack4-multpage-learn
+- @deprecated 多页面Webpack脚手架 https://github.com/HeavenBin/WebpackTemplate
  
 # 基于Vue的多页面解决方案
 
