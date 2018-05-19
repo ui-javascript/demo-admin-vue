@@ -1,8 +1,3 @@
-# 布局类组件
-
-- 轮播 
-- 弹框
-- 导航
 
 # Parcel 配置
 
@@ -38,34 +33,58 @@ file>settings>Lauguages & Frameworks>javascript
     - https://github.com/rt-zhangxuefei/vue-project-multipages-template
 
 
-# IE8解决方案
+# 多页面解决方案
 
-- san
-- avalon
-- knockout
-- react/regular
+- 多页面Webpack脚手架 https://github.com/HeavenBin/WebpackTemplate
+- webpack增量打包多页应用 若干思考 https://juejin.im/post/5a63f082f265da3e303c95cc 
+    - http://www.guofengxian.com/2017/08/08/%E4%BD%BF%E7%94%A8webpack%E9%87%8D%E6%9E%84koa2%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8/#more
+- 一个简单易用的webpack4多页面脚手架配置加学习
+    - https://juejin.im/post/5ad0a7f7518825482e394f41
+    - https://github.com/673800357/webpack4-multpage-learn
+- 搭建一个多页面的无依赖的工程化项目
+    - https://juejin.im/post/59f338695188255f5c513fb1
+    - https://github.com/wuomzfx/pure-webpage
+- @deprecated 需要配置entries https://github.com/Monine/webpack-multi-page
+- 中小型多页面应用整合webpack终极方案 https://juejin.im/post/5a1b9a6ef265da432a7b4d0d
+- webpack不适合多页面应用？你写的插件还不够多 https://www.jianshu.com/p/f6a2a47d084d
+- 从无到有，学习 webpack 的多页面配置 
+    - https://juejin.im/entry/58e73a7661ff4b006b40d023
+    - https://github.com/Heyff12/webpack-pages  
+- 用webpack搭建多页面项目 https://juejin.im/post/5a0c13b3518825329314154d
+- http://hawkzz.com/blog/blog/1514542087911  
+ 
+# 基于Vue的多页面解决方案
 
-# 模仿学习列表
+- vue多页面开发和打包的正确姿势 https://juejin.im/post/5a8e3f00f265da4e747fc700
+    - https://github.com/Faithree/multiple-vue-amazing
+    - vue多页面打包优化,主要讲打包上线的优化 
+    
+- 基于vue-cli的多页面应用脚手架
+    - https://github.com/JayZangwill/vue-multipage
+    - https://github.com/breezefeng/vue-cli-multipage
+- 从搭建vue-脚手架到掌握webpack配置 https://juejin.im/post/5a5cb391f265da3e317e2579
+- (NICE) https://github.com/Plortinus/vue-multiple-pages
+    - https://github.com/wlx200510/vue-multiple-pages-cli
+- https://github.com/Mrminfive/vue-multiple-page
+- Vue或React多页应用脚手架 webpack替换为3.X  https://github.com/MeCKodo/vue-multipage
+    - https://juejin.im/post/582d74ec128fe10069565416
+- vue-cli + es6 多页面项目开发及部署 https://juejin.im/post/5ab1d9c0f265da239c7b3c0b
+- 基于vue-cli重构多页面脚手架 https://juejin.im/post/5a6559e55188257330610ac5
+    - https://github.com/xueshuai/vue-multipage 
+- Webapck+Vue多页面商城模板 https://juejin.im/post/5a2257a2f265da432a7b6532
+    - https://github.com/czero1995/webpack-store
+    
+# 基于React的多页面解决方案
 
-- 纯CSS3实现仿Mac系统的Dock菜单 https://www.html5tricks.com/pure-css3-mac-dock.html
-- 纯CSS3下拉菜单导航 子菜单多种展开动画 https://www.html5tricks.com/pure-css3-dropdown-menu-animation.html
-- jQuery层叠图片细节对比插件(用于商品使用效果前后对比) https://www.html5tricks.com/jquery-image-stack-compare.html
+- create-react-app修改为多页面支持 https://juejin.im/post/5afcd2bd51882542c832f155
+ 
+# H5移动端 
 
-# Tab
+- 移动端页面适配———多方案解析 https://www.jianshu.com/p/3b45aa981e77 
+ 
+# 其他
 
-- 模仿立体感 https://www.html5tricks.com/jquery-css3-3d-tab.html
-
-# 轮播
-
-- 轮播视觉差 https://www.html5tricks.com/jquery-parallax-image-slider.html
-- 做这种箭头 https://www.html5tricks.com/jquery-3d-shadow-image.html
-- 全屏轮播 https://www.html5tricks.com/html5-css3-3d-full-slider.html
-
-# x导航
-
-- 炫酷的CSS3 3D横向菜单 菜单项凸出显示 (模仿朝向) https://www.html5tricks.com/css3-3d-menu-float.html 
-- 立体导航 https://www.html5tricks.com/css3-3d-cube-navigation.html
-
-# corner.js
-
-- 粘性 https://www.html5tricks.com/css3-gooey-menu.html
+- vue单页面，多路由，前进刷新，后退不刷新 https://segmentfault.com/a/1190000012083511    
+    - https://github.com/bingyang519/vueGoBack
+- 参考公共部分提取 https://github.com/czero1995/webpack-common  
+    - https://juejin.im/post/5a35f6845188253865094365   
