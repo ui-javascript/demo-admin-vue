@@ -131,7 +131,8 @@ const config = {
     extensions: ['.js', '.html', '.scss'],
     alias: {
       '@': path.resolve('src'),
-      '~': path.resolve('src/assets')
+      '~': path.resolve('src/assets'),
+      '@@': path.resolve('static')
     }
   }
 }
