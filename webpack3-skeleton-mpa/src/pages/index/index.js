@@ -4,4 +4,4 @@ console.log('aaaaaaaaaaaa')
 import $ from 'jquery'
 // import mplayer from './js/mplayer'
 
-console.log($.browser)
+console.log($.support)

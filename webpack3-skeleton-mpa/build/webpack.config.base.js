@@ -48,9 +48,9 @@ getEntryDir()
       filename: `${moduleNameStr}/${fileName}.html`,
       // filename: `${moduleNameStr}.html`,
       template: path.resolve(__dirname, `../${page.tmpl}`),
-      
+
       // @FIXME 需要考虑具体引入模块
-      chunks: ['commons','vendor', moduleNameStr],
+      chunks: ['commons', moduleNameStr, 'vendors', 'manifest'],
     });
     HTMLPlugins.push(htmlPlugin);
     Entries[moduleNameStr] = path.resolve(__dirname, `../src/${page.dir}/index.js`);
@@ -80,32 +80,34 @@ let webpackconfig = {
   },
   // 加载器
   module: {
-    rules: [{
-      test: /\.css$/,
-      exclude: /node_modules/,
-      use: ExtractTextPlugin.extract({
-        fallback: "style-loader",
-        publicPath: config.cssPublicPath,
-        use: [{
-          loader: "css-loader",
+    rules: [
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          publicPath: config.cssPublicPath,
+          use: [{
+            loader: "css-loader",
+            options: {
+              minimize: true, // 开启 css 压缩
+            }
+          }, {
+            loader: "postcss-loader"
+          }]
+        })
+      }, 
+      {
+        test: /\.styl(us)?$/,
+        use: ['style-loader', 'css-loader', 'stylus-loader', {
+          loader: "postcss-loader",
           options: {
-            minimize: true, // 开启 css 压缩
+            plugins: function () {
+              return [require('autoprefixer')];
+            }
           }
-        }, {
-          loader: "postcss-loader"
         }]
-      })
-    }, {
-      test: /\.styl(us)?$/,
-      use: ['style-loader', 'css-loader','stylus-loader', {
-        loader: "postcss-loader",
-        options: {
-          plugins: function () {
-            return [require('autoprefixer')];
-          }
-        }
-      }]
-    },
+      },
       {
         test: /\.less$/,
         use: ['style-loader', 'css-loader', 'less-loader', {
@@ -117,10 +119,12 @@ let webpackconfig = {
             }
           }
         }]
-      }, {
+      }, 
+      {
         test: /\.(jade|pug)$/,
         loader: ['html-loader', 'pug-html-loader']
-      }, {
+      }, 
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -129,7 +133,8 @@ let webpackconfig = {
             presets: ['es2015']
           }
         }
-      }, {
+      }, 
+      {
         test: /\.(png|svg|jpg|gif)$/,
         use: {
           loader: "url-loader",
@@ -140,10 +145,12 @@ let webpackconfig = {
             outputPath: config.imgOutputPath
           }
         }
-      }, {
+      }, 
+      {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ["file-loader"]
-      }, {
+      },
+      {
         test: /\.(htm|html)$/i,
         loader: 'html-withimg-loader'
       }],
@@ -161,7 +168,7 @@ let webpackconfig = {
     }),
     // 自动清理 dist 文件夹
     new CleanWebpackPlugin([config.devServerOutputPath]),
-    
+
     // 将 css 抽取到某个文件夹
     new ExtractTextPlugin({
       //生成css文件名
@@ -176,7 +183,7 @@ let webpackconfig = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
-      "window.jQuery":"jquery"
+      "window.jQuery": "jquery"
     })
   ],
   resolve: {
