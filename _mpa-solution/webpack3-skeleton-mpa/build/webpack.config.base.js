@@ -76,7 +76,10 @@ let webpackconfig = {
   devtool: "cheap-module-source-map",
   output: {
     filename: "static/js/[name].bundle.[hash].js",
-    path: path.resolve(__dirname, config.devServerOutputPath)
+    path: path.resolve(__dirname, config.devServerOutputPath),
+    publicPath: process.env.NODE_ENV === 'production'
+      ? config.build.assetsPublicPath
+      : config.dev.assetsPublicPath
   },
   // 加载器
   module: {
