@@ -8,7 +8,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const cssnano = require('cssnano');
 const autoprefixer = require('autoprefixer');
-const routers = require('./routers');
+const routers = require('./entries');
 
 
 //环境变量，开发环境或者生产环境，npm将通过这个值来区分打包。

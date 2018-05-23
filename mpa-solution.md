@@ -1,3 +1,8 @@
+# 基于Webpack的多页面解决方案
+
+- jquery采用cdn + external
+
+
 # 多页面解决方案
 
 - 非默认需要配置entries  https://github.com/Monine/webpack-multi-page
