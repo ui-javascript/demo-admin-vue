@@ -2,19 +2,23 @@
  * webpack 基础配置
  * @type {[type]}
  */
+// 引入配置
+const config = require("./config");
+
 const path = require("path");
 const webpack = require('webpack');
 const glob = require("glob")
+
 // 引入插件
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 // 清理 dist 文件夹
 const CleanWebpackPlugin = require("clean-webpack-plugin")
 // 抽取 css
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-// 引入配置
-const config = require("./config");
+
 // 通过 html-webpack-plugin 生成的 HTML 集合
 let HTMLPlugins = [];
+
 // 入口文件集合
 let Entries = {}
 
@@ -36,6 +40,13 @@ function getEntryDir() {
 }
 
 // 生成多页面的集合
+let viewsDirectory = ''
+console.log(process.env.NODE_ENV == 'prod')
+if (process.env.NODE_ENV == 'prod') {
+  viewsDirectory = 'templates/'
+  console.log(viewsDirectory)
+} 
+
 getEntryDir()
   .forEach((page) => {
     console.log(page + '/n')
@@ -44,8 +55,9 @@ getEntryDir()
     let pathArr = page.tmpl.split('/')
     let fileName = pathArr[pathArr.length - 1].split('.')[0]
     let moduleNameStr = moduleName[moduleName.length - 1]
+
     const htmlPlugin = new HTMLWebpackPlugin({
-      filename: `${moduleNameStr}/${fileName}.html`,
+      filename: viewsDirectory + `${moduleNameStr}/${fileName}.html`,
       // filename: `${moduleNameStr}.html`,
       template: path.resolve(__dirname, `../${page.tmpl}`),
 
@@ -71,12 +83,16 @@ if (vendorsDir.length > 0) {
   Entries['vendors'] = vendorsDir
 } // 第三方类库
 
+
 let webpackconfig = {
   entry: Entries,
   devtool: "cheap-module-source-map",
   output: {
     filename: "static/js/[name].bundle.[hash].js",
-    path: path.resolve(__dirname, config.devServerOutputPath)
+    path: path.resolve(__dirname, config.devServerOutputPath),
+    
+    // 公共路径调整
+    // publicPath: (process.env.NODE_ENV === 'dev') ? path.resolve(__dirname, '/static') : '/'
   },
   // 加载器
   module: {

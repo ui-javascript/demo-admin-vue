@@ -2,6 +2,8 @@
  * 开发环境配置文件
  * @type {[type]}
  */
+const opn = require('opn')
+
 // 引入基础配置文件
 const webpackBase = require("./webpack.config.base");
 // 引入 webpack-merge 插件
