@@ -1,0 +1,25 @@
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+  overflow: hidden;
+  color: $icon-grey;
+}
+
+.sidenav {
+  .icon {
+    color: lighten($black, 20%);
+  }
+  a {
+    &:hover {
+      .icon {
+        color: $brand;
+      }
+    }
+  }
+  .active {
+    .icon {
+      color: $brand;
+    }
+  }
+}
