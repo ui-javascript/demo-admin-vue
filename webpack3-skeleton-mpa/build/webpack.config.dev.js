@@ -9,7 +9,7 @@ const webpackBase = require("./webpack.config.base");
 // 引入 webpack-merge 插件
 const webpackMerge = require("webpack-merge");
 // 引入配置文件
-const config = require("./config");
+const config = require("../config/index");
 // 合并配置文件
 module.exports = webpackMerge(webpackBase, {
   // 配置 webpack-dev-server

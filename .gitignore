@@ -64,7 +64,6 @@ run.log
 .upload/
 .cache/
 
-#dist/
+dist/
 
-/gulp-typical-mpa/dist.zip
-/gulp-typical-mpa/dist/*
+dist.zip
