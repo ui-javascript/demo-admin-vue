@@ -208,7 +208,8 @@ let webpackconfig = {
   // 全局引用jquery
   externals: {
     jquery: 'window.$',
-    $: 'window.$'
+    $: 'window.$',
+    san: 'window.san'
   },
 
   resolve: {
