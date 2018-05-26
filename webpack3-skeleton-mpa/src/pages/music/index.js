@@ -4,6 +4,7 @@ import "./css/custom.less"
 
 // var $ = require('jquery')
 import $ from 'jquery'
+
 console.log($.ajax)
 
 // var MPlayer = require("components/music/mplayer.js").default

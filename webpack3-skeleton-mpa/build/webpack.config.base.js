@@ -45,7 +45,7 @@ console.log(process.env.NODE_ENV == 'prod')
 if (process.env.NODE_ENV == 'prod') {
   viewsDirectory = 'templates/'
   console.log(viewsDirectory)
-} 
+}
 
 getEntryDir()
   .forEach((page) => {
@@ -90,7 +90,7 @@ let webpackconfig = {
   output: {
     filename: "static/js/[name].bundle.[hash].js",
     path: path.resolve(__dirname, config.devServerOutputPath),
-    
+
     // 公共路径调整
     // publicPath: (process.env.NODE_ENV === 'dev') ? path.resolve(__dirname, '/static') : '/'
   },

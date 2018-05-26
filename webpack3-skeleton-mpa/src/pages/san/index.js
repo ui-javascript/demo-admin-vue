@@ -1,4 +1,4 @@
-import  san from 'san'
+import san from 'san'
 
 const MyApp = san.defineComponent({
   template: `
