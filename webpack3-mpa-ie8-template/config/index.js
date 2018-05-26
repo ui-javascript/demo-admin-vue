@@ -18,6 +18,8 @@ module.exports = {
   libraryDir: 'assets/libs',
 
 
+
+  //  需要正确配置如下:
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index/index.html'),

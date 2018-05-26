@@ -178,7 +178,16 @@ let webpackconfig = {
             },
             {
                 test: /\.(htm|html)$/i,
-                loader: 'html-withimg-loader'
+                use: [
+                    {
+                        loader: 'html-withimg-loader'
+                    },
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            minimize: true
+                        }
+                    }]
             }],
     },
     // devtool: 'eval',
