@@ -1,5 +1,4 @@
-
-# webpack
+# webpack 配置
 
 - webpack 自身只理解 JavaScript, 其他都当做模块处理
 
@@ -29,9 +28,15 @@
 
 ```shell
 file>settings>Lauguages & Frameworks>javascript
-将javascript languages version 修改为 ECMAScript 6。
+将javascript languages version 修改为 ECMAScript 6
 ```
 
 # gulp
 
-...
+- 已转移至 https://github.com/natural-fe/natural-components
+
+```
+放这里维护烦死
+常用功能都配置了
+主要用于那些前后端不分离的项目 和 平时前端DEMO的对比尝试
+```

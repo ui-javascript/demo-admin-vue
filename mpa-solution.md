@@ -1,6 +1,12 @@
 # 基于Webpack的多页面解决方案
 
-- jquery采用cdn + external
+- san.js(nerv.js/anu.js) 是作为公共vendors提取
+- UI采用lulu UI
+- jquery作为辅助 cdn + external
+
+```html
+<link rel="stylesheet" href="//qidian.gtimg.com/lulu/theme/peak/css/common/ui.css">
+```
 
 
 # 多页面解决方案
@@ -47,10 +53,6 @@
 # 基于React的多页面解决方案
 
 - create-react-app修改为多页面支持 https://juejin.im/post/5afcd2bd51882542c832f155
- 
-# H5移动端 
-
-- 移动端页面适配———多方案解析 https://www.jianshu.com/p/3b45aa981e77 
  
 # 其他
 
