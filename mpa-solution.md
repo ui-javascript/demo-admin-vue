@@ -1,6 +1,6 @@
 # 基于Webpack的多页面解决方案
 
-- san.js(nerv.js/anu.js) 是作为公共vendors提取
+- san.js是作为公共vendors提取
 - UI采用lulu UI 
 - jquery仅作为辅助 cdn + external
 - 辅助jquery ui与之前项目的JS Lib
@@ -17,10 +17,11 @@
 // @TODO 兼容IE8的一些配置与处理
 // @TODO 处理多层目录结构与一个文件夹下多个模板
 // @TODO 提取公共模块，不要重复引入
+// @TODO 支持typescript
 // @TODO less分模块引入
 // @TODO webpack性能优化
 // @TODO 支持nerv.js 
-// @TODO 支持anu.js
+// @TODO 支持anu.js(可能放弃)
 // @TODO 支持SPA(主要是VUE + router)
 // @TODO -> webpack4
 ```

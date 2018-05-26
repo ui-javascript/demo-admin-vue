@@ -29,13 +29,18 @@ function getEntryDir() {
 
     // (\/|\\\\) 这种写法是为了兼容 windows和 mac系统目录路径的不同写法
     let pathDir = 'src(\/|\\\\)(.*?)(\/|\\\\)_tmpl' // 视图所在
+    console.log(pathDir)
     let files = glob.sync(globPath)
     let dirname, entries = []
     for (let i = 0; i < files.length; i++) {
+
         dirname = path.dirname(files[i])
+
         entries.push({
             tmpl: files[i],
-            dir: dirname.replace(new RegExp('^' + pathDir), '$2')
+            dir: dirname.replace(new RegExp('^' + pathDir), '$2'),
+            // dir: dirname.replace(/src\//, ''),
+
         })
     }
     return entries;
@@ -43,7 +48,7 @@ function getEntryDir() {
 
 // 生成多页面的集合
 let viewsDirectory = ''
-console.log(process.env.NODE_ENV == 'prod')
+// console.log(process.env.NODE_ENV == 'prod')
 if (process.env.NODE_ENV == 'prod') {
     viewsDirectory = 'pages/'
     console.log(viewsDirectory)
@@ -51,7 +56,7 @@ if (process.env.NODE_ENV == 'prod') {
 
 getEntryDir()
     .forEach((page) => {
-        console.log(page + '/n')
+        console.log(JSON.stringify(page) + '/n')
 
         let moduleName = page.dir.split('/')
         let pathArr = page.tmpl.split('/')
@@ -87,7 +92,6 @@ let vendorsDir = getVendors()
 if (vendorsDir.length > 0) {
     Entries['vendors'] = vendorsDir
 }
-
 
 let webpackconfig = {
     entry: Entries,
@@ -166,6 +170,11 @@ let webpackconfig = {
                         presets: ['es2015']
                     }
                 }
+            },
+            {
+                test: /\.ts$/,
+                use: 'ts-loader',
+                exclude: /node_modules/
             },
             // {
             //     test: /\.jsx?$/,
