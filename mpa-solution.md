@@ -1,16 +1,19 @@
 # 基于Webpack的多页面解决方案
 
 - san.js(nerv.js/anu.js) 是作为公共vendors提取
-- UI采用lulu UI
-- jquery作为辅助 cdn + external
+- UI采用lulu UI 
+- jquery仅作为辅助 cdn + external
+- 辅助jquery ui与之前项目的JS Lib
 
 ```html
 <link rel="stylesheet" href="//qidian.gtimg.com/lulu/theme/peak/css/common/ui.css">
 ```
 
+- TODO
+
 ```js
-// @TODO 内联样式与资源
 // @TODO 整理配置文件
+// @TODO 内联样式与资源
 // @TODO 兼容IE8的一些配置与处理
 // @TODO 处理多层目录结构与一个文件夹下多个模板
 // @TODO 提取公共模块，不要重复引入

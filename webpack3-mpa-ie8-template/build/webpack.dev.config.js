@@ -5,11 +5,11 @@
 const opn = require('opn')
 
 // 引入基础配置文件
-const webpackBase = require("./webpack.config.base");
+const webpackBase = require("./webpack.base.config");
 // 引入 webpack-merge 插件
 const webpackMerge = require("webpack-merge");
 // 引入配置文件
-const config = require("../config/index");
+const config = require("../config");
 // 合并配置文件
 module.exports = webpackMerge(webpackBase, {
   // 配置 webpack-dev-server

@@ -3,7 +3,7 @@
  * @type {[type]}
  */
 // 引入配置
-const config = require("../config/index");
+const config = require("../config");
 
 const path = require("path");
 const webpack = require('webpack');
@@ -238,8 +238,8 @@ let webpackconfig = {
             // 'create-react-class': "nerv-create-class",
             "@": path.join(__dirname, "../static"),
             "@static": path.join(__dirname, "../static"),
-            "@src": path.join(__dirname, "../src"),
             // "static": path.join(__dirname, "../static"),
+            "@src": path.join(__dirname, "../src"),
             "@assets": path.join(__dirname, "../src/assets"),
             "@components": path.join(__dirname, "../src/components"),
             "@views": path.join(__dirname, "../src/views"),

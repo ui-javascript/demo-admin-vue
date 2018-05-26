@@ -2,9 +2,9 @@
  * eslint 配置
  * @type {[type]}
  */
-const webpackBase = require("./webpack.config.base");
+const webpackBase = require("./webpack.base.config");
 const webpackMerge = require("webpack-merge");
-const config = require("../config/index");
+const config = require("../config");
 module.exports = webpackMerge(webpackBase, {
   module: {
     rules: [
