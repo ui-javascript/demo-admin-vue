@@ -142,6 +142,18 @@ let webpackconfig = {
                 }]
             },
             {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader', {
+                    loader: 'postcss-loader',
+                    options: {
+                        importLoaders: 1,
+                        plugins: function () {
+                            return [require('autoprefixer')];
+                        }
+                    }
+                }]
+            },
+            {
                 test: /\.(jade|pug)$/,
                 loader: ['html-loader', 'pug-html-loader']
             },
