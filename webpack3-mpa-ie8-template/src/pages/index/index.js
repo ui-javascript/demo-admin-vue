@@ -4,15 +4,15 @@ import './index.css'
 import $ from 'jquery'
 // import mplayer from './js/mplayer'
 
-// console.log($.support)
+console.log($.support)
 
-import san from 'san'
+// import san from 'san'
 
 const MyApp = san.defineComponent({
     template: `
                 <div>
                     <input type="text" value="{=name=}">
-                    <p>Hello {{name}}!</p>
+                    <p>Hello // {{name}}}}!</p>
                 </div>
             `
 });
