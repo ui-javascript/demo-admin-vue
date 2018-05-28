@@ -1,9 +1,13 @@
 var path = require('path')
-var config = require('../config')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var glob = require('glob');
 
+// 导入配置
+var config = require('../config')
 
+// 提取
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+// 静态资源路径
 exports.assetsPath = function (_path) {
     var assetsSubDirectory = process.env.NODE_ENV === 'production'
         ? config.build.assetsSubDirectory
@@ -12,6 +16,8 @@ exports.assetsPath = function (_path) {
     return path.posix.join(assetsSubDirectory, _path)
 }
 
+
+//
 exports.cssLoaders = function (options) {
     options = options || {}
 
@@ -52,6 +58,8 @@ exports.cssLoaders = function (options) {
         css: generateLoaders(),
         postcss: generateLoaders(),
         less: generateLoaders('less'),
+
+        // 语法缩进
         sass: generateLoaders('sass', {indentedSyntax: true}),
         scss: generateLoaders('sass'),
         stylus: generateLoaders('stylus'),
@@ -74,23 +82,23 @@ exports.styleLoaders = function (options) {
 }
 
 
-//获取多级的入口文件
+// 获取多级的入口文件
 exports.getMultiEntry = function (globPath) {
     var entries = {},
-        basename, tmp, pathname;
+        basename, tmpPathArr, pathname, pathsrc;
 
     glob.sync(globPath).forEach(function (entry) {
         basename = path.basename(entry, path.extname(entry));
 
-        tmp = entry.split('/').splice(-4);
+        tmpPathArr = entry.split('/').splice(-4);
 
-        var pathsrc = tmp[0] + '/' + tmp[1];
+        pathsrc = tmpPathArr[0] + '/' + tmpPathArr[1];
 
-        // console.log(tmp[0], tmp[1])
+        console.log(tmpPathArr[0], tmpPathArr[1])
 
         // 多层目录与单层目录的处理 /list
-        if (tmp[0] == 'src') {
-            pathsrc = tmp[1];
+        if (tmpPathArr[0] == 'src') {
+            pathsrc = tmpPathArr[1];
         }
 
         // console.log(pathsrc)
@@ -102,7 +110,6 @@ exports.getMultiEntry = function (globPath) {
     });
 
     return entries;
-
 }
 
 
@@ -137,6 +144,7 @@ var filecopy = function (src, dst) {
                     // 通过管道来传输流
                     readable.pipe(writable);
                 }
+
                 // 如果是目录则递归调用自身
                 else if (st.isDirectory()) {
                     exports.startCopy(_src, _dst);
@@ -153,6 +161,7 @@ exports.startCopy = function (src, dst) {
         if (exists) {
             filecopy(src, dst);
         }
+
         // 不存在
         else {
             fs.mkdir(dst, function () {

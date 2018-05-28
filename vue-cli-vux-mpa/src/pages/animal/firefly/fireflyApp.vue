@@ -12,15 +12,10 @@
         components: {
             Firefly
         },
-        data () {
-            return {
-
-            }
+        data() {
+            return {}
         },
-        methods: {
-
-
-        }
+        methods: {}
     }
 </script>
 

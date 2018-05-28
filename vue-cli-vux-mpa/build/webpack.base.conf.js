@@ -1,19 +1,30 @@
 var path = require('path')
+
+// 导入工具类
 var utils = require('./utils')
+
+// 导入配置
 var webpack = require('webpack')
 var config = require('../config')
 
+// 路径处理
 var glob = require('glob');
 var entries = utils.getMultiEntry('./src/' + config.moduleName + '/**/**/*.js'); // 获得入口js文件
 var chunks = Object.keys(entries);
 
+// 输出路径
 console.log(chunks)
 
+// 工程文件根目录调整
 var projectRoot = path.resolve(__dirname, '../')
+
+// Vux的loader
 const vuxLoader = require('vux-loader')
 
+// Vue loader配置
 var vueLoaderConfig = require('./vue-loader.conf')
 
+//
 function resolve(dir) {
     return path.join(__dirname, '..', dir)
 }
@@ -21,24 +32,40 @@ function resolve(dir) {
 var webpackConfig = {
 
     entry: entries,
+
+    // 打包输出
     output: {
         path: config.build.assetsRoot,
         filename: '[name].js',
-        publicPath: process.env.NODE_ENV === 'production'
+
+        publicPath: (process.env.NODE_ENV === 'production')
             ? config.build.assetsPublicPath
             : config.dev.assetsPublicPath
     },
+
+
     resolve: {
+        // 支持扩展
         extensions: ['.js', '.vue', '.json'],
+
+        // 别名
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
+
+            // 开发目录
             '@': resolve('src'),
             'src': path.resolve(__dirname, '../src'),
+
+            // 静态资源
             'assets': path.resolve(__dirname, '../src/assets'),
+
+            // 组件
             'components': path.resolve(__dirname, '../src/components'),
             '~': path.resolve(__dirname, '../src/components')
         }
     },
+
+
     module: {
         rules: [
             {

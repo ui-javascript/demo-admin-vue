@@ -1,8 +1,6 @@
 import './styles/index.less'
 
 import $ from 'jquery'
-// var $ = require('jquery')
-
 console.log($.ajax)
 
 import {add} from '@libs/utils'

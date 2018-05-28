@@ -5,14 +5,14 @@ import FireFlyApp from './fireflyApp'
 import LeanApp from './leanApp'
 
 const routes = [
-    { path: '/', component: FireFlyApp },
-    { path: '/lean', component: LeanApp }
+    {path: '/', component: FireFlyApp},
+    {path: '/lean', component: LeanApp}
 ]
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-    routes:routes
+    routes: routes
 })
 
 

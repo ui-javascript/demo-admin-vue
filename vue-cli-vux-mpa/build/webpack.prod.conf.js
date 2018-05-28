@@ -1,19 +1,27 @@
 var path = require('path')
 var utils = require('./utils')
+
 var webpack = require('webpack')
-var config = require('../config')
 var merge = require('webpack-merge')
+
+// 配置
+var config = require('../config')
 var baseWebpackConfig = require('./webpack.base.conf')
+
+
 var CleanWebpackPlugin = require("clean-webpack-plugin")
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
+
+// 入口
 var entries = utils.getMultiEntry('./src/' + config.moduleName + '/**/**/*.js'); // 获得入口js文件
 var chunks = Object.keys(entries);
 
 
+// 是否为测试
 var env = process.env.NODE_ENV === 'testing'
     ? require('../config/test.env')
     : config.build.env
@@ -140,7 +148,7 @@ var outputHtmlPathname
 for (var pathname in pages) {
 
     // 输出路径
-    outputHtmlPathname = pathname.replace(new RegExp(new RegExp(config.moduleName),"i"), config.build.assetsHtmlPath)
+    outputHtmlPathname = pathname.replace(new RegExp(new RegExp(config.moduleName), "i"), config.build.assetsHtmlPath)
 
     var conf = {
         filename: outputHtmlPathname + '.html',

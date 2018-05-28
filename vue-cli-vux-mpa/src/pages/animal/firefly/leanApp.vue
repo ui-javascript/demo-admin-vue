@@ -12,15 +12,10 @@
         components: {
             NavLean
         },
-        data () {
-            return {
-
-            }
+        data() {
+            return {}
         },
-        methods: {
-
-
-        }
+        methods: {}
     }
 </script>
 

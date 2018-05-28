@@ -29,25 +29,49 @@ function getEntryDir() {
 
     // (\/|\\\\) 这种写法是为了兼容 windows和 mac系统目录路径的不同写法
     let pathDir = 'src(\/|\\\\)(.*?)(\/|\\\\)_tmpl' // 视图所在
-    console.log(pathDir)
+    // console.log(pathDir)
+  
     let files = glob.sync(globPath)
     let dirname, entries = []
     for (let i = 0; i < files.length; i++) {
-
+      
         dirname = path.dirname(files[i])
-
+      
+      
+        // var tmp = dirname.replace(/src\//i, '');
+        
+        var tmp = dirname.split('/');
+        tmp.shift();
+        tmp.pop();
+        
+        // 
+        tmp = tmp.join("/");
+        
+        // console.log(tmp)
+        // if (tmp[0] === 'src') {
+        //   tmp.shift();
+        // }
+        // console.log(tmp)
+        // tmp.join(",");
+        // console.log('after join: ' + tmp)
+        
+        // console.log(tmp);
+      
         entries.push({
             tmpl: files[i],
-            dir: dirname.replace(new RegExp('^' + pathDir), '$2'),
+            // dir: dirname.replace(new RegExp('^' + pathDir), '$2'),
             // dir: dirname.replace(/src\//, ''),
-
+            dir: tmp
         })
+      
+        // console.log(dirname);
+        // console.log(dirname.replace(new RegExp('^' + pathDir), '$2'));
     }
     return entries;
 }
 
 // 生成多页面的集合
-let viewsDirectory = ''
+var viewsDirectory = ''
 // console.log(process.env.NODE_ENV == 'prod')
 if (process.env.NODE_ENV == 'prod') {
     viewsDirectory = 'pages/'
@@ -63,6 +87,9 @@ getEntryDir()
         let fileName = pathArr[pathArr.length - 1].split('.')[0]
         let moduleNameStr = moduleName[moduleName.length - 1]
 
+        // console.log(fileName)
+        // console.log(moduleNameStr)
+      
         const htmlPlugin = new HTMLWebpackPlugin({
             filename: viewsDirectory + `${moduleNameStr}/${fileName}.html`,
             // filename: `${moduleNameStr}.html`,
@@ -73,6 +100,9 @@ getEntryDir()
             // chunks: ['commons', moduleNameStr, 'vendors', 'manifest'],
             chunks: ['commons', moduleNameStr],
         });
+      
+        console.log(htmlPlugin)
+      
         HTMLPlugins.push(htmlPlugin);
         Entries[moduleNameStr] = path.resolve(__dirname, `../src/${page.dir}/index.js`);
     })
@@ -235,6 +265,7 @@ let webpackconfig = {
         }),
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.HashedModuleIdsPlugin(),
+      
         // 自动生成 HTML 插件
         ...HTMLPlugins,
 

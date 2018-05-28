@@ -3,6 +3,8 @@
 var utils = require('./utils')
 var webpack = require('webpack')
 var merge = require('webpack-merge')
+
+// 配置
 var baseConfig = require('./webpack.base.conf')
 
 var webpackConfig = merge(baseConfig, {

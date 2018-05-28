@@ -7,19 +7,19 @@
                    id="thisice_firefly"
                    type="checkbox">
             <label class="firefly__body" for="thisice_firefly">
-            <div class="firefly__abdomen">
-                <div class="firefly__thorax">
-                    <div class="firefly__head">
-                        <div class="firefly__eyes"></div>
-                        <div class="firefly__antennae"></div>
+                <div class="firefly__abdomen">
+                    <div class="firefly__thorax">
+                        <div class="firefly__head">
+                            <div class="firefly__eyes"></div>
+                            <div class="firefly__antennae"></div>
+                        </div>
+                    </div>
+                    <div class="firefly__wings">
+                        <div class="firefly__wing firefly__wing--a"></div>
+                        <div class="firefly__wing firefly__wing--b"></div>
                     </div>
                 </div>
-                <div class="firefly__wings">
-                    <div class="firefly__wing firefly__wing--a"></div>
-                    <div class="firefly__wing firefly__wing--b"></div>
-                </div>
-            </div>
-        </label></div>
+            </label></div>
 
     </div>
 </template>
@@ -40,9 +40,7 @@
 
         },
         //相关操作事件
-        methods: {
-
-        }
+        methods: {}
     }
 </script>
 

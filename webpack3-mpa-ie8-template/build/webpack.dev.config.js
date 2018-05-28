@@ -55,9 +55,13 @@ module.exports = merge(baseWebpackConfig, {
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    
+    // 
+    // new NoEmitOnErrorsPlugin(),
     new webpack.NoErrorsPlugin()
   ]
 })
+
 
 // var pages = utils.getEntries('./src/module/**/*.html')
 var pages = utils.getEntries(`src/pages/**/*.@(${config.tplLang})`)
