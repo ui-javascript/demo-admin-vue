@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     
-    <link rel="stylesheet" href="//qidian.gtimg.com/lulu/theme/peak/css/common/ui.css">
+    <!--<link rel="stylesheet" href="//qidian.gtimg.com/lulu/theme/peak/css/common/ui.css">-->
+    <link rel="stylesheet" href="../static/lulu/theme/peak/css/common/ui.css">
     
     <!-- 需要这样校准一下路径 -->
     <script src="../static/socket.io.js"></script>
@@ -32,32 +33,12 @@
 </div>
 
 
-<script src="//qidian.gtimg.com/lulu/theme/peak/js/plugin/sea.js"></script>
+<!--<script src="//qidian.gtimg.com/lulu/theme/peak/js/plugin/sea.js"></script>-->
+<script src="../static/lulu/theme/peak/js/plugin/sea.js"></script>
 <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+
 <script>
-    seajs.config({
-        base: "//qidian.gtimg.com/lulu/theme/peak/js"
-    }).use(['common/ui/Checkbox', 'common/ui/Range'], function () {
-        console.log('hello');
 
-        // hello 我也不知道怎么办好了
-        $('#checkbox1').click(function () {
-            console.log('我被电击了啊哈');
-        });
-
-        $("#opacityRange").on('change', function() {
-            $(this).siblings('span').css('opacity', this.value / 100);
-        }).range({
-            tips: function(value) {
-                return value + '%';
-            }
-        });
-        
-        if (!window.addEventListener) {
-            require.async('common/ui/Radio');
-            require.async('common/ui/Checkbox');
-        }
-    });
 </script>
 
 </body>

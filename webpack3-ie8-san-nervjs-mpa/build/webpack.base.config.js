@@ -51,7 +51,7 @@ utils.getEntryDir()
             filename: viewsDirectory + `${moduleNameStr}/${fileName}.html`,
             // filename: `${page.dir}${moduleNameStr}.html`,
             template: path.resolve(__dirname, `../${page.tmpl}`),
-            inlineSource: '.(js|css)$', // embed all javascript and css inline
+            // inlineSource: '.(js|css)$', // embed all javascript and css inline
 
             // @FIXME 需要考虑具体引入模块
             // chunks: ['commons', moduleNameStr, 'vendors', 'manifest'],
@@ -202,6 +202,7 @@ let webpackconfig = {
                     {
                         loader: 'html-loader',
                         options: {
+                            // 压缩
                             minimize: true
                         }
                     }]
@@ -236,7 +237,7 @@ let webpackconfig = {
         ...HTMLPlugins,
 
         // @TODO 内联脚本等的处理
-        // new HtmlWebpackInlineSourcePlugin(),
+        new HtmlWebpackInlineSourcePlugin(),
 
         // 提供jquery会被打包进去
         new webpack.ProvidePlugin({
@@ -249,7 +250,8 @@ let webpackconfig = {
     externals: {
         jquery: 'window.$',
         $: 'window.$',
-        // require: 'window.require'
+        seajs: 'window.seajs',
+        requirejs: 'window.requirejs'
     },
 
     resolve: {
@@ -260,8 +262,7 @@ let webpackconfig = {
             // 'create-react-class': "nerv-create-class",
             "@": path.join(__dirname, "../src"),
             "src": path.join(__dirname, "../src"),
-            // "@static": path.join(__dirname, "../static"),
-            // "static": path.join(__dirname, "../static"),
+            "static": path.join(__dirname, "../static"),
             "assets": path.join(__dirname, "../src/assets"),
             
             // 组件
