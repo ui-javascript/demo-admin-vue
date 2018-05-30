@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="//qidian.gtimg.com/lulu/theme/peak/css/common/ui.css">
+    <script src="./static/socket.io.js"></script>
+    
+</head>
+<body>
+
+<h1>lulu ui 222</h1>
+<h2>@Athuor: zxx</h2>
+
+<div class="">
+    <input type="radio" id="radio5" name="radio" disabled checked>
+    <label for="radio5" class="ui-radio"></label><label for="radio5" class="ml10 mr30 f14">单选项5</label>
+
+    <input type="checkbox" id="checkbox1" name="checkbox">
+    <label for="checkbox1" class="ui-checkbox"></label><label for="checkbox1">复选项1</label>
+</div>
+
+<div>
+    <span>透明度：</span>
+    <input type="range" id="opacityRange" class="ui-range-input" value="50" min="0" max="100" step="10">
+</div>
+
+
+<script src="//qidian.gtimg.com/lulu/theme/peak/js/plugin/sea.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+    seajs.config({
+        base: "//qidian.gtimg.com/lulu/theme/peak/js"
+    }).use(['common/ui/Checkbox', 'common/ui/Range'], function () {
+        console.log('hello');
+
+        // hello 我也不知道怎么办好了
+        $('#checkbox1').click(function () {
+            console.log('我被电击了啊哈');
+        });
+
+        $("#opacityRange").on('change', function() {
+            $(this).siblings('span').css('opacity', this.value / 100);
+        }).range({
+            tips: function(value) {
+                return value + '%';
+            }
+        });
+        
+        if (!window.addEventListener) {
+            require.async('common/ui/Radio');
+            require.async('common/ui/Checkbox');
+        }
+    });
+</script>
+
+</body>
+</html>
