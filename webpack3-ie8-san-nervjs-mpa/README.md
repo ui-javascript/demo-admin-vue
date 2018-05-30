@@ -13,20 +13,24 @@
 - TODO
 
 ```js
-// @TODO 没有找到的index.html时直接使用默认的模板
+// @TODO 图片引入机制
 // @TODO 打包时的报错机制修复
 // @TODO 内联样式与资源
-// @TODO less分模块引入以及模块化(暂停一下)
-// @TODO 处理多层目录结构与一个文件夹下多个模板
-// @TODO 兼容IE8的一些配置与处理
-// @TODO 提取公共模块，不要重复引入 FIX
-// @TODO 支持typescript
 // @TODO 整理配置文件优化升级
+// @TODO less分模块引入以及模块化
+// @TODO 支持typescript
+// @TODO 兼容IE8的一些配置与处理
 // @TODO webpack性能优化
+// @TODO 提取公共模块，不要重复引入 FIX
+
+
+// @TODO 没有找到的index.html时直接使用默认的模板(STOPING)
+// @TODO 处理多层目录结构与一个文件夹下多个模板(STOPING)
+
+
 // @TODO 顺道支持SPA(主要是SAN + router, 可以不兼容IE)
 // @TODO -> webpack4
-
-// better-npm-run 不做了
+// @TODO better-npm-run(@deprecated)
 ```
 
 - 注意
