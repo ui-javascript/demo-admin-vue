@@ -155,7 +155,7 @@ function htmlPlugins() {
     let htmls = [];
     routers.forEach(function (item) {
         item.chunks = ['manifest'].concat(item.chunks).concat([item.filename]);
-        item.template = item.template || './template.ejs'; //默认使用这个指定的ejs
+        item.template = item.template || './template.ejs'; // 默认使用这个指定的ejs
         item.minify = {minifyJS: true, minifyCSS: true};
         item.chunksSortMode = function (...age) {
             let order = item.chunks.concat([]);
