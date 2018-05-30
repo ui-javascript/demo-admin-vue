@@ -4,6 +4,7 @@
 - UI采用lulu UI 
 - jquery仅作为辅助 cdn + external
 - 偶尔一些老页面辅助jquery ui与之前项目的JS Libs
+- 现在改成入口文件(index.js)可以不用写，其实我是不太想写视图文件啊...这个可以再努力一下
 
 ```html
 <link rel="stylesheet" href="//qidian.gtimg.com/lulu/theme/peak/css/common/ui.css">

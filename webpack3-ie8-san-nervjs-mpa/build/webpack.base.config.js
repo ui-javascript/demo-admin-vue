@@ -6,6 +6,7 @@
 const config = require("../config");
 const utils = require("./utils");
 
+const fs = require('fs');
 const path = require("path");
 const webpack = require('webpack');
 const glob = require("glob")
@@ -19,10 +20,10 @@ const CleanWebpackPlugin = require("clean-webpack-plugin")
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // 通过 html-webpack-plugin 生成的 HTML 集合
-let HTMLPlugins = [];
+var HTMLPlugins = [];
 
 // 入口文件集合
-let Entries = {}
+var Entries = {}
 
 
 // 生成多页面的集合
@@ -58,10 +59,17 @@ utils.getEntryDir()
         });
       
         console.log('htmlPlugin -> ' + JSON.stringify(htmlPlugin))
-      
+
         HTMLPlugins.push(htmlPlugin);
-        Entries[page.tmpl] = path.resolve(__dirname, `../src/${page.dir}/${fileName}.js`);
+      
+        let pathJSFile = path.resolve(__dirname, `../src/${page.dir}/${fileName}.js`);
         
+        // 注意 判断文件是否存在需要时间 要同步
+        if (!fs.existsSync(pathJSFile)) {
+          pathJSFile = path.resolve(__dirname, '../static/templates.js')
+        }
+
+        Entries[page.tmpl] = pathJSFile;
     })
 
 
@@ -71,8 +79,8 @@ let vendorsDir = utils.getVendors()
 if (vendorsDir.length > 0) {
     Entries['vendors'] = vendorsDir
 }
+// console.log('入口 -> ' + JSON.stringify(Entries))
 
-console.log('入口 -> ' + JSON.stringify(Entries))
 let webpackconfig = {
     entry: Entries,
     devtool: "cheap-module-source-map",

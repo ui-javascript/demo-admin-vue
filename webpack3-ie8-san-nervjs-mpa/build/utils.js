@@ -93,14 +93,17 @@ exports.getEntryDir = function() {
   // console.log(pathDir)
 
   let files = glob.sync(globPath)
+  
   let dirname, entries = []
+  
   for (let i = 0; i < files.length; i++) {
 
     dirname = path.dirname(files[i])
 
     let dir = dirname.split('/');
 
-    // 形如 src/pages/index/tmpl
+    // 形如 src/pages/index
+    // 暂时不支持二级目录
     if (dir[0] === 'src') {
       dir.shift();
     }
@@ -109,13 +112,10 @@ exports.getEntryDir = function() {
     // dir.pop();
     
     dir = dir.join("/");
-
-    // dir.join(",");
     
     entries.push({
       tmpl: files[i],
       // dir: dirname.replace(new RegExp('^' + pathDir), '$2'),
-      // dir: dirname.replace(/src\//, ''),
       dir: dir
     })
 
