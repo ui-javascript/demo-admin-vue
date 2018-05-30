@@ -12,17 +12,15 @@
 - TODO
 
 ```js
-// @TODO 整理配置文件
 // @TODO 内联样式与资源
 // @TODO 兼容IE8的一些配置与处理
 // @TODO 处理多层目录结构与一个文件夹下多个模板
-// @TODO 提取公共模块，不要重复引入
+// @TODO 提取公共模块，不要重复引入 FIX
 // @TODO 支持typescript
+// @TODO 整理配置文件优化升级
 // @TODO less分模块引入
 // @TODO webpack性能优化
-// @TODO 支持nerv.js 
-// @TODO 支持anu.js(可能放弃)
-// @TODO 支持SPA(主要是VUE + router)
+// @TODO 顺道支持SPA(主要是VUE|SAN + router, 不需要兼容IE)
 // @TODO -> webpack4
 ```
 

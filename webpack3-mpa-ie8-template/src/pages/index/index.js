@@ -1,6 +1,6 @@
 import './index.css'
 // console.log('aaaaaaaaaaaa')
-
+import NP from 'number-precision'
 import $ from 'jquery'
 // import mplayer from './js/mplayer'
 
@@ -25,7 +25,7 @@ let myApp = new MyApp({
 myApp.attach(document.body);
 
 
-import NP from 'number-precision'
+
 console.log(NP.strip(0.09999999999999998)) ; // = 0.1
 console.log(NP.plus(0.1, 0.2));             // = 0.3, not 0.30000000000000004
 console.log(NP.plus(2.3, 2.4));             // = 4.7, not 4.699999999999999

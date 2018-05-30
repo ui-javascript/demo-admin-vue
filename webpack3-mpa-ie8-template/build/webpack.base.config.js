@@ -75,12 +75,12 @@ var viewsDirectory = ''
 // console.log(process.env.NODE_ENV == 'prod')
 if (process.env.NODE_ENV == 'prod') {
     viewsDirectory = 'pages/'
-    console.log(viewsDirectory)
+    // console.log(viewsDirectory)
 }
 
 getEntryDir()
     .forEach((page) => {
-        console.log(JSON.stringify(page) + '/n')
+        // console.log(JSON.stringify(page) + '/n')
 
         let moduleName = page.dir.split('/')
         let pathArr = page.tmpl.split('/')
@@ -101,7 +101,7 @@ getEntryDir()
             chunks: ['commons', moduleNameStr],
         });
       
-        console.log(htmlPlugin)
+        // console.log(htmlPlugin)
       
         HTMLPlugins.push(htmlPlugin);
         Entries[moduleNameStr] = path.resolve(__dirname, `../src/${page.dir}/index.js`);
@@ -196,9 +196,9 @@ let webpackconfig = {
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
-                    options: {
-                        presets: ['es2015']
-                    }
+                    // options: {
+                    //     presets: ['es2015']
+                    // }
                 }
             },
             {
@@ -275,11 +275,7 @@ let webpackconfig = {
         // 提供jquery会被打包进去
         new webpack.ProvidePlugin({
             san: "san",
-
-            // @TODO nervjs 与 anujs的支持
-            // @TODO 打包优化
-            // nerv: "nervjs",
-            // anu: "anujs"
+            nerv: "nervjs"
         })
     ],
 
@@ -287,22 +283,28 @@ let webpackconfig = {
     externals: {
         jquery: 'window.$',
         $: 'window.$',
-
-        // seajs: 'window.seajs'
+        // require: 'window.require'
     },
 
     resolve: {
-        extensions: ['.js', '.css', '.styl', '.less'],
+        extensions: ['.js', '.css', '.styl', '.less', 'scss', '.ts'],
         alias: {
             // 'react': 'nervjs',
             // 'react-dom': 'nervjs',
             // 'create-react-class': "nerv-create-class",
-            "@": path.join(__dirname, "../static"),
-            "@static": path.join(__dirname, "../static"),
+            "@": path.join(__dirname, "../src"),
+            "src": path.join(__dirname, "../src"),
+            // "@static": path.join(__dirname, "../static"),
             // "static": path.join(__dirname, "../static"),
-            "@src": path.join(__dirname, "../src"),
-            "@assets": path.join(__dirname, "../src/assets"),
+            "assets": path.join(__dirname, "../src/assets"),
+            
+            // 组件
+            "~": path.join(__dirname, "../src/components"),
             "@components": path.join(__dirname, "../src/components"),
+            "@componentsNerv": path.join(__dirname, "../src/componentsNerv"),
+            "@componentsSan": path.join(__dirname, "../src/componentsSan"),
+            
+            // 视图
             "@views": path.join(__dirname, "../src/views"),
             "@pages": path.join(__dirname, "../src/pages"),
             "@libs": path.join(__dirname, "../src/assets/libs"),
