@@ -46,6 +46,8 @@
     - https://juejin.im/post/5ad0a7f7518825482e394f41
     - https://github.com/673800357/webpack4-multpage-learn
 - @deprecated 多页面Webpack脚手架 https://github.com/HeavenBin/WebpackTemplate
+- @deprecated https://github.com/qq20004604/webpack-study
+    - 综合案例是多页面的解决方案，可以稍微参考一下思路
  
 # 基于Vue的多页面解决方案
 
