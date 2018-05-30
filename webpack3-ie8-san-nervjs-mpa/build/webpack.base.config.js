@@ -95,8 +95,11 @@ let webpackconfig = {
                     use: [{
                         loader: "css-loader",
                         options: {
-                            // modules: true, // 设置css模块化 名字随机处理
-                            minimize: true, // 开启 css 压缩
+                            // 设置css模块化 名字随机处理
+                            modules: true,
+
+                            // 开启 css 压缩
+                            minimize: true 
                         }
                     }, {
                         loader: "postcss-loader"
