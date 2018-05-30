@@ -7,19 +7,32 @@ const path = require('path')
 module.exports = {
   moduleName: 'pages',
 
-  cssPublicPath: "../static",
-  imgOutputPath: "img/", // 图片
-  cssOutputPath: "./static/css/styles.css", // bulid 后的css路径
-  devServerOutputPath: "../dist", // build后的目录
+  // 
+  
+  // cssOutputPath: "./static/css/styles.css", // bulid 后的css路径
 
+  // distRoot: path.resolve(__dirname, '/dist'),
+  
+  
+  // 公共配置
+  common: {
+    // CSS公共目录???
+    cssPublicPath: "../static",
 
-  distRoot: path.resolve(__dirname, '/dist'),
-  tplLang: 'pug|html', // 模板语法，暂时只支持html、pug
-  libraryDir: 'tools/libs',
+    // 图片
+    imgOutputPath: "img/", 
 
+    // build后的目录
+    devServerOutputPath: "../dist",
 
+    // 模板语法，暂时只支持html、pug
+    tplLang: 'pug|html',
 
-  //  需要正确配置如下:
+    // 工具库
+    libraryDir: 'tools/libs',
+  },
+
+  // 打包配置
   build: {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index/index.html'),
@@ -48,6 +61,7 @@ module.exports = {
     bundleAnalyzerReport: process.env.npm_config_report
   },
 
+  // 开发配置
   dev: {
     env: require('./dev.env'),
     port: 8091,

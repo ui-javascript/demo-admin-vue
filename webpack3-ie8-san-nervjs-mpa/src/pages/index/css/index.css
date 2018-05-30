@@ -7,6 +7,6 @@ h1 {
     color: red;
 }
 
-.hello {
+:local .hello {
     color: yellow;
 }

@@ -86,7 +86,7 @@ exports.getEntries = function (globPath) {
 
 exports.getEntryDir = function() {
   // let globPath = 'src/pages/**/*.' +
-  let globPath = `src/pages/**/*.@(${config.tplLang})`
+  let globPath = `src/pages/**/*.@(${config.common.tplLang})`
 
   // (\/|\\\\) 这种写法是为了兼容 windows和 mac系统目录路径的不同写法
   // let pathDir = 'src(\/|\\\\)(.*?)(\/|\\\\)_tmpl' // 视图所在
@@ -127,7 +127,7 @@ exports.getEntryDir = function() {
 }
 
 exports.getVendors = function() {
-  let globPath = `src/${config.libraryDir}/**/*.*`
+  let globPath = `src/${config.common.libraryDir}/**/*.*`
   let files = glob.sync(globPath)
   let libsArr = []
   files.forEach((v, i) => {

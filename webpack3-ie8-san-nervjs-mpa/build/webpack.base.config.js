@@ -78,7 +78,7 @@ let webpackconfig = {
     devtool: "cheap-module-source-map",
     output: {
         filename: "static/js/[name].bundle.[hash].js",
-        path: path.resolve(__dirname, config.devServerOutputPath),
+        path: path.resolve(__dirname, config.common.devServerOutputPath),
 
         // 公共路径调整
         // publicPath: (process.env.NODE_ENV === 'dev') ? path.resolve(__dirname, '/static') : '/'
@@ -91,13 +91,16 @@ let webpackconfig = {
                 exclude: /node_modules/,
                 use: ExtractTextPlugin.extract({
                     fallback: "style-loader",
-                    publicPath: config.cssPublicPath,
+                    publicPath: config.common.cssPublicPath,
                     use: [{
                         loader: "css-loader",
                         options: {
                             // 设置css模块化 名字随机处理
+                            // CSS模块化 https://www.jianshu.com/p/a5f3b41d5d44
+                            // @FIXME CSS编译 但是视图没有对应 
+                            // Nerv.js已经处理, 但还是改成Vue模式  
                             modules: true,
-
+                            localIdentName: '[local]__[name]--[hash:base64:5]',
                             // 开启 css 压缩
                             minimize: true 
                         }
@@ -174,7 +177,7 @@ let webpackconfig = {
                         // 打包生成图片的名字
                         name: "[name].[ext]",
                         // 图片的生成路径
-                        outputPath: config.imgOutputPath
+                        outputPath: config.common.imgOutputPath
                     }
                 }
             },
@@ -209,7 +212,7 @@ let webpackconfig = {
             }
         }),
         // 自动清理 dist 文件夹
-        new CleanWebpackPlugin([config.devServerOutputPath]),
+        new CleanWebpackPlugin([config.common.devServerOutputPath]),
 
         // 将 css 抽取到某个文件夹
         new ExtractTextPlugin({

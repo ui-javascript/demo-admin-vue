@@ -1,4 +1,5 @@
 import './css/hello.scss'
+
 // console.log('aaaaaaaaaaaa')
 
 import NP from 'number-precision'
@@ -14,7 +15,7 @@ const MyApp = san.defineComponent({
     template: `
                 <div>
                     <input type="text" value="{=name=}">
-                    <p>Hello {{name}}!</p>
+                    <p class="hello">Hello {{name}}!</p>
                 </div>
             `
 });

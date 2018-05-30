@@ -61,7 +61,7 @@ module.exports = merge(baseWebpackConfig, {
 
 
 // var pages = utils.getEntries('./src/module/**/*.html')
-var pages = utils.getEntries(`src/pages/**/*.@(${config.tplLang})`)
+var pages = utils.getEntries(`src/pages/**/*.@(${config.common.tplLang})`)
 for(var page in pages) {
   // 配置生成的html文件，定义路径等
   var conf = {
