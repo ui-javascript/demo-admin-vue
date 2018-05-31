@@ -1,15 +1,16 @@
 import Nerv from 'nervjs'
-
-// CSS Modules 用法教程
+// import { Component, createElement } from 'nervjs'
+// CSS Modules
 // http://www.ruanyifeng.com/blog/2016/06/css_modules.html
 import style from "assets/css/test.css"
-// import { Component, createElement } from 'nervjs'
+import img from '@/assets/images/super.jpg'
 
 class Hello extends Nerv.Component {
   constructor() {
     super(...arguments)
     this.state = {
-      message: 'nerv'
+      message: 'nerv.js',
+      img: img
     }
   }
 
@@ -17,6 +18,11 @@ class Hello extends Nerv.Component {
     return (
       <div class={style.hello}>
         Hello, {this.state.message}
+        
+        <div>
+          <img src={this.state.img} alt=""/>
+        </div>
+        
       </div>
     )
   }

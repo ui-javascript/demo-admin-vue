@@ -6,13 +6,6 @@ const path = require('path')
 
 module.exports = {
   moduleName: 'pages',
-
-  // 
-  
-  // cssOutputPath: "./static/css/styles.css", // bulid 后的css路径
-
-  // distRoot: path.resolve(__dirname, '/dist'),
-  
   
   // 公共配置
   common: {

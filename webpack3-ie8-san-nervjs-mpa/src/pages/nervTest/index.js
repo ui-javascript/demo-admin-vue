@@ -1,5 +1,6 @@
 import Nerv from 'nervjs'
-import Hello from '@componentsNerv/Hello'
+import Hello from '~/Nerv/Hello'
+import "./script/hello.ts"
 
 // import CustomTextInput from "@componentsNerv/form/CustomTextInput"
 

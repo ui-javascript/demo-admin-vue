@@ -5,7 +5,10 @@
 - jquery仅作为辅助 cdn + external
 - 偶尔一些老页面辅助jquery ui与之前项目的JS Libs
 - 现在改成入口文件(index.js)可以不用写，其实我是不太想写视图文件啊...这个可以再努力一下
-
+- 大段css的用 /**/ 不要用 //, 会报错的暂时没处理    
+- 使用ts-loader3.X.X, 之前的ts-loader4.x.x是指支持webpack4的
+- typescript暂时只是lib阶段用的
+    
 ```html
 <link rel="stylesheet" href="//qidian.gtimg.com/lulu/theme/peak/css/common/ui.css">
 ```
@@ -18,7 +21,6 @@
 // @TODO 整理配置文件优化升级
 
 // @TODO less分模块引入以及模块化
-// @TODO 支持typescript
 // @TODO 兼容IE8的一些配置与处理
 // @TODO webpack性能优化
 // @TODO 提取公共模块，不要重复引入 FIX
@@ -35,4 +37,4 @@
 
 - 注意
 
-    - 大段css的用 /**/ 不要用 //, 会报错的暂时没处理
+    

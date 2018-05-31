@@ -113,7 +113,7 @@ let webpackconfig = {
                             // 设置css模块化 名字随机处理
                             // CSS模块化 https://www.jianshu.com/p/a5f3b41d5d44
                             // @FIXME CSS编译 但是视图没有对应 
-                            // Nerv.js已经处理, 但还是改成Vue模式  
+                            // Nerv.js已经处理, 希望但还是改成.Vue模式  
                             modules: true,
                             localIdentName: '[local]__[name]--[hash:base64:5]',
                             // 开启 css 压缩
@@ -269,6 +269,7 @@ let webpackconfig = {
             'react': 'nervjs',
             'react-dom': 'nervjs',
             'create-react-class': "nerv-create-class",
+          
             "@": path.join(__dirname, "../src"),
             // "src": path.join(__dirname, "../src"),
             "static": path.join(__dirname, "../static"),
@@ -277,12 +278,8 @@ let webpackconfig = {
             // 组件
             "~": path.join(__dirname, "../src/components"),
             "@components": path.join(__dirname, "../src/components"),
-            "@componentsNerv": path.join(__dirname, "../src/componentsNerv"),
-            "@componentsSan": path.join(__dirname, "../src/componentsSan"),
             
             // 视图
-            "@views": path.join(__dirname, "../src/views"),
-            "@pages": path.join(__dirname, "../src/pages"),
             "@tools": path.join(__dirname, "../src/tools"),
             "@theme": path.join(__dirname, "../src/assets/less/theme"),
         }
