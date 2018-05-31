@@ -6,14 +6,14 @@ const path = require('path')
 
 module.exports = {
   moduleName: 'pages',
-  
+
   // 公共配置
   common: {
     // CSS公共目录???
     cssPublicPath: "../static",
 
     // 图片
-    imgOutputPath: "img/", 
+    imgOutputPath: "img/",
 
     // build后的目录
     devServerOutputPath: "../dist",

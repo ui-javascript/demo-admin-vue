@@ -4,6 +4,7 @@ import './css/hello.scss'
 
 import NP from 'number-precision'
 import $ from 'jquery'
+
 console.log($.support)
 
 
@@ -12,7 +13,7 @@ console.log($.support)
 // import san from 'san'
 
 const MyApp = san.defineComponent({
-    template: `
+  template: `
                 <div>
                     <input type="text" value="{=name=}">
                     <p class="hello">Hello {{name}}!</p>
@@ -22,14 +23,14 @@ const MyApp = san.defineComponent({
 
 // 挂载
 let myApp = new MyApp({
-    data: {
-        name: 'San'
-    }
+  data: {
+    name: 'San'
+  }
 });
 myApp.attach(document.body);
 
 
-console.log(NP.strip(0.09999999999999998)) ; // = 0.1
+console.log(NP.strip(0.09999999999999998)); // = 0.1
 console.log(NP.plus(0.1, 0.2));             // = 0.3, not 0.30000000000000004
 console.log(NP.plus(2.3, 2.4));             // = 4.7, not 4.699999999999999
 console.log(NP.minus(1.0, 0.9));            // = 0.1, not 0.09999999999999998

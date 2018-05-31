@@ -11,10 +11,9 @@ class2context(
 */
 
 
-
-
 //creates the div where the context menus will place
 document.body.innerHTML += "<div id='contextMenus'></div>";
+
 //
 
 function class2context(classgiv, title, options) {
@@ -39,11 +38,11 @@ function class2context(classgiv, title, options) {
   for (var i = 0; i < document.getElementsByClassName(classgiv).length; i++) {
     classgiv = JSON.parse(JSON.stringify(classgiv));
     //toastr.info(document.getElementsByClassName(classgiv)[i].oncontextmenu);
-    document.getElementsByClassName(classgiv)[i].addEventListener("contextmenu", function(e) {
+    document.getElementsByClassName(classgiv)[i].addEventListener("contextmenu", function (e) {
       // Avoid the real one
       e.preventDefault();
       e.stopPropagation();
-      setTimeout(function() {
+      setTimeout(function () {
         //classaux=this.className.split(" ")[0];
         document.getElementById('context' + classgiv).style.display = 'block';
         document.getElementById('context' + classgiv).style.left = e.pageX + "px";
@@ -63,11 +62,11 @@ function class2context(classgiv, title, options) {
     };*/
   }
 
-  document.body.addEventListener("mousedown", function(e) {
+  document.body.addEventListener("mousedown", function (e) {
     // Avoid the real one
     //e.preventDefault();
     if (document.getElementById('context' + classgiv)) {
-      setTimeout(function() {
+      setTimeout(function () {
         document.getElementById('context' + classgiv).style.display = 'none';
       }, 70);
       //ContextMenus();

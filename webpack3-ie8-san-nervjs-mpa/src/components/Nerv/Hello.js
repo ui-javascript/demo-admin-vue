@@ -18,11 +18,11 @@ class Hello extends Nerv.Component {
     return (
       <div class={style.hello}>
         Hello, {this.state.message}
-        
+
         <div>
           <img src={this.state.img} alt=""/>
         </div>
-        
+
       </div>
     )
   }

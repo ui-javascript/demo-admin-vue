@@ -15,10 +15,10 @@ seajs.config({
     console.log('我被电击了啊哈');
   });
 
-  $("#opacityRange").on('change', function() {
+  $("#opacityRange").on('change', function () {
     $(this).siblings('span').css('opacity', this.value / 100);
   }).range({
-    tips: function(value) {
+    tips: function (value) {
       return value + '%';
     }
   });

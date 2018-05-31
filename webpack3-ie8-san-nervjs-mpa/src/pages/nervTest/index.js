@@ -8,9 +8,9 @@ import "./script/hello.ts"
 
 class App extends Nerv.Component {
   render() {
-    return <Hello />;
+    return <Hello/>;
   }
 }
 
-Nerv.render(<App />, document.querySelector('#app'));
+Nerv.render(<App/>, document.querySelector('#app'));
 

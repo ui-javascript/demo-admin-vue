@@ -21,7 +21,7 @@
 // 音乐解析
 // http://tool.liumingye.cn/music/
 // 资源更新 所以需要不定期更换
-  
+
 var mplayerSongList = [[
   {
     "basic": true,

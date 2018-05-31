@@ -1,7 +1,7 @@
 # 基于Webpack的多页面解决方案
 
 - san.js是作为公共vendors提取
-- UI采用lulu UI 
+- UI采用luluUI(@Author:zhangxinxu) 与 LayUI(@Author:贤心)
 - jquery仅作为辅助 cdn + external
 - 偶尔一些老页面辅助jquery ui与之前项目的JS Libs
 - 现在改成入口文件(index.js)可以不用写，其实我是不太想写视图文件啊...这个可以再努力一下

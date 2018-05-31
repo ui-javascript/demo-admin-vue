@@ -14,8 +14,9 @@ exports.assetsPath = function (_path) {
 
 exports.cssLoaders = function (options) {
   options = options || {}
+
   // generate loader string to be used with extract text plugin
-  function generateLoaders (loaders) {
+  function generateLoaders(loaders) {
     var sourceLoader = loaders.map(function (loader) {
       var extraParamChar
       if (/\?/.test(loader)) {
@@ -28,7 +29,7 @@ exports.cssLoaders = function (options) {
       return loader + (options.sourceMap ? extraParamChar + 'sourceMap' : '')
     }).join('!')
 
-    
+
     // if (options.extract) {
     //   return ExtractTextPlugin.extract('vue-style-loader', sourceLoader)
     // } else {
@@ -85,7 +86,7 @@ exports.getEntries = function (globPath) {
   return entries;
 }
 
-exports.getEntryDir = function() {
+exports.getEntryDir = function () {
   // let globPath = 'src/pages/**/*.' +
   let globPath = `src/pages/**/*.@(${config.common.tplLang})`
 
@@ -94,9 +95,9 @@ exports.getEntryDir = function() {
   // console.log(pathDir)
 
   let files = glob.sync(globPath)
-  
+
   let dirname, entries = []
-  
+
   for (let i = 0; i < files.length; i++) {
 
     dirname = path.dirname(files[i])
@@ -111,9 +112,9 @@ exports.getEntryDir = function() {
     // dir.shift();
     // dir.shift();
     // dir.pop();
-    
+
     dir = dir.join("/");
-    
+
     entries.push({
       tmpl: files[i],
       // dir: dirname.replace(new RegExp('^' + pathDir), '$2'),
@@ -127,7 +128,7 @@ exports.getEntryDir = function() {
   return entries;
 }
 
-exports.getVendors = function() {
+exports.getVendors = function () {
   let globPath = `src/${config.common.libraryDir}/**/*.*`
   let files = glob.sync(globPath)
   let libsArr = []
