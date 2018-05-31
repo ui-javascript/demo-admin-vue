@@ -1,4 +1,4 @@
-console.log('Hello!!! I am typescript')
+console.log('Hello!!! I am Typescript')
 
 interface Shape {
     name: string;

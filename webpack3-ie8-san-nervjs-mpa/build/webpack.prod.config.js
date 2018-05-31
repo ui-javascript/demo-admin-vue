@@ -13,7 +13,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // 引入 webpack
 const webpack = require("webpack");
-var config = require('../config')
+var config = require('./config')
 
 // 合并配置文件
 module.exports = webpackMerge(webpackBase, {

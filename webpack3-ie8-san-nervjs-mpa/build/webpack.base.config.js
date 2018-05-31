@@ -3,7 +3,7 @@
  * @type {[type]}
  */
 // 引入配置
-const config = require("../config");
+const config = require("./config");
 const utils = require("./utils");
 
 const fs = require('fs');
