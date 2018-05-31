@@ -266,11 +266,11 @@ let webpackconfig = {
     resolve: {
         extensions: ['.js', '.css', '.styl', '.less', 'scss', '.ts'],
         alias: {
-            // 'react': 'nervjs',
-            // 'react-dom': 'nervjs',
-            // 'create-react-class': "nerv-create-class",
+            'react': 'nervjs',
+            'react-dom': 'nervjs',
+            'create-react-class': "nerv-create-class",
             "@": path.join(__dirname, "../src"),
-            "src": path.join(__dirname, "../src"),
+            // "src": path.join(__dirname, "../src"),
             "static": path.join(__dirname, "../static"),
             "assets": path.join(__dirname, "../src/assets"),
             
