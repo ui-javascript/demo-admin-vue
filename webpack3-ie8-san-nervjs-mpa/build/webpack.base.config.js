@@ -34,6 +34,7 @@ if (process.env.NODE_ENV == 'prod') {
     // console.log(viewsDirectory)
 }
 
+let hasPushInline = false
 utils.getEntryDir()
     .forEach((page) => {
         // console.log(JSON.stringify(page) + '/n')
@@ -51,16 +52,21 @@ utils.getEntryDir()
             filename: viewsDirectory + `${moduleNameStr}/${fileName}.html`,
             // filename: `${page.dir}${moduleNameStr}.html`,
             template: path.resolve(__dirname, `../${page.tmpl}`),
-            // inlineSource: '.(js|css)$', // embed all javascript and css inline
+            inlineSource: '.(js|css)$', // embed all javascript and css inline
 
             // @FIXME 需要考虑具体引入模块
             // chunks: ['commons', moduleNameStr, 'vendors', 'manifest'],
             chunks: ['commons', page.tmpl],
         });
       
-        console.log('htmlPlugin -> ' + JSON.stringify(htmlPlugin))
+        // console.log('htmlPlugin -> ' + JSON.stringify(htmlPlugin))
 
         HTMLPlugins.push(htmlPlugin);
+        
+        // if (!hasPushInline) {
+        //   HTMLPlugins.push(new HtmlWebpackInlineSourcePlugin());
+        //   hasPushInline = true;
+        // }
       
         let pathJSFile = path.resolve(__dirname, `../src/${page.dir}/${fileName}.js`);
         
@@ -80,6 +86,7 @@ if (vendorsDir.length > 0) {
     Entries['vendors'] = vendorsDir
 }
 // console.log('入口 -> ' + JSON.stringify(Entries))
+console.log('HTML -> ' + JSON.stringify(...HTMLPlugins))
 
 let webpackconfig = {
     entry: Entries,
@@ -232,12 +239,14 @@ let webpackconfig = {
         }),
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.HashedModuleIdsPlugin(),
-      
+
+
         // 自动生成 HTML 插件
         ...HTMLPlugins,
+        // new HtmlWebpackInlineSourcePlugin(),
 
         // @TODO 内联脚本等的处理
-        new HtmlWebpackInlineSourcePlugin(),
+
 
         // 提供jquery会被打包进去
         new webpack.ProvidePlugin({

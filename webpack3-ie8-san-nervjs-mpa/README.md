@@ -13,10 +13,10 @@
 - TODO
 
 ```js
-// @TODO 图片引入机制
 // @TODO 打包时的报错机制修复
-// @TODO 内联样式与资源
+// @TODO 内联样式与资源(暂缓)
 // @TODO 整理配置文件优化升级
+
 // @TODO less分模块引入以及模块化
 // @TODO 支持typescript
 // @TODO 兼容IE8的一些配置与处理
