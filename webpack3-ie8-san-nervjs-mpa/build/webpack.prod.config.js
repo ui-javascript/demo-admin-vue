@@ -8,6 +8,7 @@ const path = require("path");
 const webpackBase = require("./webpack.base.config");
 // 引入 webpack-merge 插件
 const webpackMerge = require("webpack-merge");
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // 引入 webpack
@@ -35,6 +36,16 @@ module.exports = webpackMerge(webpackBase, {
       name: "commons",
       filename: "[name].bundle.js",
     }),
+
+    // copy custom static assets
+    new CopyWebpackPlugin([
+      {
+        from: path.resolve(__dirname, '../static'),
+        to: config.build.assetsSubDirectory,
+        ignore: ['.*']
+      }
+    ])
+
   ]
 });
 
