@@ -10,21 +10,23 @@
 - typescript暂时只是lib阶段用的
     
 ```html
+<!-- lulu UI cdn-->
 <link rel="stylesheet" href="//qidian.gtimg.com/lulu/theme/peak/css/common/ui.css">
+<script src="//qidian.gtimg.com/lulu/theme/peak/js/plugin/sea.js"></script>
 ```
 
 - TODO
 
 ```js
-// @TODO 打包时的报错机制修复
-// @TODO 内联样式与资源(暂缓)
-// @TODO 整理配置文件优化升级
-
+// @TODO 入口文件生成(链接点击导航), 设为入口页面 
 // @TODO less分模块引入以及模块化
 // @TODO 兼容IE8的一些配置与处理
 // @TODO webpack性能优化
 // @TODO 提取公共模块，不要重复引入 FIX
 
+// @TODO 打包时的报错机制修复
+// @TODO 内联样式与资源(暂缓)
+// @TODO 整理配置文件优化升级
 
 // @TODO 没有找到的index.html时直接使用默认的模板(STOPING)
 // @TODO 处理多层目录结构与一个文件夹下多个模板(STOPING)
