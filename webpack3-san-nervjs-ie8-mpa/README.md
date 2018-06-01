@@ -2,6 +2,8 @@
 
 - san | nerv.js作为公共vendors提取
 - UI采用luluUI(@Author:张鑫旭) 与 LayUI(@Author:贤心)
+- san + san MUI
+- nerv暂时配有合适UI
 - jquery -> cdn + external配置
 - 偶尔一些老页面辅助jquery ui与之前项目的JS Libs
 - 现在改成入口文件(index.js)可以不用写，其实我是不太想写视图文件啊...这个可以再努力一下
@@ -19,21 +21,22 @@
 
 - TODO
 
-```js
-// @TODO 入口文件生成(链接点击导航), 设为入口页面 
+```js 
 // @TODO less分模块引入以及模块化
 // @TODO 兼容IE8的一些配置与处理
+
 // @TODO webpack性能优化
 // @TODO 提取公共模块，不要重复引入 FIX
-// @TODO 输出目录可定制(可以的话静态页面路径校准，支持文件直接点开) 
+// @TODO 整理配置文件优化升级
 
 // Later:
 // @TODO 打包时的报错机制修复
-// @TODO 内联样式与资源(暂缓)
-// @TODO 整理配置文件优化升级
+// @TODO 内联样式与资源
 // @TODO 支持.san文件
 
 // Deprecated:
+// @TODO 输出目录可定制(可以的话静态页面路径校准，支持文件直接点开) 
+// @TODO eslint(多页面，有些页面是老项目搬过来的，代码的质量堪忧)
 // @TODO 没有找到的index.html时直接使用默认的模板
 // @TODO 处理多层目录结构与一个文件夹下多个模板
 // @TODO better-npm-run

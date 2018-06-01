@@ -114,3 +114,9 @@ console.log('HTML -> ' + JSON.stringify(indexHtmlPlugin))
 
 module.exports.plugins.push(...HTMLPlugins)
 // module.exports.entry['index'] = path.resolve(__dirname, '../src/views/index.js')
+
+// 是否兼容IE8
+if (config.common.tolerateIE8) {
+  const es3ifyPlugin = require('es3ify-webpack-plugin');
+  module.exports.plugins.push(new es3ifyPlugin());
+}

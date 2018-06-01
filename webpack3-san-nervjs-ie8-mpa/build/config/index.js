@@ -9,6 +9,10 @@ module.exports = {
 
   // 公共配置
   common: {
+    
+    // 是否兼容IE8
+    tolerateIE8: true,
+    
     // CSS公共目录???
     cssPublicPath: "../static",
 

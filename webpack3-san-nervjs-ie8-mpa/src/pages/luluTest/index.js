@@ -1,3 +1,6 @@
+// 提供兼容
+require('es5-polyfill')
+
 import "./scripts/index.ts"
 
 import $ from 'jquery'
@@ -24,10 +27,11 @@ seajs.config({
     }
   });
 
-  // if (!window.addEventListener) {
-  //     require.async('common/ui/Radio');
-  //     require.async('common/ui/Checkbox');
-  // }
+  // 兼容IE8
+  if (!window.addEventListener) {
+      require.async('common/ui/Radio');
+      require.async('common/ui/Checkbox');
+  }
   
 });
 

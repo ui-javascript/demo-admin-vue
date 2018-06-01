@@ -73,3 +73,8 @@ console.log('HTML -> ' + JSON.stringify(...HTMLPlugins))
 
 module.exports.plugins.push(...HTMLPlugins)
 
+// 是否兼容IE8
+if (config.common.tolerateIE8) {
+  const es3ifyPlugin = require('es3ify-webpack-plugin');
+  module.exports.plugins.push(new es3ifyPlugin());
+}
