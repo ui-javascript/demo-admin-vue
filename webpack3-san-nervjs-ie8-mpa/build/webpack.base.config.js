@@ -19,19 +19,22 @@ var Entries = {}
 
 const pages = utils.getEntryDir()
 pages.forEach((page) => {
-  // console.log(JSON.stringify(page) + '/n')
+  // 寻找同名JS作为入口
+  let pathJSFile = path.resolve(__dirname, `../src/${page.dir}/${page.filenameTitle}.js`);
 
-  let pathArr = page.tmpl.split('/')
-  let fileName = pathArr[pathArr.length - 1].split('.')[0]
-  let pathJSFile = path.resolve(__dirname, `../src/${page.dir}/${fileName}.js`);
-
-  // 注意 判断文件是否存在需要时间 要同步
+  // 注意 判断文件是否存在需要时间
   if (!fs.existsSync(pathJSFile)) {
     pathJSFile = path.resolve(__dirname, '../static/templates.js')
   }
 
-  Entries[page.tmpl] = pathJSFile;
+  Entries[page.template] = pathJSFile;
 })
+
+// 第三方类库
+let vendorsDir = utils.getVendors()
+if (vendorsDir.length > 0) {
+  Entries['vendors'] = vendorsDir
+}
 
 let webpackconfig = {
   entry: Entries,

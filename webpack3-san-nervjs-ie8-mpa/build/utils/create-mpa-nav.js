@@ -7,7 +7,7 @@ const fs = require('fs');
 
 function html(entries, devPort, env) {
   console.log(chalk.yellow(`  [${env}]    ----------------`));
-  console.log(chalk.yellow(`  [${env}]    ${env.toUpperCase()} config file path`));
+  // console.log(chalk.yellow(`  [${env}]    ${env.toUpperCase()} config file path`));
   console.log(chalk.yellow(`  [${env}]    ` + __dirname));
   console.log(chalk.yellow(`  [${env}]    Working Modules:`));
   console.log(chalk.yellow(`  [${env}]    \n   ${util.inspect(entries)}`));
@@ -15,24 +15,25 @@ function html(entries, devPort, env) {
 
   let html = `<table cellpadding="0" cellspacing="0" border="0">
           <tr>
-            <th colspan="3" style="border: 1px #fff solid;border-bottom: none;"> Working Modules</th>
+            <th colspan="3" style="border: 1px #fff solid;border-bottom: none;"> <mark>多页面导航</mark>(此页面node.js自动生成)</th>
           </tr>
           <tr>
-            <th style="border:1px #ddd solid;border-right: none;">PAGE</th>
-            <th style="border:1px #ddd solid;border-right: none;">ENTRY FILE</th>
-            <th style="border:1px #ddd solid;">DEV URL</th>
+            <th style="border:1px #ddd solid;border-right: none;">所属模块</th>
+            <th style="border:1px #ddd solid;border-right: none;">视图文件</th>
+            <th style="border:1px #ddd solid;">浏览地址</th>
           </tr>`
 
 
-  for (let p in entries) {
-    let url = `http://localhost:${devPort}/${p}.html`;
-    let entry = entries[p];
+  for (let i in entries) {
+    // console.log('导航 -> ' + JSON.stringify(entries[p]))
+    let entry = entries[i]
+    let url = `http://localhost:${devPort}/${entry.module}/${entry.filenameTitle}.html`;
     html += `
         <tr> 
-            <td style="border:1px #ddd solid;border-top: none;border-right: none;">${p}</td> 
-            <td style="border:1px #ddd solid;border-top: none;border-right: none;">${entry}</td>
+            <td style="border:1px #ddd solid;border-top: none;border-right: none;">${entry.module}</td> 
+            <td style="border:1px #ddd solid;border-top: none;border-right: none;">${entry.filenameTitle}.${entry.filenameExt}</td>
             <td style="border:1px #ddd solid;border-top: none;">
-              <a style="color: #333" href="${url}">${url}</a>
+              <a style="color: #333" target="_blank" href="${url}">${url}</a>
            </td>
         </tr>
       `
@@ -50,8 +51,6 @@ function html(entries, devPort, env) {
         </head>
         <body style="margin:0;padding: 0;">
             <div id="app" style="padding:16px;">
-            <h1 style="color:#f00">[WARNING] <BR>THIS FILE IS CREATED BY NODE.js </h1>
-            <h1 style="color: #f00">DO NOT PLACE YOUR CODE HERE</h1>
             ${html}
             </div>
         </body>
@@ -59,9 +58,9 @@ function html(entries, devPort, env) {
 }
 
 // 创建根
-function createRootTemplate(entries, devPort, env) {
+function createMpaNav(entries, devPort, env) {
   // 创建入口文件
-  fs.writeFile('index.js', "console.warn('DO NOT code in this file')", (err, entries) => {
+  fs.writeFile('./src/views/index.js', "// index.html, index.js自动生成,\n// 放过这两个孩子吧~~", (err, entries) => {
     if (err) {
       console.log(err);
     }
@@ -69,7 +68,7 @@ function createRootTemplate(entries, devPort, env) {
   });
   
   // 创建入口视图
-  fs.writeFile('index.html', html(entries, devPort, env), function (err, entries) {
+  fs.writeFile('./src/views/index.html', html(entries, devPort, env), function (err, entries) {
     if (err) {
       console.log(err);
     }
@@ -77,4 +76,4 @@ function createRootTemplate(entries, devPort, env) {
   });
 }
 
-module.exports = createRootTemplate;
+module.exports = createMpaNav;

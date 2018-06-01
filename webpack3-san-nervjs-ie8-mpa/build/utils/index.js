@@ -3,7 +3,8 @@ var path = require('path')
 // glob模块，用于读取webpack入口目录文件
 var glob = require('glob');
 var config = require('../config')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+// var ExtractTextPlugin = require('extract-text-webpack-plugin')
+
 
 exports.assetsPath = function (_path) {
   var assetsSubDirectory = process.env.NODE_ENV === 'production'
@@ -95,39 +96,57 @@ exports.getEntryDir = function () {
   // console.log(pathDir)
 
   let files = glob.sync(globPath)
-
-  let dirname, entries = []
-
+  let dirname, entries = [], dir, module
+  let filenameArr, filenameTitle, filenameExt
+  
   for (let i = 0; i < files.length; i++) {
-
+    
+    // 获取目录名
     dirname = path.dirname(files[i])
 
-    let dir = dirname.split('/');
-
-    // 形如 src/pages/index
-    // 暂时不支持二级目录
-    if (dir[0] === 'src') {
-      dir.shift();
+    // 不支持二级目录
+    module = dirname.split('/');
+    if (module[0] === 'src') {
+      module.shift();
     }
-    // dir.shift();
-    // dir.shift();
-    // dir.pop();
-
-    dir = dir.join("/");
-
+    dir = module.join("/");
+    if (module[0] == 'pages') {
+      module.shift()
+    }
+    module = module.join("/")
+    
+    // 原文件信息
+    filenameArr = files[i].split('/')
+    filenameArr = filenameArr[filenameArr.length - 1].split('.')
+    filenameTitle = filenameArr[0]
+    filenameExt = filenameArr[1]
+    
     entries.push({
-      tmpl: files[i],
+      template: files[i],
+      
+      // eg. 'index' + 'pug'
+      filenameTitle: filenameTitle,
+      filenameExt: filenameExt,
+      
+      // eg. src/pages/index
+      dirname: dirname,
+
+      // 形如 pages/index
       // dir: dirname.replace(new RegExp('^' + pathDir), '$2'),
-      dir: dir
+      dir: dir,
+      
+      // 形如index
+      module: module 
     })
 
   }
 
   console.log('entries -> ' + JSON.stringify(entries))
 
-  return entries;
+  return entries
 }
 
+// 获取vendors
 exports.getVendors = function () {
   let globPath = `src/${config.common.libraryDir}/**/*.*`
   let files = glob.sync(globPath)

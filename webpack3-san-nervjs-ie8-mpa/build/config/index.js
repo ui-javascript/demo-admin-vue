@@ -37,8 +37,10 @@ module.exports = {
     // 公共资源位置
     assetsPublicPath: 'static',
 
-    // 视图文件输出位置 dist/(XXX)/
-    assetsHtmlPath: 'templates/',
+    // 视图文件输出位置 dist/(templates)/
+    // eg 'templates/'
+    // 直接输出 ''
+    assetsHtmlPath: '',
 
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
@@ -58,7 +60,10 @@ module.exports = {
   dev: {
     env: require('./dev.env'),
     port: 8091,
+    
+    // 自动打开
     autoOpenBrowser: true,
+    pageIndex: '/index.html',
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},

@@ -14,7 +14,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin")
 
 const baseWebpackConfig = require('./webpack.base.config')
 // var HtmlWebpackPlugin = require('html-webpack-plugin')
-const createRootTemplate = require('./utils/create-root-template')
+const createMpaNav = require('./utils/create-mpa-nav')
 
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
   baseWebpackConfig.entry[name] = ['./build/dev-client'].concat(baseWebpackConfig.entry[name])
@@ -83,58 +83,34 @@ var Entries = {}
 
 
 // 生成多页面的集合
-var viewsDirectory = ''
-// if (process.env.NODE_ENV == 'production') {
-//   viewsDirectory = config.build.assetsHtmlPath
-//   // console.log(viewsDirectory)
-// }
-
 const pages = utils.getEntryDir()
 pages.forEach((page) => {
-  // console.log(JSON.stringify(page) + '/n')
-
-  let moduleName = page.dir.split('/')
-  let pathArr = page.tmpl.split('/')
-
-  let fileName = pathArr[pathArr.length - 1].split('.')[0]
-  let moduleNameStr = moduleName[moduleName.length - 1]
-
   const htmlPlugin = new HTMLWebpackPlugin({
-    filename: viewsDirectory + `${moduleNameStr}/${fileName}.html`,
+    filename: `${page.module}/${page.filenameTitle}.html`,
     // filename: `${page.dir}${moduleNameStr}.html`,
-    template: path.resolve(__dirname, `../${page.tmpl}`),
+    template: path.resolve(__dirname, `../${page.template}`),
     inlineSource: '.(js|css)$', // embed all javascript and css inline
 
     // @FIXME 需要考虑具体引入模块
     // chunks: ['commons', moduleNameStr, 'vendors', 'manifest'],
-    chunks: ['commons', page.tmpl],
+    chunks: ['commons', page.template],
   });
 
-  // console.log('htmlPlugin -> ' + JSON.stringify(htmlPlugin))
-
+  // console.log('htmlPlugin push >>>>> ' + JSON.stringify(htmlPlugin))
   HTMLPlugins.push(htmlPlugin);
-
-  // if (!hasPushInline) {
-  //   HTMLPlugins.push(new HtmlWebpackInlineSourcePlugin());
-  //   hasPushInline = true;
-  // }
-
-  // let pathJSFile = path.resolve(__dirname, `../src/${page.dir}/${fileName}.js`);
-  //
-  // // 注意 判断文件是否存在需要时间 要同步
-  // if (!fs.existsSync(pathJSFile)) {
-  //   pathJSFile = path.resolve(__dirname, '../static/templates.js')
-  // }
-  // Entries[page.tmpl] = pathJSFile;
 })
 
+createMpaNav(pages, config.dev.port, config.dev.env)
+let indexHtmlPlugin = new HTMLWebpackPlugin({
+  filename: `index.html`,
+  template: path.resolve(__dirname, `../src/views/index.html`),
+  // inlineSource: '.(js|css)$', // embed all javascript and css inline
+  chunks: ['commons', 'index'],
+});
+HTMLPlugins.push(indexHtmlPlugin);
 
-// 第三方类库
-let vendorsDir = utils.getVendors()
-if (vendorsDir.length > 0) {
-  Entries['vendors'] = vendorsDir
-}
 // console.log('入口 -> ' + JSON.stringify(Entries))
-console.log('HTML -> ' + JSON.stringify(...HTMLPlugins))
+console.log('HTML -> ' + JSON.stringify(indexHtmlPlugin))
 
 module.exports.plugins.push(...HTMLPlugins)
+// module.exports.entry['index'] = path.resolve(__dirname, '../src/views/index.js')

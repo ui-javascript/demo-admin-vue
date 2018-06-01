@@ -1,16 +1,7 @@
 import './css/hello.scss'
-
-// console.log('aaaaaaaaaaaa')
-
 import NP from 'number-precision'
 import $ from 'jquery'
-
 console.log($.support)
-
-
-// import mplayer from './js/mplayer'
-
-// import san from 'san'
 
 const MyApp = san.defineComponent({
   template: `
