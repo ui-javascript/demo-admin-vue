@@ -5,14 +5,15 @@ import seajs from "seajs"
 import './index.styl'
 
 seajs.config({
-  // base: "//qidian.gtimg.com/lulu/theme/peak/js",
-  base: "../static/lulu/theme/peak/js",
+  base: "https://qidian.gtimg.com/lulu/theme/peak/js",
+  // base: "/static/lulu/theme/peak/js",
 }).use(['common/ui/Checkbox', 'common/ui/Range'], function () {
   console.log('hello lulu');
+  console.log('阴天说什么')
 
   // hello 我也不知道怎么办好了
   $('#checkbox1').click(function () {
-    console.log('我被电击了啊哈');
+    console.log('我被电击了啊哈哈');
   });
 
   $("#opacityRange").on('change', function() {

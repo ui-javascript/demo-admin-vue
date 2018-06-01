@@ -1,37 +1,6 @@
 /**
  * 开发环境配置文件
- * @type {[type]}
  */
-// const opn = require('opn')
-//
-// // 引入基础配置文件
-// const webpackBase = require("./webpack.base.config");
-// // 引入 webpack-merge 插件
-// const webpackMerge = require("webpack-merge");
-// // 引入配置文件
-// const config = require("../config");
-// // 合并配置文件
-// module.exports = webpackMerge(webpackBase, {
-//   // 配置 webpack-dev-server
-//   devServer: {
-//     proxy: {
-//       '/api': {
-//         target: 'http://jsonplaceholder.typicode.com',
-//         changeOrigin: true,
-//         pathRewrite: {
-//           '^/api': ''
-//         }
-//       }
-//     },
-//     // 项目根目录
-//     contentBase: config.devServerOutputPath,
-//     // 错误、警告展示设置
-//     overlay: {
-//       errors: true,
-//       warnings: true
-//     }
-//   }
-// });
 
 var config = require('./config')
 var webpack = require('webpack')
@@ -45,6 +14,25 @@ Object.keys(baseWebpackConfig.entry).forEach(function (name) {
 })
 
 module.exports = merge(baseWebpackConfig, {
+  // devServer: {
+  //   proxy: {
+  //     '/api': {
+  //       target: 'http://jsonplaceholder.typicode.com',
+  //       changeOrigin: true,
+  //       pathRewrite: {
+  //         '^/api': ''
+  //       }
+  //     }
+  //   },
+  //   // 项目根目录
+  //   contentBase: config.devServerOutputPath,
+  //   // 错误、警告展示设置
+  //   overlay: {
+  //     errors: true,
+  //     warnings: true
+  //   }
+  // },
+  
   module: {
     loaders: utils.styleLoaders({sourceMap: config.dev.cssSourceMap})
   },

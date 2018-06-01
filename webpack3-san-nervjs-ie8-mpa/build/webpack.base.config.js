@@ -28,9 +28,8 @@ var Entries = {}
 
 // 生成多页面的集合
 var viewsDirectory = ''
-// console.log(process.env.NODE_ENV == 'prod')
-if (process.env.NODE_ENV == 'prod') {
-  viewsDirectory = 'pages/'
+if (process.env.NODE_ENV == 'production') {
+  viewsDirectory = config.build.assetsHtmlPath
   // console.log(viewsDirectory)
 }
 

@@ -1,13 +1,13 @@
 # 基于Webpack的多页面解决方案
 
-- san.js是作为公共vendors提取
-- UI采用luluUI(@Author:zhangxinxu) 与 LayUI(@Author:贤心)
-- jquery仅作为辅助 cdn + external
+- san | nerv.js作为公共vendors提取
+- UI采用luluUI(@Author:张鑫旭) 与 LayUI(@Author:贤心)
+- jquery -> cdn + external配置
 - 偶尔一些老页面辅助jquery ui与之前项目的JS Libs
 - 现在改成入口文件(index.js)可以不用写，其实我是不太想写视图文件啊...这个可以再努力一下
 - 大段css的用 /**/ 不要用 //, 会报错的暂时没处理    
 - 使用ts-loader3.X.X, 之前的ts-loader4.x.x是指支持webpack4的
-- typescript暂时只是lib阶段用的
+- typescript暂时只是libs或许工具类用用
     
 ```html
 <!-- lulu UI cdn-->
@@ -23,20 +23,20 @@
 // @TODO 兼容IE8的一些配置与处理
 // @TODO webpack性能优化
 // @TODO 提取公共模块，不要重复引入 FIX
+// @TODO 输出目录可定制(可以的话静态页面路径校准，支持文件直接点开)
 
+// Later:
 // @TODO 打包时的报错机制修复
 // @TODO 内联样式与资源(暂缓)
 // @TODO 整理配置文件优化升级
 
-// @TODO 没有找到的index.html时直接使用默认的模板(STOPING)
-// @TODO 处理多层目录结构与一个文件夹下多个模板(STOPING)
+// Deprecated:
+// @TODO 没有找到的index.html时直接使用默认的模板
+// @TODO 处理多层目录结构与一个文件夹下多个模板
+// @TODO better-npm-run
 
-
+// Hopeful:
 // @TODO 顺道支持SPA(主要是SAN + router, 可以不兼容IE)
 // @TODO -> webpack4
-// @TODO better-npm-run(@deprecated)
 ```
-
-- 注意
-
     
