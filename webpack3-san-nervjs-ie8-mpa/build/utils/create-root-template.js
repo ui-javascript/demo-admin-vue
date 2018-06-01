@@ -1,20 +1,22 @@
 // 注意这个是node.js的工具 不是utils.js
 // 参考自 https://github.com/Fi2zz/webpack-multipages-template
-const utils = require('util');
+const util = require('util');
 const chalk = require('chalk');
 const fs = require('fs');
 
 
-function html(data, devPort, env) {
+function html(entries, devPort, env) {
   console.log(chalk.yellow(`  [${env}]    ----------------`));
   console.log(chalk.yellow(`  [${env}]    ${env.toUpperCase()} config file path`));
   console.log(chalk.yellow(`  [${env}]    ` + __dirname));
   console.log(chalk.yellow(`  [${env}]    Working Modules:`));
-  console.log(chalk.yellow(`  [${env}]    \n   ${utils.inspect(data)}`));
+  console.log(chalk.yellow(`  [${env}]    \n   ${util.inspect(entries)}`));
   console.log(chalk.yellow(`  [${env}]    ----------------\n`));
 
   let html = `<table cellpadding="0" cellspacing="0" border="0">
-          <tr><th colspan="3" style="border: 1px #fff solid;border-bottom: none;"> Working Modules</th></tr>
+          <tr>
+            <th colspan="3" style="border: 1px #fff solid;border-bottom: none;"> Working Modules</th>
+          </tr>
           <tr>
             <th style="border:1px #ddd solid;border-right: none;">PAGE</th>
             <th style="border:1px #ddd solid;border-right: none;">ENTRY FILE</th>
@@ -22,9 +24,9 @@ function html(data, devPort, env) {
           </tr>`
 
 
-  for (let p in data) {
+  for (let p in entries) {
     let url = `http://localhost:${devPort}/${p}.html`;
-    let entry = data[p];
+    let entry = entries[p];
     html += `
         <tr> 
             <td style="border:1px #ddd solid;border-top: none;border-right: none;">${p}</td> 
@@ -35,6 +37,7 @@ function html(data, devPort, env) {
         </tr>
       `
   }
+  
   html += `</table>`;
     
 
@@ -56,9 +59,9 @@ function html(data, devPort, env) {
 }
 
 // 创建根
-function createRootTemplate(entry, devPort, env) {
+function createRootTemplate(entries, devPort, env) {
   // 创建入口文件
-  fs.writeFile('index.js', "console.warn('DO NOT code in this file')", (err, data) => {
+  fs.writeFile('index.js', "console.warn('DO NOT code in this file')", (err, entries) => {
     if (err) {
       console.log(err);
     }
@@ -66,7 +69,7 @@ function createRootTemplate(entry, devPort, env) {
   });
   
   // 创建入口视图
-  fs.writeFile('index.html', html(entry, devPort, env), function (err, data) {
+  fs.writeFile('index.html', html(entries, devPort, env), function (err, entries) {
     if (err) {
       console.log(err);
     }

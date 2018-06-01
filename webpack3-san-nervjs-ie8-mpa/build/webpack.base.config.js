@@ -9,82 +9,29 @@ const utils = require("./utils");
 const fs = require('fs');
 const path = require("path");
 const webpack = require('webpack');
-const glob = require("glob")
 
-// 引入插件
-const HTMLWebpackPlugin = require("html-webpack-plugin");
-const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
-// 清理 dist 文件夹
-const CleanWebpackPlugin = require("clean-webpack-plugin")
+
 // 抽取 css
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-// 通过 html-webpack-plugin 生成的 HTML 集合
-var HTMLPlugins = [];
 
 // 入口文件集合
 var Entries = {}
 
+const pages = utils.getEntryDir()
+pages.forEach((page) => {
+  // console.log(JSON.stringify(page) + '/n')
 
-// 生成多页面的集合
-var viewsDirectory = ''
-if (process.env.NODE_ENV == 'production') {
-  viewsDirectory = config.build.assetsHtmlPath
-  // console.log(viewsDirectory)
-}
+  let pathArr = page.tmpl.split('/')
+  let fileName = pathArr[pathArr.length - 1].split('.')[0]
+  let pathJSFile = path.resolve(__dirname, `../src/${page.dir}/${fileName}.js`);
 
-let hasPushInline = false
-utils.getEntryDir()
-  .forEach((page) => {
-    // console.log(JSON.stringify(page) + '/n')
+  // 注意 判断文件是否存在需要时间 要同步
+  if (!fs.existsSync(pathJSFile)) {
+    pathJSFile = path.resolve(__dirname, '../static/templates.js')
+  }
 
-    let moduleName = page.dir.split('/')
-    let pathArr = page.tmpl.split('/')
-
-    let fileName = pathArr[pathArr.length - 1].split('.')[0]
-    let moduleNameStr = moduleName[moduleName.length - 1]
-
-    // console.log(fileName)
-    // console.log(moduleNameStr)
-
-    const htmlPlugin = new HTMLWebpackPlugin({
-      filename: viewsDirectory + `${moduleNameStr}/${fileName}.html`,
-      // filename: `${page.dir}${moduleNameStr}.html`,
-      template: path.resolve(__dirname, `../${page.tmpl}`),
-      inlineSource: '.(js|css)$', // embed all javascript and css inline
-
-      // @FIXME 需要考虑具体引入模块
-      // chunks: ['commons', moduleNameStr, 'vendors', 'manifest'],
-      chunks: ['commons', page.tmpl],
-    });
-
-    // console.log('htmlPlugin -> ' + JSON.stringify(htmlPlugin))
-
-    HTMLPlugins.push(htmlPlugin);
-
-    // if (!hasPushInline) {
-    //   HTMLPlugins.push(new HtmlWebpackInlineSourcePlugin());
-    //   hasPushInline = true;
-    // }
-
-    let pathJSFile = path.resolve(__dirname, `../src/${page.dir}/${fileName}.js`);
-
-    // 注意 判断文件是否存在需要时间 要同步
-    if (!fs.existsSync(pathJSFile)) {
-      pathJSFile = path.resolve(__dirname, '../static/templates.js')
-    }
-
-    Entries[page.tmpl] = pathJSFile;
-  })
-
-
-// 第三方类库
-let vendorsDir = utils.getVendors()
-if (vendorsDir.length > 0) {
-  Entries['vendors'] = vendorsDir
-}
-// console.log('入口 -> ' + JSON.stringify(Entries))
-console.log('HTML -> ' + JSON.stringify(...HTMLPlugins))
+  Entries[page.tmpl] = pathJSFile;
+})
 
 let webpackconfig = {
   entry: Entries,
@@ -177,11 +124,6 @@ let webpackconfig = {
         use: 'ts-loader',
         exclude: /node_modules/
       },
-      // {
-      //     test: /\.jsx?$/,
-      //     exclude: /node_modules/,
-      //     loader: 'babel-loader'
-      // },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: {
@@ -225,8 +167,6 @@ let webpackconfig = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV)
       }
     }),
-    // 自动清理 dist 文件夹
-    new CleanWebpackPlugin([config.common.devServerOutputPath]),
 
     // 将 css 抽取到某个文件夹
     new ExtractTextPlugin({
@@ -240,7 +180,7 @@ let webpackconfig = {
 
 
     // 自动生成 HTML 插件
-    ...HTMLPlugins,
+    // ...HTMLPlugins,
     // new HtmlWebpackInlineSourcePlugin(),
 
     // @TODO 内联脚本等的处理

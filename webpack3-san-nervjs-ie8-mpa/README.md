@@ -23,12 +23,13 @@
 // @TODO 兼容IE8的一些配置与处理
 // @TODO webpack性能优化
 // @TODO 提取公共模块，不要重复引入 FIX
-// @TODO 输出目录可定制(可以的话静态页面路径校准，支持文件直接点开)
+// @TODO 输出目录可定制(可以的话静态页面路径校准，支持文件直接点开) 
 
 // Later:
 // @TODO 打包时的报错机制修复
 // @TODO 内联样式与资源(暂缓)
 // @TODO 整理配置文件优化升级
+// @TODO 支持.san文件
 
 // Deprecated:
 // @TODO 没有找到的index.html时直接使用默认的模板
@@ -36,7 +37,7 @@
 // @TODO better-npm-run
 
 // Hopeful:
-// @TODO 顺道支持SPA(主要是SAN + router, 可以不兼容IE)
+// @TODO 顺道支持SPA(主要是SAN + router, 可以不兼容IE) // 这样
 // @TODO -> webpack4
 ```
     
