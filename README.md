@@ -1,13 +1,16 @@
 # README
 
 - 这里主要是
+
+    - 学习高版本angular与node.js
     - 学习了解webpack等脚手架的配置
-    - 多页面解决方案(Pure | Vue)
-    - 兼容IE8的若干前端框架
-    - 争对H5页面的脚手架
-    - 一些公司开源的工作流脚手架
-    - SSR等
-    - 学习angular与node.js
+    - gulp配置 给传统前后端不分离项目配的 -> https://github.com/natural-fe/natural-effects
+    - 写H5页面(移动端)的脚手架
+    - 多页面解决方案(Pure | Vue) 
+        - 不用框架的 -> https://github.com/natural-fe/natural-components
+    - 兼容IE8的若干前端框架比较
+    - 一些公司开源的脚手架比较
+    - SSR、SEO优化等
     
 # webpack
 
@@ -37,12 +40,23 @@
 - Parcel VS Webpack 
     - https://github.com/gwuhaolin/parcel-vs-webpack
 
-# gulp
+# SPA
 
-- 已转移至 https://github.com/natural-fe/natural-components
+- (NICE) https://github.com/nicejade/vue-boilerplate-template
 
+```shell
+# 全局安装
+npm install -g  strip-ansi
+... sass
+... node-sass
+
+使用npm install cnpm 可能出错
 ```
-放这里维护烦死
-常用功能都配置了
-主要用于那些前后端不分离的项目 和 平时前端DEMO的对比尝试
-```
+
+# 企业开源脚手架
+
+- 阅文 y-workflow
+
+# H5移动端 
+
+- 移动端页面适配———多方案解析 https://www.jianshu.com/p/3b45aa981e77 
