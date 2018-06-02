@@ -1,1 +1,0 @@
-var registerModule = angular.module("registerModule",[]);
