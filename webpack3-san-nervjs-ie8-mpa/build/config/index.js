@@ -10,9 +10,6 @@ module.exports = {
   // 公共配置
   common: {
     
-    // 是否兼容IE8
-    tolerateIE8: true,
-    
     // CSS公共目录???
     cssPublicPath: "../static",
 
@@ -31,6 +28,8 @@ module.exports = {
 
   // 打包配置
   build: {
+    // 是否兼容IE8(注意, 开发测试的时候不兼容IE8)
+    tolerateIE8: true,
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),

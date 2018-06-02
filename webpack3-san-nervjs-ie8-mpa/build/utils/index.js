@@ -141,7 +141,7 @@ exports.getEntryDir = function () {
 
   }
 
-  console.log('entries -> ' + JSON.stringify(entries))
+  // console.log('entries -> ' + JSON.stringify(entries))
 
   return entries
 }
