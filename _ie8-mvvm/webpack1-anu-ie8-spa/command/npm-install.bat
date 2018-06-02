@@ -1,2 +1,2 @@
 cd ..
-cnpm install
+npm install

@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js",
+    "dev": "node app.js",
     "eslint": "./node_modules/eslint/bin/eslint.js ."
   },
   "pre-commit": [
