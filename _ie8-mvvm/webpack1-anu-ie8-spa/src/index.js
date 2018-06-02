@@ -1,4 +1,4 @@
-import {} from "../scss/GlobalCSS"
+import {} from "./scss/global-css"
 import React from "react";
 import ReactDOM from "react-dom";
 import { Router, Route, IndexRedirect, IndexRoute, Link, hashHistory  } from 'react-router'

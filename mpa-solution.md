@@ -1,5 +1,6 @@
 # 多页面解决方案
 
+- webpack多页应用架构系列 https://segmentfault.com/a/1190000006843916
 - 非默认需要配置entries  https://github.com/Monine/webpack-multi-page
 - webpack增量打包多页应用 若干思考 https://juejin.im/post/5a63f082f265da3e303c95cc 
     - http://www.guofengxian.com/2017/08/08/%E4%BD%BF%E7%94%A8webpack%E9%87%8D%E6%9E%84koa2%E5%A4%9A%E9%A1%B5%E5%BA%94%E7%94%A8/#more

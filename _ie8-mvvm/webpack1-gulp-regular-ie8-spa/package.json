@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp build --production",
-    "start": "puer -d public -r scripts/routes.js",
+    "dev": "puer -d public -r scripts/routes.js",
     "watch": "gulp watch"
   },
   "author": "neteasefed",
