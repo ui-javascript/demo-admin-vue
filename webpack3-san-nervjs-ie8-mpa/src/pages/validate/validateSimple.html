@@ -1,0 +1,123 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>仿支付宝验证码输入-jq22.com</title>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<style>
+    
+    
+.demo {
+	height:200px;
+	float:left;
+	margin-left:20px;
+	position:relative;
+}
+
+input {
+    width: 20px;
+    height: 30px;
+    display: inline-block;
+    float: left;
+    /*margin-left: 10px;*/
+    outline: 0;
+    text-align: center;
+    line-height: 50px;
+    /* font-size: 35px; */
+    font-weight: 800;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-left: none;
+}
+
+input:focus {
+    /*border:1px solid orangered !important;*/
+}
+
+input:first-child {
+    width: 30px;
+    border-left: 1px solid #ddd;
+    border-radius: 10px 0 0 10px;
+}
+
+input:last-child ,
+input.last-child {
+    width: 30px;
+    border-right: none;
+    border-radius: 0 10px 10px 0;
+}
+
+
+.border {
+    /*border:1px solid orangered !important;*/
+}
+
+#space {
+	margin-right:30px;
+}
+#spa {
+	font-size:50px;
+	position:absolute;
+	left:198px;
+	color:#C0C0C0;
+	height:56px;
+	line-height:56px;
+}
+    
+    
+</style>
+</head>
+<body>
+<div class="demo" id="demo">
+    <input type="text" class="border" autofocus="autofocus" maxlength="1" id="dy">
+    <input type="text" maxlength="1" required >
+    <!--<input type="text" maxlength="1" id="space">-->
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input type="text" maxlength="1" required >
+    <input class="last-child" type="text" maxlength="1" required >
+    <!--<span id="spa">-</span>-->
+</div>
+
+<script>
+    
+
+function CertificateInput(box, cls) {
+    
+    var wrap = document.getElementById(box);
+    var txts = wrap.getElementsByTagName("input");
+    
+    for (var i = 0; i < txts.length; i++) {
+        var t = txts[i];
+        t.index = i;
+        t.setAttribute("readonly", true);
+        t.onkeyup = function() {
+            this.value = this.value.replace(/\D/g, '');
+            if (this.value == "") {
+                return false;
+            }
+            var next = this.index + 1;
+            var last = this.index;
+            if (next > txts.length - 1) return;
+            txts[next].removeAttribute("readonly");
+            txts[next].focus();
+            txts[next].className = cls;
+            txts[last].classList.remove(cls);
+
+        }
+    }
+    txts[0].removeAttribute("readonly");
+}
+
+
+CertificateInput("demo", "border");
+
+</script>
+
+</body>
+</html>

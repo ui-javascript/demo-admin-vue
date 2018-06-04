@@ -1,3 +1,3 @@
-import './styles/index.less'
+import './styles/todo.less'
 import $ from 'jquery'
 console.log($.support)
