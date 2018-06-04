@@ -24,14 +24,15 @@
 ```js 
 // @TODO less分模块引入以及模块化
 // @TODO 内联样式与资源
+
 // @TODO webpack性能优化
-// @TODO 提取公共模块，不要重复引入 FIX
-// @TODO 整理配置文件优化升级
+// @TODO 提取公共模块测试，不要重复引入 FIX
+// @TODO 整理配置文件
 // @TODO 打包时的报错机制修复
 
 // Later:
 // @TODO 支持.san文件
-// @TODO 兼容IE8的一些配置与处理(还有一些配置)
+// @TODO 兼容IE8的一些配置与处理(还有一些配置没做和测试)
 
 // Hopeful:
 // @TODO 顺道支持SPA(主要是SAN + router, 可以不兼容IE) // 这样

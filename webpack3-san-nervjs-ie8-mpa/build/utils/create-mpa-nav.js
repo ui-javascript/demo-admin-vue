@@ -13,14 +13,14 @@ function html(entries, devPort, env) {
   console.log(chalk.yellow(`  [${env}]    \n   ${util.inspect(entries)}`));
   console.log(chalk.yellow(`  [${env}]    ----------------\n`));
 
-  let html = `<table cellpadding="0" cellspacing="0" border="0">
+  let html = `<table class="table table-bordered table-hover table-striped">
           <tr>
-            <th colspan="3" style="border: 1px #fff solid;border-bottom: none;"> <mark>多页面导航</mark>(此页面node.js自动生成)</th>
+            <th colspan="3"> <h1>多页面导航</h1><mark>(本页面Node.js自动生成)</mark></th>
           </tr>
           <tr>
-            <th style="border:1px #ddd solid;border-right: none;">所属模块</th>
-            <th style="border:1px #ddd solid;border-right: none;">视图文件</th>
-            <th style="border:1px #ddd solid;">浏览地址</th>
+            <th>所属模块</th>
+            <th>视图文件</th>
+            <th>浏览地址</th>
           </tr>`
 
 
@@ -30,10 +30,10 @@ function html(entries, devPort, env) {
     let url = `http://localhost:${devPort}/${entry.module}/${entry.filenameTitle}.html`;
     html += `
         <tr> 
-            <td style="border:1px #ddd solid;border-top: none;border-right: none;">${entry.module}</td> 
-            <td style="border:1px #ddd solid;border-top: none;border-right: none;">${entry.filenameTitle}.${entry.filenameExt}</td>
-            <td style="border:1px #ddd solid;border-top: none;">
-              <a style="color: #333" target="_blank" href="${url}">${url}</a>
+            <td>${entry.module}</td> 
+            <td>${entry.filenameTitle}.${entry.filenameExt}</td>
+            <td>
+              <a target="_blank" href="${url}">${url}</a>
            </td>
         </tr>
       `
@@ -47,10 +47,11 @@ function html(entries, devPort, env) {
         <head>
             <meta charset="utf-8">
             <title>Project</title>
-            <style>html,body{width: 100%;height: 100%;} td,th {padding: 10px;}</style>
+            <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
         </head>
-        <body style="margin:0;padding: 0;">
-            <div id="app" style="padding:16px;">
+        
+        <body>
+            <div id="app">
             ${html}
             </div>
         </body>
