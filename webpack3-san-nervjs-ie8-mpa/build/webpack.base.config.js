@@ -48,6 +48,9 @@ let webpackconfig = {
   },
   // 加载器
   module: {
+    // 外部依赖可以 通过一些配置 提升性能
+    noParse: [/moment.min/],
+    
     rules: [
       {
         test: /\.css$/,
@@ -108,9 +111,26 @@ let webpackconfig = {
           }
         }]
       },
+      
+      // .san文件
+      {
+        test: /\.san$/,
+        loader: 'san-loader'
+      },
       {
         test: /\.(jade|pug)$/,
         loader: ['html-loader', 'pug-html-loader']
+      },
+
+      // 不需要配置,默认导入
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
+        // 使所有以 .json5 结尾的文件使用 `json5-loader`
+        test: /\.json5$/,
+        loader: 'json5-loader'
       },
       {
         test: /\.js$/,
@@ -132,6 +152,7 @@ let webpackconfig = {
         use: {
           loader: "url-loader",
           options: {
+            limit: 8192,
             // 打包生成图片的名字
             name: "[name].[ext]",
             // 图片的生成路径
@@ -200,30 +221,39 @@ let webpackconfig = {
   externals: {
     jquery: 'window.$',
     $: 'window.$',
+    
     seajs: 'window.seajs',
-    requirejs: 'window.requirejs'
+    requirejs: 'window.requirejs',
+    
+    
   },
 
   resolve: {
-    extensions: ['.js', '.css', '.styl', '.less', 'scss', '.ts'],
+    extensions: ['.js', '.css', '.styl', '.less', 'scss', '.ts', '.san'],
     alias: {
+      // 覆盖 对接react生态
       'react': 'nervjs',
       'react-dom': 'nervjs',
       'create-react-class': "nerv-create-class",
-            
 
+      // 外部依赖可以 通过一些配置 提升性能
+      'moment': 'moment/min/moment.min.js',
+
+      // 资源路径
       "@": path.join(__dirname, "../src"),
-      // "src": path.join(__dirname, "../src"),
+      "src": path.join(__dirname, "../src"),
       "static": path.join(__dirname, "../static"),
       "assets": path.join(__dirname, "../src/assets"),
 
       // 组件
+      // "~/Nerv/XXX" 引入组件
       "~": path.join(__dirname, "../src/components"),
-      "@components": path.join(__dirname, "../src/components"),
+      "components": path.join(__dirname, "../src/components"),
 
       // 视图
-      // "@tools": path.join(__dirname, "../src/tools"),
-      "@theme": path.join(__dirname, "../src/assets/less/theme"),
+      "@tools": path.join(__dirname, "../src/tools"),
+      "@less": path.join(__dirname, "../src/assets/styles/less/theme"),
+      "@sass": path.join(__dirname, "../src/assets/styles/sass"),
     }
   }
 }
