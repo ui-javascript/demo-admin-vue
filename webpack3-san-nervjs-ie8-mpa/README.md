@@ -12,6 +12,7 @@
 - typescript暂时只是libs或许工具类用用
 - components -> views -> pages (颗粒度弄细一点，复用度稍微高一点)
 - 简单生成一下入口导航页面
+- eslint不做,项目质量参差不齐...
     
 ```html
 <!-- lulu UI cdn-->
@@ -32,12 +33,10 @@
 // @TODO 兼容IE8的一些配置与处理(还有一些配置没做和测试)
 
 // Hopeful:
-// @TODO 顺道支持SPA(主要是SAN + router, 可以不兼容IE) // 这样
 // @TODO -> webpack4
+// 测试功能修复
 
 // Deprecated:
-// @TODO 输出目录可定制(可以的话静态页面路径校准，支持文件直接点开) 
-// @TODO eslint(多页面，有些页面是老项目搬过来的，代码的质量堪忧)
 // @TODO 没有找到的index.html时直接使用默认的模板
 // @TODO 处理多层目录结构与一个文件夹下多个模板
 // @TODO better-npm-run

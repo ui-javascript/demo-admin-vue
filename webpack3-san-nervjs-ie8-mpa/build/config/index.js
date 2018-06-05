@@ -43,7 +43,7 @@ module.exports = {
     // 视图文件输出位置 dist/(templates)/
     // eg 'templates/'
     // 直接输出 ''
-    assetsHtmlPath: '',
+    assetsHtmlPath: 'templates/',
 
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as

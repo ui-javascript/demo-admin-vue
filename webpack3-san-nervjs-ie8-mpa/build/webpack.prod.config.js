@@ -11,6 +11,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const es3ifyPlugin = require('es3ify-webpack-plugin');
 const utils = require("./utils")
+const generateMPAUtils = require("./utils/generate-mpa")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
@@ -55,7 +56,7 @@ module.exports = webpackMerge(webpackBase, {
 
 
 var HTMLPlugins = [];
-const pages = utils.getEntryDir()
+const pages = generateMPAUtils.getEntryDir()
 pages.forEach((page) => {
 
   const htmlPlugin = new HTMLWebpackPlugin({

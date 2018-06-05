@@ -5,6 +5,8 @@
 const config = require('./config')
 const merge = require('webpack-merge')
 const utils = require("./utils")
+const generateMPAUtils = require("./utils/generate-mpa")
+
 const fs = require('fs')
 const path = require("path")
 const webpack = require('webpack')
@@ -62,7 +64,7 @@ var Entries = {}
 
 
 // 生成多页面的集合
-const pages = utils.getEntryDir()
+const pages = generateMPAUtils.getEntryDir()
 pages.forEach((page) => {
   const htmlPlugin = new HTMLWebpackPlugin({
     filename: `${page.module}/${page.filenameTitle}.html`,

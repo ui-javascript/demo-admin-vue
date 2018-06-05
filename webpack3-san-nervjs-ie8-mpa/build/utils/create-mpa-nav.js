@@ -6,6 +6,10 @@ const fs = require('fs');
 
 
 function html(entries, devPort, env) {
+  // var entries = options.entries || {};
+  // var devPort = options.devPort;
+  // var env = options.env;
+  
   console.log(chalk.yellow(`  [${env}]    ----------------`));
   // console.log(chalk.yellow(`  [${env}]    ${env.toUpperCase()} config file path`));
   console.log(chalk.yellow(`  [${env}]    ` + __dirname));
@@ -14,14 +18,17 @@ function html(entries, devPort, env) {
   console.log(chalk.yellow(`  [${env}]    ----------------\n`));
 
   let html = `<table class="table table-bordered table-hover table-striped">
-          <tr>
-            <th colspan="3"> <h1>多页面导航</h1><mark>(本页面Node.js自动生成)</mark></th>
-          </tr>
-          <tr>
-            <th>所属模块</th>
-            <th>视图文件</th>
-            <th>浏览地址</th>
-          </tr>`
+
+      <tr>
+          <th colspan="3"><mark>(导航, Node.js自动生成)</mark></th>
+      </tr>
+       
+      <tr>
+        <th>所属模块</th>
+        <th>视图文件</th>
+        <th>浏览地址</th>
+      </tr>
+   `
 
 
   for (let i in entries) {
@@ -38,6 +45,7 @@ function html(entries, devPort, env) {
         </tr>
       `
   }
+ 
   
   html += `</table>`;
     

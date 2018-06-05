@@ -3,8 +3,11 @@
  * @type {[type]}
  */
 // 引入配置
-const config = require("./config");
-const utils = require("./utils");
+const config = require("./config")
+
+// 工具
+// const utils = require("./utils")
+const generateMPAUtils = require('./utils/generate-mpa')
 
 const fs = require('fs');
 const path = require("path");
@@ -17,21 +20,21 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // 入口文件集合
 var Entries = {}
 
-const pages = utils.getEntryDir()
+const pages = generateMPAUtils.getEntryDir()
 pages.forEach((page) => {
   // 寻找同名JS作为入口
   let pathJSFile = path.resolve(__dirname, `../src/${page.dir}/${page.filenameTitle}.js`);
 
   // 注意 判断文件是否存在需要时间
   if (!fs.existsSync(pathJSFile)) {
-    pathJSFile = path.resolve(__dirname, '../static/templates.js')
+    pathJSFile = path.resolve(__dirname, '../src/views/templates/templates.js')
   }
 
   Entries[page.template] = pathJSFile;
 })
 
 // 第三方类库
-let vendorsDir = utils.getVendors()
+let vendorsDir = generateMPAUtils.getVendors()
 if (vendorsDir.length > 0) {
   Entries['vendors'] = vendorsDir
 }
