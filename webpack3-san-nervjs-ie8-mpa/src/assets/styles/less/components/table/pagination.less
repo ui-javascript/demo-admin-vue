@@ -8,6 +8,9 @@
  * 自渲染分页 http://www.jq22.com/jquery-info13810
  */
 
+@import "../../config/_import";
+@import "../../utilities/_import";
+
 .client-pagination {
   list-style: none;
 
@@ -22,16 +25,16 @@
     margin: 5px;
 
     &:hover {
-      border: solid thin @zjds-red;
-      background-color: @zjds-red;
+      border: solid thin @red;
+      background-color: @red;
       color: white;
     }
   }
 
   .pageItemActive {
-    border: solid thin @zjds-red;
+    border: solid thin @red;
     margin-left: 10px;
-    background-color: @zjds-red;
+    background-color: @red;
     color: white;
   }
 

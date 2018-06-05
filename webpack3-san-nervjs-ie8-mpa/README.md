@@ -7,7 +7,6 @@
 - jquery -> cdn + external配置
 - 偶尔一些老页面辅助jquery ui与之前项目的JS Libs
 - 现在改成入口文件(index.js)可以不用写，其实我是不太想写视图文件啊...这个可以再努力一下
-- 大段css的用 /**/ 不要用 //, 会报错的暂时没处理    
 - 使用ts-loader3.X.X, 之前的ts-loader4.x.x是指支持webpack4的
 - typescript暂时只是libs或许工具类用用
 - components -> views -> pages (颗粒度弄细一点，复用度稍微高一点)
@@ -26,19 +25,61 @@
 // @TODO less分模块引入以及模块化
 // @TODO 内联样式与资源
 
-// @TODO webpack性能优化
+// Later: 
 // @TODO 提取公共模块测试，不要重复引入 FIX
 // @TODO 整理配置文件
 // @TODO 打包时的报错机制修复
 // @TODO 兼容IE8的一些配置与处理(还有一些配置没做和测试)
-
-// Hopeful:
-// @TODO -> webpack4
-// 测试功能修复
+// @TODO 测试功能修复
 
 // Deprecated:
-// @TODO 没有找到的index.html时直接使用默认的模板
-// @TODO 处理多层目录结构与一个文件夹下多个模板
+// @TODO -> webpack4(Vue多页面在尝试采用，目前坑比较多)
 // @TODO better-npm-run
 ```
+
+- less | sass 分模块引入以及模块化
+    - 大段css的用 /**/ 不要用 //, 会报错的暂时没处理    
+    - webpack + vue + less 全局变量的解决方案 https://www.jianshu.com/p/2d569644c996
+
+```
+@import "../../config/_import";
+@import "../../utilities/_import";
+
+```
+
+- 已知问题
+
+```
+san单页面测试 history修改url无法正常访问
+```
     
+- 备份
+
+```json
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "spec": true,
+        "useBuiltIns": false
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-proposal-class-properties",
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "Nerv.createElement"
+      }
+    ],
+    "babel-plugin-transform-es3-member-expression-literals",
+    "babel-plugin-transform-es3-property-literals",
+    "istanbul"
+  ]
+}
+
+```    

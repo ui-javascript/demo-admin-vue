@@ -11,3 +11,6 @@
 // `);
 //
 // $('body').append(imgApp)
+
+import "@less/natural-ui/index.less"
+import "@less/zjds-ui/_output.less"
