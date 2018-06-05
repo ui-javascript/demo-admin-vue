@@ -40,7 +40,7 @@ function html(entries, devPort, env) {
             <td>${entry.module}</td> 
             <td>${entry.filenameTitle}.${entry.filenameExt}</td>
             <td>
-              <a target="_blank" href="${url}">${url}</a>
+              <a href="${url}">${url}</a>
            </td>
         </tr>
       `
