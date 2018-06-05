@@ -68,13 +68,18 @@ let webpackconfig = {
               // CSS模块化 https://www.jianshu.com/p/a5f3b41d5d44
               // @FIXME CSS编译 但是视图没有对应 
               // Nerv.js已经处理, 希望但还是改成.Vue模式  
-              modules: true,
+              // modules: true,
               localIdentName: '[local]__[name]--[hash:base64:5]',
               // 开启 css 压缩
               minimize: true
             }
           }, {
-            loader: "postcss-loader"
+            loader: "postcss-loader",
+            options: {
+              plugins: function () {
+                return [require('autoprefixer')];
+              }
+            }
           }]
         })
       },
