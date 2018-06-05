@@ -6,8 +6,8 @@
     - 学习了解webpack等脚手架的配置
     - gulp配置 给传统前后端不分离项目配的 -> https://github.com/natural-fe/natural-effects
     - 写H5页面(移动端)的脚手架
-    - 多页面解决方案(Pure | Vue) 
-        - 不用框架的 -> https://github.com/natural-fe/natural-components
+    - 多页面解决方案 
+        - 基于Vue的多页面 -> https://github.com/natural-fe/natural-components
     - 兼容IE8的若干前端框架比较
     - 一些公司开源的脚手架比较
     - SSR、SEO优化等
