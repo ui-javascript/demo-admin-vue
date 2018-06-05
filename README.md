@@ -58,7 +58,10 @@ npm install -g  strip-ansi
 - feflow 腾讯IVWEB前端工作流和规范 https://github.com/feflow/feflow
 - athena2 https://github.com/o2team/athena2
 - y-workflow  阅文 https://github.com/yued-fe/y-workflow
-
+- 前端团队 Gulp & Webpack 工作流 迁移记(NICE) https://zhuanlan.zhihu.com/p/27355765?group_id=857652944793915392
+- WeFlow https://github.com/Tencent/WeFlow
+- QMUI_Web https://github.com/Tencent/QMUI_Web
+- legoflow https://github.com/legoflow/legoflow
 
 # H5移动端 
 
