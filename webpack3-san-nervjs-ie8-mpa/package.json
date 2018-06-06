@@ -92,6 +92,7 @@
     "phantomjs-prebuilt": "^2.1.14",
     "postcss-font-magician": "^2.1.1",
     "postcss-loader": "^2.0.9",
+    "preload-webpack-plugin": "^2.3.0",
     "pug-html-loader": "^1.1.5",
     "rimraf": "^2.6.0",
     "san-loader": "^0.0.7",

@@ -13,6 +13,7 @@ const webpack = require('webpack')
 // const glob = require("glob")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 const baseWebpackConfig = require('./webpack.base.config')
 // var HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -59,10 +60,6 @@ module.exports = merge(baseWebpackConfig, {
 // 通过 html-webpack-plugin 生成的 HTML 集合
 var HTMLPlugins = [];
 
-// 入口文件集合
-var Entries = {}
-
-
 // 生成多页面的集合
 const pages = generateMPAUtils.getEntryDir()
 pages.forEach((page) => {
@@ -81,7 +78,18 @@ pages.forEach((page) => {
   HTMLPlugins.push(htmlPlugin);
   
   // inline 
+  // @FIXME undefined source
   // HTMLPlugins.push(new HtmlWebpackInlineSourcePlugin())
+
+  // @FIXME 路径不正确
+  // HTMLPlugins.push(
+  //   new PreloadWebpackPlugin({
+  //     rel: 'preload',
+  //     as: 'script',
+  //     include: 'all'
+  //   })
+  // )
+
 })
 
 createMpaNav(pages, config.dev.port, config.dev.env)

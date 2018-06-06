@@ -13,7 +13,9 @@ const es3ifyPlugin = require('es3ify-webpack-plugin');
 const utils = require("./utils")
 const generateMPAUtils = require("./utils/generate-mpa")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
+// 这个和webpack.optimize.UglifyJsPlugin 不是同一个
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 // const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
 
@@ -32,7 +34,7 @@ module.exports = webpackMerge(webpackBase, {
 
     new es3ifyPlugin(),
 
-    new webpack.optimize.DedupePlugin(),
+    // new webpack.optimize.DedupePlugin(),
 
     // 提取公共 JavaScript 代码
     new webpack.optimize.CommonsChunkPlugin({
@@ -40,7 +42,7 @@ module.exports = webpackMerge(webpackBase, {
       name: "commons",
       filename: "[name].bundle.js",
     }),
-
+    
     // copy custom static assets
     new CopyWebpackPlugin([
       {
@@ -48,8 +50,7 @@ module.exports = webpackMerge(webpackBase, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
-
+    ]),
   ]
 });
 
@@ -64,11 +65,20 @@ pages.forEach((page) => {
     inlineSource: '.(js|css)$', // embed all javascript and css inline
 
     // @FIXME 需要考虑具体引入模块
-    // chunks: ['commons', moduleNameStr, 'vendors', 'manifest'],
-    chunks: ['commons', page.template],
+    chunks: ['commons', page.template, 'vendor', 'manifest'],
   });
 
   HTMLPlugins.push(htmlPlugin);
+
+  // @FIXME 路径不正确
+  // HTMLPlugins.push(
+  //   new PreloadWebpackPlugin({
+  //     rel: 'preload',
+  //     as: 'script',
+  //     include: 'all'
+  //   })
+  // );
+  
 })
 
 // console.log('HTML -> ' + JSON.stringify(...HTMLPlugins))
@@ -84,24 +94,33 @@ if (config.build.tolerateIE8) {
   
   // 使用 webpack 优化资源 https://qiutc.me/post/resource-optimization-webpack.html
   module.exports.plugins.push(
-    new UglifyJsPlugin({
-      uglifyOptions: {
-        ie8: true,
-        output: {
-          comments: false,
-          beautify: false,
-        },
-        // mangle: {
-        //   keep_fnames: true
-        // },
-        compress: {
-          warnings: false,
-          drop_console: true
-        }
+    // new UglifyJsPlugin({
+    //   uglifyOptions: {
+    //     ie8: true
+    //   },
+    //   sourceMap: true
+    // })
+
+    new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
+      mangle: {
+        screw_ie8: false,
+        keep_fnames: true,
+        properties: false,
+        keep_quoted: true
       },
-      sourceMap: true
+      compress: {
+        warnings: false,
+        screw_ie8: false,
+        properties: false
+      },
+      output: {
+        keep_quoted_props: true
+      },
+      comments: false
     })
   )
+  
 } else {
     module.exports.plugins.push(
       // 代码压缩

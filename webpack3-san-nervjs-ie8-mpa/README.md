@@ -17,6 +17,9 @@
 <!-- lulu UI cdn-->
 <link rel="stylesheet" href="//qidian.gtimg.com/lulu/theme/peak/css/common/ui.css">
 <script src="//qidian.gtimg.com/lulu/theme/peak/js/plugin/sea.js"></script>
+
+<script src="https://cdn.bootcss.com/require.js/2.3.5/require.min.js"></script>
+<script src="https://cdn.bootcss.com/seajs/3.0.2/sea.js"></script>
 ```
 
 - TODO
@@ -51,6 +54,11 @@
 
 ```
 san单页面测试 history修改url无法正常访问
+
+IE8的兼容 nerv.js又奔溃了
+
+html-webpack-inline-source-plugin 这个插件使用一直报错 
+preload-webpack-plugin 配置有误
 ```
     
 - 备份

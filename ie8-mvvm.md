@@ -28,4 +28,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
     <script src="https://cdn.bootcss.com/nwmatcher/1.4.2/nwmatcher-base.js"></script>
 <![endif]-->
+
+<script >
+require("babel-polyfill")
+</script>
 ```
+

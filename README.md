@@ -24,14 +24,29 @@
     - https://www.jianshu.com/p/63eacd66eb50du
     - https://github.com/rt-zhangxuefei/vue-project-multipages-template
 
+- happypack 
+    - https://github.com/amireh/happypack
+    - https://juejin.im/post/5a922e776fb9a06337575031
+
 - 优化
 
+    - NICE webpack打包优化探索 https://mp.weixin.qq.com/s/SzD22kTnYYfQShQwRaAGWA
+        - https://github.com/zhuanzhuanfe
+        - https://github.com/zhuanzhuanfe/zz-webpack-vue
+        - https://github.com/zhuanzhuanfe/zz-webpack-react
+        
     - 使用 webpack 优化资源 https://qiutc.me/post/resource-optimization-webpack.html
     - 优化Webpack构建性能的几点建议 https://www.cnblogs.com/powertoolsteam/p/Webpack.html
     - 借助webpack对项目进行分析优化 https://segmentfault.com/a/1190000014369413
         - https://segmentfault.com/u/athon
         - http://callmedadaxin.github.io/
+    - webpack优化不完全指南 https://juejin.im/post/5a49fb696fb9a0451e402718
     - webpack打包优化（VUE Project）讲ddl优化配置 https://juejin.im/post/5a8797c15188257a836c385d
+    - 晚晴幽草轩
+        - 速度篇 https://jeffjade.com/2017/08/12/125-webpack-package-optimization-for-speed/
+        - 体积篇 https://jeffjade.com/2017/08/06/124-webpack-packge-optimization-for-volume/
+    - https://juejin.im/post/5a869044f265da4e9c632f94
+    - https://github.com/DDFE/DDFE-blog/issues/23
     
 # Parcel
 

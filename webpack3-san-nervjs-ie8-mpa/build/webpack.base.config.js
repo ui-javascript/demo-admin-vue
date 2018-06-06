@@ -166,9 +166,9 @@ let webpackconfig = {
         use: {
           loader: "url-loader",
           options: {
-            limit: 8192,
+            limit: 2048,
             // 打包生成图片的名字
-            name: "[name].[ext]",
+            name: "[name].[hash:7].[ext]",
             // 图片的生成路径
             outputPath: config.common.imgOutputPath
           }
@@ -212,11 +212,18 @@ let webpackconfig = {
     new webpack.optimize.CommonsChunkPlugin({
       // (选择所有被选 chunks 的子 chunks)
       children: true,
+      async: 'vendor-async',
       // (在提取之前需要至少三个子 chunk 共享这个模块)
-      minChunks: 2
+      minChunks: (module, count) => {
+        // 被 2 个及以上 chunk 使用的共用模块提取出来
+        return count >= 2
+      }
     }),
-    
-    
+
+    // 将模块都放到一个闭包函数中，
+    // 通过减少闭包函数数量从而加快JS的执行速度
+    new webpack.optimize.ModuleConcatenationPlugin(),
+
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV)
@@ -247,19 +254,18 @@ let webpackconfig = {
       nerv: "nervjs"
     }),
 
-    // 用来
+    // 用来统计
     new BundleAnalyzerPlugin()
   ],
 
-  // 全局引用jquery
+  // 不需要打包的库文件，在模版文件中使用script引入
+  // 使用cdn
   externals: {
     jquery: 'window.$',
     $: 'window.$',
 
     seajs: 'window.seajs',
     requirejs: 'window.requirejs',
-
-
   },
 
   resolve: {
