@@ -62,7 +62,7 @@ module.exports = {
   // 开发配置
   dev: {
     env: require('./dev.env'),
-    port: 8091,
+    port: 9999,
     
     // 自动打开
     autoOpenBrowser: true,

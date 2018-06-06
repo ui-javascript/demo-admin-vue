@@ -30,7 +30,6 @@ module.exports = webpackMerge(webpackBase, {
       verbose: true
     }),
 
-
     new es3ifyPlugin(),
 
     new webpack.optimize.DedupePlugin(),
@@ -82,10 +81,23 @@ if (config.build.tolerateIE8) {
   // 并不是webpack.optimize.UglifyJsPlugin
   // https://www.yukapril.com/2017/08/05/webpack-uglifyjs-ie8.html
   module.exports.plugins.push(new es3ifyPlugin());
+  
+  // 使用 webpack 优化资源 https://qiutc.me/post/resource-optimization-webpack.html
   module.exports.plugins.push(
     new UglifyJsPlugin({
       uglifyOptions: {
-        ie8: true
+        ie8: true,
+        output: {
+          comments: false,
+          beautify: false,
+        },
+        // mangle: {
+        //   keep_fnames: true
+        // },
+        compress: {
+          warnings: false,
+          drop_console: true
+        }
       },
       sourceMap: true
     })

@@ -24,6 +24,15 @@
     - https://www.jianshu.com/p/63eacd66eb50du
     - https://github.com/rt-zhangxuefei/vue-project-multipages-template
 
+- 优化
+
+    - 使用 webpack 优化资源 https://qiutc.me/post/resource-optimization-webpack.html
+    - 优化Webpack构建性能的几点建议 https://www.cnblogs.com/powertoolsteam/p/Webpack.html
+    - 借助webpack对项目进行分析优化 https://segmentfault.com/a/1190000014369413
+        - https://segmentfault.com/u/athon
+        - http://callmedadaxin.github.io/
+    - webpack打包优化（VUE Project）讲ddl优化配置 https://juejin.im/post/5a8797c15188257a836c385d
+    
 # Parcel
 
 - 估计要凉

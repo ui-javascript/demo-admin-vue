@@ -12,7 +12,7 @@ const path = require("path")
 const webpack = require('webpack')
 // const glob = require("glob")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
-// const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
 
 const baseWebpackConfig = require('./webpack.base.config')
 // var HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -74,11 +74,14 @@ pages.forEach((page) => {
 
     // @FIXME 需要考虑具体引入模块
     // chunks: ['commons', moduleNameStr, 'vendors', 'manifest'],
-    chunks: ['commons', page.template],
+    chunks: ['commons', page.template, 'vendor', 'manifest'],
   });
 
   // console.log('htmlPlugin push >>>>> ' + JSON.stringify(htmlPlugin))
   HTMLPlugins.push(htmlPlugin);
+  
+  // inline 
+  // HTMLPlugins.push(new HtmlWebpackInlineSourcePlugin())
 })
 
 createMpaNav(pages, config.dev.port, config.dev.env)

@@ -16,6 +16,8 @@ const webpack = require('webpack');
 
 // 抽取 css
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 // 入口文件集合
 var Entries = {}
@@ -53,7 +55,7 @@ let webpackconfig = {
   module: {
     // 外部依赖可以 通过一些配置 提升性能
     noParse: [/moment.min/],
-    
+
     rules: [
       {
         test: /\.css$/,
@@ -61,26 +63,29 @@ let webpackconfig = {
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
           publicPath: config.common.cssPublicPath,
-          use: [{
-            loader: "css-loader",
-            options: {
-              // 设置css模块化 名字随机处理
-              // CSS模块化 https://www.jianshu.com/p/a5f3b41d5d44
-              // @FIXME CSS编译 但是视图没有对应 
-              // Nerv.js已经处理, 希望但还是改成.Vue模式  
-              // modules: true,
-              localIdentName: '[local]__[name]--[hash:base64:5]',
-              // 开启 css 压缩
-              minimize: true
-            }
-          }, {
-            loader: "postcss-loader",
-            options: {
-              plugins: function () {
-                return [require('autoprefixer')];
+          use: [
+            {
+              loader: "css-loader",
+              options: {
+                // 设置css模块化 名字随机处理
+                // CSS模块化 https://www.jianshu.com/p/a5f3b41d5d44
+                // @FIXME CSS编译 但是视图没有对应 
+                // Nerv.js已经处理, 希望但还是改成.Vue模式  
+                // modules: true,
+                localIdentName: '[local]__[name]--[hash:base64:5]',
+                // 开启 css 压缩
+                minimize: true
               }
-            }
-          }]
+            },
+            // {
+            //   loader: "postcss-loader",
+            //   options: {
+            //     plugins: function () {
+            //       return [require('autoprefixer')];
+            //     }
+            //   }
+            // }
+          ]
         })
       },
       {
@@ -119,7 +124,7 @@ let webpackconfig = {
           }
         }]
       },
-      
+
       // .san文件
       {
         test: /\.san$/,
@@ -144,7 +149,8 @@ let webpackconfig = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          // loader: 'babel-loader?cacheDirectory', // 使用cacheDirectory
+          loader: 'babel-loader', // 使用cacheDirectory
           // options: {
           //     presets: ['es2015']
           // }
@@ -186,14 +192,31 @@ let webpackconfig = {
             }
           }]
       }],
+
   },
-  // devtool: 'eval',
-  devtool: 'source-map',
+  devtool: 'eval', //  cheap-module-eval-source-map | source-map
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'commons',
-      filename: 'commons.bundle.js'
+      name: ['vendor', 'runtime'],
+      // filename: 'commons.bundle.js',
+      minChunks: Infinity
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      // ( 公共chunk(commnons chunk) 的名称)
+      name: "commons",
+      // ( 公共chunk 的文件名)
+      filename: "commons.bundle.js",
+      // (模块必须被 2个 入口chunk 共享)
+      minChunks: 2
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      // (选择所有被选 chunks 的子 chunks)
+      children: true,
+      // (在提取之前需要至少三个子 chunk 共享这个模块)
+      minChunks: 2
+    }),
+    
+    
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV)
@@ -222,18 +245,21 @@ let webpackconfig = {
     new webpack.ProvidePlugin({
       san: "san",
       nerv: "nervjs"
-    })
+    }),
+
+    // 用来
+    new BundleAnalyzerPlugin()
   ],
 
   // 全局引用jquery
   externals: {
     jquery: 'window.$',
     $: 'window.$',
-    
+
     seajs: 'window.seajs',
     requirejs: 'window.requirejs',
-    
-    
+
+
   },
 
   resolve: {
