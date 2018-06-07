@@ -1,7 +1,9 @@
 # avalon2-webpack2-spa
+
 >该项目不直接修改avalon2源码，只是在其基础上扩展。[演示地址](https://hmhao.github.io/avalon2-webpack2-spa/)，**[详细说明](https://github.com/hmhao/avalon2-webpack2-spa/wiki)**
 
 ## 说明
+
 * 整合avalon2和webpack2，支持webpack热更新
 * 兼容性支持IE8以下，IE8以下禁用热更新，需要手动刷新
 * [采用ES6、类vue的单文件组件书写](#component)

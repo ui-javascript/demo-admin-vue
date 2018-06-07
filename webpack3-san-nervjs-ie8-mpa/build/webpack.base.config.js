@@ -266,6 +266,9 @@ let webpackconfig = {
 
     seajs: 'window.seajs',
     requirejs: 'window.requirejs',
+    
+    // 测试
+    Navigo: 'window.Navigo'
   },
 
   resolve: {

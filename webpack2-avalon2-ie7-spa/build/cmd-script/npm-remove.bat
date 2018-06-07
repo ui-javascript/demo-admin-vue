@@ -1,2 +1,2 @@
-cd ..
+cd ../..
 rimraf node_modules
