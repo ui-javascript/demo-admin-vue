@@ -86,7 +86,12 @@ npm install -g  strip-ansi
 - WeFlow https://github.com/Tencent/WeFlow
 - QMUI_Web https://github.com/Tencent/QMUI_Web
 - legoflow https://github.com/legoflow/legoflow
+- boi 一站式前端工程解决方案 https://github.com/boijs/boi
 
 # H5移动端 
 
 - 移动端页面适配———多方案解析 https://www.jianshu.com/p/3b45aa981e77 
+
+# 前端测试
+
+- jest
