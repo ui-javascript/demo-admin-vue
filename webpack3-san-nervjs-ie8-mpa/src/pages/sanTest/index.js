@@ -1,3 +1,4 @@
+import san from 'san'
 import './css/hello.scss'
 import NP from 'number-precision'
 import $ from 'jquery'

@@ -25,19 +25,18 @@
 - TODO
 
 ```js 
+// @TODO 提取公共模块测试，不要重复引入 FIX 
 // @TODO less分模块引入以及模块化
 // @TODO 内联样式与资源
-
-// Later: 
-// @TODO 提取公共模块测试，不要重复引入 FIX
 // @TODO 整理配置文件
 // @TODO 打包时的报错机制修复
 // @TODO 兼容IE8的一些配置与处理(还有一些配置没做和测试)
+
+// Later: 
 // @TODO 测试功能修复
 
 // Deprecated:
-// @TODO -> webpack4(Vue多页面在尝试采用，目前坑比较多)
-// @TODO better-npm-run
+// @TODO -> webpack4(目前坑比较多，不升级)
 ```
 
 - less | sass 分模块引入以及模块化
