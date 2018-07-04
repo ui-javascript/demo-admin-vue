@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Design风格提交表单UI设计</title>
+    <!--<link rel="stylesheet" href="css/normalize.css"/>-->
+    <!--<link rel="stylesheet" href="css/default.css">-->
+    <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/foundation/5.5.0/css/foundation.css'>
+
+
+    <link rel="stylesheet" href="styles.css">
+    <!--[if IE]>
+    <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<header class="m-main-header"></header>
+<div class="row">
+    <div class="small-12 small-centered medium-8 columns">
+        <div class="panel m-panel shadow">
+            <div class="row collapse">
+                <div class="small-12 columns">
+                    <header class="form-header">
+                        <h2>Form example
+                            <small>This is foundation !</small>
+                        </h2>
+                    </header>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 columns">
+                    <form>
+                        <div class="row">
+                            <div class="small-4 columns">
+                                <p class="notice">Simple input </p>
+                            </div>
+                            <div class="small-8 columns">
+                                <div class="form-group-material">
+                                    <label class="material-label" for="name">Name</label>
+                                    <input class="material-field" id="name" required="required" type="text"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-4 columns">
+                                <p class="notice">Input with an error </p>
+                            </div>
+                            <div class="small-8 columns">
+                                <div class="form-group-material error">
+                                    <label class="material-label" for="firstname">Firstname</label>
+                                    <input class="material-field" id="firstname" type="text"/>
+                                    <small class="error">Your firstname can't be a number.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-4 columns"></div>
+                            <div class="small-8 columns">
+                                <div class="form-group-material">
+                                    <label class="material-label" for="email">E-mail</label>
+                                    <input class="material-field" id="email" type="email"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-4 columns">
+                                <p class="notice">Inputs in any grid </p>
+                            </div>
+                            <div class="small-8 columns">
+                                <div class="row">
+                                    <div class="small-8 columns">
+                                        <div class="form-group-material">
+                                            <label class="material-label" for="city">City</label>
+                                            <input class="material-field" id="city" type="text"/>
+                                        </div>
+                                    </div>
+                                    <div class="small-4 columns">
+                                        <div class="form-group-material">
+                                            <label class="material-label" for="zipcode">Zip code</label>
+                                            <input class="material-field" id="zipcode" type="number"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-12 small-push-4 columns">
+                                <button>Send it !</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+    (function () {
+        var materialForm;
+        materialForm = function () {
+            return $('.material-field').focus(function () {
+                return $(this).closest('.form-group-material').addClass('focused has-value');
+            }).focusout(function () {
+                return $(this).closest('.form-group-material').removeClass('focused');
+            }).blur(function () {
+                if (!this.value) {
+                    $(this).closest('.form-group-material').removeClass('has-value');
+                }
+                return $(this).closest('.form-group-material').removeClass('focused');
+            });
+        };
+        $(function () {
+            return materialForm();
+        });
+    }.call(this));
+</script>
+</body>
+</html>

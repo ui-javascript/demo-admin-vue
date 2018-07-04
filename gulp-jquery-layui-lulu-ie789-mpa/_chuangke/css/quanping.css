@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.right_contact_img {
+    position: fixed;
+    z-index: 100;
+    overflow: visible;
+    top: 400px;
+    _position: absolute;
+    _top: expression((documentElement.scrollTop+203) + "px");
+    height: 170px;
+    width: 56px;
+    right: 0;
+    display: none;
+}
+
+.right_contact_img ul li {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1px;
+    position: relative;
+}
+
+.right_contact_img ul .last {
+    margin-bottom: 0px;
+}
+
+.right_contact_img ul li .pull_down2 {
+    position: absolute;
+    right: -201px;
+    top: 0;
+    width: 180px;
+    height: 56px;
+}
+
+.right_contact_img ul li .pull_down2 a {
+    width: 201px;
+    height: 56px;
+    display: block;
+}
+
+.right_contact_img ul li .pull_down2 .ding {
+    position: absolute;
+    width: 48px;
+    left: 23px;
+    top: 0px;
+}
+
+.right_contact_img ul li .pull_down2 .yi {
+    position: absolute;
+    width: 48px;
+    left: 88px;
+    top: 0px;
+}
+
+.left_case_list {
+    position: fixed;
+    z-index: 9999;
+    overflow: visible;
+    top: 300px;
+    _position: absolute;
+    _top: expression((documentElement.scrollTop+180) + "px");
+    display: table;
+    width: 56px;
+    left: 0;
+}
+
+.left_case_list .case_class_a_list {
+    width: 56px;
+    display: table;
+}
+
+.left_case_list .case_class_a_list ul li {
+    position: relative;
+    background: url("../images/touming_02.png") repeat-y;
+    height: 56px;
+    margin-bottom: 1px;
+}
+
+.left_case_list .case_class_a_list ul li .pull_down2 {
+    position: absolute;
+    left: -150px;
+    top: 0;
+}
+
+.left_case_list .case_class_a_list ul li .pull_down2 a {
+    width: 150px;
+    height: 56px;
+    display: block;
+    line-height: 56px;
+    text-align: center;
+    color: #FFF;
+    font-size: 14px;
+    font-family: "微软雅黑", "Arial";
+    background: url("../images/left18.png") right no-repeat;
+    padding: 0;
+}
+
+.left_case_list .case_class_a_list ul li a {
+    width: 56px;
+    height: 32px;
+    display: block;
+    line-height: 16px;
+    padding: 12px 0;
+    text-align: center;
+    color: #FFF;
+    font-size: 12px;
+    font-family: "微软雅黑", "Arial"
+}
+
+.left_case_list .case_class_a_list2 {
+    width: 59px;
+    display: table;
+    background: url("../images/touming2_02.png") repeat-y;
+}
+
+.left_case_list .case_class_a_list2 ul li {
+    position: relative;
+}
+
+.left_case_list .case_class_a_list2 ul li .pull_down2 {
+    position: absolute;
+    left: -150px;
+    top: 0;
+}
+
+.left_case_list .case_class_a_list2 ul li .pull_down2 a {
+    width: 150px;
+    height: 35px;
+    display: block;
+    line-height: 35px;
+    text-align: center;
+    color: #FFF;
+    font-size: 12px;
+    font-family: "微软雅黑", "Arial";
+    background: #162d46;
+}
+
+.left_case_list .case_class_a_list2 ul li a {
+    width: 59px;
+    height: 35px;
+    display: block;
+    line-height: 35px;
+    text-align: center;
+    color: #FFF;
+    font-size: 12px;
+    font-family: "微软雅黑", "Arial"
+}
+
+.yincang {
+    overflow: hidden;
+}
+
+#container_case {
+    margin: 0 auto;
+}
+
+#container_case .case_one {
+    width: 280px;
+    height: 234px;
+    margin: 0 10px;
+    float: left;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+#container_case .case_one .caselogo {
+    width: 280px;
+    height: 180px;
+    position: absolute;
+    top: -180px;
+    left: 0px;
+    background: #f5f5f5;
+}
+
+#container_case .case_one .caselogo a {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    display: block;
+}
+
+#container_case .case_one .caselogo a img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -105px;
+    margin-top: -75px;
+}
+
+#container_case .case_one .name {
+    width: 260px;
+    height: 54px;
+    background: #FFF;
+    padding-left: 20px;
+    line-height: 53px;
+    font-size: 12px;
+    font-family: "微软雅黑", "Arial";
+}
+
+#container_case .case_one .name a {
+    color: #0c0c0c;
+}
+
+#container_case .case_one .name a:hover {
+    color: #610085;
+    font-weight: 600;
+}
+
+#container_case .banner {
+    width: 580px;
+    height: 234px;
+    margin: 0 10px;
+    float: left;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+#container_case .banner ul {
+    width: 10000px;
+}
+
+#container_case .banner ul li {
+    float: left;
+    width: 580px;
+    height: 234px;
+}
+
+#container_case .banner .next {
+    position: absolute;
+    width: 25px;
+    height: 45px;
+    text-align: center;
+    top: 95px;
+    right: 0px;
+}
+
+#container_case .banner .next a {
+    background: url("../images/next.png") no-repeat;
+    width: 25px;
+    height: 45px;
+    display: block;
+}
+
+#container_case .banner .next a:hover {
+    background: url("../images/next2.png") no-repeat;
+}
+
+#container_case .banner .up {
+    position: absolute;
+    width: 25px;
+    height: 45px;
+    text-align: center;
+    top: 95px;
+    left: 0px;
+}
+
+#container_case .banner .up a {
+    background: url("../images/up.png") no-repeat;
+    width: 25px;
+    height: 45px;
+    display: block;
+}
+
+#container_case .banner .up a:hover {
+    background: url("../images/uo2.png") no-repeat;
+}
+
+#container_case .fe h2 {
+    line-height: 48px;
+    font-size: 15px;
+    color: #fff;
+    font-family: "微软雅黑", "Arial";
+    padding-left: 10px;
+}
+
+.foot_gotop {
+    position: fixed;
+    z-index: 100;
+    overflow: hidden;
+    bottom: 34px;
+    _position: absolute;
+    _top: expression((documentElement.scrollTop-34) + "px");
+    height: 47px;
+    width: 46px;
+    right: 10px;
+    display: none !important;
+}
+
+.foot_gotop a {
+    background: url("../images/gotop.png") left top no-repeat;
+    display: block;
+    height: 47px;
+    width: 46px;
+}
+
+.foot_qp {
+    position: fixed;
+    z-index: 100;
+    overflow: hidden;
+    bottom: 90px;
+    _position: absolute;
+    _top: expression((documentElement.scrollTop-90) + "px");
+    height: 47px;
+    width: 46px;
+    right: 10px;
+    display: none;
+}
+
+.foot_qp a {
+    background: url("../images/qp_btn.png") left top no-repeat;
+    display: block;
+    height: 47px;
+    width: 46px;
+}
+
+.foot_tcqp a {
+    background: url("../images/tcqp.png") left top no-repeat;
+}

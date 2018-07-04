@@ -1,0 +1,12 @@
+/templates/*
+!/templates/.gitkeep
+/static/css/*
+!/static/css/.gitkeep
+/static/images/*
+!/static/images/.gitkeep
+/static/js/*
+!/static/js/.gitkeep
+/static/vendor/libs/*
+!/static/vendor/libs/.gitkeep
+/dist/*
+/dist.zip

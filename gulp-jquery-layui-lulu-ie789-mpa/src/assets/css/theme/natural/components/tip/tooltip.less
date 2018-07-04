@@ -1,0 +1,475 @@
+[data-balloon] {
+  position: relative;
+}
+
+[data-balloon]:before {
+  //filter: alpha(opactiy=0);
+  //-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  //-moz-opacity: 0;
+  //-khtml-opacity: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.18s ease-out;
+  background: rgba(17, 17, 17, 0.9);
+  border-radius: 4px;
+  color: #fff;
+  content: attr(data-balloon);
+  font-size: 12px;
+  padding: .5em 1em;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+[data-balloon]:after {
+  background: no-repeat url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="rgba(17, 17, 17, 0.9)" transform="rotate(0)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>');
+  background-size: 100% auto;
+  width: 18px;
+  height: 6px;
+  //filter: alpha(opactiy=0);
+  //-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  //-moz-opacity: 0;
+  //-khtml-opacity: 0;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all 0.18s ease-out;
+  content: '';
+  position: absolute;
+  z-index: 10;
+}
+
+[data-balloon]:hover:before, [data-balloon]:hover:after {
+  //filter: alpha(opactiy=100);
+  //-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  //-moz-opacity: 1;
+  //-khtml-opacity: 1;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+[data-balloon][data-balloon-break]:before {
+  white-space: normal;
+}
+
+[data-balloon][data-balloon-pos="up"]:before {
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 11px;
+
+  transform: translate3d(-50%, 10px, 0);
+
+  transform-origin: top;
+}
+
+[data-balloon][data-balloon-pos="up"]:after {
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 5px;
+  transform: translate3d(-50%, 10px, 0);
+  transform-origin: top;
+}
+
+[data-balloon][data-balloon-pos="up"]:hover:before {
+  transform: translate3d(-50%, 0, 0);
+}
+
+[data-balloon][data-balloon-pos="up"]:hover:after {
+  transform: translate3d(-50%, 0, 0);
+}
+
+[data-balloon][data-balloon-pos='down']:before {
+  left: 50%;
+  margin-top: 11px;
+  top: 100%;
+  transform: translate3d(-50%, -10px, 0);
+}
+
+[data-balloon][data-balloon-pos='down']:after {
+  background: no-repeat url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="36px" height="12px"><path fill="rgba(17, 17, 17, 0.9)" transform="rotate(180 18 6)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>');
+  background-size: 100% auto;
+  width: 18px;
+  height: 6px;
+  left: 50%;
+  margin-top: 5px;
+  top: 100%;
+  transform: translate3d(-50%, -10px, 0);
+}
+
+[data-balloon][data-balloon-pos='down']:hover:before {
+  transform: translate3d(-50%, 0, 0);
+}
+
+[data-balloon][data-balloon-pos='down']:hover:after {
+  transform: translate3d(-50%, 0, 0);
+}
+
+[data-balloon][data-balloon-pos='left']:before {
+  margin-right: 11px;
+  right: 100%;
+  top: 50%;
+  transform: translate3d(10px, -50%, 0);
+}
+
+[data-balloon][data-balloon-pos='left']:after {
+  background: no-repeat url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="36px"><path fill="rgba(17, 17, 17, 0.9)" transform="rotate(-90 18 18)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>');
+  background-size: 100% auto;
+  width: 6px;
+  height: 18px;
+  margin-right: 5px;
+  right: 100%;
+  top: 50%;
+  transform: translate3d(10px, -50%, 0);
+}
+
+[data-balloon][data-balloon-pos='left']:hover:before {
+  transform: translate3d(0, -50%, 0);
+}
+
+[data-balloon][data-balloon-pos='left']:hover:after {
+  transform: translate3d(0, -50%, 0);
+}
+
+[data-balloon][data-balloon-pos='right']:before {
+  left: 100%;
+  margin-left: 11px;
+  top: 50%;
+  transform: translate3d(-10px, -50%, 0);
+}
+
+[data-balloon][data-balloon-pos='right']:after {
+  background: no-repeat url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12px" height="36px"><path fill="rgba(17, 17, 17, 0.9)" transform="rotate(90 6 6)" d="M2.658,0.000 C-13.615,0.000 50.938,0.000 34.662,0.000 C28.662,0.000 23.035,12.002 18.660,12.002 C14.285,12.002 8.594,0.000 2.658,0.000 Z"/></svg>');
+  background-size: 100% auto;
+  width: 6px;
+  height: 18px;
+  left: 100%;
+  margin-left: 5px;
+  top: 50%;
+  transform: translate3d(-10px, -50%, 0);
+}
+
+[data-balloon][data-balloon-pos='right']:hover:before {
+  transform: translate3d(0, -50%, 0);
+}
+
+[data-balloon][data-balloon-pos='right']:hover:after {
+  transform: translate3d(0, -50%, 0);
+}
+
+[data-balloon][data-balloon-length='small']:before {
+  white-space: normal;
+  width: 80px;
+}
+
+[data-balloon][data-balloon-length='medium']:before {
+  white-space: normal;
+  width: 150px;
+}
+
+[data-balloon][data-balloon-length='large']:before {
+  white-space: normal;
+  width: 260px;
+}
+
+[data-balloon][data-balloon-length='xlarge']:before {
+  white-space: normal;
+  width: 380px;
+}
+
+@media screen and (max-width: 768px) {
+  [data-balloon][data-balloon-length='xlarge']:before {
+    white-space: normal;
+    width: 90vw;
+  }
+}
+
+[data-balloon][data-balloon-length='fit']:before {
+  white-space: normal;
+  width: 100%;
+}
+
+
+
+// =======================================
+
+.nt-tooltip-normal {
+  .tt-wrapper{
+    padding: 0;
+    width: 435px;
+    height: 70px;
+    margin: 80px auto 30px auto;
+  }
+  .tt-wrapper li{
+    float: left;
+  }
+  .tt-wrapper li a{
+    display: block;
+    width: 68px;
+    height: 70px;
+    margin: 0 2px;
+    outline: none;
+    background: transparent url(../../../images/tip/growcase_the_social_gunman_icons.png) no-repeat top left;
+    text-indent: -9000px;
+    position: relative;
+  }
+  .tt-wrapper li .tt-gplus{
+    background-position: 0px 0px;
+  }
+  .tt-wrapper li .tt-twitter{
+    background-position: -68px 0px;
+  }
+  .tt-wrapper li .tt-dribbble{
+    background-position: -136px 0px;
+  }
+  .tt-wrapper li .tt-facebook{
+    background-position: -204px 0px;
+  }
+  .tt-wrapper li .tt-linkedin{
+    background-position: -272px 0px;
+  }
+  .tt-wrapper li .tt-forrst{
+    background-position: -340px 0px;
+  }
+  .tt-wrapper li a span{
+    width: 100px;
+    height: auto;
+    line-height: 20px;
+    padding: 10px;
+    left: 50%;
+    margin-left: -64px;
+    font-family: 'Alegreya SC', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+    color: #719DAB;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 4px solid #fff;
+    background: rgba(255,255,255,0.3);
+    text-indent: 0px;
+    border-radius: 5px;
+    position: absolute;
+    pointer-events: none;
+    bottom: 100px;
+    opacity: 0;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .tt-wrapper li a span:before,
+  .tt-wrapper li a span:after{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -9px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(0,0,0,0.1);
+  }
+  .tt-wrapper li a span:after{
+    bottom: -14px;
+    margin-left: -10px;
+    border-top: 10px solid #fff;
+  }
+  .tt-wrapper li a:hover span{
+    opacity: 0.9;
+    bottom: 70px;
+  }
+}
+
+.nt-tooltip-circle {
+  .tt-wrapper{
+    padding: 0;
+    width: 435px;
+    height: 70px;
+    margin: 80px auto 30px auto;
+  }
+  .tt-wrapper li{
+    float: left;
+  }
+  .tt-wrapper li a{
+    display: block;
+    width: 68px;
+    height: 70px;
+    margin: 0 2px;
+    outline: none;
+    position: relative;
+    z-index: 2;
+    background: transparent url(../../../images/tip/growcase_the_social_gunman_icons.png) no-repeat top left;
+    text-indent: -9000px;
+  }
+  .tt-wrapper li .tt-gplus{
+    background-position: 0px 0px;
+  }
+  .tt-wrapper li .tt-twitter{
+    background-position: -68px 0px;
+  }
+  .tt-wrapper li .tt-dribbble{
+    background-position: -136px 0px;
+  }
+  .tt-wrapper li .tt-facebook{
+    background-position: -204px 0px;
+  }
+  .tt-wrapper li .tt-linkedin{
+    background-position: -272px 0px;
+  }
+  .tt-wrapper li .tt-forrst{
+    background-position: -340px 0px;
+  }
+  .tt-wrapper li a span{
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    padding: 10px;
+    left: 50%;
+    margin-left: -55px;
+    font-family: 'Alegreya SC', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+    color: #719DAB;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 5px solid #fff;
+    background: rgba(255,255,255,0.5);
+    text-indent: 0px;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    bottom: -40px;
+    opacity: 0;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+    -webkit-transform: scale(0.2);
+    -moz-transform: scale(0.2);
+    -o-transform: scale(0.2);
+    -ms-transform: scale(0.2);
+    transform: scale(0.2);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .tt-wrapper li a:hover span{
+    opacity: 0.9;
+    bottom: 50px;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+
+
+}
+
+.nt-tooltip-animate {
+  .tt-wrapper{
+    padding: 0;
+    width: 435px;
+    height: 70px;
+    margin: 80px auto 30px auto;
+  }
+  .tt-wrapper li{
+    float: left;
+  }
+  .tt-wrapper li a{
+    display: block;
+    width: 68px;
+    height: 70px;
+    margin: 0 2px;
+    outline: none;
+    background: transparent url(../../../images/tip/growcase_the_social_gunman_icons.png) no-repeat top left;
+    text-indent: -9000px;
+    position: relative;
+  }
+  .tt-wrapper li .tt-gplus{
+    background-position: 0px 0px;
+  }
+  .tt-wrapper li .tt-twitter{
+    background-position: -68px 0px;
+  }
+  .tt-wrapper li .tt-dribbble{
+    background-position: -136px 0px;
+  }
+  .tt-wrapper li .tt-facebook{
+    background-position: -204px 0px;
+  }
+  .tt-wrapper li .tt-linkedin{
+    background-position: -272px 0px;
+  }
+  .tt-wrapper li .tt-forrst{
+    background-position: -340px 0px;
+  }
+  .tt-wrapper li a span{
+    width: 100px;
+    height: auto;
+    line-height: 20px;
+    padding: 10px;
+    left: 50%;
+    margin-left: -64px;
+    font-family: 'Alegreya SC', Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+    color: #719DAB;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 4px solid #fff;
+    background: rgba(255,255,255,0.3);
+    text-indent: 0px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 70px;
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    -webkit-transform: translate(35px) rotate(25deg) scale(1.5);
+    -moz-transform: translate(35px) rotate(25deg) scale(1.5);
+    -o-transform: translate(35px) rotate(25deg) scale(1.5);
+    -ms-transform: translate(35px) rotate(25deg) scale(1.5);
+    transform: translate(35px) rotate(25deg) scale(1.5);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .tt-wrapper li a span:before,
+  .tt-wrapper li a span:after{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -9px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(0,0,0,0.1);
+  }
+  .tt-wrapper li a span:after{
+    bottom: -14px;
+    margin-left: -10px;
+    border-top: 10px solid #fff;
+  }
+  .tt-wrapper li a:hover span{
+    visibility: visible;
+    opacity: 0.9;
+    -webkit-transform: translate(0px) rotate(0deg) scale(1);
+    -moz-transform: translate(0px) rotate(0deg) scale(1);
+    -o-transform: translate(0px) rotate(0deg) scale(1);
+    -ms-transform: translate(0px) rotate(0deg) scale(1);
+    transform: translate(0px) rotate(0deg) scale(1);
+  }
+}
+
+

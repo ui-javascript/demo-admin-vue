@@ -1,0 +1,84 @@
+
+.single-post-area-inner{
+	padding: 0px;
+}
+
+.single-post-area-inner h5>span{
+	font-size: 96px;
+	line-height: 103px;
+font-family:"OpenSansLight";
+font-weight: normal;
+}
+.single-post-area-inner h5>span > strong{
+	font-size: 36px;
+	line-height: 43px;
+font-family:"OpenSansLight";
+font-weight: normal;
+}
+.single-post-area-inner h1{
+	font-size: 36px;
+	line-height: 43px;
+font-family:"MontserratRegular";
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-top:20px;
+font-weight: normal;
+}
+.single-post-area-inner h6{
+margin-top:20px;
+}
+.single-post-area-inner h6 > span{
+text-transform: uppercase;
+font-family:"RalewayLight";
+	font-size: 12px;
+	line-height: 19px;
+	padding: 0px;
+}
+.single-post-proceed{
+	margin-top: 40px;
+}
+
+.single-post-inner-content{
+	padding: 40px;
+}
+.single-post-inner-content > h4{
+	font-size: 18px;
+	line-height:25px;
+font-family:"OpenSansBold";
+margin-bottom: 0;
+}
+
+.single-post-inner-content > p{
+margin-bottom: 30px;
+}
+.single-post-inner-content > h4 > .single-post-date{
+	font-size: 24px;
+	line-height:31px;
+font-family:"OpenSansLight";
+margin-bottom: 0;
+}
+.single-post-inner-content > h4 > .single-post-month{
+	font-size: 18px;
+	line-height:25px;
+font-family:"OpenSansLight";
+margin-bottom: 0;
+}
+.single-post-inner-content > .single-post-spec{
+	margin-top: 10px;
+	padding-top: 5px;
+	font-size: 14px;
+	line-height:21px;
+border-top: solid 1px #aaa;
+}
+.single-post-inner-content > .single-post-category{
+	font-size: 12px;
+	line-height:19px;
+font-family:"OpenSansLight";
+margin-bottom: 0;
+}
+.single-post-inner-slider{
+	margin-top: 10px !important;
+}
+.single-post-text-area{
+	padding: 40px 0 !important;
+}

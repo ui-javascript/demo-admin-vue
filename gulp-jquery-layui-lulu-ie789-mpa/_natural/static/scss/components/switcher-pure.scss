@@ -1,0 +1,142 @@
+// Colors
+$switch-default-color: #eeeeee !default;
+$switch-primary-color: #1abc9c !default;
+$switch-info-color: #3498db !default;
+$switch-success-color: #2ecc71 !default;
+$switch-danger-color: #e74c3c !default;
+$switch-warning-color: #e67e22 !default;
+$switch-disabled-color: #d5d5d5 !default;
+$slider-default-color: darken($switch-default-color, 10%) !default;
+$slider-primary-color: lighten($switch-primary-color, 10%) !default;
+$slider-info-color: lighten($switch-info-color, 10%) !default;
+$slider-success-color: lighten($switch-success-color, 10%) !default;
+$slider-danger-color: lighten($switch-danger-color, 10%) !default;
+$slider-warning-color: lighten($switch-warning-color, 10%) !default;
+$slider-disabled-color: lighten($switch-disabled-color, 5%) !default;
+
+// Sizes
+$slider-height: 8px !default;
+$slider-width: $slider-height * 4 !default; // 32px
+$switch-height: $slider-height * 3 !default; // 24px
+$switch-width: $switch-height !default; // 24px
+$switch-shift: $slider-height !default; // 8px
+
+// Transitions
+$transition-duration: .2s !default;
+$transition-function: ease !default;
+$transition: all $transition-duration $transition-function !default;
+
+
+.switch-box {
+  display: block;
+  margin-top: $switch-height;
+  
+  .switch-box-slider {
+    position: relative;
+    display: inline-block;
+    height: $slider-height;
+    width: $slider-width;
+    background: $slider-default-color;
+    border-radius: $slider-height;
+    cursor: pointer;
+    transition: $transition;
+    
+    &:after {
+      position: absolute;
+      left: -$switch-shift;
+      top: ($slider-height - $switch-height) / 2;
+      display: block;
+      width: $switch-height;
+      height: $switch-width;
+      border-radius: 50%;
+      background: $switch-default-color;
+      box-shadow: 0px 2px 2px rgba(#000, .2);
+      content: '';
+      transition: $transition;
+    }
+  }
+  
+  .switch-box-input {
+    display: none;
+    
+    ~ .switch-box-label {
+      margin-left: $slider-height;
+    }
+       
+    &:checked ~ .switch-box-slider {
+      
+      &:after {
+        left: $slider-width - $switch-width + $switch-shift;
+      }
+    }
+    
+    &:disabled ~ .switch-box-slider {
+      background: $slider-disabled-color;
+      cursor: default;
+      
+      &:after {
+        background: $switch-disabled-color;
+      }
+    }
+  }
+  
+  &.is-primary {
+    .switch-box-input:checked:not(:disabled) ~ .switch-box-slider {
+      background: $slider-primary-color;
+      
+      &:after {
+        background: $switch-primary-color;
+      }
+    }
+  }  
+
+  &.is-info {
+    .switch-box-input:checked:not(:disabled) ~ .switch-box-slider {
+      background: $slider-info-color;
+      
+      &:after {
+        background: $switch-info-color;
+      }
+    }
+  }
+
+  &.is-success {
+    .switch-box-input:checked:not(:disabled) ~ .switch-box-slider {
+      background: $slider-success-color;
+      
+      &:after {
+        background: $switch-success-color;
+      }
+    }
+  }
+  
+  &.is-danger {
+    .switch-box-input:checked:not(:disabled) ~ .switch-box-slider {
+      background: $slider-danger-color;
+      
+      &:after {
+        background: $switch-danger-color;
+      }
+    }
+  }
+
+  &.is-warning {
+    .switch-box-input:checked:not(:disabled) ~ .switch-box-slider {
+      background: $slider-warning-color;
+      
+      &:after {
+        background: $switch-warning-color;
+      }
+    }
+  }
+}
+
+body {
+  background: #fff;
+  font-family: Raleway, Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

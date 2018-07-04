@@ -1,0 +1,143 @@
+$bgc: #B56C8A;
+$copycolor: #F8FFE9;
+$black: #252721;
+$mainfont: "Raleway", sans-serif;
+$headfont: "Bitter", serif;
+
+
+
+body{
+	background-color: $bgc;
+  height: 100%;
+  font-family: $mainfont;
+  color: $copycolor;
+  font-size: 16px;
+  line-height: 1.8rem;
+  margin: 0;
+}
+
+.burgers{
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+
+h1{
+    font-family: $headfont;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    padding: 40px;
+}
+
+h2{
+  font-family: $headfont;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.icon{
+    height: 14px;
+    width: 80px;
+    top: 30px;
+    background-color: $copycolor;
+    border-radius: 20px;
+    position: absolute;
+    transition-duration: 0.5s;
+
+    &:before{
+      left: 0;
+      position: absolute;
+      top: -25px;
+      height: 14px;
+      width: 80px;
+      background-color: $copycolor;
+      content: "";
+      border-radius: 20px;
+      transition-duration: 0.5s;
+
+    }
+
+    &:after{
+      left: 0;
+      position: absolute;
+      top: 25px;
+      height: 14px;
+      width: 80px;
+      background-color: $copycolor;
+      content: "";
+      border-radius: 20px;
+      transition-duration: 0.5s;
+
+    }
+  }
+
+.menu{
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transition-duration: 1s;
+  display: inline-block;
+  margin: 40px;
+  cursor: pointer;
+}
+
+  .burger1-open{
+      transform: rotateZ(450deg);
+  }
+
+.burger2{
+  .icon{
+    transition-duration: 0.5s;
+    transition-delay: 0.5s;
+
+    &:after{
+      transition: transform 0.5s, top 0.5s 0.5s;
+    }
+
+    &:before{
+      transition: transform 0.5s, top 0.5s 0.5s;
+    }
+  }
+}
+
+.burger2.open .icon{
+  transition-duration: 0.1s;
+  transition-delay: 0.5s;
+  background: transparent;
+}
+
+.burger2.open .icon:before{
+  transition: top 0.5s, transform 0.5s 0.5s;
+  top: 0px;
+  transform: rotateZ(-45deg);
+}
+
+.burger2.open .icon:after{
+  transition: top 0.4s, transform 0.5s 0.5s;
+  top: 0px;
+  transform: rotateZ(45deg);
+}
+
+.burger3.open .icon{
+  background: transparent;
+}
+.burger3.open .icon:before{
+  transition: transform 0.5s;
+  transform: rotateZ(45deg) translate(15px, 20px);
+}
+
+.burger3.open .icon:after{
+  transition: transform 0.5s;
+  transform: rotateZ(-405deg) translate(15px, -20px);
+}

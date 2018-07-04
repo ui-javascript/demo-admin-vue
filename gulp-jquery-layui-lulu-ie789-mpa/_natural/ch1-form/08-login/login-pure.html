@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态背景的CSS3登录表单DEMO演示</title>
+    <link rel="stylesheet" href="/static/css/theme/natural/_output.css"/>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-weight: 300;
+        }
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: white;
+            font-weight: 300;
+        }
+        body ::-webkit-input-placeholder {
+            /* WebKit browsers */
+            font-family: 'Source Sans Pro', sans-serif;
+            color: white;
+            font-weight: 300;
+        }
+        body :-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            font-family: 'Source Sans Pro', sans-serif;
+            color: white;
+            opacity: 1;
+            font-weight: 300;
+        }
+        body ::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            font-family: 'Source Sans Pro', sans-serif;
+            color: white;
+            opacity: 1;
+            font-weight: 300;
+        }
+        body :-ms-input-placeholder {
+            /* Internet Explorer 10+ */
+            font-family: 'Source Sans Pro', sans-serif;
+            color: white;
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+
+<div class="htmleaf-container nt-login-pure">
+    <div class="wrapper">
+        <div class="container">
+            <h1>Welcome</h1>
+
+            <form class="form">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button type="submit" id="login-button">Login</button>
+            </form>
+        </div>
+
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+    $('#login-button').click(function (event) {
+        event.preventDefault();
+        $('form').fadeOut(500);
+        $('.wrapper').addClass('form-success');
+    });
+</script>
+
+</body>
+</html>
