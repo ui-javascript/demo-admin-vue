@@ -3,6 +3,7 @@
     [
       "@babel/env",
       {
+        "loose": true,
         "spec": true,
         "useBuiltIns": false
       }
