@@ -15,7 +15,7 @@ var webpackConfig = (process.env.NODE_ENV === 'testing')
   : require('./webpack.dev.config')
 
 // default port where dev server listens for incoming traffic
-var port = process.env.PORT || config.dev.port
+var port = config.dev.port || process.env.PORT
 
 // automatically open browser, if not set will be false
 var autoOpenBrowser = !!config.dev.autoOpenBrowser
@@ -88,6 +88,4 @@ module.exports = app.listen(port, function (err) {
   }
   console.log("\n正在构建初始化中，构建完成后，将自动在浏览器打开页面。");
   // when env is testing, don't need open it
-
-
 })

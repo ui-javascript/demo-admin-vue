@@ -197,28 +197,35 @@ let webpackconfig = {
   devtool: 'eval', //  cheap-module-eval-source-map | source-map
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      name: ['vendor', 'runtime'],
-      // filename: 'commons.bundle.js',
-      minChunks: Infinity
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      // ( 公共chunk(commnons chunk) 的名称)
-      name: "commons",
-      // ( 公共chunk 的文件名)
-      filename: "commons.bundle.js",
-      // (模块必须被 2个 入口chunk 共享)
-      minChunks: 2
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      // (选择所有被选 chunks 的子 chunks)
-      children: true,
-      async: 'vendor-async',
-      // (在提取之前需要至少三个子 chunk 共享这个模块)
-      minChunks: (module, count) => {
-        // 被 2 个及以上 chunk 使用的共用模块提取出来
-        return count >= 2
+      name: 'vendor',
+      minChunks: function(module) {
+        let flag =  module.context && module.context.indexOf('node_modules') !== -1;
+        console.log(module.context, flag);
+        return flag;
       }
     }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      chunks: ['vendor'],
+    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   // ( 公共chunk(commnons chunk) 的名称)
+    //   name: "commons",
+    //   // ( 公共chunk 的文件名)
+    //   filename: "commons.bundle.js",
+    //   // (模块必须被 2个 入口chunk 共享)
+    //   minChunks: 2
+    // }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   // (选择所有被选 chunks 的子 chunks)
+    //   children: true,
+    //   async: 'vendor-async',
+    //   // (在提取之前需要至少三个子 chunk 共享这个模块)
+    //   minChunks: (module, count) => {
+    //     // 被 2 个及以上 chunk 使用的共用模块提取出来
+    //     return count >= 2
+    //   }
+    // }),
 
     // 将模块都放到一个闭包函数中，
     // 通过减少闭包函数数量从而加快JS的执行速度

@@ -37,11 +37,11 @@ module.exports = webpackMerge(webpackBase, {
     // new webpack.optimize.DedupePlugin(),
 
     // 提取公共 JavaScript 代码
-    new webpack.optimize.CommonsChunkPlugin({
-      // chunk 名为 commons
-      name: "commons",
-      filename: "[name].bundle.js",
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   // chunk 名为 commons
+    //   name: "commons",
+    //   filename: "[name].bundle.js",
+    // }),
     
     // copy custom static assets
     new CopyWebpackPlugin([

@@ -4,6 +4,8 @@
   "description": "Zero-based development template of vue by webpack4",
   "main": "''",
   "scripts": {
+    "cnpm": "cnpm install",
+    "remove": "rimraf node_modules",
     "dev": "webpack-dev-server --config ./build/webpack.dev.js",
     "build": "node build/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"

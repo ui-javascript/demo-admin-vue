@@ -4,6 +4,7 @@
   "description": "兼容IE8+的一个webpack多页面配置方案",
   "main": "index.js",
   "scripts": {
+    "install": "cnpm install",
     "dev": "node build/dev-server.js",
     "dev:old": "set NODE_ENV=dev && webpack-dev-server --open --progress --color",
     "build": "node build/build.js",
