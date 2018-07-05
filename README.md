@@ -7,7 +7,7 @@
 ```
 "scripts": {
     "install:cnpm": "cnpm install",
-    "remove": "rimraf node_modules"
+    "remove": "rimraf node_modules",
 },
 ```    
     
