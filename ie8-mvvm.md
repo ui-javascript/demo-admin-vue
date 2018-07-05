@@ -2,6 +2,7 @@
 
 - san
 - avalon
+    - https://github.com/Levan-Du/avalon-spa-app
 - knockout
 - react/regular
 
