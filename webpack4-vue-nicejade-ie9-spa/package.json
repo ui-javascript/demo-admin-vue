@@ -5,7 +5,8 @@
   "author": "nicejade <yunjeff@163.com>",
   "private": true,
   "scripts": {
-
+    "install:cnpm": "cnpm install",
+    "remove": "rimraf node_modules",
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "NODE_ENV=production node build/build.js",
