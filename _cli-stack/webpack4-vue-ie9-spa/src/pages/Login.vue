@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import TotalHeader from '../cmpts/TotalHeader.vue'
+import TotalHeader from '../components/TotalHeader.vue'
 
 export default {
   components: {

@@ -7,6 +7,7 @@ const config = require('./config/index')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const BundleAnalyzer = require('webpack-bundle-analyzer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
@@ -34,12 +35,12 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      },
-      sourceMap: true
-    }),
+    // new webpack.optimize.UglifyJsPlugin({
+    //   compress: {
+    //     warnings: false
+    //   },
+    //   sourceMap: true
+    // }),
     new MiniCssExtractPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css')
     }),
@@ -55,8 +56,47 @@ const webpackConfig = merge(baseWebpackConfig, {
       from: path.resolve(__dirname, '../static'),
       to: config.build.assetsSubDirectory,
       ignore: ['.*']
-    }])
-  ]
+    }]),
+    // bundle 分析
+    new BundleAnalyzer.BundleAnalyzerPlugin(),
+  ],
+  /**
+   * 优化部分包括代码拆分
+   * 且运行时（manifest）的代码拆分提取为了独立的 runtimeChunk 配置
+   */
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all"
+        },
+        commons: {
+          // async 设置提取异步代码中的公用代码
+          chunks: "async",
+          name: 'commons-async',
+          /**
+           * minSize 默认为 30000
+           * 想要使代码拆分真的按照我们的设置来
+           * 需要减小 minSize
+           */
+          minSize: 0,
+          // 至少为两个 chunks 的公用代码
+          minChunks: 2
+        }
+      }
+    },
+    /**
+     * 对应原来的 minchunks: Infinity
+     * 提取 webpack 运行时代码
+     * 直接置为 true 或设置 name
+     */
+    runtimeChunk: {
+      name: 'manifest'
+    }
+  }
 })
 
 if (config.build.productionGzip) {
