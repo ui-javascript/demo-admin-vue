@@ -4,7 +4,8 @@ import Login from '@/components/dialog/Login'
 let template = 
 `
 <div class="navbar">
-  <div class="navbar-inner">
+  <div class="navbar-inner">    
+    <div class="center-container w-1200">
     <a class="brand" href="javascript:void(0)">
       <img :if="logo" :attr="{src:logo}" />
       <span :if="!logo" :text="title"></span>
@@ -29,6 +30,7 @@ let template =
       <li class="divider-vertical"></li>
       <li><button class="btn btn-primary" :text="loginText" :click="toggleLogin"></button></li>
     </ul>
+    </div>
   </div>
   <ms-login :ref="login" />
 </div>

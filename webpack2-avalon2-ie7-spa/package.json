@@ -5,6 +5,8 @@
   "author": "hmh <215795583@qq.com>",
   "private": true,
   "scripts": {
+    "install:cnpm": "cnpm install",
+    "remove": "rimraf node_modules",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js"
   },

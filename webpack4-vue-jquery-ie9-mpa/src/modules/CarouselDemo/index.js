@@ -5,6 +5,9 @@ import Vue from 'vue'
 import 'assets/css/bootstrap.min.css'
 import 'assets/css/Common.css'
 
+// 引用bootstrap
+import 'assets/js/libs/bootstrap.min.js'
+
 import IndexCpm from './Index.vue'
 import store from './store/index'
 import router from './router/index'

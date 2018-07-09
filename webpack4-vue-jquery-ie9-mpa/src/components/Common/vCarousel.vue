@@ -47,8 +47,11 @@
         }
       },
       mounted () {
-        $('#carousels ol li').eq(0).addClass('active')
-        $('#carousels .carousel-inner .item').eq(0).addClass('active')
+        let $carousels = $('#carousels')
+        if ($carousels.length) {
+          $carousels.find('ol li').eq(0).addClass('active')
+          $carousels.find('.carousel-inner .item').eq(0).addClass('active')
+        }
       }
     }
 </script>

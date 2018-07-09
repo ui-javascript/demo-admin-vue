@@ -1,5 +1,5 @@
 const utils = require('./utils/utils')
-const config = require('./config/index')
+const config = require('./config')
 const isProduction = process.env.NODE_ENV === 'production'
 const sourceMapEnabled = isProduction
   ? config.build.productionSourceMap

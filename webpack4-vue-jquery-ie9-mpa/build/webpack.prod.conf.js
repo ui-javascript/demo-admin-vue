@@ -3,11 +3,10 @@ const path = require('path')
 const utils = require('./utils/utils')
 const webpack = require('webpack')
 const glob = require('glob')
-const config = require('./config/index')
+const config = require('./config')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const BundleAnalyzer = require('webpack-bundle-analyzer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
@@ -41,6 +40,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     //   },
     //   sourceMap: true
     // }),
+
     new MiniCssExtractPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css')
     }),
@@ -56,14 +56,8 @@ const webpackConfig = merge(baseWebpackConfig, {
       from: path.resolve(__dirname, '../static'),
       to: config.build.assetsSubDirectory,
       ignore: ['.*']
-    }]),
-    // bundle 分析
-    new BundleAnalyzer.BundleAnalyzerPlugin(),
+    }])
   ],
-  /**
-   * 优化部分包括代码拆分
-   * 且运行时（manifest）的代码拆分提取为了独立的 runtimeChunk 配置
-   */
   optimization: {
     splitChunks: {
       chunks: "all",
