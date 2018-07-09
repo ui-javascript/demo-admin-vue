@@ -5,6 +5,9 @@
 ## Build Setup
 
 ``` bash
+# vue-cli模板
+vue init youzan/vue-cli-template-vant vue-cli-vant-h5-spa
+
 # install dependencies
 npm install
 

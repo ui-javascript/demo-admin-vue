@@ -14,7 +14,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 // 入口
 var entries = utils.getMultiEntry('./src/' + config.moduleName + '/**/**/*.js'); // 获得入口js文件
@@ -114,8 +114,7 @@ var webpackConfig = merge(baseWebpackConfig, {
             ignore: ['.*']
           }
         ])*/
-
-
+        new BundleAnalyzerPlugin()
     ]
 })
 

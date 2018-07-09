@@ -2,7 +2,8 @@
 var path = require('path')
 var merge = require('webpack-merge')
 // var detailConfig = require('./system/default')
-var detailConfig = require('./system/firefly')
+// var detailConfig = require('./system/firefly')
+var detailConfig = require('./system/exam')
 
 var defaultConfig = {
 
@@ -33,8 +34,8 @@ var defaultConfig = {
     // 打包配置
     build: {
         env: require('./prod.env'),
-        index: path.resolve(__dirname, '../dist/index.html'),
-        assetsRoot: path.resolve(__dirname, '../dist'),
+        index: path.resolve(__dirname, '../../dist/index.html'),
+        assetsRoot: path.resolve(__dirname, '../../dist'),
 
         // 输出资源的存放位置
         assetsSubDirectory: 'static',
