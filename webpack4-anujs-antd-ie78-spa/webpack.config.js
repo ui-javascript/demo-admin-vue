@@ -9,7 +9,7 @@ module.exports = {
         production: path.resolve(__dirname, './views/production/app.jsx'),
     },
     output: {
-        path: path.resolve(__dirname, 'devtmp'),
+        // path: path.resolve(__dirname, 'devtmp'),
         filename: 'js/[name].js',
         publicPath: '/',
         chunkFilename: 'js/[name].js',

@@ -18,6 +18,7 @@
     </vModal>
   </div>
 </template>
+
 <script>
     import vModal from 'components/Common/vModal'
     export default {

@@ -6,10 +6,10 @@
     "scripts": {
         "install:cnpm": "cnpm install",
         "remove": "rimraf node_modules",
-        "start": "node ./bin/dev.js",
-        "react": "node ./bin/react.js",
-        "buildPreview": "node ./bin/buildPreview.js",
-        "reactPreview": "node ./bin/reactPreview.js",
+        "dev": "node ./build/dev.js",
+        "react": "node ./build/react.js",
+        "buildPreview": "node ./build/buildPreview.js",
+        "reactPreview": "node ./build/reactPreview.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
