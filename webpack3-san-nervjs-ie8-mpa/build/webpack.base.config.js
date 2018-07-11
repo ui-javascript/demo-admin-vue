@@ -16,7 +16,7 @@ const webpack = require('webpack');
 
 // 抽取 css
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 
 // 入口文件集合
@@ -36,10 +36,11 @@ pages.forEach((page) => {
 })
 
 // 第三方类库
-let vendorsDir = generateMPAUtils.getVendors()
-if (vendorsDir.length > 0) {
-  Entries['vendors'] = vendorsDir
-}
+// 暂时注释了, 好像没出问题
+// let vendorsDir = generateMPAUtils.getVendors()
+// if (vendorsDir.length > 0) {
+//   Entries['vendors'] = vendorsDir
+// }
 
 let webpackconfig = {
   entry: Entries,
@@ -200,7 +201,7 @@ let webpackconfig = {
       name: 'vendor',
       minChunks: function(module) {
         let flag =  module.context && module.context.indexOf('node_modules') !== -1;
-        console.log(module.context, flag);
+        // console.log(module.context, flag);
         return flag;
       }
     }),
@@ -261,8 +262,6 @@ let webpackconfig = {
       nerv: "nervjs"
     }),
 
-    // 用来统计
-    new BundleAnalyzerPlugin()
   ],
 
   // 不需要打包的库文件，在模版文件中使用script引入

@@ -9,7 +9,7 @@ var config = require('./config')
 
 // 路径处理
 var glob = require('glob');
-var entries = utils.getMultiEntry('./src/' + config.moduleName + '/pages/*.js'); // 获得入口js文件
+var entries = utils.getMultiEntry('./src/' + config.moduleName + '/pages/**/*.js'); // 获得入口js文件
 var chunks = Object.keys(entries);
 
 // 输出路径
@@ -61,7 +61,9 @@ var webpackConfig = {
 
             // 组件
             'components': path.resolve(__dirname, '../src/components'),
-            '~': path.resolve(__dirname, '../src/components')
+            '~': path.resolve(__dirname, '../src/components'),
+            'tools': path.resolve(__dirname, '../src/tools'),
+
         }
     },
 

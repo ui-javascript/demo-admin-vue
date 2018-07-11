@@ -318,6 +318,7 @@
             padding-top: 19px;
 
             .main__block {
+                cursor: pointer;
                 width: pxWithVw(44);
                 height: pxWithVw(44);
                 max-width: pxWithVwMax(44);

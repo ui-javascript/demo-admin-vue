@@ -26,7 +26,7 @@
 
 <script>
 
-    import Lib from 'assets/js/libs/vux';
+    import Lib from 'tools/libs/vux';
     // import $ from 'jquery'
 
     export default {

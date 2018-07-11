@@ -1,11 +1,11 @@
-require('assets/css/common.css');
+require('assets/css/common.less');
 
 // 注册时，vux必须放在 import Vue from 'vue';
 // 之前，否侧打包的体积非常大，估计是vux OR vue 抽风了
 import {
     AlertPlugin,
     LoadingPlugin
-} from 'webpack3-vue-vux-bluefox-h5-mpa/src/tools/utils/vux'
+} from 'vux'
 
 import Vue from 'vue';
 

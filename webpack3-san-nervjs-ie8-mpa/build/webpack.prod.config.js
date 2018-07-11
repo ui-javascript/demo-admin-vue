@@ -14,6 +14,7 @@ const utils = require("./utils")
 const generateMPAUtils = require("./utils/generate-mpa")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 // 这个和webpack.optimize.UglifyJsPlugin 不是同一个
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
@@ -51,6 +52,9 @@ module.exports = webpackMerge(webpackBase, {
         ignore: ['.*']
       }
     ]),
+
+    // 用来统计
+    new BundleAnalyzerPlugin()
   ]
 });
 

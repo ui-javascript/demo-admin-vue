@@ -32,7 +32,7 @@
 
 <script>
 
-    import Lib from 'assets/js/libs/vux';
+    import Lib from 'tools/libs/vux';
 
     import {Divider} from 'vux'
 

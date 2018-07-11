@@ -7,8 +7,12 @@
   "scripts": {
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
-    "dev": "node build/dev-server.js",
-    "build": "node build/build.js",
+    "dev": "cross-env NODE_SYS=default node build/dev-server.js",
+    "build": "cross-env NODE_SYS=default node build/build.js",
+    "dev:firefly": "cross-env NODE_SYS=firefly node build/dev-server.js",
+    "build:firefly": "cross-env NODE_SYS=firefly node build/build.js",
+    "dev:exam": "cross-env NODE_SYS=exam node build/dev-server.js",
+    "build:exam": "cross-env NODE_SYS=exam node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e"

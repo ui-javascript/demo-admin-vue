@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import CalendarApp from '~/model/calendar/Calendar'
+import CalendarApp from '~/model/MCalendar'
+// import CalendarApp from '~/model/Tan'
 
 const routes = [
-    {path: '/', component: CalendarApp}
+    {path: '/', component: CalendarApp},
+    // {path: '/tantan', component: CalendarApp}
 ]
 
 Vue.use(VueRouter)

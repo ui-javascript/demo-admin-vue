@@ -18,7 +18,7 @@
 </template>
 
 <script>
-    import Lib from 'assets/js/libs/vux';
+    import Lib from 'tools/libs/vux';
 
     import {Alert, Group, XSwitch, Cell} from 'vux'
 

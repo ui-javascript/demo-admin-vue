@@ -1,9 +1,6 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
 var merge = require('webpack-merge')
-// var detailConfig = require('./system/default')
-// var detailConfig = require('./system/firefly')
-var detailConfig = require('./system/exam')
 
 var defaultConfig = {
 
@@ -63,5 +60,9 @@ var defaultConfig = {
     }
 }
 
+// var detailConfig = require('./system/default')
+// 在命令行中指定
+var detailConfig = require(`./system/${process.env.NODE_SYS}`)
+console.log('系统运行目录: ' + process.env.NODE_SYS)
 
 module.exports = merge(defaultConfig, detailConfig)

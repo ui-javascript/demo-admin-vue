@@ -1,3 +1,7 @@
+# README
+
+- hash后缀形式处理缓存
+
 # 模板文件
 
 ```vue
@@ -44,7 +48,6 @@
 </script>
 
 <style lang="less">
-
 
 </style>
 ```

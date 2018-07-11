@@ -4,13 +4,12 @@
         <div id="paper-back">
             <nav>
                 <div class="close"></div>
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Our Work</a>
-                <a href="#">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#work">Our Work</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
-
 
         <div id="paper-window">
             <div id="paper-front">
@@ -30,7 +29,7 @@
 </template>
 
 <script>
-    import Lib from 'assets/js/libs/vux';
+    import Lib from 'tools/libs/vux';
     import $ from 'jquery'
 
     export default {

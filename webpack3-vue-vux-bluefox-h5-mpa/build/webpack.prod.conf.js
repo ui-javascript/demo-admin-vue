@@ -102,10 +102,9 @@ var webpackConfig = merge(baseWebpackConfig, {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             chunks: chunks,
-            minChunks: 4 || chunks.length
+            minChunks: 2 || chunks.length
         }),
         new webpack.HashedModuleIdsPlugin(),
-        /*
         // copy custom static assets
         new CopyWebpackPlugin([
           {
@@ -113,7 +112,7 @@ var webpackConfig = merge(baseWebpackConfig, {
             to: config.build.assetsSubDirectory,
             ignore: ['.*']
           }
-        ])*/
+        ]),
         new BundleAnalyzerPlugin()
     ]
 })
@@ -142,7 +141,7 @@ if (config.build.bundleAnalyzerReport) {
 }
 
 //构建生成多页面的HtmlWebpackPlugin配置，主要是循环生成
-var pages = utils.getMultiEntry('./src/' + config.moduleName + '/pages/*.html');
+var pages = utils.getMultiEntry('./src/' + config.moduleName + '/pages/**/*.html');
 var outputHtmlPathname
 for (var pathname in pages) {
 

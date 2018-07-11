@@ -2,7 +2,8 @@
     <div>
         <router-view keep-alive></router-view>
 
-        <tabbar>
+        <!-- 添加fixed 解决输入框遮挡问题 -->
+        <tabbar style="position:fixed">
             <tabbar-item selected :link="{path:'/exam'}">
                 <!--<img slot="icon" src="../assets/demo/icon_nav_button.png">-->
                 <span slot="label">考试中心</span>

@@ -4,7 +4,12 @@ module.exports = {
 
     // 开发配置
     dev: {
+        port: 8888,
         autoOpenBrowser: true,
-        indexPage: '/_default/pages/list.html'
+        indexPage: '/_default/pages/list.html',
+
+        assetsSubDirectory: 'static',
+        assetsPublicPath: '/',
+        cssSourceMap: false
     }
 }

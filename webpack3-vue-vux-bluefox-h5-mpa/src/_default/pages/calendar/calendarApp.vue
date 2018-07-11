@@ -15,7 +15,7 @@
 
 <script>
 
-    import Lib from 'assets/js/libs/vux';
+    import Lib from 'tools/libs/vux';
 
     import {Group, Calendar, Cell} from 'vux'
 
@@ -25,7 +25,8 @@
         components: {
             Calendar,
             Group,
-            Cell, HbHead
+            Cell,
+            HbHead
         },
         data() {
             return {
