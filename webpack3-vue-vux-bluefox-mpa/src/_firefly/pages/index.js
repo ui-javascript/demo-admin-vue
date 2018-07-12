@@ -13,6 +13,7 @@ import CalendarApp from '~/model/MCalendar'
 import TanApp from './app/tantan-app'
 import CamelApp from './app/camel-page'
 import LoadingApp from './app/loading-app'
+import LoadingWaterApp from './app/loading-water-app'
 import TableApp from './app/table-app'
 
 
@@ -22,6 +23,7 @@ const routes = [
     {path: '/tan', component: TanApp},
     {path: '/camel', component: CamelApp},
     {path: '/loading', component: LoadingApp},
+    {path: '/water', component: LoadingWaterApp},
     {path: '/table', component: TableApp},
     {path: '*', component: TanApp}
 ]
