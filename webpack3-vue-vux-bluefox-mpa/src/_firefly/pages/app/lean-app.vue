@@ -2,7 +2,13 @@
     <div>
         <nav-lean>
             <section id="home" class="section">
-                内容1
+                <count-to
+                        :duration="800"
+                        :endVal="123123.22323"
+                        :decimals="5"
+                        :autoplay="true"
+                        :useEasing=false
+                ></count-to>
             </section>
             <section id="about" class="section">
                 内容2
@@ -20,10 +26,12 @@
 <script>
 
     import NavLean from '~/Layout/NavLean';
+    import CountTo from '~/Effects/CountTo';
 
     export default {
         components: {
-            NavLean
+            NavLean,
+            CountTo
         },
         data() {
             return {}
