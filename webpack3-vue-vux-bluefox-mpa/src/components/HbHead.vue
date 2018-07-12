@@ -4,13 +4,14 @@
                 :left-options="{backText: headfont}"
                 class="headfix">
         </x-header>
+
         <div class="headMargin"></div>
     </div>
 </template>
 
 <script>
 
-    import Lib from 'tools/libs/vux';
+    import Lib from 'utils/libs/vux';
 
     import {XHeader} from 'vux'
 

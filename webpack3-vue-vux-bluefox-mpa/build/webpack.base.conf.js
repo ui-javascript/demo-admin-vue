@@ -51,19 +51,16 @@ var webpackConfig = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
 
-            // 开发目录
             // '@': resolve('src'),
             '@': path.resolve(__dirname, '../src'),
             'src': path.resolve(__dirname, '../src'),
-
-            // 静态资源
             'assets': path.resolve(__dirname, '../src/assets'),
 
             // 组件
             'components': path.resolve(__dirname, '../src/components'),
             '~': path.resolve(__dirname, '../src/components'),
-            'tools': path.resolve(__dirname, '../src/tools'),
-
+            'utils': path.resolve(__dirname, '../src/utils'),
+            '^': path.resolve(__dirname, '../src/utils')
         }
     },
 

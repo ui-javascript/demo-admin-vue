@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import TanTanPicker from "~/model/PickerTanTan";
+    import TanTanPicker from "~/Model/PickerTanTan";
 
     export default {
         // el: '#stack',
@@ -69,7 +69,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     body {
         background: #565f77 none repeat scroll 0 0;
         color: #000;

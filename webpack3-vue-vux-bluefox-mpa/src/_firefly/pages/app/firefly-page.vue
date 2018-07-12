@@ -6,7 +6,7 @@
 
 <script>
 
-    import Firefly from '~/animal/FireFly';
+    import Firefly from '~/Animal/FireFly';
 
     export default {
         components: {
@@ -19,7 +19,7 @@
     }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
     body {
         height: 100%;
         background: #09243a;

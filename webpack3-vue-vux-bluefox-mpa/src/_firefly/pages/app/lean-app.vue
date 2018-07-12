@@ -19,7 +19,7 @@
 
 <script>
 
-    import NavLean from '~/layout/NavLean';
+    import NavLean from '~/Layout/NavLean';
 
     export default {
         components: {

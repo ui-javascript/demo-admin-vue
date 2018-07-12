@@ -33,7 +33,7 @@
 
 <script>
 
-    import Lib from 'tools/libs/vux';
+    import Lib from 'utils/libs/vux';
 
     import HbHead from 'components/HbHead';
 

@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import FireFlyApp from './app/fireflyApp'
-import LeanApp from './app/leanApp'
+import FireFlyApp from './app/firefly-page'
+import LeanApp from './app/lean-app'
 
 const routes = [
     {path: '/', component: FireFlyApp},
