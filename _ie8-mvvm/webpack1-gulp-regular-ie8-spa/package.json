@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "install:cnpm": "cnpm install",
+    "remove": "rimraf node_modules",
     "build": "gulp build --production",
     "dev": "puer -d public -r scripts/routes.js",
     "watch": "gulp watch"

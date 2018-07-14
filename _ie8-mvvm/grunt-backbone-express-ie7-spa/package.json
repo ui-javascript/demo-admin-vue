@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app",
+    "install:cnpm": "cnpm install",
+    "install:bower": "bower install",
+    "remove": "rimraf node_modules",
+    "dev": "node app",
     "test": "node runMocha"
   },
   "dependencies": {

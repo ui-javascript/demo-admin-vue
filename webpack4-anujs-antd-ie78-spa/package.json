@@ -7,9 +7,9 @@
         "install:cnpm": "cnpm install",
         "remove": "rimraf node_modules",
         "dev": "node ./build/dev.js",
+        "build": "node ./build/buildPreview.js",
         "react": "node ./build/react.js",
-        "buildPreview": "node ./build/buildPreview.js",
-        "reactPreview": "node ./build/reactPreview.js",
+        "build:react": "node ./build/reactPreview.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
