@@ -65,7 +65,7 @@ npm install -g  strip-ansi
 - legoflow https://github.com/legoflow/legoflow
 - boi 一站式前端工程解决方案 https://github.com/boijs/boi
 
-# H5移动端 
+# H5移动端 | 微信页
 
 - 移动端页面适配———多方案解析 https://www.jianshu.com/p/3b45aa981e77 
 
