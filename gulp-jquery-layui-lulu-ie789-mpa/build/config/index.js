@@ -101,7 +101,6 @@ var details = require('./system/natural')
 // var details = require('./system/admin/win10Blog')
 // var details = require('./system/admin/ama')
 // var details = require('./system/admin/matrix')
-// var details = require('./system/admin/AdminLTE')
 
 // 商城
 // var details = require('./system/mall/pmsMall')
