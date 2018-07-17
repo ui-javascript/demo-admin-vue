@@ -2,9 +2,10 @@
  * 配置文件
  */
 const path = require('path')
+var merge = require('webpack-merge')
 
-
-module.exports = {
+let defaultConfig = {
+  
   moduleName: 'pages',
 
   // 公共配置
@@ -77,3 +78,12 @@ module.exports = {
     cssSourceMap: false
   }
 }
+
+
+// 修改此处
+const sysName = process.env.SYS_NAME.toString().trim() || 'san'
+
+var detailConfig = require(`./system/${sysName}`)
+console.log('系统运行目录: ' + sysName)
+
+module.exports = merge(defaultConfig, detailConfig)
