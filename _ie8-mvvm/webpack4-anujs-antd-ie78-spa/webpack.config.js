@@ -9,7 +9,7 @@ module.exports = {
         production: path.resolve(__dirname, './views/app.jsx'),
     },
     output: {
-        // path: path.resolve(__dirname, 'devtmp'),
+        path: path.resolve(__dirname, 'devtmp'),
         filename: 'js/[name].js',
         publicPath: '/',
         chunkFilename: 'js/[name].js',
@@ -77,7 +77,7 @@ module.exports = {
             filename: 'index.html',
             template: path.resolve(__dirname, './views/index.ejs'),
             inject: 'body',
-            hase: false,
+            hash: false,
             minify: {
                 // 压缩HTML文件
                 removeComments: true, // 移除HTML中的注释

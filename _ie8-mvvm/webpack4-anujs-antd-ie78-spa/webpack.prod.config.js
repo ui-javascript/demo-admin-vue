@@ -12,7 +12,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/[name].js',
         publicPath: '/',
-        chunkFilename: 'js/[name].js',
+        chunkFilename: 'js/[name].js'
     },
     resolve: {
         extensions: ['.js', '.json', '.jsx'],

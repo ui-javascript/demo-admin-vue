@@ -9,7 +9,7 @@ module.exports = {
         production: path.resolve(__dirname, './views/app.jsx'),
     },
     output: {
-        // path: path.resolve(__dirname, 'devtmp'),
+        path: path.resolve(__dirname, 'devtmp'),
         filename: 'js/[name].js',
         publicPath: '/',
         chunkFilename: 'js/[name].js',
@@ -47,7 +47,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 include: [path.resolve(__dirname, 'views')],
-                use: ['style-loader', 'css-loade'],
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
