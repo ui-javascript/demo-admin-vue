@@ -51,7 +51,7 @@ var webpackConfig = {
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
 
-            // '@': resolve('src'),
+            // 路径
             '@': path.resolve(__dirname, '../src'),
             'src': path.resolve(__dirname, '../src'),
             'assets': path.resolve(__dirname, '../src/assets'),
@@ -59,8 +59,8 @@ var webpackConfig = {
             // 组件
             'components': path.resolve(__dirname, '../src/components'),
             '~': path.resolve(__dirname, '../src/components'),
-            'utils': path.resolve(__dirname, '../src/utils'),
-            '^': path.resolve(__dirname, '../src/utils')
+            'utils': path.resolve(__dirname, '../src/assets/utils'),
+            '^': path.resolve(__dirname, '../src/assets/utils')
         }
     },
 
@@ -110,6 +110,15 @@ var webpackConfig = {
 
         ]
     },
+
+    // 不需要打包的库文件，在模版文件中使用script引入
+    // 使用cdn
+    externals: {
+        jquery: 'window.$',
+        $: 'window.$',
+    },
+
+
     plugins: [
         // 提取公共模块
         // new webpack.optimize.CommonsChunkPlugin({

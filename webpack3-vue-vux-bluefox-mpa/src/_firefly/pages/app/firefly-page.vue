@@ -1,16 +1,19 @@
 <template>
     <div>
-        <firefly></firefly>
+        <fire-fly></fire-fly>
+        <count-down-circle></count-down-circle>
     </div>
 </template>
 
 <script>
 
-    import Firefly from '~/Animal/FireFly';
+    import FireFly from '~/Animal/FireFly';
+    import CountDownCircle from '~/Model/CountDownCircle';
 
     export default {
         components: {
-            Firefly
+            FireFly,
+            CountDownCircle
         },
         data() {
             return {}

@@ -7,8 +7,8 @@
   "scripts": {
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
-    "dev": "cross-env NODE_SYS=default node build/dev-server.js",
-    "build": "cross-env NODE_SYS=default node build/build.js",
+    "dev": "cross-env NODE_SYS=firefly node build/dev-server.js",
+    "build": "cross-env NODE_SYS=firefly node build/build.js",
     "dev:firefly": "cross-env NODE_SYS=firefly node build/dev-server.js",
     "build:firefly": "cross-env NODE_SYS=firefly node build/build.js",
     "dev:exam": "cross-env NODE_SYS=exam node build/dev-server.js",

@@ -15,10 +15,10 @@ Vue.use(LoadingPlugin); //全局注册alert事件，注册之后，不需要每�
 //--- VUX UI 注册 END --
 
 
-import C from '../conf';
+import C from './conf';
 import M from './common';
 
-import vueFilter from './vueFilter';
+import vueFilter from '../filters/vueFilter';
 
 //解决click点击300毫秒延时问题
 import FastClick from 'fastclick';

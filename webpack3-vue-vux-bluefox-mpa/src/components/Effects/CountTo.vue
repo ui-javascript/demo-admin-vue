@@ -13,7 +13,7 @@
     import {
         requestAnimationFrame,
         cancelAnimationFrame
-    } from 'utils/requestAnimationFrame'
+    } from 'utils/profills/requestAnimationFrame'
 
     export default {
         props: {

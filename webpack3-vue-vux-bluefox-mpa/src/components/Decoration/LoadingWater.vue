@@ -12,7 +12,7 @@
     import {
         requestAnimationFrame,
         cancelAnimationFrame
-    } from 'utils/requestAnimationFrame'
+    } from 'utils/profills/requestAnimationFrame'
 
     var canvas = null
     var ctx = null

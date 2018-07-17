@@ -1,4 +1,4 @@
-import conf from '../conf';
+import conf from './conf';
 
 import axios from 'axios';
 
