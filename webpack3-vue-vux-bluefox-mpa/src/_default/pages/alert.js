@@ -1,5 +1,6 @@
 import Vue from 'vue'
-import App from './listApp'
+import App from './views/alertApp'
+
 
 new Vue({
     render: h => h(App)

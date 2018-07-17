@@ -10,7 +10,7 @@
         </div>
 
         <div class="martop10">
-            <img src="assets/bg.jpg" alt=""/>
+            <img src="../assets/bg.jpg" alt=""/>
         </div>
 
 

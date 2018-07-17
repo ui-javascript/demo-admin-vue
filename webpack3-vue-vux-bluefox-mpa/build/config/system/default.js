@@ -6,7 +6,7 @@ module.exports = {
     dev: {
         port: 8888,
         autoOpenBrowser: true,
-        indexPage: '/_default/pages/list.html',
+        indexPage: '/_default/list.html',
 
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',

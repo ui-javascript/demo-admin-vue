@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './iconfontApp'
+import App from './views/vuefilterApp'
 
 
 new Vue({

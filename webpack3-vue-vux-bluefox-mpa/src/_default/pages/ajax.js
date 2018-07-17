@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './calendarApp'
+import App from './views/ajaxApp'
 
 
 new Vue({

@@ -9,7 +9,7 @@ var config = require('./config')
 
 // 路径处理
 var glob = require('glob');
-var entries = utils.getMultiEntry('./src/' + config.moduleName + '/pages/**/*.js'); // 获得入口js文件
+var entries = utils.getMultiEntry('./src/' + config.moduleName + '/pages/*.js'); // 获得入口js文件
 var chunks = Object.keys(entries);
 
 // 输出路径
@@ -86,12 +86,15 @@ var webpackConfig = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                include: [resolve('src'), resolve('test')]
+                include: [
+                    resolve('src'),
+                    resolve('test')
+                ]
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
-                query: {
+                options: {
                     limit: 10000,
                     name: utils.assetsPath('img/[name].[ext]')
                 }
@@ -99,7 +102,7 @@ var webpackConfig = {
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
                 loader: 'url-loader',
-                query: {
+                options: {
                     limit: 10000,
                     name: utils.assetsPath('fonts/[name].[ext]')
                 }

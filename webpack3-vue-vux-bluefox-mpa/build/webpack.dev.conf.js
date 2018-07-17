@@ -35,7 +35,7 @@ module.exports = merge(baseWebpackConfig, {
 })
 
 
-var pages = utils.getMultiEntry('./src/' + config.moduleName + '/pages/**/*.html');
+var pages = utils.getMultiEntry('./src/' + config.moduleName + '/pages/*.html');
 for (var pathname in pages) {
     // 配置生成的html文件，定义路径等
     var conf = {

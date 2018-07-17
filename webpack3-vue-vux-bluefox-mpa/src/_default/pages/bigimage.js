@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './alertApp'
+import App from './views/bigimageApp'
 
 
 new Vue({

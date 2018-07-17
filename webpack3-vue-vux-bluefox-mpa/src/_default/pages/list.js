@@ -1,6 +1,5 @@
 import Vue from 'vue'
-import App from './getQueryApp'
-
+import App from './views/listApp'
 
 new Vue({
     render: h => h(App)
