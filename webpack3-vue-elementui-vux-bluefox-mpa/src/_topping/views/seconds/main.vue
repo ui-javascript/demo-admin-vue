@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mmt">
         争分夺秒
     </div>
 </template>
@@ -20,11 +20,15 @@
         mounted() {
             getRap()
                 .then(res => console.log(res))
-                .catch()
+                .catch(() => {
+
+                })
         }
     }
 </script>
 
 <style lang="less">
-
+    .mmt {
+        margin-top: 20px;
+    }
 </style>

@@ -11,21 +11,39 @@
                 <router-link to="/narrow">狭路相逢</router-link>
             </div>
 
+            <div class="userLogin__box">
+
+                <div class="userLogin__box_input clearfix inline-block">
+                    <span>姓名</span>
+                    <input type="text" v-model="username">
+                </div>
+                <div class="userLogin__box_input clearfix inline-block">
+                    <span>密码</span>
+                    <input type="text" v-model="password">
+                </div>
+
+                <div class="userLogin__box_btn" @click="submit()"></div>
+            </div>
 
 
     </div>
 </template>
 
 <script>
+    import {setToken } from "../../router/_auth";
+
     export default {
 
         data() {
             return {
-
+                username: '',
+                password: ''
             }
         },
         methods: {
-
+            submit() {
+                setToken(this.username)
+            }
         }
     }
 </script>
@@ -45,6 +63,17 @@
             top: 0;
         }
 
+        &__box {
+            position: absolute;
+            top: 300/16rem;
+            text-align: center;
 
+            &_btn {
+                width: 367/16rem;
+                height: 100/16rem;
+                background: url(../../assets/images/btn_login.png) 100% 100%;
+                background-size: cover;
+            }
+        }
     }
 </style>

@@ -8,12 +8,12 @@ Vue.use(VueRouter)
 
 Vue.config.productionTip = false
 
+// 适应
+// 暂时注释
+// import 'lib-flexible'
 
 import axios from 'axios'
 Vue.prototype.$axios = axios
-
-// import {setToken } from "./router/_auth";
-// setToken('hello')
 
 // 路由
 import router from './router'
