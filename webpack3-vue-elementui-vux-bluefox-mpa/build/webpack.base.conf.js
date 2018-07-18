@@ -9,7 +9,7 @@ var config = require('./config')
 
 // 路径处理
 var glob = require('glob');
-var entries = utils.getMultiEntry('./src/' + config.moduleName + '/pages/*.js'); // 获得入口js文件
+var entries = utils.getMultiEntry('./src/' + config.moduleName + '/*.js'); // 获得入口js文件
 var chunks = Object.keys(entries);
 
 // 输出路径

@@ -6,7 +6,7 @@
 - nerv暂时配有合适UI
 - jquery -> cdn + external配置
 - 偶尔一些老页面辅助jquery ui与之前项目的JS Libs
-- 现在改成入口文件(index.js)可以不用写，其实我是不太想写视图文件啊...这个可以再努力一下
+- pug与html作为入口文件 js保持同名 没有的话生成空的js作为入口文件
 - 使用ts-loader3.X.X, 之前的ts-loader4.x.x是指支持webpack4的
 - typescript暂时只是libs或许工具类用用
 - components -> views -> pages (颗粒度弄细一点，复用度稍微高一点)

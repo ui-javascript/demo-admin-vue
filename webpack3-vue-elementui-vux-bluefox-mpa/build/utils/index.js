@@ -90,7 +90,7 @@ exports.getMultiEntry = function (globPath) {
     glob.sync(globPath).forEach(function (entry) {
         basename = path.basename(entry, path.extname(entry));
 
-        tmpPathArr = entry.split('/').splice(-4);
+        tmpPathArr = entry.split('/').splice(-3);
 
         pathsrc = tmpPathArr[0] + '/' + tmpPathArr[1];
 
