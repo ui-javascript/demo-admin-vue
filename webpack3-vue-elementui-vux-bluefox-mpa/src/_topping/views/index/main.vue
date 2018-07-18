@@ -1,14 +1,15 @@
 <template>
     <div>
-        <router-view keep-alive></router-view>
+        一比高下
     </div>
 </template>
 
 <script>
     export default {
+
         data() {
             return {
-                active: 0
+
             }
         },
         methods: {
@@ -17,6 +18,6 @@
     }
 </script>
 
-<style>
+<style lang="less">
 
 </style>

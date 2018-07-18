@@ -17,6 +17,14 @@
 <script>
     import TanTanPicker from "~/Model/PickerTanTan";
 
+    import img1 from "./img/1.png"
+    import img2 from "./img/2.png"
+    import img3 from "./img/3.png"
+    import img4 from "./img/4.png"
+    import img5 from "./img/5.png"
+    import img6 from "./img/6.png"
+    import img7 from "./img/7.png"
+
     export default {
         // el: '#stack',
         data () {
@@ -32,25 +40,25 @@
             setTimeout(function () {
                 that.someList = [
                     {
-                        html: '<img src="/static/img/1.png" alt="01">'
+                        html: `<img src="${img1}" alt="01">`
                     },
                     {
-                        html: '<img src="/static/img/2.png" alt="02">'
+                        html: `<img src="${img2}" alt="02">`
                     },
                     {
-                        html: '<img src="/static/img/3.png" alt="03">'
+                        html: `<img src="${img3}" alt="01">`
                     },
                     {
-                        html: '<img src="/static/img/4.png" alt="04">'
+                        html: `<img src="${img4}" alt="01">`
                     },
                     {
-                        html: '<img src="/static/img/5.png" alt="05">'
+                        html: `<img src="${img5}" alt="05">`
                     },
                     {
-                        html: '<img src="/static/img/6.png" alt="06">'
+                        html: `<img src="${img6}" alt="06">`
                     },
                     {
-                        html: '<img src="/static/img/7.png" alt="07">'
+                        html: `<img src="${img7}" alt="07">`
                     }
                 ]
             }, 2000)

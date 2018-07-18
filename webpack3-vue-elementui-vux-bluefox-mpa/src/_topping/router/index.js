@@ -1,10 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-const _import = require('./_import_' + process.env.NODE_ENV)
-// in development-env not use lazy-loading, because lazy-loading too many pages will cause webpack hot update too slow. so only in production use lazy-loading;
+Vue.use(Router)
+
+// in development-env not use lazy-loading,
+// because lazy-loading too many pages will cause webpack hot update too slow.
+// so only in production use lazy-loading;
 // detail: https://panjiachen.github.io/vue-element-admin-site/#/lazy-loading
 
-Vue.use(Router)
+const _import = require('./_import_' + process.env.NODE_ENV)
 
 /** note: submenu only apppear when children.length>=1
  *   detail see  https://panjiachen.github.io/vue-element-admin-site/#/router-and-nav?id=sidebar
@@ -24,13 +27,24 @@ Vue.use(Router)
     noCache: true                if true ,the page will no be cached(default is false)
   }
  **/
-export const constantRouterMap = [
+const constantRouterMap = [
     { path: '/login', component: _import('login/main') },
-    { path: '/404', component: _import('error/404') },
-    { path: '/seconds', component: _import('seconds/main') },
-    { path: '/top', component: _import('top/main') },
+    { path: '/', redirect: '/seconds' },
+    { path: '/seconds',
+      redirect: 'index',
+      children: [
+          {
+              path: 'index',
+              component: _import('seconds/main'),
+              name: 'main',
+              meta: {}
+          }
+      ]
+    },
+    { path: '/high', component: _import('high/main') },
     { path: '/narrow', component: _import('narrow/main') },
-    { path: '/*', component: _import('seconds/main') },
+    { path: '/404', component: _import('error/404') },
+    { path: '/*', component: _import('seconds/main') }
     // {
     //     path: '',
     //     component: Layout,
@@ -43,3 +57,10 @@ export const constantRouterMap = [
     //     }]
     // },
 ]
+
+
+export default new Router({
+    // mode: 'history', //后端支持可开
+    // scrollBehavior: () => ({ y: 0 }),
+    routes: constantRouterMap
+})

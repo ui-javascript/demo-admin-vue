@@ -55,6 +55,7 @@ var webpackConfig = {
             '@': path.resolve(__dirname, '../src'),
             'src': path.resolve(__dirname, '../src'),
             'assets': path.resolve(__dirname, '../src/assets'),
+            'css': path.resolve(__dirname, '../src/assets/css'),
 
             // 组件
             'components': path.resolve(__dirname, '../src/components'),

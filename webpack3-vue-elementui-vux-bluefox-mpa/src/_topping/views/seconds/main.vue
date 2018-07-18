@@ -5,6 +5,8 @@
 </template>
 
 <script>
+    import { getRap } from '../../api/test';
+
     export default {
 
         data() {
@@ -14,6 +16,11 @@
         },
         methods: {
 
+        },
+        mounted() {
+            getRap()
+                .then(res => console.log(res))
+                .catch()
         }
     }
 </script>

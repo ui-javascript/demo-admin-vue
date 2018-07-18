@@ -10,11 +10,11 @@ Vue.use(CamelUI)
 
 
 import CalendarApp from '~/model/MCalendar'
-import TanApp from './app/tantan-app'
-import CamelApp from './app/camel-page'
-import LoadingApp from './app/loading-app'
-import LoadingWaterApp from './app/loading-water-app'
-import TableApp from './app/table-app'
+import TanApp from './views/tantan-app'
+import CamelApp from './views/camel-page'
+import LoadingApp from './views/loading-app'
+import LoadingWaterApp from './views/loading-water-app'
+import TableApp from './views/table-app'
 
 
 const routes = [
