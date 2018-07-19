@@ -1,12 +1,17 @@
 <template>
     <div>
-        404页面
+        <header-exit></header-exit>
+        404页面 找也找不到的 上帝已如此忙碌~~
     </div>
 </template>
 
 <script>
-    export default {
+    import headerExit from '../snippets/headerExit'
 
+    export default {
+        components: {
+            headerExit
+        },
         data() {
             return {
 

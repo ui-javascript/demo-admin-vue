@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 Vue.use(Router)
 
 // in development-env not use lazy-loading,
@@ -28,10 +29,12 @@ const _import = require('./_import_' + process.env.NODE_ENV)
   }
  **/
 const constantRouterMap = [
-    { path: '/login', component: _import('login/main') },
-    { path: '/', redirect: '/index' },
-    { path: '/index',
-        redirect: 'index_main',
+    {path: '/login', component: _import('login/index')},
+    {path: '/', redirect: '/index'},
+    {
+        path: '/index',
+        redirect: '/index/main',
+        component: _import('index/index'),
         children: [
             {
                 path: 'main',
@@ -47,22 +50,48 @@ const constantRouterMap = [
             }
         ]
     },
-    { path: '/seconds',
-      redirect: 'seconds_main',
-      children: [
-          {
-              path: 'main',
-              component: _import('seconds/main'),
-              name: 'seconds_main',
-              meta: {}
-          }
-      ]
+    {
+        path: '/seconds',
+        redirect: '/seconds/question',
+        component: _import('seconds/index'),
+        children: [
+            {
+                path: 'question',
+                component: _import('seconds/seconds-question'),
+                name: 'seconds_question',
+                meta: {}
+            }
+        ]
     },
-    { path: '/higher', component: _import('higher/main') },
-    { path: '/chat', component: _import('chat/main') },
-    { path: '/narrow', component: _import('narrow/main') },
-    { path: '/404', component: _import('error/404') },
-    { path: '*', component: _import('error/404') }
+    {
+        path: '/higher',
+        redirect: '/higher/question',
+        component: _import('higher/index'),
+        children: [
+            {
+                path: 'question',
+                component: _import('higher/higher-question'),
+                name: 'higher_question',
+                meta: {}
+            }
+        ]
+    },
+    {
+        path: '/narrow',
+        redirect: '/narrow/question',
+        component: _import('narrow/index'),
+        children: [
+            {
+                path: 'question',
+                component: _import('narrow/narrow-question'),
+                name: 'narrow_question',
+                meta: {}
+            }
+        ]
+    },
+    // {path: '/chat', component: _import('chat/index')},
+    {path: '/404', component: _import('error/404')},
+    {path: '*', component: _import('error/404')}
 ]
 
 

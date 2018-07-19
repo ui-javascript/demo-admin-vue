@@ -94,11 +94,23 @@ var webpackConfig = {
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 10000,
-                    name: utils.assetsPath('img/[name].[ext]')
-                }
+                use:[
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10000,
+                            name: utils.assetsPath('img/[name].[hash:7].[ext]')
+                        }
+                    },
+                    // https://blog.csdn.net/blueberry_liang/article/details/80306389
+                    {
+                        loader: 'image-webpack-loader',// 压缩图片
+                        options: {
+                            bypassOnDebug: true,
+                            disable: process.env.NODE_ENV !== 'production'
+                        }
+                    }
+                ]
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,

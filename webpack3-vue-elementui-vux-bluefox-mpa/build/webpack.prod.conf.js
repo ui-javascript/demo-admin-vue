@@ -15,6 +15,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+var ImageminPlugin = require('imagemin-webpack-plugin').default
 
 // 入口
 var entries = utils.getMultiEntry(`./src/${config.moduleName}/*.js`); // 获得入口js文件
@@ -105,6 +106,13 @@ var webpackConfig = merge(baseWebpackConfig, {
             minChunks: 2 || chunks.length
         }),
         new webpack.HashedModuleIdsPlugin(),
+        // https://blog.csdn.net/zb_ctrl/article/details/75549350
+        // new ImageminPlugin({
+        //     // disable: process.env.NODE_ENV !== 'production',
+        //     pngquant: {
+        //         quality: '95-100'
+        //     }
+        // }),
         // copy custom static assets
         new CopyWebpackPlugin([
           {
@@ -113,7 +121,7 @@ var webpackConfig = merge(baseWebpackConfig, {
             ignore: ['.*']
           }
         ]),
-        new BundleAnalyzerPlugin()
+        new BundleAnalyzerPlugin(),
     ]
 })
 

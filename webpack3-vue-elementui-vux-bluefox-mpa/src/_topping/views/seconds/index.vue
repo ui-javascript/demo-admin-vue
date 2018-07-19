@@ -2,6 +2,9 @@
     <div>
         <header-exit></header-exit>
 
+
+        <router-view keep-alive></router-view>
+
         <div class="container">
             <div class="row">&nbsp;</div>
             <div class="row">
