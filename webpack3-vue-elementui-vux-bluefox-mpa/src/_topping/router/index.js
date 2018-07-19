@@ -42,6 +42,7 @@ const constantRouterMap = [
       ]
     },
     { path: '/high', component: _import('high/main') },
+    { path: '/chat', component: _import('chat/main') },
     { path: '/narrow', component: _import('narrow/main') },
     { path: '/404', component: _import('error/404') },
     { path: '/*', component: _import('seconds/main') }
