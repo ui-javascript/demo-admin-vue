@@ -4,22 +4,27 @@
             <img src="../../assets/images/bg_login.jpg" alt="">
 
             <div class="userLogin__bg">
-                <router-link to="/404">404</router-link>
-                <router-link to="/login">登录</router-link>
-                <router-link to="/seconds">争分夺秒</router-link>
-                <router-link to="/high">一比高下</router-link>
-                <router-link to="/narrow">狭路相逢</router-link>
+                <!--<router-link to="/404">404</router-link>-->
+                <!--<router-link to="/login">登录</router-link>-->
+                <!--<router-link to="/seconds">争分夺秒</router-link>-->
+                <!--<router-link to="/high">一比高下</router-link>-->
+                <!--<router-link to="/narrow">狭路相逢</router-link>-->
             </div>
 
-            <div class="userLogin__box">
+            <div class="userLogin__box tc">
 
-                <div class="userLogin__box_input clearfix inline-block">
-                    <span>姓名</span>
-                    <input type="text" v-model="username">
+                <div class="userLogin__box_input">
+                    <div class="inline-block tc">
+                        <span>姓名</span>
+                        <input type="text" v-model="username">
+                    </div>
                 </div>
-                <div class="userLogin__box_input clearfix inline-block">
-                    <span>密码</span>
-                    <input type="text" v-model="password">
+
+                <div class="userLogin__box_input mt-10">
+                    <div class="inline-block tc">
+                        <span>密码</span>
+                        <input type="text" v-model="password">
+                    </div>
                 </div>
 
                 <div class="userLogin__box_btn" @click="submit()"></div>
@@ -43,6 +48,9 @@
         methods: {
             submit() {
                 setToken(this.username)
+                this.$router.push({
+                    path: '/index'
+                })
             }
         }
     }
@@ -65,14 +73,24 @@
 
         &__box {
             position: absolute;
-            top: 300/16rem;
+            top: 360px;
+            width: 100%;
             text-align: center;
 
             &_btn {
-                width: 367/16rem;
-                height: 100/16rem;
+                display: inline-block;
+                width: 367px;
+                height: 100px;
                 background: url(../../assets/images/btn_login.png) 100% 100%;
                 background-size: cover;
+            }
+
+            &_input {
+                width: 100%;
+            }
+
+            .inline-block {
+                width: 100%;
             }
         }
     }

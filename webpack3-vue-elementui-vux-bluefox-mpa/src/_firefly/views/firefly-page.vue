@@ -7,7 +7,7 @@
 
 <script>
 
-    import FireFly from '~/Animal/FireFly';
+    import FireFly from '~/Effects/Animal/FireFly';
     import CountDownCircle from '~/Model/CountDownCircle';
 
     export default {

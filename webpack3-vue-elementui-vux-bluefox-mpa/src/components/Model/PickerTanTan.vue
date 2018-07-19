@@ -20,7 +20,7 @@
 
 
 <script>
-    import detectPrefixes from 'utils/profills/detect-prefixes.js'
+    import detectPrefixes from 'utils/profills/detectPrefixes'
 
     export default {
         props: {

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import LoadingSimple from '~/Layout/LoadingSimple'
+    import LoadingSimple from '~/Layout/LoadingPure'
 
     export default {
         components: {
@@ -13,7 +13,7 @@
         }
     }
 
-    // import LoadingComponent from '../components/LoadingSimple.vue'
+    // import LoadingComponent from '../components/LoadingPure.vue'
     //
     // let $vm
     //

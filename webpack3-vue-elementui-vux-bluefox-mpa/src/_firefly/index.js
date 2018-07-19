@@ -9,7 +9,7 @@ import CamelUI from 'camel-ui'
 Vue.use(CamelUI)
 
 
-import CalendarApp from '~/model/MCalendar'
+import CalendarApp from '~/model/Time/MCalendar'
 import TanApp from './views/tantan-app'
 import CamelApp from './views/camel-page'
 import LoadingApp from './views/loading-app'

@@ -29,34 +29,40 @@ const _import = require('./_import_' + process.env.NODE_ENV)
  **/
 const constantRouterMap = [
     { path: '/login', component: _import('login/main') },
-    { path: '/', redirect: '/seconds' },
+    { path: '/', redirect: '/index' },
+    { path: '/index',
+        redirect: 'index_main',
+        children: [
+            {
+                path: 'main',
+                component: _import('index/main'),
+                name: 'index_main',
+                meta: {}
+            },
+            {
+                path: 'rule',
+                component: _import('index/rule'),
+                name: 'index_rule',
+                meta: {}
+            }
+        ]
+    },
     { path: '/seconds',
-      redirect: 'index',
+      redirect: 'seconds_main',
       children: [
           {
-              path: 'index',
+              path: 'main',
               component: _import('seconds/main'),
-              name: 'main',
+              name: 'seconds_main',
               meta: {}
           }
       ]
     },
-    { path: '/high', component: _import('high/main') },
+    { path: '/higher', component: _import('higher/main') },
     { path: '/chat', component: _import('chat/main') },
     { path: '/narrow', component: _import('narrow/main') },
     { path: '/404', component: _import('error/404') },
-    { path: '/*', component: _import('seconds/main') }
-    // {
-    //     path: '',
-    //     component: Layout,
-    //     redirect: 'dashboard',
-    //     children: [{
-    //         path: 'dashboard',
-    //         component: _import('dashboard/index'),
-    //         name: 'dashboard',
-    //         meta: { title: 'dashboard', icon: 'dashboard', noCache: true }
-    //     }]
-    // },
+    { path: '*', component: _import('error/404') }
 ]
 
 
