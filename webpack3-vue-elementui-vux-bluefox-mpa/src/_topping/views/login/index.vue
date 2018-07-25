@@ -1,17 +1,16 @@
 <template>
     <div class="userLogin">
 
-            <img src="../../assets/images/bg_login.jpg" alt="">
+        <img src="../../assets/images/bg_login.jpg" alt="">
 
-            <!--<div class="userLogin__bg"></div>-->
+        <!--<div class="userLogin__bg"></div>-->
 
-            <div class="userLogin__box tc">
+        <div class="userLogin__box tc">
 
-                <div class="userLogin__box_input">
-                    <div class="inline-block tc">
-                        <span class="userLogin__box_input_label">姓名：</span>
-                        <input type="text" v-model="username">
-                </div>
+            <div class="userLogin__box_input">
+                <div class="inline-block tc">
+                    <span class="userLogin__box_input_label">姓名：</span>
+                    <input type="text" v-model="username">
                 </div>
 
                 <div class="userLogin__box_input">
@@ -24,21 +23,22 @@
                 <div class="userLogin__box_btn" @click.off="submit()"></div>
             </div>
 
+        </div>
 
-            <footer-mask></footer-mask>
+        <footer-mask></footer-mask>
 
 
     </div>
 </template>
 
 <script>
-    import { setToken } from "../../router/_auth"
-    import { login } from "../../api/login"
+    import {setToken} from "../../router/_auth"
+    import {login} from "../../api/login"
     import footerMask from "../snippets/footer-mask"
 
     export default {
         components: {
-          footerMask
+            footerMask
         },
         data() {
             return {
@@ -59,12 +59,13 @@
                 login(this.username, this.password)
                     .then(res => {
                         setToken(res.data)
-
+                        this.$store.commit('SET_TOKEN', res.data)
                         this.$router.push({
                             path: '/rule'
                         })
                     })
-                    .catch(() => {})
+                    .catch(() => {
+                    })
 
 
                 // this.$axios({
@@ -131,7 +132,6 @@
                     background: #fff;
                 }
 
-
                 &_label {
                     width: 90px;
                     height: 40px;
@@ -154,7 +154,6 @@
                 }
             }
 
-
         }
     }
 
@@ -166,7 +165,7 @@
                 /*top: 220px;*/
 
                 /*&_input {*/
-                    /*top: 20px;*/
+                /*top: 20px;*/
                 /*}*/
             }
         }

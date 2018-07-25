@@ -2,7 +2,7 @@
     <div>
         <div class="ruleIndex__count">
             <countdown-svg-circle
-                :setTimer=100*1000
+                :setTimer=30*1000
                 :endCallBack="'forceSubmit'"
                 @forceSubmit="forceSubmit()"
             ></countdown-svg-circle>
@@ -59,7 +59,10 @@
             forceSubmit() {
                 // console.log('强制提交')
                 this.$router.push({
-                    name: 'notice_index'
+                    name: 'notice_index',
+                    query: {
+                        type: 1
+                    }
                 })
             }
         },

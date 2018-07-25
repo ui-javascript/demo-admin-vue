@@ -30,6 +30,7 @@
 
     import HeaderExit from '../snippets/header-exit'
     import CardNotice from '../snippets/card-notice'
+    import {getScore, getGrade} from '../../api/grades'
 
     export default {
         components: {
@@ -38,17 +39,31 @@
         },
         data() {
             return {
-                right: 3,
-                wrong: 2,
-                curr: 20,
-                total: 20,
-                ranking: 1
+                right: 0,
+                wrong: 0,
+                curr: 0,
+                total: 0,
+                ranking: 0
             }
         },
         methods: {
 
         },
         mounted() {
+            let type = this.$route.query.type
+
+            // debugger
+            getScore({ type: type }).then(res => {
+                this.total = res.allScore
+                this.ranking = res.ranking
+                this.curr = res.mScore
+                this.right = res.tAnswerCount
+                this.wrong = res.wAnswerCount
+            })
+
+            getGrade().then(res => {
+                console.log(res)
+            })
 
         }
     }
