@@ -4,7 +4,7 @@ module.exports = {
 
     // 开发配置
     dev: {
-        port: 8888,
+        port: 80,
         autoOpenBrowser: true,
         indexPage: '/_topping/index.html',
 

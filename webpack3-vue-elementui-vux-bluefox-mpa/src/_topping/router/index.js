@@ -30,22 +30,23 @@ const _import = require('./_import_' + process.env.NODE_ENV)
  **/
 const constantRouterMap = [
     {path: '/login', component: _import('login/index')},
-    {path: '/', redirect: '/index'},
+    {path: '/', redirect: '/rule'},
+    {path: '/index', redirect: '/rule'},
     {
-        path: '/index',
-        redirect: '/index/main',
-        component: _import('index/index'),
+        path: '/rule',
+        redirect: '/rule/main',
+        component: _import('rule/index'),
         children: [
             {
                 path: 'main',
-                component: _import('index/main'),
-                name: 'index_main',
+                component: _import('rule/rule-main'),
+                name: 'rule_main',
                 meta: {}
             },
             {
-                path: 'rule',
-                component: _import('index/rule'),
-                name: 'index_rule',
+                path: 'details',
+                component: _import('rule/rule-details'),
+                name: 'rule_details',
                 meta: {}
             }
         ]

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import headerExit from '../snippets/headerExit'
+    import headerExit from '../snippets/header-exit'
 
     export default {
         components: {

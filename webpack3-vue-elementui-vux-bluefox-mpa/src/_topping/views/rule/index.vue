@@ -14,6 +14,7 @@
 
 <script>
 
+    import { getInfo } from "../../api/login";
 
     export default {
 
@@ -26,6 +27,9 @@
 
         },
         mounted() {
+            // getInfo()
+            //     .then(res => console.log(res))
+            //     .catch(() => {})
 
         }
     }

@@ -15,6 +15,7 @@ router.beforeEach((to, from, next) => {
             next({ path: '/' })
             // NProgress.done()
         } else {
+
             // if (store.getters.roles.length === 0) {
             //
             //     // 拉取用户信息

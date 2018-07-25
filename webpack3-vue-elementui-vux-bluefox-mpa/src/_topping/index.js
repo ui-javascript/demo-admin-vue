@@ -1,5 +1,5 @@
 // 全局样式
-require('./style.less')
+require('./assets/css/style.less')
 
 // Vue
 import Vue from 'vue'
@@ -14,6 +14,9 @@ Vue.config.productionTip = false
 
 import axios from 'axios'
 Vue.prototype.$axios = axios
+
+import qs from 'qs'
+Vue.prototype.$qs = qs
 
 // 路由
 import router from './router'
@@ -30,7 +33,7 @@ import FastClick from 'fastclick'
 FastClick.attach(document.body)
 
 
-require('../../static/js/socket.io')
+// require('../../static/js/socket.io')
 
 new Vue({
     el: '#app',

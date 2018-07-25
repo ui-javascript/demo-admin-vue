@@ -26,11 +26,9 @@ import './router/permission'
 import App from './App'
 
 // 解决click点击300毫秒延时问题
-import FastClick from 'fastclick'
-FastClick.attach(document.body)
+// import FastClick from 'fastclick'
+// FastClick.attach(document.body)
 
-
-require('../../static/js/socket.io')
 
 new Vue({
     el: '#app',

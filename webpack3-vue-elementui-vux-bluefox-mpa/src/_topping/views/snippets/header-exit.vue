@@ -1,33 +1,25 @@
 <template>
     <div class="headerExit relative">
-        <img
-            class="headerExit__close"
-            src="../../assets/images/exit.png"
-            alt="关闭icon"
-            @click="exit()"
-        >
+        <user-exit></user-exit>
+
         <img class="headerExit__bg" src="../../assets/images/header.png" alt="">
     </div> 
 </template>
 
 <script>
-    import { removeToken } from "../../router/_auth"
 
+    import userExit from  './user-exit'
     export default {
-
+        components: {
+            userExit
+        },
         data() {
             return {
 
             }
         },
         methods: {
-            exit() {
-                removeToken()
 
-                this.$router.push({
-                    path: '/login'
-                })
-            }
         }
     }
 </script>

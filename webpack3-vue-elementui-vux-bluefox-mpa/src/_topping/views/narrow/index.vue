@@ -3,14 +3,13 @@
         <header-exit></header-exit>
 
         狭路相逢
-
         <router-view keep-alive></router-view>
 
     </div>
 </template>
 
 <script>
-    import headerExit from '../snippets/headerExit'
+    import headerExit from '../snippets/header-exit'
     export default {
         components: {
             headerExit

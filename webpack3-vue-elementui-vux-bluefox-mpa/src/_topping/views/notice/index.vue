@@ -1,10 +1,11 @@
 <template>
-    <div>
-        一比高下
+    <div class="noticeIndex">
+
     </div>
 </template>
 
 <script>
+
     export default {
 
         data() {
@@ -14,10 +15,16 @@
         },
         methods: {
 
+        },
+        mounted() {
+
         }
     }
 </script>
 
 <style lang="less">
+    .noticeIndex {
+
+    }
 
 </style>

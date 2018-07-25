@@ -17,6 +17,8 @@ exports.assetsPath = function (_path) {
 }
 
 
+
+
 //
 exports.cssLoaders = function (options) {
     options = options || {}
@@ -53,11 +55,39 @@ exports.cssLoaders = function (options) {
         }
     }
 
+    // vue 使用less全局变量
+    // 仅仅为解决Vue单文件内的变量
+    // https://blog.csdn.net/hani_wen/article/details/81007852
+    function lessResourceLoader() {
+        var loaders = [
+            cssLoader,
+            'less-loader',
+            {
+                loader: 'sass-resources-loader',
+                options: {
+                    resources: [
+                        path.resolve(__dirname, `../../src/${config.moduleName}/assets/css/variables.less`),
+                    ]
+                }
+            }
+        ];
+        if (options.extract) {
+            return ExtractTextPlugin.extract({
+                use: loaders,
+                fallback: 'vue-style-loader'
+            })
+        } else {
+            return ['vue-style-loader'].concat(loaders)
+        }
+    }
+
+
     // http://vuejs.github.io/vue-loader/en/configurations/extract-css.html
     return {
         css: generateLoaders(),
         postcss: generateLoaders(),
-        less: generateLoaders('less'),
+        // 处理全局less
+        less: lessResourceLoader('less'),
 
         // 语法缩进
         sass: generateLoaders('sass', {indentedSyntax: true}),

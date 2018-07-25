@@ -17,6 +17,6 @@
     }
 </script>
 
-<style>
-
+<style lang="less">
+    /*@import "./assets/css/style";*/
 </style>

@@ -3,38 +3,43 @@
 
             <img src="../../assets/images/bg_login.jpg" alt="">
 
-            <div class="userLogin__bg">
-
-            </div>
+            <!--<div class="userLogin__bg"></div>-->
 
             <div class="userLogin__box tc">
 
                 <div class="userLogin__box_input">
                     <div class="inline-block tc">
-                        <span>姓名</span>
+                        <span class="userLogin__box_input_label">姓名：</span>
                         <input type="text" v-model="username">
-                    </div>
+                </div>
                 </div>
 
-                <div class="userLogin__box_input mt-10">
+                <div class="userLogin__box_input">
                     <div class="inline-block tc">
-                        <span>密码</span>
+                        <span class="userLogin__box_input_label">手机号码：</span>
                         <input type="text" v-model="password">
                     </div>
                 </div>
 
-                <div class="userLogin__box_btn" @click="submit()"></div>
+                <div class="userLogin__box_btn" @click.off="submit()"></div>
             </div>
+
+
+            <footer-mask></footer-mask>
 
 
     </div>
 </template>
 
 <script>
-    import {setToken } from "../../router/_auth";
+    import { setToken } from "../../router/_auth"
+    import { login } from "../../api/login"
+    import footerMask from "../snippets/footer-mask"
 
     export default {
-
+        components: {
+          footerMask
+        },
         data() {
             return {
                 username: '',
@@ -43,10 +48,36 @@
         },
         methods: {
             submit() {
-                setToken(this.username)
-                this.$router.push({
-                    path: '/index'
-                })
+
+                // getRap()
+                //     .then(res => console.log(res))
+                //     .catch(() => {
+                //
+                //     })
+
+
+                login(this.username, this.password)
+                    .then(res => {
+                        setToken(res.data)
+
+                        this.$router.push({
+                            path: '/rule'
+                        })
+                    })
+                    .catch(() => {})
+
+
+                // this.$axios({
+                //     method: 'post',
+                //     url: 'http://192.168.1.149:5060/api/v1/account/login',
+                //     data: {
+                //         'userName': '15925696482',
+                //         'password': '15925696482'
+                //     }
+                // }).then(res => console.log(res))
+                //     .catch(() => {})
+
+
             }
         }
     }
@@ -69,24 +100,74 @@
 
         &__box {
             position: absolute;
-            top: 360px;
+            /*top: 260px;*/
+            top: 0;
             width: 100%;
             text-align: center;
 
+            /* margin-top的高度是按照宽度来的，不是按照高度，很诡异 */
+            margin-top: 62%;
+
             &_btn {
+                margin-top: 20px;
                 display: inline-block;
-                width: 367px;
-                height: 100px;
+                width: 300/1.2px;
+                height: 100/1.2px;
+                /*margin-left: -30px;*/
                 background: url(../../assets/images/btn_login.png) 100% 100%;
                 background-size: cover;
             }
 
             &_input {
                 width: 100%;
+                box-sizing: border-box;
+                margin-top: 20px;
+
+                .inline-block {
+                    width: 300px;
+                    border: 1px solid #ddd;
+                    border-radius: 20px;
+                    height: 42px;
+                    background: #fff;
+                }
+
+
+                &_label {
+                    width: 90px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 18px;
+                    color: #ddd;
+                    text-align: left;
+                    display: inline-block;
+                }
+
+                input {
+                    background: #fff;
+                    border: none;
+                    height: 40px;
+                    box-sizing: border-box;
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
             }
 
-            .inline-block {
-                width: 100%;
+
+        }
+    }
+
+    /* iphone5等小屏幕 */
+    @media screen
+    and (max-device-width: 350px) {
+        .userLogin {
+            &__box {
+                /*top: 220px;*/
+
+                /*&_input {*/
+                    /*top: 20px;*/
+                /*}*/
             }
         }
     }

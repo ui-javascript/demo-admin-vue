@@ -1,21 +1,21 @@
 import request from './_request'
 
-export function login(username, password) {
+export function login(userName, password) {
     return request({
-        url: '/user/login',
+        url: 'account/login',
         method: 'post',
         data: {
-            username,
-            password
+            'userName': userName,
+            'password': password
         }
     })
 }
 
 export function getInfo(token) {
     return request({
-        url: '/user/info',
+        url: '/User/GetUsersList',
         method: 'get',
-        params: { token }
+        // params: { token }
     })
 }
 

@@ -4,28 +4,29 @@
 -->
 
 <template>
-    <div>
-        <div id="timeCountX" ref="timeCountX" class="time-count-x" @click="this.start">
-            <svg width="120" height="120" viewBox="0 0 440 440" class="center">
-                <defs>
-                    <linearGradient x1="1" y1="0" x2="0" y2="0" id="gradient1">
-                        <stop offset="0%" stop-color="#e52c5c"></stop>
-                        <stop offset="100%" stop-color="#ab5aea"></stop>
-                    </linearGradient>
-                    <linearGradient x1="1" y1="0" x2="0" y2="0" id="gradient2">
-                        <stop offset="0%" stop-color="#4352f3"></stop>
-                        <stop offset="100%" stop-color="#ab5aea"></stop>
-                    </linearGradient>
-                </defs>
-                <g transform="matrix(0,-1,1,0,0,440)">
-                    <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#f0f1f5" fill="none" stroke-dasharray="1069 1069"></circle>
-                    <circle cx="220" cy="220" r="170" stroke-width="50" stroke="url('#gradient1')" fill="none" stroke-dasharray="1069 1069"></circle>
-                    <circle cx="220" cy="220" r="170" stroke-width="50" stroke="url('#gradient2')" fill="none" stroke-dasharray="534.5 1069"></circle>
-                </g>
-            </svg>
+    <div id="timeCountX" ref="timeCountX" class="time-count-x" @click="this.start">
+        <svg width="120" height="120" viewBox="0 0 440 440" class="center">
+            <defs>
+                <linearGradient x1="1" y1="0" x2="0" y2="0" id="gradient1">
+                    <stop offset="0%" stop-color="#e52c5c"></stop>
+                    <stop offset="100%" stop-color="#ab5aea"></stop>
+                </linearGradient>
+                <linearGradient x1="1" y1="0" x2="0" y2="0" id="gradient2">
+                    <stop offset="0%" stop-color="#4352f3"></stop>
+                    <stop offset="100%" stop-color="#ab5aea"></stop>
+                </linearGradient>
+            </defs>
+            <g transform="matrix(0,-1,1,0,0,440)">
+                <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#f0f1f5" fill="none"
+                        stroke-dasharray="1069 1069"></circle>
+                <circle cx="220" cy="220" r="170" stroke-width="50" stroke="url('#gradient1')" fill="none"
+                        stroke-dasharray="1069 1069"></circle>
+                <circle cx="220" cy="220" r="170" stroke-width="50" stroke="url('#gradient2')" fill="none"
+                        stroke-dasharray="534.5 1069"></circle>
+            </g>
+        </svg>
 
-            <div id="timeSecond" class="time-second">{{ timeSecond }}</div>
-        </div>
+        <span id="timeSecond" class="time-second">{{ timeSecond }}</span>
     </div>
 
 </template>
@@ -33,7 +34,7 @@
 
 <script>
 
-    export default  {
+    export default {
         data() {
             return {
                 timeSecond: 10,
@@ -63,7 +64,7 @@
                 this.timeSecond = 0
             },
 
-            fnTimeCount (b) {
+            fnTimeCount(b) {
                 this.ready()
 
                 if (this.timerTimeCount) {
@@ -115,25 +116,24 @@
     svg {
         transform: rotate(-0.05deg);
     }
+
     circle {
         transition: stroke-dasharray .2s;
     }
+
     .time-count-x {
         position: relative;
         width: 120px;
         height: 120px;
-        /*line-height: 120px;*/
-    }
-    .time-second {
-        /*width: 100%;*/
-        /*display: inline-block;*/
-        position: absolute;
-        /*top: 50%;*/
-        /*left: 2px;*/
-        right: 0;
-        margin-top: 0;
+        display: inline-block;
         text-align: center;
-        /*vertical-align: middle;*/
-        /*font-size: 100px;*/
+        vertical-align: middle;
+    }
+
+    .time-second {
+        display: inline-block;
+        position: absolute;
+        top: 55px;
+        text-align: center;
     }
 </style>

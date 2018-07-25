@@ -1,44 +1,29 @@
 <template>
-    <div>
+    <div class="ruleIndex">
         <header-exit></header-exit>
 
 
+        <div class="container">
+            <div>
+                User..........<input type="text" id="userInput"/>
+            </div>
+
+            <div class="mt-10">
+                Message...<input type="text" id="messageInput"/>
+            </div>
+
+            <div class="mt-10">
+                <!-- 使用$event传递 -->
+                <button type="button" id="sendButton" value="Send Message" @click.prevent="sendMessage($event)">
+                    发送消息
+                </button>
+            </div>
+
+            <ul id="messagesList"></ul>
+        </div>
+
         <router-view keep-alive></router-view>
 
-        <div class="container">
-            <div class="row">&nbsp;</div>
-            <div class="row">
-                <div class="col-6">&nbsp;</div>
-                <div class="col-6">
-                    <div>
-                        User..........<input type="text" id="userInput" />
-                    </div>
-
-                    <div class="mt-10">
-                        Message...<input type="text" id="messageInput" />
-                    </div>
-
-                    <div class="mt-10">
-                        <!-- 使用$event传递 -->
-                        <button type="button" id="sendButton" value="Send Message" @click.prevent="sendMessage($event)" >发送消息</button>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <hr />
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-6">&nbsp;</div>
-                <div class="col-6">
-                    <ul id="messagesList"></ul>
-                </div>
-            </div>
-        </div>
 
     </div>
 </template>
@@ -49,20 +34,21 @@
     // import "@aspnet/signalr"
     // import { SignalRJS } from 'signalrjs'
     // import from 'signalrjs'
+    // import {getRap} from '../../api/test'
 
-
-    // import { getRap } from '../../api/test'
-
-    import headerExit from "../snippets/headerExit"
+    import headerExit from "../snippets/header-exit"
+    // import CheckboxList from '../../components/CheckboxList'
 
     export default {
         components: {
-          headerExit
+            headerExit,
+            // CountdownCircle,
+            // CheckboxList
         },
         data() {
             return {
                 connection: null,
-                url: "http://192.168.1.149:5058/chatHub"
+                url: "http://192.168.1.149:5058/chatHub",
             }
         },
         methods: {
@@ -71,17 +57,18 @@
                 this.receiveMessage()
                 this.start()
             },
+            // 初始化
             init() {
                 this.connection = new signalR.HubConnectionBuilder()
                     .withUrl(this.url)
                     .configureLogging(signalR.LogLevel.Information)
                     .build();
             },
+            // 开始SSE
             start() {
                 this.connection.start().catch(err => console.error(err.toString()));
             },
             sendMessage(e) {
-
                 // @deprecated
                 // e.preventDefault();
 
@@ -89,7 +76,7 @@
                 const message = document.getElementById("messageInput").value;
                 this.connection.invoke("SendMessage", user, message).catch(err => console.error(err.toString()));
             },
-            // 接收消息
+            // 接收消息绑定
             receiveMessage() {
                 this.connection.on("ReceiveMessage", (user, message) => {
                     const msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -98,7 +85,7 @@
                     li.textContent = encodedMsg;
                     document.getElementById("messagesList").appendChild(li);
                 });
-            }
+            },
         },
         mounted() {
             // getRap()
@@ -114,7 +101,6 @@
 </script>
 
 <style lang="less">
-    .mmt {
-        margin-top: 20px;
-    }
+
+
 </style>
