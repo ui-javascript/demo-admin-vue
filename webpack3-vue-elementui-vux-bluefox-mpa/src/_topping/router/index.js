@@ -90,7 +90,11 @@ const constantRouterMap = [
             }
         ]
     },
-    // {path: '/chat', component: _import('chat/index')},
+    {
+        path: '/notice',
+        component: _import('notice/index'),
+        name: 'notice_index'
+    },
     {path: '/404', component: _import('error/404')},
     {path: '*', component: _import('error/404')}
 ]

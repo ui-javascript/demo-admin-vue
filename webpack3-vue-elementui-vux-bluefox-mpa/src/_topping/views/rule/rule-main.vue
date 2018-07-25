@@ -14,6 +14,7 @@
             <div class="ruleIndex__box_btn center" @click="viewRule('seconds')">争分夺秒</div>
             <div class="ruleIndex__box_btn center" @click="viewRule('higher')">一比高下</div>
             <div class="ruleIndex__box_btn center" @click="viewRule('narrow')">狭路相逢</div>
+            <div v-if="rankingVisible" class="ruleIndex__box_ranking center"></div>
         </div>
 
         <footer-mask></footer-mask>
@@ -32,7 +33,8 @@
         },
         data() {
             return {
-                username: '吴彦祖'
+                username: '吴彦祖',
+                rankingVisible: false
             }
         },
         methods: {

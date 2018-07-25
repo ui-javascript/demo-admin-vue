@@ -1,6 +1,6 @@
 <template>
     <div class="radioList">
-        <div class="card center relative">
+        <div v-if="list.length > 0" class="card center relative">
             <div class="radioList__badge">
                 {{ module }}
             </div>
@@ -17,26 +17,25 @@
 
             <div class="radioList__decoration"></div>
 
-            <div class="radioList__list" >
+            <div class="radioList__list">
                 <div v-for="(item, index) in list[curr].options">
-                    <input :id='"demo"+index' :value="item" type="radio" v-model="checked[curr]">
+                    <input :id='"demo"+index' :value="optionsMap(index)" type="radio" @change="change(list[curr], index)" v-model="list[curr].checked">
                     <label
                             class="radioList__label center"
-                            :class="checked[curr]==item ? 'active' : '' "
+                            :class="list[curr].checked==optionsMap(index) ? 'active' : '' "
                             :for="'demo'+index">
-                        <span class="radioList_character">{{ index | optionsMap }}</span>
+                        <!--<span class="radioList_character">{{ index | optionsMap }}</span>-->
                         {{ item }}
                     </label>
-
                 </div>
             </div>
 
 
             <div class="radioList__operate">
                 <button class="radioList__btn" v-show="this.curr!==0" type="button" @click="prev()">上一题</button>
-                <button class="radioList__btn" v-show="this.curr!==this.total-1" type="button" @click="next()">下一题
+                <button class="radioList__btn" v-show="this.curr!==this.list.length-1" type="button" @click="next()">下一题
                 </button>
-                <button class="radioList__btn" v-show="this.curr===this.total-1" type="button" @click="submit()">提交
+                <button class="radioList__btn" v-show="this.curr===this.list.length-1" type="button" @click="submit()">提交
                 </button>
             </div>
         </div>
@@ -45,6 +44,7 @@
 
 <script>
 
+    import {submitOne} from "../api/questions"
 
     export default {
         name: "CheckboxList",
@@ -61,37 +61,49 @@
                 required: true
             },
             // 题目列表
+            // [
+            //     {
+            //         question: '问题是....',
+            //         options: ['A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容']
+            //     },
+            //     {
+            //         question: '问题2是....',
+            //         options: ['A-葫芦娃', 'B-蛇精', 'C-爷爷', 'D-穿山甲']
+            //     },
+            //     {
+            //         question: '问题3是....',
+            //         options: ['A-xxxx', 'B-xxx', 'C-xxx', 'D-xxx']
+            //     }
+            // ],
             list: {
                 type: Array,
-                required: true
+                required: true,
             }
         },
         data() {
             return {
-                // module: '争分夺秒',
-                // list: [
-                //     {
-                //         question: '问题是....',
-                //         options: ['A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容', 'B的内容', 'C的内容', 'D的内容']
-                //     },
-                //     {
-                //         question: '问题2是....',
-                //         options: ['A-葫芦娃', 'B-蛇精', 'C-爷爷', 'D-穿山甲']
-                //     },
-                //     {
-                //         question: '问题3是....',
-                //         options: ['A-xxxx', 'B-xxx', 'C-xxx', 'D-xxx']
-                //     }
-                // ],
                 checked: [],
                 curr: 0,
-                total: 0
             }
         },
+        watch: {
+            // checked: {
+            //     handler(newValue, oldValue) {
+            //         console.log(newValue, oldValue)
+            //     }
+            // }
+        },
+        computed: {
+            // total: () => {
+            //     if (this.list instanceof Array) {
+            //         return this.list.length
+            //     }
+            //     else {
+            //         return 0
+            //     }
+            // }
+        },
         methods: {
-            ready() {
-                this.total = this.list.length
-            },
             // 上一题
             prev() {
                 if (this.curr > 0) {
@@ -100,8 +112,26 @@
             },
             // 下一题
             next() {
-                if (this.curr + 1 < this.total) {
+                // debugger
+                if (this.curr + 1 < this.list.length) {
                     this.curr++;
+                }
+            },
+            optionsMap(value) {
+                let arr = ['A', 'B', 'C', 'D', 'E']
+                return arr[value]
+            },
+            change(item, index) {
+                if (this.list.length) {
+                    let arr = ['A', 'B', 'C', 'D', 'E']
+                    let params = {
+                        submitAnswer: arr[index],
+                        examProblemID: item.id
+                    }
+
+                    submitOne(params).then(res => {
+                        console.log(res)
+                    }).catch()
                 }
             },
             // 提交
@@ -110,21 +140,12 @@
             }
         },
         mounted() {
-            this.ready()
+
         }
     }
 </script>
 
 <style lang="less">
-
-    .ruleIndex {
-
-        &__count {
-            width: 100%;
-            text-align: center;
-        }
-
-    }
 
     .radioList {
 

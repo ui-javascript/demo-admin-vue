@@ -8,7 +8,7 @@
 <script>
 
     import FireFly from '~/Effects/Animal/FireFly';
-    import CountdownCircle from '~/Model/CountdownCircle';
+    import CountdownCircle from '~/Model/Countdown/CountdownCircle';
 
     export default {
         components: {

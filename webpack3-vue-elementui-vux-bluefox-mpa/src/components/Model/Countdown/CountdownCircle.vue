@@ -37,16 +37,25 @@
     export default {
         data() {
             return {
-                timeSecond: 10,
+                timeSecond: 0,
                 perimeter: 0,
+
                 // 计时器
                 timerTimeCount: null,
+
                 eleCircles: null,
                 eleTimeSec: null,
             }
         },
+        props: {
+            time: {
+                type: Number,
+                default: 10
+            },
+        },
         methods: {
             ready() {
+                this.timeSecond = this.time
                 this.perimeter = Math.PI * 2 * 170
                 this.eleCircles = document.querySelectorAll("#timeCountX circle")
                 this.eleTimeSec = document.getElementById("timeSecond")
@@ -90,7 +99,7 @@
                         clearInterval(_self.timerTimeCount);
                         _self.timerTimeCount = null;
 
-                        console.log("时间到！");
+                        // console.log("时间到！");
 
                         _self.circleInit()
                     }

@@ -4,10 +4,9 @@
 - 一比高下
 - 狭路相逢
 
-# API
+# Swagger-API
 
-- http://192.168.1.149:5060/swagger/index.html
-    - http://192.168.1.149:5060/swagger/v1/swagger.json
+- http://192.168.1.149:5060
 
 # 存在的问题
 
