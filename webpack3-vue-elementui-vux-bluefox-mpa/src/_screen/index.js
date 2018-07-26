@@ -1,5 +1,5 @@
 // 全局样式
-require('./style.less')
+require('./assets/css/style.less')
 
 // Vue
 import Vue from 'vue'

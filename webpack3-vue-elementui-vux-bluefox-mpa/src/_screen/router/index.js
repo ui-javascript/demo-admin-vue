@@ -28,35 +28,19 @@ const _import = require('./_import_' + process.env.NODE_ENV)
   }
  **/
 const constantRouterMap = [
-    { path: '/login', component: _import('login/main') },
-    { path: '/', redirect: '/seconds' },
-    { path: '/seconds',
-      redirect: 'index',
-      children: [
-          {
-              path: 'index',
-              component: _import('seconds/main'),
-              name: 'main',
-              meta: {}
-          }
-      ]
+    { path: '/login', component: _import('login/index') },
+    { path: '/', redirect: '/guide' },
+    { path: '/404', component: _import('common/404') },
+    {
+        path: '/guide',
+        component: _import('guide/index'),
+        redirect: '/guide/list',
+        children: [{
+            path: 'list',
+            component: _import('guide/guide-list'),
+            name: 'guide_list'
+        }]
     },
-    { path: '/high', component: _import('high/main') },
-    { path: '/chat', component: _import('chat/main') },
-    { path: '/narrow', component: _import('narrow/main') },
-    { path: '/404', component: _import('error/404') },
-    { path: '/*', component: _import('seconds/main') }
-    // {
-    //     path: '',
-    //     component: Layout,
-    //     redirect: 'dashboard',
-    //     children: [{
-    //         path: 'dashboard',
-    //         component: _import('dashboard/index'),
-    //         name: 'dashboard',
-    //         meta: { title: 'dashboard', icon: 'dashboard', noCache: true }
-    //     }]
-    // },
 ]
 
 

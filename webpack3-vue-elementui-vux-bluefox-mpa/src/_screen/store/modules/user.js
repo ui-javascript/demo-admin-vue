@@ -1,4 +1,4 @@
-import { login, logout, getInfo } from '../../api/login'
+import { login, logout, getInfo } from '../../service/login'
 import { getToken, setToken, removeToken } from '../../router/_auth'
 
 const user = {
