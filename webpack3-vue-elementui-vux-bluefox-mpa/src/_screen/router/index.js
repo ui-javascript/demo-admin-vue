@@ -95,6 +95,11 @@ const constantRouterMap = [
             }
         ]
     },
+    {
+        path: '/ranking',
+        component: _import('ranking/index'),
+        name: 'ranking_index'
+    },
 ]
 
 

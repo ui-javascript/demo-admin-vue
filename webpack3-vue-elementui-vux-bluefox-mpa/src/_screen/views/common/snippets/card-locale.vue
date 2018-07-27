@@ -6,9 +6,15 @@
         <span class="CardLocale__right absolute">晋级人数 {{ right }}</span>
 
         <div class="CardLocale__box">
-            <div class="CardLocale__ball inline-block"></div>
+            <div class="CardLocale__ball inline-block"
+                 v-for="(item, index) in allList"
+                 :class="rightList.indexOf(item)>=0 ? 'active':''">
+                {{item}}
+            </div>
         </div>
     </div>
+
+
 </template>
 
 <script>
@@ -23,14 +29,21 @@
             },
             right: {
                 type: Number
+            },
+            allList: {
+                type: Array
+            },
+            rightList: {
+                type: Array
             }
-        },
+        }
     }
 </script>
 
 <style lang="less">
     .CardLocale {
         border: 1px solid @gray;
+        min-height: 300px;
 
         &__badge {
             width: 440/1.8px;
@@ -56,11 +69,21 @@
         &__box {
             width: 1280px;
             height: 350px;
+            margin-top: 100px;
         }
 
         &__ball {
             width: 40px;
             height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            color: @white;
+            background: @blue;
+
+            &.active {
+                background-color: @red;
+            }
         }
     }
 </style>
