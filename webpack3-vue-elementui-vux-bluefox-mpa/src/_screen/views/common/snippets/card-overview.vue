@@ -9,9 +9,9 @@
             </el-row>
 
             <el-row class="item" v-for="(item, index) in list" :key="index">
-                <el-col class="cursor" :span="16" @click.native="viewDetails(index)">{{item.question}}</el-col>
+                <el-col class="cursor" :span="16" @click.native="viewDetails(index, item)">{{item.problemName}}</el-col>
                 <el-col :span="4">{{item.answer}}</el-col>
-                <el-col :span="4">{{item.right}} / {{item.total}} </el-col>
+                <el-col :span="4"><span>{{item.rightCount}}</span><div class="slopingside inline-block"></div> <span>{{item.submitCount}}</span></el-col>
             </el-row>
         </div>
 
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+
     export default {
         name: "card-question",
         props: {
@@ -38,14 +39,18 @@
         },
         methods: {
             // 查看
-            viewDetails(index) {
+            viewDetails(index, item) {
                 this.$router.push({
                     name: 'seconds_details',
                     query: {
-                        number: index
+                        number: index,
+                        item: item
                     }
                 })
             }
+        },
+        mounted() {
+
         }
     }
 </script>
@@ -87,5 +92,14 @@
             font-size: 30px;
             font-weight: bold;
         }
+
+        // 斜杠
+        .slopingside {
+            height:0px;
+            border: 1px solid @gray;
+            width: 20px;
+            transform:rotate(125deg);
+        }
+
     }
 </style>

@@ -2,6 +2,12 @@
     <div class="commonHeader relative">
         <img class="commonHeader__bg absolute" src="../../assets/images/header.jpg" alt="">
         <div class="commonHeader__ranking absolute" @click="viewRanking()">看排名</div>
+
+        <dialog-ranking
+                @close="close"
+                :visible="visible"
+        >
+        </dialog-ranking>
     </div>
 </template>
 
@@ -9,13 +15,21 @@
     export default {
         data() {
             return {
-
+                visible: false
             }
+        },
+        components: {
+            dialogRanking(resolve) {
+                require(['../ranking/_dialog/ranking.vue'], resolve)
+            },
         },
         methods: {
             // 查看排名
             viewRanking() {
-
+                this.visible = true
+            },
+            close() {
+                this.visible = false
             }
         }
     }

@@ -15,6 +15,16 @@
         name: "index",
         components: {
             CommonHeader
+        },
+        mounted() {
+            // login('17816869505', '17816869505').then(res => {
+            //     console.log(res)
+            //     setToken(res.data)
+            //     this.$router.push({
+            //         name: 'welcome_index'
+            //     })
+            // }).catch()
+
         }
     }
 </script>
@@ -23,7 +33,7 @@
     .secondsIndex {
         width: 100%;
 
-        // 注意 这种一代符号必须加
+        // 注意 符号
         > .container {
             width: @screen-min-width;
         }

@@ -15,6 +15,7 @@
 
 <script>
     import CardOverview from '../common/snippets/card-overview'
+    import { getOverview } from "../../service/question"
 
     export default {
         name: "seconds-overview",
@@ -41,6 +42,13 @@
                 ]
             }
         },
+        mounted() {
+            getOverview({
+                subType: 1
+            }).then(res => {
+                this.list = res
+            })
+        }
 
     }
 </script>

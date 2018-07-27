@@ -9,7 +9,7 @@
         </div>
 
         <div class="cardPosition__group absolute">
-            {{ group }}
+            (第{{ group }}题)
         </div>
     </div>
 </template>
@@ -25,7 +25,7 @@
               type: String
             },
             group: {
-                type: String
+                type: Number
             }
         }
     }

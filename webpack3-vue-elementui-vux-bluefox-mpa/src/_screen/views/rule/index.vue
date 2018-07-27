@@ -5,8 +5,7 @@
         <div class="container center clearfix">
             <card-attention
                 class="fl"
-                :title="titleList[type]"
-            >
+                :title="titleList[type]">
                 <el-button type="primary" @click="startAnswer()">开始答题</el-button>
             </card-attention>
 

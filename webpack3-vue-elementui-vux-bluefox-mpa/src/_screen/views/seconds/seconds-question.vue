@@ -12,13 +12,15 @@
                 <card-position
                         :badge="badge"
                         :title="title"
-                        :group="group"
+                        :group="list.length"
                 ></card-position>
             </div>
 
             <div class="fr">
                 <div class="secondsQuestion__box box-dashed">
-
+                    <div v-for="(item, index) in list">
+                        <p>{{index+1}}. {{ item.problemName }}</p>
+                    </div>
                 </div>
 
                 <div class="secondsQuestion__operate  clearfix">
@@ -36,6 +38,8 @@
     import CountdownSvgCircle from '~m/Countdown/CountdownSvgCircle'
     import CardPosition from '../common/snippets/card-position'
 
+    import { getQuestions } from "../../service/question"
+
     export default {
         name: "seconds-question",
         components: {
@@ -46,7 +50,8 @@
             return {
                 badge: '争分夺秒',
                 title: '第一组',
-                group: '（共5题）'
+                group: 0,
+                list: []
             }
         },
         methods: {
@@ -68,6 +73,14 @@
                     name: 'seconds_overview'
                 })
             }
+        },
+        mounted() {
+            getQuestions({
+                subType: 1
+            }).then(res => {
+                console.log(res)
+                this.list = res
+            }).catch()
         }
     }
 </script>

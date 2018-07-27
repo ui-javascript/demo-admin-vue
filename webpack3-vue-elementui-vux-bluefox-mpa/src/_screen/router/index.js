@@ -32,7 +32,7 @@ const constantRouterMap = [
     {path: '/login', component: _import('login/index')},
     {path: '/', redirect: '/welcome'},
     {path: '/404', component: _import('common/404')},
-    {path: '/welcome', component: _import('common/welcome')},
+    {path: '/welcome', component: _import('common/welcome'), name: 'welcome_index'},
     {path: '/guide', component: _import('common/guide'), name: 'common_guide'},
     {
         path: '/rule',
