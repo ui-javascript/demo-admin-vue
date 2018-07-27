@@ -60,6 +60,13 @@ var webpackConfig = {
             // 组件
             'components': path.resolve(__dirname, '../src/components'),
             '~': path.resolve(__dirname, '../src/components'),
+            // 我将组件分为四类
+            '~e': path.resolve(__dirname, '../src/components/Effects'),
+            '~l': path.resolve(__dirname, '../src/components/Layout'),
+            '~m': path.resolve(__dirname, '../src/components/Model'),
+            '~t': path.resolve(__dirname, '../src/components/Toolkit'),
+
+            // 工具类
             'utils': path.resolve(__dirname, '../src/utils'),
             '^': path.resolve(__dirname, '../src/utils')
         }

@@ -105,7 +105,11 @@
                 this.timeLeft -= diff
                 if (this.timeLeft <= 0) {
                     clearInterval(this.interval)
-                    this.$emit(this.endCallBack)
+
+                    // 回调
+                    if (this.endCallBack) {
+                        this.$emit(this.endCallBack)
+                    }
                 }
                 if (diff >= 1000) {
                     this.lastDate = curDate

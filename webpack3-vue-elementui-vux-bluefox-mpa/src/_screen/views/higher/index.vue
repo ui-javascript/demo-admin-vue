@@ -1,15 +1,31 @@
 <template>
-    <div>
-        一比高下 - 首页
+    <div class="HigherIndex">
+        <common-header></common-header>
+
+        <div class="container center">
+            <router-view></router-view>
+        </div>
     </div>
 </template>
 
 <script>
+    import CommonHeader from '../common/header'
+
     export default {
-        name: "index"
+        name: "index",
+        components: {
+            CommonHeader
+        }
     }
 </script>
 
-<style scoped>
+<style lang="less">
+    .HigherIndex {
+        width: 100%;
 
+        > .container {
+            margin-top: 20px;
+            width: @screen-min-width;
+        }
+    }
 </style>

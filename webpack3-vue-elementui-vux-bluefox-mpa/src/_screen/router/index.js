@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 Vue.use(Router)
 
 // in development-env not use lazy-loading,
@@ -28,18 +29,71 @@ const _import = require('./_import_' + process.env.NODE_ENV)
   }
  **/
 const constantRouterMap = [
-    { path: '/login', component: _import('login/index') },
-    { path: '/', redirect: '/guide' },
-    { path: '/404', component: _import('common/404') },
+    {path: '/login', component: _import('login/index')},
+    {path: '/', redirect: '/welcome'},
+    {path: '/404', component: _import('common/404')},
+    {path: '/welcome', component: _import('common/welcome')},
+    {path: '/guide', component: _import('common/guide'), name: 'common_guide'},
     {
-        path: '/guide',
-        component: _import('guide/index'),
-        redirect: '/guide/list',
-        children: [{
-            path: 'list',
-            component: _import('guide/guide-list'),
-            name: 'guide_list'
-        }]
+        path: '/rule',
+        component: _import('rule/index'),
+        name: 'rule_index'
+    },
+    {
+        path: '/seconds',
+        component: _import('seconds/index'),
+        redirect: '/seconds/question',
+        children: [
+            {
+                path: 'question',
+                component: _import('seconds/seconds-question'),
+                name: 'seconds_question'
+            },
+            {
+                path: 'details',
+                component: _import('seconds/seconds-details'),
+                name: 'seconds_details'
+            },
+            {
+                path: 'overview',
+                component: _import('seconds/seconds-overview'),
+                name: 'seconds_overview'
+            },
+        ]
+    },
+    {
+        path: '/higher',
+        component: _import('higher/index'),
+        redirect: '/higher/question',
+        children: [
+            {
+                path: 'question',
+                component: _import('higher/higher-question'),
+                name: 'higher-question'
+            },
+            {
+                path: 'overview',
+                component: _import('higher/higher-overview'),
+                name: 'higher-overview'
+            }
+        ]
+    },
+    {
+        path: '/narrow',
+        component: _import('narrow/index'),
+        redirect: '/narrow/question',
+        children: [
+            {
+                path: 'question',
+                component: _import('narrow/narrow-question'),
+                name: 'narrow_question'
+            },
+            {
+                path: 'details',
+                component: _import('narrow/narrow-details'),
+                name: 'narrow_details'
+            }
+        ]
     },
 ]
 

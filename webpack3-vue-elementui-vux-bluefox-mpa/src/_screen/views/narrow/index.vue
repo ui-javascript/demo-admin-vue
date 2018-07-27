@@ -1,15 +1,24 @@
 <template>
-    <div>
-        狭路相逢 - 首页
+    <div class="NarrowIndex">
+        <common-header></common-header>
+
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
+    import CommonHeader from '../common/header'
+
     export default {
-        name: "index"
+        name: "index",
+        components: {
+            CommonHeader
+        }
     }
 </script>
 
-<style scoped>
+<style lang="less">
+    .NarrowIndex {
 
+    }
 </style>

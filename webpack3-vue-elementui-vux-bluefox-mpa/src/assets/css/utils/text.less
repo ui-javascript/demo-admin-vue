@@ -132,15 +132,15 @@
 
 .fnormal { font-weight: normal; }
 .fb      { font-weight: bold; }
-.fw1    { font-weight: 100; }
-.fw2    { font-weight: 200; }
-.fw3    { font-weight: 300; }
-.fw4    { font-weight: 400; }
-.fw5    { font-weight: 500; }
-.fw6    { font-weight: 600; }
-.fw7    { font-weight: 700; }
-.fw8    { font-weight: 800; }
-.fw9    { font-weight: 900; }
+//.fw1    { font-weight: 100; }
+//.fw2    { font-weight: 200; }
+//.fw3    { font-weight: 300; }
+//.fw4    { font-weight: 400; }
+//.fw5    { font-weight: 500; }
+//.fw6    { font-weight: 600; }
+//.fw7    { font-weight: 700; }
+//.fw8    { font-weight: 800; }
+//.fw9    { font-weight: 900; }
 
 
 
@@ -179,7 +179,8 @@
 /* Monospaced Typefaces (for code) */
 
 /* From http://cssfontstack.com */
-code, .code {
+code,
+.code {
   font-family: Consolas,
   monaco,
   monospace;
@@ -241,4 +242,56 @@ code, .code {
 .baskerville {
   font-family: baskerville,
   serif;
+}
+
+
+// 用于实现链接默认无下划线
+// hover后有下划线的样式
+.link-hover {
+
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// 将链接变成默认的文字样式
+.link-unstyled {
+  color: inherit;
+  cursor: inherit;
+  text-decoration: inherit;
+
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+
+// 文字过多后显示省略号 ========
+.text-elli(@w: 250px) {
+  max-width: @w;
+  //display: inline-block;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 多行文本溢出
+// 仅支持webkit
+//限制超出指定行数截断的功能只在 WebKit 内核浏览器下有效。
+.text-elli-mult(@n: 3) {
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @n;
+
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.cursor {
+  cursor: pointer;
 }

@@ -16,10 +16,7 @@ exports.assetsPath = function (_path) {
     return path.posix.join(assetsSubDirectory, _path)
 }
 
-
-
-
-//
+// 样式加载
 exports.cssLoaders = function (options) {
     options = options || {}
 
@@ -62,15 +59,19 @@ exports.cssLoaders = function (options) {
         var loaders = [
             cssLoader,
             'less-loader',
-            {
-                loader: 'sass-resources-loader',
-                options: {
-                    resources: [
-                        path.resolve(__dirname, `../../src/${config.moduleName}/assets/css/variables.less`),
-                    ]
-                }
-            }
         ];
+
+        let commonVariables = path.resolve(__dirname, `../../src/${config.moduleName}/assets/css/variables.less`);
+        // 如果存在这个全局变量文件，追加进去
+        if (fs.existsSync(commonVariables)) {
+             loaders.push({
+                 loader: 'sass-resources-loader',
+                 options: {
+                     resources: [commonVariables]
+                 }
+             })
+        }
+
         if (options.extract) {
             return ExtractTextPlugin.extract({
                 use: loaders,
