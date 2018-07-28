@@ -49,35 +49,14 @@
         methods: {
             submit() {
 
-                // getRap()
-                //     .then(res => console.log(res))
-                //     .catch(() => {
-                //
-                //     })
-
-
-                login(this.username, this.password)
-                    .then(res => {
-                        setToken(res.data)
-                        this.$store.commit('SET_TOKEN', res.data)
-                        this.$router.push({
-                            path: '/rule'
-                        })
+                this.$store.dispatch('Login', {
+                    username: this.username,
+                    password: this.password
+                }).then(() => {
+                    this.$router.push({
+                        path: '/rule'
                     })
-                    .catch(() => {
-                    })
-
-
-                // this.$axios({
-                //     method: 'post',
-                //     url: 'http://192.168.1.149:5060/api/v1/account/login',
-                //     data: {
-                //         'userName': '15925696482',
-                //         'password': '15925696482'
-                //     }
-                // }).then(res => console.log(res))
-                //     .catch(() => {})
-
+                })
 
             }
         }

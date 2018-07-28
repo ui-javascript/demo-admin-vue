@@ -10,16 +10,14 @@
 </template>
 
 <script>
-    import { removeToken } from "../../router/_auth"
-
     export default {
         name: "UserExit",
         methods: {
             exit() {
-                removeToken()
-
-                this.$router.push({
-                    path: '/login'
+                this.$store.dispatch('FedLogOut').then(() => {
+                    this.$router.push({
+                        path: '/login'
+                    })
                 })
             }
         }

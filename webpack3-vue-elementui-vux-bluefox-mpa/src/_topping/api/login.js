@@ -11,7 +11,7 @@ export function login(userName, password) {
     })
 }
 
-export function getInfo(token) {
+export function getInfo() {
     return request({
         url: '/User/GetUsersList',
         method: 'get',
