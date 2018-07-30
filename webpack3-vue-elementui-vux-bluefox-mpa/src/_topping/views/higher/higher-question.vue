@@ -45,7 +45,7 @@
                     //     options: ['A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容A的内容', 'B的内容', 'C的内容', 'D的内容']
                     // },
                 ],
-                setTimer: 10 * 1000,
+                setTimer: 0,
                 disabled: false
             }
         },
@@ -59,7 +59,7 @@
         },
         methods: {
             reset() {
-                this.setTimer = 10 * 1000
+                this.setTimer = 0
                 this.disabled = false
             },
             updateList() {
@@ -77,11 +77,14 @@
                 let self = this
                 getProblem(params).then(res => {
 
-                    // self.setTimer = res.countdown * 1000
-
                     // console.log('倒计时' + res.countdown)
                     this.$nextTick(() => {
-                        self.setTimer = 10 * 1000
+                        self.setTimer = res.countdown * 1000
+
+                        // 测试
+                        if (self.setTimer < 20*1000) {
+                            self.setTimer = 20*1000
+                        }
 
                         if (res.problemFeatures) {
                             let options = res.problemFeatures.split('$')

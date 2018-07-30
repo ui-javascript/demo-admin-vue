@@ -77,6 +77,7 @@
 
                 // 一比高下
                 this.$socket.on("ReceiveMessageFromGroup", (questionNumber) => {
+                    debugger
                     console.log('一比高下' + questionNumber);
 
                     this.$store.dispatch('UpdateProgress', {
@@ -96,6 +97,8 @@
 
                 // 一比高下答题失败的
                 this.$socket.on("ReceiveMessageFromGroupFailure", (questionNumber) => {
+                    debugger
+
                     this.$store.dispatch('UpdateProgress', {
                         module: 2,
                         group: 1,
@@ -124,7 +127,17 @@
             sse() {
                 this.start()
                 this.receiveMessage()
-            }
+            },
+
+            initProgress() {
+                getProgress().then(res => {
+                    this.$store.dispatch('UpdateProgress', {
+                        module: res.moduleType,
+                        group: res.subType,
+                        problem: res.number
+                    })
+                })
+            },
         },
         created() {
             // this.start()
@@ -132,8 +145,13 @@
         },
         mounted() {
 
-            if(getToken() && !this.$socket) {
-                this.sse()
+            if(getToken()) {
+                // 初始化
+                this.initProgress()
+
+                if (!this.$socket) {
+                    this.sse()
+                }
             }
         }
     }

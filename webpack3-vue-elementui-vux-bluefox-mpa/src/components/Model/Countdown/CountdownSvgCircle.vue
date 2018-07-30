@@ -82,7 +82,7 @@
             countDown () {
                 let time = this.timeLeft
                 if (time <= 0) {
-                    return '00:00:00'
+                        return '00:00:00'
                 } else {
                     let result = []
                     result.push(Math.floor(time / 3.6e+6))
@@ -99,34 +99,45 @@
             clear() {
                 clearInterval(this.interval);
                 this.interval = null;
+            },
+            init() {
+                this.timeLeft = this.setTimer
+                this.dashLen = (100 - this.border / 2) * Math.PI * 2
+                this.lastDate = Date.now()
+
+                // 定时器
+                this.interval = setInterval(() => {
+                    let curDate = Date.now()
+                    let diff = Math.round((curDate - this.lastDate) / 1000) * 1000
+                    this.timeLeft -= diff
+                    if (this.timeLeft <= 0) {
+                        clearInterval(this.interval)
+
+                        // 回调
+                        if (this.endCallBack) {
+                            this.$emit(this.endCallBack)
+                        }
+                    }
+                    if (diff >= 1000) {
+                        this.lastDate = curDate
+                    }
+                }, 1000)
+            },
+            ready() {
+                this.clear()
+                this.init()
             }
+        },
+        watch: {
+          setTimer(curVal, oldVal) {
+              this.ready()
+          }
         },
         beforeDestroy() {
             this.clear()
         },
         mounted () {
-            this.clear()
-
-            this.timeLeft = this.setTimer
-            this.dashLen = (100 - this.border / 2) * Math.PI * 2
-
-            this.lastDate = Date.now()
-            this.interval = setInterval(() => {
-                let curDate = Date.now()
-                let diff = Math.round((curDate - this.lastDate) / 1000) * 1000
-                this.timeLeft -= diff
-                if (this.timeLeft <= 0) {
-                    clearInterval(this.interval)
-
-                    // 回调
-                    if (this.endCallBack) {
-                        this.$emit(this.endCallBack)
-                    }
-                }
-                if (diff >= 1000) {
-                    this.lastDate = curDate
-                }
-            }, 1000)
+            this.ready()
         }
     }
 </script>

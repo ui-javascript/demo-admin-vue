@@ -62,15 +62,7 @@
                     }
                 })
             },
-            // initProgress() {
-            //     getProgress().then(res => {
-            //         this.$store.dispatch('UpdateProgress', {
-            //             module: res.moduleType,
-            //             group: res.subType,
-            //             problem: res.number
-            //         })
-            //     })
-            // },
+
         },
         mounted() {
             this.module = this.progress.module
