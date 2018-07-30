@@ -36,12 +36,20 @@
             </div>
 
 
-            <div class="radioList__operate tc">
-                <button class="radioList__btn" v-show="this.curr!==0" type="button" @click="prev()">上一题</button>
-                <button class="radioList__btn" v-show="this.curr!==this.list.length-1" type="button" @click="next()">下一题
-                </button>
-                <!--<button class="radioList__btn" v-show="this.curr===this.list.length-1" type="button" @click="submit()">提交</button>-->
+
+            <!-- 上下题切换 -->
+            <div class="radioList__operate tc" >
+                <div>
+                    <span v-if="showToggle">
+                        <button class="radioList__btn" v-show="this.curr!==0" type="button" @click="prev()">上一题</button>
+                        <button class="radioList__btn" v-show="this.curr!==this.list.length-1" type="button" @click="next()">下一题</button>
+                    </span>
+
+                    <button class="radioList__btn" v-show="this.curr===this.list.length-1" type="button" @click="submit()">提交</button>
+                </div>
+
             </div>
+
         </div>
     </div>
 </template>
@@ -64,7 +72,10 @@
                 type: String,
                 required: true
             },
-            disabled: Boolean,
+            disabled: {
+                // type: Boolean,
+                default: false
+            },
             // 题目列表
             // [
             //     {
@@ -83,6 +94,10 @@
             list: {
                 type: Array,
                 required: true,
+            },
+            showToggle: {
+                type: Boolean,
+                default: false
             }
         },
         data() {
@@ -141,7 +156,19 @@
             },
             // 提交
             submit() {
-                alert('提交')
+                this.$vux.toast.show({
+                    text: '已提交',
+                    // onShow () {
+                    //     console.log('Plugin: I\'m showing')
+                    // },
+                    // onHide () {
+                    //     console.log('Plugin: I\'m hiding')
+                    //     _this.show9 = false
+                    // }
+                })
+
+                // this.disabled = 'disabled'
+                this.$emit('disabled')
             }
         },
         mounted() {

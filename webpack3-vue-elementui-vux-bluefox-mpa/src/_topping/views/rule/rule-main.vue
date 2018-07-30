@@ -3,17 +3,21 @@
 
         <user-exit></user-exit>
 
-        <div class="ruleIndex__info">
+        <div class="ruleIndex__info tc">
             <span class="ruleIndex__info_label">姓名: </span>
             <span class="ruleIndex__info_content">{{ username }}</span>
+            <span v-show="module!==0">
+                <span class="ruleIndex__info_label">得分: </span>
+                <span class="ruleIndex__info_content">{{ totalScores }} 分</span>
+            </span>
         </div>
 
         <img class="ruleIndex__bg" src="../../assets/images/index.jpg" alt="">
 
         <div class="ruleIndex__box">
-            <div class="ruleIndex__box_btn center" @click="viewRule('seconds')">争分夺秒</div>
-            <div class="ruleIndex__box_btn center" @click="viewRule('higher')">一比高下</div>
-            <div class="ruleIndex__box_btn center" @click="viewRule('narrow')">狭路相逢</div>
+            <div class="ruleIndex__box_btn center" @click="viewRule('seconds')">争分夺秒 <span v-show="module!==0"> {{typeScores1}} 分</span></div>
+            <div class="ruleIndex__box_btn center" @click="viewRule('higher')">一比高下 <span v-show="module!==0"> {{typeScores2}} 分</span></div>
+            <div class="ruleIndex__box_btn center" @click="viewRule('narrow')">狭路相逢 <span v-show="module!==0"> {{typeScores3}} 分</span></div>
             <div v-if="rankingVisible" class="ruleIndex__box_ranking center"></div>
         </div>
 
@@ -23,6 +27,7 @@
 </template>
 
 <script>
+    import {mapGetters} from 'vuex'
     import userExit from '../snippets/user-exit'
     import footerMask from '../snippets/footer-mask'
 
@@ -34,13 +39,20 @@
         data() {
             return {
                 username: '吴彦祖',
-                rankingVisible: false
+                rankingVisible: false,
+                module: 0,
+                totalScores: 0,
+                typeScores1: 0,
+                typeScores2: 0,
+                typeScores3: 0
             }
         },
+        computed: {
+            ...mapGetters({
+                progress: 'progress'
+            })
+        },
         methods: {
-            ready() {
-
-            },
             // 查看规则
             viewRule(type) {
                 this.$router.push({
@@ -49,10 +61,21 @@
                         type: type
                     }
                 })
-            }
+            },
+            // initProgress() {
+            //     getProgress().then(res => {
+            //         this.$store.dispatch('UpdateProgress', {
+            //             module: res.moduleType,
+            //             group: res.subType,
+            //             problem: res.number
+            //         })
+            //     })
+            // },
         },
         mounted() {
-            this.ready()
+            this.module = this.progress.module
+
+            // this.initProgress()
         }
     }
 </script>
@@ -104,7 +127,6 @@
             }
         }
     }
-
 
     /* iphone5等小屏幕 */
     @media screen

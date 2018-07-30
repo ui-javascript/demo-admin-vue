@@ -1,6 +1,9 @@
 <template>
     <div>
-        <router-view keep-alive></router-view>
+        <router-view
+            @sse="sse()"
+        >
+        </router-view>
     </div>
 </template>
 
@@ -9,36 +12,27 @@
     import { getToken } from './router/_auth'
     import { getProgress } from "./api/questions"
 
-
     export default {
-
         data() {
             return {
                 connection: null,
-                //url: "http://192.168.1.149:5058/chatHub",
-                //url:"http://localhost:51782/chatHub",
-                url:"http://192.168.1.149:5060/notificationhub"
+                url:"http://172.16.11.175:5060/notificationhub"
             }
         },
         methods: {
-            initProgress() {
-                getProgress().then(res => {
-                    this.$store.dispatch('UpdateProgress', {
-                        module: res.moduleType,
-                        group: res.subType,
-                        problem: res.number
-                    })
-                })
-
-            },
-
             // 开始SSE
             start() {
-                this.connection = new signalR.HubConnectionBuilder()
+                // 关于在vue项目中,刷新页面时websocket断开连接的解决办法
+                // https://blog.csdn.net/weixin_42235377/article/details/80491646
+
+                this.$socket = new signalR.HubConnectionBuilder()
                     .withUrl(this.url,{ accessTokenFactory: () => getToken()})
                     .configureLogging(signalR.LogLevel.Information)
                     .build();
-                this.connection.start().catch(err => console.error(err.toString()));
+
+                // console.log(this.$socket)
+
+                this.$socket.start().catch(err => console.error(err.toString()));
             },
 
             // 发送信息
@@ -56,7 +50,7 @@
                 let router = this.$router;
 
                 // 争分夺秒
-                this.connection.on("ReceiveMessage", (subType) => {
+                this.$socket.on("ReceiveMessage", (subType) => {
                     // const msg = message.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
                     // const encodedMsg = user + " says " + msg;
                     // const li = document.createElement("li");
@@ -82,38 +76,65 @@
                 });
 
                 // 一比高下
-                this.connection.on("ReceiveMessageFromGroup", (questionNumber) => {
-                    console.log(problemType, questionNumber);
+                this.$socket.on("ReceiveMessageFromGroup", (questionNumber) => {
+                    console.log('一比高下' + questionNumber);
+
+                    this.$store.dispatch('UpdateProgress', {
+                        module: 2,
+                        group: 1,
+                        problem: questionNumber
+                    })
 
                     // debugger
                     router.push({
-                        path: '/seconds/question',
+                        path: '/higher/question',
                         query: {
-                            subType: questionNumber
+                            num: questionNumber
+                        }
+                    })
+                });
+
+                // 一比高下答题失败的
+                this.$socket.on("ReceiveMessageFromGroupFailure", (questionNumber) => {
+                    this.$store.dispatch('UpdateProgress', {
+                        module: 2,
+                        group: 1,
+                        problem: questionNumber
+                    })
+
+                    // debugger
+                    router.push({
+                        path: '/higher/question',
+                        query: {
+                            num: questionNumber
                         }
                     })
                 });
 
                 // 狭路相逢
-                this.connection.on("ReceiveMessageForType3", (questionNumber) => {
-
-                    // debugger;
-                    // console.log(questionNumber);
+                this.$socket.on("ReceiveMessageForType3", (questionNumber) => {
                     router.push({
-                        path: '/seconds/question'
+                        path: '/seconds/question',
+                        query: {
+                            num: questionNumber
+                        }
                     })
                 });
             },
+            sse() {
+                this.start()
+                this.receiveMessage()
+            }
         },
         created() {
             // this.start()
             // this.receiveMessage()
         },
         mounted() {
-            this.initProgress()
 
-            this.start()
-            this.receiveMessage()
+            if(getToken() && !this.$socket) {
+                this.sse()
+            }
         }
     }
 </script>

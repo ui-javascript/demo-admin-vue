@@ -18,9 +18,16 @@ Vue.prototype.$axios = axios
 import qs from 'qs'
 Vue.prototype.$qs = qs
 
+// Toast
+import { ToastPlugin } from 'vux'
+Vue.use(ToastPlugin)
+
 // 路由
 import router from './router'
 import store from './store'
+
+// socket
+Vue.prototype.$socket = null
 
 // permission control
 import './router/permission'

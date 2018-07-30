@@ -3,9 +3,10 @@
 
         <header-exit></header-exit>
 
-        一比高下
 
-        <router-view keep-alive></router-view>
+        <keep-alive>
+            <router-view v-if="isRouterAlive"></router-view>
+        </keep-alive>
 
     </div>
 </template>
@@ -18,11 +19,21 @@
         },
         data() {
             return {
-
+                isRouterAlive: true
+            }
+        },
+        provide() {
+            return {
+                reload: this.reload()
             }
         },
         methods: {
-
+            reload() {
+                this.isRouterAlive = false
+                this.$nextTick(() => {
+                    this.isRouterAlive = true
+                })
+            }
         }
     }
 </script>

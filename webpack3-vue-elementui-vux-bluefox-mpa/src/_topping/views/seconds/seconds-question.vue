@@ -2,11 +2,11 @@
     <div>
 
         <div class="ruleIndex__count">
-                <countdown-svg-circle
-                        :setTimer="setTimer"
-                        :endCallBack="'forceSubmit'"
-                        @forceSubmit="forceSubmit()"
-                ></countdown-svg-circle>
+            <countdown-svg-circle
+                    :setTimer="setTimer"
+                    :endCallBack="'forceSubmit'"
+                    @forceSubmit="forceSubmit()">
+            </countdown-svg-circle>
         </div>
 
         <radio-list
@@ -14,6 +14,7 @@
             :module="module"
             :list="list"
             :disabled="disabled"
+            :showToggle="true"
         ></radio-list>
 
     </div>
@@ -56,6 +57,7 @@
                 disabled: false
             }
         },
+        // Vue刷新当前页面
         // https://www.jb51.net/article/140433.htm
         inject: ['reload'],
         computed: {
@@ -103,7 +105,7 @@
             },
             // 强制提交
             forceSubmit() {
-                console.log('强制提交')
+                // console.log('强制提交')
 
                 // 禁止答题
                 this.disabled = 'disabled'
@@ -122,7 +124,7 @@
         watch: {
             // 路由变化的时候刷新
             '$route' (to, from) {
-                this.reload()
+                this.reload
                 // this.updateList()
             }
         },

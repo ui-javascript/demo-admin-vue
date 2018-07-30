@@ -27,7 +27,6 @@
 
         <footer-mask></footer-mask>
 
-
     </div>
 </template>
 
@@ -52,6 +51,8 @@
                     username: this.username,
                     password: this.password
                 }).then(() => {
+                    this.$emit('sse')
+
                     this.$router.push({
                         path: '/rule'
                     })
