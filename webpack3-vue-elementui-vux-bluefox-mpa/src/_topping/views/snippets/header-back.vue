@@ -1,6 +1,8 @@
 <template>
     <div class="headerBack relative">
-        <app-back></app-back>
+        <app-back
+            :backRouterName="backRouterName">
+        </app-back>
 
         <img class="headerBack__bg" src="../../assets/images/header.png" alt="">
     </div>
@@ -13,6 +15,12 @@
         components: {
             appBack
         },
+        props: {
+            backRouterName: {
+                type: String,
+                default: ''
+            },
+        },
         data() {
             return {
 
@@ -20,6 +28,9 @@
         },
         methods: {
 
+        },
+        mounted() {
+            console.log(this.backRouterName)
         }
     }
 </script>

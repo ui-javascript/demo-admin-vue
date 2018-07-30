@@ -13,22 +13,26 @@
 
     export default {
         name: "appBack",
-        prop: {
+        props: {
             // 返回路由
             backRouterName: {
-                type: String
+                type: String,
+                default: ''
             }
         },
         methods: {
             back() {
                 if (this.backRouterName) {
                     this.$router.push({
-                        name: this.backRouterName
+                        path: this.backRouterName
                     })
                 } else {
                     this.$router.go(-1)
                 }
             }
+        },
+        mounted() {
+            console.log(this.backRouterName)
         }
     }
 </script>

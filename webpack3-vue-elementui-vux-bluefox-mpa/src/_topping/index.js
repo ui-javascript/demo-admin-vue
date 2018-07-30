@@ -32,7 +32,6 @@ import App from './App'
 import FastClick from 'fastclick'
 FastClick.attach(document.body)
 
-
 // require('../../static/js/socket.io')
 
 new Vue({

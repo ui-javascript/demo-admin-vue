@@ -19,8 +19,13 @@
 
             <div class="radioList__list">
                 <div v-for="(item, index) in list[curr].options">
-                    <input :id='"demo"+index' :value="optionsMap(index)" type="radio" @change="change(list[curr], index)" v-model="list[curr].checked">
-                    <label
+                    <input :id='"demo"+index'
+                           :value="optionsMap(index)"
+                           type="radio"
+                           @change="change(list[curr], index)"
+                           v-model="list[curr].checked"
+                           :disabled="disabled"
+                    ><label
                             class="radioList__label center"
                             :class="list[curr].checked==optionsMap(index) ? 'active' : '' "
                             :for="'demo'+index">
@@ -31,12 +36,11 @@
             </div>
 
 
-            <div class="radioList__operate">
+            <div class="radioList__operate tc">
                 <button class="radioList__btn" v-show="this.curr!==0" type="button" @click="prev()">上一题</button>
                 <button class="radioList__btn" v-show="this.curr!==this.list.length-1" type="button" @click="next()">下一题
                 </button>
-                <button class="radioList__btn" v-show="this.curr===this.list.length-1" type="button" @click="submit()">提交
-                </button>
+                <!--<button class="radioList__btn" v-show="this.curr===this.list.length-1" type="button" @click="submit()">提交</button>-->
             </div>
         </div>
     </div>
@@ -60,6 +64,7 @@
                 type: String,
                 required: true
             },
+            disabled: Boolean,
             // 题目列表
             // [
             //     {

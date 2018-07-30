@@ -8,9 +8,25 @@ import { getToken } from './_auth' // 验权
 
 // 不重定向白名单
 const whiteList = ['/login']
+const moduleList = ['/seconds', '/higher', '/narrow']
 
 router.beforeEach((to, from, next) => {
+
     if (getToken()) {
+
+        let progress = store.getters.progress
+        if (progress.module !== 0) {
+            if (to.path.indexOf(moduleList[progress.module-1]) !== -1 || to.path === '/rule/main' || to.path === '/notice') {
+                next()
+            }
+            else {
+                next({
+                    path: moduleList[progress.module-1]
+                })
+            }
+        }
+
+        // 登录情况下
         if (to.path === '/login') {
             next({ path: '/' })
             // NProgress.done()
@@ -36,7 +52,13 @@ router.beforeEach((to, from, next) => {
 
             next()
         }
-    } else {
+    }
+
+    // 未登录时
+    else {
+
+        // next('/login')
+
         if (whiteList.indexOf(to.path) !== -1) {
             next()
         } else {

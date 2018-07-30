@@ -60,7 +60,9 @@ const constantRouterMap = [
                 path: 'question',
                 component: _import('seconds/seconds-question'),
                 name: 'seconds_question',
-                meta: {}
+                meta: {
+                    keepAlive: false
+                }
             }
         ]
     },

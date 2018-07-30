@@ -74,7 +74,8 @@
         data () {
             return {
                 timeLeft: 0,
-                dashLen: 0
+                dashLen: 0,
+                interval: null
             }
         },
         computed: {
@@ -94,7 +95,18 @@
                 return this.dashLen - this.timeLeft / this.setTimer * this.dashLen
             }
         },
+        methods: {
+            clear() {
+                clearInterval(this.interval);
+                this.interval = null;
+            }
+        },
+        beforeDestroy() {
+            this.clear()
+        },
         mounted () {
+            this.clear()
+
             this.timeLeft = this.setTimer
             this.dashLen = (100 - this.border / 2) * Math.PI * 2
 

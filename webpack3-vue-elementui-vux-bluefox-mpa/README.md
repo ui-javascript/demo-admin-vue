@@ -5,6 +5,12 @@
 - 移除了原作者说的二级目录支持，看着烦
 - 配了postcss-px2rem插件 vue视图文件里的px会被转化成rem 谨慎!!!
 
+# 遇到的问题
+
+- axios解决OPTIONS问题，导致后台无法接收到数据 
+    - https://blog.csdn.net/revival_liang/article/details/79016895
+    - 两次请求 后台设置
+    
 # TODO 
 
 - 开发时的路径矫正

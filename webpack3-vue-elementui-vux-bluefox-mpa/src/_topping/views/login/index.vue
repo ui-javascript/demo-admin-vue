@@ -42,13 +42,12 @@
         },
         data() {
             return {
-                username: '',
-                password: ''
+                username: '17816869505',
+                password: '17816869505'
             }
         },
         methods: {
             submit() {
-
                 this.$store.dispatch('Login', {
                     username: this.username,
                     password: this.password
@@ -57,7 +56,7 @@
                         path: '/rule'
                     })
                 })
-
+                
             }
         }
     }

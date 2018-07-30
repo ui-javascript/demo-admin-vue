@@ -7,7 +7,10 @@
         <router-link to="/higher">一比高下</router-link>
         <router-link to="/narrow">狭路相逢</router-link>
 
-        <header-exit></header-exit>
+        <header-back
+            :backRouterName="backRouterName"
+
+        ></header-back>
 
         <!--<router-link to="/404">404</router-link>-->
         <!--<router-link to="/login" class="ml-5">登录</router-link>-->
@@ -28,13 +31,14 @@
 
 <script>
 
-    import HeaderExit from '../snippets/header-exit'
+    import { mapGetters } from 'vuex'
+    import HeaderBack from '../snippets/header-back'
     import CardNotice from '../snippets/card-notice'
     import {getScore, getGrade} from '../../api/grades'
 
     export default {
         components: {
-            HeaderExit,
+            HeaderBack,
             CardNotice
         },
         data() {
@@ -43,14 +47,20 @@
                 wrong: 0,
                 curr: 0,
                 total: 0,
-                ranking: 0
+                ranking: 0,
+                backRouterName: '/rule/main'
             }
+        },
+        computed: {
+            ...mapGetters({
+                progress: 'progress',
+            })
         },
         methods: {
 
         },
         mounted() {
-            let type = this.$route.query.type
+            let type = this.progress.type
 
             // debugger
             getScore({ type: type }).then(res => {
