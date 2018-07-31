@@ -168,7 +168,7 @@
                 })
 
                 // this.disabled = 'disabled'
-                this.$emit('disabled')
+                this.$emit('forbidChoose')
             }
         },
         mounted() {

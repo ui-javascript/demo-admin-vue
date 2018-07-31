@@ -9,11 +9,18 @@
 
             <el-row class="item">
                 <el-col :span="18">
-                    <p>{{ question.title }}</p>
-                    <p>
-                        {{ question.options }}
-                    </p>
+                    <p>{{ question.problemName }}</p>
+
+                    <div v-if="question.problemFeatures">
+                        <p v-for="(item, index) in question.problemFeatures.split('$')">
+                            {{ item }}
+                        </p>
+                    </div>
+
+
+
                 </el-col>
+
                 <el-col :span="6">
                     {{ question.answer }}
                 </el-col>
@@ -22,7 +29,7 @@
             <el-row class="item">
                 <p>答对的选手</p>
                 <div class="CardDetails__box border-box" id="container">
-                    <div class="CardDetails__ball inline-block" v-for="(item, index) in question.rightList"
+                    <div class="CardDetails__ball inline-block" v-for="(item, index) in question.numberArr"
                          :key="index">
                         {{ item }}
                     </div>
@@ -38,9 +45,6 @@
 </template>
 
 <script>
-    // import PerfectScrollbar from 'perfect-scrollbar'
-
-
 
     export default {
         name: "card-questions",
@@ -50,28 +54,24 @@
             },
             question: {
                 type: Object
-            }
+            },
+            // curr: {
+            //     type: Number
+            // },
+            // problemId: {
+            //     type: String,
+            //     required: true
+            // }
         },
         data() {
-            return {}
-        },
-        methods: {
-            // 查看
-            viewDetails(index) {
-                this.$router.push({
-                    name: 'seconds_details',
-                    query: {
-                        number: index
-                    }
-                })
+            return {
             }
         },
+        methods: {
+
+        },
         mounted() {
-            // const ps = new PerfectScrollbar('#container', {
-            //     wheelSpeed: 2,
-            //     wheelPropagation: true,
-            //     minScrollbarLength: 20
-            // })
+            // this.question.options = this.question.problemFeatures.split('$')
         }
     }
 </script>
@@ -91,9 +91,6 @@
             }
 
             box-sizing: border-box;
-
-            /*margin-left: 20px;*/
-            /*margin-right: 20px;*/
 
             width: 100%;
             top: 80px;

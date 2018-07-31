@@ -4,15 +4,15 @@
         <div class="container clearfix">
             <div class="fl">
                 <countdown-svg-circle
-                        :setTimer=5*1000
+                        :setTimer="setTimer"
                         :endCallBack="'forceSubmit'"
                         @forceSubmit="forceSubmit()"
                 ></countdown-svg-circle>
 
                 <card-position
-                        :badge="badge"
-                        :title="title"
-                        :group="list.length"
+                    :badge="badge"
+                    :title="title"
+                    :group="list.length"
                 ></card-position>
             </div>
 
@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="secondsQuestion__operate  clearfix">
-                    <el-button class="fr" type="primary" @click="viewDetails()">答题详情</el-button>
+                    <el-button class="fr" type="primary" @click="viewDetails()" :disabled="disabled">答题详情</el-button>
                 </div>
 
             </div>
@@ -38,7 +38,8 @@
     import CountdownSvgCircle from '~m/Countdown/CountdownSvgCircle'
     import CardPosition from '../common/snippets/card-position'
 
-    import { getQuestions } from "../../service/question"
+    import { NUM_ARR } from "../../assets/js/constant"
+    import { getQuestions } from "../../service/screen"
 
     export default {
         name: "seconds-question",
@@ -49,14 +50,19 @@
         data() {
             return {
                 badge: '争分夺秒',
-                title: '第一组',
+                title: '一',
                 group: 0,
-                list: []
+                list: [],
+                disabled: true,
+                subType: 1,
+                setTimer: 0
             }
         },
         methods: {
+
             // 倒计时结束
             forceSubmit() {
+                this.disabled = false
                 // this.$alert('这是一段内容', '标题名称', {
                 //     confirmButtonText: '确定',
                 //     callback: action => {
@@ -70,16 +76,27 @@
             // 查看详情
             viewDetails() {
                 this.$router.push({
-                    name: 'seconds_overview'
+                    name: 'seconds_overview',
+                    query: {
+                        subType: this.subType
+                    }
                 })
             }
         },
         mounted() {
+
+            this.subType = this.$route.query.subType || 1
+            this.title = NUM_ARR[this.subType]
+
             getQuestions({
-                subType: 1
+                subType: this.subType
             }).then(res => {
                 console.log(res)
                 this.list = res
+
+                this.$nextTick(() => {
+                    this.setTimer = 3 * 1000
+                })
             }).catch()
         }
     }

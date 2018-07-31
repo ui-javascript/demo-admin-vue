@@ -14,6 +14,7 @@
             :module="module"
             :list="list"
             :disabled="disabled"
+            @forbidChoose="forbidChoose"
             :showToggle="true"
         ></radio-list>
 
@@ -123,7 +124,10 @@
                         }
                     })
                 }
-
+            },
+            // 禁止选择
+            forbidChoose() {
+                this.disabled = 'disabled'
             }
         },
         watch: {

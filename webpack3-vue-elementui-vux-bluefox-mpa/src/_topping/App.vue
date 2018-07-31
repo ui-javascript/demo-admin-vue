@@ -57,6 +57,8 @@
                     // li.textContent = encodedMsg;
                     // document.getElementById("messagesList").appendChild(li);
 
+                    debugger
+
                     this.$store.dispatch('UpdateProgress', {
                         module: 1,
                         group: subType,

@@ -43,7 +43,7 @@
     // 可以优化?
     // https://blog.csdn.net/qq_33594380/article/details/79670400
 
-    import { getRanking } from '../../../service/ranking'
+    import { getRanking } from '../../../service/screen'
 
     export default {
         name: "ranking",

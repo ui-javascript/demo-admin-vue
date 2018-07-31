@@ -37,7 +37,7 @@
         },
         data() {
             return {
-                module: '争分夺秒',
+                module: '一比高下',
                 list: [
                     // {
                     //     id: '',

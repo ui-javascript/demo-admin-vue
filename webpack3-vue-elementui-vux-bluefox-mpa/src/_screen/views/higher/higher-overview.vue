@@ -17,7 +17,7 @@
 </template>
 
 <script>
-    import {getPassUser} from "../../service/question"
+    import {getPassUser} from "../../service/screen"
     import CardLocale from '../common/snippets/card-locale'
 
     export default {
@@ -31,10 +31,14 @@
                 title: '题目会巴拉巴黎',
                 right: 89,
                 allList: [1, 2, 3, 34, 35, 36, 37, 38, 49, 100],
-                rightList: [1, 2, 3, 37, 38]
+                rightList: [1, 2, 3, 37, 38],
+                num: 0
             }
         },
         mounted() {
+
+            this.num = this.$route.query.num || 1
+
             getPassUser({
                 problemID: 'c2bec9d3-6119-4d18-9286-e497e14a8971'
             }).then(res => {

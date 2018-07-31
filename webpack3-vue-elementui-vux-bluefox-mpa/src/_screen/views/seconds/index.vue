@@ -1,20 +1,30 @@
 <template>
     <div class="secondsIndex">
-        <common-header></common-header>
+        <!--<common-header></common-header>-->
 
         <div class="container center">
-            <router-view></router-view>
+            <!--<keep-alive>-->
+                <router-view></router-view>
+            <!--</keep-alive>-->
         </div>
     </div>
 </template>
 
 <script>
     import CommonHeader from '../common/header'
+    import {mapGetters} from 'vuex'
+    import {getOverview} from "../../service/screen"
 
     export default {
         name: "index",
         components: {
             CommonHeader
+        },
+        computed: {
+            ...mapGetters({
+                progress: 'progress',
+                problemList: 'problemList'
+            })
         },
         mounted() {
             // login('17816869505', '17816869505').then(res => {
@@ -25,6 +35,16 @@
             //     })
             // }).catch()
 
+            if (!this.problemList.length) {
+                // 获取题目
+                getOverview({
+                    subType: this.progress.group
+                }).then(res => {
+
+                    // 全局更新
+                    this.$store.dispatch('UpdateProblemList', res)
+                })
+            }
         }
     }
 </script>

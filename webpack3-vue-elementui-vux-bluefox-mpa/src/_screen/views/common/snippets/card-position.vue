@@ -5,7 +5,7 @@
         </div>
 
         <div class="cardPosition__title absolute">
-            {{ title }}
+            第{{ title }}组
         </div>
 
         <div class="cardPosition__group absolute">

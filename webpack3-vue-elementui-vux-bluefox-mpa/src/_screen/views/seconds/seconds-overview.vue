@@ -3,8 +3,9 @@
         <div class="box">
             <card-overview
                 :badge="badge"
-                :list="list">
-            </card-overview>
+                :list="problemList"
+                @view="view"
+            ></card-overview>
 
             <div class="clearfix mt-10">
                 <el-button class="fr" type="primary">下一组</el-button>
@@ -15,7 +16,9 @@
 
 <script>
     import CardOverview from '../common/snippets/card-overview'
-    import { getOverview } from "../../service/question"
+    import {mapGetters} from 'vuex'
+    import {getOverview} from "../../service/screen"
+
 
     export default {
         name: "seconds-overview",
@@ -25,28 +28,34 @@
         data() {
             return {
                 badge: '争分夺秒',
-                list: [
-                    {
-                        question: '问题1',
-                        answer: 'A',
-                        right: 10,
-                        total: 100
-                    },
-                    {
-                        question: '问题2',
-                        answer: 'B',
-                        right: 10,
-                        total: 100
-                    }
-
-                ]
+                subType: 1
             }
         },
+        computed: {
+            ...mapGetters({
+                progress: 'progress',
+                problemList: 'problemList'
+            })
+        },
+        methods: {
+          view(data) {
+              this.$router.push({
+                  path: '/seconds/details',
+                  query: {
+                      num: data.index
+                  }
+              })
+          }
+        },
         mounted() {
+            this.subType = this.$route.query.subType
+
             getOverview({
-                subType: 1
+                subType: this.subType
             }).then(res => {
-                this.list = res
+
+                // 全局更新
+                this.$store.dispatch('UpdateProblemList', res)
             })
         }
 

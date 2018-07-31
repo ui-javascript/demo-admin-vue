@@ -6,7 +6,13 @@ const app = {
             opened: !+Cookies.get('sidebarStatus'),
             withoutAnimation: false
         },
-        device: 'desktop'
+        device: 'desktop',
+        progress: {
+            module: 0,
+            group: 0,
+            problem: 0
+        },
+        problemList: []
     },
     mutations: {
         TOGGLE_SIDEBAR: state => {
@@ -25,6 +31,20 @@ const app = {
         },
         TOGGLE_DEVICE: (state, device) => {
             state.device = device
+        },
+        UPDATE_PROGRESS: (state, progress) => {
+            if (progress.module) {
+                state.progress.module = progress.module
+            }
+            if (progress.group) {
+                state.progress.group = progress.group
+            }
+            if (progress.problem) {
+                state.progress.problem = progress.problem
+            }
+        },
+        UPDATE_PROBLEM_LIST: (state, problemList) => {
+            state.problemList = problemList
         }
     },
     actions: {
@@ -36,6 +56,12 @@ const app = {
         },
         ToggleDevice({ commit }, device) {
             commit('TOGGLE_DEVICE', device)
+        },
+        UpdateProgress({ commit }, progress) {
+            commit('UPDATE_PROGRESS', progress)
+        },
+        UpdateProblemList({ commit }, problemList) {
+            commit('UPDATE_PROBLEM_LIST', problemList)
         }
     }
 }

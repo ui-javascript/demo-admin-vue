@@ -40,12 +40,16 @@
         methods: {
             // 查看
             viewDetails(index, item) {
-                this.$router.push({
-                    name: 'seconds_details',
-                    query: {
-                        number: index,
-                        item: item
-                    }
+                // this.$router.push({
+                //     name: 'seconds_details',
+                //     query: {
+                //         number: index,
+                //         item: item
+                //     }
+                // })
+                this.$emit('view', {
+                    index,
+                    item
                 })
             }
         },

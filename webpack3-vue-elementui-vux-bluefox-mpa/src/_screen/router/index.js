@@ -69,12 +69,12 @@ const constantRouterMap = [
             {
                 path: 'question',
                 component: _import('higher/higher-question'),
-                name: 'higher-question'
+                name: 'higher_question'
             },
             {
                 path: 'overview',
                 component: _import('higher/higher-overview'),
-                name: 'higher-overview'
+                name: 'higher_overview'
             }
         ]
     },

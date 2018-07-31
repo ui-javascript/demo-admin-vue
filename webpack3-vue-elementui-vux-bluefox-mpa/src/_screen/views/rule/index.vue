@@ -4,21 +4,21 @@
 
         <div class="container center clearfix">
             <card-attention
-                class="fl"
-                :title="titleList[type]">
+                    class="fl"
+                    :title="titleList[type]">
                 <el-button type="primary" @click="startAnswer()">开始答题</el-button>
             </card-attention>
 
             <div class="ruleIndex__box fr box-dashed" v-html="ruleList[type]"></div>
 
         </div>
-
     </div>
 </template>
 
 <script>
     import CommonHeader from '../common/header'
     import CardAttention from '../common/snippets/card-attention'
+    import { pushType1, pushType2, pushType3 } from '../../service/push'
 
     export default {
         name: "index",
@@ -50,14 +50,50 @@
             CardAttention
         },
         methods: {
-          startAnswer() {
-            this.$router.push({
-                name: `${this.type}_question`
-            })
-          }
+            startAnswer() {
+
+                let type = this.type
+                if (type === 'seconds') {
+                    this.$store.dispatch('UpdateProgress', {
+                        module: 1,
+                        group: 1,
+                        problem: 1
+                    })
+
+                    pushType1({
+                        subType: 1
+                    }).then().catch()
+                }
+                else if (type === 'higher') {
+                    this.$store.dispatch('UpdateProgress', {
+                        module: 2,
+                        group: 1,
+                        problem: 1
+                    })
+
+                    pushType2({
+                        questionNumber: 1
+                    }).then().catch()
+                }
+                else if (type === 'narrow') {
+                    this.$store.dispatch('UpdateProgress', {
+                        module: 3,
+                        group: 1,
+                        problem: 1
+                    })
+
+                    pushType3({
+                        questionNumber: 1
+                    }).then().catch()
+                }
+
+                this.$router.push({
+                    name: `${this.type}_question`
+                })
+            }
         },
         mounted() {
-            this.type = this.$route.query.type;
+            this.type = this.$route.query.type || 'seconds';
         },
     }
 </script>

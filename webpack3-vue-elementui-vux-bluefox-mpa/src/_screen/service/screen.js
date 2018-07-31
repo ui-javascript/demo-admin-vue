@@ -7,7 +7,7 @@ export function getQuestions(params) {
         method: 'get',
 
         // 注意是data
-        data: params
+        params: params
     })
 }
 
@@ -18,27 +18,26 @@ export function getOverview(params) {
         method: 'get',
 
         // 注意是data
-        data: params
+        params: params
     })
 }
 
 // 获取单题答题详情(包含争分夺秒，一比高下，狭路相逢)
-export function getDetails(params) {
+export function getSingle(params) {
     return request({
         url: '/screen/singleProblemDetail',
         method: 'get',
-        // 注意是data
-        data: params
+        params: params
     })
 }
 
 // 一道题目的详细信息（一比高下和狭路相逢）
-export function getProblem(params) {
+export function getOneQuestion(params) {
     return request({
         url: '/screen/problemDetail',
         method: 'get',
         // 注意是data
-        data: params
+        params: params
     })
 }
 
@@ -48,9 +47,17 @@ export function getPassUser(params) {
         url: '/screen/passUserCount',
         method: 'get',
         // 注意是data
-        data: params
+        params: params
     })
 }
 
 
-//
+// 获取用户排名
+export function getRanking(params) {
+    return request({
+        url: '/screen/userRanking',
+        method: 'get',
+        // 注意是data
+        params: params
+    })
+}
