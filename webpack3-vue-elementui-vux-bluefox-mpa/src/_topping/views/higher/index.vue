@@ -4,7 +4,7 @@
         <header-exit></header-exit>
 
         <keep-alive>
-            <router-view v-if="isRouterAlive"></router-view>
+            <router-view :key="$route.fullPath" v-if="isRouterAlive"></router-view>
         </keep-alive>
 
     </div>

@@ -39,7 +39,7 @@ var defaultConfig = {
 
         // 公共资源位置
         // 也可以改成 ../
-        assetsPublicPath: '/',
+        assetsPublicPath: './',
 
         // 视图文件输出位置
         // 也可以改成 templates

@@ -41,8 +41,8 @@
         },
         data() {
             return {
-                username: '17816869505',
-                password: '17816869505'
+                username: '',
+                password: ''
             }
         },
         methods: {

@@ -101,6 +101,7 @@
                     })
 
                 }
+
                 else if (group === 5) {
                     this.$router.push({
                         path: '/rule',

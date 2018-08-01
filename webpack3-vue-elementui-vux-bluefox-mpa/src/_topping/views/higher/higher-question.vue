@@ -59,6 +59,7 @@
             reset() {
                 this.setTimer = 0
                 this.disabled = false
+                this.num = this.$route.query.num || 1
             },
             updateList() {
                 // 注意不要加括号
@@ -67,22 +68,30 @@
 
                 let params = {
                     // problemType: this.progress.module,
-                    problemType: this.progress.module,
-                    questionNumber: this.progress.problem
+                    problemType: 2,
+                    questionNumber: this.num
                 }
 
                 this.list = []
                 let self = this
+                
                 getProblem(params).then(res => {
+
+                    debugger
 
                     // console.log('倒计时' + res.countdown)
                     this.$nextTick(() => {
-                        self.setTimer = res.countdown * 1000
+
+
+                        // self.setTimer = res.countdown * 1000
+                        self.setTimer = 10 * 1000
 
                         // 测试
                         if (self.setTimer < 20 * 1000) {
                             self.setTimer = 20 * 1000
                         }
+
+                        debugger
 
                         if (res.problemFeatures) {
                             let options = res.problemFeatures.split('$')
@@ -93,6 +102,8 @@
                                 options: options,
                                 checked: res.submitAnswer
                             })
+
+                            debugger
                         }
 
                     })
@@ -108,7 +119,7 @@
                 // 禁止答题
                 this.disabled = 'disabled'
 
-                if (this.progress.problem > 4) {
+                if (this.num >= 10) {
                     this.$router.push({
                         path: '/notice',
                         query: {

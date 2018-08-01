@@ -71,7 +71,8 @@
                 list: null,
                 disabled: true,
                 num: 1,
-                setTimer: 0
+                setTimer: 0,
+                problemId: ''
             }
         },
         inject: ['reload'],
@@ -101,10 +102,12 @@
 
             // 查看详情
             viewDetails() {
+                debugger
+
                 this.$router.push({
-                    name: 'higher_overview',
+                    path: '/narrow/overview',
                     query: {
-                        num: this.num
+                        id: this.problemId
                     }
                 })
             },
@@ -118,6 +121,9 @@
                     questionNumber: this.num
                 }).then(res => {
                     this.list = res.problem
+                    debugger
+
+                    this.problemId = res.problem.problemID
 
                     this.$nextTick(() => {
                         // this.setTimer = res.countdown
@@ -163,8 +169,7 @@
             }
         },
         mounted() {
-            this.num = this.$route.query.num || 1
-
+            this.num = parseInt(this.$route.query.num) || 1
 
             // 获取题目
             this.$nextTick(() => {

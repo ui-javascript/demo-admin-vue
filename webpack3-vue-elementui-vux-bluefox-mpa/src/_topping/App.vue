@@ -107,7 +107,6 @@
                         problem: questionNumber
                     })
 
-                    // debugger
                     router.push({
                         path: '/higher/question',
                         query: {
@@ -134,6 +133,8 @@
                     })
                 });
             },
+
+            // SSE
             sse() {
                 this.start()
                 this.receiveMessage()

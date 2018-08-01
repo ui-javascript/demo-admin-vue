@@ -111,14 +111,16 @@
 
                     this.$nextTick(() => {
                         // this.setTimer = res.countdown
-                        this.setTimer = 3 * 1000
+                        this.setTimer = 10 * 1000
                         this.disabled = 'disabled'
                     })
                 }).catch()
             },
+
             // 下一题
             nextQuestion() {
 
+                debugger
                 if (this.num < 10) {
                     this.num++
                     pushType2({
