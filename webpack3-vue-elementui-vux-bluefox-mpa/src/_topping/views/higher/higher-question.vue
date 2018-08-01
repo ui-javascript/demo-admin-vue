@@ -16,7 +16,7 @@
                 :module="module"
                 :list="list"
                 :disabled="disabled"
-                @disabled="forbidChoose()"
+                @forbidChoose="forbidChoose()"
         ></radio-list>
 
     </div>

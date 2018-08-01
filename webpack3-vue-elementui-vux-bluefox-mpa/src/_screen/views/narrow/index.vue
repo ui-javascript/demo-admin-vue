@@ -2,7 +2,12 @@
     <div class="NarrowIndex">
         <common-header></common-header>
 
-        <router-view></router-view>
+        <div class="container center">
+            <keep-alive>
+                <router-view :key="$route.fullPath" v-if="isRouterAlive"></router-view>
+            </keep-alive>
+        </div>
+
     </div>
 </template>
 
@@ -13,7 +18,25 @@
         name: "index",
         components: {
             CommonHeader
-        }
+        },
+        data() {
+            return {
+                isRouterAlive: true
+            }
+        },
+        provide() {
+            return {
+                reload: this.reload()
+            }
+        },
+        methods: {
+            reload() {
+                this.isRouterAlive = false
+                this.$nextTick(() => {
+                    this.isRouterAlive = true
+                })
+            }
+        },
     }
 </script>
 

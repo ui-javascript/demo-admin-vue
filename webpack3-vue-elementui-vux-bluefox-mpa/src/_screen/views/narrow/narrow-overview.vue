@@ -6,7 +6,7 @@
 
 <script>
     export default {
-        name: "narrow-details"
+        name: "narrow-overview"
     }
 </script>
 

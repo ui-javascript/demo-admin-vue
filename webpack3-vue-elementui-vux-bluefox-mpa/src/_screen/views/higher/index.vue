@@ -3,7 +3,9 @@
         <common-header></common-header>
 
         <div class="container center">
-            <router-view></router-view>
+            <keep-alive>
+                <router-view :key="$route.fullPath" v-if="isRouterAlive"></router-view>
+            </keep-alive>
         </div>
     </div>
 </template>
@@ -15,7 +17,25 @@
         name: "index",
         components: {
             CommonHeader
-        }
+        },
+        data() {
+            return {
+                isRouterAlive: true
+            }
+        },
+        provide() {
+            return {
+                reload: this.reload()
+            }
+        },
+        methods: {
+            reload() {
+                this.isRouterAlive = false
+                this.$nextTick(() => {
+                    this.isRouterAlive = true
+                })
+            }
+        },
     }
 </script>
 

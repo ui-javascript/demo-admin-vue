@@ -32,7 +32,10 @@
                 </div>
 
                 <div class="HigherQuestion__operate  clearfix">
-                    <el-button class="fr" type="primary" @click="viewDetails()" :disabled="disabled">答题详情</el-button>
+                    <div class="fr">
+                        <el-button type="primary" @click="nextQuestion()" :disabled="disabled">{{ num !== 10 ? '下一题' : '狭路相逢' }}</el-button>
+                        <el-button type="primary" @click="viewDetails()" :disabled="disabled">查看</el-button>
+                    </div>
                 </div>
 
             </div>
@@ -48,6 +51,7 @@
 
     import { NUM_ARR } from "../../assets/js/constant"
     import { getOneQuestion } from "../../service/screen"
+    import { pushType2 } from "../../service/push"
 
     export default {
         name: "seconds-question",
@@ -66,6 +70,7 @@
                 setTimer: 0
             }
         },
+        inject: ['reload'],
         methods: {
 
             // 倒计时结束
@@ -85,27 +90,66 @@
             viewDetails() {
                 this.$router.push({
                     name: 'higher_overview',
-                    // query: {
-                    //     num: this.
-                    // }
+                    query: {
+                        num: this.num
+                    }
                 })
+            },
+            // 获取题目
+            getQuestion() {
+                this.title = NUM_ARR[this.num]
+
+                getOneQuestion({
+                    problemType: 2,
+                    questionNumber: this.num
+                }).then(res => {
+                    this.list = res[0]
+
+                    this.$nextTick(() => {
+                        this.setTimer = 3 * 1000
+                        this.disabled = 'disabled'
+                    })
+                }).catch()
+            },
+            // 下一题
+            nextQuestion() {
+
+                if (this.num < 10) {
+                    this.num++
+                    pushType2({
+                        questionNumber: this.num
+                    })
+
+                    this.$router.push({
+                        path: '/higher',
+                        query: {
+                            num: this.num
+                        }
+                    })
+                }
+                else {
+                    this.$router.push({
+                        path: '/rule',
+                        query: {
+                            type: 'narrow'
+                        }
+                    })
+                }
+
+            }
+        },
+        watch: {
+            // 路由变化的时候刷新
+            '$route' (to, from) {
+                this.reload
+                // this.updateList()
             }
         },
         mounted() {
-
             this.num = this.$route.query.num || 1
-            this.title = NUM_ARR[this.num]
 
-            getOneQuestion({
-                problemType: 2,
-                questionNumber: this.num
-            }).then(res => {
-                this.list = res[0]
-
-                this.$nextTick(() => {
-                    this.setTimer = 3 * 1000
-                })
-            }).catch()
+            // 获取题目
+            this.getQuestion()
         }
     }
 </script>

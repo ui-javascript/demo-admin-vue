@@ -118,8 +118,9 @@
 
                 // 狭路相逢
                 this.$socket.on("ReceiveMessageForType3", (questionNumber) => {
+
                     router.push({
-                        path: '/seconds/question',
+                        path: '/narrow/question',
                         query: {
                             num: questionNumber
                         }

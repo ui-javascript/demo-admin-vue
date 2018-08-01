@@ -13,6 +13,7 @@
                     :badge="badge"
                     :title="title"
                     :group="list.length"
+                    :showGroup="true"
                 ></card-position>
             </div>
 

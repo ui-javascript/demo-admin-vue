@@ -89,9 +89,9 @@ const constantRouterMap = [
                 name: 'narrow_question'
             },
             {
-                path: 'details',
-                component: _import('narrow/narrow-details'),
-                name: 'narrow_details'
+                path: 'overview',
+                component: _import('narrow/narrow-overview'),
+                name: 'narrow_overview'
             }
         ]
     },

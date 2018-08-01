@@ -10,7 +10,7 @@
         </card-locale>
 
         <div class="clearfix">
-            <el-button class="fr" type="primary">答题详情</el-button>
+            <el-button class="fr" type="primary" @click="back()">答题详情</el-button>
         </div>
 
     </div>
@@ -19,6 +19,7 @@
 <script>
     import {getPassUser} from "../../service/screen"
     import CardLocale from '../common/snippets/card-locale'
+
 
     export default {
         name: "higher-overview",
@@ -35,6 +36,11 @@
                 num: 0
             }
         },
+        methods: {
+            back() {
+                this.$router.go(-1)
+            }
+        },
         mounted() {
 
             this.num = this.$route.query.num || 1
@@ -42,7 +48,7 @@
             getPassUser({
                 problemID: 'c2bec9d3-6119-4d18-9286-e497e14a8971'
             }).then(res => {
-                console.log(res)
+                // console.log(res)
 
                 this.allList = res.allNumberArr
                 this.rightList = res.numberArr

@@ -10,13 +10,12 @@
 
             <el-row class="item" v-for="(item, index) in list" :key="index">
                 <el-col class="cursor" :span="16" @click.native="viewDetails(index, item)">{{item.problemName}}</el-col>
-                <el-col :span="4">{{item.answer}}</el-col>
-                <el-col :span="4"><span>{{item.rightCount}}</span><div class="slopingside inline-block"></div> <span>{{item.submitCount}}</span></el-col>
+                <el-col :span="4">{{ item.answer }}</el-col>
+                <el-col :span="4"><span>{{ item.rightCount }}</span><div class="slopingside inline-block"></div> <span>{{item.submitCount}}</span></el-col>
             </el-row>
         </div>
 
-        <div class="CardOverview__badge absolute tc">{{badge}}</div>
-
+        <div class="CardOverview__badge absolute tc">{{ badge }}</div>
     </div>
 </template>
 
