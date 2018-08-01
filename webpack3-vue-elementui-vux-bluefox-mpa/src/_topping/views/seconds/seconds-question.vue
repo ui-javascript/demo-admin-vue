@@ -86,15 +86,9 @@
                 getList(params).then(res => {
 
 
-                    // console.log('倒计时' + res.countdown)
                     this.$nextTick(() => {
-                        // self.setTimer = 10 * 1000
-
                         self.setTimer = res.countdown * 1000
-
-                        if (self.setTimer < 20 * 1000) {
-                            self.setTimer = 20 * 1000
-                        }
+                        self.setTimer = 5 * 1000
 
                         res.problemList.forEach(x => {
                             let options = x.problemFeatures.split('$')

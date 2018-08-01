@@ -75,7 +75,12 @@ const constantRouterMap = [
                 path: 'overview',
                 component: _import('higher/higher-overview'),
                 name: 'higher_overview'
-            }
+            },
+            {
+                path: 'details',
+                component: _import('higher/higher-details'),
+                name: 'higher_details'
+            },
         ]
     },
     {

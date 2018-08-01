@@ -86,7 +86,7 @@
         },
         mounted() {
 
-            this.subType = this.$route.query.subType || 1
+            this.subType = parseInt(this.$route.query.subType) || 1
             this.title = NUM_ARR[this.subType]
 
             getQuestions({
@@ -95,7 +95,8 @@
                 this.list = res.problems
 
                 this.$nextTick(() => {
-                    this.setTimer = res.countdown * 1000
+                    // this.setTimer = res.countdown * 1000
+                    this.setTimer = 5 * 1000
                 })
             }).catch()
         }

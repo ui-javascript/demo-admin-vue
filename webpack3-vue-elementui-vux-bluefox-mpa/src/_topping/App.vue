@@ -1,8 +1,6 @@
 <template>
     <div>
-        <router-view
-            @sse="sse()"
-        >
+        <router-view @sse="sse()">
         </router-view>
     </div>
 </template>
@@ -57,8 +55,6 @@
                     // li.textContent = encodedMsg;
                     // document.getElementById("messagesList").appendChild(li);
 
-                    debugger
-
                     this.$store.dispatch('UpdateProgress', {
                         module: 1,
                         group: subType,
@@ -79,8 +75,6 @@
 
                 // 一比高下
                 this.$socket.on("ReceiveMessageFromGroup", (questionNumber) => {
-                    debugger
-                    console.log('一比高下' + questionNumber);
 
                     this.$store.dispatch('UpdateProgress', {
                         module: 2,
@@ -99,7 +93,6 @@
 
                 // 一比高下答题失败的
                 this.$socket.on("ReceiveMessageFromGroupFailure", (questionNumber) => {
-                    debugger
 
                     this.$store.dispatch('UpdateProgress', {
                         module: 2,
@@ -118,7 +111,6 @@
                 // 狭路相逢
                 this.$socket.on("ReceiveMessageForType3", (questionNumber) => {
 
-                    debugger
                     this.$store.dispatch('UpdateProgress', {
                         module: 3,
                         group: 1,

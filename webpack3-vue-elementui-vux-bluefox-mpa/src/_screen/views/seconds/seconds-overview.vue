@@ -15,6 +15,7 @@
 </template>
 
 <script>
+
     import CardOverview from '../common/snippets/card-overview'
     import {mapGetters} from 'vuex'
     import {getOverview} from "../../service/screen"
@@ -48,7 +49,7 @@
             }
         },
         mounted() {
-            this.subType = this.$route.query.subType
+            this.subType = parseInt(this.$route.query.subType) || 1
 
             getOverview({
                 subType: this.subType

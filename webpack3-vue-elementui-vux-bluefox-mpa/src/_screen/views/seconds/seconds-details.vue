@@ -44,21 +44,20 @@
         data() {
             return {
                 badge: '争分夺秒',
-                // question:
-                // {
-                //     title: '问题1',
-                //     options: [
-                //         'A. 吴彦祖',
-                //         'B. 戚薇',
-                //         'C. 韩雪',
-                //         'D. 周润发',
-                //     ],
-                //     answer: 'A',
-                //     rightList: [10, 11, 22, 23, 38, 40, 41, 42, 43, 46, 47, 48, 50, 53, 56, 60, 62, 65, 67, 68, 69, 72, 76, 79, 82, 87, 89, 99],
-                // },
+                question:
+                {
+                    // title: '问题1',
+                    // options: [
+                    //     'A. 吴彦祖',
+                    //     'B. 戚薇',
+                    //     'C. 韩雪',
+                    //     'D. 周润发',
+                    // ],
+                    // answer: 'A',
+                    // rightList: [10, 11, 22, 23, 38, 40, 41, 42, 43, 46, 47, 48, 50, 53, 56, 60, 62, 65, 67, 68, 69, 72, 76, 79, 82, 87, 89, 99],
+                },
                 curr: 0,
                 id: '',
-                question: {}
             }
         },
         computed: {
@@ -116,7 +115,7 @@
         mounted() {
             // console.log(this.problemList)
             //
-            this.curr = this.$route.query.num
+            this.curr = parseInt(this.$route.query.num) || 1
 
             //
             // if (!this.problemList.length) {

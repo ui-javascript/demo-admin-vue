@@ -94,7 +94,8 @@
                 this.$router.push({
                     name: 'higher_overview',
                     query: {
-                        id: this.problemId
+                        id: this.problemId,
+                        num: this.num
                     }
                 })
             },
@@ -111,7 +112,7 @@
 
                     this.$nextTick(() => {
                         // this.setTimer = res.countdown
-                        this.setTimer = 10 * 1000
+                        this.setTimer = 5 * 1000
                         this.disabled = 'disabled'
                     })
                 }).catch()
@@ -153,7 +154,7 @@
             }
         },
         mounted() {
-            this.num = this.$route.query.num || 1
+            this.num = parseInt(this.$route.query.num) || 1
 
             // 获取题目
             this.getQuestion()

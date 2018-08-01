@@ -84,14 +84,7 @@
 
 
                         // self.setTimer = res.countdown * 1000
-                        self.setTimer = 10 * 1000
-
-                        // 测试
-                        if (self.setTimer < 20 * 1000) {
-                            self.setTimer = 20 * 1000
-                        }
-
-                        debugger
+                        self.setTimer = 5 * 1000
 
                         if (res.problemFeatures) {
                             let options = res.problemFeatures.split('$')
@@ -103,7 +96,6 @@
                                 checked: res.submitAnswer
                             })
 
-                            debugger
                         }
 
                     })

@@ -174,7 +174,7 @@
             // 获取题目
             this.$nextTick(() => {
                 this.title = NUM_ARR[this.num]
-                this.setTimer = 3 * 1000
+                this.setTimer = 5 * 1000
                 this.disabled = 'disabled'
             })
         }

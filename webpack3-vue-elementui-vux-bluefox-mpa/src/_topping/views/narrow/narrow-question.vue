@@ -106,12 +106,9 @@
 
                     // console.log('倒计时' + res.countdown)
                     this.$nextTick(() => {
-                        self.setTimer = res.countdown * 1000
+                        // self.setTimer = res.countdown * 1000
 
-                        // 测试
-                        if (self.setTimer < 10 * 1000) {
-                            self.setTimer = 10 * 1000
-                        }
+                        self.setTimer = 5 * 1000
 
                         if (res.problemFeatures) {
                             let options = res.problemFeatures.split('$')
@@ -205,7 +202,7 @@
             this.problemNum = parseInt(this.$route.query.num) || 1
 
             this.$nextTick(() => {
-                this.setTimer = 2 * 1000
+                this.setTimer = 5 * 1000
             })
 
             // console.log(this.progress)

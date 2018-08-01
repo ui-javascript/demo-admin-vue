@@ -17,9 +17,9 @@
 
     export default {
         name: "index",
-        components: {
-            CommonHeader
-        },
+        // components: {
+        //     CommonHeader
+        // },
         computed: {
             ...mapGetters({
                 progress: 'progress',
