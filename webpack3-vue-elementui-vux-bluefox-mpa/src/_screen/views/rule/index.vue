@@ -18,7 +18,7 @@
 <script>
     import CommonHeader from '../common/header'
     import CardAttention from '../common/snippets/card-attention'
-    import { pushType1, pushType2, pushType3 } from '../../service/push'
+    import {pushType1, pushType2, pushType3} from '../../service/push'
 
     export default {
         name: "index",

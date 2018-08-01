@@ -44,7 +44,7 @@
             width: 1920px;
             height: 393px;
             left: 50%;
-            transform:translateX(-50%);
+            transform: translateX(-50%);
         }
 
         &__ranking {
@@ -54,7 +54,6 @@
             border-radius: 15px;
             border: 1px solid @gray;
         }
-
 
     }
 </style>

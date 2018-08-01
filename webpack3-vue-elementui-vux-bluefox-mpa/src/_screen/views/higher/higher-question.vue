@@ -33,7 +33,9 @@
 
                 <div class="HigherQuestion__operate  clearfix">
                     <div class="fr">
-                        <el-button type="primary" @click="nextQuestion()" :disabled="disabled">{{ num !== 10 ? '下一题' : '狭路相逢' }}</el-button>
+                        <el-button type="primary" @click="nextQuestion()" :disabled="disabled">{{ num !== 10 ? '下一题' :
+                            '狭路相逢' }}
+                        </el-button>
                         <el-button type="primary" @click="viewDetails()" :disabled="disabled">查看</el-button>
                     </div>
                 </div>
@@ -49,9 +51,9 @@
     import CountdownSvgCircle from '~m/Countdown/CountdownSvgCircle'
     import CardPosition from '../common/snippets/card-position'
 
-    import { NUM_ARR } from "../../assets/js/constant"
-    import { getOneQuestion } from "../../service/screen"
-    import { pushType2 } from "../../service/push"
+    import {NUM_ARR} from "../../assets/js/constant"
+    import {getOneQuestion} from "../../service/screen"
+    import {pushType2} from "../../service/push"
 
     export default {
         name: "seconds-question",
@@ -67,7 +69,8 @@
                 list: null,
                 disabled: true,
                 num: 1,
-                setTimer: 0
+                setTimer: 0,
+                problemId: ''
             }
         },
         inject: ['reload'],
@@ -91,7 +94,7 @@
                 this.$router.push({
                     name: 'higher_overview',
                     query: {
-                        num: this.num
+                        id: this.problemId
                     }
                 })
             },
@@ -103,9 +106,11 @@
                     problemType: 2,
                     questionNumber: this.num
                 }).then(res => {
-                    this.list = res[0]
+                    this.list = res.problem
+                    this.problemId = res.problem.problemID
 
                     this.$nextTick(() => {
+                        // this.setTimer = res.countdown
                         this.setTimer = 3 * 1000
                         this.disabled = 'disabled'
                     })
@@ -140,7 +145,7 @@
         },
         watch: {
             // 路由变化的时候刷新
-            '$route' (to, from) {
+            '$route'(to, from) {
                 this.reload
                 // this.updateList()
             }

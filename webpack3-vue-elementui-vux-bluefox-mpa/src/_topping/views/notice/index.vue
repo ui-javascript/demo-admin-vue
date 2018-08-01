@@ -8,7 +8,7 @@
         <router-link to="/narrow">狭路相逢</router-link>
 
         <header-back
-            :backRouterName="backRouterName"
+                :backRouterName="backRouterName"
         ></header-back>
 
         <!--<router-link to="/404">404</router-link>-->
@@ -30,10 +30,10 @@
 
 <script>
 
-    import { mapGetters } from 'vuex'
+    import {mapGetters} from 'vuex'
     import HeaderBack from '../snippets/header-back'
     import CardNotice from '../snippets/card-notice'
-    import {getScore, getGrade} from '../../api/grades'
+    import {getScore, getGrade} from '../../api/exam'
 
     export default {
         components: {
@@ -55,14 +55,12 @@
                 progress: 'progress',
             })
         },
-        methods: {
-
-        },
+        methods: {},
         mounted() {
             let type = this.progress.type
 
             // debugger
-            getScore({ type: type }).then(res => {
+            getScore({type: type}).then(res => {
                 this.total = res.allScore
                 this.ranking = res.ranking
                 this.curr = res.mScore

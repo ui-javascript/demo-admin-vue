@@ -42,6 +42,11 @@
 
 <style lang="less">
     .NarrowIndex {
+        width: 100%;
 
+        // 注意 符号
+        > .container {
+            width: @screen-min-width;
+        }
     }
 </style>

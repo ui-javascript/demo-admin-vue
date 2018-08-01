@@ -24,9 +24,7 @@
                 title: '所有模块已结束'
             }
         },
-        methods: {
-
-        }
+        methods: {}
     }
 </script>
 
@@ -36,7 +34,6 @@
         height: 220px;
         background: url(../../assets/images/card_attention_top.png) center top no-repeat;
         background-size: 1419/4.5px 900/4.5px;
-
 
         &__badge {
             top: 75px;

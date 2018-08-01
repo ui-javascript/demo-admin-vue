@@ -11,13 +11,9 @@
     export default {
 
         data() {
-            return {
-
-            }
+            return {}
         },
-        methods: {
-
-        }
+        methods: {}
     }
 </script>
 
@@ -33,15 +29,13 @@
         text-align: center;
         font-size: 12px;
 
-
-
         .center {
             width: 300px;
             height: 30px;
             line-height: 30px;
             /*vertical-align: middle;*/
             padding: 0 4px;
-            background: rgba(0,0,0,.2);
+            background: rgba(0, 0, 0, .2);
             border-radius: 15px;
             letter-spacing: 1px;
         }
@@ -51,7 +45,7 @@
     @media screen
     and (max-device-width: 350px) {
         /*.footerMask {*/
-            /*bottom: 10px;*/
+        /*bottom: 10px;*/
         /*}*/
     }
 

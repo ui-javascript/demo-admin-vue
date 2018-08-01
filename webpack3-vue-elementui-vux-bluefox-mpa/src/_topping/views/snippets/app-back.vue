@@ -1,10 +1,10 @@
 <template>
     <div class="appBack">
         <img
-            class="appBack__btn"
-            src="../../assets/images/btn_back.png"
-            alt="退出icon"
-            @click="back()"
+                class="appBack__btn"
+                src="../../assets/images/btn_back.png"
+                alt="退出icon"
+                @click="back()"
         >
     </div>
 </template>

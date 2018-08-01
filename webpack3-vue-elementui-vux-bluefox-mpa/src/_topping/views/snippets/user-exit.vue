@@ -1,10 +1,10 @@
 <template>
     <div class="UserExit">
         <img
-            class="UserExit__close"
-            src="../../assets/images/exit.png"
-            alt="关闭icon"
-            @click="exit()"
+                class="UserExit__close"
+                src="../../assets/images/exit.png"
+                alt="关闭icon"
+                @click="exit()"
         >
     </div>
 </template>

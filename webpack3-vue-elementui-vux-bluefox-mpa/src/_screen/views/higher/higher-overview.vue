@@ -33,7 +33,7 @@
                 right: 89,
                 allList: [1, 2, 3, 34, 35, 36, 37, 38, 49, 100],
                 rightList: [1, 2, 3, 37, 38],
-                num: 0
+                problemId: 0
             }
         },
         methods: {
@@ -43,10 +43,10 @@
         },
         mounted() {
 
-            this.num = this.$route.query.num || 1
+            this.problemId = this.$route.query.id || 1
 
             getPassUser({
-                problemID: 'c2bec9d3-6119-4d18-9286-e497e14a8971'
+                problemID: this.problemId
             }).then(res => {
                 // console.log(res)
 

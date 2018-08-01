@@ -21,7 +21,8 @@
                             type="primary"
                             @click="nextGroup()"
                             v-show="curr === problemList.length-1"
-                    >{{ progress.group < 5 ? '下一组' : '一比高下' }}</el-button>
+                    >{{ progress.group < 5 ? '下一组' : '一比高下' }}
+                    </el-button>
 
                 </div>
             </div>
@@ -32,8 +33,8 @@
 <script>
     import {mapGetters} from 'vuex'
     import CardDetails from '../common/snippets/card-details'
-    import { getSingle } from "../../service/screen"
-    import { pushType1 } from "../../service/push"
+    import {getSingle} from "../../service/screen"
+    import {pushType1} from "../../service/push"
 
     export default {
         name: "seconds-details",
@@ -96,11 +97,11 @@
                     })
 
                     this.$store.dispatch('UpdateProgress', {
-                        group: group+1
+                        group: group + 1
                     })
 
                 }
-                else  if (group === 5) {
+                else if (group === 5) {
                     this.$router.push({
                         path: '/rule',
                         query: {

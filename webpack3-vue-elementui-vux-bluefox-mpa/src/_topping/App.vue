@@ -10,13 +10,13 @@
 <script>
     // import { getInfo } from "../../api/login"
     import { getToken } from './router/_auth'
-    import { getProgress } from "./api/questions"
+    import { getProgress } from "./api/exam"
 
     export default {
         data() {
             return {
                 connection: null,
-                url:"http://172.16.11.175:5060/notificationhub"
+                url: `${process.env.BASE_URL}/notificationhub`
             }
         },
         methods: {
@@ -118,6 +118,13 @@
 
                 // 狭路相逢
                 this.$socket.on("ReceiveMessageForType3", (questionNumber) => {
+
+                    debugger
+                    this.$store.dispatch('UpdateProgress', {
+                        module: 3,
+                        group: 1,
+                        problem: questionNumber
+                    })
 
                     router.push({
                         path: '/narrow/question',

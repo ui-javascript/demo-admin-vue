@@ -76,7 +76,5 @@
 <style lang="less">
     .ruleDetails {
 
-
-
     }
 </style>

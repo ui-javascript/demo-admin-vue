@@ -2,9 +2,9 @@
     <div class="secondsOverview">
         <div class="box">
             <card-overview
-                :badge="badge"
-                :list="problemList"
-                @view="view"
+                    :badge="badge"
+                    :list="problemList"
+                    @view="view"
             ></card-overview>
 
             <div class="clearfix mt-10">
@@ -38,14 +38,14 @@
             })
         },
         methods: {
-          view(data) {
-              this.$router.push({
-                  path: '/seconds/details',
-                  query: {
-                      num: data.index
-                  }
-              })
-          }
+            view(data) {
+                this.$router.push({
+                    path: '/seconds/details',
+                    query: {
+                        num: data.index
+                    }
+                })
+            }
         },
         mounted() {
             this.subType = this.$route.query.subType

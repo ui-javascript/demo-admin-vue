@@ -5,8 +5,8 @@
         <button type="button" @click="visible=true">点击</button>
 
         <dialog-ranking
-            @close="close"
-            :visible="visible"
+                @close="close"
+                :visible="visible"
         >
         </dialog-ranking>
 

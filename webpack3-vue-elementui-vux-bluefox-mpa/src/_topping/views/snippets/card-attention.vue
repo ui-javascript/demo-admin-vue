@@ -48,7 +48,7 @@
             /*position: absolute;*/
             background: url(../../assets/images/card_attention_bottom.png) center top no-repeat;
             /*background-size: contain;*/
-            background-size:  1420/4px 940/4px;
+            background-size: 1420/4px 940/4px;
         }
 
         &__badge {
@@ -95,31 +95,26 @@
     and (max-device-width: 350px) {
 
         /*.cardAttention {*/
-            /*width: 100%;*/
-
-            /*&__badge {*/
-                /*top: 50px;*/
-                /*font-size: 15px;*/
-                /*margin-left: -95px;*/
-            /*}*/
-
-            /*&__title {*/
-                /*top: 120px;*/
-                /*!*left: 50%;*!*/
-                /*!*margin-left: -120px;*!*/
-            /*}*/
-
-            /*&__content {*/
-                /*position: absolute;*/
-                /*top: 200px;*/
-
-                /*.content {*/
-                    /*border: 1px dashed #ddd;*/
-                    /*padding: 12px;*/
-                    /*font-size: 15px;*/
-                /*}*/
-            /*}*/
-
+        /*width: 100%;*/
+        /*&__badge {*/
+        /*top: 50px;*/
+        /*font-size: 15px;*/
+        /*margin-left: -95px;*/
+        /*}*/
+        /*&__title {*/
+        /*top: 120px;*/
+        /*!*left: 50%;*!*/
+        /*!*margin-left: -120px;*!*/
+        /*}*/
+        /*&__content {*/
+        /*position: absolute;*/
+        /*top: 200px;*/
+        /*.content {*/
+        /*border: 1px dashed #ddd;*/
+        /*padding: 12px;*/
+        /*font-size: 15px;*/
+        /*}*/
+        /*}*/
         /*}*/
 
     }

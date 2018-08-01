@@ -39,7 +39,7 @@
 
             <!-- 上下题切换 -->
             <div class="radioList__operate tc" >
-                <div>
+                <div v-if="showBtns">
                     <span v-if="showToggle">
                         <button class="radioList__btn" v-show="this.curr!==0" type="button" @click="prev()">上一题</button>
                         <button class="radioList__btn" v-show="this.curr!==this.list.length-1" type="button" @click="next()">下一题</button>
@@ -56,7 +56,7 @@
 
 <script>
 
-    import {submitOne} from "../api/questions"
+    import {submitOne} from "../api/exam"
 
     export default {
         name: "CheckboxList",
@@ -98,6 +98,10 @@
             showToggle: {
                 type: Boolean,
                 default: false
+            },
+            showBtns: {
+                type: Boolean,
+                default: true
             }
         },
         data() {

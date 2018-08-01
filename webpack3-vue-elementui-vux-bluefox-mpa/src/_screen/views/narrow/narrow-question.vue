@@ -36,7 +36,8 @@
 
                 <div class="NarrowQuestion__operate  clearfix">
                     <div class="fr">
-                        <el-button type="primary" @click="nextQuestion()" :disabled="disabled">{{ num !== 10 ? '下一题' : '狭路相逢' }}</el-button>
+                        <el-button type="primary" v-show="num!=10" @click="nextQuestion()" :disabled="disabled">下一题
+                        </el-button>
                         <el-button type="primary" @click="viewDetails()" :disabled="disabled">查看</el-button>
                     </div>
                 </div>
@@ -52,9 +53,9 @@
     import CountdownSvgCircle from '~m/Countdown/CountdownSvgCircle'
     import CardPosition from '../common/snippets/card-position'
 
-    import { NUM_ARR } from "../../assets/js/constant"
-    import { getOneQuestion } from "../../service/screen"
-    import { pushType3 } from "../../service/push"
+    import {NUM_ARR} from "../../assets/js/constant"
+    import {getOneQuestion} from "../../service/screen"
+    import {pushType3} from "../../service/push"
 
     export default {
         name: "seconds-question",
@@ -116,10 +117,10 @@
                     problemType: 3,
                     questionNumber: this.num
                 }).then(res => {
-                    this.list = res[0]
-
+                    this.list = res.problem
 
                     this.$nextTick(() => {
+                        // this.setTimer = res.countdown
                         this.setTimer = 5 * 1000
                         this.disabled = 'disabled'
                     })
@@ -156,13 +157,14 @@
         },
         watch: {
             // 路由变化的时候刷新
-            '$route' (to, from) {
+            '$route'(to, from) {
                 this.reload
                 // this.updateList()
             }
         },
         mounted() {
             this.num = this.$route.query.num || 1
+
 
             // 获取题目
             this.$nextTick(() => {

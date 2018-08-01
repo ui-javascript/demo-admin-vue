@@ -3,24 +3,21 @@
         <user-exit></user-exit>
 
         <img class="headerExit__bg" src="../../assets/images/header.png" alt="">
-    </div> 
+    </div>
 </template>
 
 <script>
 
-    import userExit from  './user-exit'
+    import userExit from './user-exit'
+
     export default {
         components: {
             userExit
         },
         data() {
-            return {
-
-            }
+            return {}
         },
-        methods: {
-
-        }
+        methods: {}
     }
 </script>
 
@@ -28,7 +25,7 @@
     .headerExit {
         /*width: 100%;*/
 
-        &__bg  {
+        &__bg {
             /*position: absolute;*/
             width: 100%;
             /*top: 0;*/

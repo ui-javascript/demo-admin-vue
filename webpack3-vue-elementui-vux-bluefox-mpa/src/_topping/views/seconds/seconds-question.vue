@@ -10,12 +10,12 @@
         </div>
 
         <radio-list
-            class="mb-20"
-            :module="module"
-            :list="list"
-            :disabled="disabled"
-            @forbidChoose="forbidChoose"
-            :showToggle="true"
+                class="mb-20"
+                :module="module"
+                :list="list"
+                :disabled="disabled"
+                @forbidChoose="forbidChoose"
+                :showToggle="true"
         ></radio-list>
 
     </div>
@@ -23,8 +23,8 @@
 
 <script>
 
-    import { mapGetters } from 'vuex'
-    import { getList } from '../../api/questions'
+    import {mapGetters} from 'vuex'
+    import {getList} from '../../api/exam'
     import CountdownSvgCircle from '~/Model/Countdown/CountdownSvgCircle'
     import RadioList from '../../components/RadioList'
 
@@ -92,8 +92,8 @@
 
                         self.setTimer = res.countdown * 1000
 
-                        if (self.setTimer < 20*1000) {
-                            self.setTimer = 20*1000
+                        if (self.setTimer < 20 * 1000) {
+                            self.setTimer = 20 * 1000
                         }
 
                         res.problemList.forEach(x => {
@@ -132,7 +132,7 @@
         },
         watch: {
             // 路由变化的时候刷新
-            '$route' (to, from) {
+            '$route'(to, from) {
                 this.reload
                 // this.updateList()
             }

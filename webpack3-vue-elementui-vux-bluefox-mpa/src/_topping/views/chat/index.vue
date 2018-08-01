@@ -7,65 +7,65 @@
                   </li-header> -->
 
             <div class="content" ref="scroll">
-                    <div class="height-hook">
-                        <div v-for="(item, index) in messageList">
-                            <div class="item-box left-hook" v-if="item.type === 2">
-                                <div class="left">
-                                    <img src="../../assets/images/chat/1.png" v-if="item.msgUser.userImg === 1" />
-                                    <img src="../../assets/images/chat/2.png" v-if="item.msgUser.userImg === 2" />
-                                    <img src="../../assets/images/chat/3.png" v-if="item.msgUser.userImg === 3" />
-                                    <img src="../../assets/images/chat/4.png" v-if="item.msgUser.userImg === 4" />
-                                    <img src="../../assets/images/chat/5.png" v-if="item.msgUser.userImg === 5" />
-                                    <img src="../../assets/images/chat/6.png" v-if="item.msgUser.userImg === 6" />
-                                    <img src="../../assets/images/chat/7.png" v-if="item.msgUser.userImg === 7" />
-                                    <img src="../../assets/images/chat/8.png" v-if="item.msgUser.userImg === 8" />
-                                    <img src="../../assets/images/chat/9.png" v-if="item.msgUser.userImg === 9" />
-                                    <img src="../../assets/images/chat/10.png" v-if="item.msgUser.userImg === 10" />
-                                </div>
-                                <div class="center">
-                                    <div class="user">{{ item.msgUser.userName }}</div>
-                                    <div class="text"><span class="horn">◀</span>{{ item.msg }}</div>
-                                </div>
-                                <br style="clear: both;" />
+                <div class="height-hook">
+                    <div v-for="(item, index) in messageList">
+                        <div class="item-box left-hook" v-if="item.type === 2">
+                            <div class="left">
+                                <img src="../../assets/images/chat/1.png" v-if="item.msgUser.userImg === 1"/>
+                                <img src="../../assets/images/chat/2.png" v-if="item.msgUser.userImg === 2"/>
+                                <img src="../../assets/images/chat/3.png" v-if="item.msgUser.userImg === 3"/>
+                                <img src="../../assets/images/chat/4.png" v-if="item.msgUser.userImg === 4"/>
+                                <img src="../../assets/images/chat/5.png" v-if="item.msgUser.userImg === 5"/>
+                                <img src="../../assets/images/chat/6.png" v-if="item.msgUser.userImg === 6"/>
+                                <img src="../../assets/images/chat/7.png" v-if="item.msgUser.userImg === 7"/>
+                                <img src="../../assets/images/chat/8.png" v-if="item.msgUser.userImg === 8"/>
+                                <img src="../../assets/images/chat/9.png" v-if="item.msgUser.userImg === 9"/>
+                                <img src="../../assets/images/chat/10.png" v-if="item.msgUser.userImg === 10"/>
                             </div>
-                            <div class="item-box right-hook" v-if="item.type === 3">
-                                <div class="right">
-                                    <img src="../../assets/images/chat/1.png" v-if="userInfo.userImg === 1" />
-                                    <img src="../../assets/images/chat/2.png" v-if="userInfo.userImg === 2" />
-                                    <img src="../../assets/images/chat/3.png" v-if="userInfo.userImg === 3" />
-                                    <img src="../../assets/images/chat/4.png" v-if="userInfo.userImg === 4" />
-                                    <img src="../../assets/images/chat/5.png" v-if="userInfo.userImg === 5" />
-                                    <img src="../../assets/images/chat/6.png" v-if="userInfo.userImg === 6" />
-                                    <img src="../../assets/images/chat/7.png" v-if="userInfo.userImg === 7" />
-                                    <img src="../../assets/images/chat/8.png" v-if="userInfo.userImg === 8" />
-                                    <img src="../../assets/images/chat/9.png" v-if="userInfo.userImg === 9" />
-                                    <img src="../../assets/images/chat/10.png" v-if="userInfo.userImg === 10" />
-                                </div>
-                                <div class="center">
-                                    <div class="user">{{ item.msgUser.userName }}</div>
-                                    <div class="text"><span class="horn">▶</span>{{ item.msg }}</div>
-                                </div>
-                                <br style="clear: both;" />
+                            <div class="center">
+                                <div class="user">{{ item.msgUser.userName }}</div>
+                                <div class="text"><span class="horn">◀</span>{{ item.msg }}</div>
                             </div>
-                            <div class="item-box center-hook" v-if="item.type === 1">
-                                <span class="tip">{{ item.msg }}</span>
+                            <br style="clear: both;"/>
+                        </div>
+                        <div class="item-box right-hook" v-if="item.type === 3">
+                            <div class="right">
+                                <img src="../../assets/images/chat/1.png" v-if="userInfo.userImg === 1"/>
+                                <img src="../../assets/images/chat/2.png" v-if="userInfo.userImg === 2"/>
+                                <img src="../../assets/images/chat/3.png" v-if="userInfo.userImg === 3"/>
+                                <img src="../../assets/images/chat/4.png" v-if="userInfo.userImg === 4"/>
+                                <img src="../../assets/images/chat/5.png" v-if="userInfo.userImg === 5"/>
+                                <img src="../../assets/images/chat/6.png" v-if="userInfo.userImg === 6"/>
+                                <img src="../../assets/images/chat/7.png" v-if="userInfo.userImg === 7"/>
+                                <img src="../../assets/images/chat/8.png" v-if="userInfo.userImg === 8"/>
+                                <img src="../../assets/images/chat/9.png" v-if="userInfo.userImg === 9"/>
+                                <img src="../../assets/images/chat/10.png" v-if="userInfo.userImg === 10"/>
                             </div>
+                            <div class="center">
+                                <div class="user">{{ item.msgUser.userName }}</div>
+                                <div class="text"><span class="horn">▶</span>{{ item.msg }}</div>
+                            </div>
+                            <br style="clear: both;"/>
+                        </div>
+                        <div class="item-box center-hook" v-if="item.type === 1">
+                            <span class="tip">{{ item.msg }}</span>
                         </div>
                     </div>
+                </div>
 
             </div>
 
 
+            <div class="footer">
 
-                <div class="footer">
-
-                        <div class="main">
-                            <input type="text" class="input" placeholder="开始愉快聊天吧!!" v-model="inputValue" @keyup.enter="sendEvent" v-show="connectState" />
-                            <input type="text" class="input" disabled v-show="!connectState" v-model="inputValue" />
-                            <div class="send" :class="{logout: !connectState}" @click="sendEvent">发送</div>
-                        </div>
-
+                <div class="main">
+                    <input type="text" class="input" placeholder="开始愉快聊天吧!!" v-model="inputValue"
+                           @keyup.enter="sendEvent" v-show="connectState"/>
+                    <input type="text" class="input" disabled v-show="!connectState" v-model="inputValue"/>
+                    <div class="send" :class="{logout: !connectState}" @click="sendEvent">发送</div>
                 </div>
+
+            </div>
 
             <!-- <li-model ref="pop" type="pop" class="userList">
                       <div slot="modalbody">
@@ -299,8 +299,6 @@
     }
 
 
-
-
 </style>
 
 <script>
@@ -349,7 +347,7 @@
 
                 this.httpServer.emit('login', this.userInfo);
                 this.onlineUserList.push(this.userInfo);
-                this.httpServer.on('login', function(obj) {
+                this.httpServer.on('login', function (obj) {
                     // console.log(obj);
                     me.onlineUserList = obj.onlineUserList;
                     me.messageList.push({
@@ -358,7 +356,7 @@
                         msgUser: obj.msgUser
                     });
                 });
-                this.httpServer.on('loginSuccess', function(obj) { // 1 成功
+                this.httpServer.on('loginSuccess', function (obj) { // 1 成功
                     if (obj.sign === 1) {
                         me.onlineUserList = obj.onlineUserList;
                         me.connectState = true; // 登录状态
@@ -366,14 +364,14 @@
                         console.log('连接好了');
                     }
                 });
-                this.httpServer.on('logout', function(obj) {
+                this.httpServer.on('logout', function (obj) {
                     me.messageList.push({
                         type: 1,
                         msg: '用户 ' + obj.msgUser.userName + ' 退出聊天',
                         msgUser: obj.msgUser
                     });
                 });
-                this.httpServer.on('message', function(obj) {
+                this.httpServer.on('message', function (obj) {
                     // console.log(obj);
                     me.onlineUserList = obj.onlineUserList;
                     me.messageList.push({

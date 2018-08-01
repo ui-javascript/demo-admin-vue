@@ -10,10 +10,10 @@
                 ></countdown-svg-circle>
 
                 <card-position
-                    :badge="badge"
-                    :title="title"
-                    :group="list.length"
-                    :showGroup="true"
+                        :badge="badge"
+                        :title="title"
+                        :group="list.length"
+                        :showGroup="true"
                 ></card-position>
             </div>
 
@@ -39,8 +39,8 @@
     import CountdownSvgCircle from '~m/Countdown/CountdownSvgCircle'
     import CardPosition from '../common/snippets/card-position'
 
-    import { NUM_ARR } from "../../assets/js/constant"
-    import { getQuestions } from "../../service/screen"
+    import {NUM_ARR} from "../../assets/js/constant"
+    import {getQuestions} from "../../service/screen"
 
     export default {
         name: "seconds-question",
@@ -92,11 +92,10 @@
             getQuestions({
                 subType: this.subType
             }).then(res => {
-                console.log(res)
-                this.list = res
+                this.list = res.problems
 
                 this.$nextTick(() => {
-                    this.setTimer = 3 * 1000
+                    this.setTimer = res.countdown * 1000
                 })
             }).catch()
         }

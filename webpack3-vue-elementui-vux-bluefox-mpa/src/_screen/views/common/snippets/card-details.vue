@@ -18,7 +18,6 @@
                     </div>
 
 
-
                 </el-col>
 
                 <el-col :span="6">
@@ -64,12 +63,9 @@
             // }
         },
         data() {
-            return {
-            }
+            return {}
         },
-        methods: {
-
-        },
+        methods: {},
         mounted() {
             // this.question.options = this.question.problemFeatures.split('$')
         }

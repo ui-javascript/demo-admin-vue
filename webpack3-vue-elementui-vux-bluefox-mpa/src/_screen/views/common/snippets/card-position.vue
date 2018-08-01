@@ -22,7 +22,7 @@
                 type: String
             },
             title: {
-              type: String
+                type: String
             },
             group: {
                 type: Number
@@ -40,7 +40,6 @@
         width: 295px;
         height: 296px;
         background: url(../../../assets/images/card_position.png);
-
 
         &__badge {
             color: @blue;

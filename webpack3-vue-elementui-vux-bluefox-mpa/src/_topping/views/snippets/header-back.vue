@@ -1,7 +1,7 @@
 <template>
     <div class="headerBack relative">
         <app-back
-            :backRouterName="backRouterName">
+                :backRouterName="backRouterName">
         </app-back>
 
         <img class="headerBack__bg" src="../../assets/images/header.png" alt="">
@@ -10,7 +10,8 @@
 
 <script>
 
-    import appBack from  './app-back'
+    import appBack from './app-back'
+
     export default {
         components: {
             appBack
@@ -22,13 +23,9 @@
             },
         },
         data() {
-            return {
-
-            }
+            return {}
         },
-        methods: {
-
-        },
+        methods: {},
         mounted() {
             console.log(this.backRouterName)
         }
@@ -39,7 +36,7 @@
     .headerBack {
         /*width: 100%;*/
 
-        &__bg  {
+        &__bg {
             /*position: absolute;*/
             width: 100%;
             /*top: 0;*/

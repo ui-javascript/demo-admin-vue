@@ -11,13 +11,9 @@
     export default {
 
         data() {
-            return {
-
-            }
+            return {}
         },
-        methods: {
-
-        },
+        methods: {},
         mounted() {
             login('17816869505', '17816869505').then(res => {
                 console.log(res)

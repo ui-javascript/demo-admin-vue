@@ -6,9 +6,7 @@
                     :setTimer="setTimer"
                     :endCallBack="'forceSubmit'"
                     @forceSubmit="forceSubmit()"
-
-            >
-            </countdown-svg-circle>
+            ></countdown-svg-circle>
         </div>
 
         <radio-list
@@ -24,8 +22,8 @@
 
 <script>
 
-    import { mapGetters } from 'vuex'
-    import { getProblem } from '../../api/questions'
+    import {mapGetters} from 'vuex'
+    import {getProblem} from '../../api/exam'
     import CountdownSvgCircle from '~/Model/Countdown/CountdownSvgCircle'
     import RadioList from '../../components/RadioList'
 
@@ -82,8 +80,8 @@
                         self.setTimer = res.countdown * 1000
 
                         // 测试
-                        if (self.setTimer < 20*1000) {
-                            self.setTimer = 20*1000
+                        if (self.setTimer < 20 * 1000) {
+                            self.setTimer = 20 * 1000
                         }
 
                         if (res.problemFeatures) {
@@ -103,7 +101,9 @@
 
             // 强制提交
             forceSubmit() {
-                console.log('强制提交')
+                this.$vux.toast.show({
+                    text: '已提交',
+                })
 
                 // 禁止答题
                 this.disabled = 'disabled'
@@ -112,7 +112,7 @@
                     this.$router.push({
                         path: '/notice',
                         query: {
-                            type: 1
+                            type: 2
                         }
                     })
                 }
@@ -125,7 +125,7 @@
         },
         watch: {
             // 路由变化的时候刷新
-            '$route' (to, from) {
+            '$route'(to, from) {
                 this.reload
                 // this.updateList()
             }

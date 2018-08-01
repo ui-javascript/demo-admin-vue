@@ -1,10 +1,10 @@
 <template>
-        <div class="footerPure">
-            <div class="center">
-                技术支持：杭州品茗安控信息技术有限公司
-                <!--<p>联系电话：150-6710-4488</p>-->
-            </div>
+    <div class="footerPure">
+        <div class="center">
+            技术支持：杭州品茗安控信息技术有限公司
+            <!--<p>联系电话：150-6710-4488</p>-->
         </div>
+    </div>
 </template>
 
 <script>

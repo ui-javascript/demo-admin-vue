@@ -3,7 +3,6 @@
 
         <header-exit></header-exit>
 
-
         <keep-alive>
             <router-view v-if="isRouterAlive"></router-view>
         </keep-alive>
@@ -13,6 +12,7 @@
 
 <script>
     import headerExit from '../snippets/header-exit'
+
     export default {
         components: {
             headerExit

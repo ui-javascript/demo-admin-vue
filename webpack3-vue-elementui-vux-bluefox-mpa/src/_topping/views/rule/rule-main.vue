@@ -15,9 +15,12 @@
         <img class="ruleIndex__bg" src="../../assets/images/index.jpg" alt="">
 
         <div class="ruleIndex__box">
-            <div class="ruleIndex__box_btn center" @click="viewRule('seconds')">争分夺秒 <span v-show="module!==0"> {{typeScores1}} 分</span></div>
-            <div class="ruleIndex__box_btn center" @click="viewRule('higher')">一比高下 <span v-show="module!==0"> {{typeScores2}} 分</span></div>
-            <div class="ruleIndex__box_btn center" @click="viewRule('narrow')">狭路相逢 <span v-show="module!==0"> {{typeScores3}} 分</span></div>
+            <div class="ruleIndex__box_btn center" @click="viewRule('seconds')">争分夺秒 <span v-show="module!==0"> {{typeScores1}} 分</span>
+            </div>
+            <div class="ruleIndex__box_btn center" @click="viewRule('higher')">一比高下 <span v-show="module!==0"> {{typeScores2}} 分</span>
+            </div>
+            <div class="ruleIndex__box_btn center" @click="viewRule('narrow')">狭路相逢 <span v-show="module!==0"> {{typeScores3}} 分</span>
+            </div>
             <div v-if="rankingVisible" class="ruleIndex__box_ranking center"></div>
         </div>
 

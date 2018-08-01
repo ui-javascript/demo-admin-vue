@@ -13,3 +13,30 @@ body {
   //overflow-x: hidden;
   font-size: 16px;
 }
+
+// 普通按钮
+.btn-pure {
+  box-sizing: border-box;
+  display: block;
+  min-height: 30px;
+  line-height: 30px;
+  word-break: normal;
+  /*width: 100%;*/
+  overflow: visible;
+  background: @green;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  color: @white;
+  padding: 5px 10px;
+
+  &--green {
+    background: @green;
+  }
+
+  &--blue {
+    background: @blue;
+    border: 1px solid @gray;
+  }
+
+}

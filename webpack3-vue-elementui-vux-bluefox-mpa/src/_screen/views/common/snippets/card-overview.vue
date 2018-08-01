@@ -11,7 +11,9 @@
             <el-row class="item" v-for="(item, index) in list" :key="index">
                 <el-col class="cursor" :span="16" @click.native="viewDetails(index, item)">{{item.problemName}}</el-col>
                 <el-col :span="4">{{ item.answer }}</el-col>
-                <el-col :span="4"><span>{{ item.rightCount }}</span><div class="slopingside inline-block"></div> <span>{{item.submitCount}}</span></el-col>
+                <el-col :span="4"><span>{{ item.rightCount }}</span>
+                    <div class="slopingside inline-block"></div>
+                    <span>{{item.submitCount}}</span></el-col>
             </el-row>
         </div>
 
@@ -32,9 +34,7 @@
             }
         },
         data() {
-            return {
-
-            }
+            return {}
         },
         methods: {
             // 查看
@@ -98,10 +98,10 @@
 
         // 斜杠
         .slopingside {
-            height:0px;
+            height: 0px;
             border: 1px solid @gray;
             width: 20px;
-            transform:rotate(125deg);
+            transform: rotate(125deg);
         }
 
     }
