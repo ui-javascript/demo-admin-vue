@@ -4,6 +4,7 @@
         <div class="container clearfix">
             <div class="fl">
                 <countdown-svg-circle
+                        v-if="reloadCountdown"
                         :setTimer="setTimer"
                         :endCallBack="'forceSubmit'"
                         @forceSubmit="forceSubmit()"
@@ -18,8 +19,10 @@
             <div class="fr">
                 <div class="NarrowQuestion__box box-dashed">
 
-
-                    <div v-if="list">
+                    <div v-if="!list.problemFeatures" class="tc">
+                        请稍侯
+                    </div>
+                    <div v-else>
                         <div>
                             {{ list.problemName }}
                         </div>
@@ -28,16 +31,12 @@
                             <p>{{ item }}</p>
                         </div>
                     </div>
-                    <div class="tc" v-else>
-                        请稍候
-                    </div>
 
                 </div>
 
                 <div class="NarrowQuestion__operate  clearfix">
                     <div class="fr">
-                        <el-button type="primary" v-show="num!=10" @click="nextQuestion()" :disabled="disabled">下一题
-                        </el-button>
+                        <el-button type="primary" v-show="num!=10" @click="nextQuestion()" :disabled="disabled">下一题</el-button>
                         <el-button type="primary" @click="viewDetails()" :disabled="disabled">查看</el-button>
                     </div>
                 </div>
@@ -68,11 +67,12 @@
                 badge: '狭路相逢',
                 title: '一',
                 group: 0,
-                list: null,
-                disabled: true,
+                list: [],
+                disabled: false,
                 num: 1,
                 setTimer: 0,
-                problemId: ''
+                problemId: '',
+                reloadCountdown: true
             }
         },
         inject: ['reload'],
@@ -80,30 +80,21 @@
 
             // 倒计时结束
             forceSubmit() {
-                if (this.list) {
+                // 这是个对象...不是数组,
+                // 之前一直list.length判断
+                if (this.list.problemFeatures) {
                     this.disabled = false
                 }
 
                 // 稍候倒计时结束
                 else {
-                    debugger
                     this.getQuestion()
                 }
 
-                // this.$alert('这是一段内容', '标题名称', {
-                //     confirmButtonText: '确定',
-                //     callback: action => {
-                //         // this.$message({
-                //         //     type: 'info',
-                //         //     message: `action: ${ action }`
-                //         // });
-                //     }
-                // });
             },
 
             // 查看详情
             viewDetails() {
-                debugger
 
                 this.$router.push({
                     path: '/narrow/overview',
@@ -117,19 +108,25 @@
             getQuestion() {
                 this.title = NUM_ARR[this.num]
 
+                let self = this
+
                 getOneQuestion({
                     problemType: 3,
                     questionNumber: this.num
                 }).then(res => {
-                    this.list = res.problem
 
-                    this.problemId = res.problem.problemID
+                    self.reloadCountdown = false
+                    self.list = res.problem
+                    self.problemId = res.problem.problemID
 
                     this.$nextTick(() => {
-                        this.setTimer = res.countdown
-                        // this.setTimer = 10 * 1000
-                        this.disabled = 'disabled'
+                        self.setTimer = 10 * 1000
+                        self.reloadCountdown = true
+
+                        // this.setTimer = res.countdown * 1000
+                        // this.disabled = 'disabled'
                     })
+
                 }).catch()
             },
 

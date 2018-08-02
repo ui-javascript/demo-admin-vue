@@ -26,9 +26,10 @@
                     class="mb-20"
                     :module="module"
                     :list="list"
+                    :allowMulti="true"
                     :disabled="disabled"
-                    @forbidChoose="forbidChoose()"
                     :showBtns="showBtns"
+                    @forbidChoose="forbidChoose()"
             ></radio-list>
         </div>
 
@@ -104,10 +105,9 @@
                 let self = this
                 getProblem(params).then(res => {
 
-                    // console.log('倒计时' + res.countdown)
                     this.$nextTick(() => {
-                        self.setTimer = res.countdown * 1000
-                        // self.setTimer = 5 * 1000
+                        // self.setTimer = res.countdown * 1000
+                        self.setTimer = 5 * 1000
 
                         if (res.problemFeatures) {
                             let options = res.problemFeatures.split('$')

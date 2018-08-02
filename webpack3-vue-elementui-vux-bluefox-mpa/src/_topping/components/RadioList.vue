@@ -21,7 +21,7 @@
                 <div v-for="(item, index) in list[curr].options">
                     <input :id='"demo"+index'
                            :value="optionsMap(index)"
-                           type="radio"
+                           :type="allowMulti ? 'checkbox': 'radio'"
                            @change="change(list[curr], index)"
                            v-model="list[curr].checked"
                            :disabled="disabled"
@@ -78,6 +78,11 @@
                 // type: Boolean,
                 default: false
             },
+            // 允许多选
+            allowMulti: {
+              prop: Boolean,
+              default: false
+            },
             // 题目列表
             // [
             //     {
@@ -122,6 +127,8 @@
             return {
                 checked: [],
                 curr: 0,
+                // 选项类型
+                // optionType: 'radio'
             }
         },
         watch: {
