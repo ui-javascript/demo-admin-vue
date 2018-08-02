@@ -96,7 +96,7 @@
 
                 this.$nextTick(() => {
                     // this.setTimer = res.countdown * 1000
-                    this.setTimer = 5 * 1000
+                    this.setTimer = 10 * 1000
                 })
             }).catch()
         }

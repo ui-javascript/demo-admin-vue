@@ -92,7 +92,7 @@
 
                     this.$nextTick(() => {
                         // self.setTimer = res.countdown * 1000
-                        self.setTimer = 5 * 1000
+                        self.setTimer = 10 * 1000
 
                         res.problemList.forEach(x => {
                             let options = x.problemFeatures.split('$')

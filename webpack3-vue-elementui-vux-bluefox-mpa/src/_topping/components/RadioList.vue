@@ -19,19 +19,43 @@
 
             <div class="radioList__list">
                 <div v-for="(item, index) in list[curr].options">
-                    <input :id='"demo"+index'
-                           :value="optionsMap(index)"
-                           :type="allowMulti ? 'checkbox': 'radio'"
-                           @change="change(list[curr], index)"
-                           v-model="list[curr].checked"
-                           :disabled="disabled"
-                    ><label
-                        class="radioList__label center"
-                        :class="list[curr].checked==optionsMap(index) ? 'active' : '' "
-                        :for="'demo'+index">
-                    <!--<span class="radioList_character">{{ index | optionsMap }}</span>-->
-                    {{ item }}
-                </label>
+
+                    <!-- 单选 -->
+                    <div v-if="!allowMulti">
+                        <input
+                                :id='"demo"+index'
+                                :value="radioMap(index)"
+                                type="radio"
+                                @change="change(list[curr], index)"
+                                v-model="list[curr].checked"
+                                :disabled="disabled"
+                        />
+
+                        <label
+                                class="radioList__label center"
+                                :class="list[curr].checked==radioMap(index) ? 'active' : '' "
+                                :for="'demo'+index"
+                        >{{ item }}</label>
+                    </div>
+
+                    <!-- 多选 -->
+                    <div v-else>
+                        <input
+                                :id='"demo"+index'
+                                :value="radioMap(index)"
+                                type="checkbox"
+                                v-model="list[curr].checked"
+                                :disabled="disabled"
+                        />
+
+                        <label
+                                class="radioList__label center"
+                                :class="list[curr].checked.indexOf(radioMap(index)) >=0  ? 'active' : '' "
+                                :for="'demo'+index"
+                        >{{ item }}</label>
+                    </div>
+
+
                 </div>
             </div>
 
@@ -63,10 +87,10 @@
     export default {
         name: "CheckboxList",
         filters: {
-            optionsMap(value) {
-                let arr = ['A', 'B', 'C', 'D', 'E']
-                return arr[value]
-            }
+            // optionsMap(value) {
+            //     let arr = ['A', 'B', 'C', 'D', 'E']
+            //     return arr[value]
+            // }
         },
         props: {
             // 卡片名
@@ -80,8 +104,8 @@
             },
             // 允许多选
             allowMulti: {
-              prop: Boolean,
-              default: false
+                prop: Boolean,
+                default: false
             },
             // 题目列表
             // [
@@ -99,8 +123,8 @@
             //     }
             // ],
             groupNum: {
-              type: Number,
-              default: 1
+                type: Number,
+                default: 1
             },
             showGroup: {
                 type: Boolean,
@@ -128,7 +152,7 @@
                 checked: [],
                 curr: 0,
                 // 选项类型
-                // optionType: 'radio'
+                // optionType: 'radio',
             }
         },
         watch: {
@@ -162,9 +186,16 @@
                     this.curr++;
                 }
             },
-            optionsMap(value) {
+            // 单选框是否选中
+            radioMap(value) {
                 let arr = ['A', 'B', 'C', 'D', 'E']
                 return arr[value]
+            },
+            // 复选框是否选中
+            checkboxMap(str, index) {
+                let arr = str.split('')
+                let map = ['A', 'B', 'C', 'D', 'E']
+                return arr.indexOf(map[index]) >= 0
             },
             change(item, index) {
                 if (this.list.length) {
@@ -179,17 +210,15 @@
                     }).catch()
                 }
             },
+            // 复选框改变
+            checkboxChange(index) {
+                // let arr = ['A', 'B', 'C', 'D', 'E']
+                // console.log(this.checkboxAnswer)
+            },
             // 提交
             submit() {
                 this.$vux.toast.show({
                     text: '已提交',
-                    // onShow () {
-                    //     console.log('Plugin: I\'m showing')
-                    // },
-                    // onHide () {
-                    //     console.log('Plugin: I\'m hiding')
-                    //     _this.show9 = false
-                    // }
                 })
 
                 // this.disabled = 'disabled'
@@ -197,7 +226,7 @@
             }
         },
         mounted() {
-
+            console.log(this.disabled)
         }
     }
 </script>
@@ -208,7 +237,8 @@
 
         border-bottom: 20px;
 
-        input[type='radio'] {
+        input[type='radio'],
+        input[type='checkbox'] {
             /*visibility: hidden;*/
             display: none;
         }

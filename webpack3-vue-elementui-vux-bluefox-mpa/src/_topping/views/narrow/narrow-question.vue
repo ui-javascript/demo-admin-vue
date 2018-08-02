@@ -39,7 +39,7 @@
 <script>
 
     import {mapGetters} from 'vuex'
-    import { getProblem, confirmPartner } from '../../api/exam'
+    import { getProblem, confirmPartner,submitOne } from '../../api/exam'
 
     // 组件
     import CountdownSvgCircle from '~/Model/Countdown/CountdownSvgCircle'
@@ -64,9 +64,10 @@
                     // },
                 ],
                 setTimer: 0,
-                disabled: false,
+                disabled: 'disabled',
                 disabledBtn: false,
                 problemNum: 1,
+                problemId: '',
                 title: '本题为风险题，是否参加',
                 total: 10,
                 participate: false,
@@ -85,10 +86,10 @@
         },
         methods: {
             reset() {
-                this.$nextTick(res => {
+                this.$nextTick(() => {
                     this.list = []
                     this.setTimer = 0
-                    this.disabled = false
+                    this.disabled = 'disabled'
                 })
             },
             updateList() {
@@ -107,16 +108,19 @@
 
                     this.$nextTick(() => {
                         // self.setTimer = res.countdown * 1000
-                        self.setTimer = 5 * 1000
+                        self.setTimer = 15 * 1000
 
                         if (res.problemFeatures) {
                             let options = res.problemFeatures.split('$')
                             options.pop()
+                            self.problemId = res.id
+
                             self.list.push({
                                 id: res.id,
                                 question: res.problemName,
                                 options: options,
-                                checked: res.submitAnswer
+                                // 分割为数组
+                                checked: res.submitAnswer.split('')
                             })
                         }
 
@@ -131,14 +135,21 @@
                     // 禁止答题
                     this.disabled = 'disabled'
 
-                    if (this.progress.problem === 10) {
-                        this.$router.push({
-                            path: '/notice',
-                            query: {
-                                type: 3
-                            }
-                        })
-                    }
+                    submitOne({
+                        submitAnswer: this.filterAnswer(this.list[0].checked),
+                        examProblemID: this.problemId
+                    }).then(() => {
+                        // 提交成功
+                        if (this.progress.problem === 10) {
+                            this.$router.push({
+                                path: '/notice',
+                                query: {
+                                    type: 3
+                                }
+                            })
+                        }
+                    })
+
                 }
 
                 // 取题目
@@ -154,38 +165,50 @@
             },
             // 确认参加风险题
             confirm() {
+                // 做出选择禁止后悔
                 this.disabledBtn = 'disabled'
+
+                // 允许选择题目
+                this.disabled = false
                 this.showBtns = true
-                debugger
+
                 confirmPartner({
                     questionNumber: this.problemNum
                 }).then(res => {
                     this.$vux.toast.show({
-                        text: '已确认参与，请等待',
-                        // onShow () {
-                        //     console.log('Plugin: I\'m showing')
-                        // },
-                        // onHide () {
-                        //     console.log('Plugin: I\'m hiding')
-                        //     _this.show9 = false
-                        // }
+                        text: '确认参与，请等待'
                     })
                 })
             },
             // 拒绝参加风险题
             refuse() {
+                this.disabledBtn = 'disabled'
                 this.$vux.toast.show({
                     text: '已拒绝参加',
                 })
                 this.showBtns = false
-
-                this.disabledBtn = 'disabled'
             },
+            // 转化答案
+            filterAnswer(arr) {
+                let str = ''
+                if (arr.indexOf('A') > -1) {
+                    str += 'A'
+                }
+                if (arr.indexOf('B') > -1) {
+                    str += 'B'
+                }
+                if (arr.indexOf('C') > -1) {
+                    str += 'C'
+                }
+                if (arr.indexOf('D') > -1) {
+                    str += 'D'
+                }
+                return str
+            }
         },
         watch: {
             // 路由变化的时候刷新
             '$route'(to, from) {
-                debugger
                 this.reload
                 // this.updateList()
             }
@@ -203,9 +226,6 @@
             this.$nextTick(() => {
                 this.setTimer = 10 * 1000
             })
-
-            // console.log(this.progress)
-            // this.updateList()
         }
     }
 </script>
