@@ -16,7 +16,11 @@ router.beforeEach((to, from, next) => {
 
         let progress = store.getters.progress
         if (progress.module !== 0) {
-            if (to.path.indexOf(moduleList[progress.module-1]) !== -1 || to.path === '/rule/main' || to.path === '/notice') {
+            debugger
+            if (to.path.indexOf(moduleList[progress.module-1]) !== -1
+                || to.path === '/rule/main'
+                || to.path === '/notice'
+                || to.path === '/rule/details') {
                 next()
             }
             else {

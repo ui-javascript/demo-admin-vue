@@ -59,7 +59,7 @@
             // 查看规则
             viewRule(type) {
                 this.$router.push({
-                    name: 'rule_details',
+                    path: '/rule/details',
                     query: {
                         type: type
                     }
