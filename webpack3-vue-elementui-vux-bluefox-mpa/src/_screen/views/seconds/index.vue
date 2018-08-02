@@ -1,6 +1,6 @@
 <template>
     <div class="secondsIndex">
-        <!--<common-header></common-header>-->
+        <common-header></common-header>
 
         <div class="container center">
             <!--<keep-alive>-->
@@ -17,9 +17,9 @@
 
     export default {
         name: "index",
-        // components: {
-        //     CommonHeader
-        // },
+        components: {
+            CommonHeader
+        },
         computed: {
             ...mapGetters({
                 progress: 'progress',

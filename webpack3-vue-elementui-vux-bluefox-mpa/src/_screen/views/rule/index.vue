@@ -1,6 +1,6 @@
 <template>
     <div class="ruleIndex">
-        <!--<common-header></common-header>-->
+        <common-header></common-header>
         <div class="container center clearfix">
             <card-attention
                     class="fl"
@@ -20,6 +20,10 @@
 
     export default {
         name: "index",
+        components: {
+            CommonHeader,
+            CardAttention
+        },
         data() {
             return {
                 type: '',
@@ -42,10 +46,6 @@
                     '（3）专家根据答题情况进行点评。'
                 },
             }
-        },
-        components: {
-            CommonHeader,
-            CardAttention
         },
         methods: {
             startAnswer() {

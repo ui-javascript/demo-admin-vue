@@ -2,6 +2,7 @@
     <div class="commonHeader relative">
         <img class="commonHeader__bg absolute" src="../../assets/images/header.jpg" alt="">
         <div class="commonHeader__ranking absolute" @click="viewRanking()">看排名</div>
+        <div class="commonHeader__back absolute" @click="back()"></div>
 
         <dialog-ranking
                 @close="close"
@@ -19,6 +20,7 @@
             }
         },
         components: {
+            // @todo 刷新
             dialogRanking(resolve) {
                 require(['../ranking/_dialog/ranking.vue'], resolve)
             },
@@ -30,6 +32,11 @@
             },
             close() {
                 this.visible = false
+            },
+            back() {
+                this.$router.push({
+                    path: '/guide'
+                })
             }
         }
     }
@@ -53,6 +60,15 @@
             height: 50px;
             border-radius: 15px;
             border: 1px solid @gray;
+        }
+
+        &__back {
+            background: url(../../assets/images/btn_back.png) no-repeat;
+            background-size: cover;
+            top: 30px;
+            left: 20px;
+            width: 158/4px;
+            height: 159/4px;
         }
 
     }
