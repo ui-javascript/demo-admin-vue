@@ -112,7 +112,7 @@
         },
         mounted() {
             // console.log(this.problemList)
-            //
+
             this.curr = parseInt(this.$route.query.num) || 1
 
             //
@@ -127,7 +127,7 @@
             // }
 
             getSingle({
-                problemID: this.problemList[this.curr].problemID
+                problemID: this.problemList[this.curr-1].problemID
             }).then(res => {
                 this.question = res
             })

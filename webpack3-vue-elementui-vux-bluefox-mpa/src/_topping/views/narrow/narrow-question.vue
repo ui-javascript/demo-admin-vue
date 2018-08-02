@@ -104,6 +104,7 @@
 
                 this.list = []
                 let self = this
+
                 getProblem(params).then(res => {
 
                     this.$nextTick(() => {
@@ -120,7 +121,8 @@
                                 question: res.problemName,
                                 options: options,
                                 // 分割为数组
-                                checked: res.submitAnswer.split('')
+                                // @fix 没有答案为空
+                                checked: res.submitAnswer ? res.submitAnswer.split('') : []
                             })
                         }
 

@@ -89,7 +89,6 @@
                 let self = this
                 getList(params).then(res => {
 
-
                     this.$nextTick(() => {
                         // self.setTimer = res.countdown * 1000
                         self.setTimer = 10 * 1000

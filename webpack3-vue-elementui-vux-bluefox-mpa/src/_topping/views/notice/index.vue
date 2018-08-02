@@ -1,11 +1,6 @@
 <template>
     <div class="noticeIndex">
 
-        <router-link to="/404">404</router-link>
-        <router-link to="/login" class="ml-5">登录</router-link>
-        <router-link to="/seconds">争分夺秒</router-link>
-        <router-link to="/higher">一比高下</router-link>
-        <router-link to="/narrow">狭路相逢</router-link>
 
         <header-back
                 :backRouterName="backRouterName"
@@ -17,7 +12,10 @@
         <!--<router-link to="/higher">一比高下</router-link>-->
         <!--<router-link to="/narrow">狭路相逢</router-link>-->
 
-        <card-notice></card-notice>
+        <card-notice
+            :module="module"
+            :title="title"
+        ></card-notice>
 
         <div class="noticeIndex__grade tc">
             <p>您答对<span>{{right}}</span>题，答错<span>{{wrong}}</span>题</p>
@@ -33,7 +31,7 @@
     import {mapGetters} from 'vuex'
     import HeaderBack from '../snippets/header-back'
     import CardNotice from '../snippets/card-notice'
-    import {getScore, getGrade} from '../../api/exam'
+    import {getScore} from '../../api/exam'
 
     export default {
         components: {
@@ -47,7 +45,10 @@
                 curr: 0,
                 total: 0,
                 ranking: 0,
-                backRouterName: '/rule/main'
+                backRouterName: '/rule/main',
+
+                module: '',
+                title: '本模块已结束'
             }
         },
         computed: {
@@ -57,19 +58,23 @@
         },
         methods: {},
         mounted() {
-            let type = this.progress.type
 
-            // debugger
+            let type = parseInt(this.$route.query.type) || 1
+            let map = ['争分夺秒', '一比高下', '狭路相逢']
+
+            this.module = map[type-1]
+
+            // 狭路相逢
+            if (type === 3) {
+                this.title = '所有模块已结束'
+            }
+
             getScore({type: type}).then(res => {
                 this.total = res.allScore
                 this.ranking = res.ranking
                 this.curr = res.mScore
                 this.right = res.tAnswerCount
                 this.wrong = res.wAnswerCount
-            })
-
-            getGrade().then(res => {
-                console.log(res)
             })
 
         }

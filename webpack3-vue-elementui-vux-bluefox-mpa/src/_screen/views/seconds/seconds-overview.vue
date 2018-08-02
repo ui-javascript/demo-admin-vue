@@ -8,7 +8,7 @@
             ></card-overview>
 
             <div class="clearfix mt-10">
-                <el-button class="fr" type="primary">下一组</el-button>
+                <!--<el-button class="fr" type="primary">下一组</el-button>-->
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
                 this.$router.push({
                     path: '/seconds/details',
                     query: {
-                        num: data.index
+                        num: data.index+1
                     }
                 })
             }
@@ -57,6 +57,8 @@
 
                 // 全局更新
                 this.$store.dispatch('UpdateProblemList', res)
+                console.log('第一题')
+                console.log(res[0])
             })
         }
 

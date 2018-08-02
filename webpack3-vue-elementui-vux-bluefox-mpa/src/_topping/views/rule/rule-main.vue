@@ -15,13 +15,16 @@
         <img class="ruleIndex__bg" src="../../assets/images/index.jpg" alt="">
 
         <div class="ruleIndex__box">
-            <div class="ruleIndex__box_btn center" @click="viewRule('seconds')">争分夺秒 <span v-show="module!==0"> {{typeScores1}} 分</span>
+            <div class="ruleIndex__box_btn center" @click="viewRule('seconds')">争分夺秒 <span v-show="module!==0"> {{ typeScores1}} 分</span>
             </div>
-            <div class="ruleIndex__box_btn center" @click="viewRule('higher')">一比高下 <span v-show="module!==0"> {{typeScores2}} 分</span>
+            <div class="ruleIndex__box_btn center" @click="viewRule('higher')">一比高下 <span v-show="module!==0"> {{ typeScores2 }} 分</span>
             </div>
-            <div class="ruleIndex__box_btn center" @click="viewRule('narrow')">狭路相逢 <span v-show="module!==0"> {{typeScores3}} 分</span>
+            <div class="ruleIndex__box_btn center" @click="viewRule('narrow')">狭路相逢 <span v-show="module!==0"> {{ typeScores3 }} 分</span>
             </div>
-            <div v-if="rankingVisible" class="ruleIndex__box_ranking center"></div>
+
+            <div v-if="rankingVisible" class="ruleIndex__box_ranking center">
+                {{ ranking }}
+            </div>
         </div>
 
         <footer-mask></footer-mask>
@@ -31,8 +34,11 @@
 
 <script>
     import {mapGetters} from 'vuex'
+    import {getGrade} from "../../api/exam"
+
     import userExit from '../snippets/user-exit'
     import footerMask from '../snippets/footer-mask'
+
 
     export default {
         components: {
@@ -71,6 +77,17 @@
             this.module = this.progress.module
 
             // this.initProgress()
+            getGrade().then(res => {
+                this.username = res.trueName
+                this.totalScores = res.totalScores
+                this.typeScores1 = res.typeScore1
+                this.typeScores2 = res.typeScore2
+                this.typeScores3 = res.typeScore3
+
+                this.rankingVisible = true
+                this.ranking = res.ranking
+
+            })
         }
     }
 </script>
@@ -120,6 +137,11 @@
             &_content {
                 color: yellow;
             }
+        }
+
+        &__ranking {
+            width: 100px;
+            height: 50px;
         }
     }
 

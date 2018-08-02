@@ -54,7 +54,6 @@ export function getGrade(params) {
     })
 }
 
-
 // 狭路相逢选择是否参与
 export function confirmPartner(params) {
     return request({

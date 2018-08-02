@@ -61,7 +61,7 @@
                     this.$router.push({
                         path: '/higher/question',
                         query: {
-                            num: num+1
+                            num: this.num+1
                         }
                     })
                 }

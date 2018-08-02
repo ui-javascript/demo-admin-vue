@@ -2,7 +2,7 @@
     <div class="cardNotice relative">
 
         <span class="cardNotice__badge absolute">{{module}}</span>
-        <span class="cardNotice__group absolute">({{ curr }} / {{ total }} 题) </span>
+        <!--<span class="cardNotice__group absolute">({{ curr }} / {{ total }} 题) </span>-->
 
         <div class="cardNotice__title absolute tc">
             <p class="title">
@@ -16,12 +16,22 @@
 <script>
     export default {
         name: "card-notice",
+        props: {
+            module: {
+                type: String,
+                default: ''
+            },
+            title: {
+                type: String,
+                default: ''
+            }
+        },
         data() {
             return {
-                module: '争分夺秒',
-                curr: 10,
-                total: 10,
-                title: '所有模块已结束'
+                // module: '争分夺秒',
+                // curr: 10,
+                // total: 10,
+                // title: '所有模块已结束'
             }
         },
         methods: {}
