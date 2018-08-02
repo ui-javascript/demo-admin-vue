@@ -6,6 +6,7 @@
         <div class="ruleIndex__info tc">
             <span class="ruleIndex__info_label">姓名: </span>
             <span class="ruleIndex__info_content">{{ username }}</span>
+
             <span v-show="module!==0">
                 <span class="ruleIndex__info_label">得分: </span>
                 <span class="ruleIndex__info_content">{{ totalScores }} 分</span>
@@ -23,7 +24,7 @@
             </div>
 
             <div v-if="rankingVisible" class="ruleIndex__box_ranking center">
-                {{ ranking }}
+                第 {{ ranking }} 名
             </div>
         </div>
 
@@ -49,6 +50,7 @@
             return {
                 username: '吴彦祖',
                 rankingVisible: false,
+
                 module: 0,
                 totalScores: 0,
                 typeScores1: 0,
@@ -80,11 +82,16 @@
             getGrade().then(res => {
                 this.username = res.trueName
                 this.totalScores = res.totalScores
-                this.typeScores1 = res.typeScore1
-                this.typeScores2 = res.typeScore2
-                this.typeScores3 = res.typeScore3
 
-                this.rankingVisible = true
+                this.typeScores1 = res.typeScores1
+                this.typeScores2 = res.typeScores2
+                this.typeScores3 = res.typeScores3
+
+                // 排名显示
+                if (this.ranking !== 0) {
+                    this.rankingVisible = true
+                }
+
                 this.ranking = res.ranking
 
             })

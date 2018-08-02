@@ -170,7 +170,7 @@
             // 确认参加风险题
             confirm() {
                 // 做出选择禁止后悔
-                this.disabledBtn = 'disabled'
+                // this.disabledBtn = 'disabled'
 
                 // 允许选择题目
                 this.disabled = false
@@ -186,7 +186,8 @@
             },
             // 拒绝参加风险题
             refuse() {
-                this.disabledBtn = 'disabled'
+                // this.disabledBtn = 'disabled'
+
                 this.$vux.toast.show({
                     text: '已拒绝参加',
                 })
