@@ -10,8 +10,18 @@
 
         <div class="CardConfirm__btns absolute tc clearfix">
             <div class="inline-block clearfix">
-                <button class="btn-pure btn-pure--green fl" @click="confirm()" :disabled="disabled">是</button>
-                <button class="btn-pure btn-pure--blue fl" @click="refuse()" :disabled="disabled">否</button>
+                <button
+                        class="btn-pure btn-pure--blue  fl"
+                        :class="isParticipate ? 'btn-pure--blue' : ''"
+                        @click="confirm()"
+                        :disabled="disabled"
+                >是</button>
+                <button
+                        class="btn-pure btn-pure--blue  fl ml-20"
+                        :class="!isParticipate ? 'btn-pure--blue' : ''"
+                        @click="refuse()"
+                        :disabled="disabled"
+                >否</button>
             </div>
         </div>
 
@@ -42,20 +52,18 @@
                 default: false
             }
         },
-        // data() {
-        //     return {
-        //         module: '狭路相逢',
-        //         curr: 10,
-        //         total: 10,
-        //         title: '本题为风险题，是否参加',
-        //         disabled: false
-        //     }
-        // },
+        data() {
+            return {
+                isParticipate: false
+            }
+        },
         methods: {
             confirm() {
+                this.isParticipate = true
                 this.$emit('confirm')
             },
             refuse() {
+                this.isParticipate = false
                 this.$emit('refuse')
             }
         },

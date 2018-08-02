@@ -16,7 +16,6 @@ router.beforeEach((to, from, next) => {
 
         let progress = store.getters.progress
         if (progress.module !== 0) {
-            debugger
             if (to.path.indexOf(moduleList[progress.module-1]) !== -1
                 || to.path === '/rule/main'
                 || to.path === '/notice'
@@ -60,8 +59,6 @@ router.beforeEach((to, from, next) => {
 
     // 未登录时
     else {
-
-        // next('/login')
 
         if (whiteList.indexOf(to.path) !== -1) {
             next()

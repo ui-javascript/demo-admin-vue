@@ -41,7 +41,7 @@
 <script>
 
     import {mapGetters} from 'vuex'
-    import { getProblem, confirmPartner,submitOne } from '../../api/exam'
+    import {getProblem, confirmPartner, submitOne} from '../../api/exam'
 
     // 组件
     import CountdownSvgCircle from '~/Model/Countdown/CountdownSvgCircle'
@@ -72,7 +72,9 @@
                 problemId: '',
                 title: '本题为风险题，是否参加',
                 total: 10,
-                participate: false,
+
+                // 记录是否参加
+                isParticipate: false,
 
                 // 默认不参加
                 showBtns: false
@@ -158,8 +160,25 @@
 
                 // 取题目
                 else {
-                    // this.reset()
-                    this.updateList()
+
+                    // 确定参加
+                    if (this.isParticipate) {
+                        confirmPartner({
+                            questionNumber: this.problemNum
+                        }).then(res => {
+                            this.$vux.toast.show({
+                                text: '确认参与，请等待'
+                            })
+
+                            // this.reset()
+                            this.updateList()
+                        })
+                    }
+
+                    // 不参加 吃瓜看题
+                    else {
+                        this.updateList()
+                    }
                 }
 
             },
@@ -171,29 +190,31 @@
             confirm() {
                 // 做出选择禁止后悔
                 // this.disabledBtn = 'disabled'
+                this.isParticipate = true
 
                 // 允许选择题目
                 this.disabled = false
                 this.showBtns = true
 
-                confirmPartner({
-                    questionNumber: this.problemNum
-                }).then(res => {
-                    this.$vux.toast.show({
-                        text: '确认参与，请等待'
-                    })
+                this.$vux.toast.show({
+                    text: '确认参与，请等待'
                 })
             },
             // 拒绝参加风险题
             refuse() {
+
                 // this.disabledBtn = 'disabled'
+                this.isParticipate = false
+
+                this.disabled = true
+                this.showBtns = false
 
                 this.$vux.toast.show({
                     text: '已拒绝参加',
                 })
-                this.showBtns = false
             },
             // 转化答案
+            // @deprecated 傻逼代码,写得吃急眼了...
             filterAnswer(arr) {
                 let str = ''
                 if (arr.indexOf('A') > -1) {

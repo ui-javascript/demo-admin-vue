@@ -15,12 +15,21 @@
         },
         methods: {},
         mounted() {
-            login('17816869505', '17816869505').then(res => {
-                console.log(res)
-                setToken(res.data)
-                this.$router.push({
-                    name: 'welcome_index'
-                })
+
+            login('admin', 'pinming9158').then(res => {
+
+                debugger
+                if (res.success) {
+                    setToken(res.data)
+
+                    this.$router.push({
+                        name: 'welcome_index'
+                    })
+                }
+                else {
+
+                }
+
             }).catch()
         }
     }
