@@ -84,8 +84,6 @@
 
                     pushType1({
                         subType: group + 1
-                    }).then(res => {
-                        debugger
                     })
 
                     this.$router.push({

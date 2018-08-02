@@ -2,9 +2,9 @@
     <div class="secondsOverview">
         <div class="box">
             <card-overview
-                    :badge="badge"
-                    :list="problemList"
-                    @view="view"
+                :badge="badge"
+                :list="problemList"
+                @view="view"
             ></card-overview>
 
             <div class="clearfix mt-10">

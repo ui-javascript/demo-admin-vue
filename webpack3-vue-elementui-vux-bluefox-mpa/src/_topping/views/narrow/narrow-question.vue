@@ -38,7 +38,7 @@
 <script>
 
     import {mapGetters} from 'vuex'
-    import {getProblem, confirmPartner} from '../../api/exam'
+    import { getProblem, confirmPartner } from '../../api/exam'
 
     // 组件
     import CountdownSvgCircle from '~/Model/Countdown/CountdownSvgCircle'

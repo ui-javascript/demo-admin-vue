@@ -1,7 +1,6 @@
 <template>
     <div class="ruleIndex">
-        <common-header></common-header>
-
+        <!--<common-header></common-header>-->
         <div class="container center clearfix">
             <card-attention
                     class="fl"
@@ -10,7 +9,6 @@
             </card-attention>
 
             <div class="ruleIndex__box fr box-dashed" v-html="ruleList[type]"></div>
-
         </div>
     </div>
 </template>
@@ -92,6 +90,17 @@
                 })
             }
         },
+        watch: {
+            // 路由变化的时候刷新
+            '$route'(to, from) {
+                debugger
+                this.type = this.$route.query.type || 'seconds';
+                // this.updateList()
+            }
+        },
+        // beforeRouteUpdate() {
+        //     this.type = this.$route.query.type || 'seconds';
+        // },
         mounted() {
             this.type = this.$route.query.type || 'seconds';
         },

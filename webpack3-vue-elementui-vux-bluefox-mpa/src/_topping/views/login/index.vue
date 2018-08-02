@@ -50,12 +50,22 @@
                 this.$store.dispatch('Login', {
                     username: this.username,
                     password: this.password
-                }).then(() => {
-                    this.$emit('sse')
+                }).then(res => {
 
-                    this.$router.push({
-                        path: '/rule'
-                    })
+                    res = res || {}
+                    if (res.error) {
+                        this.$vux.toast.text('用户名或密码错误')
+                    }
+                    else {
+                        // socket连接
+                        this.$emit('sse')
+
+                        this.$router.push({
+                            path: '/rule'
+                        })
+                    }
+
+
                 })
 
             }

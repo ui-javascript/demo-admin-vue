@@ -86,6 +86,7 @@
 
                 // 稍候倒计时结束
                 else {
+                    debugger
                     this.getQuestion()
                 }
 
@@ -127,7 +128,7 @@
 
                     this.$nextTick(() => {
                         // this.setTimer = res.countdown
-                        this.setTimer = 5 * 1000
+                        this.setTimer = 10 * 1000
                         this.disabled = 'disabled'
                     })
                 }).catch()

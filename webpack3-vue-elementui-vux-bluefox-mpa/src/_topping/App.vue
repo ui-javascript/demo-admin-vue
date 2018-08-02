@@ -30,7 +30,15 @@
 
                 // console.log(this.$socket)
 
+                // 关闭
+                this.$socket.onclose(()=>{
+                    //debugger
+                    //console.log('重连')
+                     //alert('socket断了')
+                    this.$socket.start().catch(err => console.error(err.toString()));
+                });
                 this.$socket.start().catch(err => console.error(err.toString()));
+
             },
 
             // 发送信息

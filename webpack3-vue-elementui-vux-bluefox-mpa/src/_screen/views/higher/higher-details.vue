@@ -33,7 +33,7 @@
         },
         data() {
             return {
-                badge: '争分夺秒',
+                badge: '一比高下',
                 question:
                 {
                     // title: '问题1',

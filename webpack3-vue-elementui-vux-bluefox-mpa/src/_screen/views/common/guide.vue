@@ -7,10 +7,10 @@
                 <div class="guideList__badge inline-block cursor" @click="viewRule('seconds')">
                     争分夺秒
                 </div>
-                <div class="guideList__badge inline-block cursor" @click="viewRule('seconds')">
+                <div class="guideList__badge inline-block cursor" @click="viewRule('higher')">
                     一比高下
                 </div>
-                <div class="guideList__badge inline-block cursor" @click="viewRule('seconds')">
+                <div class="guideList__badge inline-block cursor" @click="viewRule('narrow')">
                     狭路相逢
                 </div>
             </div>

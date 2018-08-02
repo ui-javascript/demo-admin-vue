@@ -1,6 +1,6 @@
 <template>
     <div class="HigherIndex">
-        <common-header></common-header>
+        <!--<common-header></common-header>-->
 
         <div class="container center">
             <keep-alive>
@@ -11,12 +11,12 @@
 </template>
 
 <script>
-    import CommonHeader from '../common/header'
+    // import CommonHeader from '../common/header'
 
     export default {
         name: "index",
         components: {
-            CommonHeader
+            // CommonHeader
         },
         data() {
             return {

@@ -11,8 +11,8 @@
     "build:topping": "cross-env NODE_SYS=topping node build/build.js",
     "dev:screen": "cross-env NODE_SYS=screen node build/dev-server.js",
     "build:screen": "cross-env NODE_SYS=screen node build/build.js",
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
-    "e2e": "node test/e2e/runner.js",
+    "unit": "cross-env BABEL_ENV=test NODE_SYS=topping karma start test/unit/karma.conf.js --single-run",
+    "e2e": "cross-env NODE_SYS=topping node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e"
   },
   "dependencies": {
