@@ -65,10 +65,14 @@ exports.prod = {
     ],
 
     // 部署
-    host: '47.100.99.127',
-    username: 'root',
-    password: '我不告诉你,除非做我女朋友',
-    remotePath: '/data/wwwroot/default'
+    // host: '47.100.99.127',
+    host: '172.16.11.175',
+    // username: 'root',
+    username: 'administrator',
+    // password: '我不告诉你,除非做我女朋友',
+    // password: '',
+    remotePath: '/data/wwwroot/default',
+    // remotePath: 'E:\程序\coreApi\wwwroot\screen'
 
 }
 

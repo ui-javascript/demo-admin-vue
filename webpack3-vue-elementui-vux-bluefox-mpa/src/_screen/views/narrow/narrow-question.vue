@@ -122,13 +122,12 @@
                     questionNumber: this.num
                 }).then(res => {
                     this.list = res.problem
-                    debugger
 
                     this.problemId = res.problem.problemID
 
                     this.$nextTick(() => {
-                        // this.setTimer = res.countdown
-                        this.setTimer = 10 * 1000
+                        this.setTimer = res.countdown
+                        // this.setTimer = 10 * 1000
                         this.disabled = 'disabled'
                     })
                 }).catch()
@@ -175,7 +174,7 @@
             // 获取题目
             this.$nextTick(() => {
                 this.title = NUM_ARR[this.num]
-                this.setTimer = 5 * 1000
+                this.setTimer = 10 * 1000
                 this.disabled = 'disabled'
             })
         }

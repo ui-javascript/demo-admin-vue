@@ -83,8 +83,8 @@
                     this.$nextTick(() => {
 
 
-                        // self.setTimer = res.countdown * 1000
-                        self.setTimer = 5 * 1000
+                        self.setTimer = res.countdown * 1000
+                        // self.setTimer = 5 * 1000
 
                         if (res.problemFeatures) {
                             let options = res.problemFeatures.split('$')

@@ -6,7 +6,7 @@
             </div>
 
             <div class="radioList__group">
-                {{ '(1/5组)' }}
+                ( <span v-if="showGroup"> {{ groupNum }}/5组 </span> {{ curr+1 }}/{{ totalNum }}题)
             </div>
 
             <div class="radioList__question">
@@ -26,26 +26,28 @@
                            v-model="list[curr].checked"
                            :disabled="disabled"
                     ><label
-                            class="radioList__label center"
-                            :class="list[curr].checked==optionsMap(index) ? 'active' : '' "
-                            :for="'demo'+index">
-                        <!--<span class="radioList_character">{{ index | optionsMap }}</span>-->
-                        {{ item }}
-                    </label>
+                        class="radioList__label center"
+                        :class="list[curr].checked==optionsMap(index) ? 'active' : '' "
+                        :for="'demo'+index">
+                    <!--<span class="radioList_character">{{ index | optionsMap }}</span>-->
+                    {{ item }}
+                </label>
                 </div>
             </div>
 
 
-
             <!-- 上下题切换 -->
-            <div class="radioList__operate tc" >
+            <div class="radioList__operate tc">
                 <div v-if="showBtns">
                     <span v-if="showToggle">
                         <button class="radioList__btn" v-show="this.curr!==0" type="button" @click="prev()">上一题</button>
-                        <button class="radioList__btn" v-show="this.curr!==this.list.length-1" type="button" @click="next()">下一题</button>
+                        <button class="radioList__btn" v-show="this.curr!==this.list.length-1" type="button"
+                                @click="next()">下一题</button>
                     </span>
 
-                    <button class="radioList__btn" v-show="this.curr===this.list.length-1" type="button" @click="submit()">提交</button>
+                    <button class="radioList__btn" v-show="this.curr===this.list.length-1" type="button"
+                            @click="submit()">提交
+                    </button>
                 </div>
 
             </div>
@@ -91,6 +93,18 @@
             //         options: ['A-xxxx', 'B-xxx', 'C-xxx', 'D-xxx']
             //     }
             // ],
+            groupNum: {
+              type: Number,
+              default: 1
+            },
+            showGroup: {
+                type: Boolean,
+                default: false
+            },
+            totalNum: {
+                type: Number,
+                default: 10
+            },
             list: {
                 type: Array,
                 required: true,

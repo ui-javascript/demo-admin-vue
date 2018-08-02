@@ -12,6 +12,9 @@
         <radio-list
                 class="mb-20"
                 :module="module"
+                :showGroup="true"
+                :groupNum="progress.group"
+                :totalNum="totalNum"
                 :list="list"
                 :disabled="disabled"
                 @forbidChoose="forbidChoose"
@@ -55,7 +58,8 @@
                     // }
                 ],
                 setTimer: 0,
-                disabled: false
+                disabled: false,
+                totalNum: 5
             }
         },
         // Vue刷新当前页面
@@ -88,7 +92,7 @@
 
                     this.$nextTick(() => {
                         self.setTimer = res.countdown * 1000
-                        self.setTimer = 5 * 1000
+                        // self.setTimer = 5 * 1000
 
                         res.problemList.forEach(x => {
                             let options = x.problemFeatures.split('$')
