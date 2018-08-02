@@ -17,6 +17,7 @@
                 :totalNum="totalNum"
                 :list="list"
                 :disabled="disabled"
+                :allowToggle="true"
                 @forbidChoose="forbidChoose"
                 :showToggle="true"
         ></radio-list>

@@ -13,14 +13,14 @@
         <!--<router-link to="/narrow">狭路相逢</router-link>-->
 
         <card-notice
-            :module="module"
-            :title="title"
+                :module="module"
+                :title="title"
         ></card-notice>
 
         <div class="noticeIndex__grade tc">
-            <p>您答对<span>{{right}}</span>题，答错<span>{{wrong}}</span>题</p>
+            <p>您答对<span>{{right}}</span>题<span v-if="type!==2">，答错<span>{{wrong}}</span>题</span></p>
             <p>本轮得分<span>{{curr}}</span>分，总分<span>{{total}}</span>分</p>
-            <p>排名：<span>{{ranking}}</span></p>
+            <p v-if="type==3">排名：<span>{{ranking}}</span></p>
         </div>
 
     </div>
@@ -47,6 +47,7 @@
                 ranking: 0,
                 backRouterName: '/rule/main',
 
+                type: 1,
                 module: '',
                 title: '本模块已结束'
             }
@@ -59,17 +60,17 @@
         methods: {},
         mounted() {
 
-            let type = parseInt(this.$route.query.type) || 1
+            this.type = parseInt(this.$route.query.type) || 1
             let map = ['争分夺秒', '一比高下', '狭路相逢']
 
-            this.module = map[type-1]
+            this.module = map[this.type - 1]
 
             // 狭路相逢
-            if (type === 3) {
+            if (this.type === 3) {
                 this.title = '所有模块已结束'
             }
 
-            getScore({type: type}).then(res => {
+            getScore({type: this.type}).then(res => {
                 this.total = res.allScore
                 this.ranking = res.ranking
                 this.curr = res.mScore

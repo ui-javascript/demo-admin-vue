@@ -6,7 +6,7 @@
             </div>
 
             <div class="radioList__group">
-                ( <span v-if="showGroup"> {{ groupNum }}/5组 </span> {{ curr+1 }}/{{ totalNum }}题)
+                ( <span v-if="showGroup"> {{ groupNum }}/5组 </span> {{ allowToggle ? curr+1 : fixedCurrNum }} /{{ totalNum }}题)
             </div>
 
             <div class="radioList__question">
@@ -44,13 +44,13 @@
                                 :id='"demo"+index'
                                 :value="radioMap(index)"
                                 type="checkbox"
-                                v-model="list[curr].checked"
+                                v-model="list[0].checked"
                                 :disabled="disabled"
                         />
 
                         <label
                                 class="radioList__label center"
-                                :class="list[curr].checked.indexOf(radioMap(index)) >=0  ? 'active' : '' "
+                                :class="list[0].checked.indexOf(radioMap(index)) >=0  ? 'active' : '' "
                                 :for="'demo'+index"
                         >{{ item }}</label>
                     </div>
@@ -104,8 +104,18 @@
             },
             // 允许多选
             allowMulti: {
-                prop: Boolean,
+                type: Boolean,
                 default: false
+            },
+            // 是否可以切换题目
+            allowToggle: {
+                type: Boolean,
+                default: true
+            },
+            // 当前题目类型
+            fixedCurrNum: {
+                type: Number,
+                default: 1
             },
             // 题目列表
             // [

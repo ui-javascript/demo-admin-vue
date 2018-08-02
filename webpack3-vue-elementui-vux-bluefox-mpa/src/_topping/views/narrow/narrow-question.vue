@@ -27,6 +27,8 @@
                     :module="module"
                     :list="list"
                     :allowMulti="true"
+                    :allowToggle="false"
+                    :fixedCurrNum="problemNum"
                     :disabled="disabled"
                     :showBtns="showBtns"
                     @forbidChoose="forbidChoose()"
@@ -222,6 +224,7 @@
         //     this.updateList()
         // },
         mounted() {
+
             this.reset()
             this.problemNum = parseInt(this.$route.query.num) || 1
 

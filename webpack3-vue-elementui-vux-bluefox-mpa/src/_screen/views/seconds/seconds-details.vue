@@ -11,16 +11,20 @@
                 <div class="fr">
                     <el-button
                             type="primary"
+                            @click="back()"
+                    >返回</el-button>
+
+                    <el-button
+                            type="primary"
                             @click="nextQuestion()"
-                            v-show="curr !== problemList.length-1"
-                    >下一题
-                    </el-button>
+                            v-show="curr !== problemList.length"
+                    >下一题</el-button>
 
                     <el-button
                             class="ml-20"
                             type="primary"
                             @click="nextGroup()"
-                            v-show="curr === problemList.length-1"
+                            v-show="curr === problemList.length"
                     >{{ progress.group < 5 ? '下一组' : '一比高下' }}
                     </el-button>
 
@@ -56,7 +60,7 @@
                     // answer: 'A',
                     // rightList: [10, 11, 22, 23, 38, 40, 41, 42, 43, 46, 47, 48, 50, 53, 56, 60, 62, 65, 67, 68, 69, 72, 76, 79, 82, 87, 89, 99],
                 },
-                curr: 0,
+                curr: 1,
                 id: '',
             }
         },
@@ -67,17 +71,25 @@
             }),
         },
         methods: {
+            // 返回
+            back() {
+                this.$router.go(-1)
+            },
+            // 下一题
             nextQuestion() {
-                if (this.curr < this.problemList.length - 1) {
+
+                if (this.curr < this.problemList.length) {
                     this.curr++
 
                     getSingle({
-                        problemID: this.problemList[this.curr].problemID
+                        problemID: this.problemList[this.curr-1].problemID
                     }).then(res => {
                         this.question = res
                     })
                 }
+
             },
+            // 下一组
             nextGroup() {
                 let group = this.progress.group
                 if (group < 5) {

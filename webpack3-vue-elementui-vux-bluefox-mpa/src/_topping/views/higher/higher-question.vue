@@ -14,6 +14,8 @@
                 :module="module"
                 :list="list"
                 :disabled="disabled"
+                :allowToggle="false"
+                :fixedCurrNum="num"
                 @forbidChoose="forbidChoose()"
         ></radio-list>
 
@@ -44,7 +46,8 @@
                     // },
                 ],
                 setTimer: 0,
-                disabled: false
+                disabled: false,
+                num: 1
             }
         },
         // Vue刷新当前页面
@@ -77,12 +80,8 @@
                 
                 getProblem(params).then(res => {
 
-                    debugger
-
                     // console.log('倒计时' + res.countdown)
                     this.$nextTick(() => {
-
-
                         // self.setTimer = res.countdown * 1000
                         self.setTimer = 10 * 1000
 

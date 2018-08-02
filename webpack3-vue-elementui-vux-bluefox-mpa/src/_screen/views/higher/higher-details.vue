@@ -58,6 +58,11 @@
         methods: {
             nextQuestion() {
                 if (this.num < 10) {
+
+                    pushType2({
+                        questionNumber: this.num+1
+                    })
+
                     this.$router.push({
                         path: '/higher/question',
                         query: {
@@ -67,7 +72,7 @@
                 }
 
                 else {
-
+                    // 跳到狭路相逢规则页
                     this.$router.push({
                         path: '/rule',
                         query: {

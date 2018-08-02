@@ -43,7 +43,7 @@
         &__btn {
             position: absolute;
             top: 10px;
-            right: 10px;
+            left: 10px;
             width: 158/4px;
             height: 159/4px;
         }
