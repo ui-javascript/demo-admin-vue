@@ -64,9 +64,16 @@
             <div class="radioList__operate tc">
                 <div v-if="showBtns">
                     <span v-if="showToggle">
-                        <button class="radioList__btn" v-show="this.curr!==0" type="button" @click="prev()">上一题</button>
-                        <button class="radioList__btn" v-show="this.curr!==this.list.length-1" type="button"
-                                @click="next()">下一题</button>
+                        <button class="radioList__btn"
+                                v-show="this.curr!==0"
+                                type="button"
+                                @click="prev()"
+                        >上一题</button>
+                        <button class="radioList__btn"
+                                v-show="this.curr!==this.list.length-1"
+                                type="button"
+                                @click="next()"
+                        >下一题</button>
                     </span>
 
                     <button class="radioList__btn" v-show="this.curr===this.list.length-1" type="button"

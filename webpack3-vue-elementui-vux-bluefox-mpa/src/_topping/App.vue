@@ -7,8 +7,9 @@
 
 <script>
     // import { getInfo } from "../../api/login"
-    import { getToken } from './router/_auth'
-    import { getProgress } from "./api/exam"
+    import {getToken} from './router/_auth'
+    import {setStorage} from "../utils/localStorage"
+    import {getProgress} from "./api/exam"
 
     export default {
         data() {
@@ -24,18 +25,22 @@
                 // https://blog.csdn.net/weixin_42235377/article/details/80491646
 
                 this.$socket = new signalR.HubConnectionBuilder()
-                    .withUrl(this.url,{ accessTokenFactory: () => getToken()})
+                    .withUrl(this.url, {accessTokenFactory: () => getToken()})
                     .configureLogging(signalR.LogLevel.Information)
                     .build();
 
                 // console.log(this.$socket)
 
                 // 关闭
-                this.$socket.onclose(()=>{
+                this.$socket.onclose(() => {
                     //debugger
                     //console.log('重连')
-                     //alert('socket断了')
-                    this.$socket.start().catch(err => console.error(err.toString()));
+                    //alert('socket断了')
+
+                    // @fix 登录情况下重连
+                    if (getToken()) {
+                        this.$socket.start().catch(err => console.error(err.toString()));
+                    }
                 });
                 this.$socket.start().catch(err => console.error(err.toString()));
 
@@ -90,6 +95,11 @@
                         problem: questionNumber
                     })
 
+                    // @fix 不要忘记标记
+                    if (questionNumber === 1) {
+                        setStorage('higherParticipate', 'yes')
+                    }
+
                     // debugger
                     router.push({
                         path: '/higher/question',
@@ -108,10 +118,13 @@
                         problem: questionNumber
                     })
 
+                    // localStorage用来存储是否接着参加一比高下
+                    setStorage('higherParticipate', 'sorry')
+
                     router.push({
                         path: '/higher/question',
                         query: {
-                            num: questionNumber
+                            num: questionNumber,
                         }
                     })
                 });
@@ -156,7 +169,7 @@
         },
         mounted() {
 
-            if(getToken()) {
+            if (getToken()) {
                 // 初始化
                 this.initProgress()
 

@@ -16,21 +16,23 @@
         methods: {},
         mounted() {
 
-            login('admin', 'pinming9158').then(res => {
+            this.$store.dispatch('Login', {
+                username: 'admin',
+                password: 'pinming9158'
+            }).then(res => {
 
-                debugger
-                if (res.success) {
-                    setToken(res.data)
-
+                res = res || {}
+                if (res.error) {
+                    // this.$vux.toast.text('用户名或密码错误')
+                }
+                else {
                     this.$router.push({
                         name: 'welcome_index'
                     })
                 }
-                else {
 
-                }
+            })
 
-            }).catch()
         }
     }
 </script>

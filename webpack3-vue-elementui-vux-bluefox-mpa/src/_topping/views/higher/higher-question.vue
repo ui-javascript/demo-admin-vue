@@ -16,6 +16,7 @@
                 :disabled="disabled"
                 :allowToggle="false"
                 :fixedCurrNum="num"
+                :showBtns="showBtns"
                 @forbidChoose="forbidChoose()"
         ></radio-list>
 
@@ -25,7 +26,9 @@
 <script>
 
     import {mapGetters} from 'vuex'
+    import {getStorage } from "../../../utils/localStorage"
     import {getProblem} from '../../api/exam'
+
     import CountdownSvgCircle from '~/Model/Countdown/CountdownSvgCircle'
     import RadioList from '../../components/RadioList'
 
@@ -46,8 +49,10 @@
                     // },
                 ],
                 setTimer: 0,
+                num: 1,
+                isParticipate: true,
                 disabled: false,
-                num: 1
+                showBtns: true,
             }
         },
         // Vue刷新当前页面
@@ -60,22 +65,18 @@
         },
         methods: {
             reset() {
+                this.list = []
                 this.setTimer = 0
                 this.disabled = false
-                this.num = this.$route.query.num || 1
+                this.num = parseInt(this.$route.query.num) || 1
+                this.isParticipate = true
             },
             updateList() {
-                // 注意不要加括号
-                // this.reload
-                this.reset()
-
                 let params = {
-                    // problemType: this.progress.module,
                     problemType: 2,
                     questionNumber: this.num
                 }
 
-                this.list = []
                 let self = this
                 
                 getProblem(params).then(res => {
@@ -103,9 +104,12 @@
 
             // 强制提交
             forceSubmit() {
-                this.$vux.toast.show({
-                    text: '已提交',
-                })
+
+                if (this.isParticipate) {
+                    this.$vux.toast.show({
+                        text: '已提交',
+                    })
+                }
 
                 // 禁止答题
                 this.disabled = 'disabled'
@@ -129,17 +133,26 @@
             // 路由变化的时候刷新
             '$route'(to, from) {
                 this.reload
-                // this.updateList()
             }
         },
         // created() {
-        //
         // },
         // beforeRouteUpdate() {
         //     this.updateList()
         // },
         mounted() {
-            // console.log(this.progress)
+            this.reset()
+
+            // 判断是否参加
+            let canParticipate = getStorage('higherParticipate')
+            if (canParticipate === 'sorry') {
+                this.$nextTick(() => {
+                    this.isParticipate = false
+                    this.disabled = 'disabled'
+                    this.showBtns = false
+                })
+            }
+
             this.updateList()
         }
     }
