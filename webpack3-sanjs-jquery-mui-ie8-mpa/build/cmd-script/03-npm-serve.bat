@@ -1,2 +1,0 @@
-cd ../../dist
-serve -s
