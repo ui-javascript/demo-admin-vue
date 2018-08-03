@@ -46,6 +46,19 @@
 
 */
 
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+
 .fl {
   float: left;
   _display: inline;

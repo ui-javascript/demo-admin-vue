@@ -1,12 +1,30 @@
 <template>
     <div class="NarrowQuestion ruleIndex">
 
-        <div class="ruleIndex__count">
-            <countdown-svg-circle
-                    :setTimer="setTimer"
-                    :endCallBack="'forceSubmit'"
-                    @forceSubmit="forceSubmit()"
-            ></countdown-svg-circle>
+        <div class="ruleIndex__count clearfix">
+            <div class="container center tc">
+                <countdown-svg-circle
+                        :class="{'fl': visibleRanking}"
+                        class="inline-block"
+                        :setTimer="setTimer"
+                        :endCallBack="'forceSubmit'"
+                        @forceSubmit="forceSubmit()"
+                ></countdown-svg-circle>
+
+                <div class="fr clearfix" v-show="visibleRanking">
+                    <div class="fl">
+                        <p>得分：{{ xScore }}分</p>
+                        <p>排名：{{ xRanking }}名</p>
+                    </div>
+                    <div class="fr ml-10">
+                        <p><span v-show="xLessRanking>0">第{{xLessRanking}}名： {{ xLessScore }} 分</span>&nbsp;</p>
+                        <p>第{{xPlusRanking}}名： {{ xPlusScore }} 分</p>
+                    </div>
+
+                </div>
+            </div>
+
+
         </div>
 
         <div v-if="!list.length">
@@ -41,7 +59,7 @@
 <script>
 
     import {mapGetters} from 'vuex'
-    import {getProblem, confirmPartner, submitOne} from '../../api/exam'
+    import {getProblem, confirmPartner, submitOne, getUserRanking} from '../../api/exam'
 
     // 组件
     import CountdownSvgCircle from '~/Model/Countdown/CountdownSvgCircle'
@@ -77,7 +95,16 @@
                 isParticipate: false,
 
                 // 默认不参加
-                showBtns: false
+                showBtns: false,
+
+                // 排名
+                visibleRanking: false,
+                xRanking: null,
+                xScore: null,
+                xPlusRanking: null,
+                xPlusScore: null,
+                xLessRanking: null,
+                xLessScore: null
             }
         },
         // Vue刷新当前页面
@@ -90,10 +117,25 @@
         },
         methods: {
             reset() {
+                this.visibleRanking = false
                 this.$nextTick(() => {
                     this.list = []
                     this.setTimer = 0
                     this.disabled = 'disabled'
+                })
+            },
+            // 获取排名
+            getRanking() {
+
+                this.visibleRanking = true
+
+                getUserRanking().then(res => {
+                    this.xRanking = res.xRanking
+                    this.xScore = res.xScore
+                    this.xPlusRanking = res.xPlusRanking
+                    this.xPlusScore = res.xPlusScore
+                    this.xLessRanking = res.xLessRanking
+                    this.xLessScore = res.xLessScore
                 })
             },
             updateList() {
@@ -171,12 +213,14 @@
                             })
 
                             // this.reset()
+                            this.getRanking()
                             this.updateList()
                         })
                     }
 
                     // 不参加 吃瓜看题
                     else {
+                        this.getRanking()
                         this.updateList()
                     }
                 }
@@ -263,6 +307,10 @@
         &__count {
             width: 100%;
             text-align: center;
+
+            & > .container {
+                width: 300px;
+            }
         }
     }
 

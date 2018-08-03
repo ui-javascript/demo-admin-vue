@@ -62,3 +62,11 @@ export function confirmPartner(params) {
         data: params
     })
 }
+
+// 狭路相逢选择是否参与
+export function getUserRanking() {
+    return request({
+        url: '/exam/userRanking',
+        method: 'get',
+    })
+}
