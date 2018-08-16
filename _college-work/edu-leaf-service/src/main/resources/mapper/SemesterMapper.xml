@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="space.qmen.leaf.dao.SemesterDao">
+    <resultMap id="BaseResultMap" type="space.qmen.leaf.domain.Semester">
+        <result column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="begin_date" property="begin_date" />
+        <result column="end_date" property="end_date" />
+        <result column="description" property="description" />
+        <result column="is_now" property="is_now" />
+        <result column="year_id" property="year_id" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <parameterMap id="Semester" type="space.qmen.leaf.domain.Semester"/>
+
+    <sql id="Base_Column_List">
+        id, name, begin_date, end_date, description,is_now,year_id,status
+    </sql>
+
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from semester
+        where id = #{id}
+    </select>
+
+    <select id="findAllSemester" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from semester
+    </select>
+
+    <insert id="saveSemester" parameterMap="Semester" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        semester(id, name, begin_date, end_date, description,is_now,year_id,status)
+        values
+        (#{id},#{name},#{begin_date},#{end_date},#{description},#{is_now},#{year_id}, #{status})
+    </insert>
+
+    <update id="updateSemester" parameterMap="Semester">
+        update
+        semester
+        set
+        <if test="name!=null">
+            name = #{name},
+        </if>
+        <if test="begin_date!=null">
+            begin_date = #{begin_date},
+        </if>
+        <if test="description!=null">
+            description = #{description},
+        </if>
+        <if test="status!=null">
+            status = #{status}
+        </if>
+        <if test="end_date!=null">
+            end_date = #{end_date},
+        </if>
+        <if test="is_now!=null">
+            is_now = #{is_now},
+        </if>
+        <if test="year_id!=null">
+            year_id = #{year_id},
+        </if>
+        where
+        id = #{id}
+    </update>
+
+    <delete id="deleteSemester" parameterType="java.lang.Long">
+        delete from
+        semester
+        where
+        id = #{id}
+    </delete>
+</mapper>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="space.qmen.lot.dao.UserDao">
+
+    <resultMap id="BaseResultMap" type="space.qmen.lot.entity.User">
+        <result column="id" property="id" />
+        <result column="real_name" property="realName" />
+        <result column="tel" property="tel" />
+        <result column="id_card" property="idCard" />
+        <result column="password" property="password" />
+        <result column="password_salt" property="passwordSalt" />
+        <result column="nick_name" property="nickName" />
+        <result column="gender" property="gender" />
+        <result column="icon" property="icon" />
+        <result column="email" property="email" />
+        <result column="description" property="description" />
+        <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+        <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+        <result column="is_owner" property="isOwner" />
+        <result column="is_renter" property="isRenter" />
+        <result column="is_admin" property="isAdmin" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+    <parameterMap id="User" type="space.qmen.lot.entity.User"/>
+    <sql id="Base_Column_List">
+        id, real_name, tel, id_card,
+        /*password, password_salt,*/
+        nick_name, gender, icon, email,
+        description,
+        gmt_create, gmt_modified,
+        is_owner, is_renter, is_admin, is_deleted
+    </sql>
+
+
+    <!-- 根据id获取地区 -->
+    <select id="getUserById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from user
+        where id = #{id}
+    </select>
+
+    <!-- 显示所有地区 -->
+    <select id="listUser" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from user
+    </select>
+
+    <!-- 新增地区 -->
+    <insert id="saveUser" parameterMap="User" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        user(id, real_name, tel, id_card,password)
+        values
+        (null,#{realName},#{tel},#{idCard},#{password})
+    </insert>
+
+    <!--更新地区-->
+    <update id="updateUser" parameterMap="User">
+        update
+        user
+        set
+        <if test="realName!=null">
+            real_name = #{realName},
+        </if>
+        <if test="tel!=null">
+            tel = #{tel},
+        </if>
+        <if test="idCard!=null">
+            id_card = #{idCard},
+        </if>
+        gmt_modified = CURRENT_TIMESTAMP
+        where
+        id = #{id}
+    </update>
+
+    <!-- 删除地区 -->
+    <delete id="deleteUser" parameterType="java.lang.Long">
+        delete from
+        user
+        where
+        id = #{id}
+    </delete>
+</mapper>

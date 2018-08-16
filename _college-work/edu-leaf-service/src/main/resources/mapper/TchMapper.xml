@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="space.qmen.leaf.dao.TchDao">
+    <resultMap id="BaseResultMap" type="space.qmen.leaf.domain.Tch">
+        <result column="id" property="id" />
+        <result column="job_num" property="job_num" />
+        <result column="name" property="name" />
+        <result column="gender" property="gender" />
+        <result column="title" property="title" />
+        <result column="qualification" property="qualification" />
+        <result column="qualification_school" property="qualification_school" />
+        <result column="degree" property="degree" />
+        <result column="degree_school" property="degree_school" />
+        <result column="research_area" property="research_area" />
+        <result column="tel" property="tel" />
+        <result column="mobile" property="mobile" />
+        <result column="email" property="email" />
+        <result column="birthday" property="birthday" />
+        <result column="description" property="description" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <parameterMap id="Tch" type="space.qmen.leaf.domain.Tch"/>
+
+    <sql id="Base_Column_List">
+        id,job_num,name,gender,title,qualification,qualification_school,
+        degree,degree_school,research_area,tel,mobile,email,birthday,
+        description,status
+    </sql>
+
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from tch
+        where id = #{id}
+    </select>
+
+    <select id="findAllTch" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from tch
+    </select>
+
+    <insert id="saveTch" parameterMap="Tch" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        tch(id,job_num,name,gender,title,qualification,qualification_school,
+        degree,degree_school,research_area,tel,mobile,email,birthday,
+        description,status)
+        values
+        (#{id},#{name},#{job_num},#{gender},#{description},#{title},#{qualification}, #{qualification_school},
+        #{degree},#{degree_school},#{research_area},#{tel},#{mobile},#{email},
+        #{birthday},#{status})
+    </insert>
+
+    <update id="updateTch" parameterMap="Tch">
+        update
+        tch
+        set
+        <if test="name!=null">
+            name = #{name},
+        </if>
+        <if test="job_num!=null">
+            job_num = #{job_num},
+        </if>
+        <if test="gender!=null">
+            gender = #{gender},
+        </if>
+        <if test="description!=null">
+            description = #{description},
+        </if>
+        <if test="title!=null">
+            title = #{title},
+        </if>
+        <if test="Tch_id!=null">
+            Tch_id = #{Tch_id},
+        </if>
+        <if test="qualification!=null">
+            qualification = #{qualification},
+        </if>
+        <if test="qualification_school!=null">
+            qualification_school = #{qualification_school}
+        </if>
+        <if test="degree!=null">
+            degree = #{degree},
+        </if>
+        <if test="degree_school!=null">
+            degree_school = #{degree_school},
+        </if>
+        <if test="research_area!=null">
+            research_area = #{research_area},
+        </if>
+        <if test="tel!=null">
+            tel = #{tel},
+        </if>
+        <if test="mobile!=null">
+            mobile = #{mobile},
+        </if>
+        <if test="email!=null">
+            email = #{email},
+        </if>
+        <if test="birthday!=null">
+            birthday = #{birthday},
+        </if>
+        <if test="status!=null">
+            status = #{status},
+        </if>
+        where
+        id = #{id}
+    </update>
+
+    <delete id="deleteTch" parameterType="java.lang.Long">
+        delete from
+        tch
+        where
+        id = #{id}
+    </delete>
+</mapper>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="space.qmen.leaf.dao.MaterialDao">
+    <resultMap id="BaseResultMap" type="space.qmen.leaf.domain.Material">
+        <result column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="url" property="url" />
+        <result column="upload_dt" property="uploadDt" />
+        <result column="uploader_id" property="uploaderId" />
+        <result column="size" property="size" />
+        <result column="dl_times" property="dlTimes" />
+        <result column="description" property="description" />
+        <result column="material_type_id" property="materialTypeId" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <parameterMap id="Material" type="space.qmen.leaf.domain.Material"/>
+
+    <sql id="Base_Column_List">
+        id, name, url, upload_dt, uploader_id, size, dl_times, description,
+        material_type_id, status
+    </sql>
+
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from material
+        where id = #{id}
+    </select>
+
+    <select id="findAllMaterial" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from material
+    </select>
+
+    <insert id="saveMaterial" parameterMap="Material" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        material(id, name, url, upload_dt, uploader_id, size, dl_times, description, material_type_id, status)
+        values
+        (#{id},#{name},#{url},#{uploadDt},#{uploaderId},#{size},
+          #{dlTimes},#{description},#{materialTypeId},#{status})
+    </insert>
+
+    <update id="updateMaterial" parameterMap="Material">
+        update
+        material
+        set
+        <if test="name!=null">
+            name = #{name},
+        </if>
+        <if test="url!=null">
+            url = #{url},
+        </if>
+        <if test="uploadDt!=null">
+            upload_dt = #{uploadDt},
+        </if>
+        <if test="uploaderId!=null">
+            uploader_id = #{uploaderId},
+        </if>
+        <if test="size!=null">
+            size = #{size},
+        </if>
+        <if test="dlTimes!=null">
+            dl_times = #{dlTimes},
+        </if>
+        <if test="description!=null">
+            description = #{description},
+        </if>
+        <if test="materialTypeId!=null">
+            material_type_id = #{materialTypeId},
+        </if>
+        <if test="status!=null">
+            status = #{status}
+        </if>
+        where
+        id = #{id}
+    </update>
+
+    <delete id="deleteMaterial" parameterType="java.lang.Long">
+        delete from
+        material
+        where
+        id = #{id}
+    </delete>
+</mapper>

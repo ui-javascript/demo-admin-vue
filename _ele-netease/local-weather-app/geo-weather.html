@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>地理和天气读取</title>
+  <script src="../../assets/js/libs/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+  <!--iframe接口 =======-->
+  <iframe name="weather_inc"
+    src="http://i.tianqi.com/index.php?c=code&id=52&icon=1&num=3"
+    width="280" height="25" frameborder="0"
+    marginwidth="0" marginheight="0" scrolling="no">
+  </iframe>
+
+
+  <!--获取经纬度 =======-->
+  <p id="data">You are here:</p>
+  <script>
+  if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+          $("#data").html("latitude: " + position.coords.latitude
+                + "<br>longitude: " + position.coords.longitude);
+      });
+  }
+  </script>
+
+</body>
+
+</html>

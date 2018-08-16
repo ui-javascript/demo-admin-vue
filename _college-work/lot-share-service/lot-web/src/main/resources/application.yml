@@ -1,0 +1,54 @@
+## 数据源配置
+spring:
+  main:
+    banner-mode: "off"
+#  profiles: dev
+  datasource:
+    url: jdbc:mysql://47.100.99.127:3306/lot_share?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+    username: luojs
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+
+  redis:
+    host: 127.0.0.1
+    password: Redis!123
+    port: 6379
+
+## Mybatis 配置
+mybatis:
+  typeAliasesPackage: space.qmen.lot.entity
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰映射
+
+#mapper:
+#    mappers:
+#        - tk.mybatis.springboot.util.MyMapper
+#    not-empty: false
+#    identity: MYSQL
+
+
+# 分页配置
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+favorites:
+  file:
+    save:
+      path: static/file/logo/
+    access:
+      url: http://47.100.99.127:8888/file/logo/
+  base:
+    path: http://47.100.99.127:8888/
+
+
+# 打印sql
+logging:
+  level:
+    com:
+      space.qmen.lot.dao: debug

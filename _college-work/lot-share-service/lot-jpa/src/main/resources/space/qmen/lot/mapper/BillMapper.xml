@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="space.qmen.lot.mapper.BillMapper">
+  <resultMap id="BaseResultMap" type="space.qmen.lot.entity.Bill">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="transaction_type" jdbcType="TINYINT" property="transactionType" />
+    <result column="bill_amount" jdbcType="DECIMAL" property="billAmount" />
+    <result column="from_account_id" jdbcType="BIGINT" property="fromAccountId" />
+    <result column="from_user_id" jdbcType="BIGINT" property="fromUserId" />
+    <result column="to_account_id" jdbcType="BIGINT" property="toAccountId" />
+    <result column="to_user_id" jdbcType="BIGINT" property="toUserId" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="is_deleted" jdbcType="BIT" property="isDeleted" />
+  </resultMap>
+</mapper>

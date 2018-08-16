@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="space.qmen.leaf.dao.StuDao">
+    <resultMap id="BaseResultMap" type="space.qmen.leaf.domain.Stu">
+        <result column="id" property="id" />
+        <result column="stu_id" property="stu_id" />
+        <result column="name" property="name" />
+        <result column="gender" property="gender" />
+        <result column="dept_id" property="dept_id" />
+        <result column="major_id" property="major_id" />
+        <result column="class_id" property="class_id" />
+        <result column="grade" property="grade" />
+        <result column="description" property="description" />
+        <result column="mobile" property="mobile" />
+        <result column="email" property="email" />
+        <result column="birthday" property="birthday" />
+    </resultMap>
+
+    <parameterMap id="Stu" type="space.qmen.leaf.domain.Stu"/>
+
+    <sql id="Base_Column_List">
+        id,stu_id,name, gender, dept_id, description,major_id,class_id,grade,
+        mobile,email,birthday
+    </sql>
+
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from stu
+        where id = #{id}
+    </select>
+
+    <select id="findAllStu" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from stu
+    </select>
+
+    <insert id="saveStu" parameterMap="Stu" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        stu(id,stu_id,name, gender, dept_id, description,major_id,class_id,grade,
+        mobile,email,birthday)
+        values
+        (#{id},#{name},#{stu_id},#{gender},#{description},#{dept_id},#{major_id}, #{class_id},
+        #{grade},#{mobile},#{email},#{birthday})
+    </insert>
+
+    <update id="updateStu" parameterMap="Stu">
+        update
+        stu
+        set
+        <if test="grade!=null">
+            grade = #{grade},
+        </if>
+        <if test="birthday!=null">
+            birthday = #{birthday},
+        </if>
+        <if test="email!=null">
+            email = #{email},
+        </if>
+        <if test="mobile!=null">
+            mobile = #{mobile},
+        </if>
+        <if test="name!=null">
+            name = #{name},
+        </if>
+        <if test="stu_id!=null">
+            stu_id = #{stu_id},
+        </if>
+        <if test="description!=null">
+            description = #{description},
+        </if>
+        <if test="gender!=null">
+            gender = #{gender}
+        </if>
+        <if test="dept_id!=null">
+            dept_id = #{dept_id},
+        </if>
+        <if test="major_id!=null">
+            major_id = #{major_id},
+        </if>
+        <if test="class_id!=null">
+            class_id = #{class_id},
+        </if>
+        where
+        id = #{id}
+    </update>
+
+    <delete id="deleteStu" parameterType="java.lang.Long">
+        delete from
+        stu
+        where
+        id = #{id}
+    </delete>
+</mapper>

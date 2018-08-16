@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="space.qmen.leaf.dao.RoleResourceDao">
+    <resultMap id="BaseResultMap" type="space.qmen.leaf.domain.RoleResource">
+        <result column="id" property="id" />
+        <result column="role_id" property="roleId" />
+        <result column="resource_id" property="resourceId" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <parameterMap id="RoleResource" type="space.qmen.leaf.domain.RoleResource"/>
+
+    <sql id="Base_Column_List">
+        id, role_id, resource_id, status
+    </sql>
+
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from role_resource
+        where id = #{id}
+    </select>
+
+    <select id="findAllRoleResource" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from role_resource
+    </select>
+
+    <insert id="saveRoleResource" parameterMap="RoleResource" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        role_resource(id, role_id, resource_id, status)
+        values
+        (#{id},#{roleId},#{resourceId},#{status})
+    </insert>
+
+    <update id="updateRoleResource" parameterMap="RoleResource">
+        update
+        role_resource
+        set
+        <if test="roleId!=null">
+            role_id = #{roleId},
+        </if>
+        <if test="resourceId!=null">
+            resource_id = #{resourceId},
+        </if>
+        <if test="status!=null">
+            status = #{status}
+        </if>
+        where
+        id = #{id}
+    </update>
+
+    <delete id="deleteRoleResource" parameterType="java.lang.Long">
+        delete from
+        role_resource
+        where
+        id = #{id}
+    </delete>
+</mapper>

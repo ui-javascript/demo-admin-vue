@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="space.qmen.leaf.dao.DeptDao">
+    <resultMap id="BaseResultMap" type="space.qmen.leaf.domain.Dept">
+        <result column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="intro" property="intro" />
+        <result column="description" property="description" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <parameterMap id="Dept" type="space.qmen.leaf.domain.Dept"/>
+
+    <sql id="Base_Column_List">
+        id, name, intro, description, status
+    </sql>
+
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from dept
+        where id = #{id}
+    </select>
+
+    <select id="findAllDept" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from dept
+    </select>
+
+    <insert id="saveDept" parameterMap="Dept" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        dept(id, name, intro, description, status)
+        values
+        (#{id},#{name},#{intro},#{description}, #{status})
+    </insert>
+
+    <update id="updateDept" parameterMap="Dept">
+        update
+        dept
+        set
+        <if test="name!=null">
+            name = #{name},
+        </if>
+        <if test="intro!=null">
+            intro = #{intro},
+        </if>
+        <if test="description!=null">
+            description = #{description},
+        </if>
+        <if test="status!=null">
+            status = #{status}
+        </if>
+        where
+        id = #{id}
+    </update>
+
+    <delete id="deleteDept" parameterType="java.lang.Long">
+        delete from
+        dept
+        where
+        id = #{id}
+    </delete>
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="space.qmen.lot.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="space.qmen.lot.entity.User">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="real_name" jdbcType="VARCHAR" property="realName" />
+    <result column="tel" jdbcType="VARCHAR" property="tel" />
+    <result column="id_card" jdbcType="CHAR" property="idCard" />
+    <result column="password" jdbcType="CHAR" property="password" />
+    <result column="password_salt" jdbcType="CHAR" property="passwordSalt" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="gender" jdbcType="BIT" property="gender" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+    <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+    <result column="is_owner" jdbcType="BIT" property="isOwner" />
+    <result column="is_renter" jdbcType="BIT" property="isRenter" />
+    <result column="is_admin" jdbcType="BIT" property="isAdmin" />
+    <result column="is_deleted" jdbcType="BIT" property="isDeleted" />
+  </resultMap>
+</mapper>

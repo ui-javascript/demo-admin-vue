@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="space.qmen.lot.dao.VehicleDao">
+
+    <resultMap id="BaseResultMap" type="space.qmen.lot.entity.Vehicle">
+        <result column="id" property="id" />
+        <result column="vehicle_type" property="vehicleType" />
+        <result column="plate_num" property="plateNum" />
+        <result column="color" property="color" />
+        <result column="description" property="description" />
+        <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
+        <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
+        <result column="is_deleted" property="isDeleted" />
+    </resultMap>
+
+    <parameterMap id="Vehicle" type="space.qmen.lot.entity.Vehicle"/>
+    <sql id="Base_Column_List">
+        id, vehicle_type, plate_num, color,
+        description,
+        gmt_create, gmt_modified,
+        is_deleted
+    </sql>
+
+
+    <!-- 根据id获取车辆 -->
+    <select id="getVehicleById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from vehicle
+        where id = #{id}
+    </select>
+
+    <!-- 显示所有车辆 -->
+    <select id="listVehicle" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from vehicle
+    </select>
+
+    <!-- 显示所有车辆 -->
+    <select id="listVehicleByRenterId" resultMap="BaseResultMap">
+    select
+        vehicle.id,
+        vehicle_type,
+        plate_num,
+        color,
+        vehicle.description,
+        vehicle.gmt_create,
+        vehicle.gmt_modified,
+        vehicle.is_deleted
+    from
+        vehicle,
+        lk_user_vehicle AS uv
+    where
+        vehicle.id = uv.f_vehicle_id
+        AND uv.f_user_id = #{ownerId};
+    </select>
+
+
+    <!-- 新增车辆 -->
+    <insert id="saveVehicle" parameterMap="Vehicle" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        vehicle(id, plate_num)
+        values
+        (null,#{plateNum})
+    </insert>
+
+    <!--更新车辆-->
+    <update id="updateVehicle" parameterMap="Vehicle">
+        update
+        vehicle
+        set
+        <if test="plateNum!=null">
+            plate_num = #{plateNum},
+        </if>
+        gmt_modified = CURRENT_TIMESTAMP
+        where
+        id = #{id}
+    </update>
+
+    <!-- 删除车辆 -->
+    <delete id="deleteVehicle" parameterType="java.lang.Long">
+        delete from
+        vehicle
+        where
+        id = #{id}
+    </delete>
+</mapper>

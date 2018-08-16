@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="space.qmen.leaf.dao.RoleDao">
+    <resultMap id="BaseResultMap" type="space.qmen.leaf.domain.Role">
+        <result column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="icon" property="icon" />
+        <result column="seq" property="seq" />
+        <result column="description" property="description" />
+        <result column="status" property="status" />
+    </resultMap>
+
+    <parameterMap id="Role" type="space.qmen.leaf.domain.Role"/>
+
+    <sql id="Base_Column_List">
+        id, name, icon, seq, description, status
+    </sql>
+
+    <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List" />
+        from role
+        where id = #{id}
+    </select>
+
+    <select id="findAllRole" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from role
+    </select>
+
+    <insert id="saveRole" parameterMap="Role" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        role(id, name, icon, seq, description, status)
+        values
+        (#{id},#{name},#{icon},#{seq}, #{description}, #{status})
+    </insert>
+
+    <update id="updateRole" parameterMap="Role">
+        update
+        role
+        set
+        <if test="name!=null">
+            name = #{name},
+        </if>
+        <if test="icon!=null">
+            icon = #{icon},
+        </if>
+        <if test="seq!=null">
+            seq = #{seq},
+        </if>
+        <if test="description!=null">
+            description = #{description},
+        </if>
+        <if test="status!=null">
+            status = #{status}
+        </if>
+        where
+        id = #{id}
+    </update>
+
+    <delete id="deleteRole" parameterType="java.lang.Long">
+        delete from
+        role
+        where
+        id = #{id}
+    </delete>
+</mapper>
