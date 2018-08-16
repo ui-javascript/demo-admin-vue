@@ -47,7 +47,11 @@ var webpackConfig = merge(baseWebpackConfig, {
         }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
-                warnings: false
+                warnings: false,
+
+                // 移除console debugger
+                drop_debugger: true,
+                drop_console: true
             },
             sourceMap: true
         }),
@@ -121,6 +125,8 @@ var webpackConfig = merge(baseWebpackConfig, {
             ignore: ['.*']
           }
         ]),
+
+        // 默认分析
         new BundleAnalyzerPlugin(),
     ]
 })
@@ -143,10 +149,11 @@ if (config.build.productionGzip) {
     )
 }
 
-if (config.build.bundleAnalyzerReport) {
-    var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-    webpackConfig.plugins.push(new BundleAnalyzerPlugin())
-}
+
+// if (config.build.bundleAnalyzerReport) {
+//     var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+//     webpackConfig.plugins.push(new BundleAnalyzerPlugin())
+// }
 
 //构建生成多页面的HtmlWebpackPlugin配置，主要是循环生成
 var pages = utils.getMultiEntry('./src/' + config.moduleName + '/*.html');

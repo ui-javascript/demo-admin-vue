@@ -18,7 +18,7 @@
 
             this.$store.dispatch('Login', {
                 username: 'admin',
-                password: 'pinming9158'
+                password: 'password'
             }).then(res => {
 
                 res = res || {}
