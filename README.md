@@ -72,7 +72,3 @@ npm install -g  strip-ansi
 # 前端测试
 
 - jest
-
-# 前端页面自动生成
-
-- https://github.com/emilwallner/Screenshot-to-code-in-Keras
