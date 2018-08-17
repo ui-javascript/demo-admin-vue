@@ -1,5 +1,35 @@
+// 参考自tailwindcss的Display
+// table去掉 太容易重复
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+// @deprecated
+//.table {
+//  display: table;
+//}
+
+.table-row {
+  display: table-row;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+//.hidden {
+//  display: none;
+//}
+.inline-flex {
+  display: inline-flex;
 }
 
 /*
@@ -14,11 +44,21 @@
 
 */
 
-.static { position: static; }
-.relative  { position: relative; }
-.absolute  { position: absolute; }
-.fixed  { position: fixed; }
+.static {
+  position: static;
+}
 
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
 
 /*
 
@@ -58,7 +98,6 @@
   zoom: 1;
 }
 
-
 .fl {
   float: left;
   _display: inline;
@@ -84,10 +123,21 @@
 
 */
 
-.v-base     { vertical-align: baseline; }
-.v-mid      { vertical-align: middle; }
-.v-top      { vertical-align: top; }
-.v-btm      { vertical-align: bottom; }
+.v-base {
+  vertical-align: baseline;
+}
+
+.v-mid {
+  vertical-align: middle;
+}
+
+.v-top {
+  vertical-align: top;
+}
+
+.v-btm {
+  vertical-align: bottom;
+}
 
 /*
 
@@ -110,9 +160,13 @@
   margin-left: auto;
 }
 
-.mr-auto { margin-right: auto; }
-.ml-auto { margin-left:  auto; }
+.mr-auto {
+  margin-right: auto;
+}
 
+.ml-auto {
+  margin-left: auto;
+}
 
 /*
 
@@ -149,29 +203,59 @@
 
 */
 
-.z-0 { z-index: 0; }
-.z-1 { z-index: 1; }
-.z-2 { z-index: 2; }
-.z-3 { z-index: 3; }
-.z-4 { z-index: 4; }
-.z-5 { z-index: 5; }
+.z-0 {
+  z-index: 0;
+}
 
-.z-999 { z-index: 999; }
-.z-9999 { z-index: 9999; }
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.z-3 {
+  z-index: 3;
+}
+
+.z-4 {
+  z-index: 4;
+}
+
+.z-5 {
+  z-index: 5;
+}
+
+.z-999 {
+  z-index: 999;
+}
+
+.z-9999 {
+  z-index: 9999;
+}
 
 .z-max {
   z-index: 2147483647;
 }
 
-.z-inherit { z-index: inherit; }
-.z-initial { z-index: initial; }
-.z-unset { z-index: unset; }
+.z-inherit {
+  z-index: inherit;
+}
 
+.z-initial {
+  z-index: initial;
+}
+
+.z-unset {
+  z-index: unset;
+}
 
 /*
  * 弹性图片
  */
-.img,
+//.img @deprecated
 .img-responsive {
   max-width: 100%
 }
+
