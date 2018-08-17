@@ -4,10 +4,10 @@
   "description": "兼容IE8+的一个webpack多页面配置方案",
   "main": "index.js",
   "scripts": {
-    "install": "cnpm install",
+    "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
-    "dev": "set SYS_NAME=san && node build/dev-server.js",
-    "build": "set SYS_NAME=san && node build/build.js",
+    "dev": "set SYS_NAME=nerv && node build/dev-server.js",
+    "build": "set SYS_NAME=nerv && node build/build.js",
     "lint": "set NODE_ENV=lint && webpack-dev-server --open",
     "lint2": "./node_modules/.bin/eslint *.js",
     "start": "http-server ./dist -p 8888 -o",
@@ -95,7 +95,6 @@
     "preload-webpack-plugin": "^2.3.0",
     "pug-html-loader": "^1.1.5",
     "rimraf": "^2.6.0",
-    "san-loader": "^0.0.7",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "stylus": "^0.54.5",
@@ -122,9 +121,8 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "moment": "^2.22.2",
+    "nervjs": "^1.2.18",
     "number-precision": "^1.2.0",
-    "san": "^3.5.11",
-    "san-router": "^1.2.0",
     "store": "^2.0.4"
   },
   "engines": {

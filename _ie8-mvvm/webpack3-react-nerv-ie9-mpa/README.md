@@ -10,7 +10,7 @@
 - 使用ts-loader3.X.X, 之前的ts-loader4.x.x是指支持webpack4的
 - typescript暂时只是libs或许工具类用用
 - components -> views -> pages (颗粒度弄细一点，复用度稍微高一点)
-- 简单生成入口导航页面
+- 简单生成一下入口导航页面
 - eslint不做,项目质量参差不齐...
     
 ```html
