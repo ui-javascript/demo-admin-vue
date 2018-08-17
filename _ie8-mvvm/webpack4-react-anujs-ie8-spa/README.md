@@ -23,7 +23,7 @@ npm run react
 npm run reactPreview
 
 // 浏览器访问
-http://127.0.0.1:8087/production.html
+http://127.0.0.1:8080/production.html
 ```
 
 ## anujs 1.4.3 发现的一些问题

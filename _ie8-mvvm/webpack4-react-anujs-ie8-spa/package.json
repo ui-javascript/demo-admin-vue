@@ -6,10 +6,11 @@
     "scripts": {
         "install:cnpm": "cnpm install",
         "remove": "rimraf node_modules",
-        "dev": "node ./build/dev.js",
-        "build": "node ./build/buildPreview.js",
-        "react": "node ./build/react.js",
-        "build:react": "node ./build/reactPreview.js",
+
+        "dev:anu": "node ./build/dev.js",
+        "dev:react": "node ./build/react.js",
+        "build:anu": "node ./build/build-anu.js",
+        "build:react": "node ./build/build-react.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -23,7 +24,6 @@
     },
     "homepage": "https://github.com/magicapple/anujs-webpack4-ie7-8#readme",
     "dependencies": {
-        "antd": "^3.6.4",
         "anujs": "^1.4.3",
         "react": "^16.4.0",
         "react-dom": "^16.4.0"

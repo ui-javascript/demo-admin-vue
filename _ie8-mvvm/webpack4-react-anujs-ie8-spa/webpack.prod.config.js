@@ -1,15 +1,15 @@
 const path = require('path');
 const webpack = require('webpack');
-const es3ifyPlugin = require('es3ify-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-    devtool: 'cheap-module-source-map',
+    devtool: 'source-map',
     entry: {
-        production: path.resolve(__dirname, './views/app.jsx'),
+        production: path.resolve(__dirname, './views/production/app.jsx'),
     },
     output: {
-        path: path.resolve(__dirname, 'devtmp'),
+        path: path.resolve(__dirname, 'dist'),
         filename: 'js/[name].js',
         publicPath: '/',
         chunkFilename: 'js/[name].js',
@@ -23,6 +23,16 @@ module.exports = {
             devtools: 'anujs/lib/devtools',
             'create-react-class': 'anujs/lib/createClass',
         },
+    },
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                uglifyOptions: {
+                    ie8: true,
+                },
+                sourceMap: true,
+            }),
+        ],
     },
     module: {
         rules: [
@@ -70,20 +80,19 @@ module.exports = {
             },
         ],
     },
-    mode: 'development',
+    mode: 'production',
     plugins: [
-        new es3ifyPlugin(),
         new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: path.resolve(__dirname, './views/index.ejs'),
+            filename: 'production.html',
+            template: path.resolve(__dirname, './views/production/index.ejs'),
             inject: 'body',
-            hash: false,
+            hase: false,
             minify: {
                 // 压缩HTML文件
                 removeComments: true, // 移除HTML中的注释
                 collapseWhitespace: false, // 删除空白符与换行符
             },
-            chunks: ['index'],
+            chunks: ['production'],
         }),
     ],
 };

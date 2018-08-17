@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     devtool: 'cheap-module-source-map',
     entry: {
-        production: path.resolve(__dirname, './views/app.jsx'),
+        production: path.resolve(__dirname, './views/production/app.jsx'),
     },
     output: {
         path: path.resolve(__dirname, 'devtmp'),
@@ -16,6 +16,13 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.json', '.jsx'],
+        alias: {
+            react: 'anujs/dist/ReactIE.js',
+            'react-dom': 'anujs/dist/ReactIE.js',
+            'prop-types': 'anujs/lib/ReactPropTypes',
+            devtools: 'anujs/lib/devtools',
+            'create-react-class': 'anujs/lib/createClass',
+        },
     },
     module: {
         rules: [
@@ -47,7 +54,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 include: [path.resolve(__dirname, 'views')],
-                use: ['style-loader', 'css-loader'],
+                use: ['style-loader', 'css-loade'],
             },
             {
                 test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
@@ -67,8 +74,8 @@ module.exports = {
     plugins: [
         new es3ifyPlugin(),
         new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: path.resolve(__dirname, './views/index.ejs'),
+            filename: 'production.html',
+            template: path.resolve(__dirname, './views/production/index.ejs'),
             inject: 'body',
             hase: false,
             minify: {
@@ -76,7 +83,7 @@ module.exports = {
                 removeComments: true, // 移除HTML中的注释
                 collapseWhitespace: false, // 删除空白符与换行符
             },
-            chunks: ['index'],
+            chunks: ['production'],
         }),
     ],
 };
