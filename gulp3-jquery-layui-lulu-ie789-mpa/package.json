@@ -6,6 +6,7 @@
   "scripts": {
     "install": "cnpm install",
     "remove": "rimraf node_modules",
+
     "clean": "set SYS_NAME=san && gulp 00-clean-dist",
     "dev": "set SYS_NAME=papidenMall && gulp 01-build-dev",
     "cssWatch": "set SYS_NAME=san && gulp 02-css-job",
