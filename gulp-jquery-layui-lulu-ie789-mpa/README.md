@@ -1,5 +1,7 @@
 # gulp配置
 
+- static文件夹下的文件会被处理
+
 - 参考
     - gulp使用教程 https://github.com/Platform-CUF/use-gulp
     - https://github.com/mjzhang1993/gulp-template

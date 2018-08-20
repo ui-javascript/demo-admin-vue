@@ -1,5 +1,5 @@
 // 开发环境
-const pagesName = '_papiden-mall'
+const pagesName = '_chivalric'
 const stylesName = 'natural'
 const libsName = 'mumuy'
 

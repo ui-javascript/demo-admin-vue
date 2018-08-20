@@ -1,5 +1,5 @@
 // 开发环境
-const pagesName = '_flexy-card'
+const pagesName = '_flexyCard'
 const stylesName = 'natural'
 const libsName = 'mumuy'
 

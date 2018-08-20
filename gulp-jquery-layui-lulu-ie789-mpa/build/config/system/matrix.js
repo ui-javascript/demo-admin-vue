@@ -1,5 +1,5 @@
 // 开发环境
-const pagesName = '_win10-blog-admin'
+const pagesName = '_matrix'
 const stylesName = 'natural'
 const libsName = 'mumuy'
 

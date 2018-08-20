@@ -6,16 +6,16 @@
   "scripts": {
     "install": "cnpm install",
     "remove": "rimraf node_modules",
-    "clean": "gulp 00-clean-dist",
-    "dev": "gulp 01-build-dev",
-    "cssWatch": "gulp 02-css-job",
-    "build": "gulp 03-build-dist",
-    "buildPWA": "gulp 04-build-pwa",
-    "sprite": "gulp 05-make-sprite",
-    "imagesOptimize": "gulp 06-images-optimize",
-    "fontSpider": "gulp 07-font-spider",
-    "libsGenerate": "gulp 08-libs-generate",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "set SYS_NAME=san && gulp 00-clean-dist",
+    "dev": "set SYS_NAME=papidenMall && gulp 01-build-dev",
+    "cssWatch": "set SYS_NAME=san && gulp 02-css-job",
+    "build": "set SYS_NAME=san && gulp 03-build-dist",
+    "buildPWA": "set SYS_NAME=san && gulp 04-build-pwa",
+    "sprite": "set SYS_NAME=san && gulp 05-make-sprite",
+    "imagesOptimize": "set SYS_NAME=san && gulp 06-images-optimize",
+    "fontSpider": "set SYS_NAME=san && gulp 07-font-spider",
+    "libsGenerate": "set SYS_NAME=san && gulp 08-libs-generate",
+    "test": "set SYS_NAME=san && echo \"Error: no test specified\" && exit 1"
   },
   "author": "luo0412",
   "dependencies": {

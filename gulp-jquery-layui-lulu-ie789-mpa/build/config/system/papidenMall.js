@@ -1,5 +1,5 @@
 // 开发环境
-const pagesName = '_design-studio'
+const pagesName = '_papidenMall'
 const stylesName = 'natural'
 const libsName = 'mumuy'
 

@@ -76,6 +76,11 @@ exports.prod = {
 
 }
 
+const sysName = process.env.SYS_NAME.toString().trim() || 'default'
+var details = require(`./system/${sysName}`)
+
+console.log('进入目录 ' + sysName)
+
 // 根据不同系统配置文件进行覆盖默认配置
 // 此处修改
 // var details = require('./system/default')
@@ -84,7 +89,7 @@ exports.prod = {
 // var details = require('./system/display/hibim')
 // var details = require('./system/display/designStudio')
 // var details = require('./system/corner')
-var details = require('./system/natural')
+// var details = require('./system/natural')
 // var details = require('./system/display/diamond')
 // var details = require('./system/display/booom')
 // var details = require('./system/display/chuangke')

@@ -1,5 +1,5 @@
 // 开发环境
-const pagesName = '_ama-admin'
+const pagesName = '_designStudio'
 const stylesName = 'natural'
 const libsName = 'mumuy'
 

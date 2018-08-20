@@ -1,8 +1,7 @@
 // 开发环境
-const pagesName = '_hibim-sefolio-ie9'
+const pagesName = '_win10Blog'
 const stylesName = 'natural'
-const libsName = 'zhuang'
-
+const libsName = 'mumuy'
 
 exports.dev = {
 
@@ -16,7 +15,7 @@ exports.dev = {
 
     // 脚本库
     libsName: libsName,
-    libsDevDir: `./src/assets/libs/${libsName}/src`,
+    libsDevDir: `./src/assets/libs/${libsName}`,
     libsDevMods: '*',  // '{ajax,scroll}' 没空格
     libsOutputDir: './static/vendor/libs',
 
@@ -26,13 +25,13 @@ exports.dev = {
     pagesDir: `./${pagesName}`,
     copyHTMLExclude: [
         `!./${pagesName}/**/*.{html,md,inc}`,
-        `!./${pagesName}/images/**`
+        `!./${pagesName}/static/**`
     ],
-    imagesDir: `./${pagesName}/images`,
-    scriptsDir: `./${pagesName}/js`,
+    imagesDir: `./${pagesName}/static/images`,
+    scriptsDir: `./${pagesName}/static/js`,
 
     // 雪碧图
-    spriteDevDir: `./${pagesName}/images/sprite`,
+    spriteDevDir: `./${pagesName}/static/images/sprite`,
     spriteOutputDir: `./src/assets/css/theme/${stylesName}`,
 
     // 字体子集化
@@ -41,5 +40,3 @@ exports.dev = {
     // 离线
     pwaDir: './templates'
 }
-
-

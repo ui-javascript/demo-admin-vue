@@ -1,5 +1,5 @@
 // 开发环境
-const pagesName = '_html5up-stellar'
+const pagesName = '_html5upStellar'
 const stylesName = 'natural'
 const libsName = 'mumuy'
 

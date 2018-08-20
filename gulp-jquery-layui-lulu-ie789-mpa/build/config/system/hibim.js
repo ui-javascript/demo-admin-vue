@@ -1,7 +1,7 @@
 // 开发环境
-const pagesName = '_hbcj-layui-ie8'
+const pagesName = '_hibim'
 const stylesName = 'natural'
-const libsName = 'mumuy'
+const libsName = 'zhuang'
 
 
 exports.dev = {
@@ -16,7 +16,7 @@ exports.dev = {
 
     // 脚本库
     libsName: libsName,
-    libsDevDir: `./src/assets/libs/${libsName}`,
+    libsDevDir: `./src/assets/libs/${libsName}/src`,
     libsDevMods: '*',  // '{ajax,scroll}' 没空格
     libsOutputDir: './static/vendor/libs',
 
@@ -26,13 +26,13 @@ exports.dev = {
     pagesDir: `./${pagesName}`,
     copyHTMLExclude: [
         `!./${pagesName}/**/*.{html,md,inc}`,
-        `!./${pagesName}/static/**`
+        `!./${pagesName}/images/**`
     ],
-    imagesDir: `./${pagesName}/static/images`,
-    scriptsDir: `./${pagesName}/static/js`,
+    imagesDir: `./${pagesName}/images`,
+    scriptsDir: `./${pagesName}/js`,
 
     // 雪碧图
-    spriteDevDir: `./${pagesName}/static/images/sprite`,
+    spriteDevDir: `./${pagesName}/images/sprite`,
     spriteOutputDir: `./src/assets/css/theme/${stylesName}`,
 
     // 字体子集化
@@ -41,3 +41,5 @@ exports.dev = {
     // 离线
     pwaDir: './templates'
 }
+
+

@@ -1,7 +1,8 @@
 // 开发环境
-const pagesName = '_chivalric-blog'
-const stylesName = 'natural'
+const pagesName = '_pmsMall'
+const stylesName = 'mumuy'
 const libsName = 'mumuy'
+
 
 exports.dev = {
 

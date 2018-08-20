@@ -1,8 +1,7 @@
 // 开发环境
-const pagesName = '_pms-mall-lulu-ie8'
-const stylesName = 'mumuy'
+const pagesName = '_wechatReading'
+const stylesName = 'natural'
 const libsName = 'mumuy'
-
 
 exports.dev = {
 

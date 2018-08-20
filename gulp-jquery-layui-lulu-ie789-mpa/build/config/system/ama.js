@@ -1,5 +1,5 @@
 // 开发环境
-const pagesName = '_matrix-admin'
+const pagesName = '_ama'
 const stylesName = 'natural'
 const libsName = 'mumuy'
 

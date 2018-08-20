@@ -1,7 +1,8 @@
 // 开发环境
-const pagesName = '_wechat-reading'
+const pagesName = '_hbcj'
 const stylesName = 'natural'
 const libsName = 'mumuy'
+
 
 exports.dev = {
 
