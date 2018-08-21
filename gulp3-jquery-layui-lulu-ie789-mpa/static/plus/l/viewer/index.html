@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="viewer.min.css">
+
+    <style>
+    * { margin: 0; padding: 0;}
+#jq22 { width: 700px; margin: 0 auto; font-size: 0;}
+#jq22 li { display: inline-block; width: 32%; margin-left: 1%; padding-top: 1%;}
+#jq22 li img { width: 100%;}
+    </style>
+</head>
+<body>
+
+    <ul id="jq22">
+        <li><img src="tibet-1.jpg" alt="图片1"></li>
+        <li><img src="tibet-2.jpg" alt="图片2"></li>
+    </ul>
+
+    <script src="viewer.min.js"></script>
+    <script>
+        var viewer = new Viewer(document.getElementById('jq22'));
+        $('#jq22').viewer();
+    </script>
+    
+</body>
+</html>
