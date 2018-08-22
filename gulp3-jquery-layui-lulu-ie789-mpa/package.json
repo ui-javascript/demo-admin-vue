@@ -10,6 +10,7 @@
     "clean": "set SYS_NAME=san && gulp 00-clean-dist",
     "dev": "set SYS_NAME=diamond && gulp 01-build-dev",
     "dev:pmsMall": "set SYS_NAME=pmsMall && gulp 01-build-dev",
+    "dev:hibim": "set SYS_NAME=hibim && gulp 01-build-dev",
     "cssWatch": "set SYS_NAME=san && gulp 02-css-job",
     "build": "set SYS_NAME=san && gulp 03-build-dist",
 

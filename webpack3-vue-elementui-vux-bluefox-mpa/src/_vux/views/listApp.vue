@@ -53,7 +53,7 @@
     import Lib from 'utils/libs/vux';
 
     import {Cell, Group, Divider} from 'vux'
-    import FireFly from '~/Effects/Animal/FireFly'
+    import FireFly from '~/e/Animal/FireFly'
 
     export default {
         data() {

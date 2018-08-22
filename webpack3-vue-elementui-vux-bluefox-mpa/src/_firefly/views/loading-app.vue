@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import LoadingSimple from '~/Layout/LoadingPure'
+    import LoadingSimple from '~/l/LoadingPure'
 
     export default {
         components: {

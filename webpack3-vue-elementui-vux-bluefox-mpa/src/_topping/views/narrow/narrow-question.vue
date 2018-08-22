@@ -62,7 +62,7 @@
     import {getProblem, confirmPartner, submitOne, getUserRanking} from '../../api/exam'
 
     // 组件
-    import CountdownSvgCircle from '~/Model/Countdown/CountdownSvgCircle'
+    import CountdownSvgCircle from '~/m/Countdown/CountdownSvgCircle'
     import CardConfirm from '../snippets/card-confirm'
     import RadioList from '../../components/RadioList'
 

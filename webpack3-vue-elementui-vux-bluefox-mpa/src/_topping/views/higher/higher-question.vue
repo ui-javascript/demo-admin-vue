@@ -29,7 +29,7 @@
     import {getStorage } from "../../../utils/localStorage"
     import {getProblem} from '../../api/exam'
 
-    import CountdownSvgCircle from '~/Model/Countdown/CountdownSvgCircle'
+    import CountdownSvgCircle from '~/m/Countdown/CountdownSvgCircle'
     import RadioList from '../../components/RadioList'
 
     export default {

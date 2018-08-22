@@ -61,14 +61,14 @@ var webpackConfig = {
             'components': path.resolve(__dirname, '../src/components'),
             '~': path.resolve(__dirname, '../src/components'),
             // 我将组件分为四类
-            '~e': path.resolve(__dirname, '../src/components/Effects'),
-            '~l': path.resolve(__dirname, '../src/components/Layout'),
-            '~m': path.resolve(__dirname, '../src/components/Model'),
-            '~t': path.resolve(__dirname, '../src/components/Toolkit'),
+            '~e': path.resolve(__dirname, '../src/components/e'),
+            '~l': path.resolve(__dirname, '../src/components/l'),
+            '~m': path.resolve(__dirname, '../src/components/m'),
+            '~t': path.resolve(__dirname, '../src/components/t'),
 
             // 工具类
             'utils': path.resolve(__dirname, '../src/utils'),
-            '^': path.resolve(__dirname, '../src/utils')
+            '^': path.resolve(__dirname, '../src/utils'),
         }
     },
 

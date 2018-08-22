@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import LoadingWater from '~/Effects/Loading/LoadingWater'
+    import LoadingWater from '~/e/Loading/LoadingWater'
 
     export default {
         components: {

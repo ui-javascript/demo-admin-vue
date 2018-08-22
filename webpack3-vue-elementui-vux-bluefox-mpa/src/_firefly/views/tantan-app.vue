@@ -15,7 +15,7 @@
 </template>
 
 <script>
-    import TanTanPicker from "~/Model/PickerTanTan";
+    import TanTanPicker from "~/m/PickerTanTan";
 
     import img1 from "./img/1.png"
     import img2 from "./img/2.png"

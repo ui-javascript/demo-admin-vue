@@ -25,8 +25,8 @@
 
 <script>
 
-    import NavLean from '~/Layout/Nav/NavLean';
-    import CountTo from '~/Effects/CountTo';
+    import NavLean from '~/l/Nav/NavLean';
+    import CountTo from '~/e/CountTo';
 
     export default {
         components: {
