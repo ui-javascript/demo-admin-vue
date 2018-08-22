@@ -3,19 +3,24 @@
         <li class="stack-item"
             v-for="(item, index) in pages"
             :style="[transformIndex(index),transform(index)]"
+
             @touchmove.stop.capture.prevent="touchmove"
             @touchstart.stop.capture.prevent="touchstart"
             @touchend.stop.capture.prevent="touchend"
             @touchcancel.stop.capture.prevent="touchend"
+
             @mousedown.stop.capture.prevent="touchstart"
             @mouseup.stop.capture.prevent="touchend"
             @mousemove.stop.capture.prevent="touchmove"
             @mouseout.stop.capture.prevent="touchend"
+
             @webkit-transition-end="onTransitionEnd(index)"
             @transitionend="onTransitionEnd(index)">
+
             <div v-html="item.html"></div>
         </li>
     </ul>
+
 </template>
 
 
@@ -39,6 +44,8 @@
                     start: {},
                     end: {}
                 },
+
+
                 temporaryData: {
                     prefixes: detectPrefixes(),
                     offsetY: '',
@@ -123,6 +130,7 @@
                 this.temporaryData.animation = false
             },
             touchmove(e) {
+
                 // 记录滑动位置
                 if (this.temporaryData.tracking && !this.temporaryData.animation) {
                     if (e.type === 'touchmove') {
@@ -154,7 +162,9 @@
                     this.temporaryData.posheight = this.temporaryData.posheight >= 0 ? Math.abs(this.temporaryData.poswidth * ratio) : -Math.abs(this.temporaryData.poswidth * ratio)
                     this.temporaryData.opacity = 0
                     this.temporaryData.swipe = true
+
                     this.nextTick()
+
                     // 不满足条件则滑入
                 } else {
                     this.temporaryData.poswidth = 0
@@ -163,15 +173,21 @@
                     this.temporaryData.rotate = 0
                 }
             },
+
+            //
             nextTick() {
                 // 记录最终滑动距离
                 this.temporaryData.lastPosWidth = this.temporaryData.poswidth
                 this.temporaryData.lastPosHeight = this.temporaryData.posheight
                 this.temporaryData.lastRotate = this.temporaryData.rotate
                 this.temporaryData.lastZindex = 20
+
                 // 循环currentPage
                 this.temporaryData.currentPage = this.temporaryData.currentPage === this.pages.length - 1 ? 0 : this.temporaryData.currentPage + 1
-                // currentPage切换，整体dom进行变化，把第一层滑动置最低
+
+                // currentPage切换，
+                // 整体dom进行变化，
+                // 把第一层滑动置最低
                 this.$nextTick(() => {
                     this.temporaryData.poswidth = 0
                     this.temporaryData.posheight = 0
@@ -179,8 +195,11 @@
                     this.temporaryData.rotate = 0
                 })
             },
+
+
             onTransitionEnd(index) {
                 let lastPage = this.temporaryData.currentPage === 0 ? this.pages.length - 1 : this.temporaryData.currentPage - 1
+
                 // dom发生变化正在执行的动画滑动序列已经变为上一层
                 if (this.temporaryData.swipe && index === lastPage) {
                     this.temporaryData.animation = true
@@ -192,9 +211,12 @@
                     this.temporaryData.lastZindex = -1
                 }
             },
+
+
             prev() {
                 this.temporaryData.tracking = false
                 this.temporaryData.animation = true
+
                 // 计算划出后最终位置
                 let width = this.$el.offsetWidth
                 this.temporaryData.poswidth = -width
@@ -204,6 +226,8 @@
                 this.temporaryData.swipe = true
                 this.nextTick()
             },
+
+
             next() {
                 this.temporaryData.tracking = false
                 this.temporaryData.animation = true
@@ -216,6 +240,8 @@
                 this.temporaryData.swipe = true
                 this.nextTick()
             },
+
+
             rotateDirection() {
                 if (this.temporaryData.poswidth <= 0) {
                     return -1
@@ -223,12 +249,16 @@
                     return 1
                 }
             },
+
+
             angleRatio() {
                 let height = this.$el.offsetHeight
                 let offsetY = this.temporaryData.offsetY
                 let ratio = -1 * (2 * offsetY / height - 1)
                 return ratio || 0
             },
+
+
             inStack(index, currentPage) {
                 let stack = []
                 let visible = this.temporaryData.visible
@@ -242,6 +272,7 @@
                 }
                 return stack.indexOf(index) >= 0
             },
+
             // 非首页样式切换
             transform(index) {
                 let currentPage = this.temporaryData.currentPage
@@ -273,6 +304,7 @@
                 }
                 return style
             },
+
             // 首页样式切换
             transformIndex(index) {
                 if (index === this.temporaryData.currentPage) {
@@ -280,6 +312,7 @@
                     style['transform'] = 'translate3D(' + this.temporaryData.poswidth + 'px' + ',' + this.temporaryData.posheight + 'px' + ',0px) ' + 'rotate(' + this.temporaryData.rotate + 'deg)'
                     style['opacity'] = this.temporaryData.opacity
                     style['zIndex'] = 10
+
                     if (this.temporaryData.animation) {
                         style[this.temporaryData.prefixes.transition + 'TimingFunction'] = 'ease'
                         style[this.temporaryData.prefixes.transition + 'Duration'] = (this.temporaryData.animation ? 300 : 0) + 'ms'
@@ -291,7 +324,7 @@
     }
 </script>
 
-<style>
+<style lang="less" scoped>
     .stack-wrapper{
         margin: 0 auto;
         position: relative;
@@ -401,9 +434,6 @@
         flex-direction: column;
         -webkit-touch-callout: none;
         -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
         user-select: none;
         pointer-events: auto;
     }

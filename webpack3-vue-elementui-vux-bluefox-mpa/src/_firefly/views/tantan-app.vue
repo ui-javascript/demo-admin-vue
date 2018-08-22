@@ -7,6 +7,7 @@
                     :stackinit="stackinit">
             </TanTanPicker>
         </div>
+
         <div class="controls">
             <button @click="prev" class="button"><i class="prev"></i><span class="text-hidden">prev</span></button>
             <button @click="next" class="button"><i class="next"></i><span class="text-hidden">next</span></button>
