@@ -76,7 +76,14 @@ exports.prod = {
 
 }
 
-const sysName = process.env.SYS_NAME.toString().trim() || 'default'
+let sysName = ''
+if (process.env.SYS_NAME) {
+    sysName = process.env.SYS_NAME.toString().trim()
+}
+else {
+    sysName = 'default'
+}
+
 var details = require(`./system/${sysName}`)
 
 console.log('进入目录 ' + sysName)
