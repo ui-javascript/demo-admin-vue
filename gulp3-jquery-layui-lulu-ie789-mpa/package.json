@@ -11,6 +11,9 @@
     "dev": "set SYS_NAME=diamond && gulp 01-build-dev",
     "dev:pmsMall": "set SYS_NAME=pmsMall && gulp 01-build-dev",
     "dev:hibim": "set SYS_NAME=hibim && gulp 01-build-dev",
+    "dev:designStudio": "set SYS_NAME=designStudio && gulp 01-build-dev",
+    "build:designStudio": "set SYS_NAME=designStudio && gulp 03-build-dist",
+
     "cssWatch": "set SYS_NAME=san && gulp 02-css-job",
     "build": "set SYS_NAME=san && gulp 03-build-dist",
     "buildPWA": "set SYS_NAME=san && gulp 04-build-pwa",

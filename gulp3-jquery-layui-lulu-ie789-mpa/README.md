@@ -6,7 +6,14 @@
     - gulp使用教程 https://github.com/Platform-CUF/use-gulp
     - https://github.com/mjzhang1993/gulp-template
     - generator-gulper https://github.com/leaky/generator-gulper
-    
+
+- 引用片段
+
+```html
+<!-- 采用绝对路径 -->
+@@include("../static/tpl/cdn/js-bootstrap.html")
+```    
+
 - 未完成
 
     - gulp-changed 仅发生变化的 提高性能
