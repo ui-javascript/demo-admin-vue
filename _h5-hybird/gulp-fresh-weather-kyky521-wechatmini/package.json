@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "install:cnpm": "cnpm install",
+    "remove": "rimraf node_modules",
+
     "server": "nodemon ./server/index.js",
     "start": "gulp watch",
     "dev": "gulp dev",
