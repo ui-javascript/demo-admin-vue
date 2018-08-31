@@ -29,7 +29,7 @@ exports.dev = {
     stylesDir: `./src/assets/css`,
     stylesWatchFiles: [
         `./src/assets/css/components/**/*.less`,
-        `./${sysName}/static/css/*.less`
+        `./_${sysName}/static/css/**/*.less`
     ],
 
     // 脚本库

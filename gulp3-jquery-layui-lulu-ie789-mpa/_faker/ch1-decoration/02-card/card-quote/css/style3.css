@@ -1,5 +1,5 @@
 body {
-	background: #ddd url(../../../../../static/images/quote-card-demo/strange_bullseyes.jpg) repeat top left;
+	background: #ddd url(/static/images/quote-card-demo/strange_bullseyes.jpg) repeat top left;
 }
 
 .mb-style-3 {
@@ -76,7 +76,7 @@ body {
 	height: 70px;
 	border: 5px solid #fff;
 	border-radius: 50%;
-	background: url(../../../../../static/images/quote-card-demo/bronte.jpg) no-repeat center center;
+	background: url(/static/images/quote-card-demo/bronte.jpg) no-repeat center center;
 	position: absolute;
 	right: 10px;
 	bottom: 5px;

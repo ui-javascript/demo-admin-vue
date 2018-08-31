@@ -1,5 +1,5 @@
 body {
-	background: #ddd url(../../../../../static/images/quote-card-demo/fabric_plaid.png) repeat top left;
+	background: #ddd url(/static/images/quote-card-demo/fabric_plaid.png) repeat top left;
 }
 
 .mb-style-5 {

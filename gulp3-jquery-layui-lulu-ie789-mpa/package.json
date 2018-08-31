@@ -28,6 +28,9 @@
     "dev:melt": "set SYS_NAME=melt && gulp 01-build-dev",
     "build:melt": "set SYS_NAME=melt && gulp 03-build-dist",
 
+    "dev:faker": "set SYS_NAME=faker && gulp 01-build-dev",
+    "build:faker": "set SYS_NAME=faker && gulp 03-build-dist",
+
     "dev:wechatReading": "set SYS_NAME=wechatReading && gulp 01-build-dev",
     "build:wechatReading": "set SYS_NAME=wechatReading && gulp 03-build-dist",
 

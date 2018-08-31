@@ -1,6 +1,6 @@
 
 .mb-style-1 {
-	background: #363738 url(../../../../../static/images/quote-card-demo/dark_leather.jpg) repeat top left;
+	background: #363738 url(/static/images/quote-card-demo/dark_leather.jpg) repeat top left;
 	margin-top: 100px;
 	padding-top: 100px;
 	width: 400px;
@@ -15,7 +15,7 @@
 	height: 180px;
 	border: 10px solid rgba(255,255,255,0.5);
 	border-radius: 50%;
-	background: url(../../../../../static/images/quote-card-demo/Dartagnan-musketeers.jpg) no-repeat center center;
+	background: url(/static/images/quote-card-demo/Dartagnan-musketeers.jpg) no-repeat center center;
 	position: absolute;
 	left: 50%;
 	top: -90px;
