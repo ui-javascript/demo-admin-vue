@@ -22,10 +22,11 @@ exports.dev = {
     // 固定
     devDir: './src',
     assetsDir: './src/assets',
+    pagesDir: `./_${sysName}`,
 
     // 样式库
     stylesName: sysName,
-    stylesDir: `./src/assets/css/theme/${sysName}`,
+    stylesDir: `./src/assets/css`,
     stylesWatchFiles: [
         `./src/assets/css/components/**/*.less`,
         `./${sysName}/static/css/*.less`
@@ -39,13 +40,14 @@ exports.dev = {
     libsDevMods: 'browser',
     libsOutputDir: './static/vendor/libs',
 
-    // 视图文件
-    // 项目脚本与图片
-    pagesDir: `./_${sysName}`,
+    // 搬运工作
     copyHTMLExclude: [
         `!./_${sysName}/**/*.{html,md,inc}`,
         `!./_${sysName}/static/**`
     ],
+
+    // 视图文件
+    // 项目脚本与图片
     imagesDir: `./_${sysName}/static/images`,
     scriptsDir: `./_${sysName}/static/js`,
 

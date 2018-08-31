@@ -16,7 +16,6 @@ const requireDir = require('require-dir')
 
 // 引入任务
 requireDir('./build/tasks/')
-requireDir('./build/tasks/server/')
 requireDir('./build/tasks/extends/')
 
 // 输出提示信息
@@ -100,6 +99,7 @@ gulp.task('04-build-pwa', function () {
         'PWASync'
     )
 });
+
 
 // 雪碧图
 gulp.task('05-make-sprite', function () {

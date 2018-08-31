@@ -42,6 +42,7 @@
 
     "dev:mooc": "set SYS_NAME=mooc && gulp 01-build-dev",
     "build:mooc": "set SYS_NAME=mooc && gulp 03-build-dist",
+    "buildPWA:mooc": "set SYS_NAME=mooc && gulp 04-build-pwa",
 
     "dev:monetary": "set SYS_NAME=monetary && gulp 01-build-dev",
     "build:monetary": "set SYS_NAME=monetary && gulp 03-build-dist",

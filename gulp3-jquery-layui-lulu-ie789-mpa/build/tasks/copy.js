@@ -2,10 +2,13 @@ const config = require('../config/index')
 const gulp = require('gulp')
 
 gulp.task('copyHTMLLeft', function () {
+
+    console.log('以下范围的文件不搬运哦 \(￣︶￣*\))')
     console.log(...config.dev.copyHTMLExclude)
 
     return gulp.src([
         `${config.dev.pagesDir}/**/*.*`,
+        // 排除
         ...config.dev.copyHTMLExclude
         ])
         .pipe(gulp.dest(`${config.common.templatesDir}`))
@@ -27,10 +30,11 @@ gulp.task('copyImages', function () {
         .pipe(gulp.dest(`${config.common.staticDir}/images`))
 })
 
+// @deprecated
 // 搬运 静态样式(css)和雪碧图
 gulp.task('copyCssLeft', function () {
     return gulp.src([
         `${config.dev.stylesDir}/**/*.{css,png}`
         ])
-        .pipe(gulp.dest(`${config.common.staticDir}/css/theme/${config.dev.stylesName}`))
+        .pipe(gulp.dest(`${config.common.staticDir}/css`))
 })

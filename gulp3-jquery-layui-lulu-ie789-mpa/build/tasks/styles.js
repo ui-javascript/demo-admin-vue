@@ -18,7 +18,7 @@ gulp.task('watchCSS', function () {
 // less编译
 gulp.task('compileLess', function (cb) {
     // 注意，只解析_output.less
-    return gulp.src(`${config.dev.pagesDir}/static/css/_output.less`)
+    return gulp.src(`${config.dev.pagesDir}/static/css/_*.less`)
         .pipe(plumber({errorHandler: notify.onError('Error:<%=error.message%>')}))
         .pipe(less())
         .pipe(autoprefixer())
@@ -32,14 +32,14 @@ gulp.task('compileLess', function (cb) {
 // less编译
 gulp.task('distLess', function () {
     // 注意，只解析_output.less这样的单文件
-    return gulp.src(`${config.dev.assetsDir}/css/theme/${config.dev.stylesName}/**/_output.less`)
+    return gulp.src(`${config.dev.pagesDir}/static/css/_*.less`)
         .pipe(plumber({errorHandler: notify.onError('Error:<%=error.message%>')}))
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concatDir({ext: '.css'})) //合并
         .pipe(cleanCSS({compatibility: 'ie7', inline: ['remote'], rebase: false}))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(`${config.common.staticDir}/css/theme/${config.dev.stylesName}`))
+        .pipe(gulp.dest(`${config.common.staticDir}/css`))
         .pipe(md5(10, `${config.common.templatesDir}/**/*.html`));
 });
 
