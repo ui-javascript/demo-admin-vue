@@ -4,7 +4,7 @@
 
 var fs = require('fs');
 
-var sysName = 'default'
+var sysName = 'widgets'
 if (process.env.SYS_NAME) {
     sysName = process.env.SYS_NAME.toString().trim()
 }
@@ -14,6 +14,7 @@ exports.common = {
     // 这两个文件随文件夹结构调整
     staticDir: './static',
     templatesDir: './templates',
+    sysName: sysName
 }
 
 
@@ -25,7 +26,6 @@ exports.dev = {
     pagesDir: `./_${sysName}`,
 
     // 样式库
-    stylesName: sysName,
     stylesDir: `./src/assets/css`,
     stylesWatchFiles: [
         `./src/assets/css/components/**/*.less`,

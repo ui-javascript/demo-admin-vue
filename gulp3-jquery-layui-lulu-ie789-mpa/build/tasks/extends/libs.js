@@ -19,7 +19,11 @@ gulp.task('libsGenerate', function () {
         // ,'!./src/**/mobile/*.js'
     ]
 
+    console.log('=================================')
+    console.log('插件库: ' + config.dev.libsName + '.js')
+    console.log('包含模块 (。>︿<)_θ')
     console.log(src)
+    console.log('=================================')
 
     return gulp.src(src)
         .pipe(uglify())

@@ -19,8 +19,10 @@ requireDir('./build/tasks/')
 requireDir('./build/tasks/extends/')
 
 // 输出提示信息
-console.log('样式库 -> ' + config.dev.stylesName)
-console.log('脚本库 -> ' + config.dev.libsName)
+console.log('=================================')
+console.log(' (｡･∀･)ﾉﾞ嗨，帅哥')
+console.log('当前系统: ' + config.common.sysName)
+console.log('=================================')
 
 
 // 清理生成文件

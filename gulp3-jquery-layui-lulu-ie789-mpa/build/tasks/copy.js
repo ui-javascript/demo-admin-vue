@@ -3,8 +3,10 @@ const gulp = require('gulp')
 
 gulp.task('copyHTMLLeft', function () {
 
+    console.log('=================================')
     console.log('以下范围的文件不搬运哦 \(￣︶￣*\))')
     console.log(...config.dev.copyHTMLExclude)
+    console.log('=================================')
 
     return gulp.src([
         `${config.dev.pagesDir}/**/*.*`,

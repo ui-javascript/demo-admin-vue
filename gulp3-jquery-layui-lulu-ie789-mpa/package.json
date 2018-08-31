@@ -56,8 +56,8 @@
     "dev:retina": "set SYS_NAME=retina && gulp 01-build-dev",
     "build:retina": "set SYS_NAME=retina && gulp 03-build-dist",
 
-    "dev:hibim": "set SYS_NAME=hibim && gulp 01-build-dev",
-    "build:hibim": "set SYS_NAME=hibim && gulp 03-build-dist",
+    "dev:sefolio": "set SYS_NAME=sefolio && gulp 01-build-dev",
+    "build:sefolio": "set SYS_NAME=sefolio && gulp 03-build-dist",
 
     "dev:hbcj": "set SYS_NAME=hbcj && gulp 01-build-dev",
     "build:hbcj": "set SYS_NAME=hbcj && gulp 03-build-dist",
