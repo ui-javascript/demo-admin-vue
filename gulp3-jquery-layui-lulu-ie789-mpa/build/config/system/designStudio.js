@@ -8,9 +8,11 @@ exports.dev = {
     // 样式库
     stylesName: stylesName,
     stylesDir: `./src/assets/css/theme/${stylesName}`,
+
+    // 设置监听
     stylesWatchFiles: [
         `./src/assets/css/components/**/*.less`,
-        `./src/assets/css/theme/${stylesName}/**/*.less`
+        `./${pagesName}/static/css/*.less`
     ],
 
     // 脚本库
@@ -31,8 +33,8 @@ exports.dev = {
     scriptsDir: `./${pagesName}/static/js`,
 
     // 雪碧图
-    spriteDevDir: `./${pagesName}/static/images/sprite`,
-    spriteOutputDir: `./src/assets/css/theme/${stylesName}`,
+    spriteDevDir: `./${pagesName}/static/images/_sprite`,
+    spriteOutputDir: `./${pagesName}/static/css`,
 
     // 字体子集化
     fontSpiderDir: './static/fonts/hyzhj',

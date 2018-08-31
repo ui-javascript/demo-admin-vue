@@ -6,22 +6,88 @@
   "scripts": {
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
+    "clean": "gulp 00-clean-dist",
+    "dev": "gulp 01-build-dev",
+    "cssWatch": "gulp 02-css-job",
+    "build": "gulp 03-build-dist",
+    "buildPWA": "gulp 04-build-pwa",
+    "sprite": "gulp 05-make-sprite",
+    "imagesOptimize": "gulp 06-images-optimize",
+    "fontSpider": "gulp 07-font-spider",
+    "libsGenerate": "gulp 08-libs-generate",
 
-    "clean": "set SYS_NAME=san && gulp 00-clean-dist",
-    "dev": "set SYS_NAME=diamond && gulp 01-build-dev",
-    "dev:pmsMall": "set SYS_NAME=pmsMall && gulp 01-build-dev",
-    "dev:hibim": "set SYS_NAME=hibim && gulp 01-build-dev",
+
     "dev:designStudio": "set SYS_NAME=designStudio && gulp 01-build-dev",
     "build:designStudio": "set SYS_NAME=designStudio && gulp 03-build-dist",
+    "sprite:designStudio": "set SYS_NAME=designStudio  && gulp 05-make-sprite",
 
-    "cssWatch": "set SYS_NAME=san && gulp 02-css-job",
-    "build": "set SYS_NAME=san && gulp 03-build-dist",
-    "buildPWA": "set SYS_NAME=san && gulp 04-build-pwa",
-    "sprite": "set SYS_NAME=san && gulp 05-make-sprite",
-    "imagesOptimize": "set SYS_NAME=san && gulp 06-images-optimize",
-    "fontSpider": "set SYS_NAME=san && gulp 07-font-spider",
-    "libsGenerate": "set SYS_NAME=san && gulp 08-libs-generate",
-    "test": "set SYS_NAME=san && echo \"Error: no test specified\" && exit 1"
+    "dev:win10Blog": "set SYS_NAME=win10Blog && gulp 01-build-dev",
+    "build:win10Blog": "set SYS_NAME=win10Blog && gulp 03-build-dist",
+    "sprite:win10Blog": "set SYS_NAME=win10Blog && gulp 05-make-sprite",
+
+    "dev:natural": "set SYS_NAME=natural && gulp 01-build-dev",
+    "build:natural": "set SYS_NAME=natural && gulp 03-build-dist",
+
+    "dev:wechatReading": "set SYS_NAME=wechatReading && gulp 01-build-dev",
+    "build:wechatReading": "set SYS_NAME=wechatReading && gulp 03-build-dist",
+
+    "dev:pmsMall": "set SYS_NAME=pmsMall && gulp 01-build-dev",
+    "build:pmsMall": "set SYS_NAME=pmsMall && gulp 03-build-dist",
+
+    "dev:papidenMall": "set SYS_NAME=papidenMall && gulp 01-build-dev",
+    "build:papidenMall": "set SYS_NAME=papidenMall && gulp 03-build-dist",
+
+    "dev:ophiuchus": "set SYS_NAME=ophiuchus && gulp 01-build-dev",
+    "build:ophiuchus": "set SYS_NAME=ophiuchus && gulp 03-build-dist",
+
+    "dev:mooc": "set SYS_NAME=mooc && gulp 01-build-dev",
+    "build:mooc": "set SYS_NAME=mooc && gulp 03-build-dist",
+
+    "dev:monetary": "set SYS_NAME=monetary && gulp 01-build-dev",
+    "build:monetary": "set SYS_NAME=monetary && gulp 03-build-dist",
+
+    "dev:matrix": "set SYS_NAME=matrix && gulp 01-build-dev",
+    "build:matrix": "set SYS_NAME=matrix && gulp 03-build-dist",
+
+    "dev:html5upStellar": "set SYS_NAME=html5upStellar && gulp 01-build-dev",
+    "build:html5upStellar": "set SYS_NAME=html5upStellar && gulp 03-build-dist",
+
+    "dev:retina": "set SYS_NAME=retina && gulp 01-build-dev",
+    "build:retina": "set SYS_NAME=retina && gulp 03-build-dist",
+
+    "dev:hibim": "set SYS_NAME=hibim && gulp 01-build-dev",
+    "build:hibim": "set SYS_NAME=hibim && gulp 03-build-dist",
+
+    "dev:hbcj": "set SYS_NAME=hbcj && gulp 01-build-dev",
+    "build:hbcj": "set SYS_NAME=hbcj && gulp 03-build-dist",
+
+    "dev:flexyCard": "set SYS_NAME=flexyCard && gulp 01-build-dev",
+    "build:flexyCard": "set SYS_NAME=flexyCard && gulp 03-build-dist",
+
+    "dev:diamond": "set SYS_NAME=diamond && gulp 01-build-dev",
+    "build:diamond": "set SYS_NAME=diamond && gulp 03-build-dist",
+
+    "dev:designer": "set SYS_NAME=designer && gulp 01-build-dev",
+    "build:designer": "set SYS_NAME=designer && gulp 03-build-dist",
+
+    "dev:corner": "set SYS_NAME=corner && gulp 01-build-dev",
+    "build:corner": "set SYS_NAME=corner && gulp 03-build-dist",
+
+    "dev:chuangke": "set SYS_NAME=chuangke && gulp 01-build-dev",
+    "build:chuangke": "set SYS_NAME=chuangke && gulp 03-build-dist",
+
+    "dev:chivalric": "set SYS_NAME=chivalric && gulp 01-build-dev",
+    "build:chivalric": "set SYS_NAME=chivalric && gulp 03-build-dist",
+
+    "dev:cartoon": "set SYS_NAME=cartoon && gulp 01-build-dev",
+    "build:cartoon": "set SYS_NAME=cartoon && gulp 03-build-dist",
+
+    "dev:booom": "set SYS_NAME=booom && gulp 01-build-dev",
+    "build:booom": "set SYS_NAME=booom && gulp 03-build-dist",
+
+    "dev:ama": "set SYS_NAME=ama && gulp 01-build-dev",
+    "build:ama": "set SYS_NAME=ama && gulp 03-build-dist"
+
   },
   "author": "luo0412",
   "dependencies": {

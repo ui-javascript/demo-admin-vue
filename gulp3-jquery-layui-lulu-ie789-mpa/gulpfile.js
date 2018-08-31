@@ -14,13 +14,12 @@ const runSequence = require('run-sequence')
 // https://www.gulpjs.com.cn/docs/recipes/split-tasks-across-multiple-files/
 const requireDir = require('require-dir')
 
-
+// 引入任务
 requireDir('./build/tasks/')
 requireDir('./build/tasks/server/')
 requireDir('./build/tasks/extends/')
 
 // 输出提示信息
-console.log('页面主题 -> ' + config.dev.pagesName)
 console.log('样式库 -> ' + config.dev.stylesName)
 console.log('脚本库 -> ' + config.dev.libsName)
 

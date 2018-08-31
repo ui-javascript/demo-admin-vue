@@ -18,13 +18,13 @@ gulp.task('watchCSS', function () {
 // less编译
 gulp.task('compileLess', function (cb) {
     // 注意，只解析_output.less
-    return gulp.src(`${config.dev.assetsDir}/css/theme/${config.dev.stylesName}/**/_output.less`)
+    return gulp.src(`${config.dev.pagesDir}/static/css/_output.less`)
         .pipe(plumber({errorHandler: notify.onError('Error:<%=error.message%>')}))
         .pipe(less())
         .pipe(autoprefixer())
         // .pipe(concatDir({ext: '.css'})) //合并
         // .pipe(cleanCSS({compatibility: 'ie7', inline: ['remote'], rebase: false}))
-        .pipe(gulp.dest(`${config.common.staticDir}/css/theme/${config.dev.stylesName}`))
+        .pipe(gulp.dest(`${config.common.staticDir}/css`))
 
     // cb(err)
 })

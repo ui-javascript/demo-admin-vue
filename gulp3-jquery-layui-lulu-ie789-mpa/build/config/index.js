@@ -2,12 +2,20 @@
  * 配置
  */
 
+var fs = require('fs');
+
+var sysName = 'default'
+if (process.env.SYS_NAME) {
+    sysName = process.env.SYS_NAME.toString().trim()
+}
+
 // 公共配置
 exports.common = {
-    // 固定
+    // 这两个文件随文件夹结构调整
     staticDir: './static',
     templatesDir: './templates',
 }
+
 
 // 开发环境
 exports.dev = {
@@ -16,34 +24,34 @@ exports.dev = {
     assetsDir: './src/assets',
 
     // 样式库
-    stylesName: 'natural',
-    stylesDir: './src/assets/css/theme/natural',
+    stylesName: sysName,
+    stylesDir: `./src/assets/css/theme/${sysName}`,
     stylesWatchFiles: [
         `./src/assets/css/components/**/*.less`,
-        `./src/assets/css/theme/natural/**/*.less`
+        `./${sysName}/static/css/*.less`
     ],
 
     // 脚本库
-    libsName: 'natural',
-    libsDevDir: './src/assets/libs',
-    libsDevMods: 'browser',  // '{ajax,scroll}' 没空格
+    libsName: 'mumuy',
+    libsDevDir: './src/assets/libs/mumuy',
+    // '{ajax,scroll}' 逗号间没空格
+    // 或者 '*' 所有的导报
+    libsDevMods: 'browser',
     libsOutputDir: './static/vendor/libs',
 
     // 视图文件
     // 项目脚本与图片
-    pagesName: '_default',
-    pagesDir: './src/pages',
+    pagesDir: `./_${sysName}`,
     copyHTMLExclude: [
-        `!./src/pages/**/*.{html,md,inc}`,
-        `!./src/pages/static/**`
+        `!./_${sysName}/**/*.{html,md,inc}`,
+        `!./_${sysName}/static/**`
     ],
-    imagesDir: './src/pages/static/images',
-    scriptsDir: './src/pages/static/js',
-
+    imagesDir: `./_${sysName}/static/images`,
+    scriptsDir: `./_${sysName}/static/js`,
 
     // 雪碧图
-    spriteDevDir: './src/pages/images/sprite',
-    spriteOutputDir: './src/assets/css/theme/natural',
+    spriteDevDir: `./_${sysName}/static/images/_sprite`,
+    spriteOutputDir: `./_${sysName}/static/css`,
 
     // 字体子集化
     fontSpiderDir: './static/fonts/hyzhj',
@@ -76,55 +84,21 @@ exports.prod = {
 
 }
 
-let sysName = ''
-if (process.env.SYS_NAME) {
-    sysName = process.env.SYS_NAME.toString().trim()
+
+// 如果有配置文件则覆盖
+if (sysName) {
+
+    // 如果存在配置文件
+    if (fs.existsSync(`./build/config/system/${sysName}.js`)) {
+        var details = require(`./system/${sysName}`)
+
+        // 配置覆盖
+        Object.assign(exports.common, details.common)
+        Object.assign(exports.dev, details.dev)
+        Object.assign(exports.prod, details.prod)
+
+        console.log(sysName + '配置文件已覆盖(๑•̀ㅂ•́)و✧')
+    }
 }
-else {
-    sysName = 'default'
-}
-
-var details = require(`./system/${sysName}`)
-
-console.log('进入目录 ' + sysName)
-
-// 根据不同系统配置文件进行覆盖默认配置
-// 此处修改
-// var details = require('./system/default')
-
-// H5宣传页
-// var details = require('./system/display/hibim')
-// var details = require('./system/display/designStudio')
-// var details = require('./system/corner')
-// var details = require('./system/natural')
-// var details = require('./system/display/diamond')
-// var details = require('./system/display/booom')
-// var details = require('./system/display/chuangke')
-// var details = require('./system/display/retina')
-// var details = require('./system/display/chivalric')
-// var details = require('./system/display/wechatReading')
-// var details = require('./system/display/flexyCard')
-// var details = require('./system/display/html5upStellar')
-// var details = require('./system/display/designer')
-// var details = require('./system/display/ophiuchus')
-// var details = require('./system/display/ophiuchus')
-// var details = require('./system/display/monetary')
-// var details = require('./system/display/cartoon')
 
 
-// 后台管理系统
-// var details = require('./system/admin/hbcj')
-// var details = require('./system/admin/win10Blog')
-// var details = require('./system/admin/ama')
-// var details = require('./system/admin/matrix')
-
-// 商城
-// var details = require('./system/mall/pmsMall')
-// var details = require('./system/mall/mooc')
-// var details = require('./system/mall/papidenMall')
-
-
-// 配置覆盖
-Object.assign(exports.common, details.common)
-Object.assign(exports.dev, details.dev)
-Object.assign(exports.prod, details.prod)
