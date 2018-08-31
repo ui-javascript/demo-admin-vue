@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery垂直新闻滚动代码DEMO演示</title>
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="css/default.css">-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!--[if IE]>
+    <script src="https://cdn.staticfile.org/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .glyphicon {
+            margin-right: 4px !important; /*override*/
+        }
+
+        .pagination .glyphicon {
+            margin-right: 0px !important; /*override*/
+        }
+
+        .pagination a {
+            color: #555;
+        }
+
+        .panel ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        .news-item {
+            padding: 4px 4px;
+            margin: 0px;
+            border-bottom: 1px dotted #555;
+        }
+    </style>
+</head>
+<body>
+<div class="htmleaf-container">
+
+    <div class="container mp30">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-list-alt"></span><b>News</b></div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul class="demo1">
+                                    <li class="news-item">
+                                        <table cellpadding="4">
+                                            <tr>
+                                                <td><img src="/images/scroll-news/1.png" width="60" class="img-circle"/></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+                                                    venenatis enim... <a href="#">Read more...</a></td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                    <li class="news-item">
+                                        <table cellpadding="4">
+                                            <tr>
+                                                <td><img src="/images/scroll-news/2.png" width="60" class="img-circle"/></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+                                                    venenatis enim... <a href="#">Read more...</a></td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                    <li class="news-item">
+                                        <table cellpadding="4">
+                                            <tr>
+                                                <td><img src="/images/scroll-news/3.png" width="60" class="img-circle"/></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+                                                    venenatis enim... <a href="#">Read more...</a></td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                    <li class="news-item">
+                                        <table cellpadding="4">
+                                            <tr>
+                                                <td><img src="/images/scroll-news/4.png" width="60" class="img-circle"/></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+                                                    venenatis enim... <a href="#">Read more...</a></td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                    <li class="news-item">
+                                        <table cellpadding="4">
+                                            <tr>
+                                                <td><img src="/images/scroll-news/5.png" width="60" class="img-circle"/></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+                                                    venenatis enim... <a href="#">Read more...</a></td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                    <li class="news-item">
+                                        <table cellpadding="4">
+                                            <tr>
+                                                <td><img src="/images/scroll-news/6.png" width="60" class="img-circle"/></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+                                                    venenatis enim... <a href="#">Read more...</a></td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                    <li class="news-item">
+                                        <table cellpadding="4">
+                                            <tr>
+                                                <td><img src="/images/scroll-news/7.png" width="60" class="img-circle"/></td>
+                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+                                                    venenatis enim... <a href="#">Read more...</a></td>
+                                            </tr>
+                                        </table>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-list-alt"></span><b>News</b></div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul class="demo2">
+                                    <li class="news-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nullam in venenatis enim... <a href="#">Read more...</a></li>
+                                    <li class="news-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nullam in venenatis enim... <a href="#">Read more...</a></li>
+                                    <li class="news-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nullam in venenatis enim... <a href="#">Read more...</a></li>
+                                    <li class="news-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nullam in venenatis enim... <a href="#">Read more...</a></li>
+                                    <li class="news-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nullam in venenatis enim... <a href="#">Read more...</a></li>
+                                    <li class="news-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Nullam in venenatis enim... <a href="#">Read more...</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-list-alt"></span><b>News</b></div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul id="demo3">
+                                    <li class="news-item">Curabitur porttitor ante eget hendrerit adipiscing. Maecenas
+                                        at magna accumsan,
+                                        rhoncus neque id, fringilla dolor. <a href="#">Read more...</a></li>
+                                    <li class="news-item">Curabitur porttitor ante eget hendrerit adipiscing. Maecenas
+                                        at magna accumsan,
+                                        rhoncus neque id, fringilla dolor. <a href="#">Read more...</a></li>
+                                    <li class="news-item">Praesent ornare nisl lorem, ut condimentum lectus gravida ut.
+                                        Ut velit nunc, vehicula
+                                        volutpat laoreet vel, consequat eu mauris. <a href="#">Read more...</a></li>
+                                    <li class="news-item">Nunc ultrices tortor eu massa placerat posuere. Vivamus
+                                        viverra sagittis nunc. Nunc
+                                        et imperdiet magna. Mauris sed eros nulla. <a href="#">Read more...</a></li>
+                                    <li class="news-item">Morbi sodales tellus sit amet leo congue bibendum. Ut non
+                                        mauris eu neque fermentum
+                                        pharetra. <a href="#">Read more...</a></li>
+                                    <li class="news-item">In pharetra suscipit orci sed viverra. Praesent at
+                                        sollicitudin tortor, id sagittis
+                                        magna. Fusce massa sem, bibendum id. <a href="#">Read more...</a></li>
+                                    <li class="news-item">Maecenas nec ligula sed est suscipit aliquet sed eget ipsum.
+                                        Suspendisse id auctor
+                                        nibh. Ut porttitor volutpat augue, non sodales odio dignissi id. <a href="#">Read
+                                            more...</a></li>
+                                    <li class="news-item">Onec bibendum consectetur diam, nec euismod urna venenatis
+                                        eget. Cras consequat
+                                        convallis leo. <a href="#">Read more...</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/plus/jquery/jquery.bootstrap.newsbox.min.js"></script>
+<script>
+    $(function () {
+        $(".demo1").bootstrapNews({
+            newsPerPage: 5,
+            autoplay: true,
+            pauseOnHover: true,
+            direction: 'up',
+            newsTickerInterval: 4000,
+            onToDo: function () {
+                //console.log(this);
+            }
+        });
+
+        $(".demo2").bootstrapNews({
+            newsPerPage: 4,
+            autoplay: true,
+            pauseOnHover: true,
+            navigation: false,
+            direction: 'down',
+            newsTickerInterval: 2500,
+            onToDo: function () {
+                //console.log(this);
+            }
+        });
+
+        $("#demo3").bootstrapNews({
+            newsPerPage: 3,
+            autoplay: false,
+
+            onToDo: function () {
+                //console.log(this);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

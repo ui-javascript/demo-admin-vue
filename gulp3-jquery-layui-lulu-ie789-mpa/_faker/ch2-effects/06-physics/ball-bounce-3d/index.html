@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/demo.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="https://cdn.bootcss.com/modernizr/2.8.1/modernizr.min.js"></script>
+    <!--[if IE]>
+    <style>.main {
+        display: none;
+    }</style><![endif]-->
+</head>
+<body>
+<div class="container">
+    <header>
+
+        <h1>3D Bouncing Ball <span>with CSS3</span></h1>
+        <h2>Create an animated 3D bouncing ball using CSS3 transitions and animations</h2>
+
+        <div class="support-note"><!-- with modernizr we check browser support -->
+            <span class="no-cssanimations">CSS animations are not supported in your browser</span>
+            <span class="no-csstransforms">CSS transforms are not supported in your browser</span>
+            <!--span class="no-csstransforms3d">CSS 3D transforms are not supported in your browser</span-->
+            <span class="no-csstransitions">CSS transitions are not supported in your browser</span>
+        </div>
+
+    </header>
+    <section class="main">
+        <h3 class="explanation">(点击按住小球可以使它放大缩小！)Click and hold the ball to make it move back!</h3>
+        <div id="ballWrapper">
+            <div id="ball"></div>
+            <div id="ballShadow"></div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

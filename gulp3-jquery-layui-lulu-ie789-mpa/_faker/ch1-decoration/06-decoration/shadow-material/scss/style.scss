@@ -1,0 +1,51 @@
+@mixin z-1 {
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+}
+
+@mixin z-2 {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+}
+
+@mixin z-3 {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+}
+@mixin z-4 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
+}
+
+@mixin z-5 {
+  box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  margin: 0; 
+  height: 100vh;
+  display: inline-block;
+  background: #E91E63;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  background: #F2F2F2;
+  width: 90vw;
+  padding: 15px;
+  border-radius: 3px;
+  @include z-2;
+}
+
+.shadow {
+  background: #F9F9F9;
+  display: inline-block;
+  width: 13vw;
+  height: 13vw;
+  margin: 3%;  
+  &:nth-child(1){@include z-1;}
+  &:nth-child(2){@include z-2;}
+  &:nth-child(3){@include z-3;}
+  &:nth-child(4){@include z-4;}
+  &:nth-child(5){@include z-5;}
+}

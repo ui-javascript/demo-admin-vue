@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>炫酷手机APP解锁动画和界面UI设计|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/default.css">
+	<link rel='stylesheet prefetch' href='http://fonts.useso.com/css?family=Roboto:400,100,300,500,700,900'>
+	<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+	<link rel='stylesheet' href='css/app.css'>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<article class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>炫酷手机APP解锁动画和界面UI设计 <span>A app unlock design</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/css3/ui-design/201509122563.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+		</header>
+		<div class="mhn-ui-wrap">
+			<div class="mhn-ui-page page-lock">
+				<div class="mhn-ui-date-time">
+					<div class="mhn-ui-time">6:02 PM</div>
+					<div class="mhn-ui-day">Friday</div>
+					<div class="mhn-ui-date">September 05, 2015</div>
+				</div>
+				<div class="mhn-lock-wrap">
+					<div class="mhn-lock-title" data-title="Draw a pattern to unlock"></div>
+					<div class="mhn-lock"></div>
+				</div>
+			</div>
+
+			<div class="mhn-ui-page page-home">
+				<div class="mhn-ui-app-time">&nbsp;</div>
+				<div class="mhn-ui-app-title-head">
+					<span class="mhn-ui-page-title">All Application</span>
+					<div class="mhn-ui-filter">
+						<span class="mhn-ui-btn ion-funnel"></span>
+						<div class="mhn-ui-filter-list">
+							<div data-filter="all" class="active">All Application</div>
+							<div data-filter="general">General Application</div>
+							<div data-filter="social">Social Application</div>
+							<div data-filter="credits">Credits Application</div>
+						</div>
+					</div>
+				</div>
+				<div class="mhn-ui-row mhn-ui-apps">
+					<div class="mhn-ui-col" data-filter="general">
+						<div class="mhn-ui-icon" data-open="page-author">
+							<span class="ion-person" data-color="#2980b9"></span>
+							<div class="mhn-ui-icon-title">Author</div>
+						</div>
+					</div>
+					<div class="mhn-ui-col" data-filter="general">
+						<div class="mhn-ui-icon" data-open="page-contact">
+							<span class="ion-chatbox" data-color="#8e44ad"></span>
+							<div class="mhn-ui-icon-title">Contact</div>
+						</div>
+					</div>
+					<div class="mhn-ui-col" data-filter="general">
+						<div class="mhn-ui-icon" data-href="#">
+							<span class="ion-ios-briefcase" data-color="#f39c12"></span>
+							<div class="mhn-ui-icon-title">Portfolio</div>
+						</div>
+					</div>
+					<div class="mhn-ui-col" data-filter="general">
+						<div class="mhn-ui-icon" data-open="page-credits">
+							<span class="ion-information-circled" data-color="#16a085"></span>
+							<div class="mhn-ui-icon-title">Credits</div>
+						</div>
+					</div>
+					<div class="mhn-ui-col" data-filter="social">
+						<div class="mhn-ui-icon" data-href="#">
+							<span class="ion-social-codepen-outline" data-color="#1e1e1e"></span>
+							<div class="mhn-ui-icon-title">Codepen</div>
+						</div>
+					</div>
+					<div class="mhn-ui-col" data-filter="social">
+						<div class="mhn-ui-icon" data-href="#">
+							<span class="ion-social-facebook" data-color="#3b5998"></span>
+							<div class="mhn-ui-icon-title">Facebook</div>
+						</div>
+					</div>
+					<div class="mhn-ui-col" data-filter="social">
+						<div class="mhn-ui-icon" data-href="#">
+							<span class="ion-social-twitter" data-color="#56a3d9"></span>
+							<div class="mhn-ui-icon-title">Twitter</div>
+						</div>
+					</div>
+					<div class="mhn-ui-col" data-filter="social">
+						<div class="mhn-ui-icon" data-href="#">
+							<span class="ion-social-dribbble-outline" data-color="#ec4a89"></span>
+							<div class="mhn-ui-icon-title">Dribbble</div>
+						</div>
+					</div>
+					<div class="mhn-ui-col" data-filter="credits">
+						<div class="mhn-ui-icon" data-href="#">
+							<span class="ion-social-javascript" data-color="#6639b6"></span>
+							<div class="mhn-ui-icon-title">jQuery</div>
+						</div>
+					</div>
+					<div class="mhn-ui-col" data-filter="credits">
+						<div class="mhn-ui-icon" data-href="#">
+							<span class="ion-ionic" data-color="#3e50b4"></span>
+							<div class="mhn-ui-icon-title">Ionicons</div>
+						</div>
+					</div>
+					<div class="mhn-ui-col" data-filter="credits">
+						<div class="mhn-ui-icon" data-href="#">
+							<span class="ion-social-css3-outline" data-color="#785447"></span>
+							<div class="mhn-ui-icon-title">Animate</div>
+						</div>
+					</div>
+					<div class="mhn-ui-col" data-filter="credits">
+						<div class="mhn-ui-icon" data-href="#">
+							<span class="ion-android-camera" data-color="#000000"></span>
+							<div class="mhn-ui-icon-title">Unsplash</div>
+						</div>
+					</div>
+					<div class="mhn-ui-col" data-filter="credits">
+						<div class="mhn-ui-icon" data-href="#">
+							<span class="ion-android-unlock" data-color="#4bae4f"></span>
+							<div class="mhn-ui-icon-title">patternLock</div>
+						</div>
+					</div>
+				</div>
+				<div class="mhn-ui-bottom-link-bar">
+					<span class="mhn-ui-bottom-btn ion-ios-home"></span>
+					<span class="mhn-ui-bottom-btn ion-ios-locked" onclick="mhnUI.page.show('page-lock')"></span>
+				</div>
+			</div>
+
+			<div class="mhn-ui-page page-author">
+				<div class="mhn-ui-app-time"></div>
+				<div class="mhn-ui-app-title-head"><span class="ion-person"></span> Author</div>
+				<div class="text-center"><img class="flipInX animated" src="img/user.png" alt=""></div>
+				<p class="text-center">Hi, It's me Mohan. I'm a web and graphics designer. Designing is my passion and I have been working on various designing projects.</p>
+				<div class="mhn-ui-bottom-link-bar">
+					<span class="mhn-ui-bottom-btn ion-ios-home" onclick="mhnUI.page.show('page-home')"></span>
+					<span class="mhn-ui-bottom-btn ion-ios-locked" onclick="mhnUI.page.show('page-lock')"></span>
+				</div>
+			</div>
+
+			<div class="mhn-ui-page page-contact">
+				<div class="mhn-ui-app-time">&nbsp;</div>
+				<div class="mhn-ui-app-title-head"><span class="ion-chatbox"></span> Contact</div>
+				<p><a href="#">jqueryzhijia@gmail.com</a></p>
+				<p><a href="#">htmleaf@qq.com</a></p>
+				<p><a href="http://www.htmleaf.com" target="_blank">http://www.htmleaf.com</a></p>
+				<div class="mhn-ui-bottom-link-bar">
+					<span class="mhn-ui-bottom-btn ion-ios-home" onclick="mhnUI.page.show('page-home')"></span>
+					<span class="mhn-ui-bottom-btn ion-ios-locked" onclick="mhnUI.page.show('page-lock')"></span>
+				</div>
+			</div>
+
+			<div class="mhn-ui-page page-credits">
+				<div class="mhn-ui-app-time">&nbsp;</div>
+				<div class="mhn-ui-app-title-head"><span class="ion-information-circled"></span> Credits</div>
+				<div class="mhn-ui-credit-list">
+					<div class="mhn-ui-credit">
+						<a href="#" target="_blank">http://jquery.com/</a>
+						<p>jQuery is a fast, small, and feature-rich JavaScript library.</p>
+					</div>
+					<div class="mhn-ui-credit">
+						<a href="#" target="_blank">http://ionicons.com/</a>
+						<p>The premium icon font for Ionic Framework.</p>
+					</div>
+					<div class="mhn-ui-credit">
+						<a href="#" target="_blank">http://daneden.github.io/animate.css/</a>
+						<p>Just-add-water CSS animations.</p>
+					</div>
+					<div class="mhn-ui-credit">
+						<a href="#" target="_blank">http://unsplash.com/</a>
+						<p>Free (do whatever you want) hi-res photos.</p>
+					</div>
+					<div class="mhn-ui-credit">
+						<a href="#" target="_blank">http://github.com/s-yadav/patternLock</a>
+						<p>A light weight plugin to simulate android like pattern lock interface for your hybrid app or website.</p>
+					</div>
+				</div>
+				<div class="mhn-ui-bottom-link-bar">
+					<span class="mhn-ui-bottom-btn ion-ios-home" onclick="mhnUI.page.show('page-home')"></span>
+					<span class="mhn-ui-bottom-btn ion-ios-locked" onclick="mhnUI.page.show('page-lock')"></span>
+				</div>
+			</div>
+			<div class="mhn-ui-dialog-wrap">
+				<div class="mhn-ui-dialog">
+					<div class="mhn-ui-dialog-title">Are you sure?</div>
+					<p>This application wants to open an external link. To confirm, please click on yes button.</p>
+					<a data-action="confirm" class="mhn-ui-dialog-btn" target="_blank">Yes</a>
+					<a data-action="cancel" class="mhn-ui-dialog-btn">No</a>
+				</div>
+			</div>
+		</div>
+		<div class="mhn-ui-info">从左下角开始画 'M' 图形就可以解锁了！</div>
+		<footer class="related">
+		    <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
+		    <a href="http://www.htmleaf.com/jQuery/Layout-Interface/201506222084.html">
+			  <img src="http://img.htmleaf.com/1506/201506221733.jpg" width="300" alt="jQuery和CSS3超酷移动手机app界面设计"/>
+			  <h3>带隐藏侧边栏的垂直多面板UI界面布局</h3>
+			</a>
+			<a href="http://www.htmleaf.com/jQuery/Layout-Interface/201506081995.html">
+			  <img src="http://img.htmleaf.com/1506/201506081752.jpg" width="300" alt="jQuery和CSS3炫酷手机app登录界面特效"/>
+			  <h3>jQuery和CSS3炫酷手机app登录界面特效</h3>
+			</a>
+		</footer>
+	</article>
+	
+	<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+	<script src="js/app.js"></script>
+	<script src="js/patternLock.js"></script>
+</body>
+</html>

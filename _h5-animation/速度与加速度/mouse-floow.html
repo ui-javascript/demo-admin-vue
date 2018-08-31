@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouse floow</title>
+</head>
+<body>
+   <canvas id="canvas" style="background:#000;" width="500" height="500">
+       you browser not support canvas
+   </canvas>
+   
+   <script src="../js/arrow.js"></script>
+   <script src="../js/utils.js"></script>
+   <script>
+       window.onload = function(){
+           var canvas = document.getElementById("canvas");
+           var context = canvas.getContext("2d");
+           var mouse = utils.captureMouse(canvas);
+           
+           var arrow = new Arrow();
+           arrow.x = canvas.width/2;
+           arrow.y = canvas.height/2;
+           
+           var angle = 0, speed = 2;
+           
+           
+           //角度
+           function lerpAngle(a, b, t) {
+	         var d = b - a;
+	         if (d > Math.PI) d = d - 2 * Math.PI;   //
+	         if (d < -Math.PI) d = d + 2 * Math.PI;  //
+	         return a + d * t;
+          }
+
+           // 距离计算
+            function lerpDistance(aim, cur, ratio) {
+	         var delta = cur - aim;
+	         return aim + delta * ratio;
+          }
+
+           
+           (function drawFrame(){
+               window.requestAnimationFrame(drawFrame, canvas);
+               context.clearRect(0,0,canvas.width,canvas.height);
+               
+               arrow.x = lerpDistance(mouse.x, arrow.x, 0.95);
+               arrow.y = lerpDistance(mouse.y, arrow.y, 0.95);
+               
+               var dy = mouse.y - arrow.y;
+               var dx = mouse.x - arrow.x;
+               
+               var beta = Math.atan2(dy,dx) + Math.PI;
+               
+               angle = lerpAngle(beta,angle,0.1);
+               
+               arrow.rotation = angle + Math.PI;  //angle默认为弧度
+               
+               var vx = Math.cos(angle)*speed;
+               var vy = Math.sin(angle)*speed;
+               
+               arrow.x += vx;
+               arrow.y += vy;
+               
+               arrow.draw(context);
+           }());
+           
+       }
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/theme/tianyan/_output.css">
+</head>
+<body>
+
+
+<div class="mainV3_tab1_enter position-rel">
+    <div class="top company_container"><a class="toHome f0" href="https://www.tianyancha.com"><i
+            class="tic tic-tyc-logo head-logo c-white" style="color:#fff"></i><i
+            class="tic tic-tyc-logo-txt head-logo-txt c-white"></i></a>
+        <div class="header_biaoyu"><span class="biaoyu1">都在用的商业安全工具</span><span class="biaoyu2">国家中小企业发展基金旗下</span>
+        </div>
+        <div class="right">
+            <div style="position:relative;">
+                <div class="hover_title ml10 mr12" style="height:51px;"><span class="title">&nbsp;<a
+                        onclick="header.loginLink()" class="media_port">登录/注册</a></span></div>
+                <div class="hover_title " style="height:51px;"><span class="title">&nbsp;<a
+                        href="https://www.tianyancha.com/vipintro" target="_blank" class="media_port">VIP会员</a></span>
+                </div>
+                <div class="hover_title " style="height:51px;"><span class="describeIcon"><span class="title "
+                                                                                                href="https://www.tianyancha.com/vipbusiness">&nbsp;          &nbsp;<a
+                        href="/vipbusiness" target="_blank" class="media_port">企业套餐</a></span><span
+                        class="discribeBox block text-left" style="font-weight:100;cursor:default;"><div
+                        class="triangle-with-shadow home-ui" style="left: 20px;top:16px;"></div><div
+                        class="describeVipContent home-ui block f12 sec-c2" style=""><div class="">1.298元/1年/1个账号</div><div>2.主从账号方便管理</div><div>3.集中开发票，方便报销</div></div></span></span>
+                </div>
+                <div class="js-mediaSource hover_title user_title" style="height:51px;">
+                    <div class="title in-block">
+                        <div class="">
+                            <div class="list-title c-white"><span class="point">合作通道</span><i class="tic tic-xia"
+                                                                                              aria-hidden="true"></i>
+                            </div>
+                            <div class="list-group no-radius abs text-center js-mediaTarget" style="display: none;"><a
+                                    class="list-group-item f12" target="_blank"
+                                    href="https://www.tianyancha.com/appfortrial" tyc-event-click=""
+                                    tyc-event-ch="DaoHang.Media">媒体通道</a><a class="list-group-item f12" target="_blank"
+                                                                            href="https://www.tianyancha.com/business"
+                                                                            tyc-event-click=""
+                                                                            tyc-event-ch="DaoHang.Business">商务通道</a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--<div class="hover_title" style="height:51px;">--><!--<span class="title">&nbsp;-->
+                <!--<a href="/invite" target="_blank" class="media_port">-->
+                <!--<span class="in-block vertival-bottom yqyj-masked1">邀请赢奖</span>--><!--</a>--><!--</span>-->
+                <!--</div>-->
+                <div class="hover_title " style="height:51px;"><span class="title ">&nbsp;<span class="media_port"
+                                                                                                onclick="showMainVip()">开通VIP</span></span>
+                </div>
+                <div class="hover_title" style="height:51px;"><span class="title ">&nbsp;<a
+                        href="https://www.tianyancha.com/viparea" target="_blank" class="media_port">VIP专区</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainv2_tab1 position-rel" style="z-index: 200">
+        <div class="text-center">
+            <div style="margin-bottom:45px;margin-top:60px;">
+                <div class="mainV3_title">都在用的商业安全工具</div>
+            </div>
+            <div class="main-tab-outer ">
+                <div class="main-tab-head f0">
+                    <div class="in-block main-tab main-tab-c mr40 point vertical-top c-white f16 js-tab active"
+                         tab="js-company">
+                        <div class="main-tab-top"><span>查公司</span></div>
+                    </div>
+                    <div class="in-block main-tab main-tab-h mr40 point vertical-top c-white f16 js-tab" tab="js-human"
+                         tyc-event-click="" tyc-event-ch="shouye.HumanSearch.Tab">
+                        <div class="main-tab-top"><span>查老板</span></div>
+                    </div>
+                    <div class="in-block main-tab main-tab-r point vertical-top c-white f16" tab="js-relation"
+                         tyc-event-click="" tyc-event-ch="shouye.HumanSearch.Tab" onclick="header.jumpToPath()">
+                        <div class="main-tab-top"><span>查关系</span></div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="main-tab-body in-block js-tab-body main-tab-company">
+                        <div class="js-search-container" tab="js-company" style="position:relative;">
+                            <div class="input-group inputV2">
+                                <form onsubmit="return header.stopSubmit(event,true,'#home-main-search');"
+                                      autocomplete="off">
+                                    <div class="live-search-wrap index-search"><input id="home-main-search"
+                                                                                      wrap-class="index-search"
+                                                                                      type="search"
+                                                                                      class="form-control js-live-search f16 sec-c1"
+                                                                                      autofocus="autofocus"
+                                                                                      maxlength="50"
+                                                                                      placeholder="请输入公司名称、人名、品牌名称等关键词 "
+                                                                                      style="border:none;"
+                                                                                      click-selected="header.suggestToCompany">
+                                        <ul class="searchresultspopup bdcolor hidden"></ul>
+                                    </div>
+                                </form>
+                                <div tyc-event-click="" tyc-event-ch="shouye.CompanySearch.Search"
+                                     class="input-group-addon search_button white-btn "
+                                     onclick="header.search(true,'#home-main-search')"><span>天眼一下</span></div>
+                            </div>
+                            <div class="hotkeyV3 text-left pl25 mt40">
+                                <div class="hot_title">
+                                    <div>热点</div>
+                                    <div>搜索</div>
+                                </div>
+                                <div class="hotContent ml10 f14 over-hide"><a tyc-event-click=""
+                                                                              tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                                                              class="position-rel hotsearchName mb6 "
+                                                                              bak-href=""
+                                                                              href="https://www.tianyancha.com/search?key=%E8%8C%85%E5%8F%B0">茅台</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E8%85%BE%E8%AE%AF">腾讯</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E5%B0%8F%E7%B1%B3">小米</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E9%9B%B7%E5%86%9B">雷军</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E7%8C%AB%E7%9C%BC">猫眼</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E5%96%84%E6%9E%97%E9%87%91%E8%9E%8D">善林金融</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E7%BE%8E%E5%9B%A2">美团</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E6%BB%B4%E6%BB%B4">滴滴</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E8%91%A3%E6%98%8E%E7%8F%A0">董明珠</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E5%8D%8E%E4%B8%BA">华为</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E7%99%BE%E5%BA%A6">百度</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E4%BA%AC%E4%B8%9C">京东</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E8%81%94%E6%83%B3">联想</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E6%BD%98%E7%9F%B3%E5%B1%B9">潘石屹</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E7%9B%92%E9%A9%AC%E9%B2%9C%E7%94%9F">盒马鲜生</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 " bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E4%BA%92%E8%81%94%E7%BD%91%E9%87%91%E8%9E%8D">互联网金融</a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                        class="position-rel hotsearchName mb6 mr40" bak-href=""
+                                        href="https://www.tianyancha.com/search?key=%E4%B8%AD%E5%9B%BD%E5%A6%87%E5%A5%B3%E5%8F%91%E5%B1%95%E5%9F%BA%E9%87%91%E4%BC%9A">中国妇女发展基金会<span
+                                        class="tag" style="right: -29px;">基金会</span></a><a tyc-event-click=""
+                                                                                           tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                                                                           class="position-rel hotsearchName mb6 mr50"
+                                                                                           bak-href=""
+                                                                                           href="https://www.tianyancha.com/search?key=%E5%8C%97%E4%BA%AC%E4%B8%AD%E7%A7%91%E7%A0%94%E7%A9%B6%E9%99%A2">北京中科研究院<span
+                                        class="tag" style="right: -41px;">事业单位</span></a><a tyc-event-click=""
+                                                                                            tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                                                                            class="position-rel hotsearchName mb6 mr30"
+                                                                                            bak-href=""
+                                                                                            href="https://www.tianyancha.com/search?key=%E5%8C%97%E4%BA%AC%E5%A4%A7%E6%88%90%E5%BE%8B%E5%B8%88%E4%BA%8B%E5%8A%A1%E6%89%80">北京大成律师事务所<span
+                                        class="tag" style="right: -17px;">律所</span></a><a tyc-event-click=""
+                                                                                          tyc-event-ch="shouye.CompanySearch.HotSearch"
+                                                                                          class="position-rel hotsearchName mb6 "
+                                                                                          bak-href=""
+                                                                                          href="https://www.tianyancha.com/search?key=%E6%B7%B1%E5%9C%B3%20%E5%8C%BB%E7%96%97">深圳
+                                    医疗</a></div>
+                            </div>
+                        </div>
+                        <div class="js-search-container hidden" tab="js-human">
+                            <div class="input-group inputV2">
+                                <form onsubmit="return header.stopHumanSubmit(event,true,'#home-human-search');"
+                                      autocomplete="off">
+                                    <div class="live-search-wrap index-search"><input id="home-human-search"
+                                                                                      type="search"
+                                                                                      class="form-control js-live-search f16 sec-c1"
+                                                                                      autofocus="autofocus"
+                                                                                      maxlength="50"
+                                                                                      wrap-class="index-search"
+                                                                                      suggest="true"
+                                                                                      enter-selected="true"
+                                                                                      livesearch-is-human="true"
+                                                                                      click-selected="header.suggestToHuman"
+                                                                                      placeholder="请输入人名等关键词，用空格隔开，如“赵薇，马云 杭州，刘强东 京东”"
+                                                                                      style="border:none;">
+                                        <ul class="searchresultspopup bdcolor hidden"></ul>
+                                    </div>
+                                </form>
+                                <div class="input-group-addon search_button white-btn"
+                                     onclick="header.searchHuman(event,true,'#home-human-search')" tyc-event-click=""
+                                     tyc-event-ch="shouye.HumanSearch.Serach" style=""><span>天眼一下</span></div>
+                            </div>
+                            <div class="hotkeyV3 text-left pl25 mt40">
+                                <div class="hot_title p5">
+                                    <div>热点</div>
+                                    <div>人物</div>
+                                </div>
+                                <div class="hotContent ml10 over-hide" style=""><a tyc-event-click=""
+                                                                                   tyc-event-ch="shouye.HumanSearch.HotSearch"
+                                                                                   bak-href=""
+                                                                                   href="https://www.tianyancha.com/humansearch/%E9%A9%AC%E5%8C%96%E8%85%BE"
+                                                                                   class="hotHuman in-block mr12"><span
+                                        class="imgbox in-block vertical-top"><img
+                                        src="https://img.tianyancha.com/logo/human2/803dc6295fccfad7a7dfb185efac5e4c.png@!watermark01"
+                                        alt="马化腾"></span><span
+                                        class="in-block vertical-top pr8 pl8 cname">马化腾</span></a><a tyc-event-click=""
+                                                                                                     tyc-event-ch="shouye.HumanSearch.HotSearch"
+                                                                                                     bak-href=""
+                                                                                                     href="https://www.tianyancha.com/humansearch/%E9%9B%B7%E5%86%9B"
+                                                                                                     class="hotHuman in-block mr12"><span
+                                        class="imgbox in-block vertical-top"><img
+                                        src="https://img.tianyancha.com/logo/human2/2a992f587094dcfce37b8ecd62524cc7.png@!watermark01"
+                                        alt="雷军"></span><span
+                                        class="in-block vertical-top pr8 pl8 cname">雷军</span></a><a tyc-event-click=""
+                                                                                                    tyc-event-ch="shouye.HumanSearch.HotSearch"
+                                                                                                    bak-href=""
+                                                                                                    href="https://www.tianyancha.com/humansearch/%E7%8E%8B%E9%95%BF%E7%94%B0"
+                                                                                                    class="hotHuman in-block mr12"><span
+                                        class="imgbox in-block vertical-top"><img
+                                        src="https://img.tianyancha.com/logo/human2/5172e25d9cebfe1776c55644035f2766.png@!watermark01"
+                                        alt="王长田"></span><span
+                                        class="in-block vertical-top pr8 pl8 cname">王长田</span></a><a tyc-event-click=""
+                                                                                                     tyc-event-ch="shouye.HumanSearch.HotSearch"
+                                                                                                     bak-href=""
+                                                                                                     href="https://www.tianyancha.com/humansearch/%E8%B5%B5%E8%96%87"
+                                                                                                     class="hotHuman in-block mr12"><span
+                                        class="imgbox in-block vertical-top"><img
+                                        src="https://img.tianyancha.com/logo/human2/7252138c33091ec076b8070e435c9dab.png@!watermark01"
+                                        alt="赵薇"></span><span
+                                        class="in-block vertical-top pr8 pl8 cname">赵薇</span></a><a tyc-event-click=""
+                                                                                                    tyc-event-ch="shouye.HumanSearch.HotSearch"
+                                                                                                    bak-href=""
+                                                                                                    href="https://www.tianyancha.com/humansearch/%E6%9D%A8%E5%B9%82"
+                                                                                                    class="hotHuman in-block mr12"><span
+                                        class="imgbox in-block vertical-top"><img
+                                        src="https://img.tianyancha.com/logo/human2/3523c6e7648a5f98b047e60672fbe7ab.png@!watermark01"
+                                        alt="杨幂"></span><span
+                                        class="in-block vertical-top pr8 pl8 cname">杨幂</span></a><a tyc-event-click=""
+                                                                                                    tyc-event-ch="shouye.HumanSearch.HotSearch"
+                                                                                                    bak-href=""
+                                                                                                    href="https://www.tianyancha.com/humansearch/%E6%9D%8E%E5%86%B0%E5%86%B0"
+                                                                                                    class="hotHuman in-block mr12"><span
+                                        class="imgbox in-block vertical-top"><img
+                                        src="https://img.tianyancha.com/logo/human2/a30437ddf24d54d50e143fa102000a25.png@!watermark01"
+                                        alt="李冰冰"></span><span
+                                        class="in-block vertical-top pr8 pl8 cname">李冰冰</span></a><a tyc-event-click=""
+                                                                                                     tyc-event-ch="shouye.HumanSearch.HotSearch"
+                                                                                                     bak-href=""
+                                                                                                     href="https://www.tianyancha.com/humansearch/%E7%8E%8B%E5%81%A5%E6%9E%97%20%E5%A4%A7%E8%BF%9E%E4%B8%87%E8%BE%BE"
+                                                                                                     class="hotHuman in-block mr12"><span
+                                        class="imgbox in-block vertical-top"><img
+                                        src="https://img.tianyancha.com/logo/human2/fbdcf5d945d0e3a3e3bd5df46838c3a0.png@!watermark01"
+                                        alt="王健林 大连万达"></span><span
+                                        class="in-block vertical-top pr8 pl8 cname">王健林 大连万达</span></a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.HumanSearch.HotSearch" bak-href=""
+                                        href="https://www.tianyancha.com/humansearch/%E9%A9%AC%E4%BA%91%20%E6%9D%AD%E5%B7%9E"
+                                        class="hotHuman in-block mr12"><span class="imgbox in-block vertical-top"><img
+                                        src="https://img.tianyancha.com/logo/human2/5907c61dfe3545e00dcd08f45e6fe7bf.png@!watermark01"
+                                        alt="马云 杭州"></span><span
+                                        class="in-block vertical-top pr8 pl8 cname">马云 杭州</span></a><a
+                                        tyc-event-click="" tyc-event-ch="shouye.HumanSearch.HotSearch" bak-href=""
+                                        href="https://www.tianyancha.com/humansearch/%E5%88%98%E5%BC%BA%E4%B8%9C%20%E4%BA%AC%E4%B8%9C"
+                                        class="hotHuman in-block mr12"><span class="imgbox in-block vertical-top"><img
+                                        src="https://img.tianyancha.com/logo/human2/7fa002f08bda715f617b5b0d7449fe8f.png@!watermark01"
+                                        alt="刘强东 京东"></span><span
+                                        class="in-block vertical-top pr8 pl8 cname">刘强东 京东</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<img class="header-center-pic" src="https://static.tianyancha.com/wap/images/headerPeiIcon.png" alt="img">-->
+</div>
+
+
+<div class="container company_container friend-footer"><div class="foot-header">友情链接：</div><a href="http://www.baike.com/" rel="nofollow" target="_blank" class="">互动百科</a><!-- BOSS直聘 需求不加 nofollow --><a href="https://www.zhipin.com" target="_blank" class="ml10">BOSS直聘</a><a href="https://www.liepin.com" target="_blank" class="ml10">猎聘网</a></div>
+
+</body>
+</html>

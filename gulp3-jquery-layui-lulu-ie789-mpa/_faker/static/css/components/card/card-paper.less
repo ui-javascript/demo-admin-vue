@@ -1,0 +1,108 @@
+.nt-card-paper {
+
+  background: url('../../../images/card-paper-demo/norwegian_rose.png');
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  text-align: center;
+
+
+
+  .wrapper {
+    margin: 2% auto 0 auto;
+  }
+
+  ul.gallery {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    list-style: none;
+    padding: 5px;
+  }
+
+  ul.gallery li {
+    border: 5px solid #fff;
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 150px;
+    margin: 0 30px 30px 0;
+    background: #fff;
+
+    box-shadow: 0 1px 4px #ccc, 0 0 40px #ccc inset;
+  }
+
+  ul.gallery li:before,
+  ul.gallery li:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 70%;
+    height: 55%;
+
+    box-shadow: 0 15px 16px #6b6b6b;
+
+    transform: skew(-15deg) rotate(-6deg);
+  }
+
+  ul.gallery li:after {
+    left: auto;
+    right: 11px;
+
+    transform: skew(15deg) rotate(6deg);
+  }
+
+  a.gallery_links img {
+    border: none;
+  }
+
+  a.gallery_links {
+    position: relative;
+    text-decoration: none;
+  }
+
+  a.gallery_links:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 10%;
+    top: 0;
+    left: 0;
+    background: steelblue;
+    padding: 5px 15px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0px 0px 1px #000;
+    white-space: nowrap;
+    opacity: 0;
+
+    transition: all 0.4s ease;
+    width: 85px;
+  }
+
+  a.gallery_links:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    transition: all 0.4s ease;
+    opacity: 0;
+    left: 30%;
+    bottom: 90%;
+  }
+
+  a.gallery_links:hover:after {
+    bottom: 10%;
+  }
+
+  a.gallery_links:hover:before {
+    bottom: 70%;
+  }
+
+  a.gallery_links:hover:after,
+  a.gallery_links:hover:before {
+    opacity: 1;
+  }
+
+}

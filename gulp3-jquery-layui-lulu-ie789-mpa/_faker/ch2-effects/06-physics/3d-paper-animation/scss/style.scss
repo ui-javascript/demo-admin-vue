@@ -1,0 +1,46 @@
+@import "compass/css3";
+
+@keyframes anim {
+  to {
+    transform: rotateZ(0) rotate(1080deg);
+  }
+}
+body {
+  background: black;
+  overflow: hidden;
+}
+.wrap {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  .staircase {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transform: translate3d(200px, 200px, -500px);
+   
+    .stair {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 40px;
+      height: 200px;
+/*       background: black; */
+      opacity: .6;
+      transform-origin: top left;
+      animation: anim 10s infinite alternate;
+      box-shadow: 0px 1px 3px 3px black;
+    }
+  }
+}
+
+@for $i from 1 through 100 {
+  .stair:nth-child(#{$i}){
+    transform: translateZ($i * -25px) rotate($i * 13deg);
+    top: 20px;
+    background: hsl($i + 120, 50%, 50%);
+  }
+}

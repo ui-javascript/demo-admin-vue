@@ -1,0 +1,86 @@
+ html, body {
+  margin: 0;
+  background: hsla(205, 95%, 15%, 1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: -webkit-radial-gradient(top, circle cover, hsla(205, 95%, 15%, 1) 0%, hsla(251, 20%, 17%,1) 80%);
+  background-image: radial-gradient(top, circle cover,  hsla(205, 95%, 15%, 1) 0%, hsla(251, 20%, 17%,1) 80%);
+  overflow: hidden;
+}
+
+.helix {
+  margin: 40vh -50%;
+  width: 200%;
+  height: 40vh;
+  -webkit-transform:rotate(30deg);
+      -ms-transform:rotate(30deg);
+          transform:rotate(30deg);
+  -webkit-transform-style:preserve-3d;
+          transform-style:preserve-3d;
+}
+
+.dblHelix {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  white-space: nowrap;
+}
+
+.dblHelix > div {
+  display: inline-block;
+  position: relative;
+  margin: 0 6px;
+  width: 1px;
+  height: 30vh;
+  box-shadow: 1px 1px 1px 1px hsla(0,0%,0%,0.2);
+  background:hsla(243, 100%, 85%, 1);
+  -webkit-animation: rot 5s linear infinite, 
+             chngCol 5s linear alternate infinite;
+          animation: rot 5s linear infinite, 
+             chngCol 5s linear alternate infinite;
+  -webkit-transition:all 1s ease;
+          transition:all 1s ease;
+}
+
+.dblHelix > div::before,
+.dblHelix > div::after {
+  position: absolute;
+  left: -2px;
+  border-radius: 50%;
+  width: 12px;
+  height: 10px;
+  box-shadow: 2px 2px 2px 2px hsla(0,0%,0%,0.25);
+  background: hsla(243, 95%, 85%, 1);
+  content: "";
+}
+
+.dblHelix > div::before {
+  top: -2px;
+}
+
+.dblHelix > div::after {
+  bottom: -2px;
+}
+@-webkit-keyframes rot{
+  to {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+@keyframes rot{
+  to {
+    -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+  }
+}
+
+@-webkit-keyframes chngCol {
+  to {
+    background: hsla(253, 85%, 25%, 1);
+  }
+}
+
+@keyframes chngCol {
+  to {
+    background: hsla(253, 85%, 25%, 1);
+  }
+}

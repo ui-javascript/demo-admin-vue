@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>简单易用的生成高等数学方程公式的纯CSS样式|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/default.css">
+	<link href="css/math.css" rel="stylesheet">
+	<style>
+		div[derivative] > div[top]{
+			 border-bottom: 2px solid #fff;
+		}
+		div[derivative] > div[bottom] {
+		    border-top: 2px solid #fff;
+		}
+		div[fraction] > div[top] {
+		    border-bottom: 2px solid #fff;
+		}
+		div[fraction] > div[bottom] {
+		    border-top: 2px solid #fff;
+		}
+		div[summation] > div[lowerbound] {
+		    top: 102px;
+		}
+		/*div[tripleintegral] > div[lowerbound] {
+		    top: 95px;
+		}*/
+		div[contourintegral] > div[lowerbound] {
+		    top: 85px;
+		}
+		div[doubleintegral] > div[upperbound] {
+		    padding-left: 85px;
+		    top: 8px;
+		}
+		div[doubleintegral] > div[lowerbound] {
+		    padding-left: 70px;
+		    top: 90px;
+		}
+	</style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<article class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>简单易用的生成高等数学方程公式的纯CSS样式 <span>Easy way to represent math by a few lines of HTML via CSS</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/css3/ui-design/201511182797.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+		</header>
+		<div equation>
+	        <div integral>
+	            <div upperbound>
+	                5x<sup>2</sup> + 98
+	            </div>
+	            <div lowerbound>
+	                39x
+	            </div>
+	            <div of>
+	                35x + 45
+	            </div>
+	        </div>
+
+	        <hr add>
+
+	        <div contourintegral>
+	            <div upperbound>
+	                5x<sup>2</sup>
+	            </div>
+	            <div lowerbound>
+	                39x
+	            </div>
+	            <div of>
+	                35x + 45
+	            </div>
+	        </div>
+
+	        <hr add>
+
+	        <div surfaceintegral>
+	            <div upperbound>
+	                <hr infty>
+	            </div>
+	            <div lowerbound>
+	                2<hr pi> + 6
+	            </div>
+	            <div of>
+	                35x + 45<hr pi>
+	            </div>
+	        </div>
+
+	        <hr add>
+
+	        <div partial derivative>
+	            <div top>
+	                x
+	            </div>
+	            <div bottom>
+	                y
+	            </div>
+	        </div>
+
+	        <div term>
+	            4x+3
+	        </div>
+
+	        <hr add>
+
+	        <div volumeintegral>
+	            <div upperbound>
+	                5x<sup>2</sup>
+	            </div>
+	            <div lowerbound>
+	                39x
+	            </div>
+	            <div of>
+	                35x + 45
+	            </div>
+	        </div>
+
+	        <hr add>
+
+	        <div doubleintegral>
+	            <div upperbound>
+	                5y
+	            </div>
+	            <div lowerbound>
+	                3y
+	            </div>
+	            <div of>
+	                35y<sup>78</sup> + 45
+	            </div>
+	        </div>
+
+	        <hr multiply>
+
+	        <div tripleintegral>
+	            <div upperbound>
+	                5x
+	            </div>
+	            <div lowerbound>
+	                39x
+	            </div>
+	            <div of>
+	                35x + 45
+	            </div>
+	        </div>
+
+	        <hr subtract>
+
+	        <div summation>
+	            <div upperbound>
+	                5x
+	            </div>
+	            <div lowerbound>
+	                39x
+	            </div>
+	            <div of>
+	                35x + 45
+	            </div>
+	        </div>
+
+	        <hr divide>
+
+	        <div product>
+	            <div upperbound>
+	                5x
+	            </div>
+	            <div lowerbound>
+	                39x
+	            </div>
+	            <div of>
+	                35x + 45
+	            </div>
+	        </div>
+
+	        <hr add>
+
+	        <div partial derivative>
+	            <div top>
+	                x
+	            </div>
+	            <div bottom>
+	                y
+	            </div>
+	        </div>
+
+	        <div term>
+	            35x + 45
+	        </div>
+
+	        <hr add>
+
+	        <div fraction>
+	            <div top>
+	                12x
+	            </div>
+	            <div bottom>
+	                39x
+	            </div>
+	        </div>
+
+	        <hr add>
+
+	        <div  derivative>
+	            <div top>
+	                dx
+	            </div>
+	            <div bottom>
+	                dy
+	            </div>
+	        </div>
+
+	        <div term>
+	            (35x + 45)
+	        </div>
+
+	        <hr add>
+
+	        <div derivative>
+	            <div top>
+	                d
+	            </div>
+	            <div bottom>
+	                dy
+	            </div>
+	        </div>
+
+	        <div term>
+	            (35x + 45)
+	        </div>
+
+	        <hr add>
+
+	        <div limit>
+	            <div variable>
+	                x
+	            </div>
+	            <div goingto>
+	                <hr infty>
+	            </div>
+	            <div of>
+	                35x<sup>2</sup> + 12x + 9
+	            </div>
+	        </div>
+	    </div>
+		<footer class="related">
+		    <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
+		    <a href="http://www.htmleaf.com/css3/ui-design/201511162790.html">
+			  <img src="related/1.jpg" width="300" alt="纯CSS打造各种超逼真的苹果（Apple）设备模型"/>
+			  <h3>纯CSS打造各种超逼真的苹果（Apple）设备模型</h3>
+			</a>
+			<a href="http://www.htmleaf.com/css3/ui-design/201511132780.html">
+			  <img src="related/2.jpg" width="300" alt="一组精美的纯CSS3扁平风格图标"/>
+			  <h3>一组精美的纯CSS3扁平风格图标</h3>
+			</a>
+		</footer>
+	</article>
+
+</body>
+</html>

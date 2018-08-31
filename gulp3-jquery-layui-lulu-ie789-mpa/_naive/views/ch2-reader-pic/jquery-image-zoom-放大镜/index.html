@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>jQuery图片放大预览插件DEMO演示</title>
+    <link rel="stylesheet" href="css/jqzoom.css">
+    <script src="js/jquery-1.3.2.min.js"></script>
+    <script src="js/jqzoom.pack.1.0.1.js"></script>
+    <script>
+        $(function () {
+            var options =
+                {
+                    zoomWidth: 250, //放大镜的宽度
+                    zoomHeight: 250,//放大镜的高度
+                    zoomType: 'reverse'
+                };
+            $(".jqzoom").jqzoom(options);
+        });
+    </script>
+</head>
+<body>
+<div style="text-align:center;clear:both;">
+    <script src="/gg_bd_ad_720x90.js"></script>
+    <script src="/follow.js"></script>
+</div>
+<!-- 代码 开始 -->
+<div id="content" style="margin-right:auto;margin-left:auto;width:600px;">
+    <a href="images/big.jpg" class="jqzoom" style="" title="图片标题"> <img src="images/small.jpg" title="图片标题"
+                                                                        style="border: 1px solid #666;"> </a>
+</div>
+<!-- 代码 结束 -->
+
+
+</body>
+</html>

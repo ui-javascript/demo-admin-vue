@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery加入购物车商品飞入动画DEMO演示</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/default.css">
+
+    <!--主要样式-->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--[if IE]>
+    <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<div class="wrapper">
+    <h1 class="title">Phone Stock</h1>
+    <span class="car"><i class="shopping-cart"></i></span>
+
+    <div class="clear"></div>
+    <!-- items -->
+    <div class="items">
+        <!-- single item -->
+        <div class="item">
+            <img src="img/droid-x.jpg" alt="item"/>
+            <h2>droid-x</h2>
+
+            <p>Price: <em>$255</em>
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+        </div>
+        <!--/ single item -->
+        <!-- single item -->
+        <div class="item">
+            <img src="img/htc-ozone.jpg" alt="item"/>
+            <h2>htc-ozone</h2>
+
+            <p>Price: <em>$368</em>
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+        </div>
+        <!--/ single item -->
+        <!-- single item -->
+        <div class="item">
+            <img src="img/motorola-backflip.jpg" alt="item"/>
+            <h2>motorola-backflip</h2>
+
+            <p>Price: <em>$226</em>
+            </p>
+            <button class="add-to-cart" type="button">Add to cart</button>
+        </div>
+        <!--/ single item -->
+    </div>
+    <!--/ items -->
+</div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src='js/jquery-ui.min.js'></script>
+<script>
+    $('.add-to-cart').on('click', function () {
+        var cart = $('.shopping-cart');
+        var imgtodrag = $(this).parent('.item').find('img').eq(0);
+        if (imgtodrag) {
+            var imgclone = imgtodrag.clone().offset({
+                top: imgtodrag.offset().top,
+                left: imgtodrag.offset().left
+            }).css({
+                'opacity': '0.5',
+                'position': 'absolute',
+                'height': '150px',
+                'width': '150px',
+                'z-index': '100'
+            }).appendTo($('body')).animate({
+                'top': cart.offset().top + 10,
+                'left': cart.offset().left + 10,
+                'width': 75,
+                'height': 75
+            }, 1000, 'easeInOutExpo');
+            setTimeout(function () {
+                cart.effect('shake', {times: 2}, 200);
+            }, 1500);
+            imgclone.animate({
+                'width': 0,
+                'height': 0
+            }, function () {
+                $(this).detach();
+            });
+        }
+    });
+</script>
+
+<div style="text-align:center;clear:both">
+    <script src="/gg_bd_ad_720x90.js"></script>
+    <script src="/follow.js"></script>
+</div>
+</body>
+</html>

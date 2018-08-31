@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery中国地图插件DEMO演示</title>
+    <script src="js/lib/jquery-1.11.1.min.js"></script>
+    <script src="js/lib/raphael-min.js"></script>
+    <script src="js/res/chinaMapConfig.js"></script>
+    <script src="js/map-min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        body {
+            color: #333;
+            text-align: center;
+            font: 12px "微软雅黑";
+            background-color: #dcf5ed;
+        }
+
+        .mapTipText {
+            width: 280px;
+            height: 110px;
+            background-color: #ffffff;
+        }
+
+        .mapTipText .mapTipImg {
+            height: 66px;
+            width: 66px;
+            float: left;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: -12px 5px 0 -12px;
+        }
+
+        .mapTipText .mapTipImg img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .mapTipText .mapTipList {
+            float: left;
+            margin-left: 4px;
+        }
+
+        .mapTipText .mapTipList h2 {
+            text-align: left;
+        }
+
+        .mapTipText .mapTipList h2 a {
+            font-size: 24px;
+            color: #262626;
+            text-decoration: none;
+        }
+
+        .mapTipText .mapTipList h2 a:hover {
+            color: #0085d2;
+        }
+
+        .mapTipText .mapTipList h2 a span {
+            font-size: 16px;
+            margin-left: 3px;
+        }
+
+        .mapTipText .mapTipList ul {
+            width: 203px;
+            padding-right: 10px;
+        }
+
+        .mapTipText .mapTipList ul li {
+            list-style: none;
+            float: left;
+            padding: 7px 3px 0 3px;
+        }
+
+        .mapTipText .mapTipList ul li a {
+            color: #262626;
+            text-decoration: none;
+        }
+
+        .mapTipText .mapTipList ul li a:hover {
+            background-color: #2ebcfe;
+            color: #ffffff;
+        }
+    </style>
+    <script>
+        $(function () {
+            $('#ChinaMap').SVGMap({
+                mapWidth: 806,
+                mapHeight: 396
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="wrap" style="margin-top: 50px;">
+    <div style="text-align:center;clear:both;">
+        <script src="/gg_bd_ad_720x90.js"></script>
+        <script src="/follow.js"></script>
+    </div>
+
+    <div class="itemCon" style="float: left">
+        <div id="ChinaMap" style="margin: 50px;"></div>
+        <div id="stateTip" style="position: absolute;left: 100%;text-align: left;display: inline;"></div>
+    </div>
+
+    <div id="mapTipContent" style="width: 900px;margin: 0 auto;display: none">
+        <div class="mapTipText mapTipText0">
+            <div class="mapTipImg"><img src="images/heilongjiang.jpg" alt=""/></div>
+            <div class="mapTipList">
+                <h2><a href="">黑龙江<span>Heilongjiang</span></a></h2>
+                <ul>
+                    <li><a href="">哈尔滨</a></li>
+                    <li><a href="">漠河</a></li>
+                    <li><a href="">五大连池</a></li>
+                    <li><a href="">兴凯湖</a></li>
+                    <li><a href="">雪乡</a></li>
+                    <li><a href="">大兴安岭</a></li>
+                    <li><a href="">齐齐哈尔</a></li>
+                    <li><a href="">牡丹江</a></li>
+                    <li><a href="">伊春</a></li>
+                    <li><a href="">大庆</a></li>
+                    <li><a href="">镜泊湖</a></li>
+                    <li><a href="">帽儿山</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mapTipText mapTipText1">
+            <div class="mapTipImg"><img src="images/jilin.jpg" alt=""/></div>
+            <div class="mapTipList">
+                <h2><a href="">吉林<span>Jilin</span></a></h2>
+                <ul>
+                    <li><a href="">长白山</a></li>
+                    <li><a href="">长春</a></li>
+                    <li><a href="">延吉</a></li>
+                    <li><a href="">雾凇岛</a></li>
+                    <li><a href="">集安</a></li>
+                    <li><a href="">吉林市</a></li>
+                    <li><a href="">查干湖</a></li>
+                    <li><a href="">三角龙湾</a></li>
+                    <li><a href="">通化</a></li>
+                    <li><a href="">四平</a></li>
+                    <li><a href="">松原</a></li>
+                    <li><a href="">白城</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mapTipText mapTipText2">
+            <div class="mapTipImg"><img src="images/liaoning.jpg" alt=""/></div>
+            <div class="mapTipList">
+                <h2><a href="">辽宁<span>Liaoning</span></a></h2>
+                <ul>
+                    <li><a href="">大连</a></li>
+                    <li><a href="">丹东</a></li>
+                    <li><a href="">沈阳</a></li>
+                    <li><a href="">兴城</a></li>
+                    <li><a href="">葫芦岛</a></li>
+                    <li><a href="">绥中</a></li>
+                    <li><a href="">旅顺</a></li>
+                    <li><a href="">锦州</a></li>
+                    <li><a href="">抚顺</a></li>
+                    <li><a href="">鞍山</a></li>
+                    <li><a href="">本溪</a></li>
+                    <li><a href="">营口</a></li>
+                    <li><a href="">盘锦</a></li>
+                    <li><a href="">长兴岛</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="text-align:center;clear:both;">
+    <script src="/gg_bd_ad_720x90-2.js"></script>
+</div>
+</body>
+</html>

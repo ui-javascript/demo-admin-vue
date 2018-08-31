@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟Gif动画图暂停和播放的jQuery插件DEMO演示</title>
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/zzsc.css">
+    <link rel='stylesheet' id='jquery-gif-css' href='css/jquery.gif.css' media='all'/>
+
+</head>
+<body>
+<div class="zzsc-content">
+    <img src="img/1.jpg" alt="GIF Loader" data-gif="img/1.gif" class="gif">
+    <img src="img/2.jpg" alt="GIF Loader" data-gif="img/2.gif" class="gif">
+</div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.gif.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        // swap all the gifs on the page.
+        $('.gif').each(function () {
+            $(this).gif();
+        });
+
+    });
+</script>
+
+<div style="text-align:center;clear:both">
+    <script src="/gg_bd_ad_720x90.js"></script>
+    <script src="/follow.js"></script>
+</div>
+</body>
+</html>

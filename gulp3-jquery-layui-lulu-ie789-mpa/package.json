@@ -25,8 +25,8 @@
     "build:win10Blog": "set SYS_NAME=win10Blog && gulp 03-build-dist",
     "sprite:win10Blog": "set SYS_NAME=win10Blog && gulp 05-make-sprite",
 
-    "dev:natural": "set SYS_NAME=natural && gulp 01-build-dev",
-    "build:natural": "set SYS_NAME=natural && gulp 03-build-dist",
+    "dev:melt": "set SYS_NAME=melt && gulp 01-build-dev",
+    "build:melt": "set SYS_NAME=melt && gulp 03-build-dist",
 
     "dev:wechatReading": "set SYS_NAME=wechatReading && gulp 01-build-dev",
     "build:wechatReading": "set SYS_NAME=wechatReading && gulp 03-build-dist",
