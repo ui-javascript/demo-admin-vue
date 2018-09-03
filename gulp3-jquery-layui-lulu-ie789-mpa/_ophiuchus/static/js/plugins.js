@@ -23,7 +23,9 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         var y = $(this).scrollTop();
-        var z = $('.waypoint').offset().top - 200;
+
+        // console.log($('.waypoint').offset)
+        var z = $('.waypoint').offset().top - 200 || 0;
 
         if (y >= z) {
             menu.removeClass('not-visible-nav').addClass('visible-nav');
