@@ -5,11 +5,12 @@
   "scripts": {
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
+    "start": "gulp watch",
 
     "server": "nodemon ./server/index.js",
-    "start": "gulp watch",
     "dev": "gulp dev",
     "cloud": "gulp cloud:dev",
+
     "build": "gulp build --type prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
