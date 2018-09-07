@@ -58,13 +58,17 @@ npm install -g  strip-ansi
 # 企业开源脚手架
 
 - feflow 腾讯IVWEB前端工作流和规范 https://github.com/feflow/feflow
+- WeFlow 界面软件 
+    - https://github.com/Tencent/WeFlow
+    - tmt-workflow https://github.com/Tencent/tmt-workflow
 - athena2 https://github.com/o2team/athena2
 - y-workflow  阅文 https://github.com/yued-fe/y-workflow
-- 前端团队 Gulp & Webpack 工作流 迁移记(NICE) https://zhuanlan.zhihu.com/p/27355765?group_id=857652944793915392
-- WeFlow https://github.com/Tencent/WeFlow
 - QMUI_Web https://github.com/Tencent/QMUI_Web
 - legoflow https://github.com/legoflow/legoflow
-- boi 一站式前端工程解决方案 https://github.com/boijs/boi
+
+- 其他
+    - boi 一站式前端工程解决方案 仅学习用 https://github.com/boijs/boi
+    - 前端团队 Gulp & Webpack 工作流 迁移记(NICE) https://zhuanlan.zhihu.com/p/27355765?group_id=857652944793915392
 
 # H5移动端 | 微信页
 
