@@ -1,12 +1,18 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
 var merge = require('webpack-merge')
+var fs = require('fs')
+
+var sysName = 'pages'
+if (process.env.SYS_NAME) {
+    sysName = process.env.SYS_NAME.toString().trim()
+}
 
 var defaultConfig = {
 
     // 网站模块名，例如 http://192.168.0.216:8089/module/app/initlayer.html 中的
     // 默认为views，修改这里的配置的同时，也要同时重命名/src/views的这个文件夹名称
-    moduleName: 'pages',
+    moduleName: `_${sysName}`,
 
     // 开发配置
     dev: {
@@ -15,7 +21,7 @@ var defaultConfig = {
 
         // 自动打开的首页
         autoOpenBrowser: true,
-        indexPage: '/pages/home/list.html',
+        indexPage: `/_${sysName}/index.html`,
 
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
@@ -62,7 +68,20 @@ var defaultConfig = {
 
 // var detailConfig = require('./system/default')
 // 在命令行中指定
-var detailConfig = require(`./system/${process.env.NODE_SYS}`)
-console.log('系统运行目录: ' + process.env.NODE_SYS)
 
-module.exports = merge(defaultConfig, detailConfig)
+
+
+// 如果存在配置文件
+if (fs.existsSync(`./build/config/system/${sysName}.js`)) {
+    var detailConfig = require(`./system/${sysName}`)
+
+    // 配置覆盖
+    // Object.assign(exports.common, details.common)
+    // Object.assign(exports.dev, details.dev)
+    // Object.assign(exports.prod, details.prod)
+
+    defaultConfig = merge(defaultConfig, detailConfig)
+    console.log(sysName + '配置文件已覆盖(๑•̀ㅂ•́)و✧')
+}
+
+module.exports = defaultConfig
