@@ -93,8 +93,10 @@
     "build:booom": "set SYS_NAME=booom && gulp 03-build-dist",
 
     "dev:ama": "set SYS_NAME=ama && gulp 01-build-dev",
-    "build:ama": "set SYS_NAME=ama && gulp 03-build-dist"
+    "build:ama": "set SYS_NAME=ama && gulp 03-build-dist",
 
+    "dev:h5Anim": "set SYS_NAME=h5Anim && gulp 01-build-dev",
+    "build:h5Anim": "set SYS_NAME=h5Anim && gulp 03-build-dist"
   },
   "author": "luo0412",
   "dependencies": {
