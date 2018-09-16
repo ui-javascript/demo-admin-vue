@@ -28,9 +28,6 @@
     "dev:melt": "set SYS_NAME=melt && gulp 01-build-dev",
     "build:melt": "set SYS_NAME=melt && gulp 03-build-dist",
 
-    "dev:faker": "set SYS_NAME=faker && gulp 01-build-dev",
-    "build:faker": "set SYS_NAME=faker && gulp 03-build-dist",
-
     "dev:wechatReading": "set SYS_NAME=wechatReading && gulp 01-build-dev",
     "build:wechatReading": "set SYS_NAME=wechatReading && gulp 03-build-dist",
 
@@ -39,9 +36,6 @@
 
     "dev:papidenMall": "set SYS_NAME=papidenMall && gulp 01-build-dev",
     "build:papidenMall": "set SYS_NAME=papidenMall && gulp 03-build-dist",
-
-    "dev:naive": "set SYS_NAME=naive && gulp 01-build-dev",
-    "build:naive": "set SYS_NAME=naive && gulp 03-build-dist",
 
     "dev:ophiuchus": "set SYS_NAME=ophiuchus && gulp 01-build-dev",
     "build:ophiuchus": "set SYS_NAME=ophiuchus && gulp 03-build-dist",
