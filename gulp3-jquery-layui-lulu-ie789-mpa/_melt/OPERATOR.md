@@ -28,6 +28,9 @@ npm install -D gulp
 
 ln -s /root/node-v6.9.5-linux-x64/bin/gulp /usr/local/bin/gulp
 gulp -v
+
+serve 一样生成软link
+http://47.100.99.127:5000
 ```
 
 - 运行

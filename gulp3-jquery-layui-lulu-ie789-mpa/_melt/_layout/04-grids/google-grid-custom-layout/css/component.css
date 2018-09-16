@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'minicons-webalys';
-	src:url('../fonts/minicons-webalys/minicons-webalys.eot');
-	src:url('../fonts/minicons-webalys/minicons-webalys.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/minicons-webalys/minicons-webalys.ttf') format('truetype'),
-		url('../fonts/minicons-webalys/minicons-webalys.svg#minicons-webalys') format('svg'),
-		url('../fonts/minicons-webalys/minicons-webalys.woff') format('woff');
+	src:url('/static/fonts/minicons-webalys/minicons-webalys.eot');
+	src:url('/static/fonts/minicons-webalys/minicons-webalys.eot?#iefix') format('embedded-opentype'),
+		url('/static/fonts/minicons-webalys/minicons-webalys.ttf') format('truetype'),
+		url('/static/fonts/minicons-webalys/minicons-webalys.svg#minicons-webalys') format('svg'),
+		url('/static/fonts/minicons-webalys/minicons-webalys.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }

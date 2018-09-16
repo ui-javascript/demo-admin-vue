@@ -11,7 +11,7 @@
 }
 
 .sp-content {
-    background: #7d7f72 url(/images/parallax-slider-demo/grid.png) repeat scroll 0 0;
+    background: #7d7f72 url(/static/images/parallax-slider-demo/grid.png) repeat scroll 0 0;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -19,7 +19,7 @@
 }
 
 .sp-parallax-bg {
-    background: url(/images/parallax-slider-demo/map.png) repeat-x scroll 0 0;
+    background: url(/static/images/parallax-slider-demo/map.png) repeat-x scroll 0 0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -94,7 +94,7 @@
 	opacity: 0.8;
 	cursor: pointer;
 	z-index: 1000;
-	background: transparent url(/images/parallax-slider-demo/arrows.png) no-repeat;
+	background: transparent url(/static/images/parallax-slider-demo/arrows.png) no-repeat;
 	-webkit-transition: opacity linear 0.3s;
     -moz-transition: opacity linear 0.3s;
     -o-transition: opacity linear 0.3s;

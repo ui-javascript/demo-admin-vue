@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'fontawesome';
-	src:url('../fonts/fontawesome/fontawesome.eot?-ulzwqn');
-	src:url('../fonts/fontawesome/fontawesome.eot?#iefix-ulzwqn') format('embedded-opentype'),
-		url('../fonts/fontawesome/fontawesome.woff?-ulzwqn') format('woff'),
-		url('../fonts/fontawesome/fontawesome.ttf?-ulzwqn') format('truetype'),
-		url('../fonts/fontawesome/fontawesome.svg?-ulzwqn#fontawesome') format('svg');
+	src:url('/static/fonts/font-awesome/fontawesome-webfont.eot?-ulzwqn');
+	src:url('/static/fonts/font-awesome/fontawesome-webfont.eot?#iefix-ulzwqn') format('embedded-opentype'),
+		url('/static/fonts/font-awesome/fontawesome-webfont.woff?-ulzwqn') format('woff'),
+		url('/static/fonts/font-awesome/fontawesome-webfont.ttf?-ulzwqn') format('truetype'),
+		url('/static/fonts/font-awesome/fontawesome-webfont.svg?-ulzwqn#fontawesome') format('svg');
 	font-weight: normal;
 	font-style: normal;
 } /* Made with http://icomoon.io/app */
