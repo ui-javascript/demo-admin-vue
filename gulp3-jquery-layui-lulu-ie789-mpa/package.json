@@ -11,7 +11,7 @@
     "cssWatch": "gulp 02-css-job",
     "build": "gulp 03-build-dist",
     "buildPWA": "gulp 04-build-pwa",
-    "sprite": "gulp 05-make-sprite",
+    "sprite": "set SYS_NAME=hbcj && gulp 05-make-sprite",
     "imagesOptimize": "gulp 06-images-optimize",
     "fontSpider": "gulp 07-font-spider",
     "libsGenerate": "gulp 08-libs-generate",

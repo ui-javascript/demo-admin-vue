@@ -20,6 +20,9 @@ exports.common = {
 
 // 开发环境
 exports.dev = {
+    // 端口
+    port: 8888,
+
     // 固定
     devDir: './src',
     assetsDir: './src/assets',
@@ -50,6 +53,7 @@ exports.dev = {
     // 项目脚本与图片
     imagesDir: `./_${sysName}/static/images`,
     scriptsDir: `./_${sysName}/static/js`,
+    // tplDir: `./_${sysName}/static/tpl`,
 
     // 雪碧图
     spriteDevDir: `./_${sysName}/static/images/_sprite`,

@@ -107,7 +107,7 @@
 * [autosize](https://github.com/jackmoore/autosize) 让 文本域(textarea) 的高度随着文字内容的变高而变高。
 
 ### 表单验证
-* [.Validate](https://github.com/jzaefferer/jquery-validation) [详细](../static/plus/m/validate)
+* [.Validate](https://github.com/jzaefferer/jquery-validation) [详细](../static/plus/model/validate)
 * [jQuery-Validation-Engine](http://posabsolute.github.io/jQuery-Validation-Engine/)
 
 ### 表单元素美化
@@ -246,7 +246,7 @@
 
 ### 幻灯
 * [SuperSlide](http://www.superslide2.com/)/[TouchSlide](http://www.superslide2.com/) 国产库！兼容IE6，焦点图/幻灯片/Tab标签切换/图片滚动/无缝滚动等常见效果，支持移动端
-* [slidesjs](http://slidesjs.com/) 挺好用的，只是那幻灯导航的CSS都要自己写，呵呵 [详细](../static/plus/l/slider)
+* [slidesjs](http://slidesjs.com/) 挺好用的，只是那幻灯导航的CSS都要自己写，呵呵 [详细](../static/plus/layout/slider)
 * [iSlider](https://github.com/BE-FE/iSlider) 无任何插件依赖的手机平台javascript滑动组件 [详细](detail/iSlider)
 * [bgstretcher](http://www.ajaxblender.com/bgstretcher-2-jquery-stretch-background-plugin-updated.html) 全屏幻灯，会随着页面大小的变化而变化。
 * [Swiper](https://github.com/nolimits4web/swiper/) 开源、免费、强大的移动端触摸滑动插件 [Swiper中文网](http://www.swiper.com.cn/)

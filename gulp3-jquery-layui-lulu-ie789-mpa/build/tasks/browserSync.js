@@ -7,7 +7,7 @@ const reload = browserSync.reload
 // http://www.browsersync.cn/docs/gulp/
 gulp.task('devSync', function () {
     browserSync.init({
-        port: 8888,
+        port: config.dev.port,
         ui: {
             port: 3005
         },
