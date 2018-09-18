@@ -36,7 +36,7 @@ gulp.task('copyImages', function () {
 // 搬运 静态样式(css)和雪碧图
 gulp.task('copyCssLeft', function () {
     return gulp.src([
-        `${config.dev.stylesDir}/**/*.{css,png}`
+        `${config.dev.spriteOutputDir}/**/*.{css,png}`
         ])
         .pipe(gulp.dest(`${config.common.staticDir}/css`))
 })
