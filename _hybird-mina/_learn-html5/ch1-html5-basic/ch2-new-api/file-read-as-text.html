@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+  [FileReader](http://blog.csdn.net/jackfrued/article/details/8967667)
+   -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>读取本地文件</title>
+	<link rel="stylesheet" href="../src/css/simple-helper.css">
+</head>
+<body>
+
+<input id="fileInput" type="file" size="50" onchange="processFiles(this.files)">
+<!--<button onclick="showFileInput()">Analyze a File</button>-->
+<div id="fileOutput" class="sh-output"></div>
+
+<script>
+
+/**
+ * 本地文件处理函数
+ * @param  {[type]} files [description]
+ * @return {[type]}       [description]
+ */
+function processFiles(files) {
+  var file = files[0];
+  var reader = new FileReader(); // 文件对象
+
+  // 数据就绪就渲染到div上
+  reader.onload = function (e) {
+    var output = document.getElementById("fileOutput");
+    output.textContent = e.target.result;
+  };
+  reader.readAsText(file); // 返回结果
+}
+
+/**
+ * 展示本地文件
+ * @return {[type]} [description]
+ */
+// function showFileInput() {
+//   var fileInput = document.getElementById("fileInput");
+//   fileInput.click();
+// }
+
+</script>
+
+
+</body>
+</html>

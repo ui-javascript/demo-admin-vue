@@ -1,0 +1,83 @@
+/*       
+    Author:骆金参(Luo_0412)
+    BuildDate:2016-3-28
+    Version:1.0
+    Function:lab1-3 CSS部分
+*/
+ 
+/* 排序约定：*/
+/*
+        位置  
+        长宽   
+        内外边距（盒模型）
+        背景色
+        特效(外框，阴影) 
+        文本（主体，文本颜色）  
+*/
+
+* {
+  margin:0px;
+  padding:0px;
+}
+
+body {
+    background-color: #ffffcc;
+    font-family:Verdana;
+
+}
+
+#container {
+    background-color: #E8D882;
+    width:80%;
+    margin: auto;
+    color: #330000;
+    border:2px solid black;
+}
+
+
+#header, #footer {
+    height:80px;
+    background-color: #ccaa66;
+    text-align: center;
+    padding-top: 30px;
+    border:1px solid black;
+}
+
+#nav {
+    width:15%;
+    float:left;
+    background-color: #E8D882;
+}
+#nav li {
+    list-style: none;
+    padding:10px 0  0 30px;
+}
+#nav a {
+    text-decoration: none;
+    color:blue;
+}
+
+
+
+#main {
+    width:85%;
+    float:right;
+    background-color: #f1e8b0;
+}
+#main p {
+    color: blue;
+    margin:30px 0px 20px 20px;
+}
+#main ul {
+    margin:30px 0px 0px 60px;
+}
+#main img {
+    float:right;
+    width:25%;
+    padding:0px 20px 20px 0px;
+}
+.clr {
+    clear:both;
+}
+
+

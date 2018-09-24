@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Create a New Pen</title>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:100,300,700,400'>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>聚合数据天气应用</title>
+  </head>
+
+  <body ng-app="Weather">
+    <div class="container" ng-controller="MainCtrl">
+      <div class="row">
+        <header class="col-xs-12 text-center">
+          <!-- <h1>Free C<i class="wi wi-hail"></i>de Camp </h1> -->
+          <a href="https://www.juhe.cn"><img src="https://www.juhe.cn/themes/v5/public/images/loginlogo.png" class="img-responsive"></a>
+          <h1>天气应用</h1>
+        </header>
+      </div>
+      <div class="col-xs-12 col-md-12">
+        <div class="text-center status">
+          <p>{{Data.today.city}}</p>
+          <p>{{Data.today.week}}</p>
+          <p>{{Data.today.date_y}}</p>
+          <hr>
+          <h4>今天天气</h4>
+          <p>{{Data.today.weather}}</p>
+          <p>{{Data.today.temperature}}</p>
+          <p>湿度：{{Data.sk.humidity}}</p>
+          <p>{{Data.today.wind}}</p>
+          <p>穿衣指数：{{Data.today.dressing_index}}</p>
+          <p>洗车指数：{{Data.today.wash_index}}</p>
+          <p>旅行指数：{{Data.today.travel_index}}</p>
+          <p>锻炼指数：{{Data.today.exercise_index}}</p>
+          <p>紫外线指数：{{Data.today.uv_index}}</p>
+        </div>
+        <hr>
+      </div>
+      <h4 class="text-center">未来6天天气</h4>
+      <div class="col-xs-4 col-md-2" ng-repeat="item in items">
+        <div class="text-center status">
+          <h5>{{item.week}}</h5>
+          <p>{{item.temperature}}</p>
+          <p>{{item.weather}}</p>
+          <p>{{item.wind}}</p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  </html>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+
+  <script src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+main(ng-app='WikiApp' ng-controller='MainCtrl')
+  #search.wrapper.fullHeight
+    a.white-text(href='http://en.wikipedia.org/wiki/Special:Random' target='_blank') Click here for a random article
+    br
+    form(ng-submit='search()')
+      input(type='text' ng-model='searchTxt')
+      .eks
+     p.white-text#help Click icon to search
+  .wrapper
+    ul
+      a(ng-href='{{result.page}}' target='_blank' ng-repeat='result in results')
+        li
+          h1 {{result.title}}
+          p {{result.body}}

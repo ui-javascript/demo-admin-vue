@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head> 
+<!-- 
+       Author:骆金参(Luo_0412)
+    BuildDate:2016-3-19
+      Version:1.0
+     Function:lab1-1
+ -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> lab1-1 </title>
+    <link rel="stylesheet" href="html-basic-display.css"/>
+</head>
+<body >
+    <!-- container -->
+    <div id="container">
+
+        <!-- interest -->
+        <div class="interest">
+            <h1>Interesting   facts   about   animals</h1>
+            <h2>Updated   Weekly!</h2>
+            <p> This  week    we  have:</p>
+            <ul>
+                <a href="#Camelids">
+                    <li>Camelids</li>
+                </a>
+                <a href="#Lions">
+                    <li>Lions</li>
+                </a>
+            </ul>
+            <hr width="100%" /> 
+        </div>
+        <!-- interest end -->
+
+        <!-- animal_1 -->
+        <div class="animal_1">
+            <h1 id = "Camelids">Camelids</h1>
+            <p> 
+The four llamas and two camels are camelids Camelids tend to be large and are strictly herbivorous. Camelids differ from ruminants in several ways. They have a three-chambered rather than a four-chambered digestive tract; an upper lip that is split in two with each part separately mobile; and an isolated incisor in the upper jaw. They have long legs that, because they lack tensor skin to bridge between thigh and body, look longer still. (from Wikipedia) 
+            </p><br/>
+            <table id="syllabus">
+                <caption >A table comparing Camels and Llamas</caption>
+                <thead>
+                    <tr>
+                        <th rowspan="2">
+                            <img src="../src/images/camel.gif" alt="Camel" />
+                        </th>
+                        <td colspan="4"  valign="top" class="alt" >
+                            Camelid comparison
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>#of Humps</th>
+                        <th>Indigenous region</th>
+                        <th>Spits?</th>
+                        <th>Produce Wool?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Camels(bactrian)</th>
+                        <td>2</td>
+                        <td>Africa/Asia    </td>
+                        <td rowspan="2">Llama</td>
+                        <td rowspan="2">Llama</td>
+                    </tr>
+                    <tr>
+                        <th align="right">Llamas</th>          
+                        <td>1</td>
+                        <td>Andes Mountains</td>
+                    </tr>
+                </tbody>
+                <tfoot>   
+                </tfoot>
+            </table>
+            <hr width="100%"/> 
+        </div>
+        <!-- animal_1 end -->
+
+        <!-- animal_2 -->
+        <div class="animal_2">
+            <h1 id = "Lions">Lions</h1>
+            <p>  
+The lion (Panthera leo) is a mammal of the family Felidae and one of four "big cats" in the genus Panthera. The lion is the second largest feline species, after the tiger. The male lion, easily recognized by his mane, weighs between 150-250 kg (330-550 lb). Females range 120-150 kg (260-330 lb). In the wild, lions live for around 10-14 years, while in captivity they can live over 20 years. (from Wikipedia) 
+            </p>
+            <img src="../src/images/lion.jpg" alt="Lion" />
+            <hr width="100%" />
+        </div>
+        <div class="clr"></div>
+        <!-- animal_2 end -->
+
+        <!-- choose -->
+        <div class="choose">
+            <h1>Choose which animal you would like to learn about next week?</h1>
+            <form>
+                <input type="radio" name="animal" value="Elephant">Elephant
+                <input type="radio" name="animal" value="Giraffe">Giraffe
+                <input type="radio" name="animal" value="Hippopotamus">Hippopotamus
+                <input type="radio" name="animal" value="Ostrich">Ostrich <br />
+                <input type="submit"  value="提交" class="alt">
+            </form>
+        </div>
+        <!-- choose -->
+
+    </div>
+    <!-- container -->
+</body>
+</html>

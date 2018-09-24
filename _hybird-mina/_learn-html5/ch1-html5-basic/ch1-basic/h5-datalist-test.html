@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Zookeeper Form</title>
+  <link href="ZookeeperForm.css" rel="stylesheet">
+<style>
+.Label {
+  display: inline-block;
+  width: 125px;
+}
+</style>
+</head>
+<body>
+
+
+<h1>Zoo Keeper Application Form</h1>
+<form id="zooKeeperForm" action="#">
+  <p><i>Please complete the form. Mandatory fields are marked with a </i><em>*</em></p>
+  <fieldset>
+    <legend>What's Your Favorite Animal?</legend>
+    <datalist id="animalChoices">
+    <span class="Label">Pick an option:</span>
+      <select id="favoriteAnimalPreset">
+        <option label="Alpaca" value="alpaca" />
+        <option label="Zebra" value="zebra" />
+        <option label="Cat" value="cat" />
+        <option label="Caribou" value="caribou" />
+        <option label="Caterpillar" value="caterpillar" />
+        <option label="Anaconda" value="anaconda" />
+        <option label="Human" value="human" />
+        <option label="Elephant" value="elephant" />
+        <option label="Wildebeest" value="wildebeest" />
+        <option label="Pigeon" value="pigeon" />
+        <option label="Crab" value="crab" />
+      </select>
+    <br>
+    <span class="Label">Or type it in:</span>
+    </datalist>
+    <input list="animalChoices" id="favoriteAnimal">
+  </fieldset>
+  <p><input type="submit" value="Submit Application"></p>
+</form>
+</body>
+</html>

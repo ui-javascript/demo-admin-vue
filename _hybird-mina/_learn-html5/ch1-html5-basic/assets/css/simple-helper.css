@@ -1,0 +1,17 @@
+/* 带边距的输出框 */
+.sh-output
+{
+    min-height: 100px;
+    margin-top: 30px;
+    padding: 4px;
+
+    border: solid 1px black;
+}
+
+/* 圆形 */
+.sh-circle
+{
+    border-radius: 50%;
+}
+
+

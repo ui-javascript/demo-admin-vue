@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>各种切换</title>
+    <!-- <link rel="stylesheet" href=""> -->
+    <style>
+    /* 日夜景样式 ====== */
+    section#day-night {
+      position: relative;
+      height: 240px;
+      margin: 5px;
+    }
+    aside button {
+        background-color: rgb(113,181,27);
+        color:white;
+        text-decoration: none;
+        font-family:Arial;
+        font-weight: 300;
+        font-size: 15px;
+        padding:10px 13px;
+        border-radius: 5px;
+        z-index: 1;
+        position: fixed;
+        bottom: 0;
+    }
+    aside button#toNight_btn {
+        left: 0;
+    }
+    aside button#toDay_btn {
+        left: 120px;
+    }
+    aside button:hover{
+        background-color: rgb(147,199,25);
+    }
+
+    #day-night img {
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      /*position: relative;*/
+    }
+    #day-night img.transparent {
+      opacity: 0;
+      -webkit-transition: opacity 8s;  /* 指定透明度变化时间 */
+      transition: opacity 8s;
+    }
+
+    #day-night img.solid  {
+      opacity: 1;
+      -webkit-transition: opacity 2s;
+      transition: opacity 2s;
+    }
+    </style>
+</head>
+<body>
+
+<!-- 主体 -->
+<main>
+
+  <!-- 开关灯 ======== -->
+  <section>
+    <img id="bulb" src="../src/images/pic_bulboff.gif" alt="开关灯" width="100" height="180" />
+  </section>
+
+  <aside>
+    <p id="test_val">状态：灯从未开过</p>
+  </aside>
+
+  <!-- 日夜景 ======== -->
+  <section id="day-night">
+    <img src="../src/images/day.png" alt="Daytime">
+    <img id="nightImage" src="../src/images/night.png" alt="Night-time" class="transparent" >
+  </section>
+
+</main>
+
+<!-- 按钮辅助区 -->
+<aside>
+  <button id="toNight_btn" onclick="toNight()">Go to Night</button>
+  <button id="toDay_btn" onclick="toDay()">Go to Day</button>
+</aside>
+
+<script>
+
+// 开关灯 =================================
+var bulb = document.getElementById("bulb");
+var isBulbOn = false;  // 默认灯是关的
+bulb.addEventListener("click", function() {
+    testVal();
+    bulbChange1();
+});
+// bulb.addEventListener("click", bulbChange2);
+
+// 定义状态量实现
+var bulbChange1 = function() {
+    if(isBulbOn === false) {
+        bulb.src = "../images/pic_bulbon.gif";
+    } else {
+        bulb.src = "../images/pic_bulboff.gif";
+    }
+    isBulbOn = !isBulbOn; // 每次点击切换状态
+}
+
+// match-src方法实现
+function bulbChange2() {
+    if (bulb.src.match("bulbon")) {
+        bulb.src="../images/pic_bulboff.gif";
+    } else {
+        bulb.src="../images/pic_bulbon.gif";
+    }
+}
+
+// 测试区 ===============================
+// 这个对象相当于一个函数
+var testVal = function () {
+    var str = "状态：灯已经开过";
+    document.getElementById('test_val').innerHTML = str;
+    return str; // 是赋值给一个变量的意思吗??
+};
+// testVal(); // 变量加上括号
+// alert(testVal);
+
+
+// 日夜景切换 ===========================
+// 图片位置：absolute  夜景图压在日景图上面
+// 另存为图片都是night-view
+var nightImage = document.getElementById("nightImage"); // 获取夜景图的id
+function toNight() { nightImage.className = "solid"; }
+function toDay()   { nightImage.className = "transparent"; }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+h1 FreeCodeCamp
+main(ng-app='PomodoroApp' ng-controller='MainCtrl')
+  header
+    .session
+      .breakCtrl
+        p break length
+        button(ng-click='breakLengthChange(-1)').minus -
+        span.time {{breakLength}}
+        button(ng-click='breakLengthChange(1)').plus +
+      .sessionCtrl
+        p session length
+        button(ng-click='sessionLengthChange(-1)').minus -
+        span.time {{sessionLength}}
+        button(ng-click='sessionLengthChange(1)').plus +
+  section(ng-click='toggleTimer()')
+    .timer
+      p.title {{sessionName}}
+      p {{timeLeft}}
+      span.fill(ng-style="{'height':fillHeight, 'background':fillColor }")
+      

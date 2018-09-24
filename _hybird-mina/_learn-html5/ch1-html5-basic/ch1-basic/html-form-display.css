@@ -1,0 +1,86 @@
+
+/*       
+    Author:骆金参(Luo_0412)
+    BuildDate:2016-3-23
+    Version:1.0
+    Function:lab1-2 CSS部分
+*/
+ 
+/* 排序约定：*/
+/*
+        位置  
+        长宽   
+        内外边距（盒模型）
+        背景色
+        特效(外框，阴影) 
+        文本（主体，文本颜色）  
+*/
+
+/*要求1*/
+body {
+    margin-top: 0px;  /*消除间隙*/
+    background-color:#ffc;
+}
+/*要求1 结束*/
+
+/*要求2 3*/
+form {
+    width:80%;
+    margin:0px auto;
+    background-color: white;
+    border-radius:15px;
+    box-shadow: 5px 5px 5px #ddd;  /* 参考图片是右下角阴影 */
+}
+/*要求2 3 结束*/
+
+/*要求4 5 */
+h1 {
+    width:90%;
+    padding-top:20px;
+    padding-bottom: 10px;
+    margin:auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;  /*加下划线*/
+    text-align: center;
+}
+/* 之前横线是用hr的方法添加的 */
+/*hr {
+    width:90%;
+    margin-bottom: 10px;
+    margin:auto;
+    border:1px solid #ddd;
+}*/     
+/*要求4 5 结束*/
+
+/*要求5-8*/
+dl {
+    width:90%;
+    margin:auto; /*每项内容水平居中*/
+    margin-top: 10px;
+}
+span {
+    color: red;
+}
+dt {
+    width:20%;
+    text-align: right;
+}
+dd {
+    position:relative;
+    left: 18%;  /*之前错误打成 margin-left*/
+    top:-20px;
+    width:70%;
+}
+/*要求5-8 结束*/
+
+/*要求9-10*/
+#submit {
+    padding-bottom: 20px;
+    margin:auto;
+    margin-top: 20px;
+    text-align: center;
+}
+#submit input {
+    margin:auto;
+}
+/*要求9-10 结束*/

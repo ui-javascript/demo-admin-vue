@@ -1,0 +1,63 @@
+body {
+
+}
+
+.container {
+    
+}
+
+.spring {
+	margin:auto;
+    padding:4px;
+	width:60%;
+	min-width: 400px;
+	max-width: 600px;
+	border:1px solid;
+
+	display:flex;
+	flex-flow:row nowrap;
+	flex-grow: 2;
+	justify-content: space-around;
+	align-items: center;
+	
+}
+.spring p {
+	border:1px solid;
+	padding:4px;
+}
+.spring img {
+	padding:4px;
+	border:1px solid;
+}
+
+
+.summer {
+	margin:auto;
+	margin-top: 20px;
+	width:60%;
+	min-width: 400px;
+	max-width: 600px;
+	padding:4px;
+	border:1px solid;
+	order:1;
+
+	display:flex;
+	flex-flow:column wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.summer p {
+	border:1px solid;
+	padding:4px;
+}
+.summer img {
+	padding:4px;
+	border:1px solid;
+}
+.summer .demo2 {
+	order:1;
+}
+
+.clr {
+	clear:both;
+}

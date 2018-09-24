@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- saved from url=(0014)about:internet -->
+  <meta charset="utf-8">
+  <title>Zookeeper Form</title>
+  <link href="../src/css/manual/ZookeeperForm.css" rel="stylesheet">
+  <script src="../src/js/libs/modernizr-latest.js"></script>
+
+<style>
+textarea:required:invalid, input:required:invalid {
+  background-color: lightyellow;
+}
+</style>
+
+<script>
+function validateComments(input) {
+   if (input.value.length < 20) {
+     input.setCustomValidity("You need to comment in more detail.");
+   }
+   else {
+     // There's no error. Clear any error message.
+     input.setCustomValidity("");
+   }
+ }
+function validateForm() {
+  if (!Modernizr.input.required) {
+    // The required attribute is not supported, so you need to check the
+    // required fields yourself.
+    // First, get an array that holds all the elements.
+    var inputElements = document.getElementById("zooKeeperForm").elements;
+    // Next, move through that array, checking eaching element.
+    for(var i = 0; i < inputElements.length; i++) {
+      // Check if this element is required.
+      if (inputElements[i].hasAttribute("required")) {
+        // If this elemnent is required, check if it has a value.
+        // If not, the form fails validation, and this function returns false.
+        if (inputElements[i].value == "") {
+          alert("Custom required-field validation failed. The form will not be submitted.");
+          return false;
+        }
+      }
+    }
+    // If you reach this point, everything worked out and the browser
+    // can submit the form.
+    return true;
+  }
+}
+</script>
+
+</head>
+<body>
+
+<h1>Zoo Keeper Application Form</h1>
+<form id="zooKeeperForm" action="#" onsubmit="return validateForm()">
+  <p><i>Please complete the form. Mandatory fields are marked with a </i><em>*</em></p>
+  <fieldset>
+    <legend>Contact Details</legend>
+      <label for="name">Name <em>*</em></label>
+      <input id="name" placeholder="Jane Smith" autofocus required><br>
+      <label for="telephone">Telephone</label>
+      <input id="telephone" placeholder="(xxx) xxx-xxxx"><br>
+      <label for="email">Email <em>*</em></label>
+      <input id="email" type="email" required><br>
+  </fieldset>
+  <fieldset>
+    <legend>Personal Information</legend>
+
+      <label for="birthDate">Birth Date<em>*</em></label>
+      <input id="birthDate" type="date" required><br>
+
+      <label for="age">Age<em>*</em></label>
+      <input id="age" type="number" min="0" max="120" step="0.1" required><br>
+      <label for="gender">Gender</label>
+      <select id="gender">
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+      </select><br>
+      <label for="comments">When did you first know you wanted to be a zoo-keeper?<em>*</em></label>
+      <textarea id="comments" oninput="validateComments(this)" required></textarea>
+  </fieldset>
+  <fieldset>
+    <legend>Pick Your Favorite Animals</legend>
+    <label for="zebra"><input id="zebra" type="checkbox"> Zebra</label>
+    <label for="cat"><input id="cat" type="checkbox"> Cat</label>
+    <label for="anaconda"><input id="anaconda" type="checkbox"> Anaconda</label>
+    <label for="human"><input id="human" type="checkbox"> Human</label>
+    <label for="elephant"><input id="elephant" type="checkbox"> Elephant</label>
+    <label for="wildebeest"><input id="wildebeest" type="checkbox"> Wildebeest</label>
+    <label for="pigeon"><input id="pigeon" type="checkbox"> Pigeon</label>
+    <label for="crab"><input id="crab" type="checkbox"> Crab</label>
+  </fieldset>
+  <p><input type="submit" value="Submit Application"></p>
+</form>
+</body>
+</html>

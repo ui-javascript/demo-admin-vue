@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="zh-CN">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>老虎机 | freecodecamp </title>
+	<!-- <link href="../css/special.css" rel="stylesheet"> -->
+	<style>
+		.slot>img {
+			margin: 0!important;
+			height: 71px;
+			width: 50px;
+		}
+
+		.container {
+			background-color: #4a2b0f;
+			height: 400px;
+			width: 260px;
+			margin: 50px auto;
+			border-radius: 4px;
+		}
+
+		.header {
+			border: 2px solid #fff;
+			border-radius: 4px;
+			height: 55px;
+			margin: 14px auto;
+			background-color: #457f86
+		}
+
+		.header h2 {
+			height: 30px;
+			margin: auto;
+		}
+
+		.header h2 {
+			font-size: 14px;
+			margin: 0 0;
+			padding: 0;
+			color: #fff;
+			text-align: center;
+		}
+
+		.slots {
+			display: flex;
+			background-color: #457f86;
+			border-radius: 6px;
+			border: 2px solid #fff;
+		}
+
+		.slot {
+			flex: 1 0 auto;
+			background: white;
+			height: 75px;
+			width: 50px;
+			margin: 8px;
+			border: 2px solid #215f1e;
+			border-radius: 4px;
+			text-align: center;
+		}
+
+		.go {
+			width: 100%;
+			color: #fff;
+			background-color: #457f86;
+			border: 2px solid #fff;
+			border-radius: 2px;
+			box-sizing: none;
+			outline: none!important;
+		}
+
+		.foot {
+			height: 150px;
+			background-color: 457f86;
+			border: 2px solid #fff;
+		}
+
+		.logger {
+			color: white;
+			margin: 10px;
+		}
+
+		.outset {
+			-webkit-box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
+			-moz-box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
+			box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
+		}
+
+		.inset {
+			-webkit-box-shadow: inset 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
+			-moz-box-shadow: inset 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
+			box-shadow: inset 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
+		}
+	</style>
+</head>
+
+<body>
+
+	<div>
+		<div class='container inset'>
+			<div class='header inset'>
+				<img src='./freecodecamp_logo.svg' alt='learn to code JavaScript at Free Code Camp logo' class='img-responsive nav-logo'>
+			</div>
+			<div class='slots inset'>
+				<div class='slot inset'>
+
+				</div>
+				<div class='slot inset'>
+
+				</div>
+				<div class='slot inset'>
+
+				</div>
+			</div>
+			<br/>
+			<div class='outset'>
+				<button class='go inset'>
+       Go
+     </button>
+			</div>
+			<br/>
+			<div class='foot inset'>
+				<span class='logger'></span>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
+
+	<script>
+		function runSlots() {
+			var slotOne;
+			var slotTwo;
+			var slotThree;
+
+			var images = ["9H17QFk.png", "9RmpXTy.png", "VJnmtt5.png"];
+
+			slotOne = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+			slotTwo = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+			slotThree = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+
+
+			// Only change code below this line.
+			$($('.slot')[0]).html('<img src = "' + images[slotOne - 1] + '">');
+			$($('.slot')[1]).html('<img src = "' + images[slotTwo - 1] + '">');
+			$($('.slot')[2]).html('<img src = "' + images[slotThree - 1] + '">');
+
+
+			// Only change code above this line.
+
+			if (slotOne === slotTwo && slotTwo === slotThree) {
+				$('.logger').html("It's A Win");
+				return null;
+			}
+
+			if (slotOne !== undefined && slotTwo !== undefined && slotThree !== undefined) {
+				$(".logger").html(slotOne + " " + slotTwo + " " + slotThree);
+			}
+
+			$('.logger').append(" Not A Win");
+
+			return [slotOne, slotTwo, slotThree];
+		}
+
+		$(document).ready(function() {
+			$('.go').click(function() {
+				runSlots();
+			});
+		});
+	</script>
+
+</body>
+
+</html>

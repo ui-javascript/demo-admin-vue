@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Element Editing</title>
+  <style>
+    body {
+      font-family: 'Palatino Linotype', serif;
+    }
+    h1 {
+      font-size: large;
+    }
+    div {
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 3px;
+    }
+    #editableElement {
+      background: #F0F0F0;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Editable div Below:</h1>
+<div id="editableElement">You can edit this text, if you'd like.</div>
+<div>
+  <button onclick="startEdit()">Start Editing</button>
+  <button onclick="stopEdit()">Stop Editing</button>
+</div>
+
+<script>
+function startEdit() {
+  // Make the element editable.
+  var element = document.getElementById("editableElement");
+  element.contentEditable = true;
+}
+function stopEdit() {
+  // Return the element to normal.
+  var element = document.getElementById("editableElement");
+  element.contentEditable = false;
+  // Show the markup in a message box.
+  alert("Your edited content: " + element.innerHTML);
+}
+</script>
+</body>
+</html>
