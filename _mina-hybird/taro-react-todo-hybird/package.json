@@ -6,8 +6,10 @@
   "scripts": {
     "install": "npm install",
     "remove": "rimraf node_modules",
+
     "serve:h5": "taro build --type h5 --watch",
     "build:h5": "taro build --type h5",
+
     "serve:weapp": "taro build --type weapp --watch",
     "build:weapp": "taro build --type weapp"
   },

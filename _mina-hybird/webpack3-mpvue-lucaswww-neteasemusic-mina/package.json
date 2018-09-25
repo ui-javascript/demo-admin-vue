@@ -5,11 +5,13 @@
   "author": "Demo <w1250407177@outlook.com>",
   "private": true,
   "scripts": {
+    "install": "cnpm install",
+    "remove": "rimraf node_modules",
     "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "better-scroll": "^1.12.6",
     "flyio": "^0.6.0",
     "mpvue": "^1.0.11",
     "vuex": "^3.0.1"
