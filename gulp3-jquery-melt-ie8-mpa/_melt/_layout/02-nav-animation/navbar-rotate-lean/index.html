@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创意旋转式打开隐藏侧边栏UI界面设计</title>
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+    <link rel='stylesheet prefetch' href='https://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <!--<link rel="stylesheet" href="css/default.css">-->
+    <link rel="stylesheet" href="css/styles.css">
+    <!--[if IE]>
+    <script src="https://cdn.staticfile.org/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="page">
+	  <span class="menu_toggle">
+	    <i class="menu_open fa fa-bars fa-lg"></i>
+	    <i class="menu_close fa fa-times fa-lg"></i>
+	  </span>
+    <ul class="menu_items">
+        <li><a href="#"><i class="icon fa fa-signal fa-2x"></i> Moar</a></li>
+        <li><a href="#"><i class="icon fa fa-coffee fa-2x"></i> Coffee</a></li>
+        <li><a href="#"><i class="icon fa fa-heart fa-2x"></i> Please</a></li>
+    </ul>
+    <main class="content">
+        <div class="content_inner">
+            <header class="htmleaf-header">
+                <h1>创意旋转式打开隐藏侧边栏UI界面设计 <span>Offcanvas siderbar menu with a twist</span></h1>
+
+            </header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolorem, ducimus laudantium, earum eos
+                natus sint voluptatum dolores fuga quibusdam consectetur dicta. Laudantium enim inventore iusto ducimus
+                est velit aperiam tempora quibusdam id dolore natus perferendis, debitis distinctio optio repellendus,
+                repellat molestias delectus harum eius, reiciendis dicta ipsum architecto! Eligendi expedita in beatae,
+                placeat unde voluptatibus voluptates consectetur explicabo laudantium, officiis ad nihil. Beatae
+                similique voluptate sequi voluptatem delectus iure in omnis, fuga ipsam nulla ipsum architecto, iste
+                debitis nisi labore quisquam odio accusantium corporis sint perspiciatis. Excepturi earum nobis soluta,
+                doloremque nihil dolorum illum quaerat magnam nemo non sed!</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolorem, ducimus laudantium, earum eos
+                natus sint voluptatum dolores fuga quibusdam consectetur dicta. Laudantium enim inventore iusto ducimus
+                est velit aperiam tempora quibusdam id dolore natus perferendis, debitis distinctio optio repellendus,
+                repellat molestias delectus harum eius, reiciendis dicta ipsum architecto! Eligendi expedita in beatae,
+                placeat unde voluptatibus voluptates consectetur explicabo laudantium, officiis ad nihil. Beatae
+                similique voluptate sequi voluptatem delectus iure in omnis, fuga ipsam nulla ipsum architecto, iste
+                debitis nisi labore quisquam odio accusantium corporis sint perspiciatis. Excepturi earum nobis soluta,
+                doloremque nihil dolorum illum quaerat magnam nemo non sed!</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel dolorem, ducimus laudantium, earum eos
+                natus sint voluptatum dolores fuga quibusdam consectetur dicta. Laudantium enim inventore iusto ducimus
+                est velit aperiam tempora quibusdam id dolore natus perferendis, debitis distinctio optio repellendus,
+                repellat molestias delectus harum eius, reiciendis dicta ipsum architecto! Eligendi expedita in beatae,
+                placeat unde voluptatibus voluptates consectetur explicabo laudantium, officiis ad nihil. Beatae
+                similique voluptate sequi voluptatem delectus iure in omnis, fuga ipsam nulla ipsum architecto, iste
+                debitis nisi labore quisquam odio accusantium corporis sint perspiciatis. Excepturi earum nobis soluta,
+                doloremque nihil dolorum illum quaerat magnam nemo non sed!</p>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    var $page = $('.page');
+    $('.menu_toggle').on('click', function () {
+        $page.toggleClass('shazam');
+    });
+    $('.content').on('click', function () {
+        $page.removeClass('shazam');
+    });
+</script>
+</body>
+</html>

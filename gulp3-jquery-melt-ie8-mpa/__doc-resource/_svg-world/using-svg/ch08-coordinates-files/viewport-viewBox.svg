@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" 
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="4in" height="4.65in" viewBox="-25 -70 430 480">
+    <title>A custom viewport with viewBox</title>   
+    <style type="text/css">
+        svg {
+            font: 24px sans-serif;
+        }
+    </style>
+    
+    <g>
+        <rect fill="gray" x="-20" y="-60" 
+              width="4.4in" height="4.8in"/>
+        <rect fill="white" width="4in" height="4in"/>
+        <text y="-35">&lt;svg width="4in" height="4in" 
+            <tspan x="60" y="-10">viewBox="0,0 1000,1000"&gt;</tspan></text>
+        <svg width="4in" height="4in" viewBox="0,0 1000,1000">
+            <use xlink:href="viewport-grid.svg#grid" />
+        </svg>
+    </g>
+</svg>

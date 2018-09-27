@@ -1,0 +1,106 @@
+@charset "utf-8"; 
+
+/* CSS Document */
+/******************************
+GENERAL STYLES
+ *******************************/
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+#okplayer{
+	left: -50px !important;
+}
+/******************************
+NAVIGATION
+ *******************************/
+.navigation {
+	z-index: 1;
+	padding: 20px;
+	list-style: none;
+}
+.navigation li {
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 10px;
+	box-shadow: 0 0 0 1px #444;
+	background-color: rgba(255,255,255,0.2);
+}
+.navigation li:hover,.navigation li.active {
+	box-shadow: 0 0 0 1px #000;
+	background-color: #000 !important;
+	cursor: pointer;
+}
+.navigation li:first-child {
+	display: none;
+}
+
+/******************************
+SLIDES
+ *******************************/
+.slide {
+	height: 100%;
+	width: 100%;
+	  background-position: 50% 50%;
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-size: cover;
+	overflow-x: hidden !important;
+}
+/*this class will be activated on mobile devices in order to switch off the parallax effect*/
+.parallax-off {
+	background-attachment:scroll !important;
+	background-size:cover !important;
+	}
+
+
+/*SET THE BG IMAGES IN SHOWCASE PARALLAX SLIDES VIA CSS*/
+
+#slide2 {
+	background-image: url(../images/parallax/slide02-bg.jpg);
+}
+#slide3 {
+}
+#slide4 {
+	background-image: url(../images/parallax/slide04-bg.jpg);
+}
+#slide5 {
+	background-image: url(../images/parallax/slide05-bg.jpg);
+}
+#slide6 {
+	background-image: url(../images/parallax/slide06-bg.jpg);
+}
+#slide7 {
+	background-image: url(../images/parallax/slide07-bg.jpg);
+}
+#slide8 {
+	background-image: url(../images/parallax/slide08-bg.jpg);
+}
+
+
+
+/*SET POSTER IMAGES FOR EACH VIDEO (TO BE DISPLAYED ON MOBILE DEVICES WHERE VIDEO IS NOT SUPPORTED)*/
+#video-container-01.poster-img{
+	background-image: url(../videos/posters/01.jpg); 
+}
+#video-container-02.poster-img{
+	background-image: url(../videos/posters/02.jpg); 
+}
+#video-container-03.poster-img{
+	background-image: url(../videos/posters/03.jpg);  
+}
+
+
+/*SET POSTER IMAGE FOR INTRO BG VIDEO WHERE VIDEO IS NOT SUPPORTED)*/
+.intro-video-bg.poster-img{
+	background-image: url(../videos/posters/01.jpg); 
+	background-size: cover !important;
+	width: 100%;
+	height:100%;
+}
+
+

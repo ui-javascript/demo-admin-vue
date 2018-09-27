@@ -1,0 +1,46 @@
+// 表单前必填
+.pms-field-required {
+  margin-right: 3px;
+  position: relative;
+  top: 3px;
+
+  &:after {
+    content: '*';
+    color: @red;
+    font-weight: bold;
+  }
+
+}
+
+.input-inline-txt {
+  margin-top: @top-sm;
+  margin-bottom: @top-sm;
+}
+
+.form-group {
+  .mt(lg);
+  position: relative;
+}
+
+.form-label {
+  //width: 100px;
+  padding-right: 10px;
+  display: inline-block;
+  text-align: right;
+  font-size: 14px;
+
+  &.sm {
+    width: 60px;
+  }
+
+  &.lg {
+    width: 120px;
+  }
+}
+
+.form-align {
+  display: inline-block;
+  height: 30px;
+  //line-height: 30px;
+  .center(bar-y, 30px);
+}

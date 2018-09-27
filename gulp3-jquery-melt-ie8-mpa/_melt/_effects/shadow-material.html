@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Design风格阴影特效</title>
+
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-around;
+            background: #F2F2F2;
+            width: 90vw;
+            padding: 15px;
+            border-radius: 3px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+        }
+
+        .shadow {
+            background: #F9F9F9;
+            display: inline-block;
+            width: 13vw;
+            height: 13vw;
+            margin: 3%;
+        }
+        .shadow:nth-child(1) {
+            box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+        }
+        .shadow:nth-child(2) {
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+        }
+        .shadow:nth-child(3) {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+        }
+        .shadow:nth-child(4) {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
+        }
+        .shadow:nth-child(5) {
+            box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);
+        }
+
+
+        /* 动画 */
+        .animate-demo{
+            background: #F2F2F2;
+            width: 100%;
+            padding: 15px;
+        }
+
+        .animate-shadow-1,
+        .animate-shadow-2{
+            box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24),
+                0 1.5px 6px rgba(0, 0, 0, 0.12);
+            transition: box-shadow 1s ease;
+        }
+        .animate-shadow-1:hover{
+            box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22),
+                    0 19px 76px rgba(0, 0, 0, 0.3);
+        }
+        .animate-shadow-2:hover{
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22),
+                0 14px 56px rgba(0, 0, 0, 0.25);
+        }
+
+    </style>
+
+    <!--&lt;!&ndash;[if IE]>-->
+    <!--<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>-->
+    <!--<![endif]&ndash;&gt;-->
+
+
+</head>
+<body>
+<div>
+
+    <div class="card">
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+    </div>
+
+
+    <h3>阴影动画</h3>
+    <div class="animate-demo">
+        <div class="shadow animate-shadow-1"></div>
+        <div class="shadow animate-shadow-2"></div>
+    </div>
+
+</div>
+</body>
+</html>

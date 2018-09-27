@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Online Extras: 
+    Using SVG with CSS3 and HTML5 — Supplementary Material</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+  
+  <meta name="twitter:title" property="og:title" 
+        content="Online Extras — Using SVG with CSS3 and HTML5">
+  <meta name="twitter:card"
+        content="summary">
+  <meta name="twitter:description" property="og:description"  
+        content="Tutorials and articles about SVG on the web. Part of the supplementary material for the book Using SVG with CSS3 and HTML5.">
+  <meta name="twitter:image" property="og:image" 
+        content="https://oreillymedia.github.io/Using_SVG/using_svg_cover-square-small.png?v=1">
+  <meta name="twitter:image:alt" property="og:image:alt" 
+        content="Using SVG book cover, featuring a blue-fronted lorikeet.">
+</head>
+
+<body>
+  <header>
+    <a class="title" href="../index.html">Using SVG with CSS3 and HTML5 — Supplementary Material</a>
+    <p>Example code and online extras for the <a href="http://shop.oreilly.com/product/0636920037972.do">O'Reilly Media book</a> by Amelia Bellamy-Royds, Kurt Cagle, and Dudley Storey.</p>
+    <nav>
+      <a class="home" href="../index.html">Home</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Online Extras</h1>
+    <nav class="toc" aria-label="Page Contents">On this page:
+      <ul class="columns narrow">
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#list">Extras, by Chapter</a></li>
+      </ul>
+    </nav>
+    <div id="intro" class="columns">
+      <p>
+        These online extras were originally written to be part of <cite>Using SVG with CSS3 and HTML5</cite>, but were cut during editing.
+        Which isn't to say that these are the cheap cuts—far from it!
+        Some of our favorite examples are here.
+        In many cases, these sections were extracted because they are complete articles that can stand on their own.
+      </p>
+      <p>
+        The printed book is just over 800 pages long, 
+        with 20 chapters, 
+        115 complete examples (and numerous short code snippets), 
+        189 figures, 
+        and 141 browser support warnings.
+      </p>
+      <p>
+        But it still didn't include everything we wanted to say.
+      </p>
+      <p>
+        Some of these are extra explanation of the concepts and connections.
+        Some are extended tangents about browser bugs and work-arounds.
+        And many are just interesting applications of SVG on the web.
+      </p>
+      <p>
+        You'll find the example files for the extras in the same folders in the <a href="https://github.com/oreillymedia/Using_SVG/">Github repo</a> as the files for the chapter they're associated with.
+      </p>
+    </div>
+    <h2 id="list">Extras, by Chapter<a href="#list" class="hash-link" aria-label="Permalink">#</a></h2>
+    <style>
+      .nested-list-headings li {
+        font-weight: bold;
+      }
+      .nested-list-headings li li {
+        font-weight: normal;
+      }
+    </style>
+    <ol class="columns directory nested-list-headings">
+      <li>Graphics from Vectors: <i>An Overview of SVG</i>
+        <ul>
+          <li><a href="ch01-HTML-syntax.html">“HTML Syntax, Lazy or Long”</a>: Explaining the elements, attributes, and syntax details of our boilerplate inline SVG example.</li>
+          <li><a href="ch01-XML.html">“XML Prologs and Document Types”</a>: Unique features of XML that you may discover if you look at SVG code created by a software program.</li>
+          <li><a href="ch01-vectors.html">“Understanding Vector Graphics”</a>: SVG stands for Scalable Vector Graphics, but what does that mean?  How is it different from other image formats?</li>
+        </ul>
+      </li>
+      <li>The Big Picture: <i>SVG and the Web</i>
+        <ul>
+          <li><a href="ch02-web-platform.html">“The Web Platform”</a>: The web platform is the interconnected set of standards used by websites and browsers: HTML, CSS, HTTP, URLs, JavaScript, the DOM. And SVG.</li>
+        </ul>
+      </li>
+      <li>A Sense of Style: <i>Working with CSS</i>
+        <ul>
+          <li><a href="ch03-cascade.html">“The Cascade”</a>: The CSS cascade mostly works the same for SVG as for HTML. But that doesn't mean that it is simple.</li>
+          <li><a href="ch03-media-queries.html">“Media Queries in Embedded Versus Inline SVG”</a>: Media queries can be used with inline SVG and in standalone SVG files. But if you switch between the two, you’ll often need to make adjustments.</li>
+          <li><a href="ch03-namespaces.html">“XML Namespaces in CSS”</a>: You can usually ignore XML namespaces when writing CSS selectors, but that makes it all the more surprising when they cause a problem.</li>
+        </ul>
+      </li>
+      <li>Tools of the Trade: <i>Software and Sources to Make SVG Easier</i>
+        <ul>
+          <li><a href="ch04-rasterizers.html">“SVG Snapshots: Converting Vector to Raster”</a>: Sometimes, you need a “snapshot” image of an SVG, saved in a common raster (aka, bitmap) image format, such as PNG or JPEG.  The conversion can often be automated using dedicated rasterization tools.</li>
+        </ul>
+      </li>
+      <li>Building Blocks: <i>Basic Shapes</i>
+        <ul>
+          <li><a href="ch05-percentages.html">“Perplexing Percentages”</a>: Most SVG lengths are proportional to the viewBox width or height. But some values aren't either horizontal or vertical.</li>
+        </ul>
+      </li>
+      <li>Following Your Own Path: <i>Custom Shapes</i>
+        <ul>
+          <li><a href="ch06-fill-rule.html">“The Winding Order of the Fill Rule”</a>: What do the nonzero and evenodd keywords mean, and how do they relate to the shape of your path?</li>
+          <li><a href="ch06-cubic-bezier.html">“Calculating Cubic Béziers”</a>: Connecting the control points to the cubic curve.</li>
+        </ul>
+      </li>
+      <li>The Art of the Word: <i>Graphical Text Layout and Fonts</i>
+        <ul>
+          <li><a href="ch07-dataURI-fonts.html">“Creating Embeddable Fonts as Data URIs”</a>: The old SVG <code>&lt;font&gt;</code> element to include a font in an SVG file doesn't work on the web. Data URIs do.</li>
+          <li><a href="ch07-interactive-labels.html">“Interactive Text”</a>: Don't bake-in labels on your photos: add them with SVG text, and you can style them dynamically.</li>
+          <li><a href="ch07-rotate-vertical.html">“Beyond Horizontal: Rotated and Vertical Text”</a>: Horizontal text is so HTML. SVG was designed for more than that. And now, CSS is too.</li>
+          <li><a href="ch07-textpaths.html">“Perfecting Paths for &lt;textPath&gt;”</a>: Tips for mastering geometry when wrapping SVG text around shapes.</li>
+        </ul>
+      </li>
+      <li>Scaling Up: <i>Defining Coordinate Systems</i>
+        <ul>
+          <li><a href="ch08-precision.html">“The Limits of Numbers in SVG”</a>: SVG coordinates are scalable, independent of pixels. But in practice, you can't use just any scale you choose.</li>
+          <li><a href="ch08-preserveAspectRatio-swap.html">“Dynamically Changing preserveAspectRatio”</a>: A ready-to-use playground for exploring meet, slice, and none preserveAspectRatio options.</li>
+        </ul>
+      </li>
+      <li>A New Point of View: <i>Cropping Embedded SVG Files</i>
+        <ul>
+          <li><a href="ch09-picture.html">“Picking the Perfect View”</a>: SVG views and the HTML <code>&lt;picture&gt;</code> element are a responsive design power team, letting you crop an embedded graphic based on media queries.</li>
+        </ul>
+      </li>
+      <li>Seeing Double: <i>Re-using Content</i>
+        <ul>
+          <li><a href="ch10-cors.html">“Understanding CORS and SVG”</a>: Why doesn't it just work? Cross-origin services and static asset servers are part of modern web development, but they can be a headache for SVG.</li>
+          <li><a href="ch10-ajax.html">“Importing SVG Assets, with AJAX”</a>: Browser support limitations can restrict your ability to share SVG assets between web pages. A little JavaScript can patch the gaps.</li>
+        </ul>
+      </li>
+      <li>Transformative Changes: <i>Coordinate System Transformations</i>
+        <ul>
+          <li><a href="ch11-3d.html">“The Next Dimension: 3D Transformations”</a>: CSS transforms include 3D effects. How do they work, and how do you work around the browser bugs for SVG?</li>
+        </ul>
+      </li>
+      <li>Filling Up To Full: <i>The fill Property, Gradients, &amp; Patterns</i>
+        <ul>
+          <li><a href="ch12-bounding-boxes.html">“objectBoundingBox versus userSpaceOnUse”</a>: SVG graphical effects can be defined in terms of the bounding box of the element they apply to or its user-space coordinate system. But what does that really mean?</li>
+          <li><a href="ch12-fake-repeats.html">“Faking Repeating Gradients”</a>: SVG repeating gradients are wonderful. But someone forgot to tell WebKit developers that. What's a dev to do?</li>
+        </ul>
+      </li>
+      <li>Drawing the Lines: <i>Stroke Effects</i>
+        <ul>
+          <li><a href="ch13-drawing.html">“Drawing with Dashes”</a>: SVG's stroke-dasharray property was designed for dotted lines, but when animated it creates a shape that draws itself.</li>
+        </ul>
+      </li>
+      <li>Marking the Way: <i>Line Markers</i>
+        <ul>
+          <li><a href="ch14-icon-marker.html">“Re-purposing Icons as Markers”</a>: Turning an existing symbol into a marker is a matter of copy and paste, plus a few attributes. Just watch out for the browser quirks.</li>
+        </ul>
+      </li>
+      <li>Less Is More: <i>Clipping and Masking</i>
+        <ul>
+          <li><a href="ch15-imagemap.html">“Clipped Clicks”</a>: Clipping paths were designed to work with interactive effects. Just watch out for the browser support.</li>
+          <li><a href="ch15-video-mask.html">“Clipping on the Outside, with a Mask”</a>: Sometimes a clipping path is the opposite of what you need. And sometimes a mask is the secret to effects you didn't think possible.</li>
+        </ul>
+      </li>
+      <li>Playing with Pixels: <i> Filters and Blend Modes</i>
+        <ul>
+          <li><a href="ch16-feTurbulence.html">“Making the Wave”</a>: SVG <code>&lt;feTurbulence&gt;</code> and <code>&lt;feDisplacementMap&gt;</code> create wave-like distortion effects from mathematical parameters. What do the numbers mean?</li>
+        </ul>
+      </li>
+      <li>Beyond the Visible: <i>Metadata for Accessibility and Added Functionality</i>
+        <ul>
+          <li>(none)</li>
+        </ul>
+      </li>
+      <li>Drawing on Demand: <i>Interactive SVG</i>
+        <ul>
+          <li><a href="ch18-hidden-input.html">“Borrowing Ready-Made Widgets from HTML”</a>: HTML input elements provide accessible interfaces that can maintain state without scripting. All they need is a new coat of SVG.</li>
+        </ul>
+      </li>
+      <li>Transitioning in Time: <i>Animation</i>
+        <ul>
+          <li><a href="ch19-SMIL.html">“Using SVG/SMIL Animation Elements”</a>: SVG/SMIL elements can add complex animation effects with a few lines of code.  Too bad about the browser support.</li>
+          <li><a href="ch19-performance.html">“Planning for Performance”</a>: Designing an effective animation is equal parts art and science. Here, we discuss the technical side of creating smooth web animations.</li>
+        </ul>
+      </li>
+      <li>Good Manners: <i>Best Practices for SVG</i>
+        <ul>
+          <li>(none)</li>
+        </ul>
+      </li>
+    </ol>
+  </main>
+  <footer>
+    <p>This website is created and maintained by Amelia Bellamy-Royds, using material created by all three authors of the book.
+    </p>
+    <p>
+      View the <a href="https://github.com/oreillymedia/Using_SVG/">GitHub repository</a> to download the files, suggest a correction, or see when a page was last updated.</p>
+  </footer>
+</body>
+</html>

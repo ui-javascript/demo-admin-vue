@@ -1,0 +1,121 @@
+$ANIMATION_DURATION: 1000ms;
+$BALL_DIAMETER: 50px;
+$CENTER_BALL_DIAMETER: $BALL_DIAMETER * 2.25;
+$TRANSLATE_DISTANCE: 200px;
+$SCALE_DIFF: .5;
+
+#container {
+  width: $BALL_DIAMETER + $TRANSLATE_DISTANCE;
+  height: $BALL_DIAMETER;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  animation: fadeIn 1s 1, rotate 10s infinite;
+  animation-fill-mode: forwards;
+}
+
+.wrap {
+  animation: translate $ANIMATION_DURATION infinite ease-in-out alternate, zindex ($ANIMATION_DURATION * 2) infinite ease-in-out;
+  animation-delay: 0, -$ANIMATION_DURATION * 2;
+  position: absolute;
+}
+
+.ball {
+  width: $BALL_DIAMETER;
+  height: $BALL_DIAMETER;
+  box-shadow: 0 ($BALL_DIAMETER*-.1) 0 rgba(0, 0, 0, .15) inset;
+  background-color: #E3746B;
+  border-radius: 50%;
+  animation: scale $ANIMATION_DURATION infinite ease-in-out alternate;
+  animation-delay: -($ANIMATION_DURATION/2);
+  transform: scale(1 - $SCALE_DIFF);
+  border: 2px solid black;
+}
+
+#ball_planet {
+  width: $CENTER_BALL_DIAMETER;
+  height: $CENTER_BALL_DIAMETER;
+  box-shadow: 0 ($CENTER_BALL_DIAMETER*-.1) 0 rgba(0, 0, 0, .15) inset;
+  background-color: #eee;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  animation: none;
+  transform: none;
+}
+
+// The Shadow
+// .ball:after {
+//   content: '';
+//   width: 100%;
+//   height: 13px;
+//   background: #eee;
+//   position: absolute;
+//   top: $BALL_DIAMETER * 3;
+//   border-radius: 50%;
+// }
+
+#wrap2 {
+  animation-delay: $ANIMATION_DURATION * -1;
+}
+
+#ball2 {
+  background-color: #397BF9;
+  animation-delay: $ANIMATION_DURATION * -1.5;
+}
+
+#wrap3 {
+  animation-delay: $ANIMATION_DURATION * -1.5;
+}
+
+#ball3 {
+  background-color: #F4B400;
+  animation-delay: $ANIMATION_DURATION * -2;
+}
+
+#wrap4 {
+  animation-delay: $ANIMATION_DURATION * -2.5;
+}
+
+#ball4 {
+  background-color: #0F9D58;
+  animation-delay: $ANIMATION_DURATION * -3;
+}
+
+@keyframes translate {
+  0% {
+    transform: translateX(0) translateY($BALL_DIAMETER / 2);
+  }
+  100% {
+    transform: translateX($TRANSLATE_DISTANCE) translateY($BALL_DIAMETER / -2);
+  }
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zindex {
+  25% {
+    z-index: 1;
+  }
+  75% {
+    z-index: -1;
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}

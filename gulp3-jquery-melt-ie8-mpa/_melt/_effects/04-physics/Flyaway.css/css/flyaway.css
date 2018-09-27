@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/*!
+ * Flyaway.css (http://takentech.com/flyaway)
+ * Version: 0.0.1
+ * Author: 進擊的燊 
+ * Author URL: http://takentech.com/
+ * Github: https://github.com/lushen/flyaway
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+@-webkit-keyframes flyaway {
+    0% {
+        -webkit-transform: translate(0, 0) rotate(0deg) scale(1);
+                transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    5% {
+        -webkit-transform: translate(15px, -2px) rotate(10deg) scale(1.2);
+                transform: translate(15px, -2px) rotate(10deg) scale(1.2);
+    }
+    20% {
+        -webkit-transform: translate(130px, -2px) rotate(-20deg) scale(1.5);
+                transform: translate(130px, -2px) rotate(-20deg) scale(1.5);
+    }
+    40% {
+        -webkit-transform: translate(280px, -40px) rotate(10deg) scale(0.8);
+                transform: translate(280px, -40px) rotate(10deg) scale(0.8);
+        opacity: .8;
+    }
+    60% {
+        -webkit-transform: translate(500px, -90px) rotate(30deg) scale(0.6);
+                transform: translate(500px, -90px) rotate(30deg) scale(0.6);
+        opacity: .6;
+    }
+    80% {
+        -webkit-transform: translate(700px, -140px) rotate(50deg) scale(0.2);
+                transform: translate(700px, -140px) rotate(50deg) scale(0.2);
+        opacity: .2;
+    }
+    100% {
+        -webkit-transform: translate(1000px, -200px) rotate(60deg) scale(0);
+                transform: translate(1000px, -200px) rotate(60deg) scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes flyaway {
+    0% {
+        -webkit-transform: translate(0, 0) rotate(0deg) scale(1);
+                transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    5% {
+        -webkit-transform: translate(15px, -2px) rotate(10deg) scale(1.2);
+                transform: translate(15px, -2px) rotate(10deg) scale(1.2);
+    }
+    20% {
+        -webkit-transform: translate(130px, -2px) rotate(-20deg) scale(1.5);
+                transform: translate(130px, -2px) rotate(-20deg) scale(1.5);
+    }
+    40% {
+        -webkit-transform: translate(280px, -40px) rotate(10deg) scale(0.8);
+                transform: translate(280px, -40px) rotate(10deg) scale(0.8);
+        opacity: .8;
+    }
+    60% {
+        -webkit-transform: translate(500px, -90px) rotate(30deg) scale(0.6);
+                transform: translate(500px, -90px) rotate(30deg) scale(0.6);
+        opacity: .6;
+    }
+    80% {
+        -webkit-transform: translate(700px, -140px) rotate(50deg) scale(0.2);
+                transform: translate(700px, -140px) rotate(50deg) scale(0.2);
+        opacity: .2;
+    }
+    100% {
+        -webkit-transform: translate(1000px, -200px) rotate(60deg) scale(0);
+                transform: translate(1000px, -200px) rotate(60deg) scale(0);
+        opacity: 0;
+    }
+}
+
+.flyaway {
+    -webkit-animation: flyaway 1s linear;
+            animation: flyaway 1s linear;
+}
+
+@-webkit-keyframes float {
+    from,
+    to {
+        -webkit-transform: transofrmY(0);
+                transform: transofrmY(0);
+    }
+    50% {
+        -webkit-transform: translateY(4px);
+                transform: translateY(4px);
+    }
+}
+
+@keyframes float {
+    from,
+    to {
+        -webkit-transform: transofrmY(0);
+                transform: transofrmY(0);
+    }
+    50% {
+        -webkit-transform: translateY(4px);
+                transform: translateY(4px);
+    }
+}
+
+.float {
+    -webkit-animation: float 4s infinite ease-in-out alternate;
+            animation: float 4s infinite ease-in-out alternate;
+}
+
+@-webkit-keyframes zoom {
+    from,
+    to {
+        background-color: rgba(170, 178, 189, 0.3);
+        -webkit-transform: scale(.6) rotate(0.01deg);
+                transform: scale(.6) rotate(0.01deg);
+    }
+    50% {
+        background-color: rgba(170, 178, 189, 0.6);
+        -webkit-transform: scale(.8) rotate(0.01deg);
+                transform: scale(.8) rotate(0.01deg);
+    }
+}
+
+@keyframes zoom {
+    from,
+    to {
+        background-color: rgba(170, 178, 189, 0.3);
+        -webkit-transform: scale(.6) rotate(0.01deg);
+                transform: scale(.6) rotate(0.01deg);
+    }
+    50% {
+        background-color: rgba(170, 178, 189, 0.6);
+        -webkit-transform: scale(.8) rotate(0.01deg);
+                transform: scale(.8) rotate(0.01deg);
+    }
+}
+
+.float.shadow:after {
+    position: relative;
+    display: block;
+    width: 1em;
+    height: .5em;
+    border-radius: 100%;
+    content: "";
+    -webkit-animation: zoom 4s ease-in-out infinite alternate;
+            animation: zoom 4s ease-in-out infinite alternate;
+}
+
+.float:hover {
+    -webkit-animation: float paused;
+            animation: float paused;
+}
+
+.float.shadow:hover:after {
+    background-color: transparent;
+    -webkit-animation: zoon paused;
+            animation: zoon paused;
+}

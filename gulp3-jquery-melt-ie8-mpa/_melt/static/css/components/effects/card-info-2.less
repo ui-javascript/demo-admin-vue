@@ -1,0 +1,230 @@
+.nt-card-2 {
+
+  .container {
+    max-width: 960px;
+    margin: 128px auto;
+    letter-spacing: 6px;
+    text-align: center;
+  }
+
+  h2 {
+    letter-spacing: 6px;
+    color: #787878;
+    border-bottom: 2px solid #989898;
+    padding-bottom: 12px;
+    text-align: left;
+    margin-bottom: 32px;
+    margin-top: 64px;
+  }
+
+  h3 {
+    margin-top: 48px;
+  }
+
+  .box {
+    width: 45%;
+    display: inline-block;
+    background-color: #484848;
+    height: 348px;
+    vertical-align: top;
+    margin: 2%;
+  }
+
+  .box {
+    position: relative;
+  }
+
+  .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+  }
+
+  /* effect 1 */
+  .ef1 .contentPart {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #0f305d;
+    opacity: 0;
+    transition: all 0.4s;
+  }
+
+  .ef1 .contentPart:hover {
+    opacity: 1;
+    top: 3%;
+    left: 4%;
+  }
+
+  .ef1 .contentPart p {
+    color: #fff;
+    letter-spacing: 0px;
+    margin-top: 32px;
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .ef1 .contentPart a {
+    color: #fff;
+    letter-spacing: 0px;
+    font-size: 18px;
+  }
+
+  /* effect 2 */
+  .ef2 {
+    overflow: hidden;
+  }
+
+  .ef2 .contentPart {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #0f305d;
+    opacity: 1;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transform: rotateY(-90deg);
+    -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+
+  .ef2:hover .contentPart {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+  }
+
+  .ef2:hover img {
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+  }
+
+  .ef2 .contentPart p {
+    color: #fff;
+    letter-spacing: 0px;
+    margin-top: 32px;
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .ef2 .contentPart a {
+    color: #fff;
+    letter-spacing: 0px;
+    font-size: 18px;
+  }
+
+  /* effect 3 */
+  .ef3 .contentPart {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 28%;
+    bottom: 0px;
+    background-color: #0f305d;
+    opacity: 1;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+
+  .ef3 .contentPart p {
+    display: inline-block;
+  }
+
+  .ef3 img {
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    position: relative;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+  }
+
+  .ef3:hover img {
+    bottom: 28%;
+  }
+
+  .ef3 .contentPart p {
+    color: #fff;
+    letter-spacing: 0px;
+    margin-top: 32px;
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .ef3 .contentPart a {
+    color: #fff;
+    letter-spacing: 0px;
+    font-size: 18px;
+  }
+
+  /* effect 4 */
+  .ef4 .contentPart {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    background-color: #0f305d;
+    opacity: 1;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+  }
+
+  .ef4 .contentPart p {
+    display: inline-block;
+  }
+
+  .ef4 img {
+    position: relative;
+    z-index: 100;
+  }
+
+  .ef4:hover img {
+    -webkit-transform: scale(0.5) translateY(40%);
+    -moz-transform: scale(0.5) translateY(40%);
+    transform: scale(0.5) translateY(40%);
+  }
+
+  .ef4 .contentPart p {
+    color: #fff;
+    letter-spacing: 0px;
+    margin-top: 32px;
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .ef4 .contentPart a {
+    color: #fff;
+    letter-spacing: 0px;
+    font-size: 18px;
+  }
+
+  /* Media Querys */
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .box {
+      width: 95%;
+    }
+  }
+
+}
+
+
+
+
+
