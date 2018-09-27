@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>可编辑表格</title>
+    <link href="https://cdn.bootcss.com/pure/1.0.0/pure-min.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding: 1% 3%;
+            color: rgb(119, 119, 119);
+        }
+
+        h1 {
+            color: #333
+        }
+    </style>
+</head>
+
+<body>
+
+
+<h1>可编辑单元格</h1>
+<table id="editable" class="pure-table pure-table-bordered">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Year</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>Honda</td>
+        <td>Accord</td>
+        <td>2009</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Toyota</td>
+        <td>Camry</td>
+        <td>2012</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Hyundai</td>
+        <td>Elantra</td>
+        <td class="uneditable">2010</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="/static/js/table/table-edit.js"></script>
+<script>
+    $('#editable').editableTableWidget();
+
+    $('#editable td.uneditable').on('change', function (evt, newValue) {
+        return false;
+    });
+
+    $('#editable td').on('change', function (evt, newValue) {
+        $.post("script.php",
+            {
+                value: newValue
+            }
+        ).done(function (data) {
+            alert("Data Loaded: " + data);
+        });
+
+    });
+</script>
+
+</body>
+</html>

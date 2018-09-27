@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纯CSS3创意loading文字特效</title>
+
+    <style>
+        html, body {
+            /*height:100%;
+            width:100%;*/
+            margin: 0px;
+            padding: 0px;
+            background-color: #FFD454;
+        }
+
+        #cupcake {
+            flex-direction: row;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            -mos-flex-direction: row;
+            -o-flex-direction: row;
+            justify-content: center;
+            -webkit-justify-content: center;
+            -ms-justify-content: center;
+            height: 100%;
+            width: 100%;
+            background-color: #FFD454;
+        }
+
+        .letter {
+            font-size: 100px;
+            color: #222;
+            font-family: tahoma;
+        }
+
+        .box {
+            display: box;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        .cupcakeCircle, .cupcakeInner, .cupcakeCore {
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+        }
+
+        .cupcake, .letter, .cupcakeCircle, .cupcakeInner, .cupcakeCore {
+            flex: none;
+            -webkit-flex: none;
+            -moz-flex: none;
+            -ms-flex: none;
+            -o-flex: none;
+        }
+
+        .letter, .cupcakeCircle {
+            align-self: center;
+            -webkit-align-self: center;
+            -moz-align-self: center;
+            -o-align-self: center;
+            -ms-align-self: center;
+        }
+
+        .cupcakeCircle {
+            align-items: center;
+            -ms-align-items: center;
+            justify-content: center;
+            -ms-justify-content: center;
+            height: 100px;
+            width: 100px;
+            background-color: #222;
+        }
+
+        .cupcakeInner {
+            align-self: center;
+            -ms-align-self: center;
+            justify-content: center;
+            -ms-justify-content: center;
+            height: 50%;
+            width: 50%;
+            background-color: #FFD454;
+
+            animation-name: cupcakeAnimate;
+            animation-duration: 500ms;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+
+            -webkit-animation-name: cupcakeAnimate;
+            -webkit-animation-duration: 500ms;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-iteration-count: infinite;
+
+        }
+
+        .cupcakeCore {
+            align-self: center;
+            -ms-align-self: center;
+            height: 25%;
+            width: 25%;
+            background-color: #222;
+            animation-name: coreAnimate;
+            animation-duration: 1s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            -webkit-animation-name: coreAnimate;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-timing-function: ease-in-out;
+            -webkit-animation-iteration-count: infinite;
+        }
+
+        @-webkit-keyframes cupcakeAnimate {
+            to {
+                height: 90%;
+                width: 90%;
+            }
+        }
+
+        @keyframes cupcakeAnimate {
+            to {
+                height: 90%;
+                width: 90%;
+            }
+        }
+
+        @-webkit-keyframes coreAnimate {
+            to {
+                height: 90%;
+                width: 90%;
+            }
+        }
+
+        @keyframes coreAnimate {
+            to {
+                height: 90%;
+                width: 90%;
+            }
+        }
+    </style>
+    <!--[if IE]>
+    <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="htmleaf-container">
+
+    <div class="htmleaf-content">
+        <div id="cupcake" class="box">
+            <span class="letter">L</span>
+            <div class="cupcakeCircle box">
+                <div class="cupcakeInner box">
+                    <div class="cupcakeCore box"></div>
+                </div>
+            </div>
+            <span class="letter box">A</span>
+            <span class="letter box">D</span>
+            <span class="letter box">I</span>
+            <span class="letter box">N</span>
+            <span class="letter box">G</span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

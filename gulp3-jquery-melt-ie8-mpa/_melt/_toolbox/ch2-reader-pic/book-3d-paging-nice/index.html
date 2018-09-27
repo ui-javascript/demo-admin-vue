@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 电子书翻页 3D 动画特效DEMO演示1</title>
+
+    <!--可无视-->
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/zzsc-demo.css">
+
+    <!--必要样式-->
+    <style>
+        html, body {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            background: #e0604a url('i/bg2.jpg');
+            color: #000000;
+            min-width: 800px;
+        }
+
+        body * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        .links a:link, .links a:visited {
+            color: black;
+            text-decoration: none;
+            font: 20px sans-serif;
+        }
+
+        .links a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        .red {
+            border: 1px solid #ffc30d;
+        }
+
+        .red-filled {
+            background: #e0604a;
+            border: 1px solid #ffc30d;
+        }
+
+        .blue {
+            background: #67BCCF;
+        }
+
+        .section {
+            width: 800px;
+            border-radius: 10px;
+            margin: 50px auto;
+        }
+
+        .section p {
+            text-align: center;
+            margin: 0px;
+            padding: 20px;
+            font: 16px sans-serif;
+            line-height: 140%;
+        }
+
+        .section p strong {
+            color: gold;
+        }
+
+        .section-list {
+            width: 800px;
+            border-radius: 10px;
+            margin: 50px auto;
+        }
+
+        .address {
+            margin: 0px auto 50px auto;
+            padding: 0px;
+            width: 800px;
+            text-align: center;
+        }
+
+        .address, .address a {
+            font: 16px arial, sans-serif;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+<div class="zzsc-container">
+    <div class="zzsc-demo center">
+        <a href="index.html" class="current">DEMO1</a>
+        <a href="index2.html">DEMO2</a>
+    </div>
+    <div style="text-align:center;clear:both">
+
+
+    </div>
+    <div class="section blue">
+        <p style="line-height:160%;">由于本地安全限制的原因，某些浏览器在本地查看时看不到效果。 <br> 以下浏览器支持OneBook3d v.2.30:：Chrome, Opera (WebKit),
+            Firefox, Safari 和 Internet Explorer 11.</p>
+    </div>
+
+    <div class="section red">
+        <div style="padding:30px;">
+            <div id="photobook" style="height:100px;"></div>
+        </div>
+    </div>
+
+    <div class="section-list blue">
+        <div style="padding:30px;" class="links">
+
+            <p><a href="#"><strong>1. Example,</strong> language (italian), </a></p>
+            <p><a href="#"><strong>2. Example,</strong> border (100), pageColor:(green), image on background</a></p>
+            <p><a href="#"><strong>3. Example,</strong> border (10), slope(1), startPage(4), flip (basic) </a></p>
+
+        </div>
+    </div>
+
+    <div class="section red-filled">
+
+        <p style="line-height:160%;">Use option <strong>‘cesh:false’</strong> while you are testing your book and
+            <strong>‘cesh:true’</strong> (by default) in web.<br>
+            Minimal width of parent element for book is <strong>266 px.</strong> After that the book will be hidden.</p>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/jquery.onebook3d-2.3.0-full-min.js"></script>
+<script>
+    $(function () {
+
+        var src1 = [
+            'ga02/001.jpg',
+            'ga02/002.jpg', 'ga02/003.jpg',
+            'ga02/004.jpg', 'ga02/005.jpg',
+            'ga02/006.jpg', 'ga02/007.jpg',
+            'ga02/008.jpg', 'ga02/009.jpg',
+            'ga02/010.jpg', 'ga02/011.jpg',
+            'ga02/012.jpg'
+        ];
+
+        var src3 = [
+            ['ga04/001.jpg', 'Title 1'],
+            ['ga04/002.jpg', 'Title 2'], ['ga04/003.jpg', 'Title 3'],
+            ['ga04/004.jpg', 'Title 4'], ['ga04/005.jpg', 'Title 5'],
+            ['ga04/006.jpg', 'Title 6'], ['ga04/007.jpg', 'Title 7'],
+            ['ga04/008.jpg', 'Title 8'], ['ga04/009.jpg', 'Title 9'],
+            ['ga04/010.jpg', 'TItle 10']
+        ];
+
+
+        var src4 = [
+            'ga04/001.jpg',
+            'ga04/002.jpg', 'ga04/003.jpg',
+            'ga04/004.jpg', 'ga04/005.jpg',
+            'ga04/006.jpg', 'ga04/007.jpg',
+            'ga04/008.jpg', 'ga04/009.jpg',
+            'ga04/010.jpg'
+        ];
+
+        $('#photobook').onebook(src1, {
+            skin: ['light', 'dark'],
+            bgDark: '#56998c url(i/bg.jpg)',
+            bgLight: '#d97f6f url(i/bg2.jpg)',
+            border: 0,
+            cesh: false
+        });
+
+
+        $('.links a:eq(0)').click(function () {
+            $.onebook(src4, {language: 'it'});
+            return false;
+        });
+
+
+        $('.links a:eq(1)').click(function () {
+            $.onebook(src4, {
+                border: 100,
+                skin: 'light',
+                pageColor: '#60baaa',
+                bgLight: '#56998c url(i/bg.jpg)',
+                cesh: false
+            });
+            return false;
+        });
+
+        $('.links a:eq(2)').click(function () {
+            $.onebook(src3, {slope: 1, skin: 'dark', startPage: 4, border: 10, flip: 'basic', cesh: false});
+            return false;
+        });
+
+
+    });
+</script>
+
+</body>
+</html>

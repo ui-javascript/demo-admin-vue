@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blue Planet</title>
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            /*background: black;*/
+        }
+
+        span {
+            display: block;
+        }
+
+        .orbit {
+            height: 10em;
+            width: 10em;
+            margin: 2.5em auto;
+            position: relative;
+        }
+
+        .planet {
+            height: 10em;
+            width: 10em;
+            background-color: blue;
+            border-radius: 50%;
+            z-index: 4;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: linear-gradient(225deg, rgba(255, 255, 255, 0.5) 0%, rgba(100, 100, 255, 0.3) 50%, rgba(100, 100, 255, 0.7) 100%), linear-gradient(26deg, #1e5799 0%, #2989d8 22%, #236cba 44%, #2989d8 56%, #2a67e0 66%, #207cca 76%, #7db9e8 100%)
+        }
+
+        /*planet storm*/
+        .planet:before {
+            content: "";
+            dipslay: block;
+            position: absolute;
+            height: 2em;
+            width: 3em;
+            background-color: red;
+            top: 78%;
+            right: 40%;
+            border-radius: 50%;
+            transform: skewX(40deg) rotate(20deg);
+            box-shadow: 3px 0px 10px 4px rgba(0, 0, 0, 0.1), -3px 0px 10px 4px rgba(0, 0, 0, 0.1);
+            background: radial-gradient(ellipse at center, rgba(122, 188, 255, .38) 17%, rgba(122, 188, 255, 0.5) 25%, rgba(96, 171, 248, 0.6) 44%, rgba(122, 188, 255, 0.48) 55%, rgba(122, 188, 255, 0.3) 62%, rgba(122, 188, 255, 0.34) 70%, rgba(64, 150, 238, 0.8) 100%);
+        }
+
+        .moon {
+            height: 2em;
+            width: 2em;
+            background: -moz-linear-gradient(213deg, rgba(255, 223, 117, 1) 0%, rgba(255, 223, 117, 1) 1%, rgba(171, 148, 31, 1) 100%);
+            /* ff3.6+ */
+            background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(171, 148, 31, 1)), color-stop(99%, rgba(255, 223, 117, 1)), color-stop(100%, rgba(255, 223, 117, 1)));
+            /* safari4+,chrome */
+            background: -webkit-linear-gradient(213deg, rgba(255, 223, 117, 1) 0%, rgba(255, 223, 117, 1) 1%, rgba(171, 148, 31, 1) 100%);
+            /* safari5.1+,chrome10+ */
+            background: -o-linear-gradient(213deg, rgba(255, 223, 117, 1) 0%, rgba(255, 223, 117, 1) 1%, rgba(171, 148, 31, 1) 100%);
+            /* opera 11.10+ */
+            background: -ms-linear-gradient(213deg, rgba(255, 223, 117, 1) 0%, rgba(255, 223, 117, 1) 1%, rgba(171, 148, 31, 1) 100%);
+            /* ie10+ */
+            background: linear-gradient(237deg, rgba(255, 223, 117, 1) 0%, rgba(255, 223, 117, 1) 1%, rgba(171, 148, 31, 1) 100%);
+            border-radius: 50%;
+            position: absolute;
+            top: 20%;
+            left: -20%;
+            animation: orbit 7s ease-in-out 0s infinite;
+        }
+
+        /*.moon-shadow {*/
+        /*display: block;*/
+        /*height: 3em;*/
+        /*width: 3em;*/
+        /*position: relative;*/
+        /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
+        /*background-color: rgba(0, 0, 0, 0.1);*/
+        /*border-radius: 50%;*/
+        /*margin-left: -4em;*/
+        /*margin-bottom: -2em;*/
+        /*animation: orbit 7s ease-in-out 0s infinite;*/
+        /*}*/
+
+        @keyframes orbit {
+            0% {
+                top: 20%;
+                left: -20%;
+                z-index: 5;
+            }
+            50% {
+                top: 80%;
+                left: 120%;
+
+            }
+            100% {
+                top: 20%;
+                left: -20%;
+                z-index: 2;
+            }
+        }
+
+        /*.moon2 {*/
+        /*height: 3em;*/
+        /*width: 3em;*/
+        /*border-radius: 50%;*/
+        /*border-radius: 50%;*/
+        /*position: absolute;*/
+        /*top: 20%;*/
+        /*left: -40%;*/
+        /*background: -moz-linear-gradient(213deg, rgba(255, 183, 74, 1) 0%, rgba(171, 74, 50, 1) 100%);*/
+        /*!* ff3.6+ *!*/
+        /*background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(171, 74, 50, 1)), color-stop(100%, rgba(255, 183, 74, 1)));*/
+        /*!* safari4+,chrome *!*/
+        /*background: -webkit-linear-gradient(213deg, rgba(255, 183, 74, 1) 0%, rgba(171, 74, 50, 1) 100%);*/
+        /*!* safari5.1+,chrome10+ *!*/
+        /*background: -o-linear-gradient(213deg, rgba(255, 183, 74, 1) 0%, rgba(171, 74, 50, 1) 100%);*/
+        /*!* opera 11.10+ *!*/
+        /*background: -ms-linear-gradient(213deg, rgba(255, 183, 74, 1) 0%, rgba(171, 74, 50, 1) 100%);*/
+        /*!* ie10+ *!*/
+        /*background: linear-gradient(237deg, rgba(255, 183, 74, 1) 0%, rgba(171, 74, 50, 1) 100%);*/
+        /*animation: orbit2 11s ease-in-out 0s infinite;*/
+        /*}*/
+
+        /*.moon2-shadow {*/
+        /*display: block;*/
+        /*height: 5em;*/
+        /*width: 5em;*/
+        /*position: absolute;*/
+        /*top: 20%;*/
+        /*left: -40%;*/
+        /*margin-left: -93px;*/
+        /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
+        /*background-color: rgba(0, 0, 0, 0.1);*/
+        /*border-radius: 50%;*/
+        /*animation: orbit2 11s ease-in-out 0s infinite;*/
+        /*}*/
+
+        /*@keyframes orbit2 {*/
+        /*0% {*/
+        /*top: 20%;*/
+        /*left: -40%;*/
+        /*z-index: 6;*/
+        /*}*/
+        /*50% {*/
+        /*top: 80%;*/
+        /*left: 140%;*/
+        /*z-index: 3;*/
+        /*}*/
+        /*100% {*/
+        /*top: 20%;*/
+        /*left: -40%;*/
+        /*z-index: 3;*/
+        /*}*/
+        /*}*/
+
+        /*@keyframes moon2shadow {*/
+        /*0% {*/
+        /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
+        /*background-color: rgba(0, 0, 0, .1);*/
+        /*z-index: 5;*/
+        /*}*/
+        /*40% {*/
+        /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);*/
+        /*background-color: rgba(0, 0, 0, .1)*/
+        /*}*/
+        /*50% {*/
+        /*background-color: transparent;*/
+        /*box-shadow: 0 0 5px rgba(0, 0, 0, 0);*/
+        /*z-index: 3;*/
+        /*}*/
+        /*100% {*/
+        /*box-shadow: 0 0 5px rgba(0, 0, 0, 0);*/
+        /*background-color: transparent;*/
+        /*z-index: 0;*/
+        /*}*/
+        /*}*/
+    </style>
+</head>
+
+<body>
+
+<span class='orbit'>
+  <span class='planet'></span>
+  <span class='moon'></span>
+  <span class='moon-shadow'></span>
+  <span class='moon2'></span>
+  <span class='moon2-shadow'></span>
+</span>
+
+
+</body>
+
+</html>
