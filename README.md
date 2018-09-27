@@ -1,6 +1,6 @@
 # README
 
-- 放外面的试过，下划线目录里的很危险
+- 下划线开头的目录里的项目没试过
 - get技能
     - github搜索 'boilerplate' 'xx spa|mpa|templates' 
         - https://github.com/search?p=2&q=boilerplate&type=Repositories
