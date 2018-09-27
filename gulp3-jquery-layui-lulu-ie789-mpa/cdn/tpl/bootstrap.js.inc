@@ -1,2 +1,0 @@
-<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

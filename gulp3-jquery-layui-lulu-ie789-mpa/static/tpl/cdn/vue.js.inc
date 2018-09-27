@@ -1,1 +1,0 @@
-<script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
