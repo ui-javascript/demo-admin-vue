@@ -94,7 +94,7 @@
   },
   "author": "luo0412",
   "dependencies": {
-    "less": "^3.0.4"
+    "less": "^2.7.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.4",
