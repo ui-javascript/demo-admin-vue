@@ -65,7 +65,7 @@ jQuery('#mobile-menu').meanmenu();
 /*----------------------------
   Nivo-Slider
 ------------------------------ */
-$('#mainSlider').nivoSlider({ 
+$('#mainSlider').nivoSlider({
 	effect: 'random',                 // Specify sets like: 'fold,fade,sliceDown' 
 	slices: 15,                       // For slice animations 
 	boxCols: 8,                       // For box animations 
@@ -463,4 +463,4 @@ $('.popup-link').magnificPopup({
 
 
 	
-})(jQuery);  
+})(jQuery);

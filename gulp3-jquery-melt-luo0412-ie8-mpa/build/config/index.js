@@ -32,8 +32,8 @@ exports.dev = {
     // 样式库
     stylesDir: `./src/assets/css`,
     stylesWatchFiles: [
-        `./src/assets/css/components/**/*.less`,
-        `./_${sysName}/static/css/**/*.less`
+        `./src/assets/css/components/**/*.{less,css}`,
+        `./_${sysName}/static/css/**/*.{less,css}`
     ],
 
     // 脚本库

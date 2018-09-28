@@ -22,7 +22,7 @@
 ```html
 <!-- 相对工程文件 eg "_melt" -->
 @@include("./header.inc")
-@@include("../src/assets/tpl/jquery.useful.js.inc")
+@@include("../src/assets/cdn/jquery.useful.js.inc")
 ```
 
 - static文件夹
