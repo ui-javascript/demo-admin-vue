@@ -1,0 +1,256 @@
+/* colors and typography */
+body {
+  margin: 0;
+  font: 1rem/1.4 "Helvetica Neue", "Lucida Grande", "Arial";
+  -webkit-font-smoothing: antialiased;
+  color: #223;
+}
+html {
+  background: #ECE9E9;
+  background: linear-gradient(to bottom right, 
+      #E0E9E9 5vmin,
+      #F8F0F0 calc(50% - 10vmin),
+      #F8F0E0 calc(50% + 10vmin),
+      #ECE9E9 calc(100% - 10vmin)) 
+      0 0/ 100% 100vh fixed;
+}
+:link {
+  color: #248;
+  text-decoration-skip: ink;
+}
+:visited {
+  color: #62A;
+}
+.filename:link {
+  text-decoration: none;
+  font-style: italic;
+}
+dt { 
+  font-weight: bold; 
+  background-color: rgba(50%, 75%, 100%, 0.3); 
+  padding: 0.2em 0;
+}
+dt + dt { padding-top: 0; }
+.directory dt {
+  font-weight: normal;
+}
+.directory dt .label {
+  font-weight: bold;
+}
+dl dl dt, .columns dt { 
+  background: linear-gradient(to right, rgba(50%, 75%, 100%, 0.3), transparent); 
+}
+dl.columns, dl.columns-children {
+  border-bottom: solid 3px rgba(50%, 75%, 100%, 0.3);
+}
+code, pre[data-type="programlisting"] { 
+  font-family: DejaVu Sans Mono, Lucida Console, Monaco, monospace; 
+  font-size: inherit; /* fix weird browser defaults */
+}
+code {
+  color: black;
+}
+h1 code, h2 code, h3 code, h4 code, h5 code, dt code { color: inherit; }
+
+/* layout */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+main {  
+  flex-grow: 1;
+  padding: 0 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+header, footer {
+  background: hsla(0, 0%, 100%, 0.5);
+  max-width: 50rem;
+  padding: 0 0.5rem;
+  box-sizing: content-box;
+}
+@media (min-width: 51rem) {
+  header, footer {
+    padding: 0 calc(50% - 25rem);
+  }
+}
+header {
+  padding-bottom: 0.5rem;
+}
+footer {
+  padding-top: 0.5rem;
+}
+p {
+  max-width: 45rem;
+}
+li {
+  max-width: 42rem;
+}
+header p {
+  font-style: italic;
+}
+header .title:link {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 150%;
+  margin-top: 0.5em;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+header nav > * {
+  display: inline-block;
+  text-align: center;
+}
+header nav .home {
+  flex-basis: 100%;
+}
+nav.toc li {
+  list-style: none;
+  margin-bottom: 0.5em;
+  line-height: 1.1;
+}
+@media (min-width: 24em) {
+  header nav .home + * {
+    order: -1;
+  }
+  header nav .home {
+    flex-basis: auto;
+  }
+}
+h1, h2, h3, h4, h5, dt {
+  line-height: 1.1;
+}
+h2, h3 {
+  margin: 2em 0 0.5em
+}
+.columns, dl.columns-children > dd {
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 0;
+  column-gap: 1em;
+  column-width: 31em; /* 2 narrow columns + 1 gap */
+  widows: 2;
+  orphans: 2;
+  min-height: 3em;
+}
+.columns.narrow {
+  column-width: 15em;
+}
+.columns > p:first-child,
+.columns > li:first-child > *:first-child {
+  margin-top: 0;
+}
+dl.columns-children > dd { margin-top: 1em; }
+
+dl.columns-children > dd > *:first-child { margin-top: 0; }
+
+li { list-style-position: initial; }
+ul > li { list-style-type: disc; }
+.directory li, .directory dd {
+  margin:  0 0 0.5em;
+  line-height: 1.1;  
+}
+li ul, li ol, dd ul, dd ol {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+li > p:first-child {
+  margin-top: 0.5em;
+}
+li > p:last-child {
+  margin-bottom: 0.5em;
+}
+
+dd {
+  margin-top: -0.5em;
+}
+dt {
+  break-inside: avoid;
+  -webkit-column-break-after: avoid;
+  break-after: avoid;
+}
+dd + dt {
+  clear: both;
+}
+dl dl {
+  padding-left: 1em;
+  border-left: thin solid;
+}
+dl dl dd {
+  margin-left: 0;
+}
+ul.directory > li {
+  list-style: none;
+}
+ol.directory > li {
+  list-style-position: inside;
+}
+.directory li > ul, .directory li > ol {
+  padding-left: 2em;
+}
+.directory li, .directory > dt {
+  text-indent: 0.5em hanging; /* One day, this will work. Maybe. */
+}
+@supports not (text-indent: 0.5em hanging) { /* sigh... */
+  .directory li, .directory > dt {
+    padding-left: 0.5em;
+    text-indent: -0.5em;
+  }
+  .directory li ol, .directory li ul,
+  .directory dd ol, .directory dd ul {
+    margin-left: -0.5em;
+  }
+}
+.thumb {
+  float: right; clear: right;
+  background: white;
+  margin: -0.2em 0 0.5em 0.5em; /* cancel out padding on parent dt */
+  
+  box-shadow: 2px 3px 1.5px rgba(50%, 75%, 100%, 0.3);
+  
+  width: auto;
+  max-width: 80px;
+  max-height: 80px;
+}
+
+/* Section/definition permalinks */
+.hash-link {
+  display: block; 
+  float: right; 
+  margin-left: 0.5em;
+}
+.hash-link:not(:hover):not(:focus) {
+  text-decoration: none;
+}
+@media print {
+  .hash-link { display: none; }
+}
+
+/* Latex equations & fallback */
+figure[data-type="equation"] {
+  border-style: none;
+  background-color: rgba(50%, 75%, 100%, 0.3);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  overflow-x: auto;
+  break-inside: avoid;
+}
+.columns figure[data-type="equation"] {
+  padding: 1rem 0.5rem;
+}
+figure[data-type="equation"]:last-child {
+  margin-bottom: 1em;
+}
+.latex-fallback { 
+  display: block;
+  max-width: 100%;
+}

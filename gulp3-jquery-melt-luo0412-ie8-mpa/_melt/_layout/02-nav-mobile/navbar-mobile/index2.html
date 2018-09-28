@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3种CSS3移动手机隐藏菜单UI界面设计</title>
+    <link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/default.css">
+
+    <link rel="stylesheet" href="css/demo-2.css">
+    <!--[if IE]>
+    <script src="https://cdn.staticfile.org/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="htmleaf-container">
+
+    <div class="screen">
+        <div class="navbar"></div>
+        <div class="list">
+            <div class="item">
+                <div class="img"></div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="item">
+                <div class="img"></div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="item">
+                <div class="img"></div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="item">
+                <div class="img"></div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="circle"></div>
+        <div class="menu">
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Share</a></li>
+                <li><a href="">Activity</a></li>
+                <li><a href="">Settings</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="burger">
+            <div class="x"></div>
+            <div class="y"></div>
+            <div class="z"></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/stopExecutionOnTimeout.js?t=1"></script>
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+    if ('ontouchstart' in window) {
+        var click = 'touchstart';
+    } else {
+        var click = 'click';
+    }
+    $('div.burger').on(click, function () {
+        if (!$(this).hasClass('open')) {
+            openMenu();
+        } else {
+            closeMenu();
+        }
+    });
+    $('div.menu ul li a').on(click, function (e) {
+        e.preventDefault();
+        closeMenu();
+    });
+
+    function openMenu() {
+        $('div.circle').addClass('expand');
+        $('div.burger').addClass('open');
+        $('div.x, div.y, div.z').addClass('collapse');
+        $('.menu li').addClass('animate');
+        setTimeout(function () {
+            $('div.y').hide();
+            $('div.x').addClass('rotate30');
+            $('div.z').addClass('rotate150');
+        }, 70);
+        setTimeout(function () {
+            $('div.x').addClass('rotate45');
+            $('div.z').addClass('rotate135');
+        }, 120);
+    }
+
+    function closeMenu() {
+        $('div.burger').removeClass('open');
+        $('div.x').removeClass('rotate45').addClass('rotate30');
+        $('div.z').removeClass('rotate135').addClass('rotate150');
+        $('div.circle').removeClass('expand');
+        $('.menu li').removeClass('animate');
+        setTimeout(function () {
+            $('div.x').removeClass('rotate30');
+            $('div.z').removeClass('rotate150');
+        }, 50);
+        setTimeout(function () {
+            $('div.y').show();
+            $('div.x, div.y, div.z').removeClass('collapse');
+        }, 70);
+    }
+</script>
+</body>
+</html>

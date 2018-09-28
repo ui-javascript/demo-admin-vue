@@ -1,0 +1,59 @@
+
+/**
+ * Header 10 stylesheet  
+ * */
+.standard-header {
+  z-index: 100;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 80px;
+  color: white;
+  position: fixed;
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+}
+.standard-header .navbar {
+  z-index: 2;
+  top: 0;
+}
+.standard-header .navbar.navbar-fixed-top {
+  top: 0 !important;
+}
+.main-logo{
+  margin-top: 15px;
+}
+.standard-header .navbar .nav{
+  margin-top: 25px;
+}
+.standard-header .navbar .nav > li {
+  margin-left: 15px;
+  display: inline-block;
+}
+.standard-header .navbar .nav > li:first-child {
+  margin-left: 0;
+}
+.standard-header .navbar .nav > li > a {
+  padding: 5px;
+  font-size: 12px;
+  line-height: 19px;
+  text-transform: uppercase;
+  font-family:"MontserratRegular";
+}
+.standard-header .navbar .navbar-form {
+  padding: 5px 0  5px 30px;
+}
+
+.standard-header #trigger-overlay{
+  display: none;
+  margin-top: 13px;
+}
+.overlay-hugeinc.open{
+  z-index: 100;
+}
+
+/*Layout Resets for standard-nav*/
+.slide, .mast-wrap{
+  padding-right: 0 !important;
+}

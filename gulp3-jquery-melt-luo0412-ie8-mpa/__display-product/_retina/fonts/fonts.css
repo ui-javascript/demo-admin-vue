@@ -1,0 +1,131 @@
+/*FONTS.CSS*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* Author: Designova.*/
+/* Website: http://www.designova.net */
+/* Copyright: (C) 2013 */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+/* CUSTOM FONTS ARE DEFINED HERE VIA CSS3 FONT-FACE TECHNOLOGY*/
+/* More info : http://www.littleboxofideas.com/blog/tutorials/how-do-i-implement-font-face */
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------*/
+/* Font: Montserrat Family */
+/* Source: Google Web Fonts Library */
+/* License Type: GPL */
+/*--------------------------------------------------------*/
+
+@font-face{ 
+font-family:"MontserratBold";
+src: url('Montserrat/montserrat-bold-webfont.eot'); 
+src: 
+url('Montserrat/montserrat-bold-webfont.woff') format('woff'), 
+url('Montserrat/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'), 
+url('Montserrat/montserrat-bold-webfont.ttf') format('truetype'), 
+url('Montserrat/montserrat-bold-webfont.svg#webfont') format('svg'); 
+}
+@font-face{ 
+font-family:"MontserratRegular";
+src: url('Montserrat/montserrat-regular-webfont.eot'); 
+src: 
+url('Montserrat/montserrat-regular-webfont.woff') format('woff'), 
+url('Montserrat/montserrat-regular-webfont.eot?#iefix') format('embedded-opentype'), 
+url('Montserrat/montserrat-regular-webfont.ttf') format('truetype'), 
+url('Montserrat/montserrat-regular-webfont.svg#webfont') format('svg'); 
+}
+
+/*--------------------------------------------------------*/
+/* Font: Open Sans Family */
+/* Source: Google Web Fonts Library */
+/* License Type: GPL */
+/*--------------------------------------------------------*/
+@font-face{ 
+font-family:"OpenSansRegular";
+src: url('OpenSans/OpenSans-Regular-webfont.eot'); 
+src: 
+url('OpenSans/OpenSans-Regular-webfont.woff') format('woff'), 
+url('OpenSans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), 
+url('OpenSans/OpenSans-Regular-webfont.ttf') format('truetype'), 
+url('OpenSans/OpenSans-Regular-webfont.svg#webfont') format('svg'); 
+}
+
+@font-face{ 
+font-family:"OpenSansItalic";
+src: url('OpenSans/OpenSans-Italic-webfont.eot'); 
+src: 
+url('OpenSans/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'), 
+url('OpenSans/OpenSans-Italic-webfont.woff') format('woff'), 
+url('OpenSans/OpenSans-Italic-webfont.ttf') format('truetype'), 
+url('OpenSans/OpenSans-Italic-webfont.svg#webfont') format('svg'); 
+}
+
+@font-face{ 
+font-family:"OpenSansBold";
+src: url('OpenSans/OpenSans-Bold-webfont.eot'); 
+src: 
+url('OpenSans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'), 
+url('OpenSans/OpenSans-Bold-webfont.woff') format('woff'), 
+url('OpenSans/OpenSans-Bold-webfont.ttf') format('truetype'), 
+url('OpenSans/OpenSans-Bold-webfont.svg#webfont') format('svg'); 
+}
+
+@font-face{ 
+font-family:"OpenSansLight";
+src: url('OpenSans/OpenSans-Light-webfont.eot'); 
+src: 
+url('OpenSans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'), 
+url('OpenSans/OpenSans-Light-webfont.woff') format('woff'), 
+url('OpenSans/OpenSans-Light-webfont.ttf') format('truetype'), 
+url('OpenSans/OpenSans-Light-webfont.svg#webfont') format('svg'); 
+}
+
+@font-face{ 
+font-family:"OpenSansLightItalic";
+src: url('OpenSans/OpenSans-LightItalic-webfont.eot'); 
+src: 
+url('OpenSans/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'), 
+url('OpenSans/OpenSans-LightItalic-webfont.woff') format('woff'), 
+url('OpenSans/OpenSans-LightItalic-webfont.ttf') format('truetype'), 
+url('OpenSans/OpenSans-LightItalic-webfont.svg#webfont') format('svg'); 
+}
+
+/*--------------------------------------------------------*/
+/* Font: Raleway Family */
+/* Source: FontSquirrel Library */
+/* License Type: GPL */
+/*--------------------------------------------------------*/
+@font-face{ 
+font-family:"RalewayRegular";
+src: url('raleway/Raleway-Regular-webfont.eot'); 
+src: 
+url('raleway/Raleway-Regular-webfont.eot?#iefix') format('embedded-opentype'), 
+url('raleway/Raleway-Regular-webfont.woff') format('woff'), 
+url('raleway/Raleway-Regular-webfont.ttf') format('truetype'), 
+url('raleway/Raleway-Regular-webfont.svg#webfont') format('svg'); 
+}
+@font-face{ 
+font-family:"RalewayLight";
+src: url('raleway/Raleway-Light-webfont.eot'); 
+src: 
+url('raleway/Raleway-Light-webfont.eot?#iefix') format('embedded-opentype'), 
+url('raleway/Raleway-Light-webfont.woff') format('woff'), 
+url('raleway/Raleway-Light-webfont.ttf') format('truetype'), 
+url('raleway/Raleway-Light-webfont.svg#webfont') format('svg'); 
+}
+@font-face{ 
+font-family:"RalewayBold";
+src: url('raleway/Raleway-Bold-webfont.eot'); 
+src: 
+url('raleway/Raleway-Bold-webfont.eot?#iefix') format('embedded-opentype'), 
+url('raleway/Raleway-Bold-webfont.woff') format('woff'), 
+url('raleway/Raleway-Bold-webfont.ttf') format('truetype'), 
+url('raleway/Raleway-Bold-webfont.svg#webfont') format('svg'); 
+}
+@font-face{ 
+font-family:"RalewayThin";
+src: url('raleway/Raleway-Thin-webfont.eot'); 
+src: 
+url('raleway/Raleway-Thin-webfont.eot?#iefix') format('embedded-opentype'), 
+url('raleway/Raleway-Thin-webfont.woff') format('woff'), 
+url('raleway/Raleway-Thin-webfont.ttf') format('truetype'), 
+url('raleway/Raleway-Thin-webfont.svg#webfont') format('svg'); 
+}
