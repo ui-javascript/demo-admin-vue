@@ -39,8 +39,7 @@ exports.dev = {
     // 脚本库
     libsName: 'mumuy',
     libsDevDir: './src/assets/libs/mumuy',
-    // browser || '{ajax,scroll}' 逗号间没空格
-    // 或者 '*' 所有的导报
+    // eg. browser || '{ajax,scroll}' 逗号间没空格 || '*' 所有的
     libsDevMods: '*',
     libsOutputDir: './static/libs',
 
