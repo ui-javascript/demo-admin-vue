@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" 
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="4in" height="4.75in" viewBox="-25 -50 640 760">
+    <title>The default viewport</title>   
+    <style type="text/css">
+        svg {
+            font: 24px sans-serif;
+        }
+    </style>
+    
+    <g>
+        <rect fill="gray" x="-20" y="-40" 
+              width="440" height="260"/>
+        <rect fill="white" width="400" height="200"/>
+        <text y="-10">&lt;svg width="400px" height="200px"&gt;</text>
+        <svg width="400" height="200">
+            <use xlink:href="viewport-grid.svg#grid" />
+        </svg>
+    </g>
+    
+    <g transform="translate(0,300)">
+        <rect fill="gray" x="-20" y="-40" 
+              width="6.4in" height="4.6in"/>
+        <rect fill="white" width="6in" height="4in"/>
+        <text y="-10">&lt;svg width="6in" height="4in"&gt;</text>
+        <svg width="6in" height="4in">
+            <use xlink:href="viewport-grid.svg#grid" />
+        </svg>
+    </g>
+</svg>
