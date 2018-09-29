@@ -8,12 +8,11 @@
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
 
-    "dev:firefly": "cross-env SYS_NAME=firefly node build/dev-server.js",
-    "build:firefly": "cross-env SYS_NAME=firefly node build/build.js",
+    "dev:melt": "cross-env SYS_NAME=melt node build/dev-server.js",
+    "build:melt": "cross-env SYS_NAME=melt node build/build.js",
 
     "dev:vux": "cross-env SYS_NAME=vux node build/dev-server.js",
     "build:vux": "cross-env SYS_NAME=vux node build/build.js",
-
 
     "unit": "cross-env BABEL_ENV=test SYS_NAME=topping karma start test/unit/karma.conf.js --single-run",
     "e2e": "cross-env SYS_NAME=topping node test/e2e/runner.js",

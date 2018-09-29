@@ -29,7 +29,7 @@
 
     import {mapGetters} from 'vuex'
     import {getList} from '../../api/exam'
-    import CountdownSvgCircle from '~/m/Countdown/CountdownSvgCircle'
+    import CountdownSvgCircle from '~/model/Countdown/CountdownSvgCircle'
     import RadioList from '../../components/RadioList'
 
     export default {

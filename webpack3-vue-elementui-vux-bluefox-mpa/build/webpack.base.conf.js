@@ -13,6 +13,7 @@ var entries = utils.getMultiEntry('./src/' + config.moduleName + '/*.js'); // �
 var chunks = Object.keys(entries);
 
 // 输出路径
+console.log('检测到以下页面：')
 console.log(chunks)
 
 // 工程文件根目录调整
