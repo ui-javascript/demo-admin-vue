@@ -1,22 +1,24 @@
 <template>
     <div class="sliderButton mt-10">
+
         <div class="stack-wrapper">
-            <TanTanPicker
+            <m-picker-tantan
                     ref="stack"
                     :pages="someList"
                     :stackinit="stackinit">
-            </TanTanPicker>
+            </m-picker-tantan>
         </div>
 
         <div class="controls">
             <button @click="prev" class="button"><i class="prev"></i><span class="text-hidden">prev</span></button>
             <button @click="next" class="button"><i class="next"></i><span class="text-hidden">next</span></button>
         </div>
+
     </div>
 </template>
 
 <script>
-    import TanTanPicker from "~/model/PickerTanTan";
+    import MPickerTantan from "~/model/tantan/PickerTanTan";
 
     import img1 from "../img/1.png"
     import img2 from "../img/2.png"
@@ -27,7 +29,6 @@
     import img7 from "../img/7.png"
 
     export default {
-        // el: '#stack',
         data() {
             return {
                 someList: [],
@@ -38,34 +39,20 @@
         },
         mounted() {
             let that = this
-            setTimeout(function () {
-                that.someList = [
-                    {
-                        html: `<img src="${img1}" alt="01">`
-                    },
-                    {
-                        html: `<img src="${img2}" alt="02">`
-                    },
-                    {
-                        html: `<img src="${img3}" alt="01">`
-                    },
-                    {
-                        html: `<img src="${img4}" alt="01">`
-                    },
-                    {
-                        html: `<img src="${img5}" alt="05">`
-                    },
-                    {
-                        html: `<img src="${img6}" alt="06">`
-                    },
-                    {
-                        html: `<img src="${img7}" alt="07">`
-                    }
-                ]
-            }, 2000)
+            // setTimeout(function () {
+            that.someList = [
+                {html: `<img src="${img1}" alt="01">`},
+                {html: `<img src="${img2}" alt="02">`},
+                {html: `<img src="${img3}" alt="01">`},
+                {html: `<img src="${img4}" alt="01">`},
+                {html: `<img src="${img5}" alt="05">`},
+                {html: `<img src="${img6}" alt="06">`},
+                {html: `<img src="${img7}" alt="07">`}
+            ]
+            // }, 2000)
         },
         components: {
-            TanTanPicker
+            MPickerTantan
         },
         methods: {
             prev() {
