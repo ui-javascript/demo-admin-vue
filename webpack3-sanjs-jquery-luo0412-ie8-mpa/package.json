@@ -6,8 +6,8 @@
   "scripts": {
     "install": "cnpm install",
     "remove": "rimraf node_modules",
-    "dev": "set SYS_NAME=san && node build/dev-server.js",
-    "build": "set SYS_NAME=san && node build/build.js",
+    "dev": "set SYS_NAME=lulu && node build/dev-server.js",
+    "build": "set SYS_NAME=lulu && node build/build.js",
     "lint": "set NODE_ENV=lint && webpack-dev-server --open",
     "lint2": "./node_modules/.bin/eslint *.js",
     "start": "http-server ./dist -p 8888 -o",
