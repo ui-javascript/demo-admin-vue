@@ -64,7 +64,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 include: [path.resolve(__dirname, 'src/views')],
-                use: ['style-loader', 'css-loade'],
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,

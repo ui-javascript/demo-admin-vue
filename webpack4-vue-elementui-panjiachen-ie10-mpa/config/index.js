@@ -11,7 +11,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {},
     output: {
-      path: path.resolve(__dirname, 'cache')
+      path: path.resolve(__dirname, '')
     },
 
     // Various Dev Server settings
@@ -47,10 +47,10 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../templates/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '..'),
     assetsSubDirectory: 'static',
 
     /**

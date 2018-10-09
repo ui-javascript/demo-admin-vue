@@ -8,6 +8,8 @@ const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
+const WriteFilePlugin = require('write-file-webpack-plugin')
+
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -31,11 +33,14 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   devServer: {
     clientLogLevel: 'warning',
     historyApiFallback: true,
-    hot: true,
+
+    // @attention
+    // https://github.com/gajus/write-file-webpack-plugin/blob/master/sandbox/webpack.config.js
+    hot: false,
     compress: true,
     host: HOST || config.dev.host,
     port: PORT || config.dev.port,
-    open: config.dev.autoOpenBrowser,
+    // open: config.dev.autoOpenBrowser,
     overlay: config.dev.errorOverlay
       ? { warnings: false, errors: true }
       : false,
@@ -53,11 +58,15 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new webpack.HotModuleReplacementPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: 'templates/index.html',
       template: 'index.html',
       inject: true,
       favicon: resolve('favicon.ico'),
       title: 'vue-admin-template'
+    }),
+    new WriteFilePlugin({
+      test: /static|templates/,
+      useHashIndex: false
     })
   ]
 })
@@ -80,7 +89,7 @@ module.exports = new Promise((resolve, reject) => {
             messages: [
               `Your application is running here: http://${
                 devWebpackConfig.devServer.host
-              }:${port}`
+              }:${port}/templates`
             ]
           },
           onErrors: config.dev.notifyOnErrors
