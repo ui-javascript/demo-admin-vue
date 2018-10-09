@@ -2,7 +2,7 @@
 const path = require('path')
 const utils = require('./utils')
 const webpack = require('webpack')
-const config = require('../config')
+const config = require('./config')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -16,7 +16,7 @@ function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
-const env = require('../config/prod.env')
+const env = require('./config/prod.env')
 
 // For NamedChunksPlugin
 const seen = new Set()
