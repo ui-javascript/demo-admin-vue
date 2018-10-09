@@ -6,13 +6,13 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
     devtool: 'source-map',
     entry: {
-        production: path.resolve(__dirname, './views/production/app.jsx'),
+        production: path.resolve(__dirname, './src/views/production/app.jsx'),
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].js',
+        path: path.resolve(__dirname, ''),
+        filename: 'static/js/[name].js',
         publicPath: '/',
-        chunkFilename: 'js/[name].js',
+        chunkFilename: 'static/js/[name].js',
     },
     resolve: {
         extensions: ['.js', '.json', '.jsx'],
@@ -59,11 +59,11 @@ module.exports = {
                         plugins: ['transform-runtime'],
                     },
                 },
-                include: [path.resolve(__dirname, 'views')],
+                include: [path.resolve(__dirname, 'src/views')],
             },
             {
                 test: /\.css$/,
-                include: [path.resolve(__dirname, 'views')],
+                include: [path.resolve(__dirname, 'src/views')],
                 use: ['style-loader', 'css-loade'],
             },
             {
@@ -84,7 +84,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'production.html',
-            template: path.resolve(__dirname, './views/production/index.ejs'),
+            template: path.resolve(__dirname, './src/views/production/index.ejs'),
             inject: 'body',
             hase: false,
             minify: {
