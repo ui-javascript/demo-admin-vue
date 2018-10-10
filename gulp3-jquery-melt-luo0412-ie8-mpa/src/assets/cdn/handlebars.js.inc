@@ -1,1 +1,0 @@
-<script src="https://cdn.bootcss.com/handlebars.js/4.0.11/handlebars.min.js"></script>

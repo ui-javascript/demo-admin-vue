@@ -1,6 +1,7 @@
 # README
 
 - 下划线开头的目录里的项目没试过
+
 - get技能
     - github搜索 'boilerplate' 'xx spa|mpa|templates' 
         - https://github.com/search?p=2&q=boilerplate&type=Repositories
@@ -37,4 +38,7 @@
     - 一些公司开源的脚手架比较
     - SSR、SEO优化等
     
+# gulp有关
+
+->> 搬到旁边仓库    
 
