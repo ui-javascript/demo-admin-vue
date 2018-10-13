@@ -10,8 +10,8 @@
     "install:npm": "npm install",
     "remove": "rimraf node_modules",
     "dev": "webpack-dev-server --config webpack.config.dev.js --watch-poll --hot --inline --progress --open",
-    "build": "webpack --config webpack.config.prod.js",
-    "dev:ie8": "webpack-dev-server --config webpack.config.dev.js --watch-poll --progress --open"
+    "dev:ie8": "webpack-dev-server --config webpack.config.dev.js --watch-poll --progress --open",
+    "build": "webpack --config webpack.config.prod.js"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.4",
