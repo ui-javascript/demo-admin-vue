@@ -1,5 +1,11 @@
 # README
 
+- 栗子命名
+
+```
+构建工具v + js-framework + UI + author + 应用场景(h5/pc/IE?) + mpa/spa
+```
+
 - 下划线开头的目录里的项目没试过
 
 - get技能
@@ -7,6 +13,9 @@
         - https://github.com/search?p=2&q=boilerplate&type=Repositories
 
 ```
+npm i -g rimraf
+用rimraf删包
+ 
 "scripts": {
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
@@ -40,5 +49,9 @@
     
 # gulp有关
 
-->> 搬到旁边仓库    
+->> 搬到旁边仓库 natural-cli-gulp
+
+# 问题
+
+- ERROR in Cannot find module 'node-sass'
 
