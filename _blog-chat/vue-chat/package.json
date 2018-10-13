@@ -3,6 +3,7 @@
   "description": "A Vue.js project",
   "author": "coffcer",
   "scripts": {
+
     "dev": "webpack-dev-server --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
