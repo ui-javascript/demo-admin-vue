@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+$table-border: 1px solid $border;
+$table-text-color: $text;
+$table-header-color: $text-light;
+$table-row-hover-background: $white-bis;
+$table-current-row-background: $white;
+$table-header-background: $background;
+$table-footer-background: $background;
+$table-fixed-box-shadow: 0 0 10px rgba(0, 0, 0, .12);
+$context: '.k-table';
+
+#{$context} {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  background-color: $white;
+  overflow: scroll;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  border: $table-border;
+
+  &--tc {
+    .k-table__cell {
+      text-align: center;
+    }
+  }
+
+  &--tr {
+    .k-table__cell {
+      text-align: right;
+    }
+  }
+
+  &--tl {
+    .k-table__cell {
+      text-align: left;
+    }
+  }
+
+  &--hovered {
+    #{$context}__row {
+      &:hover {
+        background: $table-row-hover-background;
+      }
+    }
+  }
+
+  &__header {
+    overflow: hidden;
+    .k-table__column {
+      background-color: $table-header-background; // rgb(238, 241, 246);
+      color: $text-light;
+      font-weight: normal;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    .k-table__cell {
+      line-height: 36px; // 与 input 持平
+    }
+    .k-select {
+      margin-top: -1px;
+    }
+  }
+
+  &__cell {
+    position: relative;
+    word-wrap: normal;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &--empty {
+
+    }
+    //.k-select,
+    //.k-button {
+    //  display: block;
+    //  margin: -18px -20px;
+    //}
+
+    //button.k-button,
+    .k-select .k-input__inner,
+    .k-select:hover .k-input__inner {
+      border-color: transparent;
+      background-color: transparent;
+      color: inherit;
+      border-top: 0;
+      border-bottom: 0;
+      box-shadow: none;
+    }
+    div.k-select .k-input__icon {
+      color: $primary;
+    }
+  }
+
+  &__cell--has-select {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+
+  &__row {
+    background: $table-current-row-background;
+    transition: background-color .25s ease;
+    //&:hover {
+    //  background: $table-row-hover-background;
+    //}
+  }
+
+  &__column {
+    min-width: 0;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    border-bottom: 1px solid $border;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  &__column--has-checked {
+    // max-width: 0;
+    position: relative;
+    width: 36px;
+
+    > .k-table__cell {
+      @include overlay;
+      width: 36px;
+      > .k-checkbox {
+        @include overlay(0);
+        .k-checkbox__input {
+          position: static;
+        }
+        .k-checkbox__inner {
+          position: absolute;
+          left: 50%; // (36 - 14)/2 = 11px
+          top: 50%;
+          margin-left: -7px;
+          margin-top: -7px;
+        }
+      }
+      > .k-radio {
+        @include overlay(0);
+        .k-radio__input {
+          position: static;
+        }
+        .k-radio__inner {
+          position: absolute;
+          left: 50%; // (36 - 14)/2 = 11px
+          top: 50%;
+          margin-left: -7px;
+          margin-top: -7px;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    .k-table__column {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color: $table-footer-background;
+    }
+    .k-table__cell--has-checked {
+      padding-left: 11px;
+      .k-checkbox {
+        margin-right: 14px;
+      }
+      .k-checkbox__label {
+        padding-left: 15px;
+      }
+    }
+    &--empty {
+      min-height: 20px;
+    }
+  }
+
+}
+
+.k-table--small {
+  .k-table__column {
+    font-size: $size-small;
+  }
+
+  .k-table__cell--has-checked {
+    .k-checkbox__label {
+      font-size: $size-small;
+    }
+  }
+
+  .k-table__header {
+    .k-table__column {
+      font-size: $size-tiny;
+    }
+    .k-table__cell--has-select {
+      .k-input__inner {
+        font-size: $size-tiny;
+      }
+      .k-input__icon {
+        width: 20px;
+      }
+    }
+  }
+}
+
+.k-table--bordered {
+  .k-table__column {
+    border: $table-border;
+  }
+}
+
+.k-table__column--bordered {
+  border: $table-border;
+}
+
+.k-table__column--right-bordered {
+  border-right: $table-border;
+}
+
+.k-table--striped {
+
+}
+
+.k-table--narrow {
+  .k-table__body {
+    .k-table__column {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

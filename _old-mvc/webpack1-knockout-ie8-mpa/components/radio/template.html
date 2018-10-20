@@ -1,0 +1,32 @@
+
+  <label data-bind="css: labelCssObj" role="radio" class="k-radio">
+    <span data-bind="css: innerCssObj" class="k-radio__input">
+      <!-- ko ifnot:customized -->
+      <span class="k-radio__inner">
+          <i class="fa fa-circle-thin k-radio__border" style="z-index: 1;"></i>
+          <i class="fa fa-dot-circle-o k-radio__dot" style="z-index: 0"></i>
+        <!-- ko if: disabled -->
+        <i class="fa fa-circle k-radio__background" style="z-index: -1;"></i>
+        <!-- /ko -->
+        <!-- ko if: useThickened -->
+        <i class="fa fa-circle-o k-radio__border" style="z-index: 1;"></i>
+        <!-- /ko -->
+      </span>
+      <!-- /ko -->
+      <!-- ko if: checkedValue() -->
+      <input
+        data-bind="hasFocus: hasFocus, checked: checked, disable: disabled, checkedValue: checkedValue, attr: { value: value, name: name }"
+        type="radio" class="k-radio__original">
+      <!-- /ko -->
+      <!-- ko if: !checkedValue() -->
+      <input data-bind="hasFocus: hasFocus, checked: checked, disable: disabled, attr: { value: value, name: name }"
+             type="radio" class="k-radio__original">
+      <!-- /ko -->
+    </span>
+    <!-- ko ifnot:customized -->
+    <span data-bind="text: label" class="k-radio__label"></span>
+    <!-- /ko -->
+    <!-- ko if:customized -->
+      <!-- ko template: { nodes: $componentTemplateNodes } --><!-- /ko -->
+    <!-- /ko -->
+  </label>
