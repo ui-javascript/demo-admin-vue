@@ -1,0 +1,9 @@
+<div class="k-message k-message--fade" data-bind="slideUp: show, afterSlide: afterSlide, css: typeClassName">
+  <i class="k-message__icon has-text-centered" data-bind="css: iconClassName"></i>
+  <div class="k-message__group" data-bind="css:{ 'is-with-icon': iconClassName }">
+    <p class="k-message__box">
+      <span data-bind="text:message"></span>
+    </p>
+    <div data-bind="visible:showClose,click:function(){close($element)}" class="k-message--close fa fa-times"></div>
+  </div>
+</div>
