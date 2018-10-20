@@ -1,6 +1,0 @@
-dist/
-.temp/
-node_modules
-.DS_Store
-/.idea/workspace.xml
-yarn-error.log
