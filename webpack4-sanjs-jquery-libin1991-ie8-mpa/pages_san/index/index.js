@@ -1,11 +1,19 @@
+// require("babel-polyfill")
 require("es5-polyfill")
-// import 'es5-shim'; //IE8 ^4.5.10
-require('es5-shim')
-// require('es5-shim/es5-sham')
 
-import 'object-create-ie8';//IE8, 我写的库，这样就不用加上es5-sham
-import 'object-defineproperty-ie8';//IE8， 我写的库
+//IE8 ^4.5.10
+// import 'es5-shim';
+// import 'object-create-ie8';
+import 'object-defineproperty-ie8';
 import 'console-polyfill';
+
+//比IE8的JSON好用
+// import 'json3';
+//性能超高的Promise实现
+// import 'bluebird';
+// import 'fetch-polyfill2';
+// cdn引入的
+// 不是包导入的
 import san from 'san'
 
 const MyApp = san.defineComponent({

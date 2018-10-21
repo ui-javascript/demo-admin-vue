@@ -15,7 +15,7 @@
     "IE8_DEFAULT": "true",
     "IE8": "true",
     "PAGES_DEFAULT": "pages",
-    "PAGES": "pages_vue",
+    "PAGES": "pages_san",
     "CDN_DEFAULT": "https://www.bootcdn.cn/",
     "CDN": "/"
   },

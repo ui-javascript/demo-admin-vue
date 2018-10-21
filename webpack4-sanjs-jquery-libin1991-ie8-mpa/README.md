@@ -1,6 +1,70 @@
 # README
 
-- san.js目前版本需要cdn引入，webpack打包出来IE8+源码报错
+- 关于san.js
+
+    - 现在的需求是要么兼容IE8给xp用，要么所有IE都不考虑
+    - 仅打包代码可能兼容IE8，开发时要热更新的，别指望了
+    - san.js目前版本看来只能cdn引入，webpack打包出来IE8会显示源码报错
+    - 一旦用到san-mui之后 就别指望兼容了 @deprecated
+    - 最后 为什么我年纪轻轻要兼容IE8 😭
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>San 演示</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+    <!--[if lt IE 8]>
+    <script>
+        if (typeof document.querySelector === 'undefined') {
+            document.querySelector = function (target) {
+                return document.getElementsByTagName(target)[0] || null;
+            }
+        }
+    </script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://cdn.bootcss.com/es5-shim/4.5.10/es5-shim.min.js"></script>
+    <script src="https://cdn.bootcss.com/es5-shim/4.5.10/es5-sham.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script src="https://cdn.bootcss.com/nwmatcher/1.4.2/nwmatcher-base.js"></script>
+    <![endif]-->
+
+    <script src="https://unpkg.com/san@latest/dist/san.dev.js"></script>
+    <!--<script src="https://unpkg.com/san@latest"></script>-->
+</head>
+<body>
+
+<div id="app"></div>
+
+</body>
+</html>
+
+入口文件兼容加上
+
+<script>
+// require("babel-polyfill")
+require("es5-polyfill")
+
+//IE8 ^4.5.10
+// import 'es5-shim';
+// import 'object-create-ie8';
+import 'object-defineproperty-ie8';
+import 'console-polyfill';
+
+//比IE8的JSON好用
+// import 'json3';
+//性能超高的Promise实现
+// import 'bluebird';
+// import 'fetch-polyfill2';
+</script>
+
+```
 
 # 备份
 
