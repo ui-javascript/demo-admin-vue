@@ -8,7 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const pageConfig = require('./page.config.js');
+const pageConfig = require('./mpa.config.js');
 
 var OpenBrowserPlugin = require('open-browser-webpack-plugin'); //webpack 启动后自动打开浏览器
 
@@ -165,7 +165,7 @@ if(pageConfig && Array.isArray(pageConfig)) {
 		webpackConfig.entry[page.name] = `./${page.js}`;
 		webpackConfig.plugins.push(new HtmlWebpackPlugin({
 			filename: path.join(__dirname, `/dist/${page.name}`),
-			template: path.join(__dirname,  page.html),
+			template: path.join(__dirname,  page.template),
 			inject: true,
 			chunks: [page.name],
 			inlineSource: '.(js|css)$',

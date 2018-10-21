@@ -104,6 +104,11 @@ import 'console-polyfill';
 
 ```
 
+# TODO
+
+- static路径
+- inline html
+
 ---
 
 # 开箱即用的多页面webpack脚手架

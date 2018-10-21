@@ -8,7 +8,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const es3ifyPlugin = require('es3ify-webpack-plugin-v2');
-const pageConfig = require('./page.config.js');
+const pageConfig = require('./mpa.config.js');
 
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; //webpack可视化
 
@@ -198,7 +198,7 @@ let webpackConfig = {
 };
 
 if (IE8) {
-    console.log('逆天作死地兼容IE8+ =================== ')
+    console.log('这个少年在作死地兼容IE8+ =================== ')
     // webpackConfig.entry['es5-polyfill'] = 'es5-polyfill'
     webpackConfig.plugins.unshift(new es3ifyPlugin());
     webpackConfig.plugins.push(
@@ -238,7 +238,7 @@ if (pageConfig && Array.isArray(pageConfig)) {
         webpackConfig.entry[page.name] = `./${page.js}`;
         webpackConfig.plugins.push(new HtmlWebpackPlugin({
             filename: path.join(__dirname, `/dist/${page.name}`),
-            template: path.join(__dirname, page.html),
+            template: path.join(__dirname, page.template),
             inject: true,
             entry: page.name,
             chunks: [page.name],

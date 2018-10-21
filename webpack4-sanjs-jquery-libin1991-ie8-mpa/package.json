@@ -16,8 +16,13 @@
     "IE8": "true",
     "PAGES_DEFAULT": "pages",
     "PAGES": "pages_san",
-    "CDN_DEFAULT": "https://www.bootcdn.cn/",
-    "CDN": "/"
+    "CDN_DEFAULT": "/",
+    "CDN_DEFAULT2": "https://www.bootcdn.cn/",
+    "CDN": "/",
+    "MODULES_DEFAULT": "*",
+    "MODULES_DEFAULT2": "index",
+    "MODULES_DEFAULT3": "{index,router,todo}",
+    "MODULES": "*"
   },
   "repository": {
     "type": "git",

@@ -1,12 +1,18 @@
 <template>
-    <div class="hello">hello {{msg}}</div>
+    <div>
+        <div class="hello">hello {{msg}}</div>
+
+        <input type="text" value="{= name =}">
+        <p class="hello">Hello {{name}}!</p>
+    </div>
 </template>
 
 <script>
     export default {
         initData () {
             return {
-                msg: 'world'
+                msg: 'world',
+                name: 'hello'
             };
         }
     }
@@ -14,6 +20,6 @@
 
 <style>
     .hello {
-        color: blue;
+        color: steelblue;
     }
 </style>
