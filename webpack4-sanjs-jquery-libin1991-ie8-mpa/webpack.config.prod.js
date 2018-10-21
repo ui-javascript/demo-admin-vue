@@ -170,7 +170,7 @@ let webpackConfig = {
             {
                 from: path.resolve(__dirname, './static'),
                 to: '',
-                ignore: ['.*']
+                ignore: myConfig.COPYDIR_IGNORE.replace(/\s+/g,"").split(',')
             }
         ]),
         new BundleAnalyzerPlugin()
@@ -253,11 +253,19 @@ if (pageConfig && Array.isArray(pageConfig)) {
             inlineSource: '.(js|css)$',
             // minify:false,
             minify: {
-                removeComments: true,
-                collapseWhitespace: true,
-                removeAttributeQuotes: true
                 // more options:
                 // https://github.com/kangax/html-minifier#options-quick-reference
+                removeComments: true,
+                collapseWhitespace: true,
+                removeAttributeQuotes: true,
+                removeRedundantAttributes: true,
+                // removeScriptTypeAttributes: true,
+                // removeStyleLinkTypeAttributes: true,
+                // useShortDoctype: true,
+                collapseInlineTagWhitespace: true,
+                // minifyCSS: true,
+                // minifyJS: true,
+                // minifyURLs: true
             },
             chunksSortMode: 'dependency'
         }))

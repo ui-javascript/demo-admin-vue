@@ -173,7 +173,7 @@ if(pageConfig && Array.isArray(pageConfig)) {
 			minify: {
 				removeComments: true,
 				collapseWhitespace: true,
-				removeAttributeQuotes: true
+				removeAttributeQuotes: true,
 			},
 			chunksSortMode: 'dependency'
 		}))
