@@ -138,19 +138,20 @@ let webpackConfig = {
 			url: 'http://localhost:' + PORT
 		}), //自动打开浏览器
 		//设置每一次build之前先删除dist
-		new CleanWebpackPlugin(
-			['dist/*', ], 　 //匹配删除的文件  
-			{
-				root: __dirname, //根目录  
-				verbose: true, //开启在控制台输出信息  
-				dry: false //启用删除文件  
-			}
-		)
+		// new CleanWebpackPlugin(
+		// 	['dist/*', ], 　 //匹配删除的文件
+		// 	{
+		// 		root: __dirname, //根目录
+		// 		verbose: true, //开启在控制台输出信息
+		// 		dry: false //启用删除文件
+		// 	}
+		// )
 	],
 	// 起本地服务
 	devServer: {
 		compress: true, // 服务器返回浏览器的时候是否启动gzip压缩
-		contentBase: "./dist/",
+		contentBase: [path.join(__dirname, "dist"), path.join(__dirname, "static")],
+        // publicPath: "./static/",
 		historyApiFallback: true,
 		inline: true,
 		hot: true,

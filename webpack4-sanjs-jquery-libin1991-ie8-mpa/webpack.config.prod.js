@@ -6,6 +6,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const es3ifyPlugin = require('es3ify-webpack-plugin-v2');
 const pageConfig = require('./mpa.config.js');
@@ -165,6 +166,13 @@ let webpackConfig = {
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify("production")
         }),
+        new CopyWebpackPlugin([
+            {
+                from: path.resolve(__dirname, './static'),
+                to: '',
+                ignore: ['.*']
+            }
+        ]),
         new BundleAnalyzerPlugin()
     ],
     optimization: {
