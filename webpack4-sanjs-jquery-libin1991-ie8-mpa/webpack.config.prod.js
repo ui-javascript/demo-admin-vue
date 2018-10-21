@@ -198,7 +198,7 @@ let webpackConfig = {
 };
 
 if (IE8) {
-    console.log('逆天地兼容IE8+ ~~~')
+    console.log('逆天作死地兼容IE8+ =================== ')
     // webpackConfig.entry['es5-polyfill'] = 'es5-polyfill'
     webpackConfig.plugins.unshift(new es3ifyPlugin());
     webpackConfig.plugins.push(

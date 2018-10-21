@@ -53,6 +53,7 @@ require("es5-polyfill")
 
 //IE8 ^4.5.10
 // import 'es5-shim';
+// 司徒大佬的库，关键时刻还是...
 // import 'object-create-ie8';
 import 'object-defineproperty-ie8';
 import 'console-polyfill';
@@ -63,7 +64,6 @@ import 'console-polyfill';
 // import 'bluebird';
 // import 'fetch-polyfill2';
 </script>
-
 ```
 
 # 备份
