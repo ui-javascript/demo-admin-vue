@@ -8,7 +8,7 @@ module.exports = {
 
     // ======== 工程文件夹所在
     // 默认 "pages"
-    PAGES: "pages_san",
+    PAGES: "pages_vue_chat",
 
     // 路径替换
     // 相对路径    '/'
