@@ -10,23 +10,6 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server  --hot --inline  --watch --host  0.0.0.0 --config webpack.config.dev.js --mode development",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js --mode production"
   },
-  "myConfig": {
-    "PORT": 9527,
-    "IE8_DEFAULT": "true",
-    "IE8": "true",
-    "PAGES_DEFAULT": "pages",
-    "PAGES": "pages_san",
-    "CDN_DEFAULT": "/",
-    "CDN_DEFAULT2": "https://www.bootcdn.cn/",
-    "CDN": "/",
-    "MODULES_DEFAULT": "*",
-    "MODULES_DEFAULT2": "index",
-    "MODULES_DEFAULT3": "{index,router,todo}",
-    "MODULES": "*",
-    "COPYDIR_IGNORE_DEFAULT": "",
-    "COPYDIR_IGNORE_DEFAULT2": "plus/lulu/**,plus/layui/**",
-    "COPYDIR_IGNORE": "plus/lulu/**"
-  },
   "repository": {
     "type": "git",
     "url": ""
@@ -97,7 +80,7 @@
     "san-loader": "^0.0.7",
     "style-ext-html-webpack-plugin": "^3.4.7",
     "style-loader": "^0.21.0",
-    "uglifyjs-webpack-plugin": "^0.4.6",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.0.1",
     "vue-loader": "^15.3.0",
     "vue-style-loader": "^4.1.1",

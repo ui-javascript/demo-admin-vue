@@ -1,22 +1,24 @@
 /* eslint-disable */
 const webpack = require('webpack');
 const path = require('path')
+
+//  常用组件
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const es3ifyPlugin = require('es3ify-webpack-plugin-v2');
-const pageConfig = require('./mpa.config.js');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; //webpack可视化
 
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; //webpack可视化
+// 引入配置
+const pageConfig = require('./mpa.config');
+const myConfig = require("./project.config")
+const CDN = myConfig.CDN
+const tolerateIE8 = myConfig.IE8 === true
 
-const myConfig = require("./package.json").myConfig
-var CDN = myConfig.CDN
-var IE8 = myConfig.IE8 === 'true'
-
+// 处理路径
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
@@ -53,7 +55,7 @@ let webpackConfig = {
     devtool: false,
     // 配置出口
     output: {
-        path: path.join(__dirname, "./dist/"),
+        path: resolve("./dist/"),
         filename: 'js/[name].[hash:7].js',
         publicPath: CDN
     },
@@ -62,13 +64,19 @@ let webpackConfig = {
         alias: {
             vue$: 'vue/dist/vue.esm.js',
             '@': resolve('src'),
+            '@m': resolve('src/cmpt-melt/model'),
+            '@e': resolve('src/cmpt-melt/effects'),
+            '@l': resolve('src/cmpt-melt/layout'),
+            '@t': resolve('src/cmpt-melt/toolbox'),
             // san: 'san/dist/san.dev.js'
         }
     },
     externals: {
         jquery: 'window.$',
         $: 'window.$',
-        san: 'window.san'
+        san: 'window.san',
+        seajs: 'window.seajs',
+        requirejs: 'window.requirejs',
     },
     module: {
         rules: [{
@@ -99,7 +107,7 @@ let webpackConfig = {
             {
                 test: /\.html$/,
                 loader: 'html-withimg-loader',
-                include: [path.join(__dirname, "./src")],
+                include: [resolve("./src")],
                 options: {
                     limit: 10000,
                     // min:false,
@@ -152,7 +160,7 @@ let webpackConfig = {
         new ExtractTextPlugin({
             filename: 'css/[name].[hash:7].css'
         }),
-        //设置每一次build之前先删除dist
+        // 设置每一次build之前先删除dist
         new CleanWebpackPlugin(
             ['dist/*',], 　 //匹配删除的文件
             {
@@ -162,17 +170,15 @@ let webpackConfig = {
             }
         ),
         new ChunksFromEntryPlugin(),
-        //默认添加NODE_ENV为production
+        // 默认添加NODE_ENV为production
         new webpack.DefinePlugin({
             "process.env.NODE_ENV": JSON.stringify("production")
         }),
-        new CopyWebpackPlugin([
-            {
-                from: path.resolve(__dirname, './static'),
-                to: '',
-                ignore: myConfig.COPYDIR_IGNORE.replace(/\s+/g,"").split(',')
-            }
-        ]),
+        new CopyWebpackPlugin([{
+            from: path.resolve(__dirname, './static'),
+            to: '',
+            ignore: myConfig.COPYDIR_IGNORE.replace(/\s+/g, "").split(',')
+        }]),
         new BundleAnalyzerPlugin()
     ],
     optimization: {
@@ -205,48 +211,51 @@ let webpackConfig = {
     }
 };
 
-if (IE8) {
+if (tolerateIE8) {
     console.log('这个少年在作死地兼容IE8+ =================== ')
     // webpackConfig.entry['es5-polyfill'] = 'es5-polyfill'
     webpackConfig.plugins.unshift(new es3ifyPlugin());
-    webpackConfig.plugins.push(
-        new UglifyJsPlugin({
-            mangle: {
-                screw_ie8: false
-            },
-            mangleProperties: {
-                screw_ie8: false,
-            },
-            compress: {
-                screw_ie8: false,
-                properties: false,
-                warnings: false
-            },
-            output: {
-                screw_ie8: false,
-                beautify: true,
-                quote_keys: true,
-            }
-        })
-    )
+    // 旧版本写法
+    // webpackConfig.plugins.push(
+    //     new UglifyJsPlugin({
+    //         mangle: {
+    //             screw_ie8: false
+    //         },
+    //         mangleProperties: {
+    //             screw_ie8: false,
+    //         },
+    //         compress: {
+    //             screw_ie8: false,
+    //             properties: false,
+    //             warnings: false
+    //         },
+    //         output: {
+    //             screw_ie8: false,
+    //             beautify: true,
+    //             quote_keys: true,
+    //         }
+    //     })
+    // )
 }
 
-else {
-    webpackConfig.plugins.push(
-        new UglifyJsPlugin({
-        	sourceMap: false,
-        	parallel: true,
-        }),
-    )
-}
+
+webpackConfig.plugins.push(
+    new UglifyJsPlugin({
+        uglifyOptions: {
+            ie8: tolerateIE8
+        },
+        sourceMap: true,
+        parallel: true,
+    })
+)
 
 
 if (pageConfig && Array.isArray(pageConfig)) {
     pageConfig.map(page => {
         webpackConfig.entry[page.name] = `./${page.js}`;
         webpackConfig.plugins.push(new HtmlWebpackPlugin({
-            filename: path.join(__dirname, `/dist/${page.name}`),
-            template: path.join(__dirname, page.template),
+            filename: resolve(`/dist/${page.name}`),
+            template: resolve(page.template),
             inject: true,
             entry: page.name,
             chunks: [page.name],
@@ -262,7 +271,7 @@ if (pageConfig && Array.isArray(pageConfig)) {
                 // removeScriptTypeAttributes: true,
                 // removeStyleLinkTypeAttributes: true,
                 // useShortDoctype: true,
-                collapseInlineTagWhitespace: true,
+                // collapseInlineTagWhitespace: true,
                 // minifyCSS: true,
                 // minifyJS: true,
                 // minifyURLs: true
