@@ -19,7 +19,7 @@ module.exports = {
     // 默认所有 "*"
     // 指定单个模块 "index"
     // 指定多个模块  "{index,router,todo}"
-    MODULES: "*",
+    MODULES: "todo",
 
     // ========= 拷贝忽略
     // 默认不忽略 ""

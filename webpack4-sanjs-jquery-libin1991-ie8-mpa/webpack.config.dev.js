@@ -10,7 +10,8 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin'); //webpack 启�
 
 // 配置文件
 const pageConfig = require('./mpa.config');
-const PORT = require("./project.config").PORT
+const myConfig = require("./project.config")
+const PORT = myConfig.PORT
 
 // 处理路径
 function resolve(dir) {
@@ -26,9 +27,10 @@ let webpackConfig = {
         path: resolve("./dist/"),
         filename: 'js/[name].[hash:7].js',
         publicPath: '/',
+        globalObject: 'this'
     },
     resolve: {
-        extensions: [".js", ".css", ".json", ".vue", ".san"],
+        extensions: [".js", ".css", ".less", ".json", ".vue", ".san"],
         alias: {
             vue$: 'vue/dist/vue.esm.js',
             '@': resolve('src'),
@@ -50,7 +52,7 @@ let webpackConfig = {
         rules: [{
             test: /\.js$/,
             loader: 'babel-loader',
-            include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+            include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client', resolve(myConfig.PAGES))]
         },
             {
                 test: /\.vue$/,
@@ -80,11 +82,6 @@ let webpackConfig = {
                 }
             },
             {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                include: [resolve("./src")]
-            },
-            {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
@@ -106,22 +103,26 @@ let webpackConfig = {
                 options: {
                     limit: 10000,
                     name: 'fonts/[name].[hash:7].[ext]'
-                }
+                },
+                include: [resolve("./src")],
             },
-
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     // 这种方式引入css文件就不需要style-loader了
                     use: ['css-loader?minimize&sourceMap=false', "postcss-loader"],
-                })
-
+                    // use: ['style-loader', 'css-loader', 'postcss-loader'],
+                }),
+                exclude: /node_modules/,
+                include: [resolve(myConfig.PAGES), resolve('src')],
             },
             {
                 test: /\.less$/,
                 use: ExtractTextPlugin.extract({
-                    use: ['css-loader?minimize&sourceMap=false', 'less-loader', "postcss-loader"],
-                })
+                    use: ['css-loader?minimize&sourceMap=false', "postcss-loader", 'less-loader'],
+                    // use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
+                }),
+                include: [resolve(myConfig.PAGES), resolve('src')],
             },
         ]
     },

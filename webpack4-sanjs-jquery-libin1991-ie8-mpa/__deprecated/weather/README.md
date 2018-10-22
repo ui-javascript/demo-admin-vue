@@ -1,0 +1,1 @@
+vue-touch需要安装 vue-touch@next

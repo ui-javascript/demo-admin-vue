@@ -132,7 +132,7 @@ let webpackConfig = {
                 }
             },
             {
-                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                test: /\.(eot|svg|woff2?|eot|ttf|otf)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
@@ -141,6 +141,7 @@ let webpackConfig = {
             },
             {
                 test: /\.css$/,
+                loader: 'css-loader',
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader?minimize&sourceMap=false', "postcss-loader"],//这种方式引入css文件就不需要style-loader了
                 })
@@ -148,8 +149,10 @@ let webpackConfig = {
             },
             {
                 test: /\.less$/,
+                exclude: /node_modules/,
                 use: ExtractTextPlugin.extract({
-                    use: ['css-loader?minimize&sourceMap=false', 'less-loader', "postcss-loader"],
+                    fallback: "style-loader",
+                    use: ['css-loader?minimize&sourceMap=false', "postcss-loader",'less-loader'],
                 })
             },
         ]

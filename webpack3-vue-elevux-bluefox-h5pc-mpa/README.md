@@ -7,6 +7,7 @@
 - vux原作者的项目在 _vux 下
 - 移除了原作者说的二级目录支持，看着烦
 - 配了postcss-px2rem插件 仅vue视图文件里的px会被转化成rem 谨慎,小心被坑!!!
+- 手机考试 elementUI https://gitee.com/luo0412/topping
 
 # 遇到的问题
 
