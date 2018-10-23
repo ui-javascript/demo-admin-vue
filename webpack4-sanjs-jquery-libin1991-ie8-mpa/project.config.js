@@ -29,7 +29,7 @@ module.exports = {
     // 1. 默认所有 "*"
     // 2. 指定单个模块 "index"
     // 3. 指定多个模块  "{index,router,todo}"
-    MODULES: "happyfri",
+    MODULES: "todo",
 
     // ========= 拷贝忽略
     // 1. 默认不忽略 ""
@@ -53,8 +53,8 @@ module.exports = {
         // 'components': resolve('pages_vue_app/neteasecloud/components'),
 
         /* happyfri配置 ================ */
-        'src': resolve('pages_vue_app/happyfri'),
-        'assets': resolve('pages_vue_app/happyfri/assets'),
-        'components': resolve('pages_vue_app/happyfri/components')
+        // 'src': resolve('pages_vue_app/happyfri'),
+        // 'assets': resolve('pages_vue_app/happyfri/assets'),
+        // 'components': resolve('pages_vue_app/happyfri/components')
     }
 };
