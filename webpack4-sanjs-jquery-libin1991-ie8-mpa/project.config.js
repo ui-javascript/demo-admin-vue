@@ -55,6 +55,6 @@ module.exports = {
         /* happyfri配置 ================ */
         'src': resolve('pages_vue_app/happyfri'),
         'assets': resolve('pages_vue_app/happyfri/assets'),
-        'components': resolve('pages_vue_app/happyfri/assets')
+        'components': resolve('pages_vue_app/happyfri/components')
     }
 };
