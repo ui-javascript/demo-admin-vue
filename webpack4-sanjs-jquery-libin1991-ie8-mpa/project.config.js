@@ -29,7 +29,7 @@ module.exports = {
     // 1. 默认所有 "*"
     // 2. 指定单个模块 "index"
     // 3. 指定多个模块  "{index,router,todo}"
-    MODULES: "neteasecloud",
+    MODULES: "happyfri",
 
     // ========= 拷贝忽略
     // 1. 默认不忽略 ""
@@ -37,10 +37,10 @@ module.exports = {
     // 3. 忽略部分 "plus/lulu/**,plus/layui/**"
     COPYDIR_IGNORE: "**",
 
-    // 略坑 原来各项目的绝对路径
+    // ========= 略坑 原来各项目的绝对路径 合并覆盖上去
     RESOLVE_ALIAS: {
 
-        /* mmplayer配置 ============== */
+        /* mmplayer配置 ================ */
         // 'assets': resolve('pages_vue_app/mmplayer/assets'),
         // 'base': resolve('pages_vue_app/mmplayer/base'),
         // 'components': resolve('pages_vue_app/mmplayer/components'),
@@ -52,6 +52,9 @@ module.exports = {
         // 'assets': resolve('pages_vue_app/neteasecloud/assets'),
         // 'components': resolve('pages_vue_app/neteasecloud/components'),
 
-
+        /* happyfri配置 ================ */
+        'src': resolve('pages_vue_app/happyfri'),
+        'assets': resolve('pages_vue_app/happyfri/assets'),
+        'components': resolve('pages_vue_app/happyfri/assets')
     }
 };
