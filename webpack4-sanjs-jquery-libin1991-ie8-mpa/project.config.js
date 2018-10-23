@@ -15,6 +15,9 @@ module.exports = {
 
     // ======== 工程文件夹所在
     // 默认 "pages"
+    // PAGES: "pages",
+    // PAGES: "pages_san",
+    // PAGES: "pages_vue",
     PAGES: "pages_vue_app",
 
     // 路径替换
@@ -37,16 +40,18 @@ module.exports = {
     // 略坑 原来各项目的绝对路径
     RESOLVE_ALIAS: {
 
-        // mmplayer配置
+        /* mmplayer配置 ============== */
         // 'assets': resolve('pages_vue_app/mmplayer/assets'),
         // 'base': resolve('pages_vue_app/mmplayer/base'),
         // 'components': resolve('pages_vue_app/mmplayer/components'),
         // 'pages': resolve('pages_vue_app/mmplayer/pages'),
         // 'api': resolve('pages_vue_app/mmplayer/api'),
 
-        // neteasecloud(MUSE UI)配置
-        'src': resolve('pages_vue_app/neteasecloud'),
-        'assets': resolve('pages_vue_app/neteasecloud/assets'),
-        'components': resolve('pages_vue_app/neteasecloud/components'),
+        /* neteasecloud配置 ============ */
+        // 'src': resolve('pages_vue_app/neteasecloud'),
+        // 'assets': resolve('pages_vue_app/neteasecloud/assets'),
+        // 'components': resolve('pages_vue_app/neteasecloud/components'),
+
+
     }
 };
