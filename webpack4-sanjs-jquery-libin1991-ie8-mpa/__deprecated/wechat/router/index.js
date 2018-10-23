@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import {HomePage, ExplorePage, SettingsPage} from '../views'
-import {PersonInfo, ChangeNickname, ChangeArea, ChangeAddress, AddAddress, MyAddress} from '../views/settings'
-import {ChatRoom} from '../views/home'
+import {HomePage, ExplorePage, SettingsPage} from '../views/index'
+import {PersonInfo, ChangeNickname, ChangeArea, ChangeAddress, AddAddress, MyAddress} from '../views/settings/index'
+import {ChatRoom} from '../views/home/index'
 
 Vue.use(Router)
 

@@ -155,6 +155,9 @@ let webpackConfig = {
     }
 };
 
+// 路径覆盖
+Object.assign(webpackConfig.resolve.alias, myConfig.RESOLVE_ALIAS)
+
 // 多页面生成
 if (pageConfig && Array.isArray(pageConfig)) {
     pageConfig.map(page => {

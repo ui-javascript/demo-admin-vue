@@ -217,6 +217,9 @@ let webpackConfig = {
     },
 };
 
+// 路径覆盖
+Object.assign(webpackConfig.resolve.alias, myConfig.RESOLVE_ALIAS)
+
 if (tolerateIE8) {
     console.log('这个少年在作死地兼容IE8+ =================== ')
     // webpackConfig.entry['es5-polyfill'] = 'es5-polyfill'
@@ -243,7 +246,6 @@ if (tolerateIE8) {
     //     })
     // )
 }
-
 
 webpackConfig.plugins.push(
     new UglifyJsPlugin({
