@@ -55,10 +55,17 @@ Github：https://github.com/maomao1996/Vue-mmPlayer
 console.info(`%c${mmPlayer}`, `color:blue`);
 
 /* eslint-disable no-new */
+// new Vue({
+//     el: '#mmPlayer',
+//     store,
+//     router,
+//     components: {App},
+//     template: '<App/>'
+// })
+
 new Vue({
-    el: '#mmPlayer',
-    store,
+    el: '#app',
     router,
-    components: {App},
-    template: '<App/>'
+    store,
+    render: h => h(App)
 })

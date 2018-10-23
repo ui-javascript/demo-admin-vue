@@ -101,14 +101,24 @@ import 'console-polyfill';
     "babel-plugin-transform-es3-property-literals"
   ]
 }
-
-
 ```
 
 # TODO
 
 - static路径
 - inline html
+
+
+# 问题
+
+- neteasecloud 
+    - router require().default https://www.cnblogs.com/legendjslc/p/9041804.html
+
+```js
+// muse-ui 为旧版本 
+cnpm install -S muse-ui@2.1.0
+```
+
 
 ---
 

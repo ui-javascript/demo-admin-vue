@@ -26,7 +26,7 @@ module.exports = {
     // 1. 默认所有 "*"
     // 2. 指定单个模块 "index"
     // 3. 指定多个模块  "{index,router,todo}"
-    MODULES: "mmplayer",
+    MODULES: "neteasecloud",
 
     // ========= 拷贝忽略
     // 1. 默认不忽略 ""
@@ -37,12 +37,16 @@ module.exports = {
     // 略坑 原来各项目的绝对路径
     RESOLVE_ALIAS: {
 
+        // mmplayer配置
+        // 'assets': resolve('pages_vue_app/mmplayer/assets'),
+        // 'base': resolve('pages_vue_app/mmplayer/base'),
+        // 'components': resolve('pages_vue_app/mmplayer/components'),
+        // 'pages': resolve('pages_vue_app/mmplayer/pages'),
+        // 'api': resolve('pages_vue_app/mmplayer/api'),
 
-        // mmplayer的配置
-        'assets': resolve('pages_vue_app/mmplayer/assets'),
-        'base': resolve('pages_vue_app/mmplayer/base'),
-        'components': resolve('pages_vue_app/mmplayer/components'),
-        'pages': resolve('pages_vue_app/mmplayer/pages'),
-        'api': resolve('pages_vue_app/mmplayer/api'),
+        // neteasecloud(MUSE UI)配置
+        'src': resolve('pages_vue_app/neteasecloud'),
+        'assets': resolve('pages_vue_app/neteasecloud/assets'),
+        'components': resolve('pages_vue_app/neteasecloud/components'),
     }
 };
