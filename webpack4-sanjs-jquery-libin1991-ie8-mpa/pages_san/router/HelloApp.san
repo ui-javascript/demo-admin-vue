@@ -1,0 +1,25 @@
+<template>
+    <div>
+        <div class="hello">{{msg}}</div>
+
+        <input type="text" value="{= name =}">
+        <p class="hello">Hello {{name}}!</p>
+    </div>
+</template>
+
+<script>
+    export default {
+        initData () {
+            return {
+                msg: 'SAN',
+                name: 'hello'
+            };
+        }
+    }
+</script>
+
+<style>
+    .hello {
+        color: steelblue;
+    }
+</style>
