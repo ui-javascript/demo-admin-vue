@@ -28,5 +28,7 @@ router.add({rule: '/', Component: HelloApp, target: '#app'})
 router.add({rule: '/p1', Component: HelloApp, target: '#app'})
 router.add({rule: '/p2', Component: HelloApp2, target: '#app'})
 
+
 // 一定要记得启动
+// router.setMode('html5')
 router.start()

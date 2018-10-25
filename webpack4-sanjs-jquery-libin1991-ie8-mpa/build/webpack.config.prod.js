@@ -13,14 +13,14 @@ const es3ifyPlugin = require('es3ify-webpack-plugin-v2');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; //webpack可视化
 
 // 引入配置
-const pageConfig = require('./mpa.config');
-const myConfig = require("./project.config")
+const pageConfig = require('./utils.mpa');
+const myConfig = require("../config/index")
 const CDN = myConfig.CDN
 const tolerateIE8 = myConfig.IE8 === true
 
 // 处理路径
 function resolve(dir) {
-    return path.join(__dirname, dir)
+    return path.join(__dirname, '../' + dir)
 }
 
 class ChunksFromEntryPlugin {

@@ -6,8 +6,8 @@
   "scripts": {
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server  --hot --inline  --watch --host  0.0.0.0 --config webpack.config.dev.js --mode development",
-    "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js --mode production"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server  --hot --inline  --watch --host  0.0.0.0 --config build/webpack.config.dev.js --mode development",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.config.prod.js --mode production"
   },
   "repository": {
     "type": "git",

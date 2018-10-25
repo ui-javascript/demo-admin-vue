@@ -9,13 +9,13 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const OpenBrowserPlugin = require('open-browser-webpack-plugin'); //webpack 启动后自动打开浏览器
 
 // 配置文件
-const pageConfig = require('./mpa.config');
-const myConfig = require("./project.config")
+const pageConfig = require('./utils.mpa');
+const myConfig = require("../config/index")
 const PORT = myConfig.PORT
 
 // 处理路径
 function resolve(dir) {
-    return path.join(__dirname, dir)
+    return path.join(__dirname, '../' + dir)
 }
 
 let webpackConfig = {

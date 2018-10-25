@@ -10,34 +10,43 @@ module.exports = {
     // ======== 端口
     PORT: 9528,
 
-    // ======== 是否兼容IE8
-    IE8: false,
+    // 是否兼容IE8 ==========
+    IE8: true,
 
-    // ======== 工程文件夹所在
+    // 工程文件夹所在 ========
     // 默认 "pages"
-    // PAGES: "pages",
-    // PAGES: "pages_san",
-    // PAGES: "pages_vue",
-    PAGES: "pages_vue_app",
+    // =====================
+    // PAGES: "_pages",
+    PAGES: "_pages_san",
+    // PAGES: "_pages_san_admin",
+    // PAGES: "_pages_vue",
+    // PAGES: "_pages_vue_app",
+    // PAGES: "_pages_vue_admin",
 
-    // 路径替换
+    // 路径替换 ===============
     // 1. 默认相对路径    '/'
     // 2. 指定域名cdn "https://www.bootcdn.cn/"
+    // =======================
     CDN: "/",
 
-    // ========= 指定运行的模块
+    // 指定运行的模块 ==========
     // 1. 默认所有 "*"
     // 2. 指定单个模块 "index"
     // 3. 指定多个模块  "{index,router,todo}"
-    MODULES: "todo",
+    // =======================
+    MODULES: "*",
+    // MODULES: "todo",
 
-    // ========= 拷贝忽略
+    // 拷贝忽略 ================
     // 1. 默认不忽略 ""
     // 2. 全部忽略 "**"
     // 3. 忽略部分 "plus/lulu/**,plus/layui/**"
+    // =======================
+    // COPYDIR_IGNORE: "",
     COPYDIR_IGNORE: "**",
 
-    // ========= 略坑 原来各项目的绝对路径 合并覆盖上去
+    // 略坑 原来各项目的绝对路径 合并覆盖上去
+    // =======================
     RESOLVE_ALIAS: {
 
         /* mmplayer配置 ================ */

@@ -1,6 +1,6 @@
 let path = require('path')
 let glob = require('glob')
-var myConfig = require("./project.config")
+var myConfig = require("../config/index")
 var PAGES = myConfig.PAGES
 var MODULES = myConfig.MODULES.replace(/\s+/g,"")
 
