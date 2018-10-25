@@ -1,13 +1,15 @@
 /* eslint-disable */
 const  path = require('path')
+const merge = require('webpack-merge')
+const fs = require('fs')
+
 // 处理路径
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
 
-
-module.exports = {
-    // ======== 端口
+let config = {
+    // 端口 ================
     PORT: 9528,
 
     // 是否兼容IE8 ==========
@@ -17,11 +19,11 @@ module.exports = {
     // 默认 "pages"
     // =====================
     // PAGES: "_pages",
-    PAGES: "_pages_san",
-    // PAGES: "_pages_san_admin",
-    // PAGES: "_pages_vue",
-    // PAGES: "_pages_vue_app",
-    // PAGES: "_pages_vue_admin",
+    PAGES: "_pages-san",
+    // PAGES: "_pages-san-admin",
+    // PAGES: "_pages-vue",
+    // PAGES: "_pages-vue-app",
+    // PAGES: "_pages-vue-admin",
 
     // 路径替换 ===============
     // 1. 默认相对路径    '/'
@@ -48,22 +50,28 @@ module.exports = {
     // 略坑 原来各项目的绝对路径 合并覆盖上去
     // =======================
     RESOLVE_ALIAS: {
-
-        /* mmplayer配置 ================ */
-        // 'assets': resolve('pages_vue_app/mmplayer/assets'),
-        // 'base': resolve('pages_vue_app/mmplayer/base'),
-        // 'components': resolve('pages_vue_app/mmplayer/components'),
-        // 'pages': resolve('pages_vue_app/mmplayer/pages'),
-        // 'api': resolve('pages_vue_app/mmplayer/api'),
-
-        /* neteasecloud配置 ============ */
-        // 'src': resolve('pages_vue_app/neteasecloud'),
-        // 'assets': resolve('pages_vue_app/neteasecloud/assets'),
-        // 'components': resolve('pages_vue_app/neteasecloud/components'),
-
-        /* happyfri配置 ================ */
-        // 'src': resolve('pages_vue_app/happyfri'),
-        // 'assets': resolve('pages_vue_app/happyfri/assets'),
-        // 'components': resolve('pages_vue_app/happyfri/components')
+        /* 示例配置 ================ */
+        // 'assets': resolve('pages/index/assets'),
     }
 };
+
+// 指定系统名称
+// let sysName = 'default'
+// let sysName = 'san'
+// let sysName = 'san-admin'
+// let sysName = 'vue'
+// let sysName = 'vue-admin'
+// let sysName = 'vue-app'
+// let sysName = 'vue-app-chat'
+// let sysName = 'vue-app-todo'
+// let sysName = 'vue-app-mmplayer'
+let sysName = 'vue-app-happyfri'
+
+// 如果存在配置文件
+if (fs.existsSync(`./config/system/config.${sysName}.js`)) {
+    var detailConfig = require(`./system/config.${sysName}`)
+    config = merge(config, detailConfig)
+    console.log(sysName + '配置文件已覆盖(๑•̀ㅂ•́)و✧')
+}
+
+module.exports = config
