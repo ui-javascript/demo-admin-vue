@@ -1,0 +1,1 @@
+console.log('年轻的渔夫哦，怎么不写JavaScript入口~~')

@@ -114,6 +114,7 @@ export default {
 
 <style lang="stylus" scoped>
   .cascad-menu
+
     display flex
     position absolute
     top 100px
@@ -148,4 +149,5 @@ export default {
             height 20px
           .data
             height 20px
+  }
 </style>

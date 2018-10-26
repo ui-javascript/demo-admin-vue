@@ -112,6 +112,7 @@ import 'console-polyfill';
 
 # 问题
 
+- npm install 安装中途报错,但等它不影响... ??
 - 全局安装一波
 
 ```shell

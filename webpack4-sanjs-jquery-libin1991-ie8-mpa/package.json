@@ -74,7 +74,6 @@
     "es3ify-loader": "^0.2.0",
     "es3ify-webpack-plugin": "^0.0.1",
     "es3ify-webpack-plugin-v2": "^0.0.2",
-    "es5-shim": "^4.5.12",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-friendly-formatter": "^4.0.1",

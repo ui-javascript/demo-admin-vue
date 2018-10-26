@@ -39,6 +39,11 @@ let config = {
     MODULES: "*",
     // MODULES: "todo",
 
+    // 拷贝的对象
+    COPYDIR: {
+
+    },
+
     // 拷贝忽略 ================
     // 1. 默认不忽略 ""
     // 2. 全部忽略 "**"
@@ -71,7 +76,8 @@ let sysName = [
     // 'vue-app-happyfri',
     // 'vue-mobile',
     // 'vue-mobile-vux',
-    // 'vue-mobile-vant'
+    // 'vue-mobile-vant',
+    // 'vue-mobile-iphone',
 ][0]
 
 
