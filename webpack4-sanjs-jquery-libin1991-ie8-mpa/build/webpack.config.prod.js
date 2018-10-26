@@ -1,11 +1,11 @@
 /* eslint-disable */
 const webpack = require('webpack');
 const path = require('path')
+const merge = require('webpack-merge')
 
 //  常用组件
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -13,16 +13,15 @@ const es3ifyPlugin = require('es3ify-webpack-plugin-v2');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; //webpack可视化
 
 // 引入配置
+const baseWebpackConfig = require('./webpack.config.base')
 const pageConfig = require('./utils.mpa');
 const myConfig = require("../config/index")
-const CDN = myConfig.CDN
 const tolerateIE8 = myConfig.IE8 === true
 
 // 处理路径
 function resolve(dir) {
     return path.join(__dirname, '..', dir)
 }
-
 
 class ChunksFromEntryPlugin {
     apply(compiler) {
@@ -49,117 +48,10 @@ class ChunksFromEntryPlugin {
     }
 }
 
-let webpackConfig = {
+let webpackConfig = merge(baseWebpackConfig, {
     mode: 'production',
-    // 配置入口
-    entry: {},
     devtool: false,
-    // 配置出口
-    output: {
-        path: resolve("dist"),
-        filename: 'js/[name].[hash:7].js',
-        publicPath: CDN
-    },
-    resolve: {
-        extensions: [".js", ".css", ".json", ".vue", ".san"],
-        alias: {
-            vue$: 'vue/dist/vue.esm.js',
-            '@': resolve('src'),
-            '@m': resolve('src/cmpt-melt/model'),
-            '@e': resolve('src/cmpt-melt/effects'),
-            '@l': resolve('src/cmpt-melt/layout'),
-            '@t': resolve('src/cmpt-melt/toolbox'),
-            // san: 'san/dist/san.dev.js'
-        }
-    },
-    externals: {
-        jquery: 'window.$',
-        $: 'window.$',
-        san: 'window.san',
-        seajs: 'window.seajs',
-        requirejs: 'window.requirejs',
-    },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                loader: ['babel-loader'],
-                include: [
-                    resolve('src'),
-                    resolve('test'),
-                    resolve(`${myConfig.PAGES}`)
-                ]
-            },
-            {
-                test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    loaders: {
-                        css: ExtractTextPlugin.extract({
-                            use: ['css-loader?minimize&sourceMap=false']
-                        }),
-                        less: ExtractTextPlugin.extract({
-                            use: ['css-loader?minimize&sourceMap=false', "less-loader"]
-                        })
-                    }
-                },
-            },
-            // .san文件
-            {
-                test: /\.san$/,
-                loader: 'san-loader',
-            },
-            // html中的img标签
-            {
-                test: /\.html$/,
-                loader: 'html-withimg-loader',
-                options: {
-                    limit: 10000,
-                    // min:false,
-                    min: true,
-                    name: 'img/[name].[hash:7].[ext]'
-                },
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 10000,
-                    name: 'img/[name].[hash:7].[ext]'
-                },
-            },
-            {
-                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 10000,
-                    name: 'media/[name].[hash:7].[ext]'
-                },
-            },
-            {
-                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 10000,
-                    name: 'fonts/[name].[hash:7].[ext]'
-                },
-            },
-            {
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader?minimize&sourceMap=false', "postcss-loader"],
-                }),
-            },
-            {
-                test: /\.less$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader?minimize&sourceMap=false', "postcss-loader", 'less-loader'],
-                }),
-            },
-        ]
-    },
     plugins: [
-        new VueLoaderPlugin(),
         new webpack.ProvidePlugin({}),
         new ExtractTextPlugin({
             filename: 'css/[name].[hash:7].css',
@@ -217,10 +109,7 @@ let webpackConfig = {
             }
         }
     },
-};
-
-// 路径覆盖
-Object.assign(webpackConfig.resolve.alias, myConfig.RESOLVE_ALIAS)
+});
 
 if (tolerateIE8) {
     console.log('这个少年在作死地兼容IE8+ =================== ')
@@ -292,6 +181,5 @@ if (pageConfig && Array.isArray(pageConfig)) {
 }
 
 
-console.log(process.env.NODE_ENV)
 module.exports = webpackConfig;
 

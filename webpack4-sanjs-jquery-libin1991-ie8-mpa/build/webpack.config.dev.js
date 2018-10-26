@@ -1,14 +1,15 @@
 /* eslint-disable */
 const webpack = require('webpack');
 const path = require('path')
+const merge = require('webpack-merge')
 
 // 常用插件
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const OpenBrowserPlugin = require('open-browser-webpack-plugin'); //webpack 启动后自动打开浏览器
 
 // 配置文件
+const baseWebpackConfig = require('./webpack.config.base')
 const pageConfig = require('./utils.mpa');
 const myConfig = require("../config/index")
 const PORT = myConfig.PORT
@@ -18,116 +19,9 @@ function resolve(dir) {
     return path.join(__dirname, '..' , dir)
 }
 
-let webpackConfig = {
+let webpackConfig = merge(baseWebpackConfig, {
     mode: 'development',
-    // 配置入口
-    entry: {},
-    // 配置出口
-    output: {
-        path: resolve("dist"),
-        filename: 'js/[name].[hash:7].js',
-        publicPath: '/',
-        globalObject: 'this'
-    },
-    resolve: {
-        extensions: [".js", ".json", ".vue", ".san"],
-        alias: {
-            vue$: 'vue/dist/vue.esm.js',
-            '@': resolve('src'),
-            '@m': resolve('src/cmpt-melt/model'),
-            '@e': resolve('src/cmpt-melt/effects'),
-            '@l': resolve('src/cmpt-melt/layout'),
-            '@t': resolve('src/cmpt-melt/toolbox'),
-            // san: 'san/dist/san.dev.js'
-        }
-    },
-    externals: {
-        jquery: 'window.$',
-        $: 'window.$',
-        san: 'window.san',
-        seajs: 'window.seajs',
-        requirejs: 'window.requirejs',
-    },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                include: [
-                    resolve('src'),
-                    resolve(myConfig.PAGES),
-                    resolve('test'),
-                    resolve('node_modules/webpack-dev-server/client'),
-                ]
-            },
-            {
-                test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    loaders: {
-                        css: ExtractTextPlugin.extract({
-                            use: ['css-loader?minimize&sourceMap=false']
-                        }),
-                        less: ExtractTextPlugin.extract({
-                            use: ['css-loader?minimize&sourceMap=false', "less-loader"]
-                        })
-                    }
-                },
-            },
-            {
-                test: /\.san$/,
-                loader: 'san-loader',
-            },
-            {
-                test: /\.html$/,
-                loader: 'html-withimg-loader',
-                options: {
-                    limit: 10000,
-                    name: 'img/[name].[hash:7].[ext]'
-                },
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 10000,
-                    name: 'img/[name].[hash:7].[ext]'
-                },
-            },
-            {
-                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 10000,
-                    name: 'media/[name].[hash:7].[ext]'
-                },
-            },
-            {
-                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 10000,
-                    name: 'fonts/[name].[hash:7].[ext]'
-                },
-            },
-            {
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader?sourceMap=false', "postcss-loader"],
-                }),
-            },
-            {
-                test: /\.less$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader?sourceMap=false', "postcss-loader", 'less-loader'],
-                }),
-            },
-
-        ]
-    },
-
     plugins: [
-        new VueLoaderPlugin(),
         new webpack.ProvidePlugin({}),
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin({
@@ -154,10 +48,7 @@ let webpackConfig = {
         host: '127.0.0.1',
         port: PORT
     }
-};
-
-// 路径覆盖
-Object.assign(webpackConfig.resolve.alias, myConfig.RESOLVE_ALIAS)
+});
 
 // 多页面生成
 if (pageConfig && Array.isArray(pageConfig)) {
