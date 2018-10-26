@@ -6,7 +6,7 @@ function resolve(dir) {
 
 module.exports = {
     PORT: 9528,
-    IE8: true,
+    IE8: false,
     PAGES: "_pages-vue-app",
     CDN: "/",
     MODULES: "todo",

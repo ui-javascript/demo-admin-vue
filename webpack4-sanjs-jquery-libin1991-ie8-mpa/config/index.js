@@ -19,9 +19,9 @@ let config = {
     // 默认 "pages"
     // =====================
     // PAGES: "_pages",
-    PAGES: "_pages-san",
+    // PAGES: "_pages-san",
     // PAGES: "_pages-san-admin",
-    // PAGES: "_pages-vue",
+    PAGES: "_pages-vue",
     // PAGES: "_pages-vue-app",
     // PAGES: "_pages-vue-admin",
 
@@ -55,17 +55,22 @@ let config = {
     }
 };
 
-// 指定系统名称
+// 指定系统名称 切换这里
 // let sysName = 'default'
 // let sysName = 'san'
 // let sysName = 'san-admin'
-// let sysName = 'vue'
+let sysName = 'vue'
 // let sysName = 'vue-admin'
+// let sysName = 'vue-admin-element'
+// let sysName = 'vue-admin-bootstrap'
 // let sysName = 'vue-app'
 // let sysName = 'vue-app-chat'
 // let sysName = 'vue-app-todo'
 // let sysName = 'vue-app-mmplayer'
-let sysName = 'vue-app-happyfri'
+// let sysName = 'vue-app-happyfri'
+// let sysName = 'vue-mobile'
+// let sysName = 'vue-mobile-vux'
+// let sysName = 'vue-mobile-vant'
 
 // 如果存在配置文件
 if (fs.existsSync(`./config/system/config.${sysName}.js`)) {
