@@ -9,7 +9,7 @@ module.exports = {
     IE8: true,
     PAGES: "_pages-san-admin",
     CDN: "/",
-    MODULES: "*",
+    MODULES: "bootstrap",
     COPYDIR_IGNORE: "**",
     RESOLVE_ALIAS: {},
     EXTERNALS: {

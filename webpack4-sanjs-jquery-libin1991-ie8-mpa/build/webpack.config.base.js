@@ -37,11 +37,7 @@ let webpackConfig = {
         }
     },
     externals: {
-        jquery: 'window.$',
-        $: 'window.$',
-        san: 'window.san',
-        seajs: 'window.seajs',
-        requirejs: 'window.requirejs',
+
     },
     module: {
         rules: [
@@ -69,14 +65,6 @@ let webpackConfig = {
             {
                 test: /\.san$/,
                 loader: 'san-loader',
-            },
-            {
-                test: /\.html$/,
-                loader: 'html-withimg-loader',
-                options: {
-                    limit: 10000,
-                    name: 'img/[name].[hash:7].[ext]'
-                },
             },
             {
                 test: /\.svg$/,
@@ -139,5 +127,6 @@ let webpackConfig = {
 
 // 路径覆盖
 Object.assign(webpackConfig.resolve.alias, myConfig.RESOLVE_ALIAS)
+Object.assign(webpackConfig.externals, myConfig.EXTERNALS)
 
 module.exports = webpackConfig;

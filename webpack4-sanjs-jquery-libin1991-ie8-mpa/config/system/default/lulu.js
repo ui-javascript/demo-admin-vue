@@ -11,7 +11,10 @@ module.exports = {
     CDN: "/",
     MODULES: "lulu",
     COPYDIR_IGNORE: "vendor/**",
-    RESOLVE_ALIAS: {
-
+    RESOLVE_ALIAS: {},
+    EXTERNALS: {
+        jquery: 'window.$',
+        $: 'window.$',
+        seajs: 'window.seajs',
     }
 };

@@ -15,6 +15,7 @@ import 'console-polyfill';
 
 
 import san from 'san'
+import "./san.scss"
 
 import {router} from 'san-router'
 import HelloApp from './HelloApp.san'

@@ -11,5 +11,10 @@ module.exports = {
     CDN: "/",
     MODULES: "layui",
     COPYDIR_IGNORE: "vendor/**",
-    RESOLVE_ALIAS: {}
+    RESOLVE_ALIAS: {},
+    EXTERNALS: {
+        jquery: 'window.$',
+        $: 'window.$',
+        seajs: 'window.seajs',
+    }
 };

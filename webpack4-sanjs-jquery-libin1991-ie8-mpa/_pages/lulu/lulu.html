@@ -13,14 +13,7 @@
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <script src="https://cdn.bootcss.com/es5-shim/4.5.10/es5-shim.min.js"></script>
-    <script src="https://cdn.bootcss.com/es5-shim/4.5.10/es5-sham.min.js"></script>
     <![endif]-->
-
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
-    <script src="https://cdn.bootcss.com/nwmatcher/1.4.2/nwmatcher-base.js"></script>
-    <![endif]-->
-
 
 </head>
 <body>
@@ -34,7 +27,6 @@
 
     <input type="radio" id="radio2" name="radio">
     <label for="radio2" class="ui-radio"></label><label for="radio2" class="ml10 mr30 f14">单选项5</label>
-
 </div>
 
 <div>
@@ -57,7 +49,35 @@
 <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <script>
+    seajs.config({
+        // base: "https://qidian.gtimg.com/lulu/theme/peak/js",
+        base: "/plus/lulu/theme/peak/js",
+    }).use(['common/ui/Checkbox', 'common/ui/Range'], function () {
+        console.log('hello lulu');
+        console.log('阴天说什么')
 
+        // hello 我也不知道怎么办好了
+        $('#checkbox1').click(function () {
+            console.log('我被电击了啊哈哈');
+        });
+
+        $("#opacityRange").on('change', function() {
+            $(this).siblings('span').css('opacity', this.value / 100);
+        }).range({
+            tips: function(value) {
+                return value + '%';
+            }
+        });
+
+        // 兼容IE8
+        if (!window.addEventListener) {
+            require.async('common/ui/Radio')
+            require.async('common/ui/Checkbox')
+            // require('common/ui/Radio')
+            // require('common/ui/Checkbox')
+        }
+
+    });
 </script>
 
 </body>

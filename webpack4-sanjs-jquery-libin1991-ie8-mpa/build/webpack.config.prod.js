@@ -80,6 +80,23 @@ let webpackConfig = merge(baseWebpackConfig, {
         }]),
         new BundleAnalyzerPlugin()
     ],
+    module: {
+        rules: [
+            {
+                test: /\.html$/,
+                loader: 'html-withimg-loader',
+                options: {
+                    limit: 10000,
+                    name: 'img/[name].[hash:7].[ext]',
+                    minimize: true,
+                    removeComments: false,
+                    collapseWhitespace: false,
+                    minifyJS: true,
+                    minifyCSS: true,
+                }
+            },
+        ]
+    },
     optimization: {
         minimize: process.env.NODE_ENV === 'production' ? true : false, //是否进行代码压缩
         splitChunks: {

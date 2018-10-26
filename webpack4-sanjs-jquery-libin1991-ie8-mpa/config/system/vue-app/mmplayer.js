@@ -10,7 +10,7 @@ module.exports = {
     PAGES: "_pages-vue-app",
     CDN: "/",
     MODULES: "mmplayer",
-    COPYDIR_IGNORE: "**",
+    COPYDIR_IGNORE: "",
     RESOLVE_ALIAS: {
         /* mmplayer配置 ================ */
         'assets': resolve('_pages-vue-app/mmplayer/assets'),

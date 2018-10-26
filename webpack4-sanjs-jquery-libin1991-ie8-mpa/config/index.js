@@ -52,7 +52,15 @@ let config = {
     // =======================
     RESOLVE_ALIAS: {
         /* 示例配置 ================ */
-        // 'assets': resolve('pages/index/assets'),
+        // 'assets': resolve('_pages/index/assets'),
+    },
+    EXTERNALS: {
+        /* 示例 ==================== */
+        // jquery: 'window.$',
+        // $: 'window.$',
+        // san: 'window.san',
+        // seajs: 'window.seajs',
+        // requirejs: 'window.requirejs',
     }
 };
 
@@ -63,13 +71,15 @@ let sysName = [
     // 'default/layui',
     // 'default/lulu',
     // 'san/index',
-    // 'san/router',
+    'san/router',
     // 'san/todo',
     // 'san-admin/index',
+    // 'san-admin/mui',
+    // 'san-admin/bootstrap',
     // 'vue/index',
     // 'vue/bootstrap',
     // 'vue-admin/index',
-    'vue-admin/element',
+    // 'vue-admin/element',
     // 'vue-admin/d2',
     // 'vue-app/index',
     // 'vue-app/chat',

@@ -6,13 +6,13 @@ function resolve(dir) {
 
 module.exports = {
     PORT: 9528,
-    IE8: true,
+    IE8: false,
     PAGES: "_pages-san-admin",
     CDN: "/",
-    MODULES: "*",
+    MODULES: "mui",
     COPYDIR_IGNORE: "**",
     RESOLVE_ALIAS: {},
     EXTERNALS: {
-        san: 'window.san',
+        // san: 'window.san',
     }
 };

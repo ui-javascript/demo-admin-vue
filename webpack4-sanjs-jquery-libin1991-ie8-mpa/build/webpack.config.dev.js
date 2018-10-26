@@ -33,9 +33,21 @@ let webpackConfig = merge(baseWebpackConfig, {
         }),
         //自动打开浏览器
         new OpenBrowserPlugin({
-            url: 'http://localhost:' + PORT
+            url: `http://localhost:${PORT}/${pageConfig[0].name}`
         }),
     ],
+    module: {
+        rules: [
+            {
+                test: /\.html$/,
+                loader: 'html-withimg-loader',
+                options: {
+                    limit: 10000,
+                    name: 'img/[name].[hash:7].[ext]',
+                }
+            },
+        ]
+    },
     // 起本地服务
     devServer: {
         // 服务器返回浏览器的时候是否启动gzip压缩

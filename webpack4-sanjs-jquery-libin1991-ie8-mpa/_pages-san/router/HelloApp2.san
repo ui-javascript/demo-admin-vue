@@ -22,6 +22,6 @@
 
 <style scoped>
     .hello {
-        color: blue;
+        /*color: blue;*/
     }
 </style>

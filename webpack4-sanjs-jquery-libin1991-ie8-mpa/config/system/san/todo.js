@@ -11,5 +11,8 @@ module.exports = {
     CDN: "/",
     MODULES: "todo",
     COPYDIR_IGNORE: "**",
-    RESOLVE_ALIAS: {}
+    RESOLVE_ALIAS: {},
+    EXTERNALS: {
+        // san: 'window.san',
+    }
 };
