@@ -107,12 +107,13 @@ import 'console-polyfill';
 
 # TODO
 
+- 配置优化，现在仅仅是能够跑起来
 - static路径
 - inline html
 
 # 问题
 
-- npm install 安装中途报错,但等它不影响... ??
+- npm install 安装会中途报错,但并不影响... ??
 - 全局安装一波
 
 ```shell

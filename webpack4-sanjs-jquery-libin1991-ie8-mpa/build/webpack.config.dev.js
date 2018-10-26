@@ -22,6 +22,9 @@ function resolve(dir) {
 let webpackConfig = merge(baseWebpackConfig, {
     mode: 'development',
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env': require('../config/dev.env')
+        }),
         new webpack.ProvidePlugin({}),
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin({

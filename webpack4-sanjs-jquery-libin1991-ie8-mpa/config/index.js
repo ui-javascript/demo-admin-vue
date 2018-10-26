@@ -9,6 +9,7 @@ function resolve(dir) {
 }
 
 let config = {
+
     // 端口 ================
     PORT: 9528,
 
@@ -19,11 +20,6 @@ let config = {
     // 默认 "pages"
     // =====================
     // PAGES: "_pages",
-    // PAGES: "_pages-san",
-    // PAGES: "_pages-san-admin",
-    PAGES: "_pages-vue",
-    // PAGES: "_pages-vue-app",
-    // PAGES: "_pages-vue-admin",
 
     // 路径替换 ===============
     // 1. 默认相对路径    '/'
@@ -62,29 +58,36 @@ let config = {
 
 // 切换指定系统
 let sysName = [
-    // 'default',
-    'san',
-    // 'san-admin',
-    // 'vue',
-    // 'vue-admin',
-    // 'vue-admin-element',
-    // 'vue-admin-bootstrap',
-    // 'vue-app',
-    // 'vue-app-chat',
-    // 'vue-app-todo',
-    // 'vue-app-mmplayer',
-    // 'vue-app-happyfri',
-    // 'vue-mobile',
-    // 'vue-mobile-vux',
-    // 'vue-mobile-vant',
-    // 'vue-mobile-iphone',
+    // 'default/index',
+    // 'default/easyui',
+    // 'default/layui',
+    // 'default/lulu',
+    // 'san/index',
+    // 'san/router',
+    // 'san/todo',
+    // 'san-admin/index',
+    // 'vue/index',
+    // 'vue/bootstrap',
+    // 'vue-admin/index',
+    'vue-admin/element',
+    // 'vue-admin/d2',
+    // 'vue-app/index',
+    // 'vue-app/chat',
+    // 'vue-app/todo',
+    // 'vue-app/mmplayer',
+    // 'vue-app/happyfri',
+    // 'vue-mobile/index',
+    // 'vue-mobile/vux',
+    // 'vue-mobile/vant',
+    // 'vue-mobile/iphone',
 ][0]
 
+sysName = sysName || 'default/index'
 
 // 如果存在配置文件就覆盖
-if (fs.existsSync(`./config/system/config.${sysName || 'default'}.js`)) {
-    var sysConfig = require(`./system/config.${sysName}`)
+if (fs.existsSync(`./config/system/${sysName}.js`)) {
+    var sysConfig = require(`./system/${sysName}`)
     config = merge(config, sysConfig)
-    console.log(sysName + ' 配置文件已覆盖(๑•̀ㅂ•́)و✧')
+    console.log(sysName + ' 配置已覆盖(๑•̀ㅂ•́)و✧')
 }
 module.exports = config

@@ -60,12 +60,9 @@ let webpackConfig = {
                 loader: 'vue-loader',
                 options: {
                     loaders: {
-                        css: ExtractTextPlugin.extract({
-                            use: ['css-loader?minimize&sourceMap=false']
-                        }),
-                        less: ExtractTextPlugin.extract({
-                            use: ['css-loader?minimize&sourceMap=false', "less-loader"]
-                        })
+                        css: ExtractTextPlugin.extract({ use: ['css-loader?minimize&sourceMap=false', 'postcss-loader'] }),
+                        less: ExtractTextPlugin.extract({ use: ['css-loader?minimize&sourceMap=false', 'postcss-loader', "less-loader" ] }),
+                        sass: ExtractTextPlugin.extract({ use: ['css-loader?minimize&sourceMap=false', 'postcss-loader', "sass-loader" ] })
                     }
                 },
             },
@@ -126,7 +123,12 @@ let webpackConfig = {
                     use: ['css-loader?sourceMap=false', "postcss-loader", 'less-loader'],
                 }),
             },
-
+            {
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    use: ['css-loader?sourceMap=false', "postcss-loader", 'sass-loader'],
+                }),
+            },
         ]
     },
 

@@ -52,6 +52,9 @@ let webpackConfig = merge(baseWebpackConfig, {
     mode: 'production',
     devtool: false,
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env': require('../config/prod.env')
+        }),
         new webpack.ProvidePlugin({}),
         new ExtractTextPlugin({
             filename: 'css/[name].[hash:7].css',
@@ -70,10 +73,6 @@ let webpackConfig = merge(baseWebpackConfig, {
             }
         ),
         new ChunksFromEntryPlugin(),
-        // 默认添加NODE_ENV为production
-        new webpack.DefinePlugin({
-            "process.env.NODE_ENV": JSON.stringify("production")
-        }),
         new CopyWebpackPlugin([{
             from: resolve('static'),
             to: resolve('dist'),
