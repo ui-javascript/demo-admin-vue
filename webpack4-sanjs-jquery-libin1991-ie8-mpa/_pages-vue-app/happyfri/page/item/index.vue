@@ -1,6 +1,6 @@
 <template>
   	<div>
-    	<itemcontainer father-component="'item'"></itemcontainer>
+    	<itemcontainer father-component="item"></itemcontainer>
   	</div>
 </template>
 

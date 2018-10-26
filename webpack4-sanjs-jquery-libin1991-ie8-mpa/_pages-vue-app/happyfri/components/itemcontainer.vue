@@ -4,11 +4,13 @@
     		<span class="num_tip" v-if="fatherComponent == 'home'">{{level}}</span>
     		<span class="num_tip" v-if="fatherComponent == 'item'">题目{{itemNum}}</span>
     	</header>
+
     	<div v-if="fatherComponent == 'home'" >
     		<div class="home_logo item_container_style"></div>
     		<router-link to="item" class="start button_style" ></router-link>
     	</div>
-    	<div v-if="fatherComponent == 'item'" >
+
+		<div v-if="fatherComponent == 'item'" >
     		<div class="item_back item_container_style">
     			<div class="item_list_container" v-if="itemDetail.length > 0">
     				<header class="item_title">{{itemDetail[itemNum-1].topic_name}}</header>
@@ -39,23 +41,18 @@ export default {
 			choosedId:null //选中答案id
 		}
 	},
-  	props: {
-        fatherComponent: {
-        	type: String
-        }
-    },
-  	computed: {
-		...mapState([
-		 'itemNum', //第几题
-		 'level', //第几周
-		 'itemDetail', //题目详情
-		 'timer', //计时器
-		 ])
-    },
+  	props: ['fatherComponent'],
+  	computed: mapState([
+        'itemNum', //第几题
+        'level', //第几周
+        'itemDetail', //题目详情
+        'timer', //计时器
+    ]),
   	methods: {
-  		...mapActions([
-  			'addNum', 'initializeData',
-  		]),
+        ...mapActions([
+            'addNum',
+            'initializeData',
+        ]),
   		//点击下一题
   		nextItem(){
   			if (this.choosedNum !== null) {

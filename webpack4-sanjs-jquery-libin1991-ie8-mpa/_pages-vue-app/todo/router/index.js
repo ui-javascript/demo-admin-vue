@@ -6,6 +6,9 @@ import TaskList from '../components/TaskList'
 
 Vue.use(Router)
 
+Vue.config.productionTip = false
+
+
 export default new Router({
   // mode: 'history',
   routes: [

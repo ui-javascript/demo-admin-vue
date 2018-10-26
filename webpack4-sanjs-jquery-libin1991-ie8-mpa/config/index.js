@@ -55,29 +55,30 @@ let config = {
     }
 };
 
-// 指定系统名称 切换这里
-// let sysName = 'default'
-// let sysName = 'san'
-// let sysName = 'san-admin'
-// let sysName = 'vue'
-// let sysName = 'vue-admin'
-// let sysName = 'vue-admin-element'
-// let sysName = 'vue-admin-bootstrap'
-// let sysName = 'vue-app'
-// let sysName = 'vue-app-chat'
-let sysName = 'vue-app-todo'
-// let sysName = 'vue-app-mmplayer'
-// let sysName = 'vue-app-happyfri'
-// let sysName = 'vue-mobile'
-// let sysName = 'vue-mobile-vux'
-// let sysName = 'vue-mobile-vant'
+// 切换指定系统
+let sysName = [
+    // 'default',
+    'san',
+    // 'san-admin',
+    // 'vue',
+    // 'vue-admin',
+    // 'vue-admin-element',
+    // 'vue-admin-bootstrap',
+    // 'vue-app',
+    // 'vue-app-chat',
+    // 'vue-app-todo',
+    // 'vue-app-mmplayer',
+    // 'vue-app-happyfri',
+    // 'vue-mobile',
+    // 'vue-mobile-vux',
+    // 'vue-mobile-vant'
+][0]
 
-// 如果存在配置文件
-if (fs.existsSync(`./config/system/config.${sysName}.js`)) {
-    var detailConfig = require(`./system/config.${sysName}`)
-    config = merge(config, detailConfig)
+
+// 如果存在配置文件就覆盖
+if (fs.existsSync(`./config/system/config.${sysName || 'default'}.js`)) {
+    var sysConfig = require(`./system/config.${sysName}`)
+    config = merge(config, sysConfig)
     console.log(sysName + ' 配置文件已覆盖(๑•̀ㅂ•́)و✧')
 }
-
-
 module.exports = config

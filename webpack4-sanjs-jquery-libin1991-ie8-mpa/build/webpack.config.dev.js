@@ -73,18 +73,10 @@ let webpackConfig = {
                         })
                     }
                 },
-                include: [
-                    resolve('src'),
-                    resolve(myConfig.PAGES),
-                ]
             },
             {
                 test: /\.san$/,
                 loader: 'san-loader',
-                include: [
-                    resolve('src'),
-                    resolve(myConfig.PAGES),
-                ]
             },
             {
                 test: /\.html$/,
@@ -93,10 +85,6 @@ let webpackConfig = {
                     limit: 10000,
                     name: 'img/[name].[hash:7].[ext]'
                 },
-                include: [
-                    resolve('src'),
-                    resolve(myConfig.PAGES),
-                ]
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -105,10 +93,6 @@ let webpackConfig = {
                     limit: 10000,
                     name: 'img/[name].[hash:7].[ext]'
                 },
-                include: [
-                    resolve('src'),
-                    resolve(myConfig.PAGES),
-                ]
             },
             {
                 test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
@@ -117,10 +101,6 @@ let webpackConfig = {
                     limit: 10000,
                     name: 'media/[name].[hash:7].[ext]'
                 },
-                include: [
-                    resolve('src'),
-                    resolve(myConfig.PAGES),
-                ]
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -141,8 +121,6 @@ let webpackConfig = {
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader?sourceMap=false', "postcss-loader", 'less-loader'],
                 }),
-                // exclude: /node_modules/,
-                // include: [resolve(myConfig.PAGES), resolve('src')],
             },
 
         ]
@@ -153,7 +131,8 @@ let webpackConfig = {
         new webpack.ProvidePlugin({}),
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin({
-            filename: 'css/[name].[hash:7].css'
+            filename: 'css/[name].[hash:7].css',
+            allChunks: true
         }),
         //自动打开浏览器
         new OpenBrowserPlugin({
@@ -164,7 +143,10 @@ let webpackConfig = {
     devServer: {
         // 服务器返回浏览器的时候是否启动gzip压缩
         compress: true,
-        contentBase: [resolve("dist"), resolve("static")],
+        contentBase: [
+            resolve("dist"),
+            resolve("static")
+        ],
         historyApiFallback: true,
         inline: true,
         hot: true,
@@ -185,7 +167,7 @@ if (pageConfig && Array.isArray(pageConfig)) {
             filename: resolve(`/dist/${page.name}`),
             template: resolve(page.template),
             inject: true,
-            chunks: [page.name],
+            chunks: ['vendor', 'manifest', page.name],
             inlineSource: '.(js|css)$',
             minify: {
                 removeComments: true,

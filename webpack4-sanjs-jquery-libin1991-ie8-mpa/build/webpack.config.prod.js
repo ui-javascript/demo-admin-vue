@@ -102,24 +102,23 @@ let webpackConfig = {
                             use: ['css-loader?minimize&sourceMap=false', "less-loader"]
                         })
                     }
-                }
+                },
             },
             // .san文件
             {
                 test: /\.san$/,
-                loader: 'san-loader'
+                loader: 'san-loader',
             },
             // html中的img标签
             {
                 test: /\.html$/,
                 loader: 'html-withimg-loader',
-                include: [resolve("src")],
                 options: {
                     limit: 10000,
                     // min:false,
                     min: true,
                     name: 'img/[name].[hash:7].[ext]'
-                }
+                },
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -127,7 +126,7 @@ let webpackConfig = {
                 options: {
                     limit: 10000,
                     name: 'img/[name].[hash:7].[ext]'
-                }
+                },
             },
             {
                 test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
@@ -135,7 +134,7 @@ let webpackConfig = {
                 options: {
                     limit: 10000,
                     name: 'media/[name].[hash:7].[ext]'
-                }
+                },
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
@@ -156,8 +155,6 @@ let webpackConfig = {
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader?minimize&sourceMap=false', "postcss-loader", 'less-loader'],
                 }),
-                // exclude: /node_modules/,
-                // include: [resolve(myConfig.PAGES), resolve('src')],
             },
         ]
     },
@@ -165,13 +162,13 @@ let webpackConfig = {
         new VueLoaderPlugin(),
         new webpack.ProvidePlugin({}),
         new ExtractTextPlugin({
-            filename: 'css/[name].[hash:7].css'
+            filename: 'css/[name].[hash:7].css',
+            allChunks: true
         }),
         // 设置每一次build之前先删除dist
         new CleanWebpackPlugin(
             ['dist'], 　 //匹配删除的文件
             {
-
                 //根目录
                 root: resolve('/'),
                 //开启在控制台输出信息
@@ -187,7 +184,7 @@ let webpackConfig = {
         }),
         new CopyWebpackPlugin([{
             from: resolve('static'),
-            to: '',
+            to: resolve('dist'),
             ignore: myConfig.COPYDIR_IGNORE.replace(/\s+/g, "").split(',')
         }]),
         new BundleAnalyzerPlugin()
@@ -271,7 +268,7 @@ if (pageConfig && Array.isArray(pageConfig)) {
             template: resolve(page.template),
             inject: true,
             entry: page.name,
-            chunks: [page.name],
+            chunks: ['vendor', 'manifest', page.name],
             inlineSource: '.(js|css)$',
             // minify:false,
             minify: {
