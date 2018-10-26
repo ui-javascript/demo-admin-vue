@@ -1,0 +1,17 @@
+<template>
+    <div>
+        {{ msg }}
+    </div>
+</template>
+
+
+<script>
+    module.exports =
+        {
+            initData:function () {
+                return {
+                    msg: 'Hi Component'
+                }
+            }
+        }
+</script>
