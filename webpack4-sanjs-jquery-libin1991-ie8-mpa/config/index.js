@@ -5,7 +5,7 @@ const fs = require('fs')
 
 // 处理路径
 function resolve(dir) {
-    return path.join(__dirname, dir)
+    return path.join(__dirname, '..', dir)
 }
 
 let config = {
@@ -59,13 +59,13 @@ let config = {
 // let sysName = 'default'
 // let sysName = 'san'
 // let sysName = 'san-admin'
-let sysName = 'vue'
+// let sysName = 'vue'
 // let sysName = 'vue-admin'
 // let sysName = 'vue-admin-element'
 // let sysName = 'vue-admin-bootstrap'
 // let sysName = 'vue-app'
 // let sysName = 'vue-app-chat'
-// let sysName = 'vue-app-todo'
+let sysName = 'vue-app-todo'
 // let sysName = 'vue-app-mmplayer'
 // let sysName = 'vue-app-happyfri'
 // let sysName = 'vue-mobile'
@@ -76,7 +76,8 @@ let sysName = 'vue'
 if (fs.existsSync(`./config/system/config.${sysName}.js`)) {
     var detailConfig = require(`./system/config.${sysName}`)
     config = merge(config, detailConfig)
-    console.log(sysName + '配置文件已覆盖(๑•̀ㅂ•́)و✧')
+    console.log(sysName + ' 配置文件已覆盖(๑•̀ㅂ•́)و✧')
 }
+
 
 module.exports = config

@@ -16,7 +16,7 @@ export default new Router({
     },
     {
       path: '/OverView',
-      name: 'OverView',
+      name: 'OverView2',
       component: OverView
     },
     {

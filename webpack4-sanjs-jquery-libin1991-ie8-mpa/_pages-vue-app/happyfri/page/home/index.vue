@@ -1,11 +1,12 @@
 <template>
   	<div class="home_container">
-        <itemcontainer father-component="home"></itemcontainer>
+        <itemcontainer father-component="'home'"></itemcontainer>
     </div>
 </template>
 
 <script>
 import itemcontainer from '../../components/itemcontainer'
+console.log(itemcontainer)
 
 export default {
 	name: 'home',

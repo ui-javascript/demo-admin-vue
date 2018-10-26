@@ -15,7 +15,7 @@ const PORT = myConfig.PORT
 
 // 处理路径
 function resolve(dir) {
-    return path.join(__dirname, '../' + dir)
+    return path.join(__dirname, '..' , dir)
 }
 
 let webpackConfig = {
@@ -24,7 +24,7 @@ let webpackConfig = {
     entry: {},
     // 配置出口
     output: {
-        path: resolve("./dist/"),
+        path: resolve("dist"),
         filename: 'js/[name].[hash:7].js',
         publicPath: '/',
         globalObject: 'this'
@@ -66,26 +66,37 @@ let webpackConfig = {
                 options: {
                     loaders: {
                         css: ExtractTextPlugin.extract({
-                            use: ['vue-style-loader', 'css-loader?minimize&sourceMap=false']
+                            use: ['css-loader?minimize&sourceMap=false']
                         }),
                         less: ExtractTextPlugin.extract({
-                            use: ['vue-style-loader', 'css-loader?minimize&sourceMap=false', "less-loader"]
+                            use: ['css-loader?minimize&sourceMap=false', "less-loader"]
                         })
                     }
-                }
+                },
+                include: [
+                    resolve('src'),
+                    resolve(myConfig.PAGES),
+                ]
             },
             {
                 test: /\.san$/,
-                loader: 'san-loader'
+                loader: 'san-loader',
+                include: [
+                    resolve('src'),
+                    resolve(myConfig.PAGES),
+                ]
             },
             {
                 test: /\.html$/,
                 loader: 'html-withimg-loader',
-                include: [resolve("./src")],
                 options: {
                     limit: 10000,
                     name: 'img/[name].[hash:7].[ext]'
-                }
+                },
+                include: [
+                    resolve('src'),
+                    resolve(myConfig.PAGES),
+                ]
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -93,7 +104,11 @@ let webpackConfig = {
                 options: {
                     limit: 10000,
                     name: 'img/[name].[hash:7].[ext]'
-                }
+                },
+                include: [
+                    resolve('src'),
+                    resolve(myConfig.PAGES),
+                ]
             },
             {
                 test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
@@ -101,7 +116,11 @@ let webpackConfig = {
                 options: {
                     limit: 10000,
                     name: 'media/[name].[hash:7].[ext]'
-                }
+                },
+                include: [
+                    resolve('src'),
+                    resolve(myConfig.PAGES),
+                ]
             },
             {
                 test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,

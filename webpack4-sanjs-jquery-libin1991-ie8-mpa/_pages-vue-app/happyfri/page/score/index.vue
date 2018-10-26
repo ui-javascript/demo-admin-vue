@@ -30,7 +30,9 @@ export default {
             scoreTipsArr:['你说，是不是把知识都还给小学老师了？','还不错，但还需要继续加油哦！','不要嘚瑟还有进步的空间！','智商离爆表只差一步了！','你也太聪明啦，葡萄之家欢迎你！'],
         }
     },
-    computed: mapState(['answerid']),
+    computed: {
+        ...mapState(['answerid'])
+    },
 	created(){
         this.computedScore();
         this.getScoreTip();
@@ -59,7 +61,7 @@ export default {
 
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
     body{
         background-image: url(../../images/4-1.jpg);
         padding-top: 1.2rem;

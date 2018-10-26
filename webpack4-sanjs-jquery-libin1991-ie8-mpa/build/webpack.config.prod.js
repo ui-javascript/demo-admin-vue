@@ -20,8 +20,9 @@ const tolerateIE8 = myConfig.IE8 === true
 
 // 处理路径
 function resolve(dir) {
-    return path.join(__dirname, '../' + dir)
+    return path.join(__dirname, '..', dir)
 }
+
 
 class ChunksFromEntryPlugin {
     apply(compiler) {
@@ -55,7 +56,7 @@ let webpackConfig = {
     devtool: false,
     // 配置出口
     output: {
-        path: resolve("./dist/"),
+        path: resolve("dist"),
         filename: 'js/[name].[hash:7].js',
         publicPath: CDN
     },
@@ -95,10 +96,10 @@ let webpackConfig = {
                 options: {
                     loaders: {
                         css: ExtractTextPlugin.extract({
-                            use: ['vue-style-loader', 'css-loader?minimize&sourceMap=false']
+                            use: ['css-loader?minimize&sourceMap=false']
                         }),
                         less: ExtractTextPlugin.extract({
-                            use: ['vue-style-loader', 'css-loader?minimize&sourceMap=false', "less-loader"]
+                            use: ['css-loader?minimize&sourceMap=false', "less-loader"]
                         })
                     }
                 }
@@ -112,7 +113,7 @@ let webpackConfig = {
             {
                 test: /\.html$/,
                 loader: 'html-withimg-loader',
-                include: [resolve("./src")],
+                include: [resolve("src")],
                 options: {
                     limit: 10000,
                     // min:false,
@@ -168,11 +169,15 @@ let webpackConfig = {
         }),
         // 设置每一次build之前先删除dist
         new CleanWebpackPlugin(
-            ['dist/*',], 　 //匹配删除的文件
+            ['dist'], 　 //匹配删除的文件
             {
-                root: __dirname, //根目录
-                verbose: true, //开启在控制台输出信息
-                dry: false //启用删除文件
+
+                //根目录
+                root: resolve('/'),
+                //开启在控制台输出信息
+                verbose: true,
+                //启用删除文件
+                dry: false
             }
         ),
         new ChunksFromEntryPlugin(),
@@ -181,7 +186,7 @@ let webpackConfig = {
             "process.env.NODE_ENV": JSON.stringify("production")
         }),
         new CopyWebpackPlugin([{
-            from: path.resolve(__dirname, './static'),
+            from: resolve('static'),
             to: '',
             ignore: myConfig.COPYDIR_IGNORE.replace(/\s+/g, "").split(',')
         }]),
@@ -262,7 +267,7 @@ if (pageConfig && Array.isArray(pageConfig)) {
     pageConfig.map(page => {
         webpackConfig.entry[page.name] = `./${page.js}`;
         webpackConfig.plugins.push(new HtmlWebpackPlugin({
-            filename: resolve(`/dist/${page.name}`),
+            filename: resolve(`dist/${page.name}`),
             template: resolve(page.template),
             inject: true,
             entry: page.name,

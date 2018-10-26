@@ -39,13 +39,19 @@ export default {
 			choosedId:null //选中答案id
 		}
 	},
-  	props:['fatherComponent'],
-  	computed: mapState([
-	  	'itemNum', //第几题
-  		'level', //第几周
-  		'itemDetail', //题目详情
-  		'timer', //计时器
-	]),
+  	props: {
+        fatherComponent: {
+        	type: String
+        }
+    },
+  	computed: {
+		...mapState([
+		 'itemNum', //第几题
+		 'level', //第几周
+		 'itemDetail', //题目详情
+		 'timer', //计时器
+		 ])
+    },
   	methods: {
   		...mapActions([
   			'addNum', 'initializeData',
