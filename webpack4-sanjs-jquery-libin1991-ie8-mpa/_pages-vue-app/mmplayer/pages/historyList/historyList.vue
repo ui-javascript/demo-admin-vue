@@ -13,7 +13,7 @@
 <script>
     import {topListMm} from 'api'
     import {mapGetters, mapMutations, mapActions} from 'vuex'
-    import MusicList from '../../components/music-list/music-list'
+    import MusicList from 'components/music-list/music-list'
     import MmDialog from 'base/mm-dialog/mm-dialog'
     
     export default {
@@ -62,7 +62,7 @@
 </script>
 
 <style lang="less" scoped>
-    @import "../../assets/css/var";
+    @import "~assets/css/var";
     
     .historyList {
         width: 100%;

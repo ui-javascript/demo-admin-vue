@@ -110,7 +110,7 @@
 </script>
 
 <style lang="less">
-    @import "../../assets/css/var";
+    @import "~assets/css/var";
     
     .mm-header {
         position: absolute;

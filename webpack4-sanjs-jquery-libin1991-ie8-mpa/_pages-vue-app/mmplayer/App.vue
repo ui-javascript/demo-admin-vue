@@ -16,7 +16,7 @@
 </template>
 
 <script>
-    const pkg = require('./version').pkg;
+    const pkg = require('./version').default;
     import {mapMutations,mapActions} from 'vuex'
     import {topList} from 'api'
     import {defaultSheetId} from 'assets/js/config'
@@ -108,7 +108,7 @@
 </script>
 
 <style lang="less">
-    @import "./assets/css/var";
+    @import "~assets/css/var";
     
     #app {
         position: relative;

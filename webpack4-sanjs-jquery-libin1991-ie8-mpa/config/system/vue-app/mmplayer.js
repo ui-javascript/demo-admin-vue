@@ -13,6 +13,7 @@ module.exports = {
     COPYDIR_IGNORE: "",
     RESOLVE_ALIAS: {
         /* mmplayer配置 ================ */
+        '@': resolve('_pages-vue-app/mmplayer'),
         'assets': resolve('_pages-vue-app/mmplayer/assets'),
         'base': resolve('_pages-vue-app/mmplayer/base'),
         'components': resolve('_pages-vue-app/mmplayer/components'),

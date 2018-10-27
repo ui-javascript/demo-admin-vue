@@ -19,7 +19,7 @@
 
 <script>
     import {mapGetters, mapMutations, mapActions} from 'vuex'
-    import MusicList from '../../components/music-list/music-list'
+    import MusicList from 'components/music-list/music-list'
     import MmDialog from 'base/mm-dialog/mm-dialog'
     
     export default {
@@ -77,7 +77,7 @@
 </script>
 
 <style lang="less">
-    @import "../../assets/css/var";
+    @import "~assets/css/var";
     
     .playList {
         position: relative;

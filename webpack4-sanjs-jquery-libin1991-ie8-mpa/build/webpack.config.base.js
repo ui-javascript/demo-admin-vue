@@ -129,4 +129,5 @@ let webpackConfig = {
 Object.assign(webpackConfig.resolve.alias, myConfig.RESOLVE_ALIAS)
 Object.assign(webpackConfig.externals, myConfig.EXTERNALS)
 
+
 module.exports = webpackConfig;

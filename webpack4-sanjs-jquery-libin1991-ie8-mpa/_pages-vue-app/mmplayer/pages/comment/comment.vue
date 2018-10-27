@@ -143,8 +143,8 @@
 </script>
 
 <style lang="less" scoped>
-    @import "../../assets/css/var";
-    @import "../../assets/css/mixin";
+    @import "~assets/css/var";
+    @import "~assets/css/mixin";
     
     .comment {
         position: relative;
@@ -221,7 +221,7 @@
                         padding-left: 23px;
                         height: 20px;
                         line-height: 20px;
-                        background-image: url("../../assets/img/comment.png");
+                        background-image: url("~assets/img/comment.png");
                         background-repeat: no-repeat;
                         background-size: contain;
                     }

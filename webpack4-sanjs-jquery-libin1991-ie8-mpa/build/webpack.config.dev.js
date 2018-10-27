@@ -52,10 +52,11 @@ let webpackConfig = merge(baseWebpackConfig, {
     devServer: {
         // 服务器返回浏览器的时候是否启动gzip压缩
         compress: true,
-        contentBase: [
-            resolve("dist"),
-            resolve("static")
-        ],
+        // contentBase: [
+        //     resolve("dist"),
+        //     resolve("static")
+        // ],
+        contentBase: false,
         historyApiFallback: true,
         inline: true,
         hot: true,

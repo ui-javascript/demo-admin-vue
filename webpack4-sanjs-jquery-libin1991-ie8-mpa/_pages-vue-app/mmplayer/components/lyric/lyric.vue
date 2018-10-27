@@ -85,8 +85,8 @@
 </script>
 
 <style lang="less" scoped>
-    @import "../../assets/css/var";
-    @import "../../assets/css/mixin";
+    @import "~assets/css/var";
+    @import "~assets/css/mixin";
     
     .music-info {
         padding-bottom: 20px;
@@ -104,7 +104,7 @@
                 top: 0;
                 width: 201px;
                 height: 180px;
-                background: url("../../assets/img/album_cover_player.png") 0 0 no-repeat;
+                background: url("~assets/img/album_cover_player.png") 0 0 no-repeat;
             }
             img {
                 vertical-align: middle;
@@ -118,7 +118,7 @@
             .no-wrap();
             .github {
                 padding-left: 25px;
-                background: url("../../assets/img/github.png") no-repeat center left / contain;
+                background: url("~assets/img/github.png") no-repeat center left / contain;
             }
         }
     }

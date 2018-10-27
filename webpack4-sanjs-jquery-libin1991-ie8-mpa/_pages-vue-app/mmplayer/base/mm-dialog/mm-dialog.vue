@@ -81,7 +81,7 @@
 </script>
 
 <style lang="less">
-    @import "../../assets/css/var";
+    @import "~assets/css/var";
     
     .mm-dialog-box {
         position: fixed;

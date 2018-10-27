@@ -141,8 +141,8 @@
 </script>
 
 <style lang="less" scoped>
-    @import "../../assets/css/var";
-    @import "../../assets/css/mixin";
+    @import "~assets/css/var";
+    @import "~assets/css/mixin";
     
     .list-header {
         border-bottom: 1px solid @list_head_line_color;
@@ -184,7 +184,7 @@
             color: #fff;
             .list-num {
                 font-size: 0;
-                background: url("../../assets/img/wave.gif") no-repeat center center;
+                background: url("~assets/img/wave.gif") no-repeat center center;
             }
         }
         &:hover {
@@ -246,7 +246,7 @@
                     width: 36px;
                     height: 36px;
                     margin-right: 10px;
-                    background-image: url("../../assets/img/icon_list_menu.png");
+                    background-image: url("~assets/img/icon_list_menu.png");
                     background-repeat: no-repeat;
                     cursor: pointer;
                 }
@@ -286,7 +286,7 @@
                 left: 0;
                 width: 36px;
                 height: 36px;
-                background-image: url("../../assets/img/icon_list_menu.png");
+                background-image: url("~assets/img/icon_list_menu.png");
                 background-repeat: no-repeat;
                 background-position: -80px -160px;
                 cursor: pointer;

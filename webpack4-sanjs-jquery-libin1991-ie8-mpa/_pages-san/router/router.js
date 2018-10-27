@@ -18,8 +18,8 @@ import san from 'san'
 import "./san.scss"
 
 import {router} from 'san-router'
-import HelloApp from './HelloApp.san'
-import HelloApp2 from './HelloApp2.san'
+import HelloApp from './views/HelloApp.san'
+import HelloApp2 from './views/HelloApp2.san'
 
 console.log('hello webpack San')
 

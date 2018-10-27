@@ -382,7 +382,7 @@
 </script>
 
 <style lang="less">
-    @import "../assets/css/var";
+    @import "~assets/css/var";
     
     .music {
         padding: 75px 25px 25px 25px;
@@ -425,7 +425,7 @@
             }
             .bar-icon {
                 display: block;
-                background-image: url("../assets/img/player.png");
+                background-image: url("~assets/img/player.png");
                 cursor: pointer;
             }
             .music-bar-btns {
