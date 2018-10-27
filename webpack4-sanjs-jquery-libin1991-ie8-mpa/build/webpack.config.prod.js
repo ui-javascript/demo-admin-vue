@@ -14,7 +14,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 // 引入配置
 const baseWebpackConfig = require('./webpack.config.base')
-const pageConfig = require('./utils.mpa');
+const pageConfig = require('./utils/utils.mpa');
 const myConfig = require("../config/index")
 const tolerateIE8 = myConfig.IE8 === true
 

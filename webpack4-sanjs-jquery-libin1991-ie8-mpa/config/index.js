@@ -11,7 +11,7 @@ function resolve(dir) {
 let config = {
 
     // 端口 ================
-    PORT: 9528,
+    PORT: 9527,
 
     // 是否兼容IE8 ==========
     IE8: true,
@@ -26,6 +26,12 @@ let config = {
     // 2. 指定域名cdn "https://www.bootcdn.cn/"
     // =======================
     CDN: "/",
+
+    // 入口生成标准 @TODO
+    // 1. html为准 'html'
+    // 2. js为准 'js'
+    // 3. html、js都要 'both'
+    ENTRY_FITST: 'html',
 
     // 指定运行的模块 ==========
     // 1. 默认所有 "*"

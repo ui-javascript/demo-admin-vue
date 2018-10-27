@@ -10,7 +10,7 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin'); //webpack 启�
 
 // 配置文件
 const baseWebpackConfig = require('./webpack.config.base')
-const pageConfig = require('./utils.mpa');
+const pageConfig = require('./utils/utils.mpa');
 const myConfig = require("../config/index")
 const PORT = myConfig.PORT
 
@@ -76,11 +76,7 @@ if (pageConfig && Array.isArray(pageConfig)) {
             inject: true,
             chunks: ['vendor', 'manifest', page.name],
             inlineSource: '.(js|css)$',
-            minify: {
-                removeComments: true,
-                collapseWhitespace: true,
-                removeAttributeQuotes: true,
-            },
+            minify: false,
             chunksSortMode: 'dependency'
         }))
     })

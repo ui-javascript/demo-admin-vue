@@ -1,9 +1,9 @@
 # README
 
-- webpack刚开始写时项目是乱选的，所以配置现在一团糟...
+- webpack刚开始写时项目是乱选的，所以配置现在一团糟,只作学习用...
     - ddl
     - happypack
-    - ...
+    - ...    
 - 分工程跑不起来，八成是路由的问题...
 - html里引用static内容注意相对路径 ../../static
 - 零配置真扯淡， 复杂的项目不可能约定大于配置...
@@ -50,8 +50,6 @@
 
 </body>
 </html>
-
-入口文件兼容加上
 
 <script>
 // require("babel-polyfill")

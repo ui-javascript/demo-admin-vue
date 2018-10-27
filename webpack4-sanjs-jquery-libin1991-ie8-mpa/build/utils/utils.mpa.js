@@ -2,13 +2,13 @@ const path = require('path')
 const glob = require('glob')
 const fs = require('fs')
 
-var myConfig = require("../config/index")
+var myConfig = require("../../config/index")
 var PAGES = myConfig.PAGES
 var MODULES = myConfig.MODULES.replace(/\s+/g,"")
 
 // 处理路径
 function resolve(dir) {
-    return path.join(__dirname, '..' , dir)
+    return path.join(__dirname, '../../' , dir)
 }
 
 // 配置pages多页面获取当前文件夹下的html和js
