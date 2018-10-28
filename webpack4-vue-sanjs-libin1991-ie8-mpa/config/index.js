@@ -51,10 +51,10 @@ let config = {
         // 2. 指定域名cdn "https://www.bootcdn.cn/"
         cdn: '',
         copyDir: [
-            { from: resolve('static/*.ico')},
-            { from: resolve('static/img/**')},
-            // { from: resolve('static/vendor/**')}
-            // { from: resolve('static/plus/layui/**')},
+            { from: resolve('static/*.ico'), to: resolve('dist')},
+            { from: resolve('static/img/**'), to: resolve('dist')},
+            // { from: resolve('static/vendor/**'), to: resolve('dist')}
+            // { from: resolve('static/plus/layui/**'), to: resolve('dist')},
         ],
     },
     // 开发配置
@@ -66,7 +66,29 @@ let config = {
     },
     // 部署配置
     deploy: {
-
+        // 选择上传
+        // 'ali' || 'qiniu'
+        use: 'ali',
+        // 七牛
+        qiNiuCdn: {
+            host: '',
+            bucket: '',
+            ak: '',
+            sk: '',
+            zone: '',
+            // 路径前缀
+            prefix: ''
+        },
+        // 阿里OSS相关配置
+        aLiOss: {
+            host: '',
+            accessKeyId: '',
+            accessKeySecret: '',
+            bucket: '',
+            region: '',
+            // 路径前缀
+            prefix: ''
+        },
     }
 };
 
@@ -75,7 +97,7 @@ let sysName = [
     // 'default/_all',
     // 'default/index',
     // 'default/easyui',
-    'default/layui',
+    // 'default/layui',
     // 'default/lulu',
     // 'san/_all',
     // 'san/index',
@@ -96,7 +118,7 @@ let sysName = [
     // 'vue-app/index',
     // 'vue-app/chat',
     // 'vue-app/todo',
-    // 'vue-app/mmplayer',
+    'vue-app/mmplayer',
     // 'vue-app/happyfri',
     // 'vue-mobile/_all',
     // 'vue-mobile/index',

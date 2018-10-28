@@ -19,10 +19,10 @@ module.exports = {
 
     build: {
         copyDir: [
-            { from: resolve('static/*.ico')},
-            { from: resolve('static/img/**')},
-            // { from: resolve('static/plus/layui/**')},
-            // { from: resolve('static/vendor/**')}
+            { from: resolve('static/*.ico'), to: resolve('dist')},
+            { from: resolve('static/img/**'), to: resolve('dist')},
+            // { from: resolve('static/plus/layui/**'), to: resolve('dist')},
+            // { from: resolve('static/vendor/**'), to: resolve('dist')}
         ],
     }
 

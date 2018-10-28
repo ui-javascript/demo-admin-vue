@@ -8,7 +8,7 @@ module.exports = {
     system: {
         supportIE8: false,
         pages: "_pages-vue-app",
-        modules: "mmlayer",
+        modules: "mmplayer",
         resolveAlias: {
             '@': resolve('_pages-vue-app/mmplayer'),
             'assets': resolve('_pages-vue-app/mmplayer/assets'),
