@@ -25,7 +25,7 @@ let webpackConfig = {
         globalObject: 'this'
     },
     resolve: {
-        extensions: [".js", ".json", ".vue", ".san", '.less', '.sass'],
+        extensions: [".js", ".json", ".vue", ".san", '.less', '.sass', '.styl'],
         alias: {
             vue$: 'vue/dist/vue.esm.js',
             '@': resolve('src'),
@@ -58,9 +58,16 @@ let webpackConfig = {
                     loaders: {
                         css: ExtractTextPlugin.extract({ use: ['css-loader?minimize&sourceMap=false', 'postcss-loader'] }),
                         less: ExtractTextPlugin.extract({ use: ['css-loader?minimize&sourceMap=false', 'postcss-loader', "less-loader" ] }),
-                        sass: ExtractTextPlugin.extract({ use: ['css-loader?minimize&sourceMap=false', 'postcss-loader', "sass-loader" ] })
+                        sass: ExtractTextPlugin.extract({ use: ['css-loader?minimize&sourceMap=false', 'postcss-loader', "sass-loader" ] }),
+                        scss: ExtractTextPlugin.extract({ use: ['css-loader?minimize&sourceMap=false', 'postcss-loader', "sass-loader" ] }),
+                        stylus: ExtractTextPlugin.extract({ use: ['css-loader?minimize&sourceMap=false', 'postcss-loader', "stylus-loader" ] }),
+                        styl: ExtractTextPlugin.extract({ use: ['css-loader?minimize&sourceMap=false', 'postcss-loader', "stylus-loader" ] })
                     }
                 },
+                include: [
+                    resolve('src'),
+                    resolve(myConfig.system.pages),
+                ]
             },
             {
                 test: /\.san$/,
@@ -115,6 +122,13 @@ let webpackConfig = {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader?sourceMap=false', "postcss-loader", 'sass-loader'],
+                }),
+            },
+            {
+                test: /\.styl$/,
+                use: ExtractTextPlugin.extract({
+                    use: ['css-loader?sourceMap=false', "postcss-loader", 'stylus-loader'],
+                    // use: ['style-loader', 'css-loader', "postcss-loader", 'stylus-loader'],
                 }),
             },
         ]

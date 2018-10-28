@@ -16,7 +16,12 @@ let config = {
         // 2. js为准 'js'
         // 3. html、js都要 'both'
         entryFirst: 'html',
+
+        // 是否兼容IE8
         supportIE8: true,
+
+        // @TODO 适配
+        isMobile: false,
 
         // 页面所在
         pages: '_pages',
@@ -24,7 +29,7 @@ let config = {
         // 1. 默认所有 "*"
         // 2. 指定单个模块 "index"
         // 3. 指定多个模块  "{index,router,todo}"
-        modules: 'todo',
+        modules: 'index',
 
         // 路径别名
         resolveAlias: {
@@ -117,8 +122,9 @@ let sysName = [
     // 'vue-app/_all',
     // 'vue-app/index',
     // 'vue-app/chat',
+    'vue-app/bilibili',
     // 'vue-app/todo',
-    'vue-app/mmplayer',
+    // 'vue-app/mmplayer',
     // 'vue-app/happyfri',
     // 'vue-mobile/_all',
     // 'vue-mobile/index',
