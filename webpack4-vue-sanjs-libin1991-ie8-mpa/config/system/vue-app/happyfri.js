@@ -22,7 +22,6 @@ module.exports = {
         env: {
             NODE_ENV: '"production"',
         },
-        copyIgnore: "**",
     },
     dev: {
         port: 9527,

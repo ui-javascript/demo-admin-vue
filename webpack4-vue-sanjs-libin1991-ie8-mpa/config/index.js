@@ -50,12 +50,12 @@ let config = {
         // 1. 默认相对路径    '/'
         // 2. 指定域名cdn "https://www.bootcdn.cn/"
         cdn: '',
-        copyDir: '',
-        // 拷贝忽略 ================
-        // 1. 默认不忽略 ""
-        // 2. 全部忽略 "**"
-        // 3. 忽略部分 "plus/lulu/**,plus/layui/**"
-        copyIgnore: '**',
+        copyDir: [
+            { from: resolve('static/*.ico')},
+            { from: resolve('static/img/**')},
+            // { from: resolve('static/vendor/**')}
+            // { from: resolve('static/plus/layui/**')},
+        ],
     },
     // 开发配置
     dev: {
@@ -75,7 +75,7 @@ let sysName = [
     // 'default/_all',
     // 'default/index',
     // 'default/easyui',
-    // 'default/layui',
+    'default/layui',
     // 'default/lulu',
     // 'san/_all',
     // 'san/index',
@@ -90,7 +90,7 @@ let sysName = [
     // 'vue/bootstrap',
     // 'vue-admin/_all',
     // 'vue-admin/index',
-    'vue-admin/element',
+    // 'vue-admin/element',
     // 'vue-admin/d2',
     // 'vue-app/_all',
     // 'vue-app/index',

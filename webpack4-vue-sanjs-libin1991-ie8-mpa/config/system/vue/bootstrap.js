@@ -15,6 +15,5 @@ module.exports = {
     },
 
     build: {
-        copyIgnore: "**",
     }
 };

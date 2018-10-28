@@ -11,6 +11,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const es3ifyPlugin = require('es3ify-webpack-plugin-v2');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin; //webpack可视化
+var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
 // 引入配置
 const baseWebpackConfig = require('./webpack.config.base')
@@ -57,7 +58,7 @@ class ChunksFromEntryPlugin {
 
 let webpackConfig = merge(baseWebpackConfig, {
     mode: 'production',
-    devtool: false,
+    devtool: false, // '#source-map'
     plugins: [
         new webpack.DefinePlugin({
             'process.env': myConfig.build.env
@@ -67,6 +68,12 @@ let webpackConfig = merge(baseWebpackConfig, {
             filename: 'css/[name].[hash:7].css',
             allChunks: true
         }),
+        new OptimizeCSSPlugin({
+            cssProcessorOptions: {
+                safe: true
+            }
+        }),
+        new webpack.optimize.ModuleConcatenationPlugin(),
         // 设置每一次build之前先删除dist
         new CleanWebpackPlugin(
             ['dist'], 　 //匹配删除的文件
@@ -80,11 +87,8 @@ let webpackConfig = merge(baseWebpackConfig, {
             }
         ),
         new ChunksFromEntryPlugin(),
-        new CopyWebpackPlugin([{
-            from: resolve('static'),
-            to: resolve('dist'),
-            ignore: myConfig.build.copyIgnore.replace(/\s+/g, "").split(',')
-        }]),
+        new CopyWebpackPlugin(myConfig.build.copyDir),
+        // 生成统计
         new BundleAnalyzerPlugin()
     ],
     module: {

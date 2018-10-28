@@ -18,7 +18,12 @@ module.exports = {
     },
 
     build: {
-        copyIgnore: "vendor/**",
+        copyDir: [
+            { from: resolve('static/*.ico')},
+            { from: resolve('static/img/**')},
+            // { from: resolve('static/plus/layui/**')},
+            // { from: resolve('static/vendor/**')}
+        ],
     }
 
 };
