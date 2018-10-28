@@ -5,15 +5,19 @@ function resolve(dir) {
 }
 
 module.exports = {
-    IE8: false,
-    PAGES: "_pages-vue-admin",
-    MODULES: "element",
-    COPYDIR_IGNORE: "**",
-    RESOLVE_ALIAS: {},
+    system: {
+        supportIE8: false,
+        pages: "_pages-vue-admin",
+        modules: "element",
+        resolveAlias: {},
+        externals: {
+        },
+    },
     build: {
         env: {
             NODE_ENV: '"production"',
         },
+        copyIgnore: "**",
     },
     dev: {
         port: 9527,

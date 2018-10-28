@@ -3,8 +3,8 @@ const glob = require('glob')
 const fs = require('fs')
 
 var myConfig = require("../../config/index")
-var PAGES = myConfig.PAGES
-var MODULES = myConfig.MODULES.replace(/\s+/g,"")
+var PAGES = myConfig.system.pages
+var MODULES = myConfig.system.modules.replace(/\s+/g,"")
 
 // 处理路径
 function resolve(dir) {
@@ -15,7 +15,7 @@ function resolve(dir) {
 function getEntry(globPath) {
 	let entries = [],
 		basename, sections, moduledir, modulename, entrypath;
-	let ie8tmpl = `index${myConfig.IE8?'-san':''}.js`
+	let ie8tmpl = `index${myConfig.system.supportIE8?'-san':''}.js`
 	glob.sync(globPath).forEach(function(entry) {
 
 		// 不支持多级目录 因为玩嵌套是很糟心的

@@ -8,7 +8,7 @@ module.exports = {
     system: {
         supportIE8: false,
         pages: "_pages-vue-admin",
-        modules: "d2",
+        modules: "*",
         resolveAlias: {},
         externals: {
         },

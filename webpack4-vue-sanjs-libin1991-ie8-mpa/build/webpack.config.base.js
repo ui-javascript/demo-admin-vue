@@ -46,7 +46,7 @@ let webpackConfig = {
                 loader: 'babel-loader',
                 include: [
                     resolve('src'),
-                    resolve(myConfig.PAGES),
+                    resolve(myConfig.system.pages),
                     resolve('test'),
                     resolve('node_modules/webpack-dev-server/client'),
                 ]
@@ -126,8 +126,8 @@ let webpackConfig = {
 };
 
 // 路径覆盖
-Object.assign(webpackConfig.resolve.alias, myConfig.RESOLVE_ALIAS)
-Object.assign(webpackConfig.externals, myConfig.EXTERNALS)
+Object.assign(webpackConfig.resolve.alias, myConfig.system.resolveAlias)
+Object.assign(webpackConfig.externals, myConfig.system.external)
 
 
 module.exports = webpackConfig;

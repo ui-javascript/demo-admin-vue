@@ -5,17 +5,31 @@ function resolve(dir) {
 }
 
 module.exports = {
-    IE8: false,
-    PAGES: "_pages-vue-app",
-    MODULES: "mmplayer",
-    COPYDIR_IGNORE: "",
-    RESOLVE_ALIAS: {
-        /* mmplayer配置 ================ */
-        '@': resolve('_pages-vue-app/mmplayer'),
-        'assets': resolve('_pages-vue-app/mmplayer/assets'),
-        'base': resolve('_pages-vue-app/mmplayer/base'),
-        'components': resolve('_pages-vue-app/mmplayer/components'),
-        'pages': resolve('_pages-vue-app/mmplayer/pages'),
-        'api': resolve('_pages-vue-app/mmplayer/api'),
-    }
+    system: {
+        supportIE8: false,
+        pages: "_pages-vue-app",
+        modules: "mmlayer",
+        resolveAlias: {
+            '@': resolve('_pages-vue-app/mmplayer'),
+            'assets': resolve('_pages-vue-app/mmplayer/assets'),
+            'base': resolve('_pages-vue-app/mmplayer/base'),
+            'components': resolve('_pages-vue-app/mmplayer/components'),
+            'pages': resolve('_pages-vue-app/mmplayer/pages'),
+            'api': resolve('_pages-vue-app/mmplayer/api'),
+        },
+        externals: {
+        },
+    },
+    build: {
+        env: {
+            NODE_ENV: '"production"',
+        },
+        copyIgnore: "**",
+    },
+    dev: {
+        port: 9527,
+        env: {
+            NODE_ENV: '"development"',
+        },
+    },
 };

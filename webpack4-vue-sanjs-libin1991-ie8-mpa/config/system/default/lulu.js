@@ -5,14 +5,20 @@ function resolve(dir) {
 }
 
 module.exports = {
-    IE8: true,
-    PAGES: "_pages",
-    MODULES: "lulu",
-    COPYDIR_IGNORE: "vendor/**",
-    RESOLVE_ALIAS: {},
-    EXTERNALS: {
-        jquery: 'window.$',
-        $: 'window.$',
-        seajs: 'window.seajs',
+    system: {
+        supportIE8: true,
+        pages: "_pages",
+        modules: "lulu",
+        resolveAlias: {},
+        externals: {
+            jquery: 'window.$',
+            $: 'window.$',
+            seajs: 'window.seajs',
+        },
+    },
+
+    build: {
+        copyIgnore: "vendor/**",
     }
+
 };

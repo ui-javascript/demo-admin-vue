@@ -5,12 +5,18 @@ function resolve(dir) {
 }
 
 module.exports = {
-    IE8: true,
-    PAGES: "_pages-san-admin",
-    MODULES: "*",
-    COPYDIR_IGNORE: "**",
-    RESOLVE_ALIAS: {},
-    EXTERNALS: {
-        san: 'window.san',
+    system: {
+        supportIE8: true,
+        pages: "_pages-san-admin",
+        modules: "index",
+        resolveAlias: {},
+        externals: {
+            san: 'window.san',
+        },
+    },
+
+    build: {
+        copyIgnore: "**",
     }
+
 };

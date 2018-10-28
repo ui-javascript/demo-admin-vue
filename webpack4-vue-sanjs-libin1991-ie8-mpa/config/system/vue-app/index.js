@@ -5,9 +5,24 @@ function resolve(dir) {
 }
 
 module.exports = {
-    IE8: false,
-    PAGES: "_pages-vue-app",
-    MODULES: "*",
-    COPYDIR_IGNORE: "**",
-    RESOLVE_ALIAS: {}
+    system: {
+        supportIE8: false,
+        pages: "_pages-vue-app",
+        modules: "index",
+        resolveAlias: {},
+        externals: {
+        },
+    },
+    build: {
+        env: {
+            NODE_ENV: '"production"',
+        },
+        copyIgnore: "**",
+    },
+    dev: {
+        port: 9527,
+        env: {
+            NODE_ENV: '"development"',
+        },
+    },
 };

@@ -5,9 +5,16 @@ function resolve(dir) {
 }
 
 module.exports = {
-    IE8: false,
-    PAGES: "_pages-vue",
-    MODULES: "bootstrap",
-    COPYDIR_IGNORE: "**",
-    RESOLVE_ALIAS: {}
+    system: {
+        supportIE8: false,
+        pages: "_pages-vue",
+        modules: "bootstrap",
+        resolveAlias: {},
+        externals: {
+        },
+    },
+
+    build: {
+        copyIgnore: "**",
+    }
 };

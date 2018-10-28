@@ -5,14 +5,15 @@ function resolve(dir) {
 }
 
 module.exports = {
-    IE8: true,
-    PAGES: "_pages",
-    MODULES: "*",
-    COPYDIR_IGNORE: "**",
-    RESOLVE_ALIAS: {},
-    EXTERNALS: {
-        jquery: 'window.$',
-        $: 'window.$',
-        seajs: 'window.seajs',
-    }
+    system: {
+        supportIE8: true,
+        pages: "_pages",
+        modules: "index",
+        resolveAlias: {},
+        externals: {
+            jquery: 'window.$',
+            $: 'window.$',
+            seajs: 'window.seajs',
+        },
+    },
 };

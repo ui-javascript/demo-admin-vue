@@ -5,14 +5,29 @@ function resolve(dir) {
 }
 
 module.exports = {
-    IE8: false,
-    PAGES: "_pages-vue-app",
-    MODULES: "happyfri",
-    COPYDIR_IGNORE: "**",
-    RESOLVE_ALIAS: {
-        /* happyfri配置 ================ */
-        'src': resolve('_pages-vue-app/happyfri'),
-        'assets': resolve('_pages-vue-app/happyfri/assets'),
-        'components': resolve('_pages-vue-app/happyfri/components')
-    }
+    system: {
+        supportIE8: false,
+        pages: "_pages-vue-app",
+        modules: "happyfri",
+        resolveAlias: {
+            'src': resolve('_pages-vue-app/happyfri'),
+            'assets': resolve('_pages-vue-app/happyfri/assets'),
+            'components': resolve('_pages-vue-app/happyfri/components')
+        },
+        externals: {
+
+        },
+    },
+    build: {
+        env: {
+            NODE_ENV: '"production"',
+        },
+        copyIgnore: "**",
+    },
+    dev: {
+        port: 9527,
+        env: {
+            NODE_ENV: '"development"',
+        },
+    },
 };

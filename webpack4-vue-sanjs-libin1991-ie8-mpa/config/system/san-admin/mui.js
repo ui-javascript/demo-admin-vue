@@ -5,12 +5,17 @@ function resolve(dir) {
 }
 
 module.exports = {
-    IE8: false,
-    PAGES: "_pages-san-admin",
-    MODULES: "mui",
-    COPYDIR_IGNORE: "**",
-    RESOLVE_ALIAS: {},
-    EXTERNALS: {
-        // san: 'window.san',
+    system: {
+        supportIE8: false,
+        pages: "_pages-san-admin",
+        modules: "mui",
+        resolveAlias: {},
+        externals: {
+        },
+    },
+
+    build: {
+        copyIgnore: "**",
     }
+
 };

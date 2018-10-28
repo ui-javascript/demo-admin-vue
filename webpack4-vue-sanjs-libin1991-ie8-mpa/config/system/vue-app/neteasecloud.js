@@ -5,14 +5,28 @@ function resolve(dir) {
 }
 
 module.exports = {
-    IE8: false,
-    PAGES: "_pages-vue-app",
-    MODULES: "neteasecloud",
-    COPYDIR_IGNORE: "**",
-    RESOLVE_ALIAS: {
-        /* neteasecloud配置 ============ */
-        'src': resolve('_pages-vue-app/neteasecloud'),
-        'assets': resolve('_pages-vue-app/neteasecloud/assets'),
-        'components': resolve('_pages-vue-app/neteasecloud/components'),
-    }
+    system: {
+        supportIE8: false,
+        pages: "_pages-vue-app",
+        modules: "neteasecloud",
+        resolveAlias: {
+            'src': resolve('_pages-vue-app/neteasecloud'),
+            'assets': resolve('_pages-vue-app/neteasecloud/assets'),
+            'components': resolve('_pages-vue-app/neteasecloud/components'),
+        },
+        externals: {
+        },
+    },
+    build: {
+        env: {
+            NODE_ENV: '"production"',
+        },
+        copyIgnore: "**",
+    },
+    dev: {
+        port: 9527,
+        env: {
+            NODE_ENV: '"development"',
+        },
+    },
 };

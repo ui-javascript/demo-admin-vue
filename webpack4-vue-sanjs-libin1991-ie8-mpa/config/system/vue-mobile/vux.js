@@ -5,9 +5,24 @@ function resolve(dir) {
 }
 
 module.exports = {
-    IE8: false,
-    PAGES: "_pages-vue-mobile",
-    MODULES: "vux",
-    COPYDIR_IGNORE: "**",
-    RESOLVE_ALIAS: {}
+    system: {
+        supportIE8: false,
+        pages: "_pages-vue-mobile",
+        modules: "vux",
+        resolveAlias: {},
+        externals: {
+        },
+    },
+    build: {
+        env: {
+            NODE_ENV: '"production"',
+        },
+        copyIgnore: "**",
+    },
+    dev: {
+        port: 9527,
+        env: {
+            NODE_ENV: '"development"',
+        },
+    },
 };

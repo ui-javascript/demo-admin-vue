@@ -12,7 +12,6 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin'); //webpack 启�
 const baseWebpackConfig = require('./webpack.config.base')
 const pageConfig = require('./utils/utils.mpa');
 const myConfig = require("../config/index")
-const PORT = myConfig.dev.port
 
 // 处理路径
 function resolve(dir) {
@@ -33,7 +32,7 @@ let webpackConfig = merge(baseWebpackConfig, {
         }),
         //自动打开浏览器
         new OpenBrowserPlugin({
-            url: `http://localhost:${PORT}/${pageConfig[0].name}`
+            url: `http://localhost:${myConfig.dev.port}/${pageConfig[0].name}`
         }),
     ],
     module: {
@@ -62,7 +61,7 @@ let webpackConfig = merge(baseWebpackConfig, {
         hot: true,
         overlay: true,
         host: '127.0.0.1',
-        port: PORT
+        port: myConfig.dev.port
     }
 });
 

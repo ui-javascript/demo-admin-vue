@@ -6,15 +6,14 @@ function resolve(dir) {
 
 module.exports = {
     system: {
-        supportIE8: false,
-        pages: "_pages-vue-admin",
-        modules: "d2",
+        supportIE8: true,
+        pages: "_pages",
+        modules: "*",
         resolveAlias: {},
         externals: {
+            jquery: 'window.$',
+            $: 'window.$',
+            seajs: 'window.seajs',
         },
     },
-
-    build: {
-        copyIgnore: "**",
-    }
 };

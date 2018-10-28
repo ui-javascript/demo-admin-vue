@@ -16,7 +16,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const baseWebpackConfig = require('./webpack.config.base')
 const pageConfig = require('./utils/utils.mpa');
 const myConfig = require("../config/index")
-const tolerateIE8 = myConfig.IE8 === true
+const tolerateIE8 = myConfig.system.supportIE8 === true
 
 // 处理路径
 function resolve(dir) {
@@ -76,7 +76,7 @@ let webpackConfig = merge(baseWebpackConfig, {
         new CopyWebpackPlugin([{
             from: resolve('static'),
             to: resolve('dist'),
-            ignore: myConfig.COPYDIR_IGNORE.replace(/\s+/g, "").split(',')
+            ignore: myConfig.build.copyIgnore.replace(/\s+/g, "").split(',')
         }]),
         new BundleAnalyzerPlugin()
     ],
