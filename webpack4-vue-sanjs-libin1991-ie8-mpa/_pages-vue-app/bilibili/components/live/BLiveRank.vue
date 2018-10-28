@@ -2,7 +2,7 @@
 	<div class="rank">
 		<div class="b-head">
 			<ul class="b-slt-tab" data-initialized="true">
-				<li v-for="(item, index) in tabTitle" @click="cutTab(index)" :class="{on: tabCount == index}">
+				<li v-for="(item, index) in tabTitle" @click="cutTab(index)" :class="{on: tabCount == index}" :key="index">
 					<span class="b-tab-text">{{item}}</span>
 				</li>
 			</ul>
@@ -11,7 +11,7 @@
 			<div class="r-list-body">
 				<div class="r-list-wrapper" ref="listWrapper">
 					<ul class="r-list-live" >
-						<BLiveRankItem v-for="(item, index ) in ranklist" :rank="item" :index="index"></BLiveRankItem>
+						<BLiveRankItem v-for="(item, index ) in ranklist" :rank="item" :index="index" :key="index"></BLiveRankItem>
 					</ul>
 					<ul class="r-list-live">
 						<li class="no-data">
@@ -31,7 +31,7 @@
 							</div>
 							<div class="s-bottom">
 								<div class="info">
-									<div class="info-item"  v-for="(pre, index) in preview" :class="{ show: count == index,hide: count !== index }">
+									<div class="info-item"  :key="index" v-for="(pre, index) in preview" :class="{ show: count == index,hide: count !== index }">
 										<a class="t" :href="pre.url" :title="pre.title" target="_blank">{{pre.title}}</a>
 									</div>
 								</div>

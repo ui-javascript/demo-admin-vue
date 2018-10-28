@@ -2,7 +2,7 @@
 	<div class="menu">
 		<div class="menu-wrapper">
 			<ul class="nav-menu">
-				<BMenuItem  v-for="i in classify" :item="i"></BMenuItem>
+				<BMenuItem  v-for="i in classify" :item="i" :key="item"></BMenuItem>
 			</ul>
 			<div class="menu-r">
 				<a href="" target="_blank" href="http://search.bilibili.com/all?keyword=%E8%B9%A6%E8%BF%AA" title="蹦迪" class="random-p">

@@ -15,7 +15,7 @@
 			<div class="b-body" v-if="promotelist">
 				<ul class="rm-list">
 					<div>
-						<BPromoteItem v-for="item in promotelist" :promoteItem="item"></BPromoteItem>
+						<BPromoteItem v-for="item in promotelist" :promoteItem="item" :key="item"></BPromoteItem>
 					</div>
 				</ul>
 			</div>
