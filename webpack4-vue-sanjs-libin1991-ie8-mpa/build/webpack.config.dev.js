@@ -12,7 +12,7 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin'); //webpack 启�
 const baseWebpackConfig = require('./webpack.config.base')
 const pageConfig = require('./utils/utils.mpa');
 const myConfig = require("../config/index")
-const PORT = myConfig.PORT
+const PORT = myConfig.dev.port
 
 // 处理路径
 function resolve(dir) {
@@ -23,7 +23,7 @@ let webpackConfig = merge(baseWebpackConfig, {
     mode: 'development',
     plugins: [
         new webpack.DefinePlugin({
-            'process.env': require('../config/dev.env')
+            'process.env': myConfig.dev.env
         }),
         new webpack.ProvidePlugin({}),
         new webpack.HotModuleReplacementPlugin(),

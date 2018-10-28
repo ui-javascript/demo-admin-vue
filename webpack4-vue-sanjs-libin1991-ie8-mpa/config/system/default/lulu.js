@@ -5,10 +5,8 @@ function resolve(dir) {
 }
 
 module.exports = {
-    PORT: 9528,
     IE8: true,
     PAGES: "_pages",
-    CDN: "/",
     MODULES: "lulu",
     COPYDIR_IGNORE: "vendor/**",
     RESOLVE_ALIAS: {},

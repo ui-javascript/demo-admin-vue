@@ -5,10 +5,8 @@ function resolve(dir) {
 }
 
 module.exports = {
-    PORT: 9528,
     IE8: false,
     PAGES: "_pages-vue-app",
-    CDN: "/",
     MODULES: "chat",
     COPYDIR_IGNORE: "**",
     RESOLVE_ALIAS: {}

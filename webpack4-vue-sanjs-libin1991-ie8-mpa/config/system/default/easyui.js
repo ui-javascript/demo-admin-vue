@@ -5,10 +5,8 @@ function resolve(dir) {
 }
 
 module.exports = {
-    PORT: 9528,
     IE8: true,
     PAGES: "_pages",
-    CDN: "/",
     MODULES: "easyui",
     COPYDIR_IGNORE: "vendor/**",
     RESOLVE_ALIAS: {},
@@ -16,5 +14,5 @@ module.exports = {
         jquery: 'window.$',
         $: 'window.$',
         seajs: 'window.seajs',
-    }
+    },
 };

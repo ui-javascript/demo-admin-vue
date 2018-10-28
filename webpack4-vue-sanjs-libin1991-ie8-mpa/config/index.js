@@ -10,9 +10,6 @@ function resolve(dir) {
 
 let config = {
 
-    // 端口 ================
-    PORT: 9527,
-
     // 是否兼容IE8 ==========
     IE8: true,
 
@@ -67,7 +64,21 @@ let config = {
         // san: 'window.san',
         // seajs: 'window.seajs',
         // requirejs: 'window.requirejs',
-    }
+    },
+
+    build: {
+        env: {
+            NODE_ENV: '"production"',
+        },
+        proxyTable: {},
+        cssSourceMap: false
+    },
+    dev: {
+        env: {
+            NODE_ENV: '"development"',
+        },
+        port: 9527,
+    },
 };
 
 // 切换指定系统
@@ -85,12 +96,12 @@ let sysName = [
     // 'vue/index',
     // 'vue/bootstrap',
     // 'vue-admin/index',
-    // 'vue-admin/element',
+    'vue-admin/element',
     // 'vue-admin/d2',
     // 'vue-app/index',
     // 'vue-app/chat',
     // 'vue-app/todo',
-    'vue-app/mmplayer',
+    // 'vue-app/mmplayer',
     // 'vue-app/happyfri',
     // 'vue-mobile/index',
     // 'vue-mobile/vux',

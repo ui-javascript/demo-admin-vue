@@ -53,7 +53,7 @@ let webpackConfig = merge(baseWebpackConfig, {
     devtool: false,
     plugins: [
         new webpack.DefinePlugin({
-            'process.env': require('../config/prod.env')
+            'process.env': myConfig.build.env
         }),
         new webpack.ProvidePlugin({}),
         new ExtractTextPlugin({
