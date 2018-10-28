@@ -44,7 +44,4 @@ function getEntry(globPath) {
 	return entries;
 }
 
-let pages = getEntry(`./${PAGES}/${MODULES}/*.html`);
-console.log(pages)
-
-module.exports = pages;
+module.exports = getEntry;

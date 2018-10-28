@@ -14,9 +14,16 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 // 引入配置
 const baseWebpackConfig = require('./webpack.config.base')
-const pageConfig = require('./utils/utils.mpa');
 const myConfig = require("../config/index")
 const tolerateIE8 = myConfig.system.supportIE8 === true
+
+const getEntry = require('./utils/utils.mpa');
+const PAGES = myConfig.system.pages
+const MODULES = myConfig.system.modules.replace(/\s+/g,"")
+const pageConfig = getEntry(`./${PAGES}/${MODULES}/*.html`);
+console.log('多页面如下 ')
+console.log(pageConfig)
+
 
 // 处理路径
 function resolve(dir) {

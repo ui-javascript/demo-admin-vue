@@ -10,8 +10,15 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin'); //webpack 启�
 
 // 配置文件
 const baseWebpackConfig = require('./webpack.config.base')
-const pageConfig = require('./utils/utils.mpa');
 const myConfig = require("../config/index")
+
+const getEntry = require('./utils/utils.mpa');
+const PAGES = myConfig.system.pages
+const MODULES = myConfig.system.modules.replace(/\s+/g,"")
+const pageConfig = getEntry(`./${PAGES}/${MODULES}/*.html`);
+console.log('多页面如下 ')
+console.log(pageConfig)
+
 
 // 处理路径
 function resolve(dir) {

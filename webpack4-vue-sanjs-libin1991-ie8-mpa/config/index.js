@@ -9,7 +9,6 @@ function resolve(dir) {
 }
 
 let config = {
-
     // 系统共用
     system: {
         // 入口生成标准 @TODO
@@ -65,6 +64,10 @@ let config = {
         },
         port: 9527,
     },
+    // 部署配置
+    deploy: {
+
+    }
 };
 
 // 切换指定系统
@@ -87,12 +90,12 @@ let sysName = [
     // 'vue/bootstrap',
     // 'vue-admin/_all',
     // 'vue-admin/index',
-    // 'vue-admin/element',
+    'vue-admin/element',
     // 'vue-admin/d2',
     // 'vue-app/_all',
     // 'vue-app/index',
     // 'vue-app/chat',
-    'vue-app/todo',
+    // 'vue-app/todo',
     // 'vue-app/mmplayer',
     // 'vue-app/happyfri',
     // 'vue-mobile/_all',
