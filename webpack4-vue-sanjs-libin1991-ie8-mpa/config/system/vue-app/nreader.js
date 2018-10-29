@@ -8,9 +8,9 @@ module.exports = {
     system: {
         supportIE8: false,
         pages: "_pages-vue-app",
-        modules: "notepad",
+        modules: "nreader",
         resolveAlias: {
-            '@': resolve('_pages-vue-app/notepad'),
+            '@': resolve('_pages-vue-app/nreader'),
         },
         externals: {
         },

@@ -7,10 +7,12 @@
   "scripts": {
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
-    "dev": "node chatserver.js"
+    "start:chat": "node chatserver.js",
+    "start:zhuishu": "node zhuishushenqi.js"
   },
   "dependencies": {
     "express": "^4.14.1",
+    "request": "^2.88.0",
     "socket.io": "^1.7.2"
   },
   "engines": {
