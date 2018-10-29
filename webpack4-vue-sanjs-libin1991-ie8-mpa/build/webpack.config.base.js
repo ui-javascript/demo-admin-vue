@@ -10,7 +10,7 @@ const myConfig = require("../config/index")
 
 // 处理路径
 function resolve(dir) {
-    return path.join(__dirname, '..' , dir)
+    return path.join(__dirname, '../' , dir)
 }
 
 let webpackConfig = {
@@ -125,7 +125,7 @@ let webpackConfig = {
                 }),
             },
             {
-                test: /\.styl$/,
+                test: /\.(stylus|styl)$/,
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader?sourceMap=false', "postcss-loader", 'stylus-loader'],
                     // use: ['style-loader', 'css-loader', "postcss-loader", 'stylus-loader'],

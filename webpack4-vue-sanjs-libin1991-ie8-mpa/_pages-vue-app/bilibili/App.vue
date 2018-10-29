@@ -62,26 +62,26 @@ export default {
 }
 </script>
 
-<style lang="styl">
-  #app 
-    font-family "Microsoft YaHei",Arial,Helvetica,sans-serif
-    -webkit-font-smoothing antialiased
-    font-size 12px
-    margin 0
-    padding 0
-    background #fff
-    color #222
-    min-width 990px
-    tap-highlight-color transparent
-    -webkit-tap-highlight-color transparent
-    .wnd-mask
-      position fixed
-      width 100%
-      height 150%
-      background-color #000
-      opacity .5!important
-      z-index 1000
-      top 0px
-      left 0px
-      transition .2s
+<style lang="stylus">
+#app
+  font-family "Microsoft YaHei",Arial,Helvetica,sans-serif
+  -webkit-font-smoothing antialiased
+  font-size 12px
+  margin 0
+  padding 0
+  background #fff
+  color #222
+  min-width 990px
+  tap-highlight-color transparent
+  -webkit-tap-highlight-color transparent
+  .wnd-mask
+    position fixed
+    width 100%
+    height 150%
+    background-color #000
+    opacity .5!important
+    z-index 1000
+    top 0px
+    left 0px
+    transition .2s
 </style>
