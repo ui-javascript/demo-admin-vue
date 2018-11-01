@@ -100,7 +100,7 @@ let config = {
 // 切换指定系统
 let sysName = [
     // 'default/_all',
-    // 'default/index',
+    'default/index',
     // 'default/easyui',
     // 'default/layui',
     // 'default/lulu',
@@ -124,7 +124,7 @@ let sysName = [
     // 'vue-app/notepad',
     // 'vue-app/calculator',
     // 'vue-app/chat',
-    'vue-app/nreader',
+    // 'vue-app/nreader',
     // 'vue-app/bilibili',
     // 'vue-app/todo',
     // 'vue-app/mmplayer',
