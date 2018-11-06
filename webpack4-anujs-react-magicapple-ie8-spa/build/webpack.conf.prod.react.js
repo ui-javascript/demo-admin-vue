@@ -81,7 +81,7 @@ module.exports = {
     mode: 'production',
     plugins: [
         new HtmlWebpackPlugin({
-            filename: 'templates/index.html',
+            filename: 'index.html',
             template: resolve('src/pages/index/index.ejs'),
             inject: 'body',
             hase: false,

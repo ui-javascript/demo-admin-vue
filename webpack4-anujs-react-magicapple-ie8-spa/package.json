@@ -6,8 +6,8 @@
   "scripts": {
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
-    "dev:anu": "node ./build/dev.js",
-    "dev:react": "node ./build/react.js",
+    "dev:anu": "node ./build/dev-anu.js",
+    "dev:react": "node ./build/dev-react.js",
     "build:anu": "node ./build/build-anu.js",
     "build:react": "node ./build/build-react.js",
     "test": "echo \"Error: no test specified\" && exit 1"
