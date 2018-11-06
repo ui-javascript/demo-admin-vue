@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+// import ReactDom from 'react-dom';
 
 export default class SelectBox extends React.PureComponent {
     data = [{ name: 'a', text: 'aaaa' }, { name: 'b', text: 'bbbb' }, { name: 'c', text: 'cccc' }];

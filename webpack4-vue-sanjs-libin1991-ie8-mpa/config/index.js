@@ -72,10 +72,10 @@ let config = {
     // 部署配置
     deploy: {
         // 选择上传
-        // 'ali' || 'qiniu'
+        // 'aLi' || 'qiNiu'
         use: 'ali',
         // 七牛
-        qiNiuCdn: {
+        qiNiu: {
             host: '',
             bucket: '',
             ak: '',
@@ -85,13 +85,12 @@ let config = {
             prefix: ''
         },
         // 阿里OSS相关配置
-        aLiOss: {
+        aLi: {
             host: '',
             accessKeyId: '',
             accessKeySecret: '',
             bucket: '',
             region: '',
-            // 路径前缀
             prefix: ''
         },
     }

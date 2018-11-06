@@ -3,13 +3,19 @@ const webpack = require('webpack');
 const es3ifyPlugin = require('es3ify-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// 处理路径
+function resolve(dir) {
+    return path.join(__dirname, '../', dir)
+}
+
+
 module.exports = {
     devtool: 'cheap-module-source-map',
     entry: {
-        index: path.resolve(__dirname, './src/pages/index/app.jsx'),
+        index: resolve('src/pages/index/app.jsx'),
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: resolve('dist'),
         filename: 'static/js/[name].js',
         publicPath: '/',
         chunkFilename: 'static/js/[name].js',
@@ -49,11 +55,11 @@ module.exports = {
                         plugins: ['transform-runtime'],
                     },
                 },
-                include: [path.resolve(__dirname, 'src/pages')],
+                include: [resolve('src/pages')],
             },
             {
                 test: /\.css$/,
-                include: [path.resolve(__dirname, 'src/pages')],
+                include: [resolve('src/pages')],
                 use: ['style-loader', 'css-loader'],
             },
             {
@@ -75,7 +81,7 @@ module.exports = {
         new es3ifyPlugin(),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: path.resolve(__dirname, './src/pages/index/index.ejs'),
+            template: resolve('src/pages/index/index.ejs'),
             inject: 'body',
             hase: false,
             minify: {

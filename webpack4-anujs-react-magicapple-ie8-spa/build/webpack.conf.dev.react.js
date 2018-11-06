@@ -1,38 +1,26 @@
 const path = require('path');
 const webpack = require('webpack');
+const es3ifyPlugin = require('es3ify-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
+// 处理路径
+function resolve(dir) {
+    return path.join(__dirname, '../', dir)
+}
 
 module.exports = {
-    devtool: 'source-map',
+    devtool: 'cheap-module-source-map',
     entry: {
-        index: path.resolve(__dirname, './src/pages/index/app.jsx'),
+        index: resolve('src/pages/index/app.jsx'),
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: resolve('dist'),
         filename: 'static/js/[name].js',
         publicPath: '/',
         chunkFilename: 'static/js/[name].js',
     },
     resolve: {
         extensions: ['.js', '.json', '.jsx'],
-        alias: {
-            react: 'anujs/dist/ReactIE.js',
-            'react-dom': 'anujs/dist/ReactIE.js',
-            'prop-types': 'anujs/lib/ReactPropTypes',
-            devtools: 'anujs/lib/devtools',
-            'create-react-class': 'anujs/lib/createClass',
-        },
-    },
-    optimization: {
-        minimizer: [
-            new UglifyJsPlugin({
-                uglifyOptions: {
-                    ie8: true,
-                },
-                sourceMap: true,
-            }),
-        ],
     },
     module: {
         rules: [
@@ -59,11 +47,11 @@ module.exports = {
                         plugins: ['transform-runtime'],
                     },
                 },
-                include: [path.resolve(__dirname, 'src/pages')],
+                include: [resolve('src/pages')],
             },
             {
                 test: /\.css$/,
-                include: [path.resolve(__dirname, 'src/pages')],
+                include: [resolve('src/pages')],
                 use: ['style-loader', 'css-loader'],
             },
             {
@@ -80,11 +68,12 @@ module.exports = {
             },
         ],
     },
-    mode: 'production',
+    mode: 'development',
     plugins: [
+        new es3ifyPlugin(),
         new HtmlWebpackPlugin({
-            filename: 'templates/index.html',
-            template: path.resolve(__dirname, './src/pages/index/index.ejs'),
+            filename: 'index.html',
+            template: resolve('src/pages/index/index.ejs'),
             inject: 'body',
             hase: false,
             minify: {

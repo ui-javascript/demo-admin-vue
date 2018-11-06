@@ -5,6 +5,11 @@ const app = new Koa();
 const argv = require('yargs').argv;
 
 const server = app.listen(9527);
-const column = argv.env === 'dev' ? '../dist' : '../dist';
+const dist = argv.env === 'dev' ? 'dist' : 'dist';
 
-app.use(koaStatic(path.resolve(__dirname, column)));
+// 处理路径
+function resolve(dir) {
+    return path.join(__dirname, '../', dir)
+}
+
+app.use(koaStatic(resolve(dist)));
