@@ -6,16 +6,22 @@
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
     "start": "gulp watch",
-
     "server": "nodemon ./server/index.js",
     "dev": "gulp dev",
     "cloud": "gulp cloud:dev",
-
     "build": "gulp build --type prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "nodemonConfig": {
-    "ignore": ["test/*", "book/*", "client/*", "bin/*", "node_modules", "dist/*", "package.json"],
+    "ignore": [
+      "test/*",
+      "book/*",
+      "client/*",
+      "bin/*",
+      "node_modules",
+      "dist/*",
+      "package.json"
+    ],
     "delay": "1000"
   },
   "engines": {
@@ -44,11 +50,13 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "minimist": "^1.2.0",
+    "node-sass": "^4.10.0",
     "nodemon": "^1.18.3",
     "postcss-font-base64": "^1.0.5",
     "postcss-px2rpx": "0.0.4",
     "request": "^2.87.0",
     "run-sequence": "^2.2.1",
+    "sass": "^1.14.3",
     "stream-combiner2": "^1.1.1",
     "through2": "^2.0.3"
   },
