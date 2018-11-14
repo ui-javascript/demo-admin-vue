@@ -5,6 +5,8 @@
 	"description": "A taro project",
 	"main": "index.js",
 	"scripts": {
+    "install:cnpm": "cnpm install",
+    "remove": "rimraf node_modules",
 		"dev:weapp": "npm run build:weapp -- --watch",
 		"dev:alipay": "npm run build:alipay -- --watch",
 		"dev:swan": "npm run build:swan -- --watch",
