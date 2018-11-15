@@ -8,9 +8,9 @@
 	"scripts": {
 		"install:cnpm": "cnpm install",
 		"remove": "rimraf node_modules",
+		"start": "cross-env NODE_ENV=development webpack-dev-server --cache --colors --profile --progress -d",
 		"dev": "cross-env NODE_ENV=development webpack --cache --colors --profile --progress --hide-modules",
-		"app": "cross-env NODE_ENV=production webpack --cache --colors --profile --progress --hide-modules",
-		"start": "cross-env NODE_ENV=development webpack-dev-server --cache --colors --profile --progress -d"
+		"build": "cross-env NODE_ENV=production webpack --cache --colors --profile --progress --hide-modules"
 	},
 	"browserslist": [
 		"last 2 versions",
@@ -58,6 +58,7 @@
 		"jquery": "^1.12.4",
 		"jquery-ui-dist": "^1.12.1",
 		"js-cookie": "^2.2.0",
+		"media-match": "^2.0.3",
 		"media-match": "^2.0.3",
 		"moment": "^2.21.0",
 		"normalize.css": "^8.0.0",
