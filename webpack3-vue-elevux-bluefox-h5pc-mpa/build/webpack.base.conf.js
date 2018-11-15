@@ -12,12 +12,15 @@ var glob = require('glob');
 var entries = utils.getMultiEntry('./src/' + config.moduleName + '/*.js'); // 获得入口js文件
 var chunks = Object.keys(entries);
 
+
+function resolve(dir) {
+    return path.join(__dirname, '..', dir)
+}
+
 // 输出路径
 console.log('检测到以下页面：')
 console.log(chunks)
 
-// 工程文件根目录调整
-var projectRoot = path.resolve(__dirname, '../')
 
 // Vux的loader
 const vuxLoader = require('vux-loader')
@@ -25,9 +28,7 @@ const vuxLoader = require('vux-loader')
 // Vue loader配置
 var vueLoaderConfig = require('./vue-loader.conf')
 
-function resolve(dir) {
-    return path.join(__dirname, '..', dir)
-}
+
 
 var webpackConfig = {
 
@@ -53,23 +54,23 @@ var webpackConfig = {
             'vue$': 'vue/dist/vue.esm.js',
 
             // 路径
-            '@': path.resolve(__dirname, '../src'),
-            'src': path.resolve(__dirname, '../src'),
-            'assets': path.resolve(__dirname, '../src/assets'),
-            'css': path.resolve(__dirname, '../src/assets/css'),
+            '@': resolve('src'),
+            'src': resolve('src'),
+            'assets': resolve('src/assets'),
+            'css': resolve('src/assets/css'),
 
             // 组件
-            'components': path.resolve(__dirname, '../src/components'),
-            '~': path.resolve(__dirname, '../src/components'),
+            'components': resolve('src/components'),
+            '~': resolve('src/components'),
             // 我将组件分为四类
-            '~e': path.resolve(__dirname, '../src/components/effects'),
-            '~l': path.resolve(__dirname, '../src/components/layout'),
-            '~m': path.resolve(__dirname, '../src/components/melt'),
-            '~t': path.resolve(__dirname, '../src/components/toolbox'),
+            '~e': resolve('src/components/effects'),
+            '~l': resolve('src/components/layout'),
+            '~m': resolve('src/components/melt'),
+            '~t': resolve('src/components/toolbox'),
 
             // 工具类
-            'utils': path.resolve(__dirname, '../src/utils'),
-            '^': path.resolve(__dirname, '../src/utils'),
+            'utils': resolve('src/utils'),
+            // '^': resolve('src/utils'),
         }
     },
 

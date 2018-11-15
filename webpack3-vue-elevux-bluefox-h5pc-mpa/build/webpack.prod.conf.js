@@ -8,6 +8,9 @@ var merge = require('webpack-merge')
 var config = require('../config')
 var baseWebpackConfig = require('./webpack.base.conf')
 
+function resolve(dir) {
+    return path.join(__dirname, '..', dir)
+}
 
 var CleanWebpackPlugin = require("clean-webpack-plugin")
 var CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -59,7 +62,7 @@ var webpackConfig = merge(baseWebpackConfig, {
         // fix -> ...\build is outside of the project root. Skipping...
         // http://mobilesite.github.io/2017/02/18/all-the-errors-encountered-in-webpack/
         new CleanWebpackPlugin(config.build.assetsRoot, {
-            root: path.resolve(__dirname, '../'), // 设置root
+            root: resolve('./'), // 设置root
             verbose: true
         }),
         // extract css into its own file
@@ -120,7 +123,7 @@ var webpackConfig = merge(baseWebpackConfig, {
         // copy custom static assets
         new CopyWebpackPlugin([
           {
-            from: path.resolve(__dirname, '../static'),
+            from: resolve('static'),
             to: config.build.assetsSubDirectory,
             ignore: ['.*']
           }
