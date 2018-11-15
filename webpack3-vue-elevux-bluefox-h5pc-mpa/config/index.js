@@ -14,6 +14,10 @@ var defaultConfig = {
     // 默认为views，修改这里的配置的同时，也要同时重命名/src/views的这个文件夹名称
     moduleName: `_${sysName}`,
 
+    // 是否是手机(适配)
+    // 默认false
+    isMobile: false,
+
     // 开发配置
     dev: {
         env: require('./dev.env'),
@@ -37,14 +41,15 @@ var defaultConfig = {
     // 打包配置
     build: {
         env: require('./prod.env'),
-        index: path.resolve(__dirname, '../../dist/index.html'),
-        assetsRoot: path.resolve(__dirname, '../../dist'),
+        index: path.resolve(__dirname, '../dist/index.html'),
+        assetsRoot: path.resolve(__dirname, '../dist'),
 
         // 输出资源的存放位置
         assetsSubDirectory: 'static',
 
         // 公共资源位置
-        // 也可以改成 ../
+        // './' 相对路径
+        //  '../'
         assetsPublicPath: './',
 
         // 视图文件输出位置
@@ -69,10 +74,10 @@ var defaultConfig = {
 // var detailConfig = require('./system/default')
 // 在命令行中指定
 
-
+console.log(`当前系统 ==> ${sysName}`)
 
 // 如果存在配置文件
-if (fs.existsSync(`./build/config/system/${sysName}.js`)) {
+if (fs.existsSync(`./config/system/${sysName}.js`)) {
     var detailConfig = require(`./system/${sysName}`)
 
     // 配置覆盖
@@ -82,6 +87,8 @@ if (fs.existsSync(`./build/config/system/${sysName}.js`)) {
 
     defaultConfig = merge(defaultConfig, detailConfig)
     console.log(sysName + '配置文件已覆盖(๑•̀ㅂ•́)و✧')
+} else {
+    console.log('使用默认配置')
 }
 
 module.exports = defaultConfig

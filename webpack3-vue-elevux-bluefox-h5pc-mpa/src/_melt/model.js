@@ -15,8 +15,8 @@ import TableApp from './views/model/tablePage'
 
 const routes = [
     {path: '/', component: CamelApp},
-    {path: '/calendar', component: CalendarApp},
     {path: '/camel', component: CamelApp},
+    {path: '/calendar', component: CalendarApp},
     {path: '/loading', component: LoadingApp},
     {path: '/table', component: TableApp},
     {path: '*', component: CamelApp}

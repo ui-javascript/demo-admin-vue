@@ -5,7 +5,7 @@ var utils = require('./utils/index')
 
 // 导入配置
 var webpack = require('webpack')
-var config = require('./config')
+var config = require('../config')
 
 // 路径处理
 var glob = require('glob');
@@ -62,10 +62,10 @@ var webpackConfig = {
             'components': path.resolve(__dirname, '../src/components'),
             '~': path.resolve(__dirname, '../src/components'),
             // 我将组件分为四类
-            '~e': path.resolve(__dirname, '../src/components/e'),
-            '~l': path.resolve(__dirname, '../src/components/l'),
-            '~m': path.resolve(__dirname, '../src/components/m'),
-            '~t': path.resolve(__dirname, '../src/components/t'),
+            '~e': path.resolve(__dirname, '../src/components/effects'),
+            '~l': path.resolve(__dirname, '../src/components/layout'),
+            '~m': path.resolve(__dirname, '../src/components/melt'),
+            '~t': path.resolve(__dirname, '../src/components/toolbox'),
 
             // 工具类
             'utils': path.resolve(__dirname, '../src/utils'),

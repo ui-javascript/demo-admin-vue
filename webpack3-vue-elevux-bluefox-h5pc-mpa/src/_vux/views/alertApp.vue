@@ -7,7 +7,7 @@
         </group>
 
         <div>
-            <alert v-model="show2" title="温馨提示" :content="这里是内容了"></alert>
+            <alert v-model="show2" title="温馨提示" :content="'这里是内容了'"></alert>
         </div>
 
         <group title="插件">

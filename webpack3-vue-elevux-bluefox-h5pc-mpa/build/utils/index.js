@@ -2,7 +2,7 @@ var path = require('path')
 var glob = require('glob');
 
 // 导入配置
-var config = require('../config/index')
+var config = require('../../config/index')
 
 // 提取
 var ExtractTextPlugin = require('extract-text-webpack-plugin')

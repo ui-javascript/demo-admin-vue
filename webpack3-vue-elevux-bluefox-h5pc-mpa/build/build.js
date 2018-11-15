@@ -14,7 +14,7 @@ var chalk = require('chalk')
 var webpack = require('webpack')
 
 // 配置导入
-var config = require('./config')
+var config = require('../config')
 var webpackConfig = require('./webpack.prod.conf')
 
 // 开始构造环境

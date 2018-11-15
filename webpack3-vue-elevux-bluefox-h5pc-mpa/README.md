@@ -1,13 +1,11 @@
 # README
 
-- 攒Vue组件
+- 主要是个 攒Vue组件的练习项目
 - 多页面是以一级目录下的*.js算入口的
-- 另一个项目以pug|html算入口
-- 缓存： ?hash后缀, 不是文件名里加hash
-- vux原作者的项目在 _vux 下
-- 移除了原作者说的二级目录支持，看着烦
-- 配了postcss-px2rem插件 仅vue视图文件里的px会被转化成rem 谨慎,小心被坑!!!
-- 手机考试 elementUI https://gitee.com/luo0412/topping
+- 另一个多页面项目(sanjs)以pug|html算入口
+- 文件名hash > hash后缀
+- 移除了原项目的二级目录支持
+- postcss-px2rem插件 -> 仅vue视图文件里的px会被转化成rem
 
 # 遇到的问题
 
@@ -67,3 +65,7 @@
 
 </style>
 ```
+
+# 备忘录
+
+- 手机考试 elementUI https://gitee.com/luo0412/topping
