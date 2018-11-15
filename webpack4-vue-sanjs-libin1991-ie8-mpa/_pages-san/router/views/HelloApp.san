@@ -8,14 +8,23 @@
 </template>
 
 <script>
-    export default {
-        initData () {
+    module.exports = {
+        initData: function () {
             return {
                 msg: 'SAN',
                 name: 'hello'
             };
         }
     }
+
+    // export default {
+    //     initData () {
+    //         return {
+    //             msg: 'SAN',
+    //             name: 'hello'
+    //         };
+    //     }
+    // }
 </script>
 
 <style>
