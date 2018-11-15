@@ -99,13 +99,13 @@ let config = {
 // 切换指定系统
 let sysName = [
     // 'default/_all',
-    'default/index',
+    // 'default/index',
     // 'default/easyui',
     // 'default/layui',
     // 'default/lulu',
     // 'san/_all',
     // 'san/index',
-    // 'san/router',
+    'san/router',
     // 'san/todo',
     // 'san-admin/_all',
     // 'san-admin/index',
