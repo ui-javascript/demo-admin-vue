@@ -19,7 +19,7 @@
 
 <script>
 
-    import Lib from 'utils/libs/vux';
+    import Lib from 'libs/vux';
 
     import HbHead from '../components/HbHead';
 

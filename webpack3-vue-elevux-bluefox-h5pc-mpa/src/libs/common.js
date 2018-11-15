@@ -6,7 +6,6 @@ var oproto = Object.prototype;
 var serialize = oproto.toString;
 var Rxports = {
 
-
     /**
      * 封装axios，减少学习成本，参数基本跟jq ajax一致
      * @param {String} type            请求的类型，默认post

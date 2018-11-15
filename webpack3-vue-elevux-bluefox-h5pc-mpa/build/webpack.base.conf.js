@@ -70,7 +70,7 @@ var webpackConfig = {
 
             // 工具类
             'utils': resolve('src/utils'),
-            // '^': resolve('src/utils'),
+            'libs': resolve('src/libs'),
         }
     },
 

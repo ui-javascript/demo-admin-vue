@@ -50,7 +50,7 @@
 
 <script>
 
-    import Lib from 'utils/libs/vux';
+    import Lib from 'libs/vux';
 
     import {Cell, Group, Divider} from 'vux'
     import FireFly from '~/effects/Animal/FireFly'

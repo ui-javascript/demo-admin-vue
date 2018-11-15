@@ -15,7 +15,7 @@
 
 <script>
 
-    import Lib from 'utils/libs/vux';
+    import Lib from 'libs/vux';
 
     import {Group, Calendar, Cell} from 'vux'
 
