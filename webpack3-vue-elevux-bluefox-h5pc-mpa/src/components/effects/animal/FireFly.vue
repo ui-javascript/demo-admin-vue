@@ -253,6 +253,4 @@
             box-shadow: -1rem 0 8rem 1rem rgba(254, 250, 1, 0.8), inset -0.25rem 0 0 0.5rem rgba(14, 10, 10, 0.1);
         }
     }
-
-
 </style>

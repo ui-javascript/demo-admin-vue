@@ -20,16 +20,16 @@
         </div>
 
         <!--<div>-->
-            <!--<divider>多页面 vue-router 2</divider>-->
-            <!--<group>-->
-                <!--<cell title="多页面路由" value="" is-link link="../animal/firefly.html"></cell>-->
-            <!--</group>-->
+        <!--<divider>多页面 vue-router 2</divider>-->
+        <!--<group>-->
+        <!--<cell title="多页面路由" value="" is-link link="../animal/firefly.html"></cell>-->
+        <!--</group>-->
         <!--</div>-->
 
         <div class="martop15">
             <divider>iconfont 字体</divider>
             <group>
-                <cell title="iconfont图标展示" value="" is-link link="list.html"></cell>
+                <cell title="iconfont图标展示" value="" is-link link="iconfont.html"></cell>
             </group>
         </div>
 

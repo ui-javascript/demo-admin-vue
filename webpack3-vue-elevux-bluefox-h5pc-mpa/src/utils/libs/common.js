@@ -55,9 +55,7 @@ var Rxports = {
                 } else {
                     alert('好多人在访问呀，请重新试试[timeout]');
                 }
-
             }
-
 
         }).catch(function (error) {
             console.log(error);

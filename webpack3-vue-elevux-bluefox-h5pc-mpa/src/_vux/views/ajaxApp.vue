@@ -22,11 +22,8 @@
 <script>
 
     import Lib from 'utils/libs/vux';
-
     import HbHead from '../components/HbHead';
-
     import {FormPreview} from 'vux'
-
 
     export default {
 
