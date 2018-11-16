@@ -10,7 +10,10 @@
 - html里引用static内容注意相对路径 ../../static
 - 零配置真扯淡， 复杂的项目不可能约定大于配置...
 - 打包的内容才可能兼容IE8，开发时因为要支持热更新，IE运行起来是不兼容的
-- san.js -> 现在的需求是提供其中的几张页面给xp用户
+- san.js 
+
+    - 配置坏掉了 只能兼容到IE9了，以前成功过，我的幻觉吗？？
+    - 提供其中的几张页面给xp用户
     - san.js目前版本看来要cdn引入，否则webpack打包出来IE8还是会源码报错
     - import和export不能用了 用require
     - 官方的san-mui 并不兼容IE8 @deprecated

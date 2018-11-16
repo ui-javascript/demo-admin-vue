@@ -11,7 +11,8 @@ module.exports = {
         modules: "router",
         resolveAlias: {},
         externals: {
-            san: 'window.san',
+            // san: 'window.san',
+            // sanRouter: 'window["san-router"]',
         },
     },
 

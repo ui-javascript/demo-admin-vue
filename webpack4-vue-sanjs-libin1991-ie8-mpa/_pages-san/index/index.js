@@ -1,4 +1,4 @@
-// require("babel-polyfill")
+require("babel-polyfill")
 require("es5-polyfill")
 
 //IE8 ^4.5.10
@@ -17,7 +17,7 @@ import 'console-polyfill';
 import san from 'san'
 
 const MyApp = san.defineComponent({
-  template: `
+    template: `
                 <div>
                     <input type="text" value="{=name=}">
                     <p class="hello">Hello {{name}}!</p>
@@ -27,8 +27,8 @@ const MyApp = san.defineComponent({
 
 // 挂载
 let myApp = new MyApp({
-  data: {
-    name: 'San'
-  }
+    data: {
+        name: 'San'
+    }
 });
 myApp.attach(document.body);

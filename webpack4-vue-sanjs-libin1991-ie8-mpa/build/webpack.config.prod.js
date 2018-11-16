@@ -142,7 +142,9 @@ if (tolerateIE8) {
     console.log('这个少年在作死地兼容IE8+ =================== ')
     // webpackConfig.entry['es5-polyfill'] = 'es5-polyfill'
     webpackConfig.plugins.unshift(new es3ifyPlugin());
+
     // 旧版本写法
+    // uglifyjs-webpack-plugin@1.2.5
     // webpackConfig.plugins.push(
     //     new UglifyJsPlugin({
     //         mangle: {
@@ -174,6 +176,9 @@ webpackConfig.plugins.push(
         parallel: true,
     })
 )
+
+
+
 
 
 if (pageConfig && Array.isArray(pageConfig)) {

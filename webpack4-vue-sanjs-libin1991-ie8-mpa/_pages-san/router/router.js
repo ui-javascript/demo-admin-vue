@@ -2,7 +2,8 @@
 require("es5-polyfill")
 
 //IE8 ^4.5.10
-// import 'es5-shim';
+require('es5-shim');
+require('es5-shim/es5-sham');
 // import 'object-create-ie8';
 import 'object-defineproperty-ie8';
 import 'console-polyfill';
@@ -13,13 +14,20 @@ import 'console-polyfill';
 // import 'bluebird';
 // import 'fetch-polyfill2';
 
-
-import san from 'san'
 import "./san.scss"
 
-import {router} from 'san-router'
-import HelloApp from './views/HelloApp.san'
-import HelloApp2 from './views/HelloApp2.san'
+// import { router } from 'san-router'
+var sanRouter = require('san-router');
+console.log(sanRouter)
+var router = sanRouter.router;
+
+
+// import { router } from 'router'
+
+// import HelloApp from './views/HelloApp.san'
+// import HelloApp2 from './views/HelloApp2.san'
+var HelloApp = require('./views/HelloApp.san');
+var HelloApp2 = require('./views/HelloApp2.san');
 
 console.log('hello webpack San')
 

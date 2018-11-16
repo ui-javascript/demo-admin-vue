@@ -16,7 +16,9 @@ function resolve(dir) {
 let webpackConfig = {
     mode: 'development',
     // 配置入口
-    entry: {},
+    entry: {
+        // vendor: ['vue', 'san', 'san-router', 'element-ui']
+    },
     // 配置出口
     output: {
         path: resolve("dist"),

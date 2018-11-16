@@ -1,30 +1,35 @@
 <template>
     <div>
-        <div class="hello">{{msg}}</div>
+        <p>{{msg}}</p>
+
+        <div class="hello">
+            <span class="hello">Hello {{name}} !</span>
+        </div>
 
         <input type="text" value="{= name =}">
-        <p class="hello">Hello {{name}}!</p>
+
     </div>
+
 </template>
 
 <script>
-    module.exports = {
-        initData: function () {
-            return {
-                msg: 'SAN',
-                name: 'hello'
-            };
-        }
-    }
-
-    // export default {
-    //     initData () {
+    // module.exports = {
+    //     initData: function () {
     //         return {
     //             msg: 'SAN',
     //             name: 'hello'
     //         };
     //     }
     // }
+
+    export default {
+        initData() {
+            return {
+                msg: 'SAN',
+                name: ''
+            };
+        }
+    }
 </script>
 
 <style>
