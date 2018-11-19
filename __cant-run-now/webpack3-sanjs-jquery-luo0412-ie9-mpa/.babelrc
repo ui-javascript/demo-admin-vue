@@ -5,7 +5,8 @@
       {
         "loose": true,
         "spec": true,
-        "useBuiltIns": false
+        "useBuiltIns": false,
+        "modules": true
       }
     ]
   ],

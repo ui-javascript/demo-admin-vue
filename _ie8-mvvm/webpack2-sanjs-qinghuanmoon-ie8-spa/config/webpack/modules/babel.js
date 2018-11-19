@@ -11,7 +11,7 @@ const babel = {
     // Stage 2 is "draft", 4 is finished, 0 is strawMan.
   ],
 
-  'plugins': ['transform-runtime',],
+  'plugins': ['transform-runtime'],
 
   'env': {
     'development': {

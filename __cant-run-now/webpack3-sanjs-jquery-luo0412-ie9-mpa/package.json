@@ -118,6 +118,7 @@
   "dependencies": {
     "axios": "^0.16.0",
     "core-js": "^2.5.7",
+    "es3ify-loader": "^0.2.0",
     "es5-polyfill": "^0.0.6",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",

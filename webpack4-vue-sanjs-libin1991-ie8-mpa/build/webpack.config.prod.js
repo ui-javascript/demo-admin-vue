@@ -65,7 +65,7 @@ let webpackConfig = merge(baseWebpackConfig, {
         }),
         new webpack.ProvidePlugin({}),
         new ExtractTextPlugin({
-            filename: 'css/[name].[hash:7].css',
+            filename: '/static/css/[name].[hash:7].css',
             allChunks: true
         }),
         new OptimizeCSSPlugin({
@@ -98,7 +98,7 @@ let webpackConfig = merge(baseWebpackConfig, {
                 loader: 'html-withimg-loader',
                 options: {
                     limit: 10000,
-                    name: 'img/[name].[hash:7].[ext]',
+                    name: '/static/img/[name].[hash:7].[ext]',
                     minimize: true,
                     removeComments: false,
                     collapseWhitespace: false,
@@ -145,6 +145,7 @@ if (tolerateIE8) {
 
     // 旧版本写法
     // uglifyjs-webpack-plugin@1.2.5
+    // https://github.com/babel/babel/issues/6606
     // webpackConfig.plugins.push(
     //     new UglifyJsPlugin({
     //         mangle: {
@@ -167,6 +168,7 @@ if (tolerateIE8) {
     // )
 }
 
+// uglifyjs-webpack-plugin@2.0.1
 webpackConfig.plugins.push(
     new UglifyJsPlugin({
         uglifyOptions: {

@@ -13,8 +13,8 @@
 // $('body').append(imgApp)
 
 import san from 'san'
-import "@less/natural-ui/index.less"
-import "@less/zjds-ui/_output.less"
+// import "@less/natural-ui/index.less"
+// import "@less/zjds-ui/_output.less"
 
 const MyApp = san.defineComponent({
   template: `

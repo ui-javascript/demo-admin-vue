@@ -135,7 +135,7 @@
     "stylus-loader": "^3.0.2",
     "svg-sprite-loader": "^4.1.2",
     "svgo": "^1.1.1",
-    "uglifyjs-webpack-plugin": "^2.0.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.0.1",
     "vue-loader": "^15.3.0",
     "vue-style-loader": "^4.1.1",

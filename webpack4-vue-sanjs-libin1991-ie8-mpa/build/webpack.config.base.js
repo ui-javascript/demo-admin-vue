@@ -22,7 +22,7 @@ let webpackConfig = {
     // 配置出口
     output: {
         path: resolve("dist"),
-        filename: 'js/[name].[hash:7].js',
+        filename: 'static/js/[name].[hash:7].js',
         publicPath: '/',
         globalObject: 'this'
     },
@@ -88,7 +88,7 @@ let webpackConfig = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: 'img/[name].[hash:7].[ext]'
+                    name: '/static/img/[name].[hash:7].[ext]'
                 },
                 exclude: [resolve('src/icons')],
             },
@@ -97,7 +97,7 @@ let webpackConfig = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: 'media/[name].[hash:7].[ext]'
+                    name: '/static/media/[name].[hash:7].[ext]'
                 },
             },
             {
@@ -105,7 +105,7 @@ let webpackConfig = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: 'fonts/[name].[hash:7].[ext]'
+                    name: '/static/fonts/[name].[hash:7].[ext]'
                 },
             },
             {
