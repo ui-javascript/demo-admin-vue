@@ -3,5 +3,4 @@ node_modules
 *.log.*
 .idea
 .happypack
-build
 dist

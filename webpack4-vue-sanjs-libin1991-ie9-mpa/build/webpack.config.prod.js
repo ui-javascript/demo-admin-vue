@@ -143,7 +143,7 @@ let webpackConfig = merge(baseWebpackConfig, {
 if (tolerateIE8) {
     console.log('这个少年在作死地兼容IE8+ =================== ')
     // webpackConfig.entry['es5-polyfill'] = 'es5-polyfill'
-    // webpackConfig.plugins.unshift();
+    webpackConfig.plugins.unshift(new es3ifyPlugin());
 
     // 旧版本写法
     // uglifyjs-webpack-plugin@1.2.5
@@ -169,19 +169,20 @@ if (tolerateIE8) {
     //     })
     // )
 
-    // uglifyjs-webpack-plugin@2.0.1
-    webpackConfig.plugins.unshift(
-        new es3ifyPlugin(),
-        new UglifyJsPlugin({
-            uglifyOptions: {
-                // ie8: tolerateIE8,
-                ie8: true
-            },
-            sourceMap: true,
-            parallel: true,
-        })
-    )
 }
+
+
+// uglifyjs-webpack-plugin@2.0.1
+webpackConfig.plugins.push(
+    new UglifyJsPlugin({
+        uglifyOptions: {
+            ie8: tolerateIE8,
+            // ie8: true
+        },
+        sourceMap: true,
+        parallel: true,
+    })
+)
 
 
 

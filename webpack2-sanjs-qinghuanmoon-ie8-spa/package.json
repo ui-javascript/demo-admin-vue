@@ -11,48 +11,47 @@
   "scripts": {
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
+    "clean:dist": "rimraf dist",
     "start": "better-npm-run dev --open",
     "dev": "better-npm-run dev",
-    "clean": "rimraf build",
-    "build": "better-npm-run build",
+    "build:dist": "better-npm-run build",
     "deploy": "npm run clean && npm run build",
     "test": "better-npm-run test",
     "test:dev": "better-npm-run test:dev",
     "test:coveralls": "cat ./build/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "visualizer": "better-npm-run visualizer",
     "report-coverage": "codecov",
-    "cnpm": "npm install cnpm -g --registry=https://registry.npm.taobao.org",
     "installKarma": "npm install mocha chai karma karma-coverage karma-mocha karma-webpack karma-phantomjs-launcher phantomjs-prebuilt"
   },
   "betterScripts": {
     "dev": {
-      "command": "node ./server/main",
+      "command": "node ./build/dev-server",
       "env": {
         "NODE_ENV": "development"
       }
     },
     "build": {
-      "command": "webpack --config config/webpack/webpack.build",
+      "command": "webpack --config build/webpack.prod",
       "env": {
         "NODE_ENV": "production"
       }
     },
     "test": {
-      "command": "node ./node_modules/karma/bin/karma start config/karma.conf",
+      "command": "node ./node_modules/karma/bin/karma start build/karma.conf",
       "env": {
         "NODE_ENV": "production",
         "NODE_TEST": "production"
       }
     },
     "test:dev": {
-      "command": "node ./node_modules/karma/bin/karma start config/karma.conf",
+      "command": "node ./node_modules/karma/bin/karma start build/karma.conf",
       "env": {
         "NODE_ENV": "production",
         "NODE_TEST": "development"
       }
     },
     "visualizer": {
-      "command": "webpack --config config/webpack/webpack.build",
+      "command": "webpack --config build/webpack.prod",
       "env": {
         "NODE_ENV": "production",
         "NODE_TEST": "production"
