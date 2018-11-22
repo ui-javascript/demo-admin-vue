@@ -90,7 +90,7 @@ let webpackConfig = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: '/static/img/[name].[hash:7].[ext]'
+                    name: 'static/img/[name].[hash:7].[ext]'
                 },
                 exclude: [resolve('src/icons')],
             },
@@ -99,7 +99,7 @@ let webpackConfig = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: '/static/media/[name].[hash:7].[ext]'
+                    name: 'static/media/[name].[hash:7].[ext]'
                 },
             },
             {
@@ -107,8 +107,9 @@ let webpackConfig = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: '/static/fonts/[name].[hash:7].[ext]'
+                    name: 'static/fonts/[name].[hash:7].[ext]'
                 },
+                exclude: [resolve('node_modules/font-awesome')],
             },
             {
                 test: /\.css$/,

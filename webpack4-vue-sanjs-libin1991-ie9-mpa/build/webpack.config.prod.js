@@ -67,7 +67,7 @@ let webpackConfig = merge(baseWebpackConfig, {
         }),
         new webpack.ProvidePlugin({}),
         new ExtractTextPlugin({
-            filename: '/static/css/[name].[hash:7].css',
+            filename: 'static/css/[name].[hash:7].css',
             allChunks: true
         }),
         new OptimizeCSSPlugin({
@@ -100,7 +100,7 @@ let webpackConfig = merge(baseWebpackConfig, {
                 loader: 'html-withimg-loader',
                 options: {
                     limit: 10000,
-                    name: '/static/img/[name].[hash:7].[ext]',
+                    name: 'static/img/[name].[hash:7].[ext]',
                     minimize: true,
                     removeComments: false,
                     collapseWhitespace: false,
@@ -168,16 +168,13 @@ if (tolerateIE8) {
     //         }
     //     })
     // )
-
 }
-
 
 // uglifyjs-webpack-plugin@2.0.1
 webpackConfig.plugins.push(
     new UglifyJsPlugin({
         uglifyOptions: {
             ie8: tolerateIE8,
-            // ie8: true
         },
         sourceMap: true,
         parallel: true,
@@ -220,8 +217,8 @@ if (pageConfig && Array.isArray(pageConfig)) {
     })
 }
 
-console.log('配置输出~~~')
-console.log(webpackConfig)
+// console.log('配置输出~~~')
+// console.log(webpackConfig)
 
 
 module.exports = webpackConfig;

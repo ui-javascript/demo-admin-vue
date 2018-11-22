@@ -35,7 +35,7 @@ let webpackConfig = merge(baseWebpackConfig, {
         new webpack.ProvidePlugin({}),
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin({
-            filename: 'css/[name].[hash:7].css',
+            filename: 'static/css/[name].[hash:7].css',
             allChunks: true
         }),
         //自动打开浏览器
@@ -50,7 +50,7 @@ let webpackConfig = merge(baseWebpackConfig, {
                 loader: 'html-withimg-loader',
                 options: {
                     limit: 10000,
-                    name: 'img/[name].[hash:7].[ext]',
+                    name: 'static/img/[name].[hash:7].[ext]',
                 }
             },
         ]
