@@ -44,3 +44,18 @@ npm i -g rimraf
 
 - ERROR in Cannot find module 'node-sass'
 
+# IE8兼容方案
+
+->> https://github.com/luo0412/note-web/blob/master/%5B4%5Djavascript-ui/ch1-html5-render/ie-mvvm
+
+# 管理后台模板
+
+- vue-admin-template
+- d2-admin
+
+->> https://github.com/luo0412/note-web/tree/master/%5B4%5Djavascript-ui/ch4-ui-components/admin
+
+# 多页面
+
+->> https://github.com/luo0412/note-web/tree/master/%5B4%5Djavascript-ui/ch3-mvvm-cli/cli
+
