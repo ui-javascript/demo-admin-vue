@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "install:cnpm": "cnpm install",
+    "remove": "rimraf node_modules",
+    "ui": "vue ui",
     "serve": "vue-cli-service serve --mode dev",
     "build": "vue-cli-service build"
   },

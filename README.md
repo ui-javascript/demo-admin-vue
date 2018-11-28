@@ -1,21 +1,31 @@
 # README
 
-- 栗子命名
+- 下划线开头目录里的项目都没运行试过
+
+- 命名规定
 
 ```
-构建工具v + js-framework + UI + author + 应用场景(h5/pc/IE?) + mpa/spa
+构建工具v 
++ js-framework 
++ UI/技术特点 
++ author 
++ 应用场景(h5/pc/IE?) 
++ mpa/spa
 
-下划线开头的目录里的项目都没试过
 ```
 
 - get技能
 
-```
-github搜索找模板 'boilerplate' 'xx spa|mpa|templates' 
-栗子： https://github.com/search?p=2&q=boilerplate&type=Repositories
+    - github搜索找模板 'boilerplate' 'xx spa|mpa|templates' 
+    - 栗子： https://github.com/search?p=2&q=boilerplate&type=Repositories
 
+- 删除安装包
+
+```shell
 npm i -g rimraf
-用rimraf删包
+# 用rimraf删包 
+rimraf node_modules
+ 
  
 "scripts": {
     "install:cnpm": "cnpm install",
@@ -29,20 +39,16 @@ npm i -g rimraf
 // 注释掉以下配置
 
 // 对象字面量项尾允许有逗号
-// "comma-dangle": [2, "never"],
+"comma-dangle": [2, "never"],
 // 允许有空行
-// "no-multiple-empty-lines": [2, { "max": 1 }],    
+"no-multiple-empty-lines": [2, { "max": 1 }],    
 // 分号爱加不加
-// "semi": [2, "always"],    
+"semi": [2, "always"],    
 ```   
     
-# gulp有关
+# gulp构建
 
-->> 搬到旁边仓库 natural-cli-gulp
-
-# 问题
-
-- ERROR in Cannot find module 'node-sass'
+->> natural-cli-gulp
 
 # IE8兼容方案
 
@@ -59,3 +65,10 @@ npm i -g rimraf
 
 ->> https://github.com/luo0412/note-web/tree/master/%5B4%5Djavascript-ui/ch3-mvvm-cli/cli
 
+# 常见问题
+
+- ERROR in Cannot find module 'node-sass'
+
+# TODO 
+
+...
