@@ -10,11 +10,12 @@ const Home = (resolve => {
 
 Vue.use(Router)
 
-let base = `${process.env.BASE_URL}` + 'page2'
+// let base = `${process.env.BASE_URL}` + 'page2'
+// let base = `${process.env.BASE_URL}`
 
 export default new Router({
-  mode: 'history',
-  base: base,
+  // mode: 'history',
+  // base: base,
   routes: [
     {
       path: '/',

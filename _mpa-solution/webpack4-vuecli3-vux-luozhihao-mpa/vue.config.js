@@ -1,6 +1,6 @@
 const path = require('path')
-const configs = require('./config')
-const utils = require('./build/utils')
+const configs = require('./const.config')
+const utils = require('./mpa.utils')
 
 // 用于做相应的merge处理
 const merge = require('webpack-merge')
@@ -8,15 +8,15 @@ const {DefinePlugin} = require('webpack')
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
-const isPro = process.env.NODE_ENV === 'production'
-const cfg = isPro ? configs.build.env : configs.dev.env
+const isProd = process.env.NODE_ENV === 'production'
+const conf = isProd ? configs.build.env : configs.dev.env
 
 const resolve = dir => {
     return path.join(__dirname, dir)
 }
 
-let baseUrl = '/vue/';
-// let baseUrl = '/';
+// let baseUrl = '/vue/';
+let baseUrl = '/';
 
 module.exports = {
     baseUrl: baseUrl,
@@ -24,7 +24,7 @@ module.exports = {
     productionSourceMap: true,
     pages: utils.setPages({
         addScript() {
-            if (isPro) {
+            if (isProd) {
                 return `
                     <script src="https://s95.cnzz.com/z_stat.php?id=xxx&web_id=xxx" language="JavaScript"></script>
                 `
@@ -57,7 +57,7 @@ module.exports = {
             .tap(args => {
                 let name = 'process.env'
 
-                args[0][name] = merge(args[0][name], cfg)
+                args[0][name] = merge(args[0][name], conf)
 
                 return args
             })
@@ -78,16 +78,15 @@ module.exports = {
                 addScript() {
                     if (process.env.NODE_ENV === 'production') {
                         return `
-                                <script src="https://s95.cnzz.com/z_stat.php?id=xxx&web_id=xxx" language="JavaScript"></script>
-                            `
+                            <script src="https://s95.cnzz.com/z_stat.php?id=xxx&web_id=xxx" language="JavaScript"></script>
+                        `
                     }
                     return ''
                 }
             }),
         )
 
-        if (isPro) {
-
+        if (isProd) {
             config.plugins.push(
 
                 // 开启 Gzip 压缩
@@ -105,6 +104,7 @@ module.exports = {
                 new BundleAnalyzerPlugin()
             )
         }
+
     },
 
     devServer: {

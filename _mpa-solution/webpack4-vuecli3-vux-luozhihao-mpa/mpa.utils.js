@@ -5,7 +5,7 @@ const path = require('path')
 const glob = require('glob')
 
 // 取得相应的页面路径，因为之前的配置，所以是src文件夹下的pages文件夹
-const PAGE_PATH = path.resolve(__dirname, '../src/pages')
+const PAGE_PATH = path.resolve(__dirname, 'src/pages')
 
 // 用于做相应的merge处理
 const merge = require('webpack-merge')

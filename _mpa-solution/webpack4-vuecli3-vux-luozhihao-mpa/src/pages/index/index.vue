@@ -1,9 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      <a @click="goFn('')">Index</a> |
-      <a @click="goFn('page1')">Page1</a> |
-      <a @click="goFn('page2')">Page2</a> |
+      <!--<a @click="goFn('')">Index</a> |-->
+      <!--<a @click="goFn('page1')">Page1</a> |-->
+      <!--<a @click="goFn('page2')">Page2</a>-->
+
+      <a href="/">Index</a>|
+      <a href="/page1">Page1</a>|
+      <a href="/page2">Page2</a>
+
     </div>
     <router-view/>
   </div>
