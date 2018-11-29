@@ -23,14 +23,14 @@ module.exports = {
     outputDir: 'dist',
     productionSourceMap: true,
     pages: utils.setPages({
-        addScript() {
-            if (isProd) {
-                return `
-                    <script src="https://s95.cnzz.com/z_stat.php?id=xxx&web_id=xxx" language="JavaScript"></script>
-                `
-            }
-            return ''
-        }
+        // addScript() {
+        //     if (isProd) {
+        //         return `
+        //             <script src="https://s95.cnzz.com/z_stat.php?id=xxx&web_id=xxx" language="JavaScript"></script>
+        //         `
+        //     }
+        //     return ''
+        // }
     }),
 
     /*css: {
@@ -53,10 +53,10 @@ module.exports = {
             .set('_img', resolve('src/images'))
             .set('_ser', resolve('src/services'))
 
+        // 公共变量
         config.plugin('define')
             .tap(args => {
                 let name = 'process.env'
-
                 args[0][name] = merge(args[0][name], conf)
 
                 return args
@@ -67,42 +67,41 @@ module.exports = {
 
         // 这样会直接将 plugins 置空
         // config.plugins = []
-
-        config.entry = utils.getEntries()
-        console.log('入口')
-        console.log(config.entry)
+        // config.entry = utils.getEntries()
 
         // 使用 return 一个对象会通过 webpack-merge 进行合并
-        config.plugins.push(
-            ...utils.htmlPlugin({
-                addScript() {
-                    if (process.env.NODE_ENV === 'production') {
-                        return `
-                            <script src="https://s95.cnzz.com/z_stat.php?id=xxx&web_id=xxx" language="JavaScript"></script>
-                        `
-                    }
-                    return ''
-                }
-            }),
-        )
+        // config.plugins.push(
+        //     ...utils.htmlPlugin({
+        //         addScript() {
+        //             // if (process.env.NODE_ENV === 'production') {
+        //             //     return `
+        //             //         <script src="https://s95.cnzz.com/z_stat.php?id=xxx&web_id=xxx" language="JavaScript"></script>
+        //             //     `
+        //             // }
+        //             return ''
+        //         }
+        //     }),
+        // )
 
         if (isProd) {
-            config.plugins.push(
+            return {
+                plugins: [
 
-                // 开启 Gzip 压缩
-                // new CompressionWebpackPlugin({
-                //     asset: '[path].gz[query]',
-                //     algorithm: 'gzip',
-                //     test: new RegExp(
-                //         '\\.(js|css)$'
-                //     ),
-                //     threshold: 10240,
-                //     minRatio: 0.8
-                // }),
+                    // 开启 Gzip 压缩
+                    new CompressionWebpackPlugin({
+                        asset: '[path].gz[query]',
+                        algorithm: 'gzip',
+                        test: new RegExp(
+                            '\\.(js|css)$'
+                        ),
+                        threshold: 10240,
+                        minRatio: 0.8
+                    }),
 
-                // 使用包分析工具
-                new BundleAnalyzerPlugin()
-            )
+                    // 使用包分析工具
+                    new BundleAnalyzerPlugin()
+                ]
+            }
         }
 
     },

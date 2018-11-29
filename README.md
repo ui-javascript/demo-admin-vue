@@ -30,6 +30,7 @@ rimraf node_modules
 "scripts": {
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
+    "preview": "serve -s dist -p 9567",
 },
 ``` 
 
@@ -64,6 +65,10 @@ rimraf node_modules
 # 多页面
 
 ->> https://github.com/luo0412/note-web/tree/master/%5B4%5Djavascript-ui/ch3-mvvm-cli/cli
+
+# 小程序 h5页面 
+
+->> natural-mobile
 
 # 常见问题
 

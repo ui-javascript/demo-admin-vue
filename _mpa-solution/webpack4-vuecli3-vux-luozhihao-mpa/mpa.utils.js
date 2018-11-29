@@ -5,7 +5,7 @@ const path = require('path')
 const glob = require('glob')
 
 // 取得相应的页面路径，因为之前的配置，所以是src文件夹下的pages文件夹
-const PAGE_PATH = path.resolve(__dirname, 'src/pages')
+const PAGE_PATH = path.resolve(__dirname, './src/pages')
 
 // 用于做相应的merge处理
 const merge = require('webpack-merge')
@@ -30,7 +30,8 @@ exports.getEntries = () => {
 
 
 // 多页面输出配置
-// 与上面的多页面入口配置相同，读取page文件夹下的对应的html后缀文件，然后放入数组中
+// 与上面的多页面入口配置相同，
+// 读取page文件夹下的对应的html后缀文件，然后放入数组中
 exports.htmlPlugin = configs => {
     let entryHtml = glob.sync(PAGE_PATH + '/*/*.html')
     let arr = []
@@ -65,6 +66,8 @@ exports.htmlPlugin = configs => {
         arr.push(new HtmlWebpackPlugin(conf))
     })
 
+    console.log(arr)
+
     return arr
 }
 
@@ -93,15 +96,15 @@ exports.setPages = configs => {
             conf = merge(conf, configs)
         }
 
-        if (process.env.NODE_ENV === 'production') {
-            conf = merge(conf, {
-                minify: {
-                    removeComments: true, // 删除html中的注释代码
-                    collapseWhitespace: true, // 删除html中的空白符
-                },
-                chunksSortMode: 'manual'// 按manual的顺序引入
-            })
-        }
+        // if (process.env.NODE_ENV === 'production') {
+        //     conf = merge(conf, {
+        //         minify: {
+        //             removeComments: true, // 删除html中的注释代码
+        //             collapseWhitespace: true, // 删除html中的空白符
+        //         },
+        //         chunksSortMode: 'manual'// 按manual的顺序引入
+        //     })
+        // }
 
         map[filename] = conf;
     })
