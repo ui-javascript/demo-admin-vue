@@ -1,0 +1,45 @@
+{
+  "name": "vue-cli3-m",
+  "version": "0.1.0",
+  "private": true,
+  "author": "luyao",
+  "scripts": {
+    "install:cnpm": "cnpm install",
+    "remove": "rimraf node_modules",
+    "preview": "serve -s dist -p 9567",
+    "dev": "vue-cli-service serve",
+    "prod": "vue-cli-service build --mode production",
+    "test": "vue-cli-service build --mode test",
+    "lint": "vue-cli-service lint",
+    "build": "vue-cli-service build",
+    "analyze": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "qs": "^6.5.2",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0",
+    "@vue/cli-plugin-eslint": "^3.0.0",
+    "@vue/cli-service": "^3.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "cross-env": "^5.0.5",
+    "vue-template-compiler": "^2.5.17",
+    "compression-webpack-plugin": "^1.0.0",
+    "webpack-bundle-analyzer": "^2.13.1"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
