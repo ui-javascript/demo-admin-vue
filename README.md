@@ -28,6 +28,7 @@ rimraf node_modules
  
  
 "scripts": {
+    "install": "npm install",
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
     "preview": "serve -s dist -p 9567",
