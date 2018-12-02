@@ -7,6 +7,7 @@
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
     "preview": "serve -s dist -p 9567",
+
     "dev": "vue-cli-service serve",
     "prod": "vue-cli-service build --mode production",
     "test": "vue-cli-service build --mode test",

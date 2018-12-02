@@ -1,13 +1,5 @@
 <template>
     <div id="app">
-        <div id="nav">
-            <a href="/">index</a> |
-            <router-link to="/">page1Index</router-link>
-            |
-            <router-link to="/pageabout">pageabout</router-link>
-            |
-            <a href="/page2.html">page2</a>
-        </div>
         <router-view/>
     </div>
 </template>
