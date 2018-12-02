@@ -126,20 +126,7 @@ module.exports = {
     lintOnSave: false,
     productionSourceMap: false,
     pages,
-    devServer: {
-        // 默认启动serve 打开index页面
-        index: 'index.html',
-        open: process.platform === 'darwin',
-        host: '',
-        port: 8080,
-        https: false,
-        hotOnly: false,
-        // 设置代理
-        proxy: null,
-        before: app => {
 
-        }
-    },
     // css相关配置
     css: {
         // 是否使用css分离插件 ExtractTextPlugin
@@ -213,6 +200,41 @@ module.exports = {
                 new BundleAnalyzerPlugin()
             )
 
+        }
+    },
+
+    devServer: {
+        // historyApiFallback: {
+        //     rewrites: [
+        //         {from: new RegExp(baseUrl + 'page1'), to: baseUrl + 'page1.html'},
+        //         {from: new RegExp(baseUrl + 'page2'), to: baseUrl + 'page2.html'},
+        //     ]
+        // },
+
+        // 是否自动打开浏览器页面
+        open: true,
+        index: 'index.html',
+        // 指定使用一个 host。默认是 localhost
+        host: '127.0.0.1',
+        // 端口地址
+        port: 8080,
+        // 使用https提供服务
+        https: false,
+        // hotOnly: false,
+
+        // string | Object 代理设置
+        proxy: {
+            '/repos': {
+                target: 'https://api.github.com',
+                changeOrigin: true
+                // pathRewrite: {'^/api': ''}
+            }
+        },
+        progress: true,
+
+        // 提供在服务器内部的其他中间件之前执行自定义中间件的能力
+        before: app => {
+            // `app` 是一个 express 实例
         }
     }
 }
