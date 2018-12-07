@@ -65,7 +65,9 @@ rimraf node_modules
 
 # 多页面
 
-->> https://github.com/luo0412/note-web/tree/master/%5B4%5Djavascript-ui/ch3-mvvm-cli/cli
+- 多页面分享 https://github.com/luo0412/note-web/tree/master/%5B4%5Djavascript-ui/ch3-mvvm-cli/cli
+
+->> 搬到natural-cli-mpa
 
 # 小程序 h5页面 
 

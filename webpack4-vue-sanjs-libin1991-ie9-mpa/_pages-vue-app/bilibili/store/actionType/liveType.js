@@ -1,3 +1,0 @@
-export const LIVE_REQUEST = 'LIVE_REQUEST'
-export const LIVE_SUCCESS = 'LIVE_SUCCESS'
-export const LIVE_FAILURE = 'LIVE_FAILURE'
