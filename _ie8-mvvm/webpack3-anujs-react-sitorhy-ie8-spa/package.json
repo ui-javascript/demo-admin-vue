@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"install": "npm install",
-		"install:cnpm": "cnpm install",
+		"install:yarn": "yarn install",
 		"remove": "rimraf node_modules",
 		"preview": "serve -s dist -p 9567",
 
