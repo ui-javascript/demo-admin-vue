@@ -27,7 +27,7 @@ npm i -g rimraf
 rimraf node_modules
  
  
-"scripts": {
+"scripts": {****
     "install": "npm install",
     "install:cnpm": "cnpm install",
     "remove": "rimraf node_modules",
