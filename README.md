@@ -27,9 +27,10 @@ npm i -g rimraf
 rimraf node_modules
  
  
-"scripts": {****
+"scripts": {
     "install": "npm install",
     "install:cnpm": "cnpm install",
+    "install:yarn": "yarn install",
     "remove": "rimraf node_modules",
     "preview": "serve -s dist -p 9567",
 },
