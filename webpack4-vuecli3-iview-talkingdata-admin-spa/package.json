@@ -4,6 +4,11 @@
   "author": "Lison<lison.modern@gmail.com>",
   "private": false,
   "scripts": {
+    "install": "npm install",
+    "install:yarn": "yarn install",
+    "remove": "rimraf node_modules",
+    "preview": "serve -s dist -p 9567",
+
     "dev": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
