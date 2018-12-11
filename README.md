@@ -29,6 +29,7 @@ rimraf node_modules
  
 "scripts": {
     "install": "npm install",
+    "install:taobao": "npm install --registry=https://registry.npm.taobao.org",
     "install:cnpm": "cnpm install",
     "install:yarn": "yarn install",
     "remove": "rimraf node_modules",
