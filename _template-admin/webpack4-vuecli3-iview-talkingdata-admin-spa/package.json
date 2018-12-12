@@ -9,6 +9,7 @@
     "remove": "rimraf node_modules",
     "preview": "serve -s dist -p 9567",
 
+    "vuecli:ui": "vue ui",
     "dev": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
