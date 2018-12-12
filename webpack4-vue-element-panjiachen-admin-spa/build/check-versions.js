@@ -1,9 +1,17 @@
 'use strict'
 const chalk = require('chalk')
+
+// 版本控制
 const semver = require('semver')
-const packageConfig = require('../package.json')
 const shell = require('shelljs')
 
+// 配置信息
+const packageConfig = require('../package.json')
+
+// 同步中的异步
+// cpu多核 -> 子进程异步执行执行
+// 适用于获取少量数据
+// https://www.cnblogs.com/yanze/p/6137682.html
 function exec(cmd) {
   return require('child_process')
     .execSync(cmd)
@@ -59,6 +67,8 @@ module.exports = function() {
     }
 
     console.log()
+
+    // 退出
     process.exit(1)
   }
 }

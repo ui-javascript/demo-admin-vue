@@ -34,9 +34,11 @@ module.exports = {
     config.plugins
       .delete('prefetch')
       .delete('preload')
+
     // 解决 cli3 热更新失效 https://github.com/vuejs/vue-cli/issues/1559
     config.resolve
       .symlinks(true)
+
     config
       // 开发环境
       .when(process.env.NODE_ENV === 'development',
@@ -61,6 +63,7 @@ module.exports = {
             })
           ])
       })
+
     // markdown
     config.module
       .rule('md')
@@ -68,6 +71,7 @@ module.exports = {
       .use('text-loader')
       .loader('text-loader')
       .end()
+
     // i18n
     config.module
       .rule('i18n')
@@ -75,6 +79,7 @@ module.exports = {
       .use('i18n')
       .loader('@kazupon/vue-i18n-loader')
       .end()
+
     // svg
     const svgRule = config.module.rule('svg')
     svgRule.uses.clear()
@@ -88,6 +93,7 @@ module.exports = {
         symbolId: 'd2-[name]'
       })
       .end()
+
     // image exclude
     const imagesRule = config.module.rule('images')
     imagesRule
@@ -95,18 +101,22 @@ module.exports = {
       .exclude
       .add(resolve('src/assets/svg-icons/icons'))
       .end()
+
     // 重新设置 alias
     config.resolve.alias
       .set('@', resolve('src'))
+
     // node
     config.node
       .set('__dirname', true)
       .set('__filename', true)
+
     // babel-polyfill 加入 entry
     const entry = config.entry('app')
     entry
       .add('babel-polyfill')
       .end()
+
     // 判断环境加入模拟数据
     if (process.env.VUE_APP_BUILD_MODE !== 'nomock') {
       entry

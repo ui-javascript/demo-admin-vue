@@ -6,7 +6,10 @@ const config = require('../config')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+// 更友好的错误提示
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
+// A simple tool to find an open port or domain socket on the current machine
 const portfinder = require('portfinder')
 
 function resolve(dir) {
@@ -47,6 +50,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }
   },
   plugins: [
+    // 编译时期创建全局变量
     new webpack.DefinePlugin({
       'process.env': require('../config/dev.env')
     }),

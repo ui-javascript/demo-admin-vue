@@ -20,7 +20,8 @@ module.exports = {
     autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: false,
-    poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
+    // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions
+    poll: false,
 
     // Use Eslint Loader?
     // If true, your code will be linted during bundling and

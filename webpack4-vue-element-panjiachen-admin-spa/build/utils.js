@@ -4,6 +4,7 @@ const config = require('../config')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const packageConfig = require('../package.json')
 
+// 资源处理
 exports.assetsPath = function(_path) {
   const assetsSubDirectory =
     process.env.NODE_ENV === 'production'
@@ -89,6 +90,7 @@ exports.styleLoaders = function(options) {
   return output
 }
 
+// 生成报错的通知弹框
 exports.createNotifierCallback = () => {
   const notifier = require('node-notifier')
 

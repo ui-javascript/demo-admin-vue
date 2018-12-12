@@ -5,6 +5,7 @@
   "scripts": {
     "install": "npm install",
     "install:taobao": "npm install --registry=https://registry.npm.taobao.org",
+    "vuecli:ui": "vue ui",
     "remove": "rimraf node_modules",
     "preview": "serve -s dist -p 9567",
     "serve": "vue-cli-service serve --open",

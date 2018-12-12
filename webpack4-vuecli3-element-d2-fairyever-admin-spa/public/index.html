@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>icon.ico">
     <title><%= VUE_APP_TITLE %></title>
+
     <style>
       html, body, #app { height: 100%; margin: 0px; padding: 0px; }
       .d2-home { background-color: #303133; height: 100%; display: flex; flex-direction: column; }
@@ -16,11 +17,13 @@
       .d2-home__title { color: #FFF; font-size: 14px; margin-bottom: 10px; }
       .d2-home__sub-title { color: #ABABAB; font-size: 12px; }
     </style>
+
     <script>
       var _hmt = _hmt || [];
       var hmid = "bc38887aa5588add05a38704342ad7e8";
       (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?" + hmid; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();
     </script>
+
     <!-- ua -->
     <script src="<%= BASE_URL %>script/ua-parser.min.js"></script>
     <script src="<%= BASE_URL %>script/ua.js"></script>
@@ -31,6 +34,7 @@
         很抱歉，如果没有 JavaScript 支持，D2Admin 将不能正常工作。请启用浏览器的 JavaScript 然后继续。
       </strong>
     </noscript>
+
     <div id="app">
       <div class="d2-home">
         <div class="d2-home__main">

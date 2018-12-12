@@ -1,14 +1,18 @@
 'use strict'
 const path = require('path')
 const utils = require('./utils')
-const config = require('../config')
 const { VueLoaderPlugin } = require('vue-loader')
+
+// 配置文件
+const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
+// 统一处理路径
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
 
+// eslint
 const createLintingRule = () => ({
   test: /\.(js|vue)$/,
   loader: 'eslint-loader',
@@ -35,6 +39,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
+    // 路径访问的简化
     alias: {
       '@': resolve('src')
     }
@@ -67,6 +72,7 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
+        // 注意剔除此路径
         exclude: [resolve('src/icons')],
         options: {
           limit: 10000,
@@ -92,6 +98,7 @@ module.exports = {
     ]
   },
   plugins: [new VueLoaderPlugin()],
+  // js native @notnow
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).

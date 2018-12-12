@@ -1,13 +1,19 @@
 'use strict'
+// 检查版本
 require('./check-versions')()
 
+// 命令行的loading效果，和显示各种状态的图标
 const ora = require('ora')
 const rm = require('rimraf')
 const path = require('path')
+// 命令行颜色
 const chalk = require('chalk')
 const webpack = require('webpack')
+
+// 配置文件
 const config = require('../config')
 const webpackConfig = require('./webpack.prod.conf')
+
 var connect = require('connect')
 var serveStatic = require('serve-static')
 
@@ -44,6 +50,7 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
       )
     )
 
+    // 是否顺道预览
     if (process.env.npm_config_preview) {
       const port = 9526
       const host = 'http://localhost:' + port
