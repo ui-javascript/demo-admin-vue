@@ -48,6 +48,7 @@ npm i -g npm@latest
 // "no-multiple-empty-lines": [2, { "max": 1 }], -> 允许有空行    
 // "semi": [2, "always"],    -> 分号爱加不加
 // 'no-trailing-spaces': 2, -> 行尾允许有空格
+// 'unused
 
 // 3.或者修改
 "comma-dangle": [0, {
@@ -57,6 +58,10 @@ npm i -g npm@latest
   "exports": "never",
   "functions": "ignore"
 }],
+
+'no-unused-vars': 0,
+'vue/no-unused-vars': 'ignore',
+
 ```   
     
 # gulp构建
