@@ -40,15 +40,23 @@ npm i -g npm@latest
 
 - ESLint习惯
      
-```
-// 注释掉以下配置
+```json
+// 1.关掉idea eslint
 
-// 对象字面量项尾允许有逗号
-"comma-dangle": [2, "never"],
-// 允许有空行
-"no-multiple-empty-lines": [2, { "max": 1 }],    
-// 分号爱加不加
-"semi": [2, "always"],    
+// 2.注释掉以下配置
+// "comma-dangle": [2, "never"], -> 对象字面量项尾允许有逗号
+// "no-multiple-empty-lines": [2, { "max": 1 }], -> 允许有空行    
+// "semi": [2, "always"],    -> 分号爱加不加
+// 'no-trailing-spaces': 2, -> 行尾允许有空格
+
+// 3.或者修改
+"comma-dangle": [0, {
+  "arrays": "never",
+  "objects": "ignore",
+  "imports": "never",
+  "exports": "never",
+  "functions": "ignore"
+}],
 ```   
     
 # gulp构建
