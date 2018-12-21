@@ -1,6 +1,6 @@
-import { Mock, Constant } from './_utils'
+import {Mock, Constant} from './_utils'
 
-const { ApiPrefix, Color } = Constant
+const {ApiPrefix, Color} = Constant
 
 const Dashboard = Mock.mock({
   'sales|8': [

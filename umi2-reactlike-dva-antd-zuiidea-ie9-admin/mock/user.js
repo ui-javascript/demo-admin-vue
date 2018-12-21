@@ -1,6 +1,6 @@
-import { Mock, Constant, qs, randomAvatar } from './_utils'
+import {Mock, Constant, qs, randomAvatar} from './_utils'
 
-const { ApiPrefix } = Constant
+const {ApiPrefix} = Constant
 
 let usersListData = Mock.mock({
   'data|80-100': [
@@ -92,7 +92,7 @@ const NOTFOUND = {
 
 module.exports = {
   [`POST ${ApiPrefix}/user/login`](req, res) {
-    const { username, password } = req.body
+    const {username, password} = req.body
     const user = adminUsers.filter(item => item.username === username)
 
     if (user.length > 0 && user[0].password === password) {
@@ -100,13 +100,13 @@ module.exports = {
       now.setDate(now.getDate() + 1)
       res.cookie(
         'token',
-        JSON.stringify({ id: user[0].id, deadline: now.getTime() }),
+        JSON.stringify({id: user[0].id, deadline: now.getTime()}),
         {
           maxAge: 900000,
           httpOnly: true,
         }
       )
-      res.json({ success: true, message: 'Ok' })
+      res.json({success: true, message: 'Ok'})
     } else {
       res.status(400).end()
     }
@@ -119,11 +119,11 @@ module.exports = {
 
   [`GET ${ApiPrefix}/user`](req, res) {
     const cookie = req.headers.cookie || ''
-    const cookies = qs.parse(cookie.replace(/\s/g, ''), { delimiter: ';' })
+    const cookies = qs.parse(cookie.replace(/\s/g, ''), {delimiter: ';'})
     const response = {}
     let user = {}
     if (!cookies.token) {
-      res.status(200).send({ message: 'Not Login' })
+      res.status(200).send({message: 'Not Login'})
       return
     }
     const token = JSON.parse(cookies.token)
@@ -133,7 +133,7 @@ module.exports = {
     if (response.success) {
       const userItem = adminUsers.find(_ => _.id === token.id)
       if (userItem) {
-        const { password, ...other } = userItem
+        const {password, ...other} = userItem
         user = other
       }
     }
@@ -142,8 +142,8 @@ module.exports = {
   },
 
   [`GET ${ApiPrefix}/users`](req, res) {
-    const { query } = req
-    let { pageSize, page, ...other } = query
+    const {query} = req
+    let {pageSize, page, ...other} = query
     pageSize = pageSize || 10
     page = page || 1
 
@@ -182,7 +182,7 @@ module.exports = {
   },
 
   [`POST ${ApiPrefix}/users/delete`](req, res) {
-    const { ids=[] } = req.body
+    const {ids = []} = req.body
     database = database.filter(item => !ids.some(_ => _ === item.id))
     res.status(204).end()
   },
@@ -207,7 +207,7 @@ module.exports = {
   },
 
   [`GET ${ApiPrefix}/user/:id`](req, res) {
-    const { id } = req.params
+    const {id} = req.params
     const data = queryArray(database, id, 'id')
     if (data) {
       res.status(200).json(data)
@@ -217,7 +217,7 @@ module.exports = {
   },
 
   [`DELETE ${ApiPrefix}/user/:id`](req, res) {
-    const { id } = req.params
+    const {id} = req.params
     const data = queryArray(database, id, 'id')
     if (data) {
       database = database.filter(item => item.id !== id)
@@ -228,7 +228,7 @@ module.exports = {
   },
 
   [`PATCH ${ApiPrefix}/user/:id`](req, res) {
-    const { id } = req.params
+    const {id} = req.params
     const editItem = req.body
     let isExist = false
 

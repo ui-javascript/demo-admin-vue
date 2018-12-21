@@ -1,6 +1,6 @@
-import { Mock, Constant } from './_utils'
+import {Mock, Constant} from './_utils'
 
-const { ApiPrefix } = Constant
+const {ApiPrefix} = Constant
 
 let postId = 0
 const database = Mock.mock({
@@ -38,8 +38,8 @@ const database = Mock.mock({
 
 module.exports = {
   [`GET ${ApiPrefix}/posts`](req, res) {
-    const { query } = req
-    let { pageSize, page, ...other } = query
+    const {query} = req
+    let {pageSize, page, ...other} = query
     pageSize = pageSize || 10
     page = page || 1
 

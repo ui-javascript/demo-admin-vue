@@ -1,5 +1,6 @@
-import { Constant } from './_utils'
-const { ApiPrefix } = Constant
+import {Constant} from './_utils'
+
+const {ApiPrefix} = Constant
 
 const database = [
   {
