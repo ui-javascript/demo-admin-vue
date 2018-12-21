@@ -81,7 +81,8 @@
     "workbox-webpack-plugin": "3.6.2"
   },
   "scripts": {
-    "install:cnpm": "cnpm install",
+    "install:npm@deprecated": "npm install",
+    "install:yarn": "yarn install",
     "remove": "rimraf node_modules",
 
     "dev": "node scripts/start.js",
