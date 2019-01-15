@@ -68,21 +68,19 @@ npm i -g npm@latest
 
 ->> natural-cli-gulp
 
-# IE8兼容方案
+# IE8兼容
 
-- https://github.com/luo0412/note-web/blob/master/%5B4%5Djavascript-ui/ch4-mvvm-cli/scaffold/03-%E8%81%9A%E7%84%A6IE8%E7%9A%84%E8%84%9A%E6%89%8B%E6%9E%B6(MVVM).md
-- https://github.com/luo0412/note-web/blob/master/%5B4%5Djavascript-ui/ch1-web3-html5/ie-mvvm
+->> ie-fix
 
 
 # 管理后台模板
 
-- vue-admin-template
+- vue-element-admin
 - d2-admin
-- https://github.com/luo0412/note-web/tree/master/%5B4%5Djavascript-ui/ch4-ui-components/admin
+
+->>
 
 # 多页面
-
-- https://github.com/luo0412/note-web/tree/master/%5B4%5Djavascript-ui/ch3-mvvm-cli/cli
 
 ->> natural-cli-mpa
 
