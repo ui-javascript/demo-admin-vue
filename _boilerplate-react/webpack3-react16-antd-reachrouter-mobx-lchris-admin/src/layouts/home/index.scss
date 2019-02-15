@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.table-operation {
+  button + button {
+    margin-left: 10px;
+  }
+}
