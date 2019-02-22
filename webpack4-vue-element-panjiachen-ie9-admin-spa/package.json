@@ -6,10 +6,10 @@
   "license": "MIT",
   "scripts": {
     "install": "npm install",
+    "install:cnpm": "cnpm install",
     "install:yarn": "yarn install",
     "remove": "rimraf node_modules",
     "preview": "serve -s dist -p 9567",
-
     "dev": "cross-env BABEL_ENV=development webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "build:prod": "cross-env NODE_ENV=production env_config=prod node build/build.js",
     "build:preview": "cross-env NODE_ENV=production npm_config_preview=true env_config=prod node build/build.js",
@@ -78,6 +78,7 @@
     "babel-plugin-syntax-jsx": "6.18.0",
     "babel-plugin-transform-runtime": "6.23.0",
     "babel-plugin-transform-vue-jsx": "3.7.0",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "1.7.0",
     "babel-preset-stage-2": "6.24.1",
     "chalk": "2.4.1",

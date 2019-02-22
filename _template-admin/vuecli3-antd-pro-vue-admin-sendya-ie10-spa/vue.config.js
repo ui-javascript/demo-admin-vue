@@ -37,6 +37,11 @@ module.exports = {
       .set('@views', resolve('src/views'))
       .set('@layout', resolve('src/layout'))
       .set('@static', resolve('src/static'))
+
+    config.entry('app')
+      .add('babel-polyfill')
+      .end()
+
   },
 
   css: {
