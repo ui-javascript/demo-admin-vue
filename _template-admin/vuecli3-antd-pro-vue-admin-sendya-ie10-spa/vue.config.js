@@ -38,9 +38,10 @@ module.exports = {
       .set('@layout', resolve('src/layout'))
       .set('@static', resolve('src/static'))
 
-    config.entry('app')
-      .add('babel-polyfill')
-      .end()
+    //  @FIXME
+    // config.entry('app')
+    //   .add('babel-polyfill')
+    //   .end()
 
   },
 
