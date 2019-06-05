@@ -1,4 +1,0 @@
-## React-Admin
-
-- antd
-- mobx
