@@ -15,7 +15,7 @@
         "@smallwei/avue": "^1.4.2",
         "avue-plugin-transfer": "^0.0.2",
         "avue-plugin-ueditor": "^0.0.1",
-        "axios": "^0.18.0",
+        "axios": "^0.21.1",
         "babel-polyfill": "^6.26.0",
         "classlist-polyfill": "^1.2.0",
         "driver.js": "^0.6.2",
